@@ -1,6 +1,9 @@
 
 Perl 6 Tablets
-    This is Rakudo Perl, a Perl 6 compiler for the Parrot virtual machine.
+    These are the Perl 6 Tablets, an encyclopedia that stores every information
+    about Perl 6 on a place where it can be found easily and quickly.
+    It tries to take full advantage of the possibilities of hypertext and HTML;
+    
 
     Perl 6 Tablets is Copyright (C) 2012, The Perl Foundation.
     Its distributed under the terms of the Artistic License 2.0.
