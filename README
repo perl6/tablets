@@ -2,8 +2,29 @@
 Perl 6 Tablets
     These are the Perl 6 Tablets, an encyclopedia that stores every information
     about Perl 6 on a place where it can be found easily and quickly.
-    It tries to take full advantage of the possibilities of hypertext and HTML;
+    It tries to take full advantage of the possibilities of hypertext and HTML.
+
+    The main content is divided in 10 "Tablets":
     
+       *  0 History
+       *  1 Language Design
+       *  2 Basic Syntax (Spaces, Comments, Literals, Quoting, Formatting)
+       *  3 Variables (Sigils, Twigils, Assignment, Typing, Scopes)
+       *  4 Operators (Comparison, Math, String, Logic, Metaops)
+       *  5 IO (Command Line, Files, Sockets, Network, Misc.)
+       *  6 Blocks (Conditions, Loops)
+       *  7 Subroutines (Signatures, Modules)
+       *  8 Objects (Classes, Roles)
+       *  9 Regex (Rules, Grammars)
+       * 10 Metaprogramming (Macros, DSL)
+
+    It has 5 indexes:
+
+       * A Intex (all syntax elements and used terms alphabetical order)
+       * B Lookup (cheat sheets - syntax elements ordered by categories)
+       * C Cookbook (chunks of native Perl 6 programs)
+       * D Delta (what to be aware of when switching from Perl 5)
+       * E Links
 
     Perl 6 Tablets is Copyright (C) 2012, The Perl Foundation.
     Its distributed under the terms of the Artistic License 2.0.
