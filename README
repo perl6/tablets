@@ -18,13 +18,14 @@ Perl 6 Tablets
        *  9 Regex (Rules, Grammars)
        * 10 Metaprogramming (Macros, DSL)
 
-    It has 5 indexes:
+    It has 6 indexes:
 
        * A Intex (all syntax elements and used terms alphabetical order)
        * B Lookup (cheat sheets - syntax elements ordered by categories)
        * C Cookbook (chunks of native Perl 6 programs)
        * D Delta (what to be aware of when switching from Perl 5)
-       * E Links
+       * E Best of (Appetizer)
+       * F Links
 
     Perl 6 Tablets is Copyright (C) 2012, The Perl Foundation.
     Its distributed under the terms of the Artistic License 2.0.
