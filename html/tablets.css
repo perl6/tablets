@@ -1,0 +1,22 @@
+body {
+ #margin:  0px;
+ #padding: 0px;
+ #background: #ffffff;
+ font: Times New Roman, san serif, helvetica;
+ text-size: 14px;
+ text-color: #000000;
+}
+
+h3 {
+}
+
+h4 {
+}
+
+#quote {
+ color: #000099;
+ font-weight: normal;
+ font: 15px verdana, arial, san serif, helvetica;
+ font-style: italic;
+
+}
