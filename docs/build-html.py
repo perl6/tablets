@@ -10,7 +10,7 @@ txt_files = glob.glob('*.txt')
 for txt_fn in txt_files:
     html_fn = txt_fn[:-3] + 'html'
     if not os.path.exists(html_fn) or os.path.getmtime(txt_fn) > os.path.getmtime(html_fn):
-        if txt_fn == 'toc.txt' or txt_fn == 'ap-a-index.txt':
+        if txt_fn == 'index.txt' or txt_fn == 'appendix-a-index.txt' or txt_fn == 'appendix-g-glossary.txt':
             print "Processing:", txt_fn, '-->', html_fn
             os.system(pandoc_cmd2 % (html_fn, txt_fn))
         else:
