@@ -1,0 +1,207 @@
+% Perl 6 Tablets: Chp. 1 - Language Design
+
+> "You should not take this picture to mean that linguistics is the
+> opposite of common sense. But there are many computer scientists who
+> have complained that it should be more like engineering and less
+> like an art. And I disagree, but that's okay." -- Larry Wall
+
+
+Main Goal
+=========
+
+Enjoy life and **enjoy the freedom of expressing yourself**. Which
+means: support you as much as possible, and not force you in any
+way. Perl 6 tries to be even better than Perl 5 as your humble servant
+for translating your thoughts into executable code (if possible).
+
+
+
+Strategy
+========
+
+Every style and level of expertise has to be supported. And even more
+difficult: all of them have to play together well. The default often
+imitates a natural language (e.g., English). The following
+oft-repeated terms encapsulate strategies and concepts for this.
+
+
+
+Terms
+=====
+
+
+
+TIMTOWTDI
+---------
+
+Perl's everlasting slogan: "There is more then one way to do it,"
+meaning your way is valid, too. Just be aware of logical consequences.
+
+
+
+Visual Metaphor
+---------------
+
+People like to see their code as a picture at first glance. Therefore
+names and operators should be distinctive, similar things should look
+similar, different things different. Larry likes to add: weird things
+should also look weird. And sometimes even characters can be
+ideograms; like the Z meta-operator, which shows visually how it works
+(first left then right, then next left, etc.).
+
+
+
+Topicalizer
+-----------
+
+This also has to do with natural attention flow. If a topic or first
+word of a sentence sets an understandable context for what follows,
+the meaning is built up word for word. This is much easier to grasp,
+than if the last word of a block resolves the block's entire meaning
+(like regex modifiers do in Perl 5). In particular,
+[`for`](block.html#) and [`given`](block.html#) are called
+topicalizers, because they set `$_`, the current topic variable.
+
+
+
+Context sensitive
+-----------------
+
+The same term or symbol might do different things in different
+contexts, although we have done our very best to consistently
+represent the same general idea. Maybe the best example is [the \* aka
+Whatever](#). But every context is its own domain, optimized to solve
+the problems of that domain.
+
+
+
+Maximum reuse
+-------------
+
+Not only is syntax reused, to minimize the stuff you have to remember,
+but concepts are reused also, wherever possible. For example, Pairs
+are used to build hashes or named parameters in routines calls. There
+are plenty more examples. Maybe the biggest one: the regex engine that
+parses your code is the same engine you use in your program.
+
+
+
+No special rules
+----------------
+
+Most of the special rules that plagued Perl 5 are gone or generalized.
+
+
+
+One pass parsing
+----------------
+
+Perl 6 is much easier to understand, both for people and also for
+software parsers. The language is designed to be understood by
+machines in one read, dividing the source in smaller and smaller
+units. As a nice side effect: syntax errors can only damage the
+understanding of small units.
+
+
+
+Keep easy things easy and hard things possible
+----------------------------------------------
+
+Beside TIMTOWTDI, the other ancient slogan is "Make easy things easy
+and hard things possible." Even if nearly every cool idea is crammed
+into Perl 6, we don't lose track of the basics. Features are made as
+accessible and free of artificial prerequisites as possible. For
+example, printing a variable as a line without explicit quotes and
+newline (`say $var`), or reading a file without a file handle
+(`slurp("filename").lines`). Rule of thumb: if you can think of a
+concept as trivial, then it should be. On the other hand, if you can
+think of a computable solution, it should at least be doable in Perl
+(no artificial walls). Huffman coding This is a refinement of the last
+rule: common, often used things have short, straightforward
+names. More verbose names indicate more rare, harder to grasp
+concepts, or things that overwrite the default rules ("weird things
+should look weird"). It also implies that the defaults lean toward
+what a beginner (non-Perl 5 programmer) might expect ("hide the fancy
+stuff").
+
+
+
+Water bed theory of linguistic complexity
+-----------------------------------------
+
+This philosophy underlies the two previous terms. All Perl words
+should reflect logical units which can be freely combined. Making it
+more complicated than necessary is obviously not desirable. But
+oversimplification will create artificial complexity somewhere
+else. Like a water bed, where you can press down in one place but the
+water will go up in another.  All your paradigms are belong to us We
+learn, take and adapt from every source possible to offer the best of
+all breeds. You should be able to keep your style when switching to
+Perl. Perl 6 supports the structured, object oriented, aspect
+oriented, functional, design by contract, declarative and logic
+programming paradigms.
+
+
+
+Buzzword compliant
+------------------
+
+This term is an extension to the previous. Not only every programming
+paradigm, but also every technique or neat trick loudly marketed out
+there as "must have" "in the \[%DATE%\]", should be available in Perl 6
+(or at least be possible), as long there is expressive value in it. A
+few examples include "named parameters", "lvalue subroutines",
+"parametizable subclasses" or "hygienic macros".
+
+
+
+Second system syndrome
+----------------------
+
+We are very aware that many ambitious software projects that are
+rebuilt from scratch fail. Especially those which aim to be "even
+better in all ways" successors of already successful creations. In
+fact, this happens so often that the term "second system syndrome" was
+coined. We chose this path for Perl 6 anyways, because we believe it's
+the only way to get a significantly better language. (Gradual
+improvements are flowing into Perl 5 all the time, sometimes inspired
+from Perl 6.) That's why the unofficial motto of Perl 6 is "Second
+system syndrome done right".
+
+
+
+Trends
+======
+
+As a consequence of these principles, [various trends can be
+observed](appendix-d-perl-5-perl-6-delta.html#trends).
+
+
+
+Design Process
+==============
+
+The initial source of the Perl 6 design came from 361 RFC (request for
+comments) submissions by people from all over the world. Larry Wall
+sorted and commented on them in several documents called the
+Apocalypses (meaning "revelations"). Damian Conway wrote, for each
+Apocalypse, an Exegesis ("explanation"), that expounded Larry's
+ideas. These are now all historic documents that not have changed
+since, because they were much harder to maintain than the Synopses
+("abstracts" or "comparisons" (with Perl 5)). The Synopsis documents,
+along with the test suite, form the official specification of Perl
+6. More details on that can be found in [the history
+section](history.html).
+
+The Synopses are continually edited because the more we think about
+the syntax and semantics, the more detailed the picture gets. The
+other important input comes from the implementors. They uncover cases
+that worked only in theory, and important corner cases not thought
+about before. This mutual influence of specification and
+implementation we call the whirlpool model of software development,
+which is an intended pun on the well-known waterfall model.
+
+Design changes are usually discussed in the p6l mailing list and the
+#perl6 channel on the freenode IRC network.
+
+***

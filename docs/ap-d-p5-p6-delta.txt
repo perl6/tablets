@@ -1,0 +1,210 @@
+% Perl 6 Tablets: Appendix D - Perl 5 to Perl 6 Delta
+
+Trends
+======
+
+Ubiquity
+--------
+
+As always, [Perl is optimized for freedom and richness of
+expression](language-design.html).
+
+
+
+General Purpose
+---------------
+
+Perl 5 still has a lot of builtins, showing for which task the
+language was created. But to become more general purpose, the core was
+enhanced and some other parts got removed. File IO, Network and IPC,
+Formats, and finally that long deprecated pre P5 DB-binding (dbmopen)
+went out of the core or at least into sensible module namespace. The
+optional type system enables compiler optimisations to make Perl even
+usable in cases where you had to switch to C before.
+
+
+
+Less Unix Centric
+-----------------
+
+Perl 1 was a child of the Unix world, borrowing a lot of folklore and
+words. As Perl 6 had to regularize the Regex and reform some other
+parts, this heritage has become less visible.
+
+
+
+Unicode
+-------
+
+Per default all Perl 6 code is Unicode and you can use any weird
+character for any part of the syntax.
+
+
+
+Simple English
+--------------
+
+In Perl 5 we had my, our, use, require, bless, can, ISA (is a), chop
+and also of course if, else, goto and all the loops. Perl 6 adds
+given, when, gather, take, loop, WHERE, HOW, WHO and lot more everyday
+English, which should make it easy to read and understand.
+
+
+
+Hidden Complexity
+-----------------
+
+Even simple Perl 6 looks pretty much like older Perl, it has a
+tremendous complexity inside, which only have to show up if you really
+need it.
+
+
+
+Functional Programming
+----------------------
+
+High order functions, currying, you name it. All that goodies are
+there, as Perl 6 aims to a full support of functional programming.
+
+
+
+Object Oriented
+---------------
+
+OOP syntax is now more simplified, compact, knows about encapsulation
+and has many new features, including dynamic class composition.
+
+Like in Smalltalk or Ruby every "thing" (values, vars, blocks,
+routines) is an object and ops are "just" methods. It helps to have
+internally everything in its place. But programmer still can pretend
+it's not the case.
+
+
+
+Full Introspection
+------------------
+
+Because every object knows his attributes and methods, you can ask the
+compiler nearly anything about the state of your program.
+
+
+
+Metalanguage
+------------
+
+And because classes are made to get extended or changed, Perl 6 has
+not only full metaprogramming capabilities, beyond your wildest
+dreams. It is a metalanguage with a beginner friendly default that
+aims to become a family of languages. Rule of thumb: everything is
+allowed, as long as you declare it.
+
+
+
+One Spec - Many Implementations
+-------------------------------
+
+Unlike every other Perl so far, Perl 6 has a precise specification,
+written in Perl 6. This allows to have several implementations, even
+syntactical compatible ones.
+
+
+
+Syntactical Changes
+===================
+
+  * use strict and warnings and utf are on by default
+
+
+
+Operator
+--------
+
+  * `->` (arrow) becomes `.` (dot) - for method calls: object.method;
+  * `=~` becomes `~~` - use regex now only with smartmatch
+  * `qw( ... )` (exists still) becomes `< ... >`. With interpolation and quote protection: `<< ... >>`
+  * `|` becomes `+|` - logical bit operation in numerical context
+  * `&` becomes `+&`
+  * `^` becomes `+^`
+  * `<<` becomes `+<` - shifting numerical values
+  * `>>` becomes `+>`
+  * `.` becomes `~` (tilde) - for concatenate strings: 'Shinmen Musahashi: ' ~ 'Sho Rin No Sho';
+  * `..` becomes `ff` - flipflop operator
+  * `...` becomes `fff`
+  * `cmp` becomes `leg` - `cmp` is now for general comparison, `leg` in string context
+  * `? :` becomes `?? !!` - ternary operator
+  * `length` becomes `chars` - number of chars in a string
+
+
+
+Variable
+--------
+
+  * consistent sigils: so `@array[1]` replaces `$array[1]` and
+    `%hash{'key'}` replaces `$hash{'key'}` and `%hash{'key1', 'key2'}`
+    replaces `@hash{'key1', 'key2'}`
+  * `scalar @a` becomes `+@a`
+  * arrays, hashes, formats, directories and filehandles are internal
+    objects with procedural Interfaces and can be saved in scalar
+    variables.
+  * special variables have their own namespace (`$*VARNAME` and
+    `$?VARNAME`), also token (`__LINE__`) will now be found there
+
+
+
+Flow Control
+------------
+
+  * no more 'foreach'. 'for' now iterates only on arrays
+  * `for ($a = 0; $a++; $a < 5)` becomes `loop ($a = 0; $a++; $a < 5)`
+  * `do {...} while (...);` becomes `repeat {...} while ...;`
+
+and
+
+  * define classes with 'class' and modules with 'module'
+  * no more source filters, but macros
+  * no more references, bind variables on the symbol table
+
+
+
+Traps
+-----
+
+  * no more `each`, use `.pairs` or `.kv` instead
+  * no more C-style `for`, use `loop` instead
+  * `length(@a)` is now `elems @a` and `length $str` is `chars $str;`
+
+
+
+News
+====
+
+  * new contexts: hashlist, lazy list, bool, int, num, string
+  * optional typing, traits (properties of variables), binding
+  * `loop` and `say` commands
+  * zip, err, yadda, and pipe operators
+  * hyper / reduction operators
+  * chained comparison operators
+  * case construct with given and when
+  * junctions : `if $a = 1|2|3`
+  * currying
+  * smartmatch / rules (regex++, own sublanguage within the language like in Rebol)
+  * named parameters for subroutines, multimethods, coroutines
+  * more explicit OOP:
+      * autogenerated getters/setters
+      * roles (similar to Ruby's Mixins, or Java's Interfaces)
+  * delegation, design by contract (Eiffel)
+  * exceptions, continuations
+  * macros
+
+
+
+Native Perl 6 (new idioms)
+==========================
+
+  * no parentheses required for control expressions after `if`, `unless`, `while` ... (but still allowed)
+  * `%hash<key>` instead of `%hash{'key'}`, or `%hash<< key1 key2 >>` instead of `%hash{ 'key1', 'key2' }`
+  * `loop` instead of `while (1)`
+
+For more native Perl 6, read the [cookbook](ap-c-cookbook.html).
+
+***

@@ -1,0 +1,1084 @@
+% Perl 6 Tablets: Appendix B - Lookup
+
+
+Variables
+=========
+
+Sigils
+------
+
+All variables in Perl begin with a sigil. They mark the 3 primary var
+types. The 4th sigil is for callables (routines) and the 5th is for
+layers (namespaces) that organize the previous 4.
+
+------------------------------------------  --------------------------------------------------------------------------------------------------------
+[`$`](ap-a-index.html#dollar-sigil)         scalar, single value, can be of any data type
+[`@`](ap-a-index.html#at-sigil)             ordered array, indexed list of scalar
+[`%`](ap-a-index.html#percent-sigil)        unordered hash (associative array), 2 column table with unique IDs (keys) and associated values (value)
+[`&`](ap-a-index.html#ampersand-sigil)      code/rule/token/regex
+[`::`](ap-a-index.html#colon-colon-sigil)   abstraction: package/module/class/role/subset/enum/type/grammar
+------------------------------------------  --------------------------------------------------------------------------------------------------------
+
+The first 4 can also be used as prefix operators, called
+contextualizers, that force different contexts, but there are much
+more different contexts then 4.
+
+Twigils
+-------
+
+Twigil is short for secondary sigil. They follow after a primary sigil and mark special namespaces or variables with special meanings and properties.
+
+---------------------------------------------------  ------------------------------------------------------------
+`$foo`                                               ordinary scoping (no twigil)
+[`$.foo`](ap-a-index.html#dot-twigil)                object attribute public accessor
+[`$!foo`](ap-a-index.html#exclamation-mark-twigil)   object attribute private storage
+[`$^foo`](ap-a-index.html#caret-twigil)              self-declared formal positional parameter
+[`$:foo`](ap-a-index.html#colon-twigil)              self-declared formal named parameter
+[`$*foo`](ap-a-index.html#asterisk-twigil)           contextualizable global variable
+[`$?foo`](ap-a-index.html#question-mark-twigil)      compiler hint variable
+[`$=foo`](ap-a-index.html#equal-sign-twigil)         pod variable
+[`$<foo>`](ap-a-index.html#angle-brackets-twigil)    match variable, short for `$/<foo>` or even `$/{'foo'}`
+[`$~foo`](ap-a-index.html#tilde-twigil)              the foo sublanguage seen by the parser at this lexical spot
+---------------------------------------------------  ------------------------------------------------------------
+
+
+
+Special Variables
+-----------------
+
+---------------------------------------------  ------------------------
+[`$_`](ap-a-index.html#context-var)            context variable
+[`$!`](ap-a-index.html#exclamation-mark-var)   error msg
+---------------------------------------------  ------------------------
+
+
+### Match Variables ###
+
+-----------------------------------------------  -----------------------------------------------------------------------
+[`$/`](ap-a-index.html#slash-var)                last created match object of this block
+[`$<...>`](ap-a-index.html#angle-brackets-var)   alias to named capture, see Twigils above
+[`$0 .. $9`](ap-a-index.html#0-var)              alias to positional capture (most like in P5 - `$1 .. $9`)
+[`@()`](ap-a-index.html#round-brackets-var)      array that holds $0 .. $9 and rest and positional submatches
+-----------------------------------------------  -----------------------------------------------------------------------
+
+### Global Variables ###
+
+context variable, default global (run time), any of them are now
+objects with several methods
+
+------------------------------------------------------------------  ---------------------------------------------------------------------
+[`@*ARGS`](ap-a-index.html#args-global-var)                         Arguments (Parameter) to a program (script), formerly @ARGV
+[`$*ARGFILES`](ap-a-index.html#argfiles-global-var)                 magic command-line input handle
+[`$*IN`](ap-a-index.html#in-global-var)                             standard input handle (command line mostly)
+[`$*OUT`](ap-a-index.html#out-global-var)                           standard output (command line mostly)
+[`$*ERR`](ap-a-index.html#err-global-var)                           standard error output (command line mostly)
+[`$*CWD`](ap-a-index.html#cwd-global-var)                           current working directory (Str)
+[`@*INC`](ap-a-index.html#inc-global-var)                           include pathes (but not for std library modules), formerly @INC
+[`$*LANG`](ap-a-index.html#lang-global-var)                         LANG variable from `%*ENV` that defines what human language is used
+[`%*ENV`](ap-a-index.html#env-global-var)                           system environment variables, formerly %ENV
+[`%*OPTS`](ap-a-index.html#opts-global-var)                         options from command line
+[`$*TZ`](ap-a-index.html#tz-global-var)                             local time zone
+[`$*EXECUTABLE_NAME`](ap-a-index.html#executable-name-global-var)   former $0
+[`$*PERL`](ap-a-index.html#perl-global-var)                         perl version running under, was formerly `$^V` or `$]`
+[`$*KERNEL`](ap-a-index.html#kernel-global-var)                     operating system running under
+[`$*DISTRO`](ap-a-index.html#distro-global-var)                     OS distribution am I running under
+[`$*PID`](ap-a-index.html#pid-global-var)                           ID of the running process,
+[`$*GID`](ap-a-index.html#gid-global-var)                           real global ID of the running process owner, formerly @(
+[`$*UID`](ap-a-index.html#uid-global-var)                           real user ID of the running process owner (user), formerly @\<
+[`$*EGID`](ap-a-index.html#egid-global-var)                         effective global ID, formerly @)
+[`$*EUID`](ap-a-index.html#euid-global-var)                         effective user ID, formerly @\>
+$*ON_DIE                                                            exception handler, run befor die, formerly `$SIG{__DIE__}`
+$*ON_WARN                                                           exception handler, run befor warn, formerly `$SIG{__WARN__}`
+$*COMPILING                                                         &nbsp;
+$*EMERGENCY_MEMORY                                                  formerly `$^M`
+$*DEBUGGING                                                         &nbsp;
+------------------------------------------------------------------  ---------------------------------------------------------------------
+
+### Compiler Hint Variables ###
+
+compiler constants (fixed at compile time)
+
+----------------------------------------------------------  -----------------------------------------------------------------------
+[`$?KERNEL`](ap-a-index.html#kernel-compiler-var)           for which operating System was this program compiled?
+[`$?DISTRO`](ap-a-index.html#distro-compiler-var)           Which OS distribution am I compiling under?
+[`$?VM`](ap-a-index.html#vm-compiler-var)                   Which virtual machine am I compiling under
+`$?XVM`                                                     Which virtual machine am I cross-compiling for
+[`$?PERL`](ap-a-index.html#perl-compiler-var)               Which Perl am I compiled for?
+[`%?LANG`](ap-a-index.html#lang-compiler-var)               Hash of Grammar # What is the current set of interwoven languages?
+[`$?GRAMMAR`](ap-a-index.html#grammar-compiler-var)         current grammar
+[`$?FILE`](ap-a-index.html#file-compiler-var)               current filename of source file
+[`$?MODULE`](ap-a-index.html#module-compiler-var)           current module
+[`$?PACKAGE`](ap-a-index.html#package-compiler-var)         current package
+[`$?CLASS`](ap-a-index.html#class-compiler-var)             current class
+[`::?CLASS`](ap-a-index.html#class-package-compiler-var)    current class (as package name)
+[`$?ROLE`](ap-a-index.html#role-compiler-var)               current role (as variable)
+[`::?ROLE`](ap-a-index.html#role-package-compiler-var)      current role (as package or type name)
+[`&?ROUTINE`](ap-a-index.html#routine-compiler-var)         current sub or method
+[`&?BLOCK`](ap-a-index.html#block-compiler-var)             reference to current block
+[`$?LINE`](ap-a-index.html#line-compiler-var)               current line number
+----------------------------------------------------------  -----------------------------------------------------------------------
+
+### POD Variables ###
+
+File-scoped [POD](basic-syntax.html#pod) data
+
+-----------------------------------------------  --------------------------------------------------
+[`$=pod`](ap-a-index.html#pod-pod-var)           surrounding POD object
+[`$=data`](ap-a-index.html#data-pod-var)         data block handle (=begin DATA ... =end)
+[`@=COMMENT`](ap-a-index.html#comment-pod-var)   All the comment blocks in the file
+-----------------------------------------------  --------------------------------------------------
+
+### Slang Variables ###
+
+sublanguage seen by the parser at this lexical spot
+
+-------------------------------------------------  ------------------------------------------------------
+[`$~MAIN`](ap-a-index.html#main-lang-var)          the current main language (e.g. Perl statements)
+[`$~Quote`](ap-a-index.html#q-lang-var)            the current root of quoting language
+[`$~Quasi`](ap-a-index.html#quasi-lang-var)        the current root of quasiquoting language
+[`$~Regex`](ap-a-index.html#regex-lang-var)        the current root of regex language
+[`$~Trans`](ap-a-index.html#trans-lang-var)        the current root of transliteration language
+[`$~P5Regex`](ap-a-index.html#p5regex-lang-var)    the current root of the Perl regex language
+-------------------------------------------------  ------------------------------------------------------
+
+Scope Declarator
+----------------
+
+-----------------------------------------  -----------------------------------------------------
+[`my`](ap-a-index.html#my)                 introduces lexically scoped names
+[`state`](ap-a-index.html#state)           introduces lexically scoped but persistent names
+[`our`](ap-a-index.html#our)               introduces package-scoped names
+[`anon`](ap-a-index.html#anon)             introduces names that aren't to be stored anywhere
+[`has`](ap-a-index.html#has)               introduces object attribute names
+[`augment`](ap-a-index.html#augment)       adds definitions to an existing name
+[`supersede`](ap-a-index.html#supersede)   replaces definitions of an existing name
+-----------------------------------------  -----------------------------------------------------
+
+
+Scopes
+------
+
+The following pseudo-package names are reserved at the front of a
+name:
+
+------------  -------------------------------------------------------
+MY            Symbols in the current lexical scope (aka $?SCOPE)
+OUR           Symbols in the current package (aka $?PACKAGE)
+CORE          Outermost lexical scope, definition of standard Perl
+GLOBAL        Interpreter-wide package symbols, really CORE::GLOBAL
+PROCESS       Process-related globals (superglobals), CORE::PROCESS
+COMPILING     Lexical symbols in the scope being compiled
+DYNAMIC       Contextual symbols in my or any caller's lexical scope
+------------  -------------------------------------------------------
+
+The following relative names are also reserved but may be used
+anywhere in a name:
+
+----------  ---------------------------------------------------------------
+CALLER      Contextual symbols in the immediate caller's lexical scope
+OUTER       Symbols in the next outer lexical scope
+UNIT        Symbols in the outermost lexical scope of compilation unit
+SETTING     Lexical symbols in the unit's DSL (usually CORE)
+PARENT      Symbols in this package's parent package (or lexical scope)
+----------  ---------------------------------------------------------------
+
+The following is reserved at the beginning of method names in method
+calls:
+
+------  -----------------------------------------------------
+SUPER   Package symbols declared in inherited classes
+------  -----------------------------------------------------
+
+
+
+Value Types
+-----------
+
+In Perl 6 any variable and value is an object. Here's a list of all
+different types of values, represented my different classes or
+roles. The [routine types](ap-b-lookup.html#routine-types) are in a
+different section.
+
+### Undefined types ###
+
+---------  ------------------------------------------------------------------
+Mu         Most Undefined
+Failure    Failure (lazy exceptions, thrown if not handled properly)
+Any        Perl 6 object (default routine parameter type, excludes junction)
+Cool       Perl 6 Convenient OO Loopbacks
+Whatever   Wildcard (like Any, but subject to do-what-I-mean via MMD)
+Int        Any Int object
+Widget     Any Widget object
+---------  ------------------------------------------------------------------
+
+
+
+### Immutable types ###
+
+--------------  ---------------------------------------------------------------
+Str             Perl string (finite sequence of Unicode characters)
+Bit             Perl single bit (allows traits, aliasing, undef, etc.)
+Int             Perl integer (allows Inf/NaN, arbitrary precision, etc.)
+Num             Perl number (approximate Real, generally via floating point)
+Rat             Perl rational (exact Real, limited denominator)
+FatRat          Perl rational (unlimited precision in both parts)
+Complex         Perl complex number
+Bool            Perl boolean
+&nbsp;          &nbsp;
+Exception       Perl exception
+Block           Executable objects that have lexical scopes
+Seq             A list of values (can be generated lazily)
+Range           A pair of ordered endpoints
+&nbsp;          &nbsp;
+Set             Unordered collection of values that allows no duplicates
+Bag             Unordered collection of values that allows duplicates
+Enum            An immutable Pair
+EnumMap         A mapping of Enums with no duplicate keys
+Signature       Function parameters (left-hand side of a binding)
+Parcel          Arguments in a comma list
+LoL             Arguments in a semicolon list (or equiv, like Z)
+Capture         Function call arguments (right-hand side of a binding)
+Blob            An undifferentiated mass of bits
+Instant         A point on the continuous atomic timeline
+Duration        The difference between two Instants
+HardRoutine     A routine that is committed to not changing
+--------------  ---------------------------------------------------------------
+
+
+
+### Mutable types ###
+
+--------------  ----------------------------------------------------------
+Iterator        Perl list
+SeqIter         Iterator over a Seq
+RangeIter       Iterator over a Range
+Scalar          Perl scalar
+Array           Perl array
+Hash            Perl hash
+KeySet          KeyHash of Bool (does Set in list/array context)
+KeyBag          KeyHash of UInt (does Bag in list/array context)
+Pair            A single key-to-value association
+PairSeq         A Seq of Pairs
+Buf             Perl buffer (a stringish array of memory locations)
+IO              Perl filehandle
+Routine         Base class for all wrappable executable objects
+Sub             Perl subroutine
+Method          Perl method
+Submethod       Perl subroutine acting like a method
+Macro           Perl compile-time subroutine
+Regex           Perl pattern
+Match           Perl match, usually produced by applying a pattern
+Stash           A symbol table hash (package, module, class, lexpad, etc)
+SoftRoutine     A routine that is committed to staying mutable
+--------------  ----------------------------------------------------------
+
+
+
+Low level data types
+--------------------
+
+This is more low level than the last table. These types are more meant
+to give the compiler optimizing hints.
+
+----------  ------------------------------------
+int1        &nbsp;
+int2        &nbsp;
+int4        &nbsp;
+int8        &nbsp;
+int16       &nbsp;
+int32       (aka int on 32-bit machines)
+int64       (aka int on 64-bit machines)
+int128      (aka int on 128-bit machines)
+uint1       (aka bit)
+uint2       &nbsp;
+uint4       &nbsp;
+uint8       (aka byte)
+uint16      &nbsp;
+uint32      &nbsp;
+uint64      &nbsp;
+uint128     &nbsp;
+num16       &nbsp;
+num32       &nbsp;
+num64       (aka num on most architectures)
+num128      &nbsp;
+complex16   &nbsp;
+complex32   &nbsp;
+complex64   (aka complex on most architectures)\
+complex128  &nbsp;
+rat8        &nbsp;
+rat16       &nbsp;
+rat32       &nbsp;
+rat64       &nbsp;
+rat128      &nbsp;
+buf8        aka buf, a "normal" byte buffer
+buf16       a uint16 buffer
+buf32       a uint32 buffer
+buf64       a uint64 buffer
+----------  ------------------------------------
+
+
+Object Introspection
+--------------------
+
+---------  ---------------------------------------------------------------
+WHAT       short name of the class that an object belongs to
+WHICH      object ID (type)
+WHO        package, that support that object, long name in string context
+WHERE      memory address of the object
+HOW        object of meta class: "Higher Order Workings"
+WHEN       (reserved for events?)
+WHY        (reserved for documentation)
+WHENCE     autovivification of closures
+---------  ---------------------------------------------------------------
+
+
+
+Operators
+=========
+
+Table of precedence
+-------------------
+
+A   Level              Examples
+--  -----------------  ----------------------------------------------------
+N   Terms              `42 3.14 "eek" qq["foo"] $x :!verbose @$array`
+L   Method postfix     `.meth .+ .? .* .() .[] .{} .<> .<<>> .:: .= .^ .:`
+N   Autoincrement      `++ --`
+R   Exponentiation     `**`
+L   Symbolic unary     `! + - ~ ? | || +^ ~^ ?^ ^`
+L   Multiplicative     `* / % %% +& +< +> ~& ~< ~> ?& div mod gcd lcm`
+L   Additive           `+ - +| +^ ~| ~^ ?| ?^`
+L   Replication        `x xx`
+X   Concatenation      `~`
+X   Junctive and       `&`
+X   Junctive or        `| ^`
+L   Named unary        `sleep abs sin temp let`
+N   Structural infix   `but does <=> leg cmp .. ..^ ^.. ^..^`
+C   Chaining infix     `!= == < <= > >= eq ne lt le gt ge ~~ === eqv !eqv`
+X   Tight and          `&&`
+X   Tight or           `|| ^^ // min max`
+R   Conditional        `?? !! ff fff`
+R   Item assignment    `= => += -= **= xx= .=`
+L   Loose unary        `so not`
+X   Comma operator     `, :`
+X   List infix         `Z minmax X X~ X* Xeqv ...`
+R   List prefix        `print push say die map substr ... [+] [*] any Z=`
+X   Loose and          `and andthen`
+X   Loose or           `or xor orelse`
+X   Sequencer          `<== ==> <<== ==>>`
+N   Terminator         `; {...} unless extra ) ] }`
+--  -----------------  ----------------------------------------------------
+
+
+
+Operator Associativity
+----------------------
+
+&nbsp;  Assoc   Meaning of `$a ! $b ! $c`
+------  ------  --------------------------
+L       left    `($a ! $b) ! $c`
+R       right   `$a ! ($b ! $c)`
+N       non     ILLEGAL
+C       chain   `($a ! $b) and ($b ! $c)`
+X       list    `infix:<!>($a; $b; $c)`
+------  ------  --------------------------
+
+
+
+Categories
+----------
+
+### Main ###
+
+These are the categories of the main language grammar. The first
+category is the metacategory that can used to produce new
+ones. Sublanguages such as quoting and regexes can provide their own.
+
+    category:<prefix>
+    circumfix:<( )>
+    dotty:<.>
+    infix:<+>
+    infix_circumfix_meta_operator:{'«','»'}
+    infix_postfix_meta_operator:<=>
+    infix_prefix_meta_operator:<!>
+    package_declarator:<class>
+    postcircumfix:<( )>
+    postfix:<++>
+    postfix_prefix_meta_operator:{'»'}
+    prefix:<++>
+    prefix_circumfix_meta_operator:{'[',']'}
+    prefix_postfix_meta_operator:{'«'}
+    quote:<q>
+    routine_declarator:<sub>
+    scope_declarator:<my>
+    sigil:<$>
+    special_variable:<$!>
+    statement_control:<if>
+    statement_mod_cond:<if>
+    statement_mod_loop:<while>
+    statement_prefix:<do>
+    term:<*>
+    trait_auxiliary:<is>
+    trait_verb:<of>
+    twigil:<?>
+    type_declarator:<subset>
+
+
+
+### Regex ###
+
+The Regex language has following categories:
+
+    assertion:sym<!>
+    backslash:sym<w>
+    metachar:sym<.>
+    mod_internal:sym<P5>
+    quantifier:sym<*>
+
+
+
+Metaoperators
+-------------
+
+M. appear mostly before or around regular operators and give them
+different meaning or greater range.  They can be nested like `@a X[+=]
+@b`, but be careful with that.  In the example V stands for Value, L
+for left Value, and R for right. A number is the array index.  Words
+in the second column are short explanation or an aliasing method if
+followed by `()`.
+
+-------  --------------  ----------------------------------------------------------
+`op=`    self assign     known from P5, `$L <op>= $R` equals `$L = $L op $R`
+
+`!op`    negation        known from P5, `$L !<op> $R` equals `!($L op $R)`\
+
+`Rop`    reverse         reverses the order of the operands\
+
+`Sop`    sequence        like reduction, only synchronous, execution in listed
+                         order is guaranteed; suppresses any explicit or
+                         implicit parallelism
+
+`>>op`   hyper           processes arrays eager and in parallel or applies a
+                         single value to all array elements;
+                         `@E = $L[0] op $R[0], $L[1] op $R[1], ...;`
+
+`<<op`   hyper           like above, points to the side which determines
+                         dimensionality;
+                         `@E = $L[0] op $R[0], $L[1] op $R[1], ...;`
+
+`[op]`   reduce()        applies the operator between all elements of an array;
+                         `$result = $V[0] op $V[1] op ...;`
+
+`[\op]`  triangle()      applies above reduction to a series of lists made of
+                         array slices ranging in length from 1 to the complete
+                         length of the original list;
+                         `@result = $V[0], $V[0] op $V[1],
+                         $V[0] op $V[1] op $V[2], ...;`
+
+`Xop`    crosswith()     performs the operator to all the pairs of the Cartesian
+                         product of two arrays; `@result = $L[0] op $R[0],
+                         $L[0] op $R[1], $L[1] op $R[0], $L[1] op $R[1]`
+
+`Zop`    zipwith()       like hyper, but evaluates lazy,
+                         `@result = $L[0] op $R[0], $L[1] op $R[1], ...`
+-------  --------------  ----------------------------------------------------------
+
+
+
+Unicode operators
+-----------------
+
+The two hyper operators can be written with the Unicode "chevron"
+signs (also documented as "French Quotes") or with double less than or
+greater than signs (documented as "Texas Quotes").
+
+    « aka <<
+    » aka >>
+
+
+Contextualizers
+---------------
+
+Infix operator or functions that forcing a context.
+
+------  ---------  ----------------------------------------------------------------------------------------------
+`$()`   item()     [scalar/item context](variables.html#scalar)
+`?`     so()       [boolean](operators.html#bool-context)
+`!`     not()      negated bool context
+`+`     &nbsp;     [numeric](operators.html#numeric-context)
+`-`     &nbsp;     negated num context
+`~`     &nbsp;     [string](operators.html#string-context)
+`@()`   list()     [array/list context](variables.html#array)
+&nbsp;  flat()     flat list
+&nbsp;  lol()      list of list (was slice context before)
+`%()`   hash()     [hash context](variables.html#hash)
+`&()`   code()     [coderef](variables.html#callable), [routines](ap-b-lookup.html#routines)
+`|`     &nbsp;     flatten [capture](variables.html#capture) object into arglist (named parameter)
+`||`    &nbsp;     flatten [capture](variables.html#capture) object into semicolon list (positional parameter)
+------  ---------  ----------------------------------------------------------------------------------------------
+
+
+
+Smartmatch
+----------
+
+When used as infix `$_` is the left side, X is right. In when clauses
+just X is stated. Selection of the comparison alhorithm (4th column)
+is based on the value [types](ap-b-lookup.html#value-types) as stated
+in the first two columns.
+
+`$_`             X               Type of Match Implied     Match if (given `$_`)
+-----------      --------------  -----------------------   ----------------------------------------------------------
+Any              True            `~~` True                 (parsewarn)
+Any              False           `~~` False match          (parsewarn)
+Any              `*`             block signature match     block successfully binds to (pipe)$_ (flattened arglist)
+Any              Callable:(\$)   item sub truth            `X($_)`
+Any              Callable:()     simple closure truth      X() (ignoring `$_`)
+Any              Bool            simple truth              X
+Any              Match           match success             X
+Any              Numeric         numeric equality          `+$_ = X`
+Any              Stringy         string equality           `~$_ eq X`
+Any              Whatever        always matches            True
+Any              Nil             is nil                    `$_ === Nil`
+Hash             Pair            test hash mapping         `$_{X.key} ~~ X.value`
+Any              Pair            test object attribute     `?."{X.key}" = ?X.value` (e.g. filetests)
+Set              Set             identical sets            `$_ === X`
+Hash             Set             hash keys same set        `$_.keys === X`
+Any              Set             force set comparison      `Set($_) === X`
+Array            Array           arrays are comparable     `$_ «===» X` (dwims `*` wildcards!)
+Set              Array           array equiv to set        `$_ === Set(X)`
+Any              Array           lists are comparable      `@$_ «===» X`
+Hash             Hash            hash keys same set        `$_.keys === X.keys`
+Set              Hash            hash keys same set        `$_ === X.keys
+Array            Hash            hash slice existence      `X.{any @$_}:exists`
+Regex            Hash            hash key grep             `any(X.keys).match($_)`
+Cool             Hash            hash entry existence      `X.{$_}:exists`
+Any              Hash            hash slice existence      `X.{any @$_}:exists`
+Str              Regex           string pattern match      `.match(X)`
+Hash             Regex           hash key "boolean grep"   `.any.match(X)`
+Array            Regex           array "boolean grep"      `.any.match(X)`
+Any              Regex           pattern match             `.match(X)`
+Num              Range           in numeric range          `X.min <= $_ <= X.max (mod ^'s)`
+Str              Range           in string range           `X.min le $_ le X.max (mod ^'s)`
+Range            Range           subset range              `!$_ or .bounds.all ~~ X (mod ^'s)`
+Any              Range           in generic range          `[!after] X.min,$_,X.max` (etc.)
+Any              Type            type membership           `$_.does(X)`
+Signature        Signature       sig compatibility         `$_` is a subset of X ???
+Callable         Signature       sig compatibility         `$_.sig` is a subset of X ???
+Capture          Signature       parameters bindable       `$_` could bind to X (doesn't!)
+Any              Signature       parameters bindable       `(pipe)$_` could bind to X (doesn't!)
+Any              Any             scalars are identical     `$_ === X`
+-----------      --------------  -----------------------   ----------------------------------------------------------
+
+
+
+Filetest Ops
+------------
+
+Use it as in `$file.:X` or `$file ~~ :X`. (NOTE 2010-11-07: in rakudo
+this is `$filename.IO ~~ :X`).
+
+-------  --------------------------------------------------------------
+:r       file is readable by effective uid/gid.
+:w       file is writeable by effective uid/gid.
+:x       file is executable by effective uid/gid.
+:o       file is owned by effective uid.
+&nbsp;   &nbsp;
+:R       file is readable by real uid/gid.
+:W       file is writeable by real uid/gid.
+:X       file is executable by real uid/gid.
+:O       file is owned by real uid.
+&nbsp;   &nbsp;
+:e       file exists
+:s       file has size greater than 0
+&nbsp;   &nbsp;
+:f       file is a plain file.
+:d       file is a directory.
+:l       file is a symbolic link.
+:p       file is a named pipe (FIFO), or filehandle is a pipe.
+:S       file is a socket.
+:b       file is a block special file.
+:c       file is a character special file.
+:t       filehandle is opened to a tty.
+&nbsp;   &nbsp;
+:u       file has setuid bit set.
+:g       file has setgid bit set.
+:k       file has sticky bit set.
+-------  --------------------------------------------------------------
+
+
+
+Quoting Ops
+-----------
+
+The basic quoting operator (Q) does nothing, just taking literally
+what you quoted as a string. But with several adverbs, it behaves like
+the well known following ops:
+
+    q//         Q :q //
+    ' '         Q :q //
+    qq//        Q :qq //
+    " "         Q :qq //
+    qw//        Q :q :w //
+    < >         Q :q :w //
+    << >>       Q :qq :ww //
+    qp//        Q :path //
+    qx//        Q :exec //
+    rx//        Q :regex //
+    m//         Q :match //
+    ms//        Q :match :sigspace //
+    s///        Q :subst ///
+    ss///       Q :subst :samespace ///
+    tr///       Q :trans ///
+    quasi {}    Q :code //
+
+
+
+Text Processing
+===============
+
+Quoting Adverbs
+---------------
+
+There are a lot more adverbs to fine tune your quoting. The Adverbs
+can used with any quoting operator like: Q :s/.../ or qq :p /.../.
+
+Short   Long            Meaning
+------  --------------  -------------------------------------------------
+:q      :single         Interpolate \\\\, \\q and \\' (or whatever)
+:qq     :double         Interpolate with :s, :a, :h, :f, :c, :b
+:s      :scalar         Interpolate \$ vars
+:a      :array          Interpolate @ vars
+:h      :hash           Interpolate % vars
+:f      :function       Interpolate & calls
+:c      :closure        Interpolate {...} expressions
+:b      :backslash      Interpolate \\n, \\t, etc. (implies :q at least)
+:w      :words          Split result on words (no quote protection)
+:ww     :quotewords     Split result on words (with quote protection)
+:p      :path           Return a Path object (see S16 for more options)
+:to     :heredoc        Parse result as heredoc terminator
+:x      :exec           Execute as command and return results
+&nbsp;  :code           Quasiquoting
+&nbsp;  :regex          Parse as regex
+&nbsp;  :subst          Parse as substitution
+&nbsp;  :trans          Parse as transliteration
+------  --------------  -------------------------------------------------
+
+
+
+Regex Modifier
+--------------
+
+Stay behind the regex op and change the behaviour of the regex, search scope, etc.
+
+Short    Long           Meaning
+-------  -------------  ---------------------------------------------------------------------------------------------------------
+:g       :global        searches for any finding
+:x(n)    &nbsp;         searches n times (n is an int)
+:nth(n)  :st :nd :rd    demands the nth finding, has many aliases for correct spelling (:2nd)
+:c(n)    :continue      searches from nth position (counting from 0)
+:p(n)    :pos           searches only on nth position (counting from 0)
+:ov      :overlap       searches on all positionens just one time (activates backtracking)
+:ex      :exhaustive    searches on all positions as long as it findes something (activates backtracking)
+&nbsp;   :ratchet       deactivates backtracking
+&nbsp;   :panic         overwriting of possible set :ratchet for all subrules (activates backtracking)
+&nbsp;   :keepall       subrules have to memorize everything
+:rw      &nbsp;         the regex has the right to change the string
+:s       :sigspace      whitespace just separate parts of the Regex, don't stand for spaces to look for
+:ss      :samespace     as in :s for substitutions, 1st part replaced with 1st part in second half a.s.o. (ss/teh hsa/the has/;)
+:i       :ignorecase    no distinctions between uppercase and lowercase
+:ii      :samecase      substitute with chars of same case as the matching
+:m       :ignoremark    comparing base characters (Unicode non-mark characters) while ignoring any trailing mark characters
+:mm      :samemark      substitute with chars that has same mark/accent pattern as the matched string
+&nbsp;   :bytes         searches on byte level
+&nbsp;   :chars         searches on character level (default)
+&nbsp;   :codes         matches between codepoints
+&nbsp;   :graphs        match language-independent graphemes
+:P5      :Perl5         use the old Regex
+-------  -------------  ---------------------------------------------------------------------------------------------------------
+
+
+
+Regex Metacharacter
+-------------------
+
+-------  -------------------------------------------------------------------------------------------------------------
+`.`      any character
+`^`      begin of the sring
+`^^`     begin of a line
+`$`      end of the string
+`$$`     end of a line
+`(...)`  group patterns and capture the result
+`[...]`  group patterns without capturing
+`{...}`  execute a closure (Perl 6 code) within a rule
+`<...>`  match a subrule (assertion
+`|`      match alternate patterns (logigical OR with LTM)
+`||`     match alternate patterns (sequential OR)
+`&`      match multiple patterns (AND)
+`**`     muliply this (meta)char/subrule times the following digit on right side
+`%`      match this (meta)char/subrule as long as separated by (meta)char/subrule on the right
+`%%`     like %, but allows trailing separator
+`\`      escape a metacharacter to get a literal character, or escape a literal character to get a metacharacter
+`#`      mark a comment (to the end of the line)
+`:=`     bind the result of a match to a hypothetical variable
+-------  -------------------------------------------------------------------------------------------------------------
+
+
+Quantifier
+----------
+
+------  -------------------------------------------------------------------------------------------
+`?`     zero or one
+`+`     one or more
+`*`     zero or more
+`**`    maximal greedy matching
+`**`    muliply this (meta)char/subrule times the following digit on right side
+`**?`   minimal matching
+`%`     match this (meta)char/subrule as long as separated by (meta)char/subrule on the right
+`%%`    like %, but allows trailing separator
+------  -------------------------------------------------------------------------------------------
+
+
+Control Chars
+-------------
+
+These Escape Sequences will be evaluated inside quotes to invisible
+control chars, if the ":b" aka ":backslash" quoting Adverbs is set
+(included in :quotewords and :double). They are also usable in regexes
+and thatswhy also included in the next list.
+
+-----  -----------------
+`\a`   BELL
+`\b`   BACKSPACE
+`\e`   ESCAPE
+`\f`   FORM FEED
+`\n`   LINE FEED
+`\r`   CARRIAGE RETURN
+`\t`   TAB
+-----  -----------------
+
+
+
+Escape Sequences
+----------------
+
+To be used just inside of regexes (m/.../, s/.../.../ and tr/.../.../
+and methods like comb('...')).
+
+------------  --------------------------------------------------------------------
+`\0[ ... ]`   character given in octal (brackets optional)
+`\b`          word boundary
+`\B`          Match when not on a word boundary
+`\c[ ... ]`   named character or control character
+`\C[ ... ]`   any character except the bracketed named or control character
+`\d`          digit
+`\D`          nondigit
+`\e`          escape character
+`\E`          anything but an escape character
+`\f`          form feed
+`\F`          anything but a form feed
+`\n`          (logical) newline
+`\N`          anything but a (logical) newline
+`\h`          horizontal whitespace
+`\H`          anything but horizontal whitespace
+`\L[ ... ]`   Everything within the brackets is lowercase
+`\Q[ ... ]`   all metacharacters within the brackets match as literal characters
+`\r`          return
+`\R`          anything but a return
+`\s`          any whitespace character
+`\S`          anything but whitespace
+`\t`          a tab
+`\T`          anything but a tab
+`\U[ ... ]`   Everything within the brackets is uppercase
+`\v`          vertical whitespace
+`\V`          anything but vertical whitespace
+`\w`          word character (Unicode alphanumeric plus "_")
+`\W`          anything but a word character
+`\x[ ... ]`   character given in hexadecimal (brackets optional)
+`\X[ ... ]`   anything but the character given in hexadecimal (brackets optional)
+------------  --------------------------------------------------------------------
+
+zero-width boundaries begin with a pipe symbol
+
+------  -------------------------------------------------------------------
+`|c`    codepoint boundary (always matches in grapheme/codepoint mode)
+`|g`    grapheme boundary (always matches in grapheme mode)
+`|w`    word boundary aka <wb>
+------  -------------------------------------------------------------------
+
+
+
+Subrules
+--------
+
+predefined rules (see routine type rule) for any grammar or
+regex. They can have prefixes: . (dot) marks a non-capturing subrule,
+? and ! are also non-capturing positive and negative zero width
+assertions,
+
+---------------------  -------------------------------------------------
+`<alpha>`              single alphabetic character
+`<upper>`              uppercase char
+`<lower>`              lowercase char
+`<digit>`              single digit
+`<xdigit>`             hexadecimal digit
+`<alnum>`              alphanumeric char, equivalent to <+alpha +digit>
+`<punct>`              punctuation char
+`<ident>`              an identifier
+`<print>`              printable char
+`<graph>`              "graphical" char like kanji
+`<cntrl>`              control char, e.g. newline and backspace
+`<blank>`              mostly a space or tab
+`<space>`              whitespace character aka \s
+`<ws>`                 whitespace, roughly equals \s*
+`<wb>`                 zero-width word boundary, spot with between \w and \W
+`<ww>`                 zero-width inside word spot between \w and \w
+`<?before pattern>`    zero-width lookahead
+`<!before pattern>`    negative zero-width lookahead, true if the pattern does not match
+`<?after pattern>`     zero-width lookbehind
+`<!after pattern>`     negative zero-width lookbehind
+`<?same>`              zero-width between two identical chars
+`<prior>`              last matched pattern
+`<?>`                  matches nothing, always true
+`<!>`                  always false
+---------------------  -------------------------------------------------
+
+
+Flow Control
+============
+
+Closure Traits
+--------------
+
+aka phasers. Every block can contain special named blocks (some are
+only for loops) that are started at certain times. They are traits
+(compile time property) of a block object. Those marked with a * can
+also be used within an expression as in "BEGIN my $x = 3 * 3;".
+
+------------------------------------------------  ---------------------------------------------------------------------
+[BEGIN](ap-a-index.html#begin-phaser) {...}*      at compile time, ASAP, only ever runs once
+[CHECK](ap-a-index.html#check-phaser) {...}*      at compile time, ALAP, only ever runs once
+&nbsp;                                            &nbsp;
+[INIT](ap-a-index.html#init-phaser) {...}*        at run time, ASAP, only ever runs once
+[END](ap-a-index.html#end-phaser) {...}           at run time, ALAP, only ever runs once
+&nbsp;                                            &nbsp;
+[START](ap-a-index.html#start-phaser) {...}*      on first ever execution, once per closure clone
+[ENTER](ap-a-index.html#enter-phaser) {...}*      at every block entry time, repeats on loop blocks.
+[LEAVE](ap-a-index.html#leave-phaser) {...}       at every block exit time
+[KEEP](ap-a-index.html#keep-phaser) {...}         at every successful block exit, part of LEAVE queue
+[UNDO](ap-a-index.html#undo-phaser) {...}         at every unsuccessful block exit, part of LEAVE queue
+&nbsp;                                            &nbsp;
+[FIRST](ap-a-index.html#first-phaser) {...}*      at loop initialization time, before any ENTER
+[NEXT](ap-a-index.html#next-phaser) {...}         at loop continuation time, before any LEAVE
+[LAST](ap-a-index.html#last-phaser) {...}         at loop termination time, after any LEAVE
+&nbsp;                                            &nbsp;
+[PRE](ap-a-index.html#pre-phaser) {...}           assert precondition at every block entry, before ENTER
+[POST](ap-a-index.html#post-phaser) {...}         assert postcondition at every block exit, after LEAVE
+&nbsp;                                            &nbsp;
+[CATCH](ap-a-index.html#catch-phaser) {...}       catch exceptions, before LEAVE
+[CONTROL](ap-a-index.html#control-phaser) {...}   catch control exceptions (like next/last/return etc), before LEAVE
+------------------------------------------------  ---------------------------------------------------------------------
+
+
+
+Jump Commands
+-------------
+
+
+---------------------------------  ------------------------------------------
+[goto](ap-a-index.html#goto)       jump to a named label
+[redo](ap-a-index.html#redo)       repeat this loop turn
+[next](ap-a-index.html#next)       skip to the next loop turn
+[last](ap-a-index.html#last)       leave this loop now
+[break](ap-a-index.html#break)     leave this when clause
+[leave](ap-a-index.html#leave)     leave this block with a return value
+[return](ap-a-index.html#return)   leave this routine with a return value
+---------------------------------  ------------------------------------------
+
+
+
+Conditionals
+------------
+
+----------------------------------  -----------------------------------------------------
+[if](ap-a-index.html#if)            when following expression evals in boolean context
+                                    to True, the block that following after that will
+                                    be executed
+
+[elsif](ap-a-index.html#elsif)      works like if, but only recognized if no preceding
+                                    "if" or "elsif" clause was executed
+
+[else](ap-a-index.html#else)        following block will be executed, when no preceding
+                                    "if" or "elsif" clause was executed
+
+[unless](ap-a-index.html#unless)    opposite of if, no "elsif" or "else" is allowed to
+                                    follow
+
+[given](ap-a-index.html#given)      evals an expression into scalar context assignes it
+                                    to `$_` for the following block
+
+[when](ap-a-index.html#when)        smartmatches an expression against `$_`; if the result
+                                    is True, the following block will be executed
+
+[default](ap-a-index.html#default)  following block will be executed, when no "when"
+                                    clause was executed
+----------------------------------  -----------------------------------------------------
+
+
+Loops
+-----
+
+--------------------------------  -----------------------------------------------------------
+[loop](ap-a-index.html#loop)      general (endless) loop, unless used as an C-style-loop,
+                                  evals following expression into void context
+
+[repeat](ap-a-index.html#repeat)  initial command for while or until loops that have their
+                                  condtion at the end
+
+[while](ap-a-index.html#repeat)   loop with negative exit condition (exit when False),
+                                  condition, evals expression into boolean context
+
+[until](ap-a-index.html#until)    loop with positive exit condition(exit when True),
+                                  evals expression into boolean context
+
+[for](ap-a-index.html#for )       evals expression into lazy list context and iterates over
+                                  that list from first to last value, sets each time `$_`
+                                  (can be combined with when as well),
+--------------------------------  -----------------------------------------------------------
+
+
+
+Routines
+--------
+
+routine definition: \[[scope](ap-b-lookup.html#scopes)\] \[modifier\]
+type \[name\] \[trait\] (signature) { block }
+
+
+### Routine Types ###
+
+----------------------------------------  ----------------------------------------------------------------------
+[sub](ap-a-index.html#sub)                normal routine, named block with parmeters
+[method](ap-a-index.html#method)          inheritable object methods
+[submethod](ap-a-index.html#submethod)    not inheritable methods
+[regex](ap-a-index.html#regex)            routine that executes a regular expression
+[rule](ap-a-index.html#rule)              alias to regex :ratchet :sigspace
+[token](ap-a-index.html#token)            alias to regex :ratchet
+[macro](ap-a-index.html#macro)            routine that is compiled to an AST at BEGIN (ASAP, compile time)
+[quasi](ap-a-index.html#quasi)            block that is compiled to an AST at runtime
+----------------------------------------  ----------------------------------------------------------------------
+
+
+
+### Routine Modifier ###
+
+-------------------------------------------------  ---------------------------------------------------
+[multi](ap-a-index.html#multi-routine-modifier)    marks routines, witch can have siblings with same
+                                                   name but different signature; when called, the
+                                                   one with matching sig is executed
+
+[only](ap-a-index.html#only-routine-modifier)      routines which dont' allow to have an multi
+                                                   sibling (is default, you may leave it out)
+
+[proto](ap-a-index.html#proto-routine-modifier)    fallback for multi, if no multi signature matches
+                                                   the caller, a proto with same name is executed
+-------------------------------------------------  ---------------------------------------------------
+
+
+### Routine Traits ###
+
+[phasers](#closure-traits) (closure traits) can also be seen as
+routine traits.
+
+----------------------------------------------------  --------------------------------------------------------------
+[export](ap-a-index.html#export-routine-trait)        this routine will be exported my the current module by
+                                                      default
+
+[will do](ap-a-index.html#will-do-routine-trait)      block of code executed when the subroutine is called.
+                                                      Normally declared implicitly, by providing a block after
+                                                      the subroutine's signature definition
+
+[signature](ap-a-index.html#signature-routine-trait)  signature of a subroutine. Normally declared implicitly,
+                                                      by providing a parameter list and/or return type
+
+[as](ap-a-index.html#as-routine-trait)                inner type constraint that a routine imposes on its return
+                                                      value
+
+[of](ap-a-index.html#of-routine-trait)                official return type of the routine
+
+[cached](ap-a-index.html#cached-routine-trait)        marks a subroutine as being memoized
+
+[rw](ap-a-index.html#rw-routine-trait)                marks a subroutine as returning an lvalue
+
+[parsed](ap-a-index.html#parsed-routine-trait)        macro is parsed once, is hygienic, only parsed can be used
+
+[reparsed](ap-a-index.html#reparsed-routine-trait)    macro parsed twice, not hygienic, later parsed can be used
+
+[tighter](ap-a-index.html#tighter-routine-trait)      specifies the precedence of an operator higher than an
+                                                      existing operator as seen here
+
+[looser](ap-a-index.html#looser-routine-trait)        specifies the precedence of an operator lower than an
+                                                      existing operator as seen here
+
+[equiv](ap-a-index.html#equiv-routine-trait)          specifies the precedence of an operator same as an existing
+                                                      operator as seen here
+
+[assoc](ap-a-index.html#assoc-routine-trait)          specifies the associativity of an operator explicitly as
+                                                      seen here
+----------------------------------------------------  --------------------------------------------------------------
+
+
+### Parameter Traits ###
+
+-----------------------------------------------------  -----------------------------------------------------------------------------
+[as](ap-a-index.html#as-parameter-trait)               data coming through that parameter will be coerced to the type following as
+[readonly](ap-a-index.html#readonly-parameter-trait)   immutable parameter
+[rw](ap-a-index.html#rw-parameter-trait)               mutable parameter (rw stands for: read write)
+[copy](ap-a-index.html#copy-parameter-trait)           read-writable copy of the original argument ("pass-by-value")
+[dynamic](ap-a-index.html#dynamic-parameter-trait)     parameter is an "environmental" variable, a lexical in the dynamic scope
+[parcel](ap-a-index.html#parcel-parameter-trait)       raw reference, will not be contextualized
+-----------------------------------------------------  -----------------------------------------------------------------------------
+
+
+
+### Signature Symbols ###
+
+In routine and block definitions can be also some character with special meaning
+
+------------------------------------------------------  -----------------------------------------------------------------------
+[`!`](ap-a-index.html#exclamation-mark-signature)       suffix of required parameter (default when named, not positional)
+
+[`*`](ap-a-index.html#asterisk-signature)               prefix of slurpy arrays
+
+`-->`                                                   [prefix of return type](ap-a-index.html#minus-minus-greater-signature)
+                                                        (couldn't link the arrow due wiki syntax)
+
+[`->`](ap-a-index.html#minus-greater-signature)         prefix of named readonly parameters for a block (pointy block syntax)
+
+[`:`](ap-a-index.html#colon-signature)                  prefix of named parameter, positional when without
+
+[`::`](ap-a-index.html#colon-colon-signature)           prefix of a variable type introduced in a signature
+
+[`<->`](ap-a-index.html#lower-minus-greater-signature)  prefix of named writeable parameters for a block (double pointy block
+                                                        syntax)
+
+[`?`](ap-a-index.html#question-mark-signature)          suffix of optional parameter (default when positional, not named)
+
+[`^`](ap-a-index.html#caret-signature)                  prefix of metaclass methods, `$obj.^methods();` is shortcut for
+                                                        [`$obj.HOW.methods($obj);`](ap-b-lookup.html#object-introspection)
+------------------------------------------------------  -----------------------------------------------------------------------
+
+### Callframe Methods ###
+
+    args
+    callframe
+    caller
+    file
+    hints
+    inline
+    leave
+    line
+    my
+    package
+
+***

@@ -1,0 +1,14 @@
+% Perl 6 Tablets: Chp. 8 - Objects
+
+> "In order to understand how object orientation works in Perl, we
+> first need to agree what object orientation actually is. And that's
+> surprisingly hard to do. Object-oriented programming has been around
+> for at least three decades now, and in that time many opinions,
+> theories, and even ideologies have been formulated on the
+> subject. Each has purported to definitively characterize object
+> orientation. Most are mutually inconsistent. No two are exactly
+> alike." — Damian Conway
+
+xxx
+
+***

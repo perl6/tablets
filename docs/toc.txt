@@ -1,0 +1,56 @@
+% Perl 6 Tablets: Table of Contents
+
+These are the Perl 6 Tablets, a comprehensive manual, aimed to support
+many different ways of learning. The content is nicely sorted and
+indexed and many links allow you to follow your interest freely. For a
+lightweight introduction, try [my Perl 6 Tutorial](#) or the Book
+[Using Perl
+6](http://www.perlfoundation.org/perl6/index.cgi?perl_6_tutorial) or
+[Learning Perl 6](http://www.learningperl6.com/Chapters/). If that is
+too easy, read [the specs](http://perlcabal.org/syn/).
+
+**Contents:**
+
+[Preface and Introduction](introduction.html)
+
+[Tablet 0: History](history.html)
+
+[Tablet 1: Language Design](language-design.html)
+
+[Tablet 2: Basic Syntax (Spaces, Comments, Literals, Quoting,
+Formatting)](basic-syntax.html)
+
+[Tablet 3: Variables (Sigils, Twigils, Assignment, Typing,
+Scopes)](variables.html)
+
+[Tablet 4: Operators (Comparison, Math, String, Logic,
+Metaops)](operators.html)
+
+[Tablet 5: IO (Command Line, Files, Sockets, Network, Misc.)](io.html)
+
+[Tablet 6: Blocks (Conditions, Loops)](blocks.html)
+
+[Tablet 7: Subroutines (Signatures, Modules)](subroutines.html)
+
+[Tablet 8: Objects (Classes, Roles)](objects.html)
+
+[Tablet 9: Regex (Rules, Grammars)](regexes.html)
+
+[Tablet 10: Metaprogramming (Macros, DSL)](metaprogramming.html)
+
+[Appendix A: Index (all ops, builtins, methods and it terms,
+alphabetically ordered)](ap-a-index.html)
+
+[Appendix B: Look-up, short reference (cheat sheets ans summary
+tables)](ap-b-lookup.html)
+
+[Appendix C: Cookbook (chunks of everyday Perl 5, translated into
+idiomatic Perl 6)](ap-c-cookbook.html)
+
+[Appendix D: Perl 5-6 Delta](ap-d-p5-p6-delta.html)
+
+[Appendix E: Appetizer, Best-of tour](ap-e-appetizer.html)
+
+[Appendix F: Links](ap-f-links.html)
+
+***

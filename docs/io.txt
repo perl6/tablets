@@ -1,0 +1,301 @@
+% Perl 6 Tablets: Chp. 5 - IO
+
+> "Inside a shell might be a Perl." -- Herbert Breunung
+
+This tablet is about the core stuff of Perl's genesis - reading and
+writing files, running commands, and gluing parts of the operating
+environment together in new ways.
+
+
+
+Terminal
+========
+
+The terminal, command line or shell is the primary communication
+device for a script with its user. Most tutorials begin with writing
+some message to that black window.
+
+
+
+say
+---
+
+    say 'Dear Earthlings!';
+
+
+Writes text to the standard output (`$*OUT`, called `STDOUT` in Perl
+5). This example just prints a [string
+literal](basic-syntax.html#quoting), but any type of value is
+allowed. **say** adds a line ending, according to the operating system
+convention. So every time you "say" something, it will start on a
+fresh line.
+
+You can also give `say` a list of values. Each item will be taken as
+an expression, that has to evaluated. The results will be combined,
+just like with [**~**](operators.html#string-context), and finally the
+line ending will be added.
+
+    say 'Dear Earthlings, we come from ', $our_home_planet, ',
+        which is ', compute_distance($earth, $our_home_planet),
+        ' parsecs away.';
+
+That could also be written, using [double-quoted
+strings](basic-syntax.html#double-quotes), like:
+
+    say "Dear Earthlings, we come from $our_home_planet, which is { compute_distance($earth, $our_home_planet) } parsecs away.";
+
+which is sometimes more, but sometimes less readable and needs extra punctuation to split it over several lines of code.
+
+
+
+print
+-----
+
+Like `say`, just without adding the line ending. Remember it like
+this: machines **print** explicitly, character by character without
+pauses. People, on the other hand, speak in sentences or speech
+balloons, which have to be separated.
+
+
+
+printf
+------
+
+It's a `print` that understands also the syntax of
+[sprintf](basic-syntax.html#sprintf). It's a very lightweight
+framework for formated output. If you need more, use formats or even a
+template engine.
+
+    my $num = 22/7;
+    printf "Even on $our_home_planet, the ratio of a circle's circumference to its diameter is approximately %0.3f\n", $num;
+
+
+
+note
+----
+
+Works like [`say`](io.html#say), but writes to `$*ERR` (known as
+`STDERR` in Perl 5). Content sent to `$*ERR` can be redirected
+separately from normal program output, and is often used for progress
+reports, extra debugging information, error messages, etc.
+
+
+
+warn
+----
+
+Behaves somewhat like print to `$*ERR` (see
+[`note`](io.html#note)). Under the hood, warn is a "resumable
+exception", and its message can be caught and handled farther up the
+call stack in some way. Normally, once it's handled, Perl will resume
+running the code just after the warn call.
+
+
+
+get
+---
+
+Reads one line of input from `$*IN` (called `STDIN` in Perl 5), and
+strips the line ending. So unlike in Perl 5, you don't have to `chomp`
+input. All following line-oriented commands (e.g., `prompt`, `lines`)
+behave that way.
+
+    $answer = get;
+
+
+
+prompt
+------
+
+Performs two-way communication with the terminal. It does an output
+like `print`, followed by a read like `get`. In most instances it's
+nicer to leave a trailing space.
+
+    given prompt 'Where is the next service station? ' {
+        when / :i ^ duh / { say "Huh, no anti matter anywhere?!" }
+        default           { say "Thank you kindly, you've been a great help." }
+    }
+
+
+
+Files
+=====
+
+
+file test
+---------
+
+[file test operators](ap-b-lookup.html#filetest-ops)
+
+
+
+slurp
+-----
+
+Reads the entire contents of a file as a single string.
+
+    my $contents = slurp 'filename.txt';
+
+
+
+lines
+-----
+
+xxx
+
+
+
+read for files
+--------------
+
+xxx
+
+
+
+print for files
+---------------
+
+xxx
+
+
+
+say for files
+-------------
+
+xxx
+
+
+
+open
+----
+
+Synopsis:
+
+    open('new', :w).close
+
+    given open('foo', :w) { # "Anonymous" filehandle
+        .say('Hello, world!');
+        .close
+    }
+
+Valid modes are:
+
+**r** — read\
+**w** — write\
+**a** — append (Note: you must specify "wa", not just "a")\
+**p** — pipe
+
+
+
+close
+-----
+
+xxx
+
+
+
+rename for files
+----------------
+
+xxx
+
+
+
+Directories
+===========
+
+\$\*CWD
+-------
+
+xxx
+
+
+
+dir
+---
+
+xxx
+
+
+
+mkdir
+-----
+
+xxx
+
+
+
+chdir
+-----
+
+xxx
+
+
+
+chroot
+------
+
+xxx
+
+
+
+rmdir
+-----
+
+xxx
+
+
+
+rename
+------
+
+xxx
+
+
+
+Sockets
+=======
+
+xxx
+
+
+
+Processes
+=========
+
+
+run
+---
+
+xxx
+
+
+
+runinstead
+----------
+
+xxx
+
+
+
+fork
+----
+
+xxx
+
+
+
+wait
+----
+
+xxx
+
+
+
+kill
+----
+
+xxx
+
+
+***

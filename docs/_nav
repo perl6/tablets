@@ -1,0 +1,25 @@
+<p>
+<a href="introduction.html">Introduction</a>&nbsp;&nbsp;&nbsp;
+<a href="toc.html">Table of Contents</a>
+<br/>
+<b>Chapters:</b>&nbsp;&nbsp;
+<a href="history.html">0. History</a>&nbsp;&nbsp;
+<a href="language-design.html">1. Design</a>&nbsp;&nbsp;
+<a href="basic-syntax.html">2. Basics</a>&nbsp;&nbsp;
+<a href="variables.html">3. Var</a>&nbsp;&nbsp;
+<a href="operators.html">4. Op</a>&nbsp;&nbsp;
+<a href="io.html">5. IO</a>&nbsp;&nbsp;
+<a href="blocks.html">6. Block</a>&nbsp;&nbsp;
+<a href="subroutines.html">7. Sub</a>&nbsp;&nbsp;
+<a href="objects.html">8. OOP</a>&nbsp;&nbsp;
+<a href="regexes.html">9. Regex</a>&nbsp;&nbsp;
+<a href="metaprogramming.html">10. Meta</a>
+<br/>
+<b>Appendices:</b>&nbsp;&nbsp;
+<a href="ap-a-index.html">A. Index</a>&nbsp;&nbsp;
+<a href="ap-b-lookup.html">B. Lookup</a>&nbsp;&nbsp;
+<a href="ap-c-cookbook.html">C. Cookbook</a>&nbsp;&nbsp;
+<a href="ap-d-p5-p6-delta.html">D. Delta</a>&nbsp;&nbsp;
+<a href="ap-e-appetizer.html">E. Appetizer</a>&nbsp;&nbsp;
+<a href="ap-f-links.html">F. Links</a>
+</p>

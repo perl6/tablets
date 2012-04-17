@@ -1,0 +1,298 @@
+% Perl 6 Tablets: Chp. 4 - Operators
+
+> Perl folklore: Perl is an operator based language.
+
+Perl 6 has a huge amount of operators, because they support 2 of the
+main design goals: they offer **dense** and **readable** code. 2 + 3
+is certainly shorter and easier to understand then add(2,3), since
+[pictograms](language-design.html#visual-metaphor) can be picked up
+faster than words. (Fortran made his whole carrier on that). But
+because they are so many, they had to be sorted by a rule named
+[huffman coding](language-design.html#huffman-coding), which was
+applied here more than in any other part of the syntax.
+
+To understand an operator you have to know his **arity** (how many
+parameters he takes - usually one (!) or two (+) ).
+
+The [precedence](ap-b-lookup.html#table-of-precedence) tells
+which operator to prefer in case of conflict, when no braces are used
+(round braces are only used for grouping and managing precedence). It
+allows 2 + 3 * 5 to return 17, not 25, which would upset your math
+teacher.
+
+Behind that link is a table which also tells you also the
+[associativity](ap-b-lookup.html#operator-associativity) of
+every operator. This tells you after which rule to resolve precedence
+if one operator is used several times like in 2 * 3 * 7.
+
+
+
+Comparison
+==========
+
+
+
+Smartmatch
+----------
+
+This is the most mighty (much more mighty than its backported Perl 5
+twin) of all Perl 6 operators. It can be called the
+"compare-this-with-that-operator". If the left side of that infix op
+matches somehow the content of the right side, it returns Bool::True,
+otherwise Bool::False. The negated form !~ naturally works the other
+way around. The exact comparison operation depends on the [data
+types](variables.html#data-types) of the values on both sides. Just
+look into that [large table](ap-b-lookup.html#smartmatch) to
+check your specific case.
+
+Smartmatching was originally invented to make [matching with
+regex](regexes.html#matching) semantically sane.
+
+    ~~ !~
+
+
+
+Equality
+--------
+
+    eqv eq == ===
+    != !==
+
+
+
+Traversing Sequence
+-------------------
+
+    ++ -- succ pred
+
+[sequence generation](operators.html#sequence-operator)
+
+
+
+Generic Comparison
+------------------
+
+    before after cmp
+
+
+
+Numerical Comparison
+--------------------
+
+    < == > <=> <= >=
+
+
+
+String Comparison
+-----------------
+
+    lt eq gt leg le ge
+
+
+
+joined comparison
+-----------------
+
+    3 < $a == $a < 7
+
+is not the same as
+
+    3 < $a < 7
+
+because latter is evaled at once and the first in 2 steps (left to
+right).
+
+
+
+Junctions
+---------
+
+    | & ^ !
+    any all one none
+
+
+
+Ranges
+------
+
+    .. ^
+
+
+
+logical selection
+-----------------
+
+    && - and
+    || - or
+    // - err
+    ^^ - xor
+
+see also [numerical selection](operators.html#numerical-selection)
+
+
+
+ternary
+-------
+
+    ?? !!
+
+
+
+flipflop
+--------
+
+    ff fff
+
+
+
+file test
+---------
+
+[table](ap-b-lookup.html#filetest-ops)
+
+
+
+yadda
+-----
+
+    ...
+    ???
+    !!!
+
+
+
+context forcing scalar ops
+==========================
+
+
+bool context
+------------
+
+    ? !
+    ?& ?| ?^
+
+
+
+numeric context
+---------------
+
+    + - * ** / % %%
+    +& +| +^ +< +>
+    mod exp sqrt sin cos tan log log10
+
+
+
+### numerical selection ###
+
+    min max minmax
+
+
+
+String context
+--------------
+
+    ~ x
+    ~& ~| ~^ ~< ~>
+
+
+
+Ops for arrays/lists
+====================
+
+
+List generation
+---------------
+
+The simplest way to create a list is by repeating some values:
+
+    'munch' xx 3 # results in 'munch', 'munch', 'munch'
+    ('hallo', 'echo') xx 2 --> 'hallo', 'echo', 'hallo', 'echo'
+
+In list context the range operator produces lists:
+
+    @ 2 .. 7 --> 2,3,4,5,6,7
+
+
+
+### Sequence Operator ###
+
+    ...
+
+[traversing sequence](operators.html#traversing-sequence)
+
+
+
+Zip
+---
+
+    Z
+
+
+
+Combinators
+-----------
+
+    X
+
+
+
+Hyperops
+--------
+
+    << >>
+
+
+
+Reduce
+------
+
+    [ ]
+
+
+
+Triangle
+--------
+
+    [\ ]
+
+
+
+Feed Ops
+--------
+
+    <== ==>
+    <<== ==>>
+
+
+
+Assignment ops
+==============
+
+
+self assigning ops
+------------------
+
+xxx
+
+
+
+precedence table
+================
+
+[is in Appendix B](ap-b-lookup.html#table-of-precedence)
+
+
+
+intentionally not existing ops
+==============================
+
+xxx
+
+
+
+making own operators
+====================
+
+xxx
+
+***

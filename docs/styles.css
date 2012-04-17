@@ -1,0 +1,69 @@
+/* Typical low-contrast styles, John Gabriele, 2012, */
+
+body {
+    background-color: #eee;
+    color: #2a2a2a;
+}
+
+.you-provide {
+    color: #e44;
+    font-weight: bold;
+}
+
+a:link {
+    color: #3A4089;
+}
+
+a:visited {
+    color: #875098;
+}
+
+table {
+    background-color: #ddd;
+    padding-left: 2px;
+    border: 2px solid #bbb;
+    border-collapse: collapse;
+}
+
+th {
+    background-color: #bbb;
+    padding-right: 4px;
+}
+
+tr, td, th {
+    border: 2px solid #bbb;
+    padding-left: 4px;
+    padding-left: 4px;
+}
+
+dt {
+    font-weight: bold;
+}
+
+pre {
+    border: 1px solid #ccc;
+    background-color: #ddd;
+    padding-left: 6px;
+    padding-right: 2px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    margin-left: 34px;
+}
+
+blockquote {
+    background-color: #bcd;
+    border: 1px solid #abc;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    color: #444;
+    font-family: sans-serif;
+}
+
+h3, h5 {
+    font-style: italic;
+}

@@ -1,0 +1,45 @@
+% Perl 6 Tablets: Chp. 10 - Metaprogramming
+
+Macros
+======
+
+xxx
+
+
+
+Clean Macros
+------------
+
+xxx
+
+
+
+Dirty Macros
+------------
+
+xxx
+
+
+
+Operators
+---------
+
+    our &postfix:<²> := &infix:<**>.assuming(b => 2);
+
+
+
+Changing Internal Grammar
+=========================
+
+xxx
+
+
+
+DSL
+---
+
+xxx
+
+
+
+***

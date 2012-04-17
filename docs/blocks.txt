@@ -1,0 +1,135 @@
+% Perl 6 Tablets: Chp. 6 - Blocks
+
+Block
+=====
+
+
+
+do
+--
+
+xxx
+
+
+
+gather and take
+---------------
+
+xxx
+
+
+
+goto
+----
+
+xxx
+
+
+
+leave
+-----
+
+xxx
+
+
+
+sub
+---
+
+xxx
+
+
+
+Conditional
+===========
+
+
+if
+--
+
+binary contect
+
+
+
+### elsif ###
+
+xxx
+
+
+
+### else ###
+
+xxx
+
+
+
+unless
+------
+
+xxx
+
+
+
+given
+-----
+
+xxx
+
+
+
+### when ###
+
+xxx
+
+
+
+### continue ###
+
+xxx
+
+
+
+### default ###
+
+xxx
+
+
+
+Loops
+=====
+
+
+loop
+----
+
+void context
+
+
+
+while
+-----
+
+binary contect
+
+
+
+until
+-----
+
+binary contect
+
+
+
+for
+---
+
+lazy list contect
+
+
+
+repeat
+------
+
+xxx
+
+***

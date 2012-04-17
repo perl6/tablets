@@ -1,0 +1,4030 @@
+% Perl 6 Tablets: Appendix A - Index
+
+**Navigation:** [A](#a) [B](#b) [C](#c) [D](#d) [E](#e)
+[F](#f) [G](#g) [H](#h) [I](#i) [J](#j) [K](#k) [L](#l)
+[M](#m#) [N](#n) [O](#o) [P](#p) [Q](#q) [R](#r) [S](#s)
+[T](#t#) [U](#u) [V](#v) [W](#w) [X](#x) [Y](#y) [Z](#z)
+
+This index contains an alphanumeric sorted list (sorted without
+prefixes like colon, slash, sigil or twigil) of all operators,
+methods, builtins, options, modifier and special variables (in
+**bold**) and some technical terms (in *italic*) with short
+explanations. Each bold term is followed by a link (in round brackets)
+to a condensed summary listing of its category in [appendix
+B](ap-b-lookup.html).
+
+Sometimes are added placeholder for parameter in angle brackets. <span
+class="you-provide">n</span> stands for a integer number, <span
+class="you-provide">f</span> is a floating point number, <span
+class="you-provide">s</span> string, <span
+class="you-provide">var</span> any variable, <span
+class="you-provide">op</span> any operator, and <span
+class="you-provide">p</span> for a regex pattern.
+
+Before alpha chars (a-z) come the other in ASCII order: `! " # $ % & '
+( * + , - . / 0 : ; < = > ? @ [ \ ^ _ { | ~`
+
+
+
+Punctuation
+===========
+
+**\!** *[(context op)](ap-b-lookup.html#contextualizers)*
+logical negation (*NOT*), forces [boolean
+context](operators.html#bool-context), high precedence version of
+[**not**](#not)
+
+**\!** *[(twigil)](ap-b-lookup.html#twigils)*
+[twigil](#twigil) of private class and object variables
+
+**\!** *[(signature
+symbol)](ap-b-lookup.html#signature-symbols)* suffix for
+a required parameter in signatures, thats default if it's a named
+parameter, not is it's a positional
+
+**\!**<span class="you-provide">op</span> *[(meta
+op)](ap-b-lookup.html#metaoperators)*
+negates (mostly [comparison
+operators](operators.html#comparison))
+
+**\$\!** *[(special
+var)](ap-b-lookup.html#special-variables)* last error
+message
+
+**\<\!\>** *[(predefined
+subrule)](ap-b-lookup.html#subrules)* inverse of
+[**\<?\>**](#question_mark_subrule), returns always false
+
+**!!** *[(conditional op)](ap-b-lookup.html#conditionals)*
+just second part of the ternary (conditional) operator after
+**[??](#ternary-op)**, no op on its own
+
+**!!!** *[(yadda
+op)](operators.html#yadda)*
+yadda operator that calls **[die](#die)**
+
+**["
+"](basic-syntax.html#double-quotes)**
+*[(quoting
+op)](ap-b-lookup.html#quoting-ops)*
+double quoting, interpolates with
+**[:s](#s-adverb)**,
+**[:a](#a-adverb)**,
+**[:h](#h-adverb)**,
+**[:f](#f-adverb)**,
+**[:c](#c-adverb)**,
+**[:b](#b-adverb)** (all vars, functions, blocks,
+control chars), alias to **[qq/.../](#qq-op)** or
+**Q** **[:qq](#qq-adverb) ** **/.../**
+
+**[\#](basic-syntax.html#single-line)** - starts a comment that
+continues to the end of the line; works even inside regexes as a
+*[regex metachar](ap-b-lookup.html#regex-metacharacter)*
+
+**[\#=](basic-syntax.html#pod)**
+starts comments to the lineending like **\#**, just makes
+documenting comments that end up in
+*[&routine.WHY.content](#why-introspection)* on the
+following *[routine](#routine)*
+
+**[\#\`(
+)](basic-syntax.html#multi-line)**
+starts a multi-line comment that continues to the closing
+bracket, works with any combination of bracket pairs
+
+<a id="dollar-sigil"/>
+**[\$](variables.html#scalar)**
+*[(sigil)](ap-b-lookup.html#sigils)*
+[prefix](#prefix-category) of [scalar
+variables](variables.html#scalar)
+
+**\$**() *[(context
+op)](ap-b-lookup.html#contextualizers)*
+forces scalar context, alias to the
+**[item()](#item)** function
+
+**\$** *[(regex
+metachar)](ap-b-lookup.html#regex-metacharacter)*
+end of the string
+
+**\$$** *[(regex
+metachar)](ap-b-lookup.html#regex-metacharacter)*
+end of a line
+
+**%**
+*[(sigil)](ap-b-lookup.html#sigils)*
+[prefix](#prefix-category) of [hash
+variables](variables.html#hash)
+
+**%** *[(numeric
+op)](operators.html#numeric-context)*
+gives remainder of a modulo division, forces numeric context
+
+**%**() *[(context
+op)](ap-b-lookup.html#contextualizers)*
+forces hash context, alias to the
+**[hash()](#hash)** function
+
+**%**<span class="you-provide">s</span> *[(regex
+metachar)](ap-b-lookup.html#quantifier)*
+quantifier that repeat char or group as long as separated by
+right expression. Example: `\d % ','` matches `1,2,3,4,5`
+
+**%%** *[(numeric
+op)](operators.html#numeric-context)*
+**[True](#true)** if the left value is evenly
+divisible by the right value
+
+**%%**<span class="you-provide">s</span> *[(regex
+metachar)](ap-b-lookup.html#quantifier)*
+quantifier that repeat char or group as long as separated by
+right expression like %. but allows trailing separator. Example:
+`\d %% ','` matches `1,2,3,4,5,`
+
+**[&](variables.html#callable)**
+*[(sigil)](ap-b-lookup.html#sigils)*
+*[sigil](#sigil)* of
+[callables](variables.html#callable)
+like [subs](#sub), [methods](#method)
+and other [blocks](#block)
+
+**&**() *[(context
+op)](ap-b-lookup.html#contextualizers)*
+forces
+[callable](variables.html#callable)
+context, alias to **[code](#code_context_op)**
+
+**&** *[(junctive
+op)](operators.html#junctions)*
+*[junctive](#junction)* *AND*, requires that all
+conditions are met, see also: **[all](#all)**
+
+**&** *[(regex
+metachar)](ap-b-lookup.html#regex-metacharacter)*
+match multiple patterns (*AND*-connection of patterns)
+
+**&&** *[(logical
+op)](operators.html#logical-selection)*
+short circuit *AND*, evals right side if left side returns
+**[True](#true)**, high precedence version of
+**[and](#and)**
+
+**['
+'](basic-syntax.html#single-quotes)**
+*[(quoting
+op)](ap-b-lookup.html#quoting-ops)*
+simple quoting, just / and ' must be escaped, alias to
+**[q/.../](#q-op)** or **Q :q/.../**
+
+**()** - grouping of values (parameters)
+
+**()** *[(regex
+metachar)](ap-b-lookup.html#regex-metacharacter)*
+encompass a *subregex* / *submatch* , results land in
+**[@()](#round-brackets-var)** or
+**[$0](#0-var)**... (not limited to $9 anymore)
+
+**@()** *[(special
+var)](ap-b-lookup.html#match-variables)*
+holds positional submatches, **`$()[n]`** is alias to
+[**`$/[n]`**](#match-var) and [**`$n`**](#0-var)
+
+**\* ** *[(numeric
+op)](operators.html#numeric-context)*
+multiplies numbers, forces numeric context
+
+**\* ** *(term)* - synonym for
+**[Whatever](#whatever)**, for example, means `Inf`
+in a [range operator](#range-op) (**..**), means the
+end of an array in a slice operator so that negative indices access
+array elements relative to one beyond the final element
+
+**\* ** *[(signature
+symbol)](ap-b-lookup.html#signature-symbols)*
+[prefix](#prefix-category) which indicates
+*slurpy* arrays in signatures
+
+**\* **
+*[(twigil)](ap-b-lookup.html#twigils)*
+*[twigil](#twigil)* of global variables
+
+**\* ** *[(regex
+metachar)](ap-b-lookup.html#quantifier)*
+quantifier for zero or more findings
+
+**\*\* ** *[(numeric
+op)](operators.html#numeric-context)*
+raises a number to a power, forces numeric context
+
+**\*\* ** *[(regex
+metachar)](ap-b-lookup.html#quantifier)*
+not backtracking, greedy quantifier taking zero or more findings
+
+**\*\* **<span class="you-provide">n</span> *[(regex
+metachar)](ap-b-lookup.html#quantifier)*
+quantifier for explicit repeat char or group, like
+**[x](#x)** *(string op)* does outside of a regex;
+for example, `(ha)**3` matches `(hahaha)`
+
+**+** *[(context
+op)](ap-b-lookup.html#contextualizers)*,
+*[(numeric
+op)](operators.html#numeric-context)*
+[infix](#infix-category) addition operator,
+forces [numeric context](#numeric-context)
+
+**+** *[(regex
+metachar)](ap-b-lookup.html#quantifier)*
+quantifier for one or more findings
+
+**+&** *[(numeric
+op)](operators.html#numeric-context)*
+bitwise *AND*, forces numeric context
+
+**++** *[(sequence
+traversal)](operators.html#traversing-sequence)*
+generic autoincrement, calls internal iterator of that object,
+before (prefix) or after (suffix) the
+[evaluation](#evaluation) of the surrounding term,
+alias to **[succ](#succ)**
+
+**+<** *[(numeric
+op)](operators.html#numeric-context)*
+shift left in numeric context
+
+**+\>** *[(numeric
+op)](operators.html#numeric-context)*
+shift right in numeric context
+
+**+\^** *[(numeric
+op)](operators.html#numeric-context)*
+bitwise *XOR* in numeric context
+
+**+|** *[(numeric
+op)](operators.html#numeric-context)*
+bitwise *OR* in numeric context
+
+**[,](variables.html#array)** (comma)
+[list](variables.html#array)-generating operator
+
+**- ** *[(numeric
+op)](operators.html#numeric-context)*
+[infix](#infix-category) subtraction operator,
+forces numeric context (and negates)
+
+**--** *[(sequence
+traversal)](operators.html#traversing-sequence)*
+generic autodecrement, calls internal iterator of that object,
+before (prefix) or after (suffix) the
+[evaluation](#evaluation) of the surrounding term,
+alias to **[pred](#pred)**
+
+**--\>** *[(signature
+symbol)](ap-b-lookup.html#signature-symbols)*
+declares the type of the return value of a
+*[routine](#routine)*, type name is placed after
+this arrow at the end of a signature
+
+**-\> ** *[(signature
+symbol)](ap-b-lookup.html#signature-symbols)*
+declares named parameters for a *[block](#block)* (pointy block)
+
+**.**
+*[(twigil)](ap-b-lookup.html#twigils)*
+*[twigil](#twigil)* of public accessors
+(getter/setter)
+
+**.** *[(regex
+metachar)](ap-b-lookup.html#regex-metacharacter)*
+matches any character (including a newline, unlike in Perl 5)
+
+**..**
+*[(ranges)](operators.html#ranges)*, *[(list
+op)](operators.html#list-generation)*
+[infix](#infix-category) range generating
+operator, produces a `Range` object in [item
+context](ap-b-lookup.html#contextualizers)
+
+**[...](operators.html#sequence-operator)**
+*[(list op)](operators.html#list-generation)*
+[infix](#infix-category) sequence generating
+operator, infix operator for list generation
+
+**...** *[(yadda
+op)](operators.html#yadda)*
+term that calls **[fail](#fail)** (exception),
+marks unimplemented empty *[routine](#routine)*
+bodies
+
+**/** *[(numeric
+op)](operators.html#numeric-context)*
+divides numbers, forces numeric context
+
+**/** *[(rat
+composer)](basic-syntax.html#rational-number)*
+inside round brackets (for example `(3/7)`), gives you a
+rational number ( [immutable
+type](ap-b-lookup.html#immutable-types)
+) that keeps track of its numerator and denominator
+
+**$/** - *[(special
+var)](ap-b-lookup.html#match-variables)*
+last created match object of this
+*[block](#block)*
+
+**//** *[(logical
+op)](operators.html#logical-selection)*
+short circuit *defined or*, returns the first defined value
+(from left to right), similar to
+**[||](#pipe-pipe-op)**, high precedence version of
+**[err](#err)**
+
+**\\0 ***B***\[<span class="you-provide">n</span>\] ** *[(escape
+sequence)](ap-b-lookup.html#escape-sequences)*
+character given in octal, decimal or hex (when *B* is 'o', 'd'
+or 'x'), brackets are optional, first number has to be inside
+okt/dec/hex range, alternate syntax without the zero is preferred
+
+**`$0`** *[(special
+var)](ap-b-lookup.html#match-variables)*
+first positional submatch, there is **`$1`**, **`$2`**, ... too
+(don't stops at **`$9`** like Perl 5), alias to
+[**`$()[0]`**](#round-brackets-var) and
+[**`$/[0]`**](#backslash-var), former $0 is now
+[**\$\*EXECUTABLE\_NAME**](#executable-name-global-var)
+
+**:**
+*[pair](variables.html#pair)
+*generation operator, also known as *adverbial* syntax
+
+**:** *[(filetest
+op)](ap-b-lookup.html#filetest-ops)*
+start of all file test ops - example: *":" \~ one (<r w x o R W
+X O e z s f d l p S b c t u g k T B M A C\>)*
+
+**:**
+*[(twigil)](ap-b-lookup.html#twigils)*
+*[twigil](#twigil)* of autogenerated named
+parameters of a *[block](#block)*
+
+**:***B***<span class="you-provide">n</span>** - [general radix
+form](basic-syntax.html#general-radix-form)
+for literals, makes a number n in base B (up to 36) - example:
+`:2<1000001>` is decimal 65
+
+**:**<span class="you-provide">s</span> *(flow control)* - suffix of all labels you can jump to
+with **[goto](#goto)**
+
+**:** *[(signature
+symbol)](ap-b-lookup.html#signature-symbols)*
+prefix of a *[named parameter](#named-parameter)* in
+a signature, they are positional when without colon
+
+**::**
+*[(sigil)](ap-b-lookup.html#sigils)*
+abstraction [sigil](#sigil) and namespace
+separator in variable / [routine](#routine) /
+namespace names (like in Perl 5)
+
+**::** *[(signature
+symbol)](ap-b-lookup.html#signature-symbols)*
+introducing a type variable in a signature
+
+**[::=](variables.html#binding)**
+[binds](variables.html#binding)
+a value or variable to a variable at compile time
+
+**[:=](variables.html#binding)**
+creates an alias to a variable at runtime
+(*[binding](variables.html#binding)*)
+
+**[;](basic-syntax.html#statements)**
+separates
+[statements](basic-syntax.html#statements)
+(commands) or [array
+indices](variables.html#array-slices)
+; for example, `@[2;3]` instead of `@a[2][3]`
+
+**<** *[(num
+comparison)](operators.html#numerical-comparison)*
+[infix](#infix-category) op, less than,
+**[True](#true)** if numerically ordered the left
+comes before the right operand
+
+**<-\> ** *[(signature
+symbol)](ap-b-lookup.html#signature-symbols)*
+double pointy syntax to assign a rw parameter to a
+*[block](#block)*
+
+**<<** *[(meta
+op)](ap-b-lookup.html#metaoperators)*
+applies the operator on the left as hyper operator to the array
+on the right
+
+**<<==** *[(sequencer
+op)](operators.html#feed-ops)*
+leftward pointing feed operator that adds values to an existing
+list (append-mode)
+
+**[<<
+\>\>](basic-syntax.html#quote-words)**
+*[(quoting
+op)](ap-b-lookup.html#quoting-ops)*
+[circumfix](#circumfix-category) quoting operator
+for grouping with autoquoting and evaluation of variables, alias to
+**Q** **[:qq](#qq-adverb)**
+**[:ww](#ww-adverb)** **/.../**
+
+**<=** *[(num
+comparison)](operators.html#numerical-comparison)*
+less than or equal, numeric comparison operator see also **<**
+and **\>=**
+
+**<==** *[(sequencer
+op)](operators.html#feed-ops)*
+leftward pointing feed operator, take return value of right side
+and feed as parameter to the left, see also
+**[=\>](#equal-equal-greater-op)**
+
+**<=\>** *[(num
+comparison)](operators.html#numerical-comparison)*
+numeric less-equal-greater comparison for sortable classes, does
+**[cmp](#cmp)** in numeric context as
+**[leg](#leg)** does in
+*[string](#str-type)* context
+
+**[<
+\>](basic-syntax.html#quote-words)**
+*[(quoting
+op)](ap-b-lookup.html#quoting-ops)*
+[circumfix](#circumfix-category) quoting operator
+for grouping with autoquoting, alias to
+**[Q](#capital-q-op)** **:q**
+**[:ww](#ww-adverb)** **/.../** or
+**[qw/.../](#qw-op)**
+
+**< \>**
+*[(twigil)](ap-b-lookup.html#twigils)*
+[circumfix](#circumfix-category)
+*[twigil](#twigil)* of named captures, **`$<...>`**
+is alias to [**`$/<...>`**](#match-var), was $& and
+$MATCH in Perl 5
+
+**< \>** *[(regex
+metachar)](ap-b-lookup.html#regex-metacharacter)*
+embraces an subrule (assertion)
+
+**[=](variables.html#assignment)**
+*(Op)* -
+[assignment](variables.html#assignment),
+right side is [evaluated](#evaluation) and assigned
+to the left
+
+**=**
+*[(twigil)](ap-b-lookup.html#twigils)*
+[pod](#pod) variable, mapped content from pod
+sections of this file - examples:
+[**`$=pod`**](#pod-pod-var) and
+[**`$=data`**](#data-pod-var)
+
+<span class="you-provide">op</span> **=** *[(meta
+op)](ap-b-lookup.html#metaoperators)*
+self assignment, left side is one operand and place where the
+result is assigned to - example: *($a += 3; equals $a = $a + 3)*
+
+**=:=** *(comparison op)* - compares
+[binding](variables.html#binding)
+, if both vars are bound to same memory location
+
+**==** *[(num
+comparison)](operators.html#numerical-comparison)*
+**[True](#true)** if values are equal in
+numerical context, as **[eq](#eq)** does in *[string
+context](operators.html#string-context)*
+
+**===** *(comparison op)* - checks for infix identity, equality of
+value and
+[type](ap-b-lookup.html#value-types)
+
+**==\>** *[(sequencer
+op)](operators.html#feed-ops)*
+rightward pointing feed operator, take return value of left side
+and feed as parameter to the right
+
+**==\>\>** *[(sequencer
+op)](operators.html#feed-ops)*
+rightward pointing feed operator that adds values to an existing
+list (append-mode)
+
+**=\>** *(op)* - pair (and hash) constructor, *fatarrow*
+
+**\>** *[(num
+comparison)](operators.html#numerical-comparison)*
+[infix](#infix-category) op, numeric greater than
+
+**\>=** *[(num
+comparison)](operators.html#numerical-comparison)*
+[infix](#infix-category) op, numeric greater than
+or equal
+
+**\>\>** *[(meta
+op)](ap-b-lookup.html#metaoperators)*
+binds operator (right) as hyper operator to an array (left)
+
+**[?](operators.html#logical-selection)**
+*[(context
+op)](ap-b-lookup.html#contextualizers)*
+forces *[boolean
+context](operators.html#bool-context)*
+in an expression, returns **[False](#false)** when
+value is 0 or empty, otherwise **[True](#true)**,
+high precedence version of **[so](#so-op)**
+
+**?** *[(signature
+symbol)](ap-b-lookup.html#signature-symbols)*
+suffix for optional named parameters in signatures
+
+**?** *[(regex
+metachar)](ap-b-lookup.html#quantifier)*
+quantifier for 0 or 1 occurrence in Regexes
+
+**?**
+*[(twigil)](ap-b-lookup.html#twigils)*
+*[twigil](#twigil)* (secondary sigil) for
+constant compiler hint variables
+
+**<?\>** *[(predefined
+subrule)](ap-b-lookup.html#subrules)*
+matches nothing, returns always **[True](#true)**,
+opposite of [**`<!>`**](#exclamation-mark-subrule)
+
+
+**?&** *[(bool
+op)](operators.html#bool-context)*
+logical *AND* op, and combinator, forces binary context
+
+**?? !!** *(conditional op)* - ternary or conditional operator,
+shortcut for **[if](#if)** and
+**[else](#else)**, see also
+**[ff](#ff)** and **[fff](#fff)**
+
+**???** *[(yadda
+op)](operators.html#yadda)*
+yadda operator that calles **[warn](#warn)**
+
+**?\^** *[(bool
+op)](operators.html#bool-context)*
+logical *XOR*, forces operands into boolean context
+
+**?|** *[(bool
+op)](operators.html#bool-context)*
+logical *OR*, forces operands into boolean context
+
+**@**
+*[(sigil)](ap-b-lookup.html#sigils)*
+[sigil](#sigil) of an
+[array](variables.html#array)
+
+**@**() *[(context
+op)](ap-b-lookup.html#contextualizers)*
+forces (flattened) array context, alias to
+**[list()](#list)** function
+
+<span class="you-provide">var</span>**\[ \]**
+[postcircumfix](#postcircumfix-category) operator,
+appended on an array var, returns an array slice with values which
+indexes was inside the brackets
+
+**[ ]** - [circumfix](#circumfix-category) operator
+that creates a reference to an array that holds all values that
+encompas these brackets
+
+**\[<span class="you-provide">op</span>\] ** *[(meta
+op)](ap-b-lookup.html#metaoperators)*
+[circumfix](#circumfix-category) reduction
+metaop, applies the operator between all elements of an array, alias
+to **[reduce](#reduce)**
+
+**\[\\<span class="you-provide">op</span>\] ** *[(meta
+op)](ap-b-lookup.html#metaoperators)*
+[circumfix](#circumfix-category) reduction
+metaop, applies above reduction to a series of lists made of array
+slices ranging in length from 1 to the complete length of the
+original list, alias to **[triangle](#triangle)**
+
+**\\** - [capture
+generator](variables.html#capture)
+, creates a *[capture](#capture)* that holds the
+following structure
+
+**\\** - escape char, all escape sequences inside
+[quotes](ap-b-lookup.html#control-chars)
+and
+[regexes](ap-b-lookup.html#escape-sequences)
+start with it
+
+**\^** *[(junctive
+op)](operators.html#junctions)*
+*[junctive](#junction)* *XOR*, requires that one
+value in a list is **[True](#true)**, see also
+**[one](#one)**
+
+**\^** - upto operator, `^$limit expands to 0 ..\^ +$limit range`
+
+**\^**
+*[(ranges)](operators.html#ranges)*
+in [range](#range-op) definitions, it excludes a
+limit value, in scalar context see smartmatch
+
+**\^**
+*[(twigil)](ap-b-lookup.html#twigils)*
+autogenerated positional parameters of a
+*[block](#block)*, position results from
+alphabetical order of all $\^-Variables
+
+**\^** *[(signature
+symbol)](ap-b-lookup.html#signature-symbols)*
+prefix of metaclass methods, `$obj.\^methods();` is shortcut for
+[`$obj.HOW.methods($obj);`](#how-introspection)
+
+**\^** *[(regex
+Metachar)](ap-b-lookup.html#regex-metacharacter)*
+start of the string
+
+**\^\^** *[(logical
+op)](operators.html#logical-selection)*
+logical *XOR*, combines expressions, returns
+**[True](#true)** when only one expression is true,
+otherwise false, high precedence version of
+**[xor](#xor)**
+
+**\^\^** *[(regex
+Metachar)](ap-b-lookup.html#regex-metacharacter)*
+start of a line
+
+**$\_ ** *[(special
+var)](ap-b-lookup.html#special-variables)*
+context var, result of the last command, can set by topicalizers
+(**[given](#given)** and
+**[for](#for)**)
+
+**{}** - [circumfix](#circumfix-category) operator,
+encloses blocks and creates a coderef, or a hashref when it is
+identified as a hash or contains a **[=\>](#fatarrow)**
+
+
+**|** *[(junctive
+op)](operators.html#junctions)*
+*[junctive](#junction)* *OR*, requires that a
+condition is fulfilled, see also: **[any](#any)**
+
+**|** *[(regex
+Metachar)](ap-b-lookup.html#regex-metacharacter)*
+match alternate patterns with longest token matching (*OR* -
+temporal simultaneous connection of patterns)
+
+**|**() *[(context
+op)](ap-b-lookup.html#contextualizers)*
+flatten
+[capture](variables.html#capture)
+object into arglist, (named parameter)
+
+**||** *[(logical
+op)](operators.html#logical-selection)*
+short circuit *OR*, evaluates sequentially, ends evaluation at
+the first expression that returns **[True](#true)**,
+high precedence version of **[or](#or)**
+
+**||** *[(regex
+Metachar)](ap-b-lookup.html#regex-metacharacter)*
+match alternate patterns (temporal consequent alternatives) as
+connected with a logical *OR*
+
+**||**() *[(context
+op)](ap-b-lookup.html#contextualizers)*
+flatten
+[capture](variables.html#capture)
+object into semicolon list, (positional parameter)
+
+**[\~](operators.html#string-context)**
+*[(context
+op)](ap-b-lookup.html#contextualizers)*,
+*[(string
+op)](operators.html#string-context)*
+forces *[string
+context](operators.html#string-context)*
+(stringify) and/or concatenate strings, alias for
+**[cat](#cat)**
+
+**\~**
+*[(twigil)](ap-b-lookup.html#twigils)*
+*[twigil](#twigil)* for a
+[grammar](#grammar) of a sublanguage like
+**[$\~MAIN](#main-lang-var)**
+
+**\~&** *[(string
+op)](operators.html#string-context)*
+characterwise *AND*, forces *[string
+context](operators.html#string-context)*
+
+**\~<** *[(string
+op)](operators.html#string-context)*
+characterwise left shift, forces *[string
+context](operators.html#string-context)*
+
+**\~\>** *[(string
+op)](operators.html#string-context)*
+characterwise right shift, forces *[string
+context](operators.html#string-context)*
+
+**\~\^** *[(string
+op)](operators.html#string-context)*
+characterwise *XOR*, forces *[string
+context](operators.html#string-context)*
+
+**\~|** *[(string
+op)](operators.html#string-context)*
+characterwise or, forces *[string
+context](operators.html#string-context)*
+
+**[\~\~](operators.html#smartmatch)**
+*(comparison op)* - smartmatch operator, compares (almost) all
+variable and data types according a
+[table](ap-b-lookup.html#smartmatch)
+
+
+
+# A
+
+**:a** *[(quoting
+adverb)](ap-b-lookup.html#quoting-adverbs)*
+demands evaluation of array variables that starting with the
+**[@-sigil](#at-sigil)**, short form of
+**[:array](#array-adverb)**, included in
+**["..."](#double-quotation-marks)**,
+**[qq/.../](#qq-op)** and
+**[<<...\>\>](#double-angle-brackets)**
+
+**abs** *(numeric op)* - returns numeric absolute value, converts
+value in numeric context
+
+**after** *[(generic
+comparison)](operators.html#generic-comparison)*
+generic comparison operator used by the Order class,
+**[True](#true)** if left should follow right
+
+**\<!after <span class="you-provide">p</span>\>** *[(predefined
+subrule)](ap-b-lookup.html#subrules)*
+negative zero-width lookbehind, if before this position is
+something that matches the pattern inside the angle brackets, the
+whole pattern will not match
+
+**\<?after <span class="you-provide">p</span>\>** *[(predefined
+subrule)](ap-b-lookup.html#subrules)*
+positive zero-width lookbehind, only if this position is
+preceded by the given pattern inside the angle brackets, the whole
+pattern will match
+
+*ALAP* - as late as possible, within a given execution phase
+(compile time or run time)
+
+**all** *[(junctive
+op)](operators.html#junctions)*
+*[junctive](#junction)* *AND* operator,
+**[True](#true)** if all conditions (elements of a
+following list) are fulfilled, see also:
+**[&](#junctive-and)**
+
+**<alnum\>** *[(predefined
+subrule)](ap-b-lookup.html#subrules)*
+a single alphanumeric character, equivalent to **<+alpha
++digit\>**
+
+**<alpha\>** *[(predefined
+subrule)](ap-b-lookup.html#subrules)*
+a single alphabetic character
+
+**and** *[(logical
+op)](operators.html#logical-selection)*
+short circuit logical *AND*, returns the last defined value
+(from left to right), low precedence version of
+**[&&](#high-and)**, similar to
+**[andthen](#andthen)**
+
+**andthen** *(logical op)* - logical *AND* short circuit operator,
+transferring **[$\_](#context-var)** from first to
+second block/expression, if first do succeed, see also:
+**[orelse](#orelse)**
+
+**anon** *[(scope
+declarator)](ap-b-lookup.html#scope-declarator)*
+introduces names that aren't to be stored anywhere (anonymous)
+
+**Any** *[(undefined value
+type)](ap-b-lookup.html#undefined-types)*
+Perl 6 object (default routine parameter type, excludes
+*[junction](#junction)*)
+
+**any** *[(junctive
+op)](operators.html#junctions)*
+*[junctive](#junction)* *OR* operator,
+**[True](#true)** when any one condition (of a
+following list) is true in bool context, see also:
+**[|](#junctive-or)**
+
+**$\*ARGFILES ** *[(special
+var)](ap-b-lookup.html#global-variables)*
+magic command-line input handle, was ARGV in P5
+
+**@\*ARGS ** *[(special
+var)](ap-b-lookup.html#global-variables)*
+arguments (parameter) to a program (script), formerly @ARGV
+
+**arity** *(routine method)* - returns how many parameters this
+routine requires, **[.count](#count)** includes also
+the optional
+
+**Array** *[(mutable
+type)](ap-b-lookup.html#mutable-types)*
+Perl Array, a series of **[Scalar](#scalar-type)**
+value container, or a variable that stores such a list
+
+**[:array](basic-syntax.html#interpolation)**
+*[(quoting
+adverb)](ap-b-lookup.html#quoting-adverbs)*
+demands evaluation of array variables that starting with the
+**[@-sigil](#at-sigil)**, long form of
+**[:a](#a-adverb)**, included in
+**["..."](#double-quotation-marks)**,
+**[qq/.../](#qq-op)** and
+**[<<...\>\>](#double-angle-brackets)**
+
+**as** *[(parameter
+trait)](ap-b-lookup.html#parameter-traits)*
+data coming through that parameter will be coerced to the type
+following **as**
+
+**as** *[(routine
+trait)](ap-b-lookup.html#routine-traits)*
+inner type constraint that a routine imposes on its return value
+
+*ASAP* - as soon as possible, within a given execution phase
+(compile time or run time)
+
+**assoc** *[(routine
+trait)](ap-b-lookup.html#routine-traits)*
+specifies the [associativity of an
+operator](ap-b-lookup.html#operator-associativity)
+explicitly
+
+**assuming** - method of all subroutine reference objects that
+enables *[Currying](#currying)*
+
+*AST* - (abstract syntax tree), tree like data structure, in which
+source code is transformed, before running the programm
+
+**async** *(block modifier)* - allows the interpreter to parallelize
+the following
+
+**augment** *[(scope
+declarator)](ap-b-lookup.html#scope-declarator)*
+adds definitions to an existing name, inserts new methods and
+attributes into a **[grammar](#grammar)** or
+replaces them, see also: **[supersede](#supersede)**
+
+
+
+# B
+
+**:b** *[(filetest
+op)](ap-b-lookup.html#filetest-ops)*
+file is a block special file (e.g. Harddisks, CDROMs and RAM
+areas)
+
+**:b** *[(quoting
+adverb)](ap-b-lookup.html#quoting-adverbs)*
+forces evaluation of [escape
+sequences](ap-b-lookup.html#escape-sequences)
+, short form of **[:backslash](#backslash-adverb)**,
+included in **["..."](#double-quotation-marks)**,
+**[qq/.../](#qq-op)** and
+**[<<...\>\>](#double-angle-brackets)**
+
+**\\B** *[(escape
+sequence)](ap-b-lookup.html#escape-sequences)*
+Match when not on a word boundary
+
+**\\b** *[(escape
+sequence)](ap-b-lookup.html#escape-sequences)*
+zero-width word boundary aka
+**[<wb\>](#wb-subrule)**
+
+**[:backslash](basic-syntax.html#interpolation)**
+*[(quoting
+adverb)](ap-b-lookup.html#quoting-adverbs)*
+forces evaluation of [escape
+sequences](ap-b-lookup.html#escape-sequences)
+, long form of **[:b](#b-adverb)**, included in
+**["..."](#double-quotation-marks)**,
+**[qq/.../](#qq-op)** and
+**[<<...\>\>](#double-angle-brackets)**
+
+*backtracking* - go after an unsuccessful match back to the last
+successful matching position and check if another alternative part
+of the regex matches
+
+**Bag** *[(immutable
+type)](ap-b-lookup.html#immutable-types)*
+unordered collection of values that allows duplicates
+
+**base** - returns a **[Str](#str-type)**
+representing the invocant in base $base (only parameter); Fails if
+$base is smaller than 2 or larger than 36
+
+**before** *[(generic
+comparison)](operators.html#generic-comparison)*
+generic comparison operator used by the Order class,
+**[True](#true)** when left should precede right
+
+**\<!before <span class="you-provide">p</span>\>** *[(predefined
+subrule)](ap-b-lookup.html#subrules)*
+negative zero-width lookahead, if after this position follows
+the given pattern inside the angle brackets, the whole pattern will
+not match
+
+**\<?before <span class="you-provide">p</span>\>** *[(predefined
+subrule)](ap-b-lookup.html#subrules)*
+positive zero-width lookahead, only if this position is followed
+by the given pattern inside the angle brackets, the whole pattern
+will match
+
+**BEGIN** *[(closure
+trait)](ap-b-lookup.html#closure-traits)*
+marks as a prefix a special block or statement, executed at
+*[compile time](#compile-time)*, ASAP, only ever
+runs once
+
+*[binding](variables.html#binding)*
+making two variables share the same content by pointing to same
+memory location
+
+**Bit** *[(immutable
+type)](ap-b-lookup.html#immutable-types)*
+Perl single bit (allows traits, aliasing, undef, etc.)
+
+**<blank\>** *[(predefined
+subrule)](ap-b-lookup.html#subrules)*
+a single "blank" character -- in most locales, this corresponds
+to space and tab
+
+**bless** - calling bless on any invocant (but typically a type
+object) to create a new object with the same class as the invocant
+
+**Blob** - *[(immutable
+type)](ap-b-lookup.html#immutable-types)*
+An undifferentiated mass of bits
+
+**Block** *[(immutable
+type)](ap-b-lookup.html#immutable-types)*
+Executable objects that have lexical scopes (enclosed by curly
+brackets)
+
+*block* - syntactically just a piece of code inside curly brackets
+(**{}**), when [evaluated](#evaluation) it becomes an
+object of the type **[Block](#block-type)**
+
+**&?BLOCK ** *[(special
+var)](ap-b-lookup.html#compiler-hint-variables)*
+reference to current block
+
+**Bool** *[(immutable
+type)](ap-b-lookup.html#immutable-types)*
+Perl boolean, type of values that can be either
+**[True](#true)** or **[False](#false)**
+which is in full length *Bool::True* and *Bool::False*
+
+**break** *[(flow
+control)](ap-b-lookup.html#jump-commands)*
+leave this **[when](#when)** block now, see also:
+**[last](#last)** and
+**[leave](#leave)**
+
+**Buf** *[(mutable
+type)](ap-b-lookup.html#mutable-types)*
+Perl buffer (a stringish array of memory locations), type for
+raw binary data
+
+**but** - adds a **[role](#role)** to a
+**[class](#class)**
+
+**bytes** *(string method)* - returns number of bytes used (a sort
+of length)
+
+**:bytes** *[(regex
+modifier)](ap-b-lookup.html#regex-modifier)*
+searching on byte level, see also:
+**[chars](#chars-modifier)**,
+**[:codes](#codes-modifier)**,
+**[:graphs](#graphs-modifier)**
+
+
+
+# C
+
+**:c** *[(filetest
+op)](ap-b-lookup.html#filetest-ops)*
+file is a character special file (e.g. terminals modems)
+
+**:c** *[(quoting
+adverb)](ap-b-lookup.html#quoting-adverbs)*
+forces evaluation of closures (blocks aka {...}) inside quotes,
+long form of **[:closure](#closure-adverb)**,
+included in **["..."](#double-quotation-marks)**,
+**[qq/.../](#qq-op)** and
+**[<<...\>\>](#double-angle-brackets)**
+
+**:c**(<span class="you-provide">n</span>) *[(regex
+modifier)](ap-b-lookup.html#regex-modifier)*
+searching from nth (n is an int) position (counting from 0) and
+then going to the right, short for ":continue"
+
+**\\C\[<span class="you-provide">n</span>\]** *[(escape
+sequence)](ap-b-lookup.html#escape-sequences)*
+any character except the bracketed named or control character
+
+**\\c\[<span class="you-provide">n</span>\]** *[(escape
+sequence)](ap-b-lookup.html#escape-sequences)*
+named character or control character
+
+**|c** *[(escape
+sequence)](ap-b-lookup.html#escape-sequences)*
+codepoint boundary, zero width space between two unicode
+codepoints, see also: **[|g](#pipe-g)** and
+**[|w](#pipe-w)**
+
+**cached** *[(routine
+trait)](ap-b-lookup.html#routine-traits)*
+marks a subroutine as being memoized
+
+**call** - execute a subroutine
+
+**caller** - object
+[describing](ap-b-lookup.html#callframe-methods)
+the callable (routine) from which as routine was invoked
+
+**callframe** - returns an object that describes a particular
+callframe as described by a [list of
+matchers](ap-b-lookup.html#callframe-methods)
+
+**callwith** - callable-method by which one can call a sub with a
+different [signature](#signature)
+
+**capitalize** - alias to a wordwise ucirst( lc(
+**[$\_](#context-var)** ) ), makes first char of
+every word upper case, rest lowercase
+
+**[Capture](variables.html#capture)**
+*[(immutable
+type)](ap-b-lookup.html#immutable-types)*
+type holding arguments for a routine call (right-hand side of a
+binding)
+
+**cat** *[(array
+method)](variables.html#array-methods)*
+converts values of a list into *[string
+context](operators.html#string-context)*
+and joines them like with **[\~](#tilde-op)**,
+alias to *[.join('')](#join)*
+
+**CATCH** *[(closure
+trait)](ap-b-lookup.html#closure-traits)*
+marks as a prefix a special block to catch
+**[Exceptions](#exception-type)**, before
+**[LEAVE](#leave-phaser)**
+
+**categorize** *[(array
+method)](variables.html#array-methods)*
+special form of map to classify a list values (values - optional
+second parameter), with a closure (mapper - first parameter); the
+return value of the closure determines, under which key the value
+appears in the resulting hash, unlike
+**[classify](#classify)** the return value of the
+mapper can be listref to put the value in several categories or
+**[Nil](#nil)** to reject the value for
+categorisation
+
+**category** *[(grammatical
+category)](ap-b-lookup.html#categories)*
+grammatical category of all grammatical categories
+(metacategory), useful in case you want to create a new one with a
+macro
+
+**[ceiling](operators.html)**
+lowest integer not less than $x (only parameter)
+
+**chr** *(num method)* - convert number into character according a
+character table (UTF), reverse of **[ord](#ord)**
+
+**chrs** *(num method)* - plural of **char**, takes a list of
+**[Int](#int-type)** and returns a
+**[Str](#str-type)**, reverse of
+**[ords](#ords)**
+
+**chars** *(string method)* - returns number of characters of a
+[string](#str-type) , was length in Perl 5
+
+**:chars** *[(regex
+modifier)](ap-b-lookup.html#regex-modifier)*
+searching on character level (default), see also:
+**[:bytes](#bytes-modifier)**,
+**[codes](#codes-modifier)**,
+**[graphs](#graphs-modifier)**
+
+**[chdir](io.html#dir)**
+changes the current working directory
+(**[$\*CWD](#cwd-global-var)**)
+
+**CHECK** *[(closure
+trait)](ap-b-lookup.html#closure-traits)*
+marks as a prefix a special block or statement, executed at
+*[compile time](#compile-time)* ALAP, only ever runs
+once
+
+**chmod** - changes access rights of files
+
+**chomp** *(string method)* - returns a
+[string](#str-type) with the last newline (if there
+is one) removed (from only parameter)
+
+**chop** *(string method)* - returns a
+[string](#str-type) with the last character removed
+(from only parameter)
+
+**chown** - changes owner of files
+
+**[chroot](io.html#chroot)**
+change root directory on POSIX systems
+
+**circumfix** *[(grammatical
+category)](ap-b-lookup.html#categories)*
+operator namespace of two parted ops that surround the
+statement, op or variable they affect, most prominent example may be
+the [double quotes](#double-quotation-marks)
+
+**class** *(block modifier)* - following block will build an object,
+see also **[method](#method)**,
+**[submethod](#submethod)** and
+**[has](#has)**
+
+**$?CLASS ** *[(special
+var)](ap-b-lookup.html#compiler-hint-variables)*
+current class object
+
+**::?CLASS ** *[(special
+var)](ap-b-lookup.html#compiler-hint-variables)*
+name of the current class
+
+**classify** *[(array
+method)](variables.html#array-methods)*
+special form of map to classify a list values (values - optional
+second parameter), with a closure (mapper - first parameter); the
+return value of the closure determines, under which key the value
+appears in the resulting hash, classify { chr $\_ }, 97..99 returns
+{"a" =\> [97], "b" =\> [98], "c" =\> [99] } , values are always
+listrefs (see also **[categorize](#categorize)**)
+
+**[close](io.html#close)**
+*(filehandle method)* - releasing the connection to a file via a
+file handler
+
+**[:closure](basic-syntax.html#interpolation)**
+*[(quoting
+adverb)](ap-b-lookup.html#quoting-adverbs)*
+forces evaluation of closures (blocks aka {... }) inside quotes,
+long form of **[:c](#c-adverb)**, included in
+**["..."](#double-quotation-marks)**,
+**[qq/.../](#qq-op)** and
+**[<<...\>\>](#double-angle-brackets)**
+
+*closure* - routines whose state (content of all local variables) is
+completely preserved until the next execution
+
+**cmp** *[(generic
+comparison)](operators.html#generic-comparison)*
+general [infix](#infix-category) sort comparator,
+result is *Order::Increase* (numerically -1) if
+**[before](#before)** is
+**[True](#true)** - *Order::Same* (numerically 0) if
+**[eqv](#eqv)** - *Order::Decrease* (numerically 1)
+if **[after](#after)**, see also:
+**[leg](#leg)** and
+**[<=\>](#spaceship-op)**)
+
+**<cntrl\>** *[(predefined
+subrule)](ap-b-lookup.html#subrules)*
+a not visible character that is aimed to control the console
+output
+
+**code** *[(context
+op)](ap-b-lookup.html#contextualizers)*
+forces
+[callable](variables.html#callable)
+context, alias to **[&()](#ampersand-context-op)**
+
+**:code** *[(quoting
+adverb)](ap-b-lookup.html#quoting-adverbs)*
+quasi quoting, the commented will be compiles and the AST will
+be returned as result, see also: **[quasi](#quasi)**
+
+*coderef* - reference (pointer) to an executable block of code
+(routine)
+
+**:codes** *[(regex
+modifier)](ap-b-lookup.html#regex-modifier)*
+searching on codepoint level (between codepoints), see also:
+**[:bytes](#bytes-modifier)**,
+**[chars](#chars-modifier)**,
+**[:graphs](#graphs-modifier)**
+
+**comb** *(string method)* - $str.comb(/pattern/) equals $str \~\~
+m:g/pattern/ , except it returns the list of findings, not a match
+object like **.match(rx/.../)** aka **[m/.../](#m-op)**,
+default pattern is rx/./
+
+**@=COMMENT ** *[(special
+var)](ap-b-lookup.html#pod-variables)*
+all the comment blocks in the file
+
+*compilation* - reading the human written source code and make it an
+executable (piece of) program
+
+*compile time* - time when Perl converts source code to executable
+form (bytecode), is always before
+*[runtime](#runtime)* even if code can be compiled
+via **[eval](#eval)** and
+**[evalfile](#evalfile)** when the program is
+already runnung, to run code at the begin of compile time use
+**[BEGIN](#begin-phaser)** and
+**[CHECK](#check-phaser)** to run at the end of
+compile time for that unit (mostly the file or the to be \*eval\*ed
+string)
+
+**Complex** *[(immutable
+type)](ap-b-lookup.html#immutable-types)*
+Perl object type to hold a complex number
+
+**[conjugate](operators.html)**
+convert [complex number](#complex-type) into
+real (**[Num](#num-type)**), see also
+**[abs](#abs)**
+
+**constant** *(var trait)* - makes so declared var (*is constant*) a
+real constant
+
+**contend** *(block modifier)* - marks a block as atomic, concurrent
+proceses have to wait
+
+*context* - when executing a function or operator Perl considers the
+expression from which the call was to return a
+[scalar](#scalar-type) or other kind of result
+
+*context variable* - name for **[$\_](#context-var)**,
+which is used by built in Perl functions as an implicit
+parameter and as memory of the last result
+
+**[continue](blocks.html#continue)**
+*(flow control)* - makes execution in a 'given' also try the
+following 'when' clauses
+
+**:continue**(<span class="you-provide">n</span>) - *[(regex
+modifier)](ap-b-lookup.html#regex-modifier)*
+searching from nth (n is an int) position (counting from 0) and
+then going to the right, short for
+**[:c](#c-modifier)**
+
+**CONTROL** *[(closure
+trait)](ap-b-lookup.html#closure-traits)*
+marks as a prefix a special block to catch control
+**[Exception](#exception-type)** (like
+**[next](#next)** / **[last](#last)**
+/ **[return](#return)** etc), before
+**[LEAVE](#leave-phaser)**
+
+**Cool** *[(undefined value
+type)](ap-b-lookup.html#undefined-types)*
+Perl 6 Convenient OO Loopbacks,
+
+**copy** *[(parameter
+trait)](ap-b-lookup.html#parameter-traits)*
+read-writable copy of the original argument ("pass-by-value")
+
+**cos** *[(numeric
+op)](operators.html#numeric-context)*
+cosine, trigonometric function, takes angle in radians; see also
+**[to-radians](#to-radians)**,
+**[sin](#sin)**, **[tan](#tan)**
+
+**count** *(routine method)* - returns how many parameters this
+routine takes (including optional),
+**[.arity](#arity)** counts just the required
+
+**cross** *(list method)* - alias to **[X
+operator](#capital-x)** - example: @a X @b = (@a;
+@b).cross
+
+**crosswith** *(list method)* - alias to **[X
+metaoperator](#capital-x-metaop)**: @a X\~ @b = (@a;
+@b).crosswith(&[\~]) = (@a; @b).cross.slice.map { .reduce(&[\~]) }
+
+*currying* - creating a subroutine that calls another with certain
+*[parameter](#parameter)* to be predefined
+
+**$\*CWD ** *[(special
+var)](ap-b-lookup.html#global-variables)*
+current working directory as **[Str](#str-type)**
+
+
+
+# D
+
+**:d** *[(filetest
+op)](ap-b-lookup.html#filetest-ops)*
+check if file is a directory
+
+**\\D** *[(escape
+sequence)](ap-b-lookup.html#escape-sequences)*
+a single nondigit character
+
+**\\d** *[(escape
+sequence)](ap-b-lookup.html#escape-sequences)*
+a single digit character
+
+**\$=data** *[(special
+var)](ap-b-lookup.html#pod-variables)*
+handle for the data block (=begin data ... =end data), use
+*$=data.lines* to *[iterate](#interation)* over the
+lines of it
+
+**[decode](io.html#read)**
+*(Buf method)* - transforms raw binary UTF
+(**[Buf](#buf-type)**) into readable UTF Text
+(**[Str](#str-type)**)
+
+**[default](blocks.html#default)**
+*[(block
+modifier)](ap-b-lookup.html#conditionals)*
+following block will be run if no **[when](#when)**
+clause in surrounding block matched
+
+*Declarative Programming* - programming paradigm that expresses the
+logic of a computation without describing its control flow
+
+**defer** *(block modifier)* -
+
+**defined** - scalar method tests whether a value has been assigned
+to a variable
+
+**delete** *[(array
+method)](variables.html#array-methods)*
+removes all values of which indices are passed
+
+**delete** *[(hash
+method)](variables.html#hash-methods)*
+removes all [pairs](#pair) of which keys are
+passed
+
+**denominator** *[(rat
+method)](basic-syntax.html#rational-number)*
+returns the denominator of a rational number (value type Rat and
+FatRat)
+
+*Design by Contract* - programming style in which parameters and
+return values from routines must meet conditions; A signature is
+considered contract in Perl 6
+
+**die** - throws a fatal
+**[Exception](#exception-type)**, the default
+exception handler **[print](#print)**'s each element
+of the list to **[$\*ERR](#err-global-var)**
+
+**<digit\>** *[(predefined
+subrule)](ap-b-lookup.html#subrules)*
+single (decimal) digit char aka
+**[\\d](#backslash-d)**
+
+**[dir](io.html#dir)**
+returns all files of a given directory, excluding . and .. by
+default
+
+**\$\*DISTRO** *[(special
+var)](ap-b-lookup.html#global-variables)*
+running OS distribution, you might want to use `$*DISTRO.name`,
+see also: [**`$*KERNEL`**](#kernel-global-var) and
+[**`$*VM`**](#vm-global-var)
+
+**\$\?DISTRO** *[(special
+var)](ap-b-lookup.html#global-variables)*
+[OS](#kernel-compiler-var) distribution the
+program was compiled for, see also:
+[**`$?KERNEL`**](#kernel-compiler-var) and
+[**`$*VM`**](#vm-compiler-var)
+
+**[div](operators.html)** integer division
+
+**[do](blocks.html#do)**
+executes a block (do once loop)
+
+**does** - checks if an objekt inherits a role (parameter)
+
+**dotty** *[(grammatical
+category)](ap-b-lookup.html#categories)*
+
+**[:double](basic-syntax.html#double-quotes)**
+*[(quoting
+adverb)](ap-b-lookup.html#quoting-adverbs)*
+*double quoting*, **q** with interpolation of variables, alias
+to **["..."](#double-quotation-marks)**, **[qq
+/.../](#qq-op)** and **Q :s :a :h :f :c :b /.../**,
+long for **[:qq](#qq-adverb)**
+
+**Duration** - *[(immutable
+type)](ap-b-lookup.html#immutable-types)*
+The difference between two Instants
+
+**dynamic** *[(parameter
+trait)](ap-b-lookup.html#parameter-traits)*
+parameter is an "environmental" variable, a lexical in the
+dynamic scope
+
+
+
+# E
+
+**:e** *[(filetest
+op)](ap-b-lookup.html#filetest-ops)*
+tests if file exists
+
+**\\E** *[(escape
+sequence)](ap-b-lookup.html#escape-sequences)*
+anything but an escape character
+
+**\\e** *[(escape
+sequence)](ap-b-lookup.html#escape-sequences)*
+escape character
+
+**each** - variant of all() that promises to do things in order, is
+Positional/Iterable
+
+**eager** - forces eager evaluation (compute all values now),
+default for scalars - not for lists
+
+**\$\*EGID** *[(special
+var)](ap-b-lookup.html#global-variables)*
+effective global ID of the running process
+(**[$\*PID](#pid-global-var)**) owner, was @) and
+$EGID in Perl 5
+
+**elems** *[(array op &
+method)](variables.html#array-methods)*
+number of elements (values), see also:
+**[end](#end)**
+
+**elems** *[(hash op &
+method)](variables.html#hash-methods)*
+number of pairs
+
+**[else](blocks.html#else)**
+*[(block
+modifier)](ap-b-lookup.html#conditionals)*
+introduces the alternative block after an
+**[if](#if)** or **[elsif](#elsif)**
+that is executed, when conditions of all alternatives resulted
+in **[false](#false)**, see also
+**[default](#default)**
+
+**[elsif](blocks.html#elsif)**
+*[(block
+modifier)](ap-b-lookup.html#conditionals)*
+alternative **[if](#if)** clause
+
+**[encode](io.html#read)**
+*(Buf method)* - transforms readable UTF Text
+(**[Str](#str-type)**) into raw binary UTF
+(**[Buf](#buf-type)**)
+
+**END** *[(closure
+trait)](ap-b-lookup.html#closure-traits)*
+marks as a prefix a special block, executed at run time, ALAP,
+only ever runs once
+
+**end** *[(array op &
+method)](variables.html#array-methods)*
+last index of that list, see also:
+**[elems](#elems)**
+
+**ENTER** *[(closure
+trait)](ap-b-lookup.html#closure-traits)*
+marks as a prefix a special block or statement, executed at
+every block entry time, repeats on loop blocks
+
+**Enum** *[(immutable
+type)](ap-b-lookup.html#immutable-types)*
+An immutable Pair
+
+**enum** - enum takes a list of keys or pairs and adds values to any
+keys that are not already part of a pair (one more than the previous
+key had) - example: *%hash = enum <<:Mon(1) Tue Wed Thu Fri Sat
+Sun\>\>; *
+
+**EnumMap** *[(immutable
+type)](ap-b-lookup.html#immutable-types)*
+A mapping of Enums with no duplicate keys
+
+**%\*ENV ** *[(special
+var)](ap-b-lookup.html#global-variables)*
+environment variables (of the shell), was %ENV in P5
+
+**eq** *[(comparison
+op)](operators.html#string-comparison)*
+[infix](#infix-category) operator, proves
+equality in forced *[string
+context](operators.html#string-context)*
+as does **[=](#equal-equal-op)** in numeric
+context
+
+**equiv** *[(routine
+trait)](ap-b-lookup.html#routine-traits)*
+specifies the [precedence of an
+operator](ap-b-lookup.html#table-of-precedence)
+same as an existing operator
+
+**eqv** *(comparison op)* - [infix](#infix-category)
+operator, compares the dynamic state of objects and values, in
+contrast with static **[=](#triple-equal)**
+
+**err** *[(logical
+op)](operators.html#logical-selection)*
+short circuit defined or, returns the first defined value from
+the left, short circuit or,low precedence version of
+**[//](#high-err)**
+
+**\$\*ERR** *[(special
+var)](ap-b-lookup.html#global-variables)*
+standard error output (command line mostly), STDERR in Perl 5
+
+**\$\*EUID** *[(special
+var)](ap-b-lookup.html#global-variables)*
+effective user ID of the running process
+(**[$\*PID](#pid-global-var)**) owner, was @\> and
+$EUID in Perl 5
+
+**eval** - just *[compiles](#compilation)* a
+[string](#str-type) and runs it, returns a result and
+maybe error message in
+**[$!](#exclamation-mark-var)** but does not catch
+**[Exceptions](#exception-type)**, second optional
+parameter defines a parser grammar which should understand the
+string
+
+*evaluation* - executing a piece of program, before that all
+variables will be replaced with their content
+
+**evalfile** - **[eval](#eval)** a file like 'do'
+did in Perl 5, with optional second parameter, which is a
+*[grammar](#grammar)* that can parse that file
+
+**:ex** *[(regex
+modifier)](ap-b-lookup.html#regex-modifier)*
+searching at all positions as long as it findes something (with
+backtracking), short for
+**[:exhaustive](#exhaustive-modifier)**
+
+**Exception** *[(immutable
+type)](ap-b-lookup.html#immutable-types)*
+Perl exception, errors or abnormal events interfering with
+normal execution, which Perl 6 can both generate and handle
+
+**:exec** *[(quoting
+adverb)](ap-b-lookup.html#quoting-adverbs)*
+quoted string will be evaluated as Perl code (like
+**[eval](#eval)**) replaced with its result, alias to
+**Q :x** and **[qx/.../](#qx-op)**
+
+**$\*EXECUTABLE\_NAME ** *[(special
+var)](ap-b-lookup.html#global-variables)*
+name of the main scripts file name, was *$0* in Perl 5
+
+**:exhaustive** *[(regex
+modifier)](ap-b-lookup.html#regex-modifier)*
+searching at all positions as long as it findes something (with
+backtracking), long for **[:ex](#ex-modifier)**
+
+**exists** - checks for existence of a variable, array or hash
+member, scalar method
+
+**exit** *(flow control)* - stops all program execution, and returns
+Int $status (first parameter) to the calling environment
+
+**exp** - exponentiate, alias method to: $base (first parameter)
+**[\*\*](#asterisk-asterisk-op)** $exponent (second
+parameter - defaults to e)
+
+**export** *[(routine
+trait)](ap-b-lookup.html#routine-traits)*
+this routine will be exported by the current module by default
+
+
+
+# F
+
+**:f** *[(filetest
+op)](ap-b-lookup.html#filetest-ops)*
+file is a plain file (no socket or dir, ...etc.)
+
+**:f** *[(quoting
+adverb)](ap-b-lookup.html#quoting-adverbs)*
+demands evaluation of functions (subs and methods), that start
+with the **[&-sigil](#ampersand-sigil)** and
+replacing them with the result, long form of
+**[:function](#function-adverb)** , included in
+**["..."](#double-quotation-marks)**,
+**[qq/.../](#qq-op)** and
+**[<<...\>\>](#double-angle-brackets)**
+
+**\\F** *[(escape
+sequence)](ap-b-lookup.html#escape-sequences)*
+anything but form feed
+
+**\\f** *[(escape
+sequence)](ap-b-lookup.html#escape-sequences)*
+form feed
+
+**fail** - causes the routine to return an unthrown
+**[Exception](#exception-type)**, if *use fatal;* is
+in effect where the routine was called from, it throws the exception
+
+**Failure** *[(undefined value
+type)](ap-b-lookup.html#undefined-types)*
+data type object for an error, thrown by an unhandled
+**[Exception](#exception-type)**
+
+**False** - *[boolean](#bool-type)* value aka
+Bool::False, 0 in numeric context, '' (empty) in *[string
+context](operators.html#string-context)*
+
+**FatRat** *[(immutable
+type)](ap-b-lookup.html#immutable-types)*
+Perl rational (unlimited precision in both parts)
+
+**[ff](operators.html#flipflop)**
+*(conditional op)* - tests **[$\_](#context-var)**
+against two values, flip flop operator in the style of awk, can
+test the right operand and become **[False](#false)**
+on the same evaluation it became **[True](#true)**
+formerly .. in scalar context
+
+**[fff](operators.html#flipflop)**
+*(conditional op)* - tests **[\$\_](#context-var)**
+against two values, flip flop operator in the style of sed, after
+became **[True](#true)**
+(**[$\_](#context-op)** is larger then left value),
+right side will be tested during next loop
+*[iteration](#interation)*, formerly ... in scalar
+context
+
+**$?FILE** *[(special
+var)](ap-b-lookup.html#compiler-hint-variables)*
+current filename of source file
+
+**FIRST** *[(closure
+trait)](ap-b-lookup.html#closure-traits)*
+marks as a prefix a special block or statement, executed at loop
+initialization time, before any
+**[ENTER](#enter-phaser)**
+
+**first** *[(array op &
+method)](variables.html#array-methods)*
+returns first value of a list that passes a condition (first
+paramter); the condition is a closure that takes one value at a time
+(as [**`$_`**](#context-var) or `$^a`); works
+like [**grep**](#grep) - example : `first {$_ %% 2}, 1..5 ; # returns 2`
+
+**flat** *[(context
+op)](ap-b-lookup.html#contextualizers)*
+forces flat list context, opposite of
+**[lol](#lol)** - example: `([2,3],[4,5]).flat or
+flat([2,3],[4,5]) results in: [2..5]`
+
+**flip** *(string method)* - reverses order of characters in
+[string](#str-type) , see also:
+**[reverse](#reverse)** and
+**[invert](#invert)**
+
+**floor** *(num method)* - **[Int](#int-type)**
+(whole number) part of a **[Rat](#rat-type)**, just
+leaves the digits after the dot (".") out
+
+**[fmt](basic-syntax.html#fmt)**
+*(formater)* - variable method for simple
+**[printf](#printf)** - like formating, takes a
+format specifier and returns a [string](#str-type) ,
+format specifier accepts only 1 value placeholder, in case of a hash
+max. 2; second, optional parameter is delimiter between values or
+pairs (in case of a hash);
+
+**[for](blocks.html#for)**
+*[(block
+modifier)](ap-b-lookup.html#loops)*
+loop that only iterates over the following list and sets
+**[$\_](#context-var)** for each
+*[iteration](#interation)* (contextualizer), see
+also: **[given](#given)**
+
+**[fork](io.html#processes)**
+creates a copy of the current process and returns in the
+original process a Proc object of the child (0 in num context) and
+in the child a proc object of the original (process ID in num
+context)
+
+**from-radians** - convert from radians to $base (second parameter),
+opposite of **[to-radians](#to-radians)**
+
+**[:function](basic-syntax.html#interpolation)**
+*[(quoting
+adverb)](ap-b-lookup.html#quoting-adverbs)*
+demands evaluation of functions (subs and methods), that start
+with the **[&-sigil](#ampersand-sigil)** and
+replacing them with the result, long form of
+**[:f](#f-adverb)** , included in
+**["..."](#double-quotation-marks)**,
+**[qq/.../](#qq-op)** and
+**[<<...\>\>](#double-angle-brackets)**
+
+*Functional Programming* - exclusively function based programming
+style, [strongly
+supported](ap-d-p5-p6-delta.html#functional-programming)
+by Perl 6, considered as a branch of Declarative Programming
+
+
+
+# G
+
+**:g** *[(filetest
+op)](ap-b-lookup.html#filetest-ops)*
+report if file has setgid bit set
+
+**:g** *[(regex
+modifier)](ap-b-lookup.html#regex-modifier)*
+searching for any finding (not just the first), short for
+**[:global](#global-modifier)**
+
+**|g** *[(escape
+sequence)](ap-b-lookup.html#escape-sequences)*
+grapheme boundary, zero width space between two unicode
+graphemes, see also: **[|c](#pipe-c)** and
+**[|w](#pipe-w)**
+
+**gcd** *[(numeric infix
+op)](operators.html#numeric-context)*
+greatest common divisor (see also: **[lcm](#lcm)**)
+
+**[gather](blocks.html#gather-and-take)**
+*(block modifier)* - performs the following block once, returns a
+list of all values passed by **[take](#take)**
+
+**ge** *[(infix string
+comparison)](operators.html#string-comparison)*
+greater than or equal, see also **[gt](#gt)** and
+**[le](#le)**
+
+**[get](io.html#get)**
+*(handle method)* - returns a line (item context) or all lines
+(list context) from that input stream like a file or [command
+line](io.html#command-line)
+
+**[getc](io.html#getc)**
+*(handle method)* - reads one character from a file via file
+handle
+
+**getlogin** - returns the username of the account running the
+program, maybe less secure as **[getpwuid](#getpwuid)**
+
+**gethost** - establish a connection to a net host and retrieve
+information
+
+**\$\*GID** *[(special
+var)](ap-b-lookup.html#global-variables)*
+real global ID of the running process
+(**[$\*PID](#pid-global-var)**) owner, was @( and
+$GID in Perl 5
+
+**gist** *(formater)* - generates a
+**[Str](#str-type)** with the essential content of
+that object for human consumption (like in error messages),
+**[Mu](#mu-type)** will foreward to
+**[.perl](#perl)**
+
+**[given](blocks.html#given)**
+*[(block
+modifier)](ap-b-lookup.html#conditionals)*
+part of a case-like construct, puts the following value into the
+[context variable](#context-var) (thatswhy called
+contextualizer) for **[when](#when)** clauses, see
+also **[for](#for)**
+
+**:global** *[(regex
+modifier)](ap-b-lookup.html#regex-modifier)*
+searching for any finding (not just the first), long for
+**[:g](#g-modifier)**
+
+**[goto](blocks.html#goto)**
+*[(flow
+control)](ap-b-lookup.html#jump-commands)*
+continue execution on a defined label (with "name:")
+
+**grab** *[(hash
+method)](variables.html#hash-methods)*
+random selection of hash keys, weighted by its related values,
+grabbing a key decrements its value (local copy) by one (deleting
+key when it goes to 0), see also **[pick](#pick)**
+ans **[roll](#roll)**
+
+**grabpair** *[(hash
+method)](variables.html#hash-methods)*
+random selection <span class="you-provide">n</span> (only parameter) of hash
+**[pairs](#pair)**, (each pair only once) , see also
+**[pick](#pick)** ans **[roll](#roll)**
+
+**grammar** - special kind of **[class](#class)**
+with methods that execute **[regex](#regex)**,
+**[token](#token)** and
+**[rule](#rule)**
+
+**\$?GRAMMAR** *[(special
+var)](ap-b-lookup.html#compiler-hint-variables)*
+grammar of the currently used language (mostly
+**[$\~MAIN](#main-lang-var)**)
+
+**<graph\>** *[(predefined
+subrule)](ap-b-lookup.html#subrules)*
+a "graphical" character
+
+**:graphs** *[(regex
+modifier)](ap-b-lookup.html#regex-modifier)*
+searching on the level of language-independent graphemes, see
+also: see also: **[:bytes](#bytes-modifier)**,
+**[chars](#chars-modifier)**,
+**[:codes](#code-modifier)**
+
+**grep** *[(array op &
+method)](variables.html#array-methods)*
+returns all values of an array that pass a filter condition
+(first parameter); the condition is a closure that takes one value
+at a time (as [**`$_`**](#context-var) or `$^a`); see
+also **[first](#first)** - example : `grep {$_ %% 2}, 1..5 ; # returns 2 4`
+
+**gt** *[(string
+comparison)](operators.html#string-comparison)*
+[infix](#infix-category) operator, greater than
+or equal, **[True](#true)** if alphabetically
+ordered the right comes before the left (see also
+**[lt](#lt)**, **[leg](#leg)** and
+**<**)
+
+
+
+# H
+
+**:h** *[(quoting
+adverb)](ap-b-lookup.html#quoting-adverbs)*
+demands evaluation of **[hash](#hash)**
+variables that start with the
+**[%-sigil](#percent-sigil)**, long form of
+**[:hash](#hash-adverb)**, included in
+**["..."](#double-quotation-marks)**,
+**[qq/.../](#qq-op)** and
+**[<<...\>\>](#double-angle-brackets)**
+
+**\\H** *[(escape
+sequence)](ap-b-lookup.html#escape-sequences)*
+anything but horizontal whitespace char
+
+**\\h** *[(escape
+sequence)](ap-b-lookup.html#escape-sequences)*
+horizontal whitespace char, part of
+**[\\s](#backslash-s)**
+
+**handles** - delegates execution of a function to another method
+
+**HardRoutine** - *[(immutable
+type)](ap-b-lookup.html#immutable-types)*
+A routine that is committed to not changing
+
+**has** *[(scope
+declarator)](ap-b-lookup.html#scope-declarator)*
+introduces attribute names, see also
+**[class](#class)**
+
+**Hash** *[(mutable
+type)](ap-b-lookup.html#mutable-types)*
+Perl hash, a two column table of *Scalar*, values in one column
+are keys to refer to the values in the other column
+
+**hash** *[(context
+op)](ap-b-lookup.html#contextualizers)*
+enforces hash-list context, alias to
+**[%()](#percent-op)**
+
+**[:hash](basic-syntax.html#interpolation)**
+*[(quoting
+adverb)](ap-b-lookup.html#quoting-adverbs)*
+demands evaluation of hash variables that start with the
+**[%-sigil](#percent-sigil)**, long form of
+**[:h](#h-adverb)**, included in
+**["..."](#double-quotation-marks)**,
+**[qq/.../](#qq-op)** and
+**[<<...\>\>](#double-angle-brackets)**
+
+**[:heredoc](basic-syntax.html#heredocs)**
+*[(quoting
+adverb)](ap-b-lookup.html#quoting-adverbs)*
+defines end marker for the following heredoc, **:heredoc** is
+equal to **[:to](#to-adverb)**
+
+**HOW** *[(introspection
+method)](ap-b-lookup.html#object-introspection)*
+get an instance the objects metaclass, its "Higher Order
+Workings"
+
+**hyper** - forces none-lazy list context, that ignores the order of
+results (allows parallel computing)
+
+
+
+# I
+
+**:i** *[(regex
+modifier)](ap-b-lookup.html#regex-modifier)*
+uppercase and lowercase variants of a letter are taken as the
+same letter, short for
+**[:ignorecase](#ignorecase-modifier)** (same as in
+Perl 5)
+
+**[if](blocks.html#if)**
+*[(block
+modifier)](ap-b-lookup.html#conditionals)*
+if the following expression *[evals](#evaluation)*
+to **[True](#true)**, the block after that will be
+run, opposite of **[unless](#unless)**, can also be
+written at the end of an expression
+
+**:ignorecase** *[(regex
+modifier)](ap-b-lookup.html#regex-modifier)*
+uppercase and lowercase variants of a letter are taken as the
+same letter, long for **[:i](#i-modifier)** (same as
+in Perl 5)
+
+**:ignoremark** *[(regex
+modifier)](ap-b-lookup.html#regex-modifier)*
+comparing base characters (Unicode non-mark characters) while
+ignoring any trailing mark characters, long for
+**[:m](#m-modifier)**
+
+**:ii** *[(regex
+modifier)](ap-b-lookup.html#regex-modifier)*
+only for substitutions, replacing with chars that have the same
+case pattern as the replaced, short for
+**[:samecase](#samecase-modifier)**
+
+**[import](subroutines.html)**
+just import definitions from an already loaded module (see
+**[use](#use)** and **[need](#need)**)
+
+**\$\*IN** *[(special
+var)](ap-b-lookup.html#global-variables)*
+standard input (command line mostly), see also
+**[$\*OUT](#out-global-var)**
+
+**@\*INC** *[(special
+var)](ap-b-lookup.html#global-variables)*
+include pathes (but not for standard library modules), formerly
+@INC
+
+**index** *(string method)* - finds the first occurrence of a
+substring in a string and returns the numerical position, opposite
+or *rindex*
+
+**Inf** - indicates infinity, useful to generate infinite lazy
+lists, does in most context same as **[\*](#asterisk)**
+
+**infix** *[(grammatical
+category)](ap-b-lookup.html#categories)*
+namespace of symbols that stay between two statements, that
+become their parameters - example: *$a + $b \# is same as
+$a.&infix:<+\>($b)*
+
+**infix\_circumfix\_meta\_operator** *[(grammatical
+category)](ap-b-lookup.html#categories)*
+internal namespace of
+[metaoperator](#metaoperator) that
+[circumfix](#circumfix-category) other operator but
+stay [infix](#infix-category) (between) two terms
+(mostly lists) - example (the arrows): \_ @a <<+<< @b\_
+
+**infix\_postfix\_meta\_operator** *[(grammatical
+category)](ap-b-lookup.html#categories)*
+internal namespace of
+[metaoperator](#metaoperator) that
+[postfix](#postfix-category) other operator but stay
+[infix](#infix-category) (between) two terms -
+example (equal sign): \_ $a += 5\_
+
+**infix\_prefix\_meta\_operator** *[(grammatical
+category)](ap-b-lookup.html#categories)*
+internal namespace of
+[metaoperator](#metaoperator) that
+[prefix](#prefix-category) (precedes) other operator
+but stay [infix](#infix-category) (between) two terms
+- example (exclamation mark): \_ 4 != 5\_
+
+**INIT** *[(closure
+trait)](ap-b-lookup.html#closure-traits)*
+marks as a prefix a special block or statement, executed at run
+time, ASAP, only ever runs once
+
+**inline** *(sub trait)*
+
+**Instant** - *[(immutable
+type)](ap-b-lookup.html#immutable-types)*
+a point on the continuous atomic timeline
+
+**Int** *[(immutable
+type)](ap-b-lookup.html#immutable-types)*
+Perl integer, objext type to hold whole number like -1, 2 or
+6000, allows **[Inf](#inf)** / NaN, arbitrary
+precision, use it as method to convert into a **Int** like the Perl
+5 "int"
+
+**invert** *[(hash op &
+method)](variables.html#hash-methods)*
+inverts the key =\> value relation of a pair or a series of
+pairs (hash), returning a **[Pair](#pair)**
+**[list](#list)**, see also
+**[reverse](#reverse)** and
+**[flip](#flip)**
+
+**IO** *[(mutable
+type)](ap-b-lookup.html#mutable-types)*
+Perl filehandle
+
+**is** - bind a traits to a variable
+
+**item()** *[(context
+op)](ap-b-lookup.html#contextualizers)*
+forces scalar context, alias to
+**[$()](#dollar-op)**
+
+*iteration* - flow control, repeatedly executing a block
+
+**Iterator** *[(mutable
+type)](ap-b-lookup.html#mutable-types)*
+Perl list
+
+
+
+# J
+
+**join** *[(array
+method)](variables.html#array-methods)*
+concatenates list elements into a string, optionally inserting
+another string between the elements - example: *join("-", 1..5) \#
+returns '1-2-3-4-5' - or (1..5).join("-")*
+
+*junction* - a type of value that holds a logical combination of
+several values, example: (A and B) or C
+
+
+
+# K
+
+**:k** *[(filetest
+op)](ap-b-lookup.html#filetest-ops)*
+report if file has sticky bit set
+
+**KEEP** *[(closure
+trait)](ap-b-lookup.html#closure-traits)*
+marks as a prefix a special block, executed at every successful
+block exit, part of **[LEAVE](#leave-phaser)** queue
+
+**:keepall** *[(regex
+modifier)](ap-b-lookup.html#regex-modifier)*
+forces subrules to memorize everything (even comments)
+
+**\$\*KERNEL** *[(special
+var)](ap-b-lookup.html#global-variables)*
+(core or type of the) running operating system, use
+*$\*KERNEL.name * instead of Perl 5s $OSNAME, see also:
+**[\$\*DISTRO](#distro-global-var)** and
+**[\$\*VM](#vm-global-var)**
+
+**\$?KERNEL** *[(special
+var)](ap-b-lookup.html#global-variables)*
+kernel (core operating system) the program was compiled for,
+might want to use use `$?KERNEL.name`, see also:
+**[\?\*DISTRO](#distro-compiler-var)** and
+**[\$?VM](#vm-compiler-var)**
+
+**key** *[(pair
+method)](variables.html#pair)*
+gives the key part of a pair, opposite of
+**[value](#value)**
+
+**KeyBag** *[(mutable
+type)](ap-b-lookup.html#mutable-types)*
+KeyHash of UInt (does **[Bag](#bag-type)** in
+list/array context)
+
+**KeySet** *[(mutable
+type)](ap-b-lookup.html#mutable-types)*
+KeyHash of **[Bool](#bool-type)** (does Set in
+list/array context)
+
+**keys** *[(array op &
+method)](variables.html#array-methods)*
+returns the list array indexes
+
+**keys** *[(hash
+method)](variables.html#hash-methods)*
+returns list of hash keys
+
+**[kill](io.html#processes)**
+sends the given $signal to the process(es) given and returns a
+boolean value indicating success (**[True](#true)**)
+
+**kv** *[(hash
+method)](variables.html#hash-methods)*
+returns list of key-value pairs
+
+
+
+# L
+
+**:l** *[(filetest
+op)](ap-b-lookup.html#filetest-ops)*
+file is a symbolic link
+
+**\\L\[<span class="you-provide">n</span>\]** *[(escape
+sequence)](ap-b-lookup.html#escape-sequences)*
+everything within the brackets is lowercase
+
+**$\*LANG ** *[(special
+var)](ap-b-lookup.html#global-variables)*
+LANG variable from **[%\*ENV](#env-global-var)**
+that defines what human language is used
+
+**%?LANG ** *[(special
+var)](ap-b-lookup.html#global-variables)*
+current set of interwoven languages
+
+**LAST** *[(closure
+trait)](ap-b-lookup.html#closure-traits)*
+marks as a prefix a special block, executed at loop termination
+time, after any **[LEAVE](#leave-phaser)**
+
+**last** *[(flow
+control)](ap-b-lookup.html#jump-commands)*
+exit the current looping block
+
+**last** *[(array
+method)](variables.html#array-methods)*
+number of final element
+
+**lazy** - forces lazy evaluation (calculate values as late as
+possible), default for lists - not scalars
+
+**lc** *(string op & method)* - make string lowercase
+
+**lcfirst** *(string op & method)* - make first char of a string
+lowercase
+
+**lcm** *[(numeric infix
+op)](operators.html#numeric-context)*
+least common multiple, see also: **[gcd](#gcd)**
+
+**le** *[(string
+comparison)](operators.html#string-comparison)*
+[infix](#infix-category) operator, result is
+**[True](#true)** if left side is lower than or
+equal than the right, see also: **[lt](#lt)**,
+**[gt](#gt)** and **[ge](#ge)**
+
+**LEAVE** *[(closure
+trait)](ap-b-lookup.html#closure-traits)*
+marks as a prefix a special block, executed at every block exit
+time
+
+**[leave](blocks.html#leave)**
+*[(flow
+control)](ap-b-lookup.html#jump-commands)*
+exit the current block with a return value
+
+**leg** *[(string
+comparison)](operators.html#string-comparison)*
+general [infix](#infix-category) sort comparison
+operator in *[string
+context](operators.html#string-context)*,
+leg stands for lower/equal/greater, **[cmp](#cmp)**
+is the more general form, **[<=\>](#spaceship-op)**
+does same in [numerical
+context](#numerical-context) , was cmp in P5
+
+**let** - changes value of a variable temporary, it will be set back
+if the current block exits unsuccessfully
+
+**$?LINE ** *[(special
+var)](ap-b-lookup.html#compiler-hint-variables)*
+current line number
+
+**[lines](basic-syntax.html)**
+*(string & iomethod)* - returns a chomped list of lines (chunks
+of character separated by **[\\n](#backslash-n)**)
+containing a string - example: `$str.lines($limit)` equals
+[`$str.comb( / \^\^ \\N\* /, $limit )`](#comb),
+works also on file handles
+
+**list()** *[(context
+op)](ap-b-lookup.html#contextualizers)*
+almost a no-op, just makes sure that $item (first parameter) can
+be iterated, alias to **[@()](#at-op)**, see also
+**[flat](#flat)** and **[lol](#lol)**
+
+*list context* -
+
+**[log](operators.html)**
+logarithm of $x (first parameter) to the $base (second optional
+parameter - default is *e*, together also known as *ln* )
+
+**[log10](operators.html)**
+logarithm to the base of 10, also known as lg on calculators
+
+**lol** *[(context
+op)](ap-b-lookup.html#contextualizers)*
+forces list of list context on a value, meaning a list which
+values are not contextualized further (can be lists themthelves),
+opposite of **[flat](#flat)**
+
+*longest token matching* - (short *LTM*) when searching a pattern
+with alternatives (sub|substr) the search will continue after
+finding the pattern 'sub' because of looking for the longest
+alternative
+
+**[loop](blocks.html#loop)**
+*[(block
+modifier)](ap-b-lookup.html#loops)*
+general loop, can serve as enless loop without following term of
+C-style loop - example: *loop my $b=1; $b++; $b<5 {...}*
+
+**looser** *[(routine
+trait)](ap-b-lookup.html#routine-traits)*
+specifies the [precedence of an
+operator](ap-b-lookup.html#table-of-precedence)
+lower than an existing operator
+
+**<lower\>** *[(predefined
+subrule)](ap-b-lookup.html#subrules)*
+a single lowercase character
+
+**lt** *[(string
+comparison)](operators.html#string-comparison)*
+[infix](#infix-category) operator, lower than,
+**[True](#true)** if alphabetically ordered the left
+comes before the right
+
+
+
+# M
+
+**[m//](regexes.html#matching)**
+*[(regex quoting
+op)](ap-b-lookup.html#quoting-ops)*
+perform a regex based search in place (m stands for *match* ),
+similar to **[match](#match)**-method
+
+**:m** *[(regex
+modifier)](ap-b-lookup.html#regex-modifier)*
+comparing base characters (Unicode non-mark characters) while
+ignoring any trailing mark characters, short for
+**[:ignoremark](#ignoremark-modifier)**
+
+**Macro** *[(mutable
+type)](ap-b-lookup.html#mutable-types)*
+Perl compile-time subroutine
+
+**macro** *[(routine
+type)](ap-b-lookup.html#routine-types)*
+define a routine to alter source code at *[compile
+time](#compile-time)*
+
+**$\~MAIN ** *[(special
+var)](ap-b-lookup.html#slang-variables)*
+current [grammar](#grammar) of main language,
+tells the parser the rules of parsing Perl
+
+**map** *[(array op &
+method)](variables.html#array-methods)*
+take a list, perform a block on each member, return a list of
+the results - example: *say map { chr $\_ }, 66..69 * (is "B C D E")
+or *say map { chr $\_ }, 66..69 *
+
+**Match** *[(mutable
+type)](ap-b-lookup.html#mutable-types)*
+Perl match object, usually produced by applying a pattern of
+*[regular expression](#regular-expression)* to a
+string
+
+**match** *(string method)* - method alias to
+**[m/.../](#m-op)**, \$str.match( /<span class="you-provide">p</span>/ )
+equals \$str \~\~ m/<span class="you-provide">p</span>/;, returns a
+match object that end up also in **[$/](#match-var)**
+
+**max** *[(array op &
+method)](variables.html#array-methods)*
+returns the numerically largest value from a given list
+
+**maybe** *(block modifier)* -
+
+*[metaoperator](ap-b-lookup.html#metaoperators)*
+alters the meaning of other operators
+
+**Method** *[(mutable
+type)](ap-b-lookup.html#mutable-types)*
+Perl method
+
+**method** *[(routine
+type)](ap-b-lookup.html#routine-types)*
+defines a method (inheritable routine) in a class
+
+**min** *[(array op &
+method)](variables.html#array-methods)*
+returns the numerically smallest value from a given list
+
+**minmax** *[(array op &
+method)](variables.html#array-methods)*
+returns the highest and lowest values from a list, as a 2 item
+list
+
+**:mm** *[(regex
+modifier)](ap-b-lookup.html#regex-modifier)*
+substitute with chars that has same mark/accent pattern as the
+matched string, short for
+**[:samemark](#samemark-modifier)**
+
+**[mkdir](io.html#mkdir)**
+creates a directory with given name
+
+**mod** *(numeric op)* - integer modulo operator; wordy alias to
+**[%](#percent)** - example: *5 mod 4 = 1;*
+
+**module** *(block modifier)* - introduces a module name, a package
+that performs special actions on loading
+
+**&?MODULE ** *[(special
+var)](ap-b-lookup.html#compiler-hint-variables)*
+reference to the current module
+
+**[ms//](regexes.html#matching)**
+*[(regex quoting
+op)](ap-b-lookup.html#quoting-ops)*
+perform a regex based search in place, spaces are just subrule
+separators, alias to **m:s/.../** or **m**
+**[:sigspace](#sigspace-modifier)** **/.../**
+
+**Mu** *[(undefined value
+type)](ap-b-lookup.html#undefined-types)*
+most (generic) undefined object
+
+**multi** *[(routine
+modifier)](ap-b-lookup.html#routine-modifier)*
+marks routines with can have sibling with same name but
+different *[signature](#signature)*, when called,
+the one with matching sig is executed (multimethod dispatch)
+
+**my** *[(scope
+declarator)](ap-b-lookup.html#scope-declarator)*
+introduces lexically scoped names, which exists only in the
+current scope (usually a block)
+
+
+
+# N
+
+**\\N** *[(escape
+sequence)](ap-b-lookup.html#escape-sequences)*
+anything but (logical) newline
+
+**\\n** *[(escape
+sequence)](ap-b-lookup.html#escape-sequences)*
+an unicode newline character, its \\u000A | \\u000B | \\u000C |
+\\u000D | \\u0085 | \\u2028 | \\u2029 | \\u000D\\u000A
+
+<span class="you-provide">n</span> **:nd** *[(regex
+modifier)](ap-b-lookup.html#regex-modifier)*
+demands the nth finding (:2nd), has many aliases (**:st**
+**:rd** **:th**) for correct spelling
+
+**name** *(routine method)* - returns the name of of a routine,
+handy when it was stored in a scalar
+
+**[need](subroutines.html)**
+just load a module, without import definitions (see
+**[use](#use)** and
+**[import](#import)**)
+
+**new** - creates a new object of a class(as in most other
+languages), also name of the automatically called constructor method
+
+**NEXT** *[(closure
+trait)](ap-b-lookup.html#closure-traits)*
+marks as a prefix a special block, executed at loop continuation
+time, before any **[leave](#leave-phaser)**
+
+**next** *[(flow
+control)](ap-b-lookup.html#jump-commands)*
+start the the next following loop
+*[iteration](#interation)*
+
+**nextsame** - get from the dispatcher the next candidate with the
+same *[signature](#signature)*, similar to javas
+SUPER
+
+**Nil** *[(undefined value
+type)](ap-b-lookup.html#undefined-types)*
+unlike *undef* in Perl 5 it really means no value here -
+example: *@a = Nil, Nil; \# array has zero elements*
+
+**none** *[(junctive
+op)](operators.html#junctions)*
+return **[True](#true)** when a value is not
+part of a set, *[junctive](#junction)* *NOT*
+operator
+
+**normalize** - *(string method)* - normalize (repair) Unicode (UTF)
+string
+
+**not** *[(context
+op)](ap-b-lookup.html#contextualizers)*
+logical *NOT* operator, converts to *[boolean
+context](operators.html#bool-context)*
+which means it returns **[False](#false)** if
+value is positive or otherwise, low precedence version of
+**[!()](#exclamation-mark-op)**
+
+**[note](io.html#note)**
+makes output via command line ($ERR) like
+**[warn](#warn)**, but appends a newline
+(**[\\n](#backslash-n)**) like
+**[say](#say)**
+
+**Num** *[(immutable
+type)](ap-b-lookup.html#immutable-types)*
+Perl number (approximate Real, generally via floating point)
+
+**numerator** *[(rat
+method)](basic-syntax.html#rational-number)*
+returns the numerator of a rational number (value type Rat and
+FatRat)
+
+
+
+# O
+
+**:O** *[(filetest
+op)](ap-b-lookup.html#filetest-ops)*
+tests if file is owned by real uid
+
+**:o** *[(filetest
+op)](ap-b-lookup.html#filetest-ops)*
+tests if file is owned by effective uid
+
+*Object Oriented Programming* - programming paradigm (style), that
+arranges data and functions that belong together into so called
+objects
+
+**of** *[(routine
+trait)](ap-b-lookup.html#routine-traits)*
+inner type constraint that a routine imposes on its return value
+- example: *subset Month of Int where { 1 <= $\^a <= 12 }*
+
+**one** *[(junctive
+op)](operators.html#junctions)*
+*[junctive](#junction)* *XOR* operator,
+**[True](#true)** if only one expression (of a
+following list) is true in bool context, see also:
+**[|](#junctive-xor)**
+
+**only** *[routine
+modifier](ap-b-lookup.html#routine-modifier)*
+permits only one routine of the same name in this block
+
+**[open](io.html#open)**
+*(path method)* - establishes a connection to a file via a file
+path name file handler
+
+**\$\*OPTS** *[(special
+var)](ap-b-lookup.html#global-variables)*
+options from command line
+
+**or** *[(logical
+op)](operators.html#logical-selection)*
+short circuit *OR*, [evaluates](#evaluation)
+sequentially, ends evaluation at the first expression that returns
+**[True](#true)**, low precedence version of
+**[||](#high-or)**, similar to
+**[orelse](#orelse)**
+
+**ord** *(string method)* - converts a character into number
+according a character table (Unicode), reverse of
+**[char](#char)**
+
+**ords** *(string method)* - plural of **ord**, takes a
+**[Str](#str-type)** and returns a list of
+**[Int](#int-type)**, reverse of
+**[chars](#chars)**
+
+**orelse** *(logical op)* - logical *OR* short circuit operator,
+transferring an error code from first to second block/command, if
+first do not succeed, similar to **[//](#high-err)**,
+see also **[andthen](#andthen)**
+
+**our** *[(scope
+declarator)](ap-b-lookup.html#scope-declarator)*
+introduces **[package](#package)** - scoped
+names for variables and routines
+
+**\$\*OUT** *[(special
+var)](ap-b-lookup.html#global-variables)*
+standard output (command line mostly), see also
+**[$\*IN](#in-global-var)**
+
+**:ov** *[(regex
+modifier)](ap-b-lookup.html#regex-modifier)*
+searching at all positions just one time (with backtracking),
+short for **:overlap**
+
+**:overlap** *[(regex
+modifier)](ap-b-lookup.html#regex-modifier)*
+searching at all positions just one time (with backtracking),
+long for **:ov**
+
+
+
+# P
+
+**:p** *[(filetest
+op)](ap-b-lookup.html#filetest-ops)*
+file is a named pipe (FIFO), or filehandle is a pipe
+
+**[:p](basic-syntax.html#paths)**
+*[(quoting
+adverb)](ap-b-lookup.html#quoting-adverbs)*
+quote paths and create path object that know the right format of
+the current **[$\*KERNEL](#kernel-global-var)** with
+**Q :p /.../ **, short for **[:path](#path-adverb)**
+
+**:p**(<span class="you-provide">n</span>) *[(regex
+modifier)](ap-b-lookup.html#regex-modifier)*
+searching only on the nth (n is an int) position (counting from
+0), short for **[:pos](#pos-modifier)**
+
+**:P5** *[(regex
+modifier)](ap-b-lookup.html#regex-modifier)*
+activate old Perl 5 regex rules, alias to
+**[:Perl5](#perl5-modifier)**
+
+**$\~P5Regex ** *[(special
+var)](ap-b-lookup.html#slang-variables)*
+current [grammar](#grammar) of the Perl 5
+compatible regular expression language
+
+**[pack](basic-syntax.html#pack)**
+repackage values into or from a condensed format
+
+**package** *(block modifier)* - defines this Block or File as
+namespace (almost like in Perl 5), some uses are now better to do
+with **[module](#module)** and
+**[class](#class)**
+
+**&?PACKAGE ** *[(special
+var)](ap-b-lookup.html#compiler-hint-variables)*
+reference to the current package
+
+**package\_declarator** *[(grammatical
+category)](ap-b-lookup.html#categories)*
+internal namespace for - example:
+*[package](#package) ,
+[module](#module) , [class](#class)*
+
+**Pair** *[(mutable
+type)](ap-b-lookup.html#mutable-types)*
+object to hold a single key-to-value association
+
+**pairs** *[(hash
+method)](variables.html#hash-methods)*
+returns all contents as an array or pairs (key,value)
+
+**PairSeq** *[(mutable
+type)](ap-b-lookup.html#mutable-types)*
+a **[Seq](#seq)** (sequence) of
+**[Pairs](#pair)**
+
+**:panic** *[(regex
+modifier)](ap-b-lookup.html#regex-modifier)*
+overwriting a possible set
+**[:ratchet](#ratchet-modifier)** for all subrules
+(activates backtracking)
+
+*parameter* - value passed to a method or subroutine, mostly as part
+of the signature
+
+**Parcel** - *[(immutable
+type)](ap-b-lookup.html#immutable-types)*
+Arguments in a comma list
+
+**parcel** *[(parameter
+trait)](ap-b-lookup.html#parameter-traits)*
+raw reference, will not be contextualized
+
+**parsed** *[(routine
+trait)](ap-b-lookup.html#routine-traits)*
+this macro will be parsed once, it is hygienic, but own and
+later defined rules can't be applied, opposite of
+**[reparsed](#reparsed)**
+
+*parsetree* - hierarchical data representing the logical structure
+of a program, also called *[AST](#ast)*
+
+**[:path](basic-syntax.html#paths)**
+*[(quoting
+adverb)](ap-b-lookup.html#quoting-adverbs)*
+quote paths and create path object that know the right format of
+the current **[$\*KERNEL](#kernel-global-var)** with
+**Q :path /.../ **, long for **[:p](#p-adverb)**
+
+**[perl](basic-syntax.html#perl)**
+*(formater)* - transforms data structure into Perl 6 source
+syntax; use **[eval](#eval)** onto that string and
+you get the data structure again, bit like *Data::Dump*
+
+**$\*PERL** *[(special
+var)](ap-b-lookup.html#global-variables)*
+Perl version running under, was $] and $\^V in Perl 5
+
+**$?PERL** *[(special
+var)](ap-b-lookup.html#compiler-hint-variables)*
+Perl version compiled for
+
+**:Perl5** *[(regex
+modifier)](ap-b-lookup.html#regex-modifier)*
+activate old Perl 5 regex rules, alias to
+**[:P5](#p5-modifier)**
+
+**pick** *[(array op &
+method)](variables.html#array-methods)*
+select a number (first parameter) of random vaues (without
+duplication), take **[roll](#roll)** to enable
+duplication
+
+**\$\*PID** *[(special
+var)](ap-b-lookup.html#global-variables)*
+ID of the running process, was $$ and $PID in Perl 5
+
+[phaser](ap-b-lookup.html#closure-traits)
+- Perl 6 term for specially named subblocks withe special runtimes
+aka closure traits - example:
+**[BEGIN](#begin-phaser)**
+
+**pick** *[(array
+method)](variables.html#array-methods)*
+selects randomly elements from this list, optional parameter
+says how many
+
+*pipe* - connection between 2 processes, move data (mostly only in
+one direction) without buffering
+
+*[POD](basic-syntax.html#pod)*
+Plain Old Documentation, a markup language to be embeded into
+Perl source code, has in Perl 6 ability to store data to be
+retrieved later
+
+**$=pod ** *[(special
+var)](ap-b-lookup.html#pod-variables)*
+surrounding *[POD](#pod)* object
+
+*pointy block* - a block that is given parameters with
+**[-\>](#arrow-op)**
+
+**polar** - magnitude or angle corresponding to the [complex
+number](#complex-type) (only parameter), the
+magnitude is non-negative, and the angle in the
+[range](#range-op) -Ï€ ..\^ Ï€
+
+**pop** *[(array op &
+method)](variables.html#array-methods)*
+removes and returns the last element in an array
+
+**:pos**(<span class="you-provide">n</span>) *[(regex
+modifier)](ap-b-lookup.html#regex-modifier)*
+searching only on the <span class="you-provide">n</span>th position (counting from 0), long
+for **[:p](#p-modifier)**
+
+**POST** *[(closure
+trait)](ap-b-lookup.html#closure-traits)*
+marks as a prefix a special block, assert postcondition,
+executed at every block exit, after
+**[LEAVE](#leave-phaser)**
+
+**postcircumfix** *[(grammatical
+category)](ap-b-lookup.html#categories)*
+operator namespace of ops, that stay after one statement or
+variable, but do surround a second - example(square brackets):
+*$a[2]*
+
+**postfix** *[(grammatical
+category)](ap-b-lookup.html#categories)*
+operator namespace of ops, that stay after a statement or
+variable (like $a++)
+
+**postfix\_prefix\_meta\_operator** *[(grammatical
+category)](ap-b-lookup.html#categories)*
+internal namespace of
+[metaoperator](#metaoperator) that
+[prefix](#prefix-category) (precedes) other operator
+but stay [postfix](#postfix-category) (after) another
+term - example (greater as): *@a \>\>++*
+
+**PRE** *[(closure
+trait)](ap-b-lookup.html#closure-traits)*
+marks as a prefix a special block, assert precondition, executed
+at every block entry, before **[ENTER](#enter-phaser)**
+
+**pred** *[(sequence
+traversion)](operators.html#traversing-sequence)*
+returns the predecessor of $x (only parameter), alias to **--**
+operator, see also **[succ](#succ)**
+
+**prefix** *[(grammatical
+category)](ap-b-lookup.html#categories)*
+operator namespace of ops, that stay before a statement or
+variable - example: *[++$a](#plus-plus)*
+
+**prefix\_circumfix\_meta\_operator** *[(grammatical
+category)](ap-b-lookup.html#categories)*
+internal namespace of
+[metaoperator](#metaoperator) that
+[circumfix](#circumfix-category) (surrounds) other
+operator but stay [prefix](#prefix-category) (before)
+another term - example (square brackets): *[+] @a \# sums up all
+elements of @a *
+
+**prefix\_postfix\_meta\_operator** *[(grammatical
+category)](ap-b-lookup.html#categories)*
+internal namespace of
+[metaoperator](#metaoperator) that
+[postfix](#postfix-category) other operator but stay
+[prefix](#prefix-category) (before) another term -
+example (greater as): *++<< @a*
+
+**[print](io.html#print)**
+sends characters to an output stream
+(**[$\*OUT](#out-global-var)**) without adding a
+newline, similar to **[say](#say)**
+
+**[print](io.html#print-for-files)**
+*(handle method)* - writes a stream into a file
+
+**<print\>** *[(predefined
+subrule)](ap-b-lookup.html#subrules)*
+a single printable character
+
+**[printf](io.html#printf)**
+formats text like **[sprintf](#sprintf)** and
+sends it to standard output like **[print](#print)**
+
+**[<prior\>](ap-b-lookup.html#subrules)**
+standard grammar's rule for whatever the prior successful regex
+matched
+
+**[prompt](io.html#prompt)**
+**[print](#print)** - ing text and reading a
+line from **[$\*IN](#in-global-var)**
+
+*property* - metadata of a variable set at runtime
+
+**proto** *[(routine
+modifier)](ap-b-lookup.html#routine-modifier)*
+fallback for multi, if no multi routines signature matches the
+callers, a proto with same name is executed
+
+**<punct\>** *[(predefined
+subrule)](ap-b-lookup.html#subrules)*
+a single punctuation character
+
+**push** *[(array op &
+method)](variables.html#array-methods)*
+appends a list of values to the end of an array (see also
+**[pop](#pop)**)
+
+**push** *[(hash op &
+method)](variables.html#hash-methods)*
+inserts a list of [pairs](#pair) in a Hash; if a
+key already exists, it will point to an array of both values
+
+
+
+# Q
+
+**[Q](basic-syntax.html#quoting)**
+*[(quoting
+op)](ap-b-lookup.html#quoting-ops)*
+most basic quoting operator, understands a list of [adverbial
+modifier](ap-b-lookup.html#quoting-adverbs)
+
+**[q](basic-syntax.html#single-quotes)**
+*[(quoting
+op)](ap-b-lookup.html#quoting-ops)*
+simple quoting (slashes and '), alias to
+**['...'](#single-quotation-marks)** and **Q :q
+/.../** and **Q [:single](#single-adverb) /.../**
+
+**[:q](basic-syntax.html#single-quotes)**
+*[(quoting
+adverb)](ap-b-lookup.html#quoting-adverbs)*
+simple quoting (slashes and '), alias to
+**['...'](#single-quotation-marks)** and **q
+/.../**, short for **[:single](#single-adverb)**
+
+**\\Q\[<span class="you-provide">n</span>\]** *[(escape
+sequence)](ap-b-lookup.html#escape-sequences)*
+all metacharacters within the brackets match as literal
+characters
+
+**[qp](basic-syntax.html#paths)**
+*[(quoting
+op)](ap-b-lookup.html#quoting-ops)*
+path quoting, quoted string will be evaled as an file or
+directory path, alias to **Q [:p](#p-adverb) /.../**
+and **Q [:path](#path-adverb) /.../**
+
+**[qq](basic-syntax.html#double-quotes)**
+*[(quoting
+op)](ap-b-lookup.html#quoting-ops)*
+*double quoting*, **q** with interpolation of variables,
+closures, and special chars, alias to
+**["..."](#double-quotation-marks)** and **Q :s, :a,
+:h, :f, :c, :b /.../** and **Q** **[:qq](#qq-adverb)**
+**/.../** and **Q** **[:double](#double-averb)**
+**/.../**
+
+**[:qq](basic-syntax.html#double-quotes)**
+*[(quoting
+adverb)](ap-b-lookup.html#quoting-adverbs)*
+*double quoting*, **q** with interpolation of variables and
+[blocks](#block) , alias to
+**["..."](#double-quotation-marks)**,
+**[qq/.../](#qq-op)** and **Q :s, :a, :h, :f, :c, :b
+/.../**, short for **[:double](#double-adverb)**
+
+**[qqx](basic-syntax.html#code)**
+*[(quoting
+op)](ap-b-lookup.html#quoting-ops)*
+run as system call and return results; was *qx/.../* in Perl 5
+
+**$\~Quasi ** *[(special
+var)](ap-b-lookup.html#slang-variables)*
+current [grammar](#grammar) of the quasiquoting
+language
+
+**quasi** *(block modifier)* - quasi quoting, the following
+commented will be compiles and the AST will be returned as result,
+see also: **[:code](#code-adverb)**
+
+**$\~Quote ** *[(special
+var)](ap-b-lookup.html#slang-variables)*
+current [grammar](#grammar) of the quoting
+language as used by the [Q-operator](#capital-q-op)
+and any other quoting op
+
+**quote** *[(grammatical
+category)](ap-b-lookup.html#categories)*
+operator namespace, used to define new quoting ops with a macro
+
+**quote\_mod** *[(grammatical
+category)](ap-b-lookup.html#categories)*
+operator namespace, used to define new quoting adverbs
+
+**[:quotewords](basic-syntax.html#quote-words)**
+*[(quoting
+adverb)](ap-b-lookup.html#quoting-adverbs)*
+split quoted string into words (on whitespaces) but with quote
+protection (like in shell - '...' and
+**["..."](#double-quotation-marks)** sourrounded
+strings are taken as single words), long form of
+**[:ww](#ww-adverb)**, used in
+**[<<...\>\>](#double-angle-brackets)**
+
+**[qw](basic-syntax.html#quote-words)**
+*[(quoting
+op)](ap-b-lookup.html#quoting-ops)*
+splits result on words (as in Perl 5); alias to **Q :q :w
+/.../** or **[<...\>](#angle-brackets)**
+
+**[qx](basic-syntax.html#code)**
+*[(quoting
+op)](ap-b-lookup.html#quoting-ops)*
+evaluate as Perl term (like **[eval](#eval)**)
+and return results (unlike Perl 5), alias to **Q
+[:x](#x-adverb) /.../** or **Q
+[:exec](#exec-adverb) /.../**
+
+
+
+# R
+
+**:R** *[(filetest
+op)](ap-b-lookup.html#filetest-ops)*
+check if file is readable by real uid/gid
+
+**:r** *[(filetest
+op)](ap-b-lookup.html#filetest-ops)*
+check if file is readable by effective uid/gid
+
+**\\R** *[(escape
+sequence)](ap-b-lookup.html#escape-sequences)*
+anything but return
+
+**\\r** *[(escape
+sequence)](ap-b-lookup.html#escape-sequences)*
+return (CR), as in Perl 5
+
+**R**<span class="you-provide">op</span> *[(meta
+op)](ap-b-lookup.html#metaoperators)*
+reverse operands - example: *4 R- 3 \# result is -1 = 3 - 4 *
+
+**rand** - pseudo random number in [range](#range-op)
+*0 ..\^ 1* (including 0, but not 1); for random list choices see
+**[pick](#pick)** and **[roll](#roll)**
+
+**Range** *[(immutable
+type)](ap-b-lookup.html#immutable-types)*
+a pair of ordered endpoints, result of an evaluated term with
+the [range operator](#range-op)
+
+**RangeIter** *[(mutable
+type)](ap-b-lookup.html#mutable-types)*
+iterator over a **Range**
+
+**Rat** *[(immutable
+type)](ap-b-lookup.html#immutable-types)*
+Perl rational number (exact **[Real](#real-type)**
+numerator, limited denominator)
+
+**:ratchet** *[(regex
+modifier)](ap-b-lookup.html#regex-modifier)*
+deactivates backtracking, search starts at pos, where last match
+ended
+
+<span class="you-provide">n</span> **:rd** *[(regex
+modifier)](ap-b-lookup.html#regex-modifier)*
+demands the nth finding, has many aliases (:st :nd :th) for
+correct spelling (:3rd)
+
+**[read](io.html#read)**
+*(Buf method)* - read n (first parameter) bytes from a buffer
+
+**[readline](io.html#readline)**
+
+**readonly** *[(parameter
+trait)](ap-b-lookup.html#parameter-traits)*
+immutable parameter
+
+**redo** *[(flow
+control)](ap-b-lookup.html#jump-commands)*
+re-starts processing of the current loop turn
+
+**reduce** *(list method)* - alias to **[[
+]](#square-bracket-metaop)**
+[metaoperator](ap-b-lookup.html#metaoperators)
+: `[+] @a = @a.reduce(&[+])`
+
+*reference* - address of data in memory, often termed a Capture in
+Perl 6
+
+**Regex** *[(mutable
+type)](ap-b-lookup.html#mutable-types)*
+builtin type that holds a compiled regular expression
+
+**regex** - *[(routine
+type)](ap-b-lookup.html#routine-types)*
+a pattern definition (without
+**[:ratchet](#ratchet-modifier)** and
+**[:sigspace](#sigspace-modifier)**), can be put in
+a **[grammar](#grammar)**, similar to qr/.../ in
+Perl 5, see **[rule](#rule)**,
+**[token](#token)**
+
+**[:regex](basic-syntax.html#regex)**
+*[(quoting
+adverb)](ap-b-lookup.html#quoting-adverbs)*
+parse as quoted string as regex
+
+**$\~Regex ** *[(special
+var)](ap-b-lookup.html#slang-variables)*
+current [grammar](#grammar) of the regex language
+as used by **[rx](#rx)** and any regex operator and
+method, tells the parser how to parse regular expressions
+
+*regular expression* - in Perl5: pattern matching notation, either
+regex, token or rule in Perl6
+
+**reparsed** *[(routine
+trait)](ap-b-lookup.html#routine-traits)*
+after parsing this **[macro](#macro)**, it will
+be reparsed, so that not hygienic, but its own and later defined
+rules can be applied, opposite of **[parsed](#parsed)**
+
+**[repeat](blocks.html#repeat)**
+*[(block
+modifier)](ap-b-lookup.html#loops)*
+can be put before a *[block](#block)* so that
+**[while](#while)** or
+**[until](#until)** can be written after the closing
+bracket, these loops will always run at least one time because the
+condition will be checked after each run
+
+**[rename](io.html#rename)**
+changes names of files and directories
+
+**return** *[(flow
+control)](ap-b-lookup.html#jump-commands)*
+leaves a subroutine and sets the return value
+
+**returns** - sub trait describing the type of value produced by a
+function
+
+**reverse** *[(array op &
+method)](variables.html#array-methods)*
+returns all the members in the opposite order. Use
+**[flip](#flip)** to turn a string back to front and
+**[invert](#invert)** for hashes
+
+**rindex** *(string method)* - finds the last occurrence of a
+substring in a string and returns the numerical position, opposite
+or **[index](#index)**
+
+**[rmdir](io.html#rmdir)**
+deletes a directory with given name
+
+**role** - container for methods that can extend a class using
+**[does](#does)**
+
+**$?ROLE ** *[(special
+var)](ap-b-lookup.html#compiler-hint-variables)*
+current role object
+
+**::?ROLE ** *[(special
+var)](ap-b-lookup.html#compiler-hint-variables)*
+name of the current role
+
+**roll** *[(array
+method)](variables.html#array-methods)*
+selects <span class="you-provide">n</span> (first parameter) values from an array, duplication
+can occur (like rolling dice), **[pick](#pick)**
+works without duplication
+
+**roots** - (Num $f, Int $n) compute the $n'th root of $f
+
+**[rotate](variables.html)**
+*[(array
+method)](variables.html#array-methods)*
+put some elements (number is first parameter) of a list to the
+end; rotates backward with negative parameter; *@a .= rotate;\_ is
+alias to \_@a.push: @a.shift; *
+
+**round** - returns the nearest *[integer](#int-type)*
+of only parameter
+
+**roundrobin** *[(array
+method)](variables.html#array-methods)*
+kind of **[zip](#zip)** that ignores empty lists
+- example: *roundrobin([1..3],[1,2],[1]) = 1,1,1,2,2,3 *
+
+**&?ROUTINE ** *[(special
+var)](ap-b-lookup.html#compiler-hint-variables)*
+current **[Routine](#routine-type)** object
+
+**routine** - block of code callable by name, can have a
+*[signature](#signature)* and a return type, objects
+of the type **[SoftRoutine](#softroutine-type)** and
+**[HardRoutine](#hardroutine-type)**
+
+**routine\_declarator** *[(grammatical
+category)](ap-b-lookup.html#categories)*
+internal namespace for [routine
+declarators](ap-b-lookup.html#routine-types)
+- example: *[sub](#sub),
+[method](#method)*
+
+**rule** *[(routine
+type)](ap-b-lookup.html#routine-types)*
+alias for ***[regex](#regex)**
+**[:ratchet](#ratchet-modifier)**
+**[:sigspace](#sigspace-modifier)*** in a grammar,
+see **[regex](#regex)**,
+**[token](#token)**
+
+**[run](io.html#processes)**
+executes an external program, and returns control to the caller
+once the program has exited
+
+**[runinstead](io.html#processes)**
+executes an external program that replaces the caller, because
+there will be no return
+
+*runtime* - time when execution hits a certain part of the program,
+after *[compile time](#compile-time)*
+
+**rw** *[(routine
+trait)](ap-b-lookup.html#routine-traits)*
+marks a subroutine as returning an lvalue
+
+**rw** *[(parameter
+trait)](ap-b-lookup.html#parameter-traits)*
+mutable parameter (rw stands for: read write)
+
+**:rw** *[(regex
+modifier)](ap-b-lookup.html#regex-modifier)*
+gives the regex the right to change the string (operand)
+
+**[rx](regexes.html#regex-operators)**
+*[(regex quoting
+op)](ap-b-lookup.html#quoting-ops)*
+creates anonymous regex, that can me then assigned into a var,
+alias to **[Q](#capital-q-op)**
+**[:regex](#regex-adverb)** **/.../** and
+**[regex](#regex)** *(routine type)*
+
+
+
+# S
+
+**S**<span class="you-provide">op</span> *[(meta
+op)](ap-b-lookup.html#metaoperators)*
+force sequential (synchronous) evaluation, suppresses any
+explicit or implicit parallelism
+
+**[s///](regexes.html#regex-operators)**
+*[(regex quoting
+op)](ap-b-lookup.html#quoting-ops)*
+perform a substitution based on rx-matches in place, creates
+anonymous regex, alias to **Q [:subst](#subst-adverb)
+/.../.../** and **[.subst()](#subst)** *(string
+method)*
+
+**:S** *[(filetest
+op)](ap-b-lookup.html#filetest-ops)*
+file is a socket
+
+**:s** *[(filetest
+op)](ap-b-lookup.html#filetest-ops)*
+file has size greater than 0 (zero)
+
+**:s** *[(quoting
+adverb)](ap-b-lookup.html#quoting-adverbs)*
+demands evaluation of scalar variables that start with the
+**[$-sigil](#dollar-sigil)**, long form of
+**[:scalar](#scalar-adverb)**, included in
+**["..."](#double-quotation-marks)**,
+**[qq/.../](#qq-op)** and
+**[<<...\>\>](#double-angle-brackets)**
+
+**:s** *[(regex
+modifier)](ap-b-lookup.html#regex-modifier)*
+whitespace separates now subregex and don't stand for spaces to
+look for, short for **[:sigspace](#sigspace-modifier)**,
+**[ms/.../](#ms-op)** is alias to
+**m:sigspace/.../**
+
+**\\S** *[(escape
+sequence)](ap-b-lookup.html#escape-sequences)*
+anything but whitespace
+
+**\\s** *[(escape
+sequence)](ap-b-lookup.html#escape-sequences)*
+any whitespace character, horizontal (
+**[\\h](#backslash-h)** ) and vertical (
+**[\\v](#backslash-v)** )
+
+**<?same\>** *[(predefined
+subrule)](ap-b-lookup.html#subrules)*
+match the zero-width space between two identical chars
+
+**:samecase** *[(regex
+modifier)](ap-b-lookup.html#regex-modifier)*
+only for substitutions, replacing with chars that have the same
+case pattern as the replaced, long for
+**[:ii](#ii-modifier)**
+
+**:samemark** *[(regex
+modifier)](ap-b-lookup.html#regex-modifier)*
+substitute with chars that has same mark/accent pattern as the
+matched string, long for ":mm"
+
+**:samespace** *[(regex
+modifier)](ap-b-lookup.html#regex-modifier)*
+smart space mapping for substitutions, long for
+**[:ss](#ss-modifier)**,
+**[ss/.../.../](#ss-op)** is alias to
+**s:samespace/.../.../** - example: *ss/teh hsa/the has/;*
+
+**[say](io.html#say)**
+makes output via command line
+(**[$\*OUT](#out-global-var)**) like
+**[print](#print)**, but appends a newline
+(**[\\n](#backslash-n)**)
+
+**[say](io.html#say-for-files)**
+*(handle method)* - writes a stream into a file and appends
+**[\\n](#backslash-n)**
+
+**Scalar** *[(mutable
+type)](ap-b-lookup.html#mutable-types)*
+object to hold a Perl scalar, a variable for a single value
+
+**[:scalar](basic-syntax.html#interpolation)**
+*[(quoting
+adverb)](ap-b-lookup.html#quoting-adverbs)*
+demands evaluation of scalar variables that start with the
+**[$-sigil](#dollar-sigil)**, long form of
+**[:s](#s-adverb)**, included in
+**["..."](#double-quotation-marks)**,
+**[qq/.../](#qq-op)** and
+**[<<...\>\>](#double-angle-brackets)**
+
+*scope* - the block of code within which an identifier is usable
+
+**scope\_declarator** *[(grammatical
+category)](ap-b-lookup.html#categories)*
+internal namespace for [scope
+declarators](ap-b-lookup.html#scope-declarator)
+- example: *[my](#my), [our](#our) ,
+[has](#has) , [state](#state)*
+
+**seed** - initialize a random number generator, optionally with a
+value
+
+**Seq** *[(immutable
+type)](ap-b-lookup.html#immutable-types)*
+A list of values (can be generated lazily)
+
+**SeqIter** *[(mutable
+type)](ap-b-lookup.html#mutable-types)*
+Iterator over a Seq
+
+**Set** *[(immutable
+type)](ap-b-lookup.html#immutable-types)*
+unordered collection of values that allows no duplicates
+
+**set** *[(array op &
+method)](variables.html#array-methods)*
+creates a Set
+
+**sigil** *[(grammatical
+category)](ap-b-lookup.html#categories)*
+word to name the namespace for sigils, used to redifine them or
+define your own with a macro
+
+*sigil* - character that serves as a prefix to categorize the
+following name, most prominent in Perl are the variable
+[sigils](ap-b-lookup.html#sigils)
+: **[$](#dollar-sigil)**,
+**[@](#at-sigil)** and
+**[%](#percent-sigil)**
+
+**sign** - 1 when $x (only parameter) \> 0, -1 if < 0, 0 when = 0,
+undefined when undefined
+
+**Signature** - *[(immutable
+type)](ap-b-lookup.html#immutable-types)*
+object type to hold all information a signature like parameter
+types and values, return type, etc.
+
+**signature** *(routine method)* - returns a capture object with the
+signature of this routine
+
+**signature** *[(routine
+trait)](ap-b-lookup.html#routine-traits)*
+signature of a subroutine. Normally declared implicitly, by
+providing a parameter list and/or return type
+
+*signature* - function parameters (left-hand side of a binding),
+surrounded by round parentheses
+
+**:sigspace** *[(regex
+modifier)](ap-b-lookup.html#regex-modifier)*
+whitespace separates now subregex and don't stand for spaces to
+look for, long for for **[:s](#s-modifier)**,
+**[ms/.../](#ms-op)** is alias to
+**m:sigspace/.../**
+
+**[sin](operators.html)**
+*[(numeric
+op)](operators.html#numeric-context)*
+sine, trigonometric function, takes angle in radian; see also
+**[to-radians](#to-radians)**,
+**[cos](#cos)**, **[tan](#tan)**
+
+**[:single](basic-syntax.html#single-quotes)**
+*[(quoting
+adverb)](ap-b-lookup.html#quoting-adverbs)*
+simple quoting (slashes and '), alias to
+**['...'](#single-quotation-marks)** and
+**[q/.../](#q-op)**, long for
+**[:q](#q-adverb)**
+
+**sleep** - attempt to sleep (stop the program) for up to <span class="you-provide">f</span> (only
+parameter) seconds (with sub-second resolution)
+
+*slice* - part of an array or list
+
+**slang** - sublanguages of Perl 6, their grammar is mostly stored
+in [special
+variables](ap-b-lookup.html#special-variables)
+with the [twigil](#twigil) \~, such as
+**[\$\~Regex](#regex-lang-var)** or
+**[\$\~MAIN](#main-lang-var)** (main language); you
+can change or alter them with this keyword by using the *augment* or
+*supersede* command
+
+**[slurp](basic-syntax.html#files)**
+*(path|file handle method)* - reads an entire file into a string
+without a file handle
+
+*slurpy array* - array parameter that receives all (slurps) all
+optional subroutine arguments
+
+**so** *[(context
+op)](ap-b-lookup.html#contextualizers)*
+converts value into the *[boolean
+context](operators.html#bool-context)*,
+low precedence alternative to
+**[?](#question-mark-op)**
+
+**SoftRoutine** *[(mutable
+type)](ap-b-lookup.html#mutable-types)*
+*[routine](#routine)* that is committed to
+staying mutable
+
+**<space\>** *[(predefined
+subrule)](ap-b-lookup.html#subrules)*
+single white space char aka **[\\s](#backslash-s)**
+
+**special\_variable** *[(grammatical
+category)](ap-b-lookup.html#categories)*
+namespace to define and redefine [special
+variables](ap-b-lookup.html#special-variables)
+with a macro
+
+**splice** *[(array op &
+method)](variables.html#array-methods)*
+remove on $pos (first parameter) $n (second - optional) values
+and replace them with values (third - optional)
+
+**split** - makes an array of substrings from a string and a
+separator
+
+**[sprintf](basic-syntax.html#sprintf)**
+*(formater)* - inserts formated values out of variables into a
+string like **[printf](#printf)**, but returns the
+string instead of outputting it
+
+**sqrt** - square root of $n (**[Num](#num-type)** -
+first and only parameter)
+
+**[ss///](regexes.html#substitution)**
+*[(regex quoting
+op)](ap-b-lookup.html#quoting-ops)*
+performs **[rx](#rx)** based substitution, spaces
+are just subrule separators, alias to **s:ss/.../.../**, e.g.:
+ss/teh hsa/the has/;
+
+**:ss** *[(regex
+modifier)](ap-b-lookup.html#regex-modifier)*
+only for for substitution, whitespace separates subregexes like
+**[:sigspace](#sigspace-modifier)**, but also in the
+second part, short for
+**[:samespace](#samespace-modifier)**
+
+<span class="you-provide">n</span> **:st** *[(regex
+modifier)](ap-b-lookup.html#regex-modifier)*
+demands the nth finding, has many aliases (:nd :rd :th) for
+correct spelling (:1st)
+
+**START** *[(closure
+trait)](ap-b-lookup.html#closure-traits)*
+marks as a prefix a special block or statement, executed on
+first ever execution, once per closure clone
+
+**Stash** *[(mutable
+type)](ap-b-lookup.html#mutable-types)*
+A symbol table hash (package, module, class, lexpad, etc)
+
+**stat** *[(filetest
+op)](ap-b-lookup.html#filetest-ops)*
+available information about a file or link (call *stat :link* as
+former lstat)
+
+**state** *[(scope
+declarator)](ap-b-lookup.html#scope-declarator)*
+introduces lexically scoped but persistent names (known only in
+the enclosing block, but retain their values between invocations)
+
+**statement\_control** *[(grammatical
+category)](ap-b-lookup.html#categories)*
+internal namespace for block modifier like
+[conditionals](ap-b-lookup.html#conditionals)
+or
+[loops](ap-b-lookup.html#loops)
+that stay in front of it
+
+**statement\_mod\_cond** *[(grammatical
+category)](ap-b-lookup.html#categories)*
+internal namespace for words that come after a statement and
+handle if the statement will be executed - example : ***$a++
+[if](#if)** $a \> 3*
+
+**statement\_mod\_loop** *[(grammatical
+category)](ap-b-lookup.html#categories)*
+internal namespace for [special group of block
+modifier](ap-b-lookup.html#loops)
+that turn the [block](#block) into a loop - example :
+**[loop](#loop)**,
+**[repeat](#repeat)**, **[for](#for)**
+
+**statement\_prefix** *[(grammatical
+category)](ap-b-lookup.html#categories)*
+internal namespace for block modifier - example :
+***[do](#do)***
+
+**Str** *[(immutable
+type)](ap-b-lookup.html#immutable-types)*
+Perl string, finite sequence of Unicode characters
+
+**Sub** *[(mutable
+type)](ap-b-lookup.html#mutable-types)*
+Perl subroutine object
+
+**[sub](blocks.html#sub)**
+*[(routine
+type)](ap-b-lookup.html#routine-types)*
+defines a subroutine, a block callable by name - example:
+*name();*
+
+**Submethod** *[(mutable
+type)](ap-b-lookup.html#mutable-types)*
+Perl subroutine acting like a method
+
+**submethod** *[(routine
+type)](ap-b-lookup.html#routine-types)*
+defines methods, not inherited by subclasses
+
+**subset** - define a subtype, eg subset Month of Int where { 1 <=
+$\^a <= 12 }
+
+**[subst](regexes.html#substitution)**
+*(string method)* - method alias to
+*[s/.../.../](#s-op) , $str.subst( /pattern/,
+"replacement" )*, equals $str \~\~ s/pattern/replacement/;
+
+**[:subst](basic-syntax.html#regex)**
+*[(quoting
+adverb)](ap-b-lookup.html#quoting-adverbs)*
+parse as [substitution
+regex](regexes.html#substitution)
+, **Q [:subst](#subst-adverb) /.../.../** is alias to
+**[s/.../.../](#s-op)**
+
+**substr** *(string method)* - the scalar substring function like in
+Perl 5
+
+**succ** *[(sequence
+traversion)](operators.html#traversing-sequence)*
+returns the successor of $x (only parameter), alias to **++**
+operator (see **[pred](#pred)**)
+
+**supersede** *[(scope
+declarator)](ap-b-lookup.html#scope-declarator)*
+replaces definitions of an existing name, e.g. methods and
+attributes of a **[class](#class)** or
+**[grammar](#grammar)**, see also:
+**[augment](#augment)**
+
+
+
+# T
+
+**:t** *[(filetest
+op)](ap-b-lookup.html#filetest-ops)*
+filehandle is opened to a tty (terminal)
+
+**\\T** *[(escape
+sequence)](ap-b-lookup.html#escape-sequences)*
+anything but a tab
+
+**\\t** *[(escape
+sequence)](ap-b-lookup.html#escape-sequences)*
+tab, not visible character
+
+**[take](blocks.html#gather-and-take)**
+can add several item to the list of return values of a
+**[gather](#gather)** block
+
+**tan** *[(numeric
+op)](operators.html#numeric-context)*
+tangent, trigonometric function, takes angle in radian; see also
+**[to-radians](#to-radians)**,
+**[cos](#cos)**, **[sin](#sin)**
+
+**temp** - defines variables as temporary, synonym for the Perl 5
+*local*
+
+**term** *[(grammatical
+category)](ap-b-lookup.html#categories)*
+namespace of terms, used to redifine them or make a new with a
+macro
+
+<span class="you-provide">n</span> **:th** *[(regex
+modifier)](ap-b-lookup.html#regex-modifier)*
+demands the nth finding, has many aliases (:st :nd :rd) for
+correct spelling (:2nd)
+
+**tighter** *[(routine
+trait)](ap-b-lookup.html#routine-traits)*
+specifies the [precedence of an
+operator](ap-b-lookup.html#table-of-precedence)
+higher than an existing operator
+
+**[:to](basic-syntax.html#heredocs)**
+*[(quoting
+adverb)](ap-b-lookup.html#quoting-adverbs)*
+defines end marker for the following heredoc, **:to** is short
+for **[:heredoc](#heredoc-adverb)**
+
+**to-radians** - convert from $base (second parameter) to radians,
+opposite of **[from-radians](#from-radians)**
+
+**token** *[(routine
+type)](ap-b-lookup.html#routine-types)*
+**[regex](#regex)** method without backtracking,
+alias to **[regex](#regex)**
+**[:ratchet](#ratchet-modifier)**, part of a
+**[grammar](#grammar)** , see also
+**[rule](#rule)**
+
+*topicalizer* - every keyword that sets the
+**[$\_](#context-var)** variable, eg given, for
+
+**touch** (filehandle method) - update timestamps on a file (like
+the Unix command)
+
+**[tr///](regexes.html#transliteration)**
+*[(quoting
+op)](ap-b-lookup.html#quoting-ops)*
+transliteration (as in Perl 5), translating some character in a
+string into others, alias to **Q
+[:trans](#trans-adverb) /.../.../**
+
+*trait* - additional property of a variable, defined at compile
+time, see **[but](#but)**, what other languages call
+*trait* Perl calls [role](#role)
+
+**trait\_auxiliary** *[(grammatical
+category)](ap-b-lookup.html#categories)*
+
+**trait\_verb** *[(grammatical
+category)](ap-b-lookup.html#categories)*
+example : **[of](#of)**
+
+**[:trans](basic-syntax.html#regex)**
+*[(quoting
+adverb)](ap-b-lookup.html#quoting-adverbs)*
+evals the quoted as
+[transliteration](regexes.html#transliteration)
+aka tr /.../.../ aka .trans("..." =\> "...")
+
+**[trans](regexes.html#transliteration)**
+*(string method)* - method name for
+**[tr/.../.../](#tr-op)** operator, $str.trans(
+%mapping ) equals $str \~\~
+tr/%mapping.sort.keys/%mapping.sort.values/;
+
+**$\~Trans ** *[(special
+var)](ap-b-lookup.html#slang-variables)*
+current [grammar](#grammar) of the
+transliteration language (used by **[trans()](#trans)**
+aka **[tr/.../.../](#tr-op)**)
+
+**triangle** *(list method)* - alias to **[[\\
+]](#square-bracket-slash-metaop)**
+[metaoperator](ap-b-lookup.html#metaoperators)
+- example: [\\+] @a = @a.triangle(&[+])
+
+**True** - *[boolean](#bool-type)* value aka
+Bool::True, 1 in numeric context
+
+**truncate** *(num op)* - closest integer to $f (only parameter)
+whose absolute value is not greater than the absolute value of $f
+
+**trusts** - allows a class the acess to otherwised sealed
+namespaces
+
+**twigil** *[(grammatical
+category)](ap-b-lookup.html#categories)*
+internal namespace for
+[twigils](variables.html#twigils)
+, used to redifine them or define your own with a macro
+
+*[twigil](ap-b-lookup.html#twigils)*
+second(ary) *[sigil](#sigil)* indicating a
+special property of a variable
+
+**type\_declarator** *[(grammatical
+category)](ap-b-lookup.html#categories)*
+- example: **[subset](#subset)**
+
+**$\*TZ ** *[(special
+var)](ap-b-lookup.html#global-variables)*
+local time zone
+
+
+
+# U
+
+**:u** *[(filetest
+op)](ap-b-lookup.html#filetest-ops)*
+report if file has setuid bit set
+
+**\\U\[<span class="you-provide">n</span>\]** *[(escape
+sequence)](ap-b-lookup.html#escape-sequences)*
+everything within the brackets is uppercase
+
+**uc** - make all string chars uppercase
+
+**ucfirst** - make first char of a string uppercase
+
+**\$\*UID** *[(special
+var)](ap-b-lookup.html#global-variables)*
+real user ID of the running process
+(**[\$\*PID](#pid-global-var)**) owner (user), was @<
+and $UID in Perl 5
+
+**UNDO** *[(closure
+trait)](ap-b-lookup.html#closure-traits)*
+marks as a prefix a special block, executed at every
+unsuccessful block exit, part of
+**[LEAVE](#leave-phaser)** queue
+
+**uniq** *(list method)* - only unique elements of a list
+
+**[unless](blocks.html#unless)**
+*[(block
+modifier)](ap-b-lookup.html#conditionals)*
+if the following expression *[evals](#evaluation)*
+to **[False](#false)**, the block after that will
+be run, can also be written at the end of an expression, opposite of
+**[if](#if)**
+
+**[until](blocks.html#until)**
+*[(block
+modifier)](ap-b-lookup.html#loops)*
+runs block repeatedly as long as the following expression
+*[evals](#evaluation)* to
+**[False](#false)**, can be combined with
+**[repeat](#repeat)**, can also be written at the
+end of an expression, opposite of **[while](#while)**
+
+**unwrap** - remove an enclosing subroutine, see also:
+**[wrap](#wrap)**
+
+**<upper\>** *[(predefined
+subrule)](ap-b-lookup.html#subrules)*
+a single uppercase character
+
+**[uri](io.html)**
+- returns IO::Streamable descendant for accessing content of that
+URI (only pramameter typed **[Str](#str-type)**)
+
+**$?USAGE ** *[(special
+var)](ap-b-lookup.html#global-variables)*
+default usage message generated at compile time
+
+**[use](subroutines.html)**
+load a module, check Perl version, import definitions (see
+**[need](#need)** and
+**[import](#import)**)
+
+
+
+# V
+
+**\\V** *[(escape
+sequence)](ap-b-lookup.html#escape-sequences)*
+anything but vertical whitespace
+
+**\\v** *[(escape
+sequence)](ap-b-lookup.html#escape-sequences)*
+vertical whitespace character (LF | CR | FF | Line Tab | Next
+Line | Line Separator | Paragraph Separator), see also:
+**[\\s](#backslash-s)** (whitespace)
+
+**value** *[(pair
+method)](variables.html#pair)*
+gets value (second) value of a pair (opposite of
+**[key](#key)**) - example: (key =\> 'value').value;
+\# returns 'value'
+
+**values** *[(array op &
+method)](variables.html#array-methods)*
+returns an array of values like the var itself in [list
+context](#list-context) does
+
+**values** *[(hash
+method)](variables.html#hash-methods)*
+returns an array of just the values - example: *(1 =\> 2, 3 =\>
+4).values; \# returns (2,4)*
+
+**\$\*VM** *[(special
+var)](ap-b-lookup.html#global-variables)*
+running virtual machine, might want to use *$\*VM.name*, see
+also: **[\$\*DISTRO](#distro-global-var)** and
+**[\$\*KERNEL](#kernel-global-var)**
+
+**\$?VM** *[(special
+var)](ap-b-lookup.html#global-variables)*
+virtual machine the program is compiled for, see also:
+**[\$?DISTRO](#distro-compiler-var)** and
+**[\$?KERNEL](#kernel-compiler-var)**
+
+
+
+# W
+
+**:W** *[(filetest
+op)](ap-b-lookup.html#filetest-ops)*
+check if file is writeable by real uid/gid
+
+**:w** *[(filetest
+op)](ap-b-lookup.html#filetest-ops)*
+check if file is writeable by effective uid/gid
+
+**[:w](basic-syntax.html#quote-words)**
+*[(quoting
+adverb)](ap-b-lookup.html#quoting-adverbs)*
+split quoted string on words (on whitespaces), no quote
+protection, short form of
+**[:words](#words-adverb)**, used in
+**[qw/.../](#qw-op)**
+
+**\\W** *[(escape
+sequence)](ap-b-lookup.html#escape-sequences)*
+anything but a word character
+
+**\\w** *[(escape
+sequence)](ap-b-lookup.html#escape-sequences)*
+word character (Unicode alphanumeric plus "\_")
+
+**|w** *[(escape
+sequence)](ap-b-lookup.html#escape-sequences)*
+word boundary, zero width space between two **\\w**, alias to
+**[<wb\>](#wb-subrule)**, see also:
+**[|c](#pipe-c)** and **[|g](#pipe-g)**
+
+**[wait](io.html#processes)**
+waits for a child process to terminate and returns the child
+status object, process ID in numeric context
+
+**[warn](io.html#warn)**
+makes output via standart error output ($ERR - usually the
+command line), similar to **[note](#note)**, but
+works more like **[print](#print)**, without
+appending **[\\n](#backslash-n)**
+
+**<wb\>** *[(predefined
+subrule)](ap-b-lookup.html#subrules)*
+zero-width word boundary between an
+**[\\w](#backslash-w)** and a
+**[\\W](#backslash-capital-w)** character aka
+**[\\b](#backslash-b)**, alias to **|w**, see also
+**[<ww\>](#ww-subrule)**
+
+**WHAT** *[(introspection
+method)](ap-b-lookup.html#object-introspection)*
+short name of the class that an object belongs to
+
+**Whatever** *[(undefined value
+type)](ap-b-lookup.html#undefined-types)*
+Wildcard (like Any, but subject to do-what-I-mean via multi
+method dispatch), alias to **[\*](#asterisk)**
+
+**WHEN** *[(introspection
+method)](ap-b-lookup.html#object-introspection)*
+(reserved for events?)
+
+**[when](blocks.html#when)**
+*[(block
+modifier)](ap-b-lookup.html#conditionals)*
+executes its following code block, when parameter matches
+against **[$\_](#context-var)** (set by
+**[given](#given)** or
+**[for](#for)**), see also:
+**[default](#default)**
+
+**WHENCE** *[(introspection
+method)](ap-b-lookup.html#object-introspection)*
+autovivification of closures
+
+**WHERE** *[(introspection
+method)](ap-b-lookup.html#object-introspection)*
+memory address of the object
+
+**where** - defines subtypes of data - example: *subset Month of Int
+where { 1 <= $\^a <= 12 } *
+
+**WHICH** *[(introspection
+method)](ap-b-lookup.html#object-introspection)*
+object ID (type)
+
+**[while](blocks.html#while)**
+*[(block
+modifier)](ap-b-lookup.html#loops)*
+runs block repeatedly as long as the following expression
+*[evals](#evaluation)* to
+**[True](#true)**, can be combined with
+**[repeat](#repeat)**, can also be written at the
+end of an expression, opposite of **[until](#until)**
+
+**WHO** *[(introspection
+method)](ap-b-lookup.html#object-introspection)*
+package, that support that object, long name in *[string
+context](operators.html#string-context)*
+
+**WHY** *[(introspection
+method)](ap-b-lookup.html#object-introspection)*
+reserved for documentation, see also
+**[\#=](#pound-equal)**
+
+**will do** *[(routine
+trait)](ap-b-lookup.html#routine-traits)*
+block of code executed when the subroutine is called. Normally
+declared implicitly, by providing a block after the subroutine's
+signature definition
+
+**words** *(string method)* - splits a sting into a list of words -
+example: `$input.words($limit)` equals [`$input.comb( / \\S+ /,
+$limit )`](#comb)
+
+**[:words](basic-syntax.html#quote-words)**
+*[(quoting
+adverb)](ap-b-lookup.html#quoting-adverbs)*
+split quoted string on words (on whitespaces), no quote
+protection, long form of **[:w](#w-adverb)**, used
+in **[qw/.../](#qw-op)**
+
+**wrap** - creates enveloping subroutine (see also
+**[unwrap](#unwrap)**)
+
+**[write](io.html#read)**
+*(Buf method)* - writes content of all parameter into that buffer
+
+**<ws\>** *[(predefined
+subrule)](ap-b-lookup.html#subrules)*
+whitespace between words aka
+**[\\s\*](#backslash-s)**
+
+**[:ww](basic-syntax.html#quote-words)**
+*[(quoting
+adverb)](ap-b-lookup.html#quoting-adverbs)*
+split quoted string into words (on whitespaces) but with quote
+protection (like in shell - '...' and
+**["..."](#double-quotation-marks)** sourrounded
+strings are taken as single words), short form of
+**[:quotewords](#quotewords-adverb)**, used in
+**[<<...\>\>](#double-angle-brackets)**
+
+**<ww\> ** *[(predefined
+subrule)](ap-b-lookup.html#subrules)*
+zero-width space inside of a word between two
+**[\\w](#backslash-w)** character, see also
+**[<wb\>](#wb-subrule)**
+
+
+
+# X
+
+**X** *(list op)* - Cross product of two arrays, alias of
+**[cross](#cross)** method - example: *1,2 X 3,4 ==
+1,3,1,4,2,3,2,4;*
+
+**x** *[(string
+op)](operators.html#string-context)*
+string replicate operator to single string - example: *'ab' x 3
+== 'ababab';*
+
+**X**<span class="you-provide">op</span> *[(meta
+op)](ap-b-lookup.html#metaoperators)*
+Cross product with hyper operator, alias of
+**[crosswith](#crosswith)** method - example: *\<a b\>
+X\~ \<y z\> == \<ay az by bz\>;*
+
+**:X** *[(filetest
+op)](ap-b-lookup.html#filetest-ops)*
+check if file is executable by real uid/gid
+
+**:x** *[(filetest
+op)](ap-b-lookup.html#filetest-ops)*
+check if file is executable by effective uid/gid
+
+**:x** *[(quoting
+adverb)](ap-b-lookup.html#quoting-adverbs)*
+quoted string will be evaluated as Perl code (like
+**[eval](#eval)**) and replaced with its result,
+alias to **[Q](#capital-q-op)**
+**[:exec](#exec-adverb)** **/.../** and
+**[qx/.../](#qx-op)**
+
+**:x**(<span class="you-provide">n</span>) *[(regex
+modifier)](ap-b-lookup.html#regex-modifier)*
+searching n times (n is an int) with this pattern
+
+**\\X\[<span class="you-provide">n</span>\]** *[(escape
+sequence)](ap-b-lookup.html#escape-sequences)*
+anything but the character given in hexadecimal (brackets
+optional)
+
+**\\x\[<span class="you-provide">n</span>\]** *[(escape
+sequence)](ap-b-lookup.html#escape-sequences)*
+character given in hexadecimal (brackets optional)
+
+**<xdigit\>** *[(predefined
+subrule)](ap-b-lookup.html#subrules)*
+single hexadecimal digit char
+
+**xor** *[(logical
+op)](operators.html#logical-selection)*
+[infix](#infix-category) logical *eXclusive OR*
+operator (*XOR*), **[True](#true)** if only one side
+has positive value, returns otherwise left value, low precedence
+version of **[\^\^](#double-caret-op)**
+
+**xx** *[(infix list
+op)](operators.html#list-generation)*
+replicate a list *$n* (second operand) times - example: *'ab' xx
+3 = <ab ab ab\> *
+
+
+
+# Y
+
+*[yadda
+operator](operators.html#yadda)*
+placeholder for later to be written code, because in empty
+routines are forbidden, comes in 3 flavours:
+**[...](#triple-dot-yadda-op)**,
+**[???](#triple-question-mark)** and
+**[!!!](#triple-exclamation-mark)**
+
+
+
+# Z
+
+**Z** *(list op)* - alias to **[zip](#zip-op)**,
+joines 2 lists and stops when 1 list runs out of elements, returning
+always an list with an even length - example: *1,2,3,4 Z 8,9 ==
+1,8,2,9*
+
+**Z**<span class="you-provide">op</span> *[(meta
+op)](ap-b-lookup.html#metaoperators)*
+joines the values from same position of 2 lists with following
+operator and produces in that manner a new list
+
+**zip** *[(array op &
+method)](variables.html#array-methods)*
+zip operator, joines 2 lists, alias to
+**[Z](#capital-z-op)** operator - example: *@a Z @b
+= (@a; @b).zip *
+
+**zipwith** *(list method)* - alias to **[Z
+metaoperator](#capital-z-metaop)** - example: *@a
+Z\~ @b = (@a; @b).zipwith(&[\~]) = (@a; @b).zip.slice.map {
+.reduce(&[\~]) } *
+
+***
