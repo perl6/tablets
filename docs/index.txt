@@ -41,9 +41,9 @@ the data here is partial and subject to drastic changes.
 [Tablet 7: Subroutines](tablet-7-subroutines.html)
 (Signatures, Multis, Modules)
 
-[Tablet 8: Objects (Classes, Roles)](tablet-8-objects.html)
+[Tablet 8: Objects](tablet-8-objects.html) (Classes, Roles, Delegation)
 
-[Tablet 9: Regex (Rules, Grammars)](tablet-9-regexes.html)
+[Tablet 9: Regex](tablet-9-regexes.html) (Rules, Grammars)
 
 [Tablet 10: Metaprogramming](tablet-10-metaprogramming.html)
 (Macros, Selfmade Ops, DSL)

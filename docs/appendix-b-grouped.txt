@@ -12,11 +12,11 @@ types. The 4th sigil is for callables (routines) and the 5th is for
 layers (namespaces) that organize the previous 4.
 
 ------------------------------------------  --------------------------------------------------------------------------------------------------------
-[`$`](ap-a-index.html#dollar-sigil)         scalar, single value, can be of any data type
-[`@`](ap-a-index.html#at-sigil)             ordered array, indexed list of scalar
-[`%`](ap-a-index.html#percent-sigil)        unordered hash (associative array), 2 column table with unique IDs (keys) and associated values (value)
-[`&`](ap-a-index.html#ampersand-sigil)      code/rule/token/regex
-[`::`](ap-a-index.html#colon-colon-sigil)   abstraction: package/module/class/role/subset/enum/type/grammar
+[`$`](appendix-a-index.html#dollar-sigil)         scalar, single value, can be of any data type
+[`@`](appendix-a-index.html#at-sigil)             ordered array, indexed list of scalar
+[`%`](appendix-a-index.html#percent-sigil)        unordered hash (associative array), 2 column table with unique IDs (keys) and associated values (value)
+[`&`](appendix-a-index.html#ampersand-sigil)      code/rule/token/regex
+[`::`](appendix-a-index.html#colon-colon-sigil)   abstraction: package/module/class/role/subset/enum/type/grammar
 ------------------------------------------  --------------------------------------------------------------------------------------------------------
 
 The first 4 can also be used as prefix operators, called
@@ -30,15 +30,15 @@ Twigil is short for secondary sigil. They follow after a primary sigil and mark 
 
 ---------------------------------------------------  ------------------------------------------------------------
 `$foo`                                               ordinary scoping (no twigil)
-[`$.foo`](ap-a-index.html#dot-twigil)                object attribute public accessor
-[`$!foo`](ap-a-index.html#exclamation-mark-twigil)   object attribute private storage
-[`$^foo`](ap-a-index.html#caret-twigil)              self-declared formal positional parameter
-[`$:foo`](ap-a-index.html#colon-twigil)              self-declared formal named parameter
-[`$*foo`](ap-a-index.html#asterisk-twigil)           contextualizable global variable
-[`$?foo`](ap-a-index.html#question-mark-twigil)      compiler hint variable
-[`$=foo`](ap-a-index.html#equal-sign-twigil)         pod variable
-[`$<foo>`](ap-a-index.html#angle-brackets-twigil)    match variable, short for `$/<foo>` or even `$/{'foo'}`
-[`$~foo`](ap-a-index.html#tilde-twigil)              the foo sublanguage seen by the parser at this lexical spot
+[`$.foo`](appendix-a-index.html#dot-twigil)                object attribute public accessor
+[`$!foo`](appendix-a-index.html#exclamation-mark-twigil)   object attribute private storage
+[`$^foo`](appendix-a-index.html#caret-twigil)              self-declared formal positional parameter
+[`$:foo`](appendix-a-index.html#colon-twigil)              self-declared formal named parameter
+[`$*foo`](appendix-a-index.html#asterisk-twigil)           contextualizable global variable
+[`$?foo`](appendix-a-index.html#question-mark-twigil)      compiler hint variable
+[`$=foo`](appendix-a-index.html#equal-sign-twigil)         pod variable
+[`$<foo>`](appendix-a-index.html#angle-brackets-twigil)    match variable, short for `$/<foo>` or even `$/{'foo'}`
+[`$~foo`](appendix-a-index.html#tilde-twigil)              the foo sublanguage seen by the parser at this lexical spot
 ---------------------------------------------------  ------------------------------------------------------------
 
 
@@ -47,18 +47,18 @@ Special Variables
 -----------------
 
 ---------------------------------------------  ------------------------
-[`$_`](ap-a-index.html#context-var)            context variable
-[`$!`](ap-a-index.html#exclamation-mark-var)   error msg
+[`$_`](appendix-a-index.html#context-var)            context variable
+[`$!`](appendix-a-index.html#exclamation-mark-var)   error msg
 ---------------------------------------------  ------------------------
 
 
 ### Match Variables ###
 
 -----------------------------------------------  -----------------------------------------------------------------------
-[`$/`](ap-a-index.html#slash-var)                last created match object of this block
-[`$<...>`](ap-a-index.html#angle-brackets-var)   alias to named capture, see Twigils above
-[`$0 .. $9`](ap-a-index.html#0-var)              alias to positional capture (most like in P5 - `$1 .. $9`)
-[`@()`](ap-a-index.html#round-brackets-var)      array that holds $0 .. $9 and rest and positional submatches
+[`$/`](appendix-a-index.html#slash-var)                last created match object of this block
+[`$<...>`](appendix-a-index.html#angle-brackets-var)   alias to named capture, see Twigils above
+[`$0 .. $9`](appendix-a-index.html#0-var)              alias to positional capture (most like in P5 - `$1 .. $9`)
+[`@()`](appendix-a-index.html#round-brackets-var)      array that holds $0 .. $9 and rest and positional submatches
 -----------------------------------------------  -----------------------------------------------------------------------
 
 ### Global Variables ###
@@ -67,26 +67,26 @@ context variable, default global (run time), any of them are now
 objects with several methods
 
 ------------------------------------------------------------------  ---------------------------------------------------------------------
-[`@*ARGS`](ap-a-index.html#args-global-var)                         Arguments (Parameter) to a program (script), formerly @ARGV
-[`$*ARGFILES`](ap-a-index.html#argfiles-global-var)                 magic command-line input handle
-[`$*IN`](ap-a-index.html#in-global-var)                             standard input handle (command line mostly)
-[`$*OUT`](ap-a-index.html#out-global-var)                           standard output (command line mostly)
-[`$*ERR`](ap-a-index.html#err-global-var)                           standard error output (command line mostly)
-[`$*CWD`](ap-a-index.html#cwd-global-var)                           current working directory (Str)
-[`@*INC`](ap-a-index.html#inc-global-var)                           include pathes (but not for std library modules), formerly @INC
-[`$*LANG`](ap-a-index.html#lang-global-var)                         LANG variable from `%*ENV` that defines what human language is used
-[`%*ENV`](ap-a-index.html#env-global-var)                           system environment variables, formerly %ENV
-[`%*OPTS`](ap-a-index.html#opts-global-var)                         options from command line
-[`$*TZ`](ap-a-index.html#tz-global-var)                             local time zone
-[`$*EXECUTABLE_NAME`](ap-a-index.html#executable-name-global-var)   former $0
-[`$*PERL`](ap-a-index.html#perl-global-var)                         perl version running under, was formerly `$^V` or `$]`
-[`$*KERNEL`](ap-a-index.html#kernel-global-var)                     operating system running under
-[`$*DISTRO`](ap-a-index.html#distro-global-var)                     OS distribution am I running under
-[`$*PID`](ap-a-index.html#pid-global-var)                           ID of the running process,
-[`$*GID`](ap-a-index.html#gid-global-var)                           real global ID of the running process owner, formerly @(
-[`$*UID`](ap-a-index.html#uid-global-var)                           real user ID of the running process owner (user), formerly @\<
-[`$*EGID`](ap-a-index.html#egid-global-var)                         effective global ID, formerly @)
-[`$*EUID`](ap-a-index.html#euid-global-var)                         effective user ID, formerly @\>
+[`@*ARGS`](appendix-a-index.html#args-global-var)                         Arguments (Parameter) to a program (script), formerly @ARGV
+[`$*ARGFILES`](appendix-a-index.html#argfiles-global-var)                 magic command-line input handle
+[`$*IN`](appendix-a-index.html#in-global-var)                             standard input handle (command line mostly)
+[`$*OUT`](appendix-a-index.html#out-global-var)                           standard output (command line mostly)
+[`$*ERR`](appendix-a-index.html#err-global-var)                           standard error output (command line mostly)
+[`$*CWD`](appendix-a-index.html#cwd-global-var)                           current working directory (Str)
+[`@*INC`](appendix-a-index.html#inc-global-var)                           include pathes (but not for std library modules), formerly @INC
+[`$*LANG`](appendix-a-index.html#lang-global-var)                         LANG variable from `%*ENV` that defines what human language is used
+[`%*ENV`](appendix-a-index.html#env-global-var)                           system environment variables, formerly %ENV
+[`%*OPTS`](appendix-a-index.html#opts-global-var)                         options from command line
+[`$*TZ`](appendix-a-index.html#tz-global-var)                             local time zone
+[`$*EXECUTABLE_NAME`](appendix-a-index.html#executable-name-global-var)   former $0
+[`$*PERL`](appendix-a-index.html#perl-global-var)                         perl version running under, was formerly `$^V` or `$]`
+[`$*KERNEL`](appendix-a-index.html#kernel-global-var)                     operating system running under
+[`$*DISTRO`](appendix-a-index.html#distro-global-var)                     OS distribution am I running under
+[`$*PID`](appendix-a-index.html#pid-global-var)                           ID of the running process,
+[`$*GID`](appendix-a-index.html#gid-global-var)                           real global ID of the running process owner, formerly @(
+[`$*UID`](appendix-a-index.html#uid-global-var)                           real user ID of the running process owner (user), formerly @\<
+[`$*EGID`](appendix-a-index.html#egid-global-var)                         effective global ID, formerly @)
+[`$*EUID`](appendix-a-index.html#euid-global-var)                         effective user ID, formerly @\>
 $*ON_DIE                                                            exception handler, run befor die, formerly `$SIG{__DIE__}`
 $*ON_WARN                                                           exception handler, run befor warn, formerly `$SIG{__WARN__}`
 $*COMPILING                                                         &nbsp;
@@ -99,23 +99,23 @@ $*DEBUGGING                                                         &nbsp;
 compiler constants (fixed at compile time)
 
 ----------------------------------------------------------  -----------------------------------------------------------------------
-[`$?KERNEL`](ap-a-index.html#kernel-compiler-var)           for which operating System was this program compiled?
-[`$?DISTRO`](ap-a-index.html#distro-compiler-var)           Which OS distribution am I compiling under?
-[`$?VM`](ap-a-index.html#vm-compiler-var)                   Which virtual machine am I compiling under
+[`$?KERNEL`](appendix-a-index.html#kernel-compiler-var)           for which operating System was this program compiled?
+[`$?DISTRO`](appendix-a-index.html#distro-compiler-var)           Which OS distribution am I compiling under?
+[`$?VM`](appendix-a-index.html#vm-compiler-var)                   Which virtual machine am I compiling under
 `$?XVM`                                                     Which virtual machine am I cross-compiling for
-[`$?PERL`](ap-a-index.html#perl-compiler-var)               Which Perl am I compiled for?
-[`%?LANG`](ap-a-index.html#lang-compiler-var)               Hash of Grammar # What is the current set of interwoven languages?
-[`$?GRAMMAR`](ap-a-index.html#grammar-compiler-var)         current grammar
-[`$?FILE`](ap-a-index.html#file-compiler-var)               current filename of source file
-[`$?MODULE`](ap-a-index.html#module-compiler-var)           current module
-[`$?PACKAGE`](ap-a-index.html#package-compiler-var)         current package
-[`$?CLASS`](ap-a-index.html#class-compiler-var)             current class
-[`::?CLASS`](ap-a-index.html#class-package-compiler-var)    current class (as package name)
-[`$?ROLE`](ap-a-index.html#role-compiler-var)               current role (as variable)
-[`::?ROLE`](ap-a-index.html#role-package-compiler-var)      current role (as package or type name)
-[`&?ROUTINE`](ap-a-index.html#routine-compiler-var)         current sub or method
-[`&?BLOCK`](ap-a-index.html#block-compiler-var)             reference to current block
-[`$?LINE`](ap-a-index.html#line-compiler-var)               current line number
+[`$?PERL`](appendix-a-index.html#perl-compiler-var)               Which Perl am I compiled for?
+[`%?LANG`](appendix-a-index.html#lang-compiler-var)               Hash of Grammar # What is the current set of interwoven languages?
+[`$?GRAMMAR`](appendix-a-index.html#grammar-compiler-var)         current grammar
+[`$?FILE`](appendix-a-index.html#file-compiler-var)               current filename of source file
+[`$?MODULE`](appendix-a-index.html#module-compiler-var)           current module
+[`$?PACKAGE`](appendix-a-index.html#package-compiler-var)         current package
+[`$?CLASS`](appendix-a-index.html#class-compiler-var)             current class
+[`::?CLASS`](appendix-a-index.html#class-package-compiler-var)    current class (as package name)
+[`$?ROLE`](appendix-a-index.html#role-compiler-var)               current role (as variable)
+[`::?ROLE`](appendix-a-index.html#role-package-compiler-var)      current role (as package or type name)
+[`&?ROUTINE`](appendix-a-index.html#routine-compiler-var)         current sub or method
+[`&?BLOCK`](appendix-a-index.html#block-compiler-var)             reference to current block
+[`$?LINE`](appendix-a-index.html#line-compiler-var)               current line number
 ----------------------------------------------------------  -----------------------------------------------------------------------
 
 ### POD Variables ###
@@ -123,9 +123,9 @@ compiler constants (fixed at compile time)
 File-scoped [POD](basic-syntax.html#pod) data
 
 -----------------------------------------------  --------------------------------------------------
-[`$=pod`](ap-a-index.html#pod-pod-var)           surrounding POD object
-[`$=data`](ap-a-index.html#data-pod-var)         data block handle (=begin DATA ... =end)
-[`@=COMMENT`](ap-a-index.html#comment-pod-var)   All the comment blocks in the file
+[`$=pod`](appendix-a-index.html#pod-pod-var)           surrounding POD object
+[`$=data`](appendix-a-index.html#data-pod-var)         data block handle (=begin DATA ... =end)
+[`@=COMMENT`](appendix-a-index.html#comment-pod-var)   All the comment blocks in the file
 -----------------------------------------------  --------------------------------------------------
 
 ### Slang Variables ###
@@ -133,25 +133,25 @@ File-scoped [POD](basic-syntax.html#pod) data
 sublanguage seen by the parser at this lexical spot
 
 -------------------------------------------------  ------------------------------------------------------
-[`$~MAIN`](ap-a-index.html#main-lang-var)          the current main language (e.g. Perl statements)
-[`$~Quote`](ap-a-index.html#q-lang-var)            the current root of quoting language
-[`$~Quasi`](ap-a-index.html#quasi-lang-var)        the current root of quasiquoting language
-[`$~Regex`](ap-a-index.html#regex-lang-var)        the current root of regex language
-[`$~Trans`](ap-a-index.html#trans-lang-var)        the current root of transliteration language
-[`$~P5Regex`](ap-a-index.html#p5regex-lang-var)    the current root of the Perl regex language
+[`$~MAIN`](appendix-a-index.html#main-lang-var)          the current main language (e.g. Perl statements)
+[`$~Quote`](appendix-a-index.html#q-lang-var)            the current root of quoting language
+[`$~Quasi`](appendix-a-index.html#quasi-lang-var)        the current root of quasiquoting language
+[`$~Regex`](appendix-a-index.html#regex-lang-var)        the current root of regex language
+[`$~Trans`](appendix-a-index.html#trans-lang-var)        the current root of transliteration language
+[`$~P5Regex`](appendix-a-index.html#p5regex-lang-var)    the current root of the Perl regex language
 -------------------------------------------------  ------------------------------------------------------
 
 Scope Declarator
 ----------------
 
 -----------------------------------------  -----------------------------------------------------
-[`my`](ap-a-index.html#my)                 introduces lexically scoped names
-[`state`](ap-a-index.html#state)           introduces lexically scoped but persistent names
-[`our`](ap-a-index.html#our)               introduces package-scoped names
-[`anon`](ap-a-index.html#anon)             introduces names that aren't to be stored anywhere
-[`has`](ap-a-index.html#has)               introduces object attribute names
-[`augment`](ap-a-index.html#augment)       adds definitions to an existing name
-[`supersede`](ap-a-index.html#supersede)   replaces definitions of an existing name
+[`my`](appendix-a-index.html#my)                 introduces lexically scoped names
+[`state`](appendix-a-index.html#state)           introduces lexically scoped but persistent names
+[`our`](appendix-a-index.html#our)               introduces package-scoped names
+[`anon`](appendix-a-index.html#anon)             introduces names that aren't to be stored anywhere
+[`has`](appendix-a-index.html#has)               introduces object attribute names
+[`augment`](appendix-a-index.html#augment)       adds definitions to an existing name
+[`supersede`](appendix-a-index.html#supersede)   replaces definitions of an existing name
 -----------------------------------------  -----------------------------------------------------
 
 
@@ -856,27 +856,27 @@ only for loops) that are started at certain times. They are traits
 also be used within an expression as in "BEGIN my $x = 3 * 3;".
 
 ------------------------------------------------  ---------------------------------------------------------------------
-[BEGIN](ap-a-index.html#begin-phaser) {...}*      at compile time, ASAP, only ever runs once
-[CHECK](ap-a-index.html#check-phaser) {...}*      at compile time, ALAP, only ever runs once
+[BEGIN](appendix-a-index.html#begin-phaser) {...}*      at compile time, ASAP, only ever runs once
+[CHECK](appendix-a-index.html#check-phaser) {...}*      at compile time, ALAP, only ever runs once
 &nbsp;                                            &nbsp;
-[INIT](ap-a-index.html#init-phaser) {...}*        at run time, ASAP, only ever runs once
-[END](ap-a-index.html#end-phaser) {...}           at run time, ALAP, only ever runs once
+[INIT](appendix-a-index.html#init-phaser) {...}*        at run time, ASAP, only ever runs once
+[END](appendix-a-index.html#end-phaser) {...}           at run time, ALAP, only ever runs once
 &nbsp;                                            &nbsp;
-[START](ap-a-index.html#start-phaser) {...}*      on first ever execution, once per closure clone
-[ENTER](ap-a-index.html#enter-phaser) {...}*      at every block entry time, repeats on loop blocks.
-[LEAVE](ap-a-index.html#leave-phaser) {...}       at every block exit time
-[KEEP](ap-a-index.html#keep-phaser) {...}         at every successful block exit, part of LEAVE queue
-[UNDO](ap-a-index.html#undo-phaser) {...}         at every unsuccessful block exit, part of LEAVE queue
+[START](appendix-a-index.html#start-phaser) {...}*      on first ever execution, once per closure clone
+[ENTER](appendix-a-index.html#enter-phaser) {...}*      at every block entry time, repeats on loop blocks.
+[LEAVE](appendix-a-index.html#leave-phaser) {...}       at every block exit time
+[KEEP](appendix-a-index.html#keep-phaser) {...}         at every successful block exit, part of LEAVE queue
+[UNDO](appendix-a-index.html#undo-phaser) {...}         at every unsuccessful block exit, part of LEAVE queue
 &nbsp;                                            &nbsp;
-[FIRST](ap-a-index.html#first-phaser) {...}*      at loop initialization time, before any ENTER
-[NEXT](ap-a-index.html#next-phaser) {...}         at loop continuation time, before any LEAVE
-[LAST](ap-a-index.html#last-phaser) {...}         at loop termination time, after any LEAVE
+[FIRST](appendix-a-index.html#first-phaser) {...}*      at loop initialization time, before any ENTER
+[NEXT](appendix-a-index.html#next-phaser) {...}         at loop continuation time, before any LEAVE
+[LAST](appendix-a-index.html#last-phaser) {...}         at loop termination time, after any LEAVE
 &nbsp;                                            &nbsp;
-[PRE](ap-a-index.html#pre-phaser) {...}           assert precondition at every block entry, before ENTER
-[POST](ap-a-index.html#post-phaser) {...}         assert postcondition at every block exit, after LEAVE
+[PRE](appendix-a-index.html#pre-phaser) {...}           assert precondition at every block entry, before ENTER
+[POST](appendix-a-index.html#post-phaser) {...}         assert postcondition at every block exit, after LEAVE
 &nbsp;                                            &nbsp;
-[CATCH](ap-a-index.html#catch-phaser) {...}       catch exceptions, before LEAVE
-[CONTROL](ap-a-index.html#control-phaser) {...}   catch control exceptions (like next/last/return etc), before LEAVE
+[CATCH](appendix-a-index.html#catch-phaser) {...}       catch exceptions, before LEAVE
+[CONTROL](appendix-a-index.html#control-phaser) {...}   catch control exceptions (like next/last/return etc), before LEAVE
 ------------------------------------------------  ---------------------------------------------------------------------
 
 
@@ -886,13 +886,13 @@ Jump Commands
 
 
 ---------------------------------  ------------------------------------------
-[goto](ap-a-index.html#goto)       jump to a named label
-[redo](ap-a-index.html#redo)       repeat this loop turn
-[next](ap-a-index.html#next)       skip to the next loop turn
-[last](ap-a-index.html#last)       leave this loop now
-[break](ap-a-index.html#break)     leave this when clause
-[leave](ap-a-index.html#leave)     leave this block with a return value
-[return](ap-a-index.html#return)   leave this routine with a return value
+[goto](appendix-a-index.html#goto)       jump to a named label
+[redo](appendix-a-index.html#redo)       repeat this loop turn
+[next](appendix-a-index.html#next)       skip to the next loop turn
+[last](appendix-a-index.html#last)       leave this loop now
+[break](appendix-a-index.html#break)     leave this when clause
+[leave](appendix-a-index.html#leave)     leave this block with a return value
+[return](appendix-a-index.html#return)   leave this routine with a return value
 ---------------------------------  ------------------------------------------
 
 
@@ -901,27 +901,23 @@ Conditionals
 ------------
 
 ----------------------------------  -----------------------------------------------------
-[if](ap-a-index.html#if)            when following expression evals in boolean context
-                                    to True, the block that following after that will
-                                    be executed
+[if](appendix-a-index.html#if)            when following expression evals in boolean context to True,
+                                          the block that following after that will be executed
 
-[elsif](ap-a-index.html#elsif)      works like if, but only recognized if no preceding
-                                    "if" or "elsif" clause was executed
+[elsif](appendix-a-index.html#elsif)      works like if, but only recognized if no preceding
+                                          "if" or "elsif" clause was executed
 
-[else](ap-a-index.html#else)        following block will be executed, when no preceding
-                                    "if" or "elsif" clause was executed
+[else](appendix-a-index.html#else)        following block will be executed, when no preceding
+                                          "if" or "elsif" clause was executed
 
-[unless](ap-a-index.html#unless)    opposite of if, no "elsif" or "else" is allowed to
-                                    follow
+[unless](appendix-a-index.html#unless)    opposite of if, no "elsif" or "else" is allowed to follow
 
-[given](ap-a-index.html#given)      evals an expression into scalar context assignes it
-                                    to `$_` for the following block
+[given](appendix-a-index.html#given)      evals an expression into scalar context assignes it to `$_` for the following block
 
-[when](ap-a-index.html#when)        smartmatches an expression against `$_`; if the result
-                                    is True, the following block will be executed
+[when](appendix-a-index.html#when)        smartmatches an expression against `$_`; if the result
+                                          is True, the following block will be executed
 
-[default](ap-a-index.html#default)  following block will be executed, when no "when"
-                                    clause was executed
+[default](appendix-a-index.html#default)  following block will be executed, when no "when" clause was executed
 ----------------------------------  -----------------------------------------------------
 
 
@@ -929,21 +925,21 @@ Loops
 -----
 
 --------------------------------  -----------------------------------------------------------
-[loop](ap-a-index.html#loop)      general (endless) loop, unless used as an C-style-loop,
-                                  evals following expression into void context
+[loop](appendix-a-index.html#loop)      general (endless) loop, unless used as an C-style-loop,
+                                        evals following expression into void context
 
-[repeat](ap-a-index.html#repeat)  initial command for while or until loops that have their
-                                  condtion at the end
+[repeat](appendix-a-index.html#repeat)  initial command for while or until loops that have their
+                                        condtion at the end
 
-[while](ap-a-index.html#repeat)   loop with negative exit condition (exit when False),
-                                  condition, evals expression into boolean context
+[while](appendix-a-index.html#repeat)   loop with negative exit condition (exit when False),
+                                        condition, evals expression into boolean context
 
-[until](ap-a-index.html#until)    loop with positive exit condition(exit when True),
-                                  evals expression into boolean context
+[until](appendix-a-index.html#until)    loop with positive exit condition(exit when True),
+                                        evals expression into boolean context
 
-[for](ap-a-index.html#for )       evals expression into lazy list context and iterates over
-                                  that list from first to last value, sets each time `$_`
-                                  (can be combined with when as well),
+[for](appendix-a-index.html#for )       evals expression into lazy list context and iterates over
+                                        that list from first to last value, sets each time `$_`
+                                        (can be combined with when as well),
 --------------------------------  -----------------------------------------------------------
 
 
@@ -957,31 +953,31 @@ type \[name\] \[trait\] (signature) { block }
 
 ### Routine Types ###
 
-----------------------------------------  ----------------------------------------------------------------------
-[sub](ap-a-index.html#sub)                normal routine, named block with parmeters
-[method](ap-a-index.html#method)          inheritable object methods
-[submethod](ap-a-index.html#submethod)    not inheritable methods
-[regex](ap-a-index.html#regex)            routine that executes a regular expression
-[rule](ap-a-index.html#rule)              alias to regex :ratchet :sigspace
-[token](ap-a-index.html#token)            alias to regex :ratchet
-[macro](ap-a-index.html#macro)            routine that is compiled to an AST at BEGIN (ASAP, compile time)
-[quasi](ap-a-index.html#quasi)            block that is compiled to an AST at runtime
-----------------------------------------  ----------------------------------------------------------------------
+------------------------------------  ----------------------------------------------------------------------
+[sub](appendix-a-index.html#sub)                normal routine, named block with parmeters
+[method](appendix-a-index.html#method)          inheritable object methods
+[submethod](appendix-a-index.html#submethod)    not inheritable methods
+[regex](appendix-a-index.html#regex)            routine that executes a regular expression
+[rule](appendix-a-index.html#rule)              alias to regex :ratchet :sigspace
+[token](appendix-a-index.html#token)            alias to regex :ratchet
+[macro](appendix-a-index.html#macro)            routine that is compiled to an AST at BEGIN (ASAP, compile time)
+[quasi](appendix-a-index.html#quasi)            block that is compiled to an AST at runtime
+------------------------------------  ----------------------------------------------------------------------
 
 
 
 ### Routine Modifier ###
 
 -------------------------------------------------  ---------------------------------------------------
-[multi](ap-a-index.html#multi-routine-modifier)    marks routines, witch can have siblings with same
-                                                   name but different signature; when called, the
-                                                   one with matching sig is executed
+[multi](appendix-a-index.html#multi-routine-modifier)    marks routines, witch can have siblings with same
+                                                         name but different signature; when called, the
+                                                         one with matching sig is executed
 
-[only](ap-a-index.html#only-routine-modifier)      routines which dont' allow to have an multi
-                                                   sibling (is default, you may leave it out)
+[only](appendix-a-index.html#only-routine-modifier)      routines which dont' allow to have an multi
+                                                         sibling (is default, you may leave it out)
 
-[proto](ap-a-index.html#proto-routine-modifier)    fallback for multi, if no multi signature matches
-                                                   the caller, a proto with same name is executed
+[proto](appendix-a-index.html#proto-routine-modifier)    fallback for multi, if no multi signature matches
+                                                         the caller, a proto with same name is executed
 -------------------------------------------------  ---------------------------------------------------
 
 
@@ -990,53 +986,47 @@ type \[name\] \[trait\] (signature) { block }
 [phasers](#closure-traits) (closure traits) can also be seen as
 routine traits.
 
-----------------------------------------------------  --------------------------------------------------------------
-[export](ap-a-index.html#export-routine-trait)        this routine will be exported my the current module by
-                                                      default
+---------------------------------------------------  --------------------------------------------------------------
+[export](appendix-a-index.html#export-routine-trait)        this routine will be exported my the current module by default
 
-[will do](ap-a-index.html#will-do-routine-trait)      block of code executed when the subroutine is called.
-                                                      Normally declared implicitly, by providing a block after
-                                                      the subroutine's signature definition
+[will do](appendix-a-index.html#will-do-routine-trait)      block of code executed when the subroutine is called.
+                                                            Normally declared implicitly, by providing a block after
+                                                            the subroutine's signature definition
 
-[signature](ap-a-index.html#signature-routine-trait)  signature of a subroutine. Normally declared implicitly,
-                                                      by providing a parameter list and/or return type
+[signature](appendix-a-index.html#signature-routine-trait)  signature of a subroutine. Normally declared implicitly,
+                                                            by providing a parameter list and/or return type
 
-[as](ap-a-index.html#as-routine-trait)                inner type constraint that a routine imposes on its return
-                                                      value
+[as](appendix-a-index.html#as-routine-trait)                inner type constraint that a routine imposes on its return value
 
-[of](ap-a-index.html#of-routine-trait)                official return type of the routine
+[of](appendix-a-index.html#of-routine-trait)                official return type of the routine
 
-[cached](ap-a-index.html#cached-routine-trait)        marks a subroutine as being memoized
+[cached](appendix-a-index.html#cached-routine-trait)        marks a subroutine as being memoized
 
-[rw](ap-a-index.html#rw-routine-trait)                marks a subroutine as returning an lvalue
+[rw](appendix-a-index.html#rw-routine-trait)                marks a subroutine as returning an lvalue
 
-[parsed](ap-a-index.html#parsed-routine-trait)        macro is parsed once, is hygienic, only parsed can be used
+[parsed](appendix-a-index.html#parsed-routine-trait)        macro is parsed once, is hygienic, only parsed can be used
 
-[reparsed](ap-a-index.html#reparsed-routine-trait)    macro parsed twice, not hygienic, later parsed can be used
+[reparsed](appendix-a-index.html#reparsed-routine-trait)    macro parsed twice, not hygienic, later parsed can be used
 
-[tighter](ap-a-index.html#tighter-routine-trait)      specifies the precedence of an operator higher than an
-                                                      existing operator as seen here
+[tighter](appendix-a-index.html#tighter-routine-trait)      specifies the precedence of an operator higher than an existing operator as seen here
 
-[looser](ap-a-index.html#looser-routine-trait)        specifies the precedence of an operator lower than an
-                                                      existing operator as seen here
+[looser](appendix-a-index.html#looser-routine-trait)        specifies the precedence of an operator lower than an existing operator as seen here
 
-[equiv](ap-a-index.html#equiv-routine-trait)          specifies the precedence of an operator same as an existing
-                                                      operator as seen here
+[equiv](appendix-a-index.html#equiv-routine-trait)          specifies the precedence of an operator same as an existing operator as seen here
 
-[assoc](ap-a-index.html#assoc-routine-trait)          specifies the associativity of an operator explicitly as
-                                                      seen here
+[assoc](appendix-a-index.html#assoc-routine-trait)          specifies the associativity of an operator explicitly as seen here
 ----------------------------------------------------  --------------------------------------------------------------
 
 
 ### Parameter Traits ###
 
 -----------------------------------------------------  -----------------------------------------------------------------------------
-[as](ap-a-index.html#as-parameter-trait)               data coming through that parameter will be coerced to the type following as
-[readonly](ap-a-index.html#readonly-parameter-trait)   immutable parameter
-[rw](ap-a-index.html#rw-parameter-trait)               mutable parameter (rw stands for: read write)
-[copy](ap-a-index.html#copy-parameter-trait)           read-writable copy of the original argument ("pass-by-value")
-[dynamic](ap-a-index.html#dynamic-parameter-trait)     parameter is an "environmental" variable, a lexical in the dynamic scope
-[parcel](ap-a-index.html#parcel-parameter-trait)       raw reference, will not be contextualized
+[as](appendix-a-index.html#as-parameter-trait)               data coming through that parameter will be coerced to the type following as
+[readonly](appendix-a-index.html#readonly-parameter-trait)   immutable parameter
+[rw](appendix-a-index.html#rw-parameter-trait)               mutable parameter (rw stands for: read write)
+[copy](appendix-a-index.html#copy-parameter-trait)           read-writable copy of the original argument ("pass-by-value")
+[dynamic](appendix-a-index.html#dynamic-parameter-trait)     parameter is an "environmental" variable, a lexical in the dynamic scope
+[parcel](appendix-a-index.html#parcel-parameter-trait)       raw reference, will not be contextualized
 -----------------------------------------------------  -----------------------------------------------------------------------------
 
 
@@ -1045,28 +1035,27 @@ routine traits.
 
 In routine and block definitions can be also some character with special meaning
 
-------------------------------------------------------  -----------------------------------------------------------------------
-[`!`](ap-a-index.html#exclamation-mark-signature)       suffix of required parameter (default when named, not positional)
+---------------------------------------------------  -----------------------------------------------------------------------
+[`!`](appendix-a-index.html#exclamation-mark-signature)       suffix of required parameter (default when named, not positional)
 
-[`*`](ap-a-index.html#asterisk-signature)               prefix of slurpy arrays
+[`*`](appendix-a-index.html#asterisk-signature)               prefix of slurpy arrays
 
-`-->`                                                   [prefix of return type](ap-a-index.html#minus-minus-greater-signature)
-                                                        (couldn't link the arrow due wiki syntax)
+`-->`                                                        [prefix of return type](appendix-a-index.html#minus-minus-greater-signature)
+                                                             (couldn't link the arrow due wiki syntax)
 
-[`->`](ap-a-index.html#minus-greater-signature)         prefix of named readonly parameters for a block (pointy block syntax)
+[`->`](appendix-a-index.html#minus-greater-signature)         prefix of named readonly parameters for a block (pointy block syntax)
 
-[`:`](ap-a-index.html#colon-signature)                  prefix of named parameter, positional when without
+[`:`](appendix-a-index.html#colon-signature)                  prefix of named parameter, positional when without
 
-[`::`](ap-a-index.html#colon-colon-signature)           prefix of a variable type introduced in a signature
+[`::`](appendix-a-index.html#colon-colon-signature)           prefix of a variable type introduced in a signature
 
-[`<->`](ap-a-index.html#lower-minus-greater-signature)  prefix of named writeable parameters for a block (double pointy block
-                                                        syntax)
+[`<->`](appendix-a-index.html#lower-minus-greater-signature)  prefix of named writeable parameters for a block (double pointy block syntax)
 
-[`?`](ap-a-index.html#question-mark-signature)          suffix of optional parameter (default when positional, not named)
+[`?`](appendix-a-index.html#question-mark-signature)          suffix of optional parameter (default when positional, not named)
 
-[`^`](ap-a-index.html#caret-signature)                  prefix of metaclass methods, `$obj.^methods();` is shortcut for
-                                                        [`$obj.HOW.methods($obj);`](ap-b-lookup.html#object-introspection)
-------------------------------------------------------  -----------------------------------------------------------------------
+[`^`](appendix-a-index.html#caret-signature)                  prefix of metaclass methods, `$obj.^methods();` is shortcut for
+                                                              [`$obj.HOW.methods($obj);`](ap-b-lookup.html#object-introspection)
+---------------------------------------------------  -----------------------------------------------------------------------
 
 ### Callframe Methods ###
 
