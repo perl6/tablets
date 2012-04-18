@@ -189,38 +189,38 @@ var)](ap-b-lookup.html#match-variables)*
 holds positional submatches, **`$()[n]`** is alias to
 [**`$/[n]`**](#match-var) and [**`$n`**](#0-var)
 
-**\* ** *[(numeric
+**\*** *[(numeric
 op)](operators.html#numeric-context)*
 multiplies numbers, forces numeric context
 
-**\* ** *(term)* - synonym for
+**\*** *(term)* - synonym for
 **[Whatever](#whatever)**, for example, means `Inf`
 in a [range operator](#range-op) (**..**), means the
 end of an array in a slice operator so that negative indices access
 array elements relative to one beyond the final element
 
-**\* ** *[(signature
+**\*** *[(signature
 symbol)](ap-b-lookup.html#signature-symbols)*
 [prefix](#prefix-category) which indicates
 *slurpy* arrays in signatures
 
-**\* **
+**\***
 *[(twigil)](ap-b-lookup.html#twigils)*
 *[twigil](#twigil)* of global variables
 
-**\* ** *[(regex
+**\*** *[(regex
 metachar)](ap-b-lookup.html#quantifier)*
 quantifier for zero or more findings
 
-**\*\* ** *[(numeric
+**\*\*** *[(numeric
 op)](operators.html#numeric-context)*
 raises a number to a power, forces numeric context
 
-**\*\* ** *[(regex
+**\*\*** *[(regex
 metachar)](ap-b-lookup.html#quantifier)*
 not backtracking, greedy quantifier taking zero or more findings
 
-**\*\* **<span class="you-provide">n</span> *[(regex
+**\*\*** *<span class="you-provide">n</span> *[(regex
 metachar)](ap-b-lookup.html#quantifier)*
 quantifier for explicit repeat char or group, like
 **[x](#x)** *(string op)* does outside of a regex;
@@ -267,7 +267,7 @@ bitwise *OR* in numeric context
 **[,](variables.html#array)** (comma)
 [list](variables.html#array)-generating operator
 
-**- ** *[(numeric
+**-** *[(numeric
 op)](operators.html#numeric-context)*
 [infix](#infix-category) subtraction operator,
 forces numeric context (and negates)
@@ -285,7 +285,7 @@ declares the type of the return value of a
 *[routine](#routine)*, type name is placed after
 this arrow at the end of a signature
 
-**-\> ** *[(signature
+**-\>** *[(signature
 symbol)](ap-b-lookup.html#signature-symbols)*
 declares named parameters for a *[block](#block)* (pointy block)
 
