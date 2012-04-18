@@ -14,6 +14,8 @@ too easy, read [the specs](http://perlcabal.org/syn/).
 This documentation is currently transferred into that format,
 the data here is partial and subject to drastic changes.
 
+---
+
 **Contents:**
 
 [Preface and Introduction](introduction.html)
@@ -47,6 +49,8 @@ the data here is partial and subject to drastic changes.
 
 [Tablet 10: Metaprogramming](tablet-10-metaprogramming.html)
 (Macros, Selfmade Ops, DSL)
+
+---
 
 [Appendix A: Index](appendix-a-index.html)
 (all ops, builtins, methods, alphabetically ordered)
