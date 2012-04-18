@@ -43,11 +43,11 @@ Metaops)](tablet-4-operators.html)
 
 [Tablet 10: Metaprogramming (Macros, DSL)](tablet-10-metaprogramming.html)
 
-[Appendix A: Index (all ops, builtins, methods and it terms,
+[Appendix A: Index (all ops, builtins, methods, 
 alphabetically ordered)](appendix-a-index.html)
 
-[Appendix B: Look-up, short reference (cheat sheets ans summary
-tables)](appendix-b-grouped.html)
+[Appendix B: Short Reference (cheat sheets and summary tables, content like
+appendix A but grouped by topic)](appendix-b-grouped.html)
 
 [Appendix C: Cookbook (chunks of everyday Perl 5, translated into idiomatic
 Perl 6)](appendix-c-cookbook.html)
