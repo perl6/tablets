@@ -2,21 +2,22 @@
 
 > "We put the 'Regular' back into 'Expression'." — Larry Wall
 
-Like [quotes](basic-syntax.html#quoting), are Regular Expressions now
-a sublanguage, a language inside the language, instead of being just
+Similar to [quotes](basic-syntax.html#quoting), Regular Expressions are now
+a sublanguage, a language inside the language, instead of just being
 funny strings. They are parsed by a completely different set of rules,
 which are stored in the special variable \$\~Regex (\$\~Trans for
-transliterations and \$\~P5Regex for compatible Regexes). But these
-rules are made much more consistant with the main language than
+transliterations and \$\~P5Regex for compatible Regexes). However, these
+rules are much more consistant with the main language than
 before.
 
 Literal Character
 =================
 
-Every alphanumeric character has no special meaning and stand for the
-character visible. If a backslash (\\) is standing directly in front
-of the character it becomes a metacharacter. For not alphanumeric
-chars the opposite is true. Inside of
+Every alphanumeric character has no special meaning and matches the
+character itself. If a backslash (\\) is placed directly in front
+of the character it becomes a metacharacter. For non-alphanumeric
+chars the opposite is true. That is, a backslashed character always
+has a special meaning or is invalid. Inside of
 [quotes](basic-syntax.html#quoting) every char is literal.
 
 

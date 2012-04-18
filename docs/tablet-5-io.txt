@@ -11,9 +11,9 @@ environment together in new ways.
 Terminal
 ========
 
-The terminal, command line or shell is the primary communication
+The terminal, aka command line or shell, is the primary communication
 device for a script with its user. Most tutorials begin with writing
-some message to that black window.
+to the terminal.
 
 
 
@@ -26,12 +26,12 @@ say
 Writes text to the standard output (`$*OUT`, called `STDOUT` in Perl
 5). This example just prints a [string
 literal](basic-syntax.html#quoting), but any type of value is
-allowed. **say** adds a line ending, according to the operating system
-convention. So every time you "say" something, it will start on a
-fresh line.
+allowed. **say** appends a line ending, according to the operating system
+convention. So every time you "say" something, it will later output will
+start on a fresh line.
 
 You can also give `say` a list of values. Each item will be taken as
-an expression, that has to evaluated. The results will be combined,
+an expression to print. The results will be combined,
 just like with [**~**](operators.html#string-context), and finally the
 line ending will be added.
 
@@ -39,8 +39,8 @@ line ending will be added.
         which is ', compute_distance($earth, $our_home_planet),
         ' parsecs away.';
 
-That could also be written, using [double-quoted
-strings](basic-syntax.html#double-quotes), like:
+That could also be written using [double-quoted
+strings](basic-syntax.html#double-quotes):
 
     say "Dear Earthlings, we come from $our_home_planet, which is { compute_distance($earth, $our_home_planet) } parsecs away.";
 
