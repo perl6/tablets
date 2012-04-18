@@ -1,7 +1,8 @@
-% Perl 6 Tablets: Chp. 2 - Basics
+% Perl 6 Tablet 2 - Basic Syntax
 
 > "1st law of language redesign: Everyone wants the colon for their
-> particular syntax.  2nd law of language redesign: Larry gets the
+> particular syntax.
+> 2nd law of language redesign: Larry gets the
 > colon for whatever he wants."
 
 Basics doesn't mean here not always easy but fundamental.

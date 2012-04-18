@@ -1,4 +1,4 @@
-% Perl 6 Tablets: Chp. 10 - Metaprogramming
+% Perl 6 Tablet 10 - Metaprogramming
 
 Macros
 ======

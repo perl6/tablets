@@ -1,4 +1,4 @@
-% Perl 6 Tablets: Chp. 8 - Objects
+% Perl 6 Tablet 8 - Objects
 
 > "In order to understand how object orientation works in Perl, we
 > first need to agree what object orientation actually is. And that's

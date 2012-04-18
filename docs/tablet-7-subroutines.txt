@@ -1,4 +1,4 @@
-% Perl 6 Tablets: Chp. 7 - Subroutines
+% Perl 6 Tablet 7 - Subroutines
 
 xxx
 

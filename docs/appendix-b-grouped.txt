@@ -1,4 +1,4 @@
-% Perl 6 Tablets: Appendix B - Lookup
+% Perl 6 Tablets Appendix B - Grouping
 
 
 Variables

@@ -1,4 +1,4 @@
-% Perl 6 Tablets: Chp. 3 - Variables
+% Perl 6 Tablet 3 - Variables
 
 > "The most basic building blocks of a programming language are its
 > nouns, the chunks of data that get sucked in, pushed around, altered

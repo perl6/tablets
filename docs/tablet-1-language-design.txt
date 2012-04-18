@@ -1,4 +1,4 @@
-% Perl 6 Tablets: Chp. 1 - Language Design
+% Perl 6 Tablet 1 - Language Design
 
 > "You should not take this picture to mean that linguistics is the
 > opposite of common sense. But there are many computer scientists who

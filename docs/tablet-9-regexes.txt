@@ -1,4 +1,4 @@
-% Perl 6 Tablets: Chp. 9 - Regexes
+% Perl 6 Tablet 9 - Regexes
 
 > "We put the 'Regular' back into 'Expression'." — Larry Wall
 

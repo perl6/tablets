@@ -1,4 +1,4 @@
-% Perl 6 Tablets: Chp. 5 - IO
+% Perl 6 Tablet 5 - IO
 
 > "Inside a shell might be a Perl." -- Herbert Breunung
 
