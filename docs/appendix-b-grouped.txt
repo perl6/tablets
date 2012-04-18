@@ -11,13 +11,13 @@ All variables in Perl begin with a sigil. They mark the 3 primary var
 types. The 4th sigil is for callables (routines) and the 5th is for
 layers (namespaces) that organize the previous 4.
 
-------------------------------------------  --------------------------------------------------------------------------------------------------------
+------------------------------------------------  --------------------------------------------------------------------------------------------------------
 [`$`](appendix-a-index.html#dollar-sigil)         scalar, single value, can be of any data type
 [`@`](appendix-a-index.html#at-sigil)             ordered array, indexed list of scalar
 [`%`](appendix-a-index.html#percent-sigil)        unordered hash (associative array), 2 column table with unique IDs (keys) and associated values (value)
 [`&`](appendix-a-index.html#ampersand-sigil)      code/rule/token/regex
 [`::`](appendix-a-index.html#colon-colon-sigil)   abstraction: package/module/class/role/subset/enum/type/grammar
-------------------------------------------  --------------------------------------------------------------------------------------------------------
+------------------------------------------------  --------------------------------------------------------------------------------------------------------
 
 The first 4 can also be used as prefix operators, called
 contextualizers, that force different contexts, but there are much
@@ -28,8 +28,8 @@ Twigils
 
 Twigil is short for secondary sigil. They follow after a primary sigil and mark special namespaces or variables with special meanings and properties.
 
----------------------------------------------------  ------------------------------------------------------------
-`$foo`                                               ordinary scoping (no twigil)
+---------------------------------------------------------  ------------------------------------------------------------
+`$foo`                                                     ordinary scoping (no twigil)
 [`$.foo`](appendix-a-index.html#dot-twigil)                object attribute public accessor
 [`$!foo`](appendix-a-index.html#exclamation-mark-twigil)   object attribute private storage
 [`$^foo`](appendix-a-index.html#caret-twigil)              self-declared formal positional parameter
@@ -39,34 +39,34 @@ Twigil is short for secondary sigil. They follow after a primary sigil and mark 
 [`$=foo`](appendix-a-index.html#equal-sign-twigil)         pod variable
 [`$<foo>`](appendix-a-index.html#angle-brackets-twigil)    match variable, short for `$/<foo>` or even `$/{'foo'}`
 [`$~foo`](appendix-a-index.html#tilde-twigil)              the foo sublanguage seen by the parser at this lexical spot
----------------------------------------------------  ------------------------------------------------------------
+---------------------------------------------------------  ------------------------------------------------------------
 
 
 
 Special Variables
 -----------------
 
----------------------------------------------  ------------------------
-[`$_`](appendix-a-index.html#context-var)            context variable
-[`$!`](appendix-a-index.html#exclamation-mark-var)   error msg
----------------------------------------------  ------------------------
+--------------------------------------------------  ------------------------
+[`$_`](appendix-a-index.html#context-var)           context variable
+[`$!`](appendix-a-index.html#exclamation-mark-var)  error msg
+--------------------------------------------------  ------------------------
 
 
 ### Match Variables ###
 
------------------------------------------------  -----------------------------------------------------------------------
+-----------------------------------------------------  -----------------------------------------------------------------------
 [`$/`](appendix-a-index.html#slash-var)                last created match object of this block
 [`$<...>`](appendix-a-index.html#angle-brackets-var)   alias to named capture, see Twigils above
 [`$0 .. $9`](appendix-a-index.html#0-var)              alias to positional capture (most like in P5 - `$1 .. $9`)
 [`@()`](appendix-a-index.html#round-brackets-var)      array that holds $0 .. $9 and rest and positional submatches
------------------------------------------------  -----------------------------------------------------------------------
+-----------------------------------------------------  -----------------------------------------------------------------------
 
 ### Global Variables ###
 
 context variable, default global (run time), any of them are now
 objects with several methods
 
-------------------------------------------------------------------  ---------------------------------------------------------------------
+------------------------------------------------------------------------  -------------------------------------------------------------------
 [`@*ARGS`](appendix-a-index.html#args-global-var)                         Arguments (Parameter) to a program (script), formerly @ARGV
 [`$*ARGFILES`](appendix-a-index.html#argfiles-global-var)                 magic command-line input handle
 [`$*IN`](appendix-a-index.html#in-global-var)                             standard input handle (command line mostly)
@@ -87,22 +87,22 @@ objects with several methods
 [`$*UID`](appendix-a-index.html#uid-global-var)                           real user ID of the running process owner (user), formerly @\<
 [`$*EGID`](appendix-a-index.html#egid-global-var)                         effective global ID, formerly @)
 [`$*EUID`](appendix-a-index.html#euid-global-var)                         effective user ID, formerly @\>
-$*ON_DIE                                                            exception handler, run befor die, formerly `$SIG{__DIE__}`
-$*ON_WARN                                                           exception handler, run befor warn, formerly `$SIG{__WARN__}`
-$*COMPILING                                                         &nbsp;
-$*EMERGENCY_MEMORY                                                  formerly `$^M`
-$*DEBUGGING                                                         &nbsp;
-------------------------------------------------------------------  ---------------------------------------------------------------------
+$*ON_DIE                                                                  exception handler, run befor die, formerly `$SIG{__DIE__}`
+$*ON_WARN                                                                 exception handler, run befor warn, formerly `$SIG{__WARN__}`
+$*COMPILING                                                               &nbsp;
+$*EMERGENCY_MEMORY                                                        formerly `$^M`
+$*DEBUGGING                                                               &nbsp;
+------------------------------------------------------------------------  -------------------------------------------------------------------
 
 ### Compiler Hint Variables ###
 
 compiler constants (fixed at compile time)
 
-----------------------------------------------------------  -----------------------------------------------------------------------
+----------------------------------------------------------------  ------------------------------------------------------------------
 [`$?KERNEL`](appendix-a-index.html#kernel-compiler-var)           for which operating System was this program compiled?
 [`$?DISTRO`](appendix-a-index.html#distro-compiler-var)           Which OS distribution am I compiling under?
 [`$?VM`](appendix-a-index.html#vm-compiler-var)                   Which virtual machine am I compiling under
-`$?XVM`                                                     Which virtual machine am I cross-compiling for
+`$?XVM`                                                           Which virtual machine am I cross-compiling for
 [`$?PERL`](appendix-a-index.html#perl-compiler-var)               Which Perl am I compiled for?
 [`%?LANG`](appendix-a-index.html#lang-compiler-var)               Hash of Grammar # What is the current set of interwoven languages?
 [`$?GRAMMAR`](appendix-a-index.html#grammar-compiler-var)         current grammar
@@ -116,35 +116,35 @@ compiler constants (fixed at compile time)
 [`&?ROUTINE`](appendix-a-index.html#routine-compiler-var)         current sub or method
 [`&?BLOCK`](appendix-a-index.html#block-compiler-var)             reference to current block
 [`$?LINE`](appendix-a-index.html#line-compiler-var)               current line number
-----------------------------------------------------------  -----------------------------------------------------------------------
+----------------------------------------------------------------  ------------------------------------------------------------------
 
 ### POD Variables ###
 
 File-scoped [POD](basic-syntax.html#pod) data
 
------------------------------------------------  --------------------------------------------------
+-----------------------------------------------------  ----------------------------------------
 [`$=pod`](appendix-a-index.html#pod-pod-var)           surrounding POD object
 [`$=data`](appendix-a-index.html#data-pod-var)         data block handle (=begin DATA ... =end)
 [`@=COMMENT`](appendix-a-index.html#comment-pod-var)   All the comment blocks in the file
------------------------------------------------  --------------------------------------------------
+-----------------------------------------------------  ----------------------------------------
 
 ### Slang Variables ###
 
 sublanguage seen by the parser at this lexical spot
 
--------------------------------------------------  ------------------------------------------------------
+-------------------------------------------------------  ------------------------------------------------
 [`$~MAIN`](appendix-a-index.html#main-lang-var)          the current main language (e.g. Perl statements)
 [`$~Quote`](appendix-a-index.html#q-lang-var)            the current root of quoting language
 [`$~Quasi`](appendix-a-index.html#quasi-lang-var)        the current root of quasiquoting language
 [`$~Regex`](appendix-a-index.html#regex-lang-var)        the current root of regex language
 [`$~Trans`](appendix-a-index.html#trans-lang-var)        the current root of transliteration language
 [`$~P5Regex`](appendix-a-index.html#p5regex-lang-var)    the current root of the Perl regex language
--------------------------------------------------  ------------------------------------------------------
+-------------------------------------------------------  ------------------------------------------------
 
 Scope Declarator
 ----------------
 
------------------------------------------  -----------------------------------------------------
+-----------------------------------------------  --------------------------------------------------
 [`my`](appendix-a-index.html#my)                 introduces lexically scoped names
 [`state`](appendix-a-index.html#state)           introduces lexically scoped but persistent names
 [`our`](appendix-a-index.html#our)               introduces package-scoped names
@@ -152,7 +152,7 @@ Scope Declarator
 [`has`](appendix-a-index.html#has)               introduces object attribute names
 [`augment`](appendix-a-index.html#augment)       adds definitions to an existing name
 [`supersede`](appendix-a-index.html#supersede)   replaces definitions of an existing name
------------------------------------------  -----------------------------------------------------
+-----------------------------------------------  --------------------------------------------------
 
 
 Scopes
@@ -161,7 +161,7 @@ Scopes
 The following pseudo-package names are reserved at the front of a
 name:
 
-------------  -------------------------------------------------------
+------------  ------------------------------------------------------
 MY            Symbols in the current lexical scope (aka $?SCOPE)
 OUR           Symbols in the current package (aka $?PACKAGE)
 CORE          Outermost lexical scope, definition of standard Perl
@@ -169,18 +169,18 @@ GLOBAL        Interpreter-wide package symbols, really CORE::GLOBAL
 PROCESS       Process-related globals (superglobals), CORE::PROCESS
 COMPILING     Lexical symbols in the scope being compiled
 DYNAMIC       Contextual symbols in my or any caller's lexical scope
-------------  -------------------------------------------------------
+------------  ------------------------------------------------------
 
 The following relative names are also reserved but may be used
 anywhere in a name:
 
-----------  ---------------------------------------------------------------
+----------  -----------------------------------------------------------
 CALLER      Contextual symbols in the immediate caller's lexical scope
 OUTER       Symbols in the next outer lexical scope
 UNIT        Symbols in the outermost lexical scope of compilation unit
 SETTING     Lexical symbols in the unit's DSL (usually CORE)
 PARENT      Symbols in this package's parent package (or lexical scope)
-----------  ---------------------------------------------------------------
+----------  -----------------------------------------------------------
 
 The following is reserved at the beginning of method names in method
 calls:
@@ -201,7 +201,7 @@ different section.
 
 ### Undefined types ###
 
----------  ------------------------------------------------------------------
+---------  -----------------------------------------------------------------
 Mu         Most Undefined
 Failure    Failure (lazy exceptions, thrown if not handled properly)
 Any        Perl 6 object (default routine parameter type, excludes junction)
@@ -209,13 +209,13 @@ Cool       Perl 6 Convenient OO Loopbacks
 Whatever   Wildcard (like Any, but subject to do-what-I-mean via MMD)
 Int        Any Int object
 Widget     Any Widget object
----------  ------------------------------------------------------------------
+---------  -----------------------------------------------------------------
 
 
 
 ### Immutable types ###
 
---------------  ---------------------------------------------------------------
+--------------  ------------------------------------------------------------
 Str             Perl string (finite sequence of Unicode characters)
 Bit             Perl single bit (allows traits, aliasing, undef, etc.)
 Int             Perl integer (allows Inf/NaN, arbitrary precision, etc.)
@@ -242,13 +242,13 @@ Blob            An undifferentiated mass of bits
 Instant         A point on the continuous atomic timeline
 Duration        The difference between two Instants
 HardRoutine     A routine that is committed to not changing
---------------  ---------------------------------------------------------------
+--------------  ------------------------------------------------------------
 
 
 
 ### Mutable types ###
 
---------------  ----------------------------------------------------------
+--------------  ---------------------------------------------------------
 Iterator        Perl list
 SeqIter         Iterator over a Seq
 RangeIter       Iterator over a Range
@@ -270,7 +270,7 @@ Regex           Perl pattern
 Match           Perl match, usually produced by applying a pattern
 Stash           A symbol table hash (package, module, class, lexpad, etc)
 SoftRoutine     A routine that is committed to staying mutable
---------------  ----------------------------------------------------------
+--------------  ---------------------------------------------------------
 
 
 
@@ -303,7 +303,7 @@ num64       (aka num on most architectures)
 num128      &nbsp;
 complex16   &nbsp;
 complex32   &nbsp;
-complex64   (aka complex on most architectures)\
+complex64   (aka complex on most architectures)
 complex128  &nbsp;
 rat8        &nbsp;
 rat16       &nbsp;
@@ -855,29 +855,29 @@ only for loops) that are started at certain times. They are traits
 (compile time property) of a block object. Those marked with a * can
 also be used within an expression as in "BEGIN my $x = 3 * 3;".
 
-------------------------------------------------  ---------------------------------------------------------------------
+------------------------------------------------------  ---------------------------------------------------------------------
 [BEGIN](appendix-a-index.html#begin-phaser) {...}*      at compile time, ASAP, only ever runs once
 [CHECK](appendix-a-index.html#check-phaser) {...}*      at compile time, ALAP, only ever runs once
-&nbsp;                                            &nbsp;
+&nbsp;                                                  &nbsp;
 [INIT](appendix-a-index.html#init-phaser) {...}*        at run time, ASAP, only ever runs once
 [END](appendix-a-index.html#end-phaser) {...}           at run time, ALAP, only ever runs once
-&nbsp;                                            &nbsp;
+&nbsp;                                                  &nbsp;
 [START](appendix-a-index.html#start-phaser) {...}*      on first ever execution, once per closure clone
 [ENTER](appendix-a-index.html#enter-phaser) {...}*      at every block entry time, repeats on loop blocks.
 [LEAVE](appendix-a-index.html#leave-phaser) {...}       at every block exit time
 [KEEP](appendix-a-index.html#keep-phaser) {...}         at every successful block exit, part of LEAVE queue
 [UNDO](appendix-a-index.html#undo-phaser) {...}         at every unsuccessful block exit, part of LEAVE queue
-&nbsp;                                            &nbsp;
+&nbsp;                                                  &nbsp;
 [FIRST](appendix-a-index.html#first-phaser) {...}*      at loop initialization time, before any ENTER
 [NEXT](appendix-a-index.html#next-phaser) {...}         at loop continuation time, before any LEAVE
 [LAST](appendix-a-index.html#last-phaser) {...}         at loop termination time, after any LEAVE
-&nbsp;                                            &nbsp;
+&nbsp;                                                  &nbsp;
 [PRE](appendix-a-index.html#pre-phaser) {...}           assert precondition at every block entry, before ENTER
 [POST](appendix-a-index.html#post-phaser) {...}         assert postcondition at every block exit, after LEAVE
-&nbsp;                                            &nbsp;
+&nbsp;                                                  &nbsp;
 [CATCH](appendix-a-index.html#catch-phaser) {...}       catch exceptions, before LEAVE
 [CONTROL](appendix-a-index.html#control-phaser) {...}   catch control exceptions (like next/last/return etc), before LEAVE
-------------------------------------------------  ---------------------------------------------------------------------
+------------------------------------------------------  ---------------------------------------------------------------------
 
 
 
@@ -885,7 +885,7 @@ Jump Commands
 -------------
 
 
----------------------------------  ------------------------------------------
+---------------------------------------  --------------------------------------
 [goto](appendix-a-index.html#goto)       jump to a named label
 [redo](appendix-a-index.html#redo)       repeat this loop turn
 [next](appendix-a-index.html#next)       skip to the next loop turn
@@ -893,14 +893,14 @@ Jump Commands
 [break](appendix-a-index.html#break)     leave this when clause
 [leave](appendix-a-index.html#leave)     leave this block with a return value
 [return](appendix-a-index.html#return)   leave this routine with a return value
----------------------------------  ------------------------------------------
+---------------------------------------  --------------------------------------
 
 
 
 Conditionals
 ------------
 
-----------------------------------  -----------------------------------------------------
+----------------------------------------  -----------------------------------------------------------------------------------
 [if](appendix-a-index.html#if)            when following expression evals in boolean context to True,
                                           the block that following after that will be executed
 
@@ -918,13 +918,13 @@ Conditionals
                                           is True, the following block will be executed
 
 [default](appendix-a-index.html#default)  following block will be executed, when no "when" clause was executed
-----------------------------------  -----------------------------------------------------
+----------------------------------------  -----------------------------------------------------------------------------------
 
 
 Loops
 -----
 
---------------------------------  -----------------------------------------------------------
+--------------------------------------  -----------------------------------------------------------
 [loop](appendix-a-index.html#loop)      general (endless) loop, unless used as an C-style-loop,
                                         evals following expression into void context
 
@@ -940,7 +940,7 @@ Loops
 [for](appendix-a-index.html#for )       evals expression into lazy list context and iterates over
                                         that list from first to last value, sets each time `$_`
                                         (can be combined with when as well),
---------------------------------  -----------------------------------------------------------
+--------------------------------------  -----------------------------------------------------------
 
 
 
@@ -953,7 +953,7 @@ type \[name\] \[trait\] (signature) { block }
 
 ### Routine Types ###
 
-------------------------------------  ----------------------------------------------------------------------
+----------------------------------------------  ----------------------------------------------------------------
 [sub](appendix-a-index.html#sub)                normal routine, named block with parmeters
 [method](appendix-a-index.html#method)          inheritable object methods
 [submethod](appendix-a-index.html#submethod)    not inheritable methods
@@ -962,13 +962,13 @@ type \[name\] \[trait\] (signature) { block }
 [token](appendix-a-index.html#token)            alias to regex :ratchet
 [macro](appendix-a-index.html#macro)            routine that is compiled to an AST at BEGIN (ASAP, compile time)
 [quasi](appendix-a-index.html#quasi)            block that is compiled to an AST at runtime
-------------------------------------  ----------------------------------------------------------------------
+----------------------------------------------  ----------------------------------------------------------------
 
 
 
 ### Routine Modifier ###
 
--------------------------------------------------  ---------------------------------------------------
+-------------------------------------------------------  ---------------------------------------------------
 [multi](appendix-a-index.html#multi-routine-modifier)    marks routines, witch can have siblings with same
                                                          name but different signature; when called, the
                                                          one with matching sig is executed
@@ -978,7 +978,7 @@ type \[name\] \[trait\] (signature) { block }
 
 [proto](appendix-a-index.html#proto-routine-modifier)    fallback for multi, if no multi signature matches
                                                          the caller, a proto with same name is executed
--------------------------------------------------  ---------------------------------------------------
+-------------------------------------------------------  ---------------------------------------------------
 
 
 ### Routine Traits ###
@@ -986,7 +986,7 @@ type \[name\] \[trait\] (signature) { block }
 [phasers](#closure-traits) (closure traits) can also be seen as
 routine traits.
 
----------------------------------------------------  --------------------------------------------------------------
+----------------------------------------------------------  -----------------------------------------------------------------------------------
 [export](appendix-a-index.html#export-routine-trait)        this routine will be exported my the current module by default
 
 [will do](appendix-a-index.html#will-do-routine-trait)      block of code executed when the subroutine is called.
@@ -1015,19 +1015,19 @@ routine traits.
 [equiv](appendix-a-index.html#equiv-routine-trait)          specifies the precedence of an operator same as an existing operator as seen here
 
 [assoc](appendix-a-index.html#assoc-routine-trait)          specifies the associativity of an operator explicitly as seen here
-----------------------------------------------------  --------------------------------------------------------------
+----------------------------------------------------------  -----------------------------------------------------------------------------------
 
 
 ### Parameter Traits ###
 
------------------------------------------------------  -----------------------------------------------------------------------------
+-----------------------------------------------------------  -----------------------------------------------------------------------------
 [as](appendix-a-index.html#as-parameter-trait)               data coming through that parameter will be coerced to the type following as
 [readonly](appendix-a-index.html#readonly-parameter-trait)   immutable parameter
 [rw](appendix-a-index.html#rw-parameter-trait)               mutable parameter (rw stands for: read write)
 [copy](appendix-a-index.html#copy-parameter-trait)           read-writable copy of the original argument ("pass-by-value")
 [dynamic](appendix-a-index.html#dynamic-parameter-trait)     parameter is an "environmental" variable, a lexical in the dynamic scope
 [parcel](appendix-a-index.html#parcel-parameter-trait)       raw reference, will not be contextualized
------------------------------------------------------  -----------------------------------------------------------------------------
+-----------------------------------------------------------  -----------------------------------------------------------------------------
 
 
 
@@ -1035,13 +1035,13 @@ routine traits.
 
 In routine and block definitions can be also some character with special meaning
 
----------------------------------------------------  -----------------------------------------------------------------------
+------------------------------------------------------------  -----------------------------------------------------------------------
 [`!`](appendix-a-index.html#exclamation-mark-signature)       suffix of required parameter (default when named, not positional)
 
 [`*`](appendix-a-index.html#asterisk-signature)               prefix of slurpy arrays
 
-`-->`                                                        [prefix of return type](appendix-a-index.html#minus-minus-greater-signature)
-                                                             (couldn't link the arrow due wiki syntax)
+`-->`                                                         [prefix of return type](appendix-a-index.html#minus-minus-greater-signature)
+                                                              (couldn't link the arrow due wiki syntax)
 
 [`->`](appendix-a-index.html#minus-greater-signature)         prefix of named readonly parameters for a block (pointy block syntax)
 
@@ -1055,7 +1055,7 @@ In routine and block definitions can be also some character with special meaning
 
 [`^`](appendix-a-index.html#caret-signature)                  prefix of metaclass methods, `$obj.^methods();` is shortcut for
                                                               [`$obj.HOW.methods($obj);`](ap-b-lookup.html#object-introspection)
----------------------------------------------------  -----------------------------------------------------------------------
+------------------------------------------------------------  -----------------------------------------------------------------------
 
 ### Callframe Methods ###
 
