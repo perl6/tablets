@@ -13,7 +13,7 @@
 *ASAP* - as soon as possible, within a given execution phase
 (compile time or run time)
 
-
+(#AST)
 *AST* - (abstract syntax tree), tree like data structure, in which
 source code is transformed, before running the programm
 
@@ -25,19 +25,85 @@ this last operation might not be counted (undone) and the pointer
 for the position in the string where actual matching is taking place
 is going a few steps to the left (it goes back)
 
+*[binding](tablet-3-variables#binding)*
+making two variables share the same content by pointing to same
+memory location
+
+(#block)
+*block* - syntactically just a piece of code inside curly brackets
+(**{}**), when [evaluated](#evaluation) it becomes an
+object of the type **[Block](appendix-a-index.html#block-type)**
+
 # C
+
+*capture* -
+
+*closure* -
+routines whose state (content of all local variables) is
+completely preserved until the next execution
+
+*coderef* -
+reference (pointer) to an executable block of code (routine)
+
+*compilation* -
+reading the human written source code and make it an
+executable (piece of) program
+
+*compile time* -
+time when Perl converts source code to executable form (bytecode),
+is always before *[runtime](appendix-a-index.html#runtime)*
+even if code can be compiled via **[eval](appendix-a-index.html#eval)** and
+**[evalfile](appendix-a-index.html#evalfile)** when the program is
+already runnung, to run code at the begin of compile time use
+**[BEGIN](appendix-a-index.html#begin-phaser)** and
+**[CHECK](appendix-a-index.html#check-phaser)** to run at the end of
+compile time for that unit (mostly the file or the to be **eval**ed string)
+
+*context* -
+when executing a function or operator Perl considers the
+expression from which the call was to return a
+[scalar](#scalar-type) or other kind of result
+
+*context variable* -
+name for **[$\_](appendix-a-index.html#context-var)**,
+which is used by built in Perl functions as an implicit
+parameter and as memory of the last result
+
+*currying* -
+creating a *[subroutine](routine)* that calls another with certain
+*[parameter](#parameter)* to be predefined
+
 
 # D
 
+*declarative programming* - programming paradigm that expresses the
+logic of a computation without describing its control flow
+
+*design by contract* - programming style in which parameters and
+return values from routines must meet conditions; A signature is
+considered contract in Perl 6
+
+
 # E
 
+*evaluation* - executing a piece of program, before that all
+variables will be replaced with their content
+
 # F
+
+*functional programming* - exclusively function based programming
+style, [strongly
+supported](ap-d-p5-p6-delta.html#functional-programming)
+by Perl 6, considered as a branch of Declarative Programming
+
 
 # G
 
 # H
 
 # I
+
+*iteration* - flow control, repeatedly executing a block
 
 # J
 
@@ -48,26 +114,113 @@ several values, example: (A and B) or C
 
 # L
 
+*list context* -
+
+*longest token matching* - (short *LTM*) when searching a pattern
+with alternatives (sub|substr) the search will continue after
+finding the pattern 'sub' because of looking for the longest
+alternative
+
 # M
+
+*[metaoperator](appendix-b-grouped.html#metaoperators)* - 
+alters the meaning of other operators
+
+*metaprogramming* -
 
 # N
 
 # O
 
+*object oriented orogramming* - programming paradigm (style), that
+arranges data and functions that belong together into so called
+objects
+
+
 # P
+
+*parameter* - value passed to a method or *[subroutine](routine)*,
+mostly as part of the signature
+
+*parsetree* - hierarchical data representing the logical structure
+of a program, also called *[AST](#ast)*
 
 [phaser](appendix-b-grouped.html#closure-traits) -
 Perl 6 term for specially named subblocks withe special runtimes
 aka closure traits - example:
 **[BEGIN](appendix-a-index.html#begin-phaser)**
 
+*pipe* - connection between 2 processes, move data (mostly only in
+one direction) without buffering
+
+*[POD](tablet-2-basic-syntax.html#pod)*
+Plain Old Documentation, a markup language to be embeded into
+Perl source code, has in Perl 6 ability to store data to be
+retrieved later
+
+*pointy block* - a block that is given readonly *[parameters](parameter)* with
+**[-\>](appendix-a-index.html#arrow-op)** or rw parameters with
+**[<-\>](appendix-a-index.html#lower-minus-greater-op)**
+
+*property* - metadata of a variable set at runtime
+
 # Q
 
 # R
 
+*reference* -
+address of data in memory, often termed a capture in Perl 6
+
+*regular expression* - in Perl5: pattern matching notation, either
+regex, token or rule in Perl6
+
+*routine* -
+block of code callable by name,
+can have a *[signature](#signature)* and a return type,
+objects of the type **[SoftRoutine](appendix-a-index.html#softroutine-type)**
+and **[HardRoutine](appendix-a-index.html#hardroutine-type)**
+
+*runtime* - time when execution hits a certain part of the program,
+after *[compile time](#compile-time)*
+
+
 # S
 
+*scope* - the block of code within which an identifier is usable
+
+*sigil* - character that serves as a prefix to categorize the
+following name, most prominent in Perl are the variable
+[sigils](appendix-b-grouped.html#sigils)
+: **[$](appendix-a-index.html#dollar-sigil)**,
+**[@](appendix-a-index.html#at-sigil)** and
+**[%](appendix-a-index.html#percent-sigil)**
+
+*signature* - function parameters (left-hand side of a binding),
+surrounded by round parentheses
+
+*slice* - part of an array or list
+
+*slurpy array* -
+array parameter that receives all (slurps) all optional
+*[subroutine](routine)* arguments
+
+
 # T
+
+*topicalizer* -
+every keyword that sets the **[$\_](appendix-a-index.html#context-var)**
+variable, like *[given](appendix-a-index.html#given)*
+and *[for](appendix-a-index.html#for)*
+
+*trait* -
+additional property of a variable, defined at compile time,
+see **[but](appendix-a-index.html#but)**, what other languages call
+*trait* Perl calls [role](#role)
+
+*[twigil](appendix-b-grouped.html#twigils)*
+second(ary) *[sigil](#sigil)* indicating a
+special property of a variable
+
 
 # U
 
@@ -79,13 +232,12 @@ aka closure traits - example:
 
 # Y
 
-*[yadda
-operator](operators.html#yadda)*
+*[yadda operator](operators.html#yadda)* -
 placeholder for later to be written code, because in empty
 routines are forbidden, comes in 3 flavours:
-**[...](#triple-dot-yadda-op)**,
-**[???](#triple-question-mark)** and
-**[!!!](#triple-exclamation-mark)**
+**[...](appendix-a-index.html#triple-dot-yadda-op)**,
+**[???](appendix-a-index.html#triple-question-mark)** and
+**[!!!](appendix-a-index.html#triple-exclamation-mark)**
 
 
 # Z

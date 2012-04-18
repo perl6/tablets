@@ -208,10 +208,11 @@ The simplest way to create a list is by repeating some values:
     'munch' xx 3 # results in 'munch', 'munch', 'munch'
     ('hallo', 'echo') xx 2 --> 'hallo', 'echo', 'hallo', 'echo'
 
+### Range Operator ###
+
 In list context the range operator produces lists:
 
     @ 2 .. 7 --> 2,3,4,5,6,7
-
 
 
 ### Sequence Operator ###
