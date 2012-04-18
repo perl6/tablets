@@ -9,48 +9,55 @@ lightweight introduction, try [my Perl 6 Tutorial](#) or the Book
 [Learning Perl 6](http://www.learningperl6.com/Chapters/). If that is
 too easy, read [the specs](http://perlcabal.org/syn/).
 
+**DISCLAIMER:**
+
+This documentation is currently transferred into that format,
+the data here is partial and subject to drastic changes.
+
 **Contents:**
 
 [Preface and Introduction](introduction.html)
 
-[Tablet 0: History](history.html)
+[Tablet 0: History](tablet-0-history.html)
 
-[Tablet 1: Language Design](language-design.html)
+[Tablet 1: Language Design](tablet-1-language-design.html)
 
 [Tablet 2: Basic Syntax (Spaces, Comments, Literals, Quoting,
-Formatting)](basic-syntax.html)
+Formatting)](tablet-2-basic-syntax.html)
 
 [Tablet 3: Variables (Sigils, Twigils, Assignment, Typing,
-Scopes)](variables.html)
+Scopes)](tablet-3-variables.html)
 
 [Tablet 4: Operators (Comparison, Math, String, Logic,
-Metaops)](operators.html)
+Metaops)](tablet-4-operators.html)
 
-[Tablet 5: IO (Command Line, Files, Sockets, Network, Misc.)](io.html)
+[Tablet 5: IO (Command Line, Files, Sockets, Network, Misc.)](tablet-5-io.html)
 
-[Tablet 6: Blocks (Conditions, Loops)](blocks.html)
+[Tablet 6: Blocks (Conditions, Loops)](tablet-6-blocks.html)
 
-[Tablet 7: Subroutines (Signatures, Modules)](subroutines.html)
+[Tablet 7: Subroutines (Signatures, Modules)](tablet-7-subroutines.html)
 
-[Tablet 8: Objects (Classes, Roles)](objects.html)
+[Tablet 8: Objects (Classes, Roles)](tablet-8-objects.html)
 
-[Tablet 9: Regex (Rules, Grammars)](regexes.html)
+[Tablet 9: Regex (Rules, Grammars)](tablet-9-regexes.html)
 
-[Tablet 10: Metaprogramming (Macros, DSL)](metaprogramming.html)
+[Tablet 10: Metaprogramming (Macros, DSL)](tablet-10-metaprogramming.html)
 
 [Appendix A: Index (all ops, builtins, methods and it terms,
-alphabetically ordered)](ap-a-index.html)
+alphabetically ordered)](appendix-a-index.html)
 
 [Appendix B: Look-up, short reference (cheat sheets ans summary
-tables)](ap-b-lookup.html)
+tables)](appendix-b-grouped.html)
 
-[Appendix C: Cookbook (chunks of everyday Perl 5, translated into
-idiomatic Perl 6)](ap-c-cookbook.html)
+[Appendix C: Cookbook (chunks of everyday Perl 5, translated into idiomatic
+Perl 6)](appendix-c-cookbook.html)
 
-[Appendix D: Perl 5-6 Delta](ap-d-p5-p6-delta.html)
+[Appendix D: Perl 5-6 Delta](appendix-d-delta.html)
 
-[Appendix E: Appetizer, Best-of tour](ap-e-appetizer.html)
+[Appendix E: Exciting, Best-of, Appetizer tour](appendix-e-exciting.html)
 
-[Appendix F: Links](ap-f-links.html)
+[Appendix F: Links](appendix-f-links.html)
+
+[Appendix G: Glossary](appendix-g-glossary.txt.html)
 
 ***
