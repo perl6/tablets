@@ -176,7 +176,8 @@ encompass a *subregex* / *submatch* , results land in
 **[@()](#round-brackets-var)** or
 **[$0](#0-var)**... (not limited to $9 anymore)
 
-**@()** *[(special var)](appendix-b-grouped.html#match-variables)*
+**@()**
+*[(special var)](appendix-b-grouped.html#match-variables)* -
 holds positional submatches, **`$()[n]`** is alias to
 [**`$/[n]`**](#match-var) and [**`$n`**](#0-var)
 
@@ -254,35 +255,36 @@ bitwise *XOR* in numeric context
 op)](tablet-4-operators.html#numeric-context)*
 bitwise *OR* in numeric context
 
-**[,](tablet-3-variables#array)** (comma)
+**[,](tablet-3-variables#array)** 
+[(list op)](tablet-4-operators.html#list-generation) -
 [list](tablet-3-variables#array)-generating operator
 
-**-** *[(numeric
-op)](tablet-4-operators.html#numeric-context)*
+**-**
+*[(numeric op)](tablet-4-operators.html#numeric-context)* -
 [infix](#infix-category) subtraction operator,
 forces numeric context (and negates)
 
-**--** *[(sequence
-traversal)](tablet-4-operators.html#traversing-sequence)*
+**--**
+*[(sequence traversal)](tablet-4-operators.html#traversing-sequence)* -
 generic autodecrement, calls internal iterator of that object,
 before (prefix) or after (suffix) the
 [evaluation](#evaluation) of the surrounding term,
 alias to **[pred](#pred)**
 
-**--\>** *[(signature
-symbol)](appendix-b-grouped.html#signature-symbols)*
+**--\>**
+*[(signature symbol)](appendix-b-grouped.html#signature-symbols)* -
 declares the type of the return value of a
 *[routine](#routine)*, type name is placed after
 this arrow at the end of a signature
 
-**-\>** *[(signature
-symbol)](appendix-b-grouped.html#signature-symbols)*
+**-\>**
+*[(signature symbol)](appendix-b-grouped.html#signature-symbols)* -
 declares named parameters for a *[block](#block)* (pointy block)
 
 **.**
-*[(twigil)](appendix-b-grouped.html#twigils)*
+*[(twigil)](appendix-b-grouped.html#twigils)* -
 *[twigil](#twigil)* of public accessors
-(getter/setter)
+(getter/setter methods)
 
 **.** *[(regex
 metachar)](appendix-b-grouped.html#regex-metacharacter)*
@@ -804,8 +806,8 @@ type)](appendix-b-grouped.html#undefined-types)*
 Perl 6 object (default routine parameter type, excludes
 *[junction](#junction)*)
 
-**any** *[(junctive
-op)](tablet-4-operators.html#junctions)*
+**any**
+*[(junctive op)](tablet-4-operators.html#junctions)* - 
 *[junctive](#junction)* *OR* operator,
 **[True](#true)** when any one condition (of a
 following list) is true in bool context, see also:
@@ -819,18 +821,18 @@ magic command-line input handle, was ARGV in P5
 *[(special var)](appendix-b-grouped.html#global-variables)* - 
 arguments (parameter) to a program (script), formerly @ARGV
 
-**arity** *(routine method)* - returns how many parameters this
-routine requires, **[.count](#count)** includes also
-the optional
+**arity**
+*(routine method)* -
+returns how many parameters this routine requires,
+**[.count](#count)** includes also the optional
 
-**Array** *[(mutable
-type)](appendix-b-grouped.html#mutable-types)*
+**Array**
+*[(mutable type)](appendix-b-grouped.html#mutable-types)* -
 Perl Array, a series of **[Scalar](#scalar-type)**
 value container, or a variable that stores such a list
 
 **[:array](tablet-2-basic-syntax.html#interpolation)**
-*[(quoting
-adverb)](appendix-b-grouped.html#quoting-adverbs)*
+*[(quoting adverb)](appendix-b-grouped.html#quoting-adverbs)* -
 demands evaluation of array variables that starting with the
 **[@-sigil](#at-sigil)**, long form of
 **[:a](#a-adverb)**, included in
@@ -869,32 +871,30 @@ replaces them, see also: **[supersede](#supersede)**
 
 # B
 
-**:b** *[(filetest
-op)](appendix-b-grouped.html#filetest-ops)*
-file is a block special file (e.g. Harddisks, CDROMs and RAM
-areas)
+**:b**
+*[(filetest op)](appendix-b-grouped.html#filetest-ops)* -
+file is a block special file (e.g. Harddisks, CDROMs and RAM areas)
 
-**:b** *[(quoting
-adverb)](appendix-b-grouped.html#quoting-adverbs)*
-forces evaluation of [escape
-sequences](appendix-b-grouped.html#escape-sequences)
-, short form of **[:backslash](#backslash-adverb)**,
+**:b**
+*[(quoting adverb)](appendix-b-grouped.html#quoting-adverbs)* -
+forces evaluation of
+[escape sequences](appendix-b-grouped.html#escape-sequences),
+short form of **[:backslash](#backslash-adverb)**,
 included in **["..."](#double-quotation-marks)**,
 **[qq/.../](#qq-op)** and
 **[<<...\>\>](#double-angle-brackets)**
 
-**\\B** *[(escape
-sequence)](appendix-b-grouped.html#escape-sequences)*
+**\\B**
+*[(escape sequence)](appendix-b-grouped.html#escape-sequences)* - 
 Match when not on a word boundary
 
-**\\b** *[(escape
-sequence)](appendix-b-grouped.html#escape-sequences)*
+**\\b**
+*[(escape sequence)](appendix-b-grouped.html#escape-sequences)* -
 zero-width word boundary aka
 **[<wb\>](#wb-subrule)**
 
 **[:backslash](tablet-2-basic-syntax.html#interpolation)**
-*[(quoting
-adverb)](appendix-b-grouped.html#quoting-adverbs)*
+*[(quoting adverb)](appendix-b-grouped.html#quoting-adverbs)* - 
 forces evaluation of [escape
 sequences](appendix-b-grouped.html#escape-sequences)
 , long form of **[:b](#b-adverb)**, included in
@@ -902,36 +902,36 @@ sequences](appendix-b-grouped.html#escape-sequences)
 **[qq/.../](#qq-op)** and
 **[<<...\>\>](#double-angle-brackets)**
 
-**Bag** *[(immutable
-type)](appendix-b-grouped.html#immutable-types)*
+**Bag**
+*[(immutable type)](appendix-b-grouped.html#immutable-types)* - 
 unordered collection of values that allows duplicates
 
 **base** - returns a **[Str](#str-type)**
 representing the invocant in base $base (only parameter); Fails if
 $base is smaller than 2 or larger than 36
 
-**before** *[(generic
-comparison)](tablet-4-operators.html#generic-comparison)*
+**before**
+*[(generic comparison)](tablet-4-operators.html#generic-comparison)* -
 generic comparison operator used by the Order class,
 **[True](#true)** when left should precede right
 
-**\<!before <span class="you-provide">p</span>\>** *[(predefined
-subrule)](appendix-b-grouped.html#subrules)*
+**\<!before <span class="you-provide">p</span>\>**
+*[(predefined subrule)](appendix-b-grouped.html#subrules)* -
 negative zero-width lookahead, if after this position follows
 the given pattern inside the angle brackets, the whole pattern will
 not match
 
-**\<?before <span class="you-provide">p</span>\>** *[(predefined
-subrule)](appendix-b-grouped.html#subrules)*
+**\<?before <span class="you-provide">p</span>\>**
+*[(predefined subrule)](appendix-b-grouped.html#subrules)* - 
 positive zero-width lookahead, only if this position is followed
 by the given pattern inside the angle brackets, the whole pattern
 will match
 
-**BEGIN** *[(closure
-trait)](appendix-b-grouped.html#closure-traits)*
+**BEGIN**
+*[(closure trait)](appendix-b-grouped.html#closure-traits)* -
 marks as a prefix a special block or statement, executed at
-*[compile time](#compile-time)*, ASAP, only ever
-runs once
+*[compile time](#compile-time)*, [ASAP](appendix-g-glossary.html#asap),
+only ever runs once
 
 *[binding](tablet-3-variables#binding)*
 making two variables share the same content by pointing to same
@@ -949,12 +949,12 @@ to space and tab
 **bless** - calling bless on any invocant (but typically a type
 object) to create a new object with the same class as the invocant
 
-**Blob** - *[(immutable
-type)](appendix-b-grouped.html#immutable-types)*
+**Blob**
+*[(immutable type)](appendix-b-grouped.html#immutable-types)* -
 An undifferentiated mass of bits
 
-**Block** *[(immutable
-type)](appendix-b-grouped.html#immutable-types)*
+**Block**
+*[(immutable type)](appendix-b-grouped.html#immutable-types)* -
 Executable objects that have lexical scopes (enclosed by curly
 brackets)
 
@@ -962,8 +962,8 @@ brackets)
 (**{}**), when [evaluated](#evaluation) it becomes an
 object of the type **[Block](#block-type)**
 
-**&?BLOCK ** *[(special
-var)](appendix-b-grouped.html#compiler-hint-variables)*
+**&?BLOCK** 
+*[(special var)](appendix-b-grouped.html#compiler-hint-variables)* -
 reference to current block
 
 **Bool** *[(immutable
@@ -978,13 +978,12 @@ leave this **[when](#when)** block now, see also:
 **[last](#last)** and
 **[leave](#leave)**
 
-**Buf** *[(mutable
-type)](appendix-b-grouped.html#mutable-types)*
+**Buf**
+*[(mutable type)](appendix-b-grouped.html#mutable-types)* -
 Perl buffer (a stringish array of memory locations), type for
 raw binary data
 
-**but** - adds a **[role](#role)** to a
-**[class](#class)**
+**but** - adds a **[role](#role)** to a **[class](#class)**
 
 **bytes** *(string method)* - returns number of bytes used (a sort
 of length)
@@ -1065,8 +1064,8 @@ context](tablet-4-operators.html#string-context)*
 and joines them like with **[\~](#tilde-op)**,
 alias to *[.join('')](#join)*
 
-**CATCH** *[(closure
-trait)](appendix-b-grouped.html#closure-traits)*
+**CATCH**
+*[(closure trait)](appendix-b-grouped.html#closure-traits)* -
 marks as a prefix a special block to catch
 **[Exceptions](#exception-type)**, before
 **[LEAVE](#leave-phaser)**
@@ -1113,8 +1112,8 @@ searching on character level (default), see also:
 changes the current working directory
 (**[$\*CWD](#cwd-global-var)**)
 
-**CHECK** *[(closure
-trait)](appendix-b-grouped.html#closure-traits)*
+**CHECK**
+*[(closure trait)](appendix-b-grouped.html#closure-traits)* -
 marks as a prefix a special block or statement, executed at
 *[compile time](#compile-time)* ALAP, only ever runs
 once
@@ -1145,16 +1144,16 @@ see also **[method](#method)**,
 **[submethod](#submethod)** and
 **[has](#has)**
 
-**$?CLASS ** *[(special
-var)](appendix-b-grouped.html#compiler-hint-variables)*
+**$?CLASS**
+*[(special var)](appendix-b-grouped.html#compiler-hint-variables)* -
 current class object
 
-**::?CLASS ** *[(special
-var)](appendix-b-grouped.html#compiler-hint-variables)*
+**::?CLASS**
+*[(special var)](appendix-b-grouped.html#compiler-hint-variables)* -
 name of the current class
 
-**classify** *[(array
-method)](tablet-3-variables#array-methods)*
+**classify**
+*[(array method)](tablet-3-variables#array-methods)* -
 special form of map to classify a list values (values - optional
 second parameter), with a closure (mapper - first parameter); the
 return value of the closure determines, under which key the value
@@ -1220,8 +1219,8 @@ m:g/pattern/ , except it returns the list of findings, not a match
 object like **.match(rx/.../)** aka **[m/.../](#m-op)**,
 default pattern is rx/./
 
-**@=COMMENT ** *[(special
-var)](appendix-b-grouped.html#pod-variables)*
+**@=COMMENT**
+*[(special var)](appendix-b-grouped.html#pod-variables)* -
 all the comment blocks in the file
 
 *compilation* - reading the human written source code and make it an
@@ -1271,8 +1270,8 @@ searching from nth (n is an int) position (counting from 0) and
 then going to the right, short for
 **[:c](#c-modifier)**
 
-**CONTROL** *[(closure
-trait)](appendix-b-grouped.html#closure-traits)*
+**CONTROL**
+*[(closure trait)](appendix-b-grouped.html#closure-traits)* -
 marks as a prefix a special block to catch control
 **[Exception](#exception-type)** (like
 **[next](#next)** / **[last](#last)**
@@ -1308,7 +1307,8 @@ metaoperator](#capital-x-metaop)**: @a X\~ @b = (@a;
 *currying* - creating a subroutine that calls another with certain
 *[parameter](#parameter)* to be predefined
 
-**\$\*CWD** *[(special var)](appendix-b-grouped.html#global-variables)*
+**$\*CWD**
+*[(special var)](appendix-b-grouped.html#global-variables)* -
 current working directory as **[Str](#str-type)**
 
 
@@ -1327,8 +1327,8 @@ a single nondigit character
 sequence)](appendix-b-grouped.html#escape-sequences)*
 a single digit character
 
-**\$=data** *[(special
-var)](appendix-b-grouped.html#pod-variables)*
+**\$=data**
+*[(special var)](appendix-b-grouped.html#pod-variables)* -
 handle for the data block (=begin data ... =end data), use
 *$=data.lines* to *[iterate](#interation)* over the
 lines of it
@@ -1384,14 +1384,14 @@ single (decimal) digit char aka
 returns all files of a given directory, excluding . and .. by
 default
 
-**\$\*DISTRO** *[(special
-var)](appendix-b-grouped.html#global-variables)*
+**$\*DISTRO**
+*[(special var)](appendix-b-grouped.html#global-variables)* -
 running OS distribution, you might want to use `$*DISTRO.name`,
 see also: [**`$*KERNEL`**](#kernel-global-var) and
 [**`$*VM`**](#vm-global-var)
 
-**\$\?DISTRO** *[(special
-var)](appendix-b-grouped.html#global-variables)*
+**$\?DISTRO**
+*[(special var)](appendix-b-grouped.html#global-variables)* -
 [OS](#kernel-compiler-var) distribution the
 program was compiled for, see also:
 [**`$?KERNEL`**](#kernel-compiler-var) and
@@ -1446,8 +1446,8 @@ Positional/Iterable
 **eager** - forces eager evaluation (compute all values now),
 default for scalars - not for lists
 
-**\$\*EGID** *[(special
-var)](appendix-b-grouped.html#global-variables)*
+**$\*EGID**
+*[(special var)](appendix-b-grouped.html#global-variables)* -
 effective global ID of the running process
 (**[$\*PID](#pid-global-var)**) owner, was @) and
 $EGID in Perl 5
@@ -1480,13 +1480,13 @@ alternative **[if](#if)** clause
 (**[Str](#str-type)**) into raw binary UTF
 (**[Buf](#buf-type)**)
 
-**END** *[(closure
-trait)](appendix-b-grouped.html#closure-traits)*
+**END**
+*[(closure trait)](appendix-b-grouped.html#closure-traits)* -
 marks as a prefix a special block, executed at run time, ALAP,
 only ever runs once
 
-**end** *[(array op &
-method)](tablet-3-variables#array-methods)*
+**end**
+*[(array op & method)](tablet-3-variables#array-methods)* -
 last index of that list, see also:
 **[elems](#elems)**
 
@@ -1508,8 +1508,8 @@ Sun\>\>; *
 type)](appendix-b-grouped.html#immutable-types)*
 A mapping of Enums with no duplicate keys
 
-**%\*ENV ** *[(special
-var)](appendix-b-grouped.html#global-variables)*
+**%\*ENV**
+*[(special var)](appendix-b-grouped.html#global-variables)* -
 environment variables (of the shell), was %ENV in P5
 
 **eq** *[(comparison
@@ -1536,12 +1536,12 @@ short circuit defined or, returns the first defined value from
 the left, short circuit or,low precedence version of
 **[//](#high-err)**
 
-**\$\*ERR** *[(special
-var)](appendix-b-grouped.html#global-variables)*
+**$\*ERR**
+*[(special var)](appendix-b-grouped.html#global-variables)* -
 standard error output (command line mostly), STDERR in Perl 5
 
-**\$\*EUID** *[(special
-var)](appendix-b-grouped.html#global-variables)*
+**$\*EUID**
+*[(special var)](appendix-b-grouped.html#global-variables)* -
 effective user ID of the running process
 (**[$\*PID](#pid-global-var)**) owner, was @\> and
 $EUID in Perl 5
@@ -1578,12 +1578,12 @@ quoted string will be evaluated as Perl code (like
 **[eval](#eval)**) replaced with its result, alias to
 **Q :x** and **[qx/.../](#qx-op)**
 
-**$\*EXECUTABLE\_NAME ** *[(special
-var)](appendix-b-grouped.html#global-variables)*
+**$\*EXECUTABLE\_NAME**
+*[(special var)](appendix-b-grouped.html#global-variables)* -
 name of the main scripts file name, was *$0* in Perl 5
 
-**:exhaustive** *[(regex
-modifier)](appendix-b-grouped.html#regex-modifier)*
+**:exhaustive**
+*[(regex modifier)](appendix-b-grouped.html#regex-modifier)* -
 searching at all positions as long as it findes something (with
 backtracking), long for **[:ex](#ex-modifier)**
 
@@ -1660,8 +1660,8 @@ right side will be tested during next loop
 *[iteration](#interation)*, formerly ... in scalar
 context
 
-**$?FILE** *[(special
-var)](appendix-b-grouped.html#compiler-hint-variables)*
+**$?FILE**
+*[(special var)](appendix-b-grouped.html#compiler-hint-variables)* -
 current filename of source file
 
 **FIRST** *[(closure
@@ -1780,8 +1780,8 @@ program, maybe less secure as **[getpwuid](#getpwuid)**
 **gethost** - establish a connection to a net host and retrieve
 information
 
-**\$\*GID** *[(special
-var)](appendix-b-grouped.html#global-variables)*
+**$\*GID**
+*[(special var)](appendix-b-grouped.html#global-variables)* - 
 real global ID of the running process
 (**[$\*PID](#pid-global-var)**) owner, was @( and
 $GID in Perl 5
@@ -1793,43 +1793,43 @@ that object for human consumption (like in error messages),
 **[.perl](#perl)**
 
 **[given](tablet-6-blocks.html#given)**
-*[(block
-modifier)](appendix-b-grouped.html#conditionals)*
+*[(block modifier)](appendix-b-grouped.html#conditionals)* -
 part of a case-like construct, puts the following value into the
 [context variable](#context-var) (thatswhy called
 contextualizer) for **[when](#when)** clauses, see
 also **[for](#for)**
 
-**:global** *[(regex
-modifier)](appendix-b-grouped.html#regex-modifier)*
+**:global**
+*[(regex modifier)](appendix-b-grouped.html#regex-modifier)* -
 searching for any finding (not just the first), long for
 **[:g](#g-modifier)**
 
 **[goto](tablet-6-blocks.html#goto)**
-*[(flow
-control)](appendix-b-grouped.html#jump-commands)*
+*[(flow control)](appendix-b-grouped.html#jump-commands)* -
 continue execution on a defined label (with "name:")
 
-**grab** *[(hash
-method)](tablet-3-variables#hash-methods)*
+**grab**
+*[(hash method)](tablet-3-variables#hash-methods)* -
 random selection of hash keys, weighted by its related values,
 grabbing a key decrements its value (local copy) by one (deleting
 key when it goes to 0), see also **[pick](#pick)**
 ans **[roll](#roll)**
 
-**grabpair** *[(hash
-method)](tablet-3-variables#hash-methods)*
+**grabpair**
+*[(hash method)](tablet-3-variables#hash-methods)* -
 random selection <span class="you-provide">n</span> (only parameter) of hash
 **[pairs](#pair)**, (each pair only once) , see also
 **[pick](#pick)** ans **[roll](#roll)**
 
-**grammar** - special kind of **[class](#class)**
+**grammar**
+*(block modifier)* -
+special kind of **[class](#class)**
 with methods that execute **[regex](#regex)**,
 **[token](#token)** and
 **[rule](#rule)**
 
-**\$?GRAMMAR** *[(special
-var)](appendix-b-grouped.html#compiler-hint-variables)*
+**\$?GRAMMAR**
+*[(special var)](appendix-b-grouped.html#compiler-hint-variables)* -
 grammar of the currently used language (mostly
 **[$\~MAIN](#main-lang-var)**)
 
@@ -1968,17 +1968,17 @@ case pattern as the replaced, short for
 just import definitions from an already loaded module (see
 **[use](#use)** and **[need](#need)**)
 
-**\$\*IN** *[(special
-var)](appendix-b-grouped.html#global-variables)*
+**$\*IN**
+*[(special var)](appendix-b-grouped.html#global-variables)* -
 standard input (command line mostly), see also
 **[$\*OUT](#out-global-var)**
 
-**@\*INC** *[(special
-var)](appendix-b-grouped.html#global-variables)*
-include pathes (but not for standard library modules), formerly
-@INC
+**@\*INC**
+*[(special var)](appendix-b-grouped.html#global-variables)* -
+include pathes (but not for standard library modules), formerly @INC
 
-**index** *(string method)* - finds the first occurrence of a
+**index** *(string method)* -
+finds the first occurrence of a
 substring in a string and returns the numerical position, opposite
 or *rindex*
 
@@ -2015,8 +2015,8 @@ internal namespace of
 but stay [infix](#infix-category) (between) two terms
 - example (exclamation mark): \_ 4 != 5\_
 
-**INIT** *[(closure
-trait)](appendix-b-grouped.html#closure-traits)*
+**INIT**
+*[(closure trait)](appendix-b-grouped.html#closure-traits)* -
 marks as a prefix a special block or statement, executed at run
 time, ASAP, only ever runs once
 
@@ -2068,10 +2068,6 @@ concatenates list elements into a string, optionally inserting
 another string between the elements - example: *join("-", 1..5) \#
 returns '1-2-3-4-5' - or (1..5).join("-")*
 
-*junction* - a type of value that holds a logical combination of
-several values, example: (A and B) or C
-
-
 
 # K
 
@@ -2088,41 +2084,38 @@ block exit, part of **[LEAVE](#leave-phaser)** queue
 modifier)](appendix-b-grouped.html#regex-modifier)*
 forces subrules to memorize everything (even comments)
 
-**\$\*KERNEL** *[(special
-var)](appendix-b-grouped.html#global-variables)*
+**$\*KERNEL**
+*[(special var)](appendix-b-grouped.html#global-variables)* -
 (core or type of the) running operating system, use
 *$\*KERNEL.name * instead of Perl 5s $OSNAME, see also:
 **[\$\*DISTRO](#distro-global-var)** and
 **[\$\*VM](#vm-global-var)**
 
-**\$?KERNEL** *[(special
-var)](appendix-b-grouped.html#global-variables)*
+**\$?KERNEL**
+*[(special var)](appendix-b-grouped.html#global-variables)* - 
 kernel (core operating system) the program was compiled for,
 might want to use use `$?KERNEL.name`, see also:
 **[\?\*DISTRO](#distro-compiler-var)** and
 **[\$?VM](#vm-compiler-var)**
 
-**key** *[(pair
-method)](tablet-3-variables#pair)*
+**key**
+*[(pair method)](tablet-3-variables#pair)* -
 gives the key part of a pair, opposite of
 **[value](#value)**
 
-**KeyBag** *[(mutable
-type)](appendix-b-grouped.html#mutable-types)*
+**KeyBag**
+*[(mutable type)](appendix-b-grouped.html#mutable-types)* -
 KeyHash of UInt (does **[Bag](#bag-type)** in
 list/array context)
 
-**KeySet** *[(mutable
-type)](appendix-b-grouped.html#mutable-types)*
+**KeySet** *[(mutable type)](appendix-b-grouped.html#mutable-types)* -
 KeyHash of **[Bool](#bool-type)** (does Set in
 list/array context)
 
-**keys** *[(array op &
-method)](tablet-3-variables#array-methods)*
+**keys** *[(array op & method)](tablet-3-variables#array-methods)* -
 returns the list array indexes
 
-**keys** *[(hash
-method)](tablet-3-variables#hash-methods)*
+**keys** *[(hash method)](tablet-3-variables#hash-methods)* -
 returns list of hash keys
 
 **[kill](tablet-5-io.html#processes)**
@@ -2141,30 +2134,30 @@ returns list of key-value pairs
 op)](appendix-b-grouped.html#filetest-ops)*
 file is a symbolic link
 
-**\\L\[<span class="you-provide">n</span>\]** *[(escape
-sequence)](appendix-b-grouped.html#escape-sequences)*
+**\\L\**[<span class="you-provide">n</span>**\]**
+*[(escape sequence)](appendix-b-grouped.html#escape-sequences)* -
 everything within the brackets is lowercase
 
-**$\*LANG ** *[(special
-var)](appendix-b-grouped.html#global-variables)*
+**$\*LANG**
+*[(special var)](appendix-b-grouped.html#global-variables)* -
 LANG variable from **[%\*ENV](#env-global-var)**
 that defines what human language is used
 
-**%?LANG ** *[(special
-var)](appendix-b-grouped.html#global-variables)*
+**%?LANG**
+*[(special var)](appendix-b-grouped.html#global-variables)* -
 current set of interwoven languages
 
-**LAST** *[(closure
-trait)](appendix-b-grouped.html#closure-traits)*
+**LAST**
+*[(closure trait)](appendix-b-grouped.html#closure-traits)* -
 marks as a prefix a special block, executed at loop termination
 time, after any **[LEAVE](#leave-phaser)**
 
-**last** *[(flow
-control)](appendix-b-grouped.html#jump-commands)*
+**last**
+*[(flow control)](appendix-b-grouped.html#jump-commands)* -
 exit the current looping block
 
-**last** *[(array
-method)](tablet-3-variables#array-methods)*
+**last**
+*[(array method)](tablet-3-variables#array-methods)* -
 number of final element
 
 **lazy** - forces lazy evaluation (calculate values as late as
@@ -2172,22 +2165,22 @@ possible), default for lists - not scalars
 
 **lc** *(string op & method)* - make string lowercase
 
-**lcfirst** *(string op & method)* - make first char of a string
-lowercase
+**lcfirst** *(string op & method)* -
+make first character of a string lowercase
 
-**lcm** *[(numeric infix
-op)](tablet-4-operators.html#numeric-context)*
+**lcm**
+*[(numeric infix op)](tablet-4-operators.html#numeric-context)* -
 least common multiple, see also: **[gcd](#gcd)**
 
-**le** *[(string
-comparison)](tablet-4-operators.html#string-comparison)*
+**le**
+*[(string comparison)](tablet-4-operators.html#string-comparison)* -
 [infix](#infix-category) operator, result is
 **[True](#true)** if left side is lower than or
 equal than the right, see also: **[lt](#lt)**,
 **[gt](#gt)** and **[ge](#ge)**
 
-**LEAVE** *[(closure
-trait)](appendix-b-grouped.html#closure-traits)*
+**LEAVE**
+*[(closure trait)](appendix-b-grouped.html#closure-traits)* -
 marks as a prefix a special block, executed at every block exit
 time
 
@@ -2206,11 +2199,12 @@ is the more general form, **[<=\>](#spaceship-op)**
 does same in [numerical
 context](#numerical-context) , was cmp in P5
 
-**let** - changes value of a variable temporary, it will be set back
+**let** -
+changes value of a variable temporary, it will be set back
 if the current block exits unsuccessfully
 
-**$?LINE ** *[(special
-var)](appendix-b-grouped.html#compiler-hint-variables)*
+**$?LINE**
+*[(special var)](appendix-b-grouped.html#compiler-hint-variables)* -
 current line number
 
 **[lines](basic-syntax.html)**
@@ -2293,13 +2287,13 @@ type)](appendix-b-grouped.html#routine-types)*
 define a routine to alter source code at *[compile
 time](#compile-time)*
 
-**$\~MAIN ** *[(special
-var)](appendix-b-grouped.html#slang-variables)*
+**$\~MAIN**
+*[(special var)](appendix-b-grouped.html#slang-variables)* -
 current [grammar](#grammar) of main language,
 tells the parser the rules of parsing Perl
 
-**map** *[(array op &
-method)](tablet-3-variables#array-methods)*
+**map**
+*[(array op & method)](tablet-3-variables#array-methods)* -
 take a list, perform a block on each member, return a list of
 the results - example: *say map { chr $\_ }, 66..69 * (is "B C D E")
 or *say map { chr $\_ }, 66..69 *
@@ -2356,8 +2350,8 @@ creates a directory with given name
 **module** *(block modifier)* - introduces a module name, a package
 that performs special actions on loading
 
-**&?MODULE ** *[(special
-var)](appendix-b-grouped.html#compiler-hint-variables)*
+**&?MODULE**
+*[(special var)](appendix-b-grouped.html#compiler-hint-variables)* -
 reference to the current module
 
 **[ms//](tablet-9-regexes.html#matching)**
@@ -2498,8 +2492,8 @@ permits only one routine of the same name in this block
 *(path method)* - establishes a connection to a file via a file
 path name file handler
 
-**\$\*OPTS** *[(special
-var)](appendix-b-grouped.html#global-variables)*
+**$\*OPTS**
+*[(special var)](appendix-b-grouped.html#global-variables)* -
 options from command line
 
 **or** *[(logical
@@ -2529,18 +2523,15 @@ declarator)](appendix-b-grouped.html#scope-declarator)*
 introduces **[package](#package)** - scoped
 names for variables and routines
 
-**\$\*OUT** *[(special
-var)](appendix-b-grouped.html#global-variables)*
+**$\*OUT** *[(special var)](appendix-b-grouped.html#global-variables)* -
 standard output (command line mostly), see also
 **[$\*IN](#in-global-var)**
 
-**:ov** *[(regex
-modifier)](appendix-b-grouped.html#regex-modifier)*
+**:ov** *[(regex modifier)](appendix-b-grouped.html#regex-modifier)* -
 searching at all positions just one time (with backtracking),
 short for **:overlap**
 
-**:overlap** *[(regex
-modifier)](appendix-b-grouped.html#regex-modifier)*
+**:overlap** *[(regex modifier)](appendix-b-grouped.html#regex-modifier)* -
 searching at all positions just one time (with backtracking),
 long for **:ov**
 
@@ -2548,13 +2539,11 @@ long for **:ov**
 
 # P
 
-**:p** *[(filetest
-op)](appendix-b-grouped.html#filetest-ops)*
+**:p** *[(filetest op)](appendix-b-grouped.html#filetest-ops)* -
 file is a named pipe (FIFO), or filehandle is a pipe
 
 **[:p](tablet-2-basic-syntax.html#paths)**
-*[(quoting
-adverb)](appendix-b-grouped.html#quoting-adverbs)*
+*[(quoting adverb)](appendix-b-grouped.html#quoting-adverbs)* -
 quote paths and create path object that know the right format of
 the current **[$\*KERNEL](#kernel-global-var)** with
 **Q :p /.../ **, short for **[:path](#path-adverb)**
@@ -2569,21 +2558,22 @@ modifier)](appendix-b-grouped.html#regex-modifier)*
 activate old Perl 5 regex rules, alias to
 **[:Perl5](#perl5-modifier)**
 
-**$\~P5Regex ** *[(special
-var)](appendix-b-grouped.html#slang-variables)*
+**$\~P5Regex**
+*[(special var)](appendix-b-grouped.html#slang-variables)* -
 current [grammar](#grammar) of the Perl 5
 compatible regular expression language
 
 **[pack](tablet-2-basic-syntax.html#pack)**
 repackage values into or from a condensed format
 
-**package** *(block modifier)* - defines this Block or File as
+**package** *(block modifier)* -
+defines this Block or File as
 namespace (almost like in Perl 5), some uses are now better to do
 with **[module](#module)** and
 **[class](#class)**
 
-**&?PACKAGE ** *[(special
-var)](appendix-b-grouped.html#compiler-hint-variables)*
+**&?PACKAGE**
+*[(special var)](appendix-b-grouped.html#compiler-hint-variables)* -
 reference to the current package
 
 **package\_declarator** *[(grammatical
@@ -2643,36 +2633,28 @@ the current **[$\*KERNEL](#kernel-global-var)** with
 syntax; use **[eval](#eval)** onto that string and
 you get the data structure again, bit like *Data::Dump*
 
-**$\*PERL** *[(special
-var)](appendix-b-grouped.html#global-variables)*
+**$\*PERL**
+*[(special var)](appendix-b-grouped.html#global-variables)* -
 Perl version running under, was $] and $\^V in Perl 5
 
-**$?PERL** *[(special
-var)](appendix-b-grouped.html#compiler-hint-variables)*
+**$?PERL**
+*[(special var)](appendix-b-grouped.html#compiler-hint-variables)* -
 Perl version compiled for
 
-**:Perl5** *[(regex
-modifier)](appendix-b-grouped.html#regex-modifier)*
-activate old Perl 5 regex rules, alias to
-**[:P5](#p5-modifier)**
+**:Perl5**
+*[(regex modifier)](appendix-b-grouped.html#regex-modifier)* -
+activate old Perl 5 regex rules, alias to **[:P5](#p5-modifier)**
 
-**pick** *[(array op &
-method)](tablet-3-variables#array-methods)*
+**pick** *[(array op & method)](tablet-3-variables#array-methods)* -
 select a number (first parameter) of random vaues (without
 duplication), take **[roll](#roll)** to enable
 duplication
 
-**\$\*PID** *[(special
-var)](appendix-b-grouped.html#global-variables)*
+**$\*PID**
+*[(special var)](appendix-b-grouped.html#global-variables)* -
 ID of the running process, was $$ and $PID in Perl 5
 
-[phaser](appendix-b-grouped.html#closure-traits)
-- Perl 6 term for specially named subblocks withe special runtimes
-aka closure traits - example:
-**[BEGIN](#begin-phaser)**
-
-**pick** *[(array
-method)](tablet-3-variables#array-methods)*
+**pick** *[(array method)](tablet-3-variables#array-methods)* -
 selects randomly elements from this list, optional parameter
 says how many
 
@@ -2684,8 +2666,8 @@ Plain Old Documentation, a markup language to be embeded into
 Perl source code, has in Perl 6 ability to store data to be
 retrieved later
 
-**$=pod ** *[(special
-var)](appendix-b-grouped.html#pod-variables)*
+**$=pod**
+*[(special var)](appendix-b-grouped.html#pod-variables)* -
 surrounding *[POD](#pod)* object
 
 *pointy block* - a block that is given parameters with
@@ -2705,20 +2687,18 @@ modifier)](appendix-b-grouped.html#regex-modifier)*
 searching only on the <span class="you-provide">n</span>th position (counting from 0), long
 for **[:p](#p-modifier)**
 
-**POST** *[(closure
-trait)](appendix-b-grouped.html#closure-traits)*
+**POST**
+*[(closure trait)](appendix-b-grouped.html#closure-traits)* -
 marks as a prefix a special block, assert postcondition,
 executed at every block exit, after
 **[LEAVE](#leave-phaser)**
 
-**postcircumfix** *[(grammatical
-category)](appendix-b-grouped.html#categories)*
+**postcircumfix**
+*[(grammatical category)](appendix-b-grouped.html#categories)* -
 operator namespace of ops, that stay after one statement or
-variable, but do surround a second - example(square brackets):
-*$a[2]*
+variable, but do surround a second - example(square brackets): *$a[2]*
 
-**postfix** *[(grammatical
-category)](appendix-b-grouped.html#categories)*
+**postfix** *[(grammatical category)](appendix-b-grouped.html#categories)* -
 operator namespace of ops, that stay after a statement or
 variable (like $a++)
 
@@ -2730,8 +2710,8 @@ internal namespace of
 but stay [postfix](#postfix-category) (after) another
 term - example (greater as): *@a \>\>++*
 
-**PRE** *[(closure
-trait)](appendix-b-grouped.html#closure-traits)*
+**PRE**
+*[(closure trait)](appendix-b-grouped.html#closure-traits)* -
 marks as a prefix a special block, assert precondition, executed
 at every block entry, before **[ENTER](#enter-phaser)**
 
@@ -2844,8 +2824,7 @@ directory path, alias to **Q [:p](#p-adverb) /.../**
 and **Q [:path](#path-adverb) /.../**
 
 **[qq](tablet-2-basic-syntax.html#double-quotes)**
-*[(quoting
-op)](appendix-b-grouped.html#quoting-ops)*
+*[(quoting op)](appendix-b-grouped.html#quoting-ops)* -
 *double quoting*, **q** with interpolation of variables,
 closures, and special chars, alias to
 **["..."](#double-quotation-marks)** and **Q :s, :a,
@@ -2867,17 +2846,19 @@ adverb)](appendix-b-grouped.html#quoting-adverbs)*
 op)](appendix-b-grouped.html#quoting-ops)*
 run as system call and return results; was *qx/.../* in Perl 5
 
-**$\~Quasi ** *[(special
-var)](appendix-b-grouped.html#slang-variables)*
+**$\~Quasi**
+*[(special var)](appendix-b-grouped.html#slang-variables)* -
 current [grammar](#grammar) of the quasiquoting
 language
 
-**quasi** *(block modifier)* - quasi quoting, the following
-commented will be compiles and the AST will be returned as result,
+**quasi**
+*(block modifier)* -
+quasi quoting, the following commented will be compiles and
+the *[AST](appendix-g-glossary.html#ast)* will be returned as result,
 see also: **[:code](#code-adverb)**
 
-**$\~Quote ** *[(special
-var)](appendix-b-grouped.html#slang-variables)*
+**$\~Quote**
+*[(special var)](appendix-b-grouped.html#slang-variables)* -
 current [grammar](#grammar) of the quoting
 language as used by the [Q-operator](#capital-q-op)
 and any other quoting op
@@ -3005,8 +2986,8 @@ Perl 5, see **[rule](#rule)**,
 adverb)](appendix-b-grouped.html#quoting-adverbs)*
 parse as quoted string as regex
 
-**$\~Regex ** *[(special
-var)](appendix-b-grouped.html#slang-variables)*
+**$\~Regex**
+*[(special var)](appendix-b-grouped.html#slang-variables)* -
 current [grammar](#grammar) of the regex language
 as used by **[rx](#rx)** and any regex operator and
 method, tells the parser how to parse regular expressions
@@ -3049,18 +3030,18 @@ returns all the members in the opposite order. Use
 substring in a string and returns the numerical position, opposite
 or **[index](#index)**
 
-**[rmdir](tablet-5-io.html#rmdir)**
+**[rmdir](tablet-5-io.html#rmdir)** - 
 deletes a directory with given name
 
-**role** - container for methods that can extend a class using
-**[does](#does)**
+**role** *(block modifier)* -
+container for methods that can extend a class using **[does](#does)**
 
-**$?ROLE ** *[(special
-var)](appendix-b-grouped.html#compiler-hint-variables)*
+**$?ROLE**
+*[(special var)](appendix-b-grouped.html#compiler-hint-variables)* -
 current role object
 
-**::?ROLE ** *[(special
-var)](appendix-b-grouped.html#compiler-hint-variables)*
+**::?ROLE**
+*[(special var)](appendix-b-grouped.html#compiler-hint-variables)* -
 name of the current role
 
 **roll** *[(array
@@ -3086,8 +3067,8 @@ method)](tablet-3-variables#array-methods)*
 kind of **[zip](#zip)** that ignores empty lists
 - example: *roundrobin([1..3],[1,2],[1]) = 1,1,1,2,2,3 *
 
-**&?ROUTINE ** *[(special
-var)](appendix-b-grouped.html#compiler-hint-variables)*
+**&?ROUTINE**
+*[(special var)](appendix-b-grouped.html#compiler-hint-variables)* -
 current **[Routine](#routine-type)** object
 
 **routine** - block of code callable by name, can have a
@@ -3356,14 +3337,14 @@ staying mutable
 subrule)](appendix-b-grouped.html#subrules)*
 single white space char aka **[\\s](#backslash-s)**
 
-**special\_variable** *[(grammatical
-category)](appendix-b-grouped.html#categories)*
+**special\_variable**
+*[(grammatical category)](appendix-b-grouped.html#categories)* -
 namespace to define and redefine [special
 variables](appendix-b-grouped.html#special-variables)
 with a macro
 
-**splice** *[(array op &
-method)](tablet-3-variables#array-methods)*
+**splice**
+*[(array op & method)](tablet-3-variables#array-methods)* -
 remove on $pos (first parameter) $n (second - optional) values
 and replace them with values (third - optional)
 
@@ -3629,7 +3610,7 @@ special property of a variable
 category)](appendix-b-grouped.html#categories)*
 - example: **[subset](#subset)**
 
-**$\*TZ** *[(special var)](appendix-b-grouped.html#global-variables)*
+**$\*TZ** *[(special var)](appendix-b-grouped.html#global-variables)* -
 local time zone
 
 
@@ -3648,14 +3629,13 @@ everything within the brackets is uppercase
 
 **ucfirst** - make first char of a string uppercase
 
-**\$\*UID** *[(special
-var)](appendix-b-grouped.html#global-variables)*
+**$\*UID** *[(special var)](appendix-b-grouped.html#global-variables)* -
 real user ID of the running process
 (**[\$\*PID](#pid-global-var)**) owner (user), was @<
 and $UID in Perl 5
 
-**UNDO** *[(closure
-trait)](appendix-b-grouped.html#closure-traits)*
+**UNDO**
+*[(closure trait)](appendix-b-grouped.html#closure-traits)* -
 marks as a prefix a special block, executed at every
 unsuccessful block exit, part of
 **[LEAVE](#leave-phaser)** queue
@@ -3686,12 +3666,12 @@ end of an expression, opposite of **[while](#while)**
 subrule)](appendix-b-grouped.html#subrules)*
 a single uppercase character
 
-**[uri](io.html)**
-- returns IO::Streamable descendant for accessing content of that
+**[uri](io.html)** -
+returns IO::Streamable descendant for accessing content of that
 URI (only pramameter typed **[Str](#str-type)**)
 
-**$?USAGE ** *[(special
-var)](appendix-b-grouped.html#global-variables)*
+**$?USAGE**
+*[(special var)](appendix-b-grouped.html#global-variables)* -
 default usage message generated at compile time
 
 **[use](subroutines.html)**
@@ -3729,14 +3709,14 @@ method)](tablet-3-variables#hash-methods)*
 returns an array of just the values - example: *(1 =\> 2, 3 =\>
 4).values; \# returns (2,4)*
 
-**\$\*VM** *[(special
-var)](appendix-b-grouped.html#global-variables)*
+**$\*VM**
+*[(special var)](appendix-b-grouped.html#global-variables)* -
 running virtual machine, might want to use *$\*VM.name*, see
 also: **[\$\*DISTRO](#distro-global-var)** and
 **[\$\*KERNEL](#kernel-global-var)**
 
-**\$?VM** *[(special
-var)](appendix-b-grouped.html#global-variables)*
+**$?VM**
+*[(special var)](appendix-b-grouped.html#global-variables)* -
 virtual machine the program is compiled for, see also:
 **[\$?DISTRO](#distro-compiler-var)** and
 **[\$?KERNEL](#kernel-compiler-var)**
@@ -3897,7 +3877,8 @@ zero-width space inside of a word between two
 
 # X
 
-**X** *(list op)* - Cross product of two arrays, alias of
+**X** *(list op)* -
+Cross product of two arrays, alias of
 **[cross](#cross)** method - example: *1,2 X 3,4 ==
 1,3,1,4,2,3,2,4;*
 
@@ -3964,7 +3945,9 @@ replicate a list *$n* (second operand) times - example: *'ab' xx
 
 # Z
 
-**Z** *(list op)* - alias to **[zip](#zip-op)**,
+**Z**
+*[(list op)](tablet-4-operators.html#list-generation)* -
+alias to **[zip](#zip-op)**,
 joines 2 lists and stops when 1 list runs out of elements, returning
 always an list with an even length - example: *1,2,3,4 Z 8,9 ==
 1,8,2,9*

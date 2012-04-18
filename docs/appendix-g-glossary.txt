@@ -41,6 +41,9 @@ is going a few steps to the left (it goes back)
 
 # J
 
+*junction* - a type of value that holds a logical combination of
+several values, example: (A and B) or C
+
 # K
 
 # L
@@ -52,6 +55,11 @@ is going a few steps to the left (it goes back)
 # O
 
 # P
+
+[phaser](appendix-b-grouped.html#closure-traits) -
+Perl 6 term for specially named subblocks withe special runtimes
+aka closure traits - example:
+**[BEGIN](appendix-a-index.html#begin-phaser)**
 
 # Q
 
