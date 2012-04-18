@@ -78,8 +78,8 @@ History
 =======
 
 These tablets started as my initial effort to write German Perl 6
-documentation. It's still maintained in the german Perl wiki. Ruins of
-my first attempt to translate this into English can still be excavated
-down under, but let's make it more official here.
+documentation. It currently just lays dormant in the german Perl wiki.
+Ruins of my first attempt to translate this into English can still be
+excavated down under, but let's make it more official here.
 
 ***
