@@ -7,7 +7,23 @@
 
 # A
 
+*ALAP* - as late as possible, within a given execution phase
+(compile time or run time)
+
+*ASAP* - as soon as possible, within a given execution phase
+(compile time or run time)
+
+
+*AST* - (abstract syntax tree), tree like data structure, in which
+source code is transformed, before running the programm
+
+
 # B
+
+*backtracking* - after a part of a pattern didn't match,
+this last operation might not be counted (undone) and the pointer
+for the position in the string where actual matching is taking place
+is going a few steps to the left (it goes back)
 
 # C
 
@@ -54,5 +70,14 @@
 # X
 
 # Y
+
+*[yadda
+operator](operators.html#yadda)*
+placeholder for later to be written code, because in empty
+routines are forbidden, comes in 3 flavours:
+**[...](#triple-dot-yadda-op)**,
+**[???](#triple-question-mark)** and
+**[!!!](#triple-exclamation-mark)**
+
 
 # Z

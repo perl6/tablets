@@ -1,4 +1,4 @@
-% Perl 6 Tablets: Chp. 0 - History
+% Perl 6 Tablet 0 - History
 
 > "Perl 5 was my rewrite of Perl. I want Perl 6 to be the community's
 > rewrite of Perl and of the community." -- Larry Wall
