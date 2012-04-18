@@ -58,6 +58,6 @@ Perl 6)](appendix-c-cookbook.html)
 
 [Appendix F: Links](appendix-f-links.html)
 
-[Appendix G: Glossary](appendix-g-glossary.txt.html)
+[Appendix G: Glossary](appendix-g-glossary.html)
 
 ***
