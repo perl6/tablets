@@ -33,9 +33,9 @@ Metaops)](tablet-4-operators.html)
 
 [Tablet 5: IO (Command Line, Files, Sockets, Network, Misc.)](tablet-5-io.html)
 
-[Tablet 6: Blocks (Conditions, Loops)](tablet-6-blocks.html)
+[Tablet 6: Blocks (Conditions, Loops, Jump Statements)](tablet-6-blocks.html)
 
-[Tablet 7: Subroutines (Signatures, Modules)](tablet-7-subroutines.html)
+[Tablet 7: Subroutines (Signatures, Multis, Modules)](tablet-7-subroutines.html)
 
 [Tablet 8: Objects (Classes, Roles)](tablet-8-objects.html)
 
