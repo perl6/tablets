@@ -1,6 +1,6 @@
 % Perl 6 Tablets: Table of Contents
 
-These are the Perl 6 Tablets, a comprehensive manual, aimed to support
+These are the Perl 6 Tablets, a comprehensive manual, aiming to support
 many different ways of learning. The content is nicely sorted and
 indexed and many links allow you to follow your interest freely. For a
 lightweight introduction, try [my Perl 6 Tutorial](#) or the Book

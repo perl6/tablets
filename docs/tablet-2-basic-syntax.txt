@@ -50,8 +50,8 @@ except before and after a closing curly brace, where it is optional.
 Spaces and Indentation
 ======================
 
-Perl doesn't care about indentation. And spaces are still in many
-places without meaning. However these have become fewer.
+Perl doesn't care about indentation. Otherwise, in several place Perl 6 cares
+about existence of whitespace as a disambiguator.
 
 Comments
 ========
@@ -82,7 +82,7 @@ of braces that surround the comment.
 POD
 ---
 
-Even POD is there to embedd documentation, it can be used just for
+Even though POD is there to embed documentation, it can be used just for
 inserting comments.
 
     =begin comment
@@ -100,7 +100,7 @@ inserting comments.
 Quoting
 =======
 
-Quoting is like [regular expression](regexes.html) a sublanguage
+Quoting, like [regular expression](regexes.html), is a sublanguage
 inside the main language with its own syntactical rules. It is parsed
 by a special grammar as to be found in the [special
 variable](ap-b-lookup.html#special-variables) `$~Quote`. The
@@ -218,7 +218,7 @@ Quote Words
 -----------
 
 While other quote operators return a single string item, this one can
-return [arrays](variables.html#array) because he splits the string on
+return [arrays](variables.html#array) because it splits the string on
 any whitespace (\\s aka <ws>).
 
     Q :words /.../;
@@ -243,10 +243,10 @@ Please note also that **:quotewords** (double pointy braces) implies
 rules](basic-syntax.html#interpolation) apply here also.
 
     <$pi> eq '$pi'
-    <<$pi>> eq "$pi" # == '3.14159...'
+    <<$pi>> eq "$pi" # eq '3.14159...'
 
 
-The same pointy braces (quote operators) are also in used, when
+The same pointy braces (quote operators) are also in used when
 writing [hash slices](variables.html#hash-slices).
 
 
@@ -254,7 +254,7 @@ writing [hash slices](variables.html#hash-slices).
 Heredocs
 --------
 
-Are now normal quoted strings, only with a special delimiter, defined
+Heredocs are now normal quoted strings, only with a special delimiter, defined
 by the adverbs **to** and heredoc. Heredocs can be nested.
 
     Q :to 'EOT';
