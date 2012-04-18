@@ -6,13 +6,13 @@ Perl 6 has a huge amount of operators, because they support 2 of the
 main design goals: they offer **dense** and **readable** code. 2 + 3
 is certainly shorter and easier to understand then add(2,3), since
 [pictograms](language-design.html#visual-metaphor) can be picked up
-faster than words. (Fortran made his whole carrier on that). But
+faster than words. (Fortran made its whole career on that). But
 because they are so many, they had to be sorted by a rule named
 [huffman coding](language-design.html#huffman-coding), which was
 applied here more than in any other part of the syntax.
 
-To understand an operator you have to know his **arity** (how many
-parameters he takes - usually one (!) or two (+) ).
+To understand an operator you have to know its **arity** (how many
+parameters it takes - usually one (!) or two (+) ).
 
 The [precedence](ap-b-lookup.html#table-of-precedence) tells
 which operator to prefer in case of conflict, when no braces are used
