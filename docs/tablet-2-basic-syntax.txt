@@ -50,8 +50,8 @@ except before and after a closing curly brace, where it is optional.
 Spaces and Indentation
 ======================
 
-Perl doesn't care about indentation. And spaces are still in many
-places without meaning. However these have become fewer.
+Perl doesn't care about indentation. Otherwise, in several place Perl 6 cares
+about existence of whitespace as a disambiguator.
 
 Comments
 ========

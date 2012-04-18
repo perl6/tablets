@@ -44,7 +44,8 @@ strings](basic-syntax.html#double-quotes):
 
     say "Dear Earthlings, we come from $our_home_planet, which is { compute_distance($earth, $our_home_planet) } parsecs away.";
 
-which is sometimes more, but sometimes less readable and needs extra punctuation to split it over several lines of code.
+which is often more readable, but needs extra punctuation to split over
+several lines of code.
 
 
 
@@ -84,11 +85,11 @@ reports, extra debugging information, error messages, etc.
 warn
 ----
 
-Behaves somewhat like print to `$*ERR` (see
-[`note`](io.html#note)). Under the hood, warn is a "resumable
-exception", and its message can be caught and handled farther up the
-call stack in some way. Normally, once it's handled, Perl will resume
-running the code just after the warn call.
+Displays a warning along with the code location to `$.ERR`
+(see also [`note`](io.html#note)). Under the hood, warn throws a "resumable
+exception", and it can be caught and suppressed using a CONTROL block.
+Normally, once it's handled, Perl will resume running the code just
+after the warn call.
 
 
 

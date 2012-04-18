@@ -34,19 +34,17 @@ named $stuff, @stuff and %stuff. These sigils [can also be used as an
 operator](ap-b-lookup.html#contextualizers) to enforce a
 context in which the following data will be seen.
 
-The fourth namespace where you can store and retrieve something under
-specified names is the one of [subroutines and
-alike](variables.html#callable), even if you don't might think of them
-as variables. It's sigil & has to be used only rarely.
+The fourth namespace is for [subroutines and
+similar](variables.html#callable), even if you don't usually think of them
+as variables. It's sigil & is used to refer to subroutines without calling them.
 
 All special namespaces from Perl 5 (often marked with special syntax), like
 tokens (`__PACKAGE__`), formats, file or dir handles, or builtins are
 now regular variables or routines.
 
-Because variables are (as anything in Perl 6) [objects](objects.html),
-they have methods. In fact, [any operator](operators.html), including
-these square or curly brackets you get specific array and hash values
-with, are just methods of a variable object with a fancy name.
+Because all variables contain [objects](objects.html), they have methods.
+In fact, [all operators](operators.html), including square or curly bracket
+subscripts, are just methods of an object with a fancy name.
 
 The primary sigil can be followed by a secondary sigil, called a
 [twigil, which indicates a special scope](variables.html#twigils)
@@ -57,9 +55,9 @@ for that variable.
 Scalar
 ------
 
-This type is known as a storage room for one value, but it's more like
-a reference that can point to anything: to values of any data type, to
-code, to objects or to a compound of values like a
+This type stores one value, usually
+a reference to something: a value of a data type,
+a code object, an object or a compound of values like a
 [pair](variables.html#pair), [junction](operators.html#junctions),
 [array](variables.html#array), [hash](variables.html#hash) or
 [capture](variables.html#capture). The scalar context is now called
@@ -106,6 +104,7 @@ values](variables.html#array), [hash](variables.html#hash),
 Unlike Perl 5, references are automatically dereferenced to a fitting
 context. So you could use these `$arrayref`s and `$hashref`s similarly to
 an array or hash, making $ the universal variable prefix, pretty much like in PHP.
+The primary difference is that `$` prefixed lists are not flattened in lists.
 
 
 
@@ -120,9 +119,9 @@ an array or hash, making $ the universal variable prefix, pretty much like in PH
 Array
 -----
 
-is an ordered and indexed list of [scalar
-variables](variables.html#scalar). If not specified otherwise, they
-can be changed, prolonged and shorten anytime and used as a list,
+An array is an ordered and indexed list of
+[variables](variables.html). If not specified otherwise, they
+can be changed, expanded and shortened anytime and used as a list,
 stack, queue and much more. As in Haskell, lists are processed lazily,
 which means: the compiler looks only at the part it currently
 needs. This way Perl 6 can handle infinite lists or do computation on
@@ -216,6 +215,7 @@ Hash
 is in Perl 6 an unordered list of Pairs. [A Pair](variables.html#pair)
 is a single key `=>` value association and [appears in many
 places](language-design.html#maximum_reusage) of the language syntax.
+A hash allows lookup of values by key value using `{}` or `<>` syntax.
 
     %dev =  'pugs'=>'audreyt', 'pct'=>'pm', "STD"=>'larry';
     %dev = :rakudo('jnthn'), :testsuite('moritz');            # adverb (pair) syntax works as well
