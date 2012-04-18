@@ -44,7 +44,7 @@ This html form is explicitly chosen because hypertext is better for
 free learning. You can more easily follow your interest by clicking on
 links. (As this attempt is too big for only one editor, the source
 Markdown files are stored in a git repository.)
-All content is sorted by topic into 9 chapters. Every chapter also has
+All content is sorted by topic into 10 chapters. Every chapter also has
 a fine grained structure, such that single items can be found quickly
 and linked to. They begin with the basics and continue slowly to more
 depth. So you can end when you have had enough, without missing the
@@ -53,14 +53,16 @@ the other, without having to look too much backwards or
 forwards. Having everything indexed and crosslinked helps you find
 what you are interested in.
 
-Chapter 0 is here, while 1 and 2 are more about the language theory.
-Chapter 3 .. 9 are about the concrete syntax and appendix A is the
-Index, that contain all computer science terms, operators and
-keywords. Appendix B contains all tables like operator precedence, C
-is a "best of" tour, like an appetizer for Perl 6. Appendix D is
-a kind of 'perldelta' and Appendix E contains links to additional
-materials.
-
+Chapter 0 is here, while 1 and 2 contain useful theoretical knowledge.
+Chapter 3 .. 10 are about the concrete syntax and appendix A is the
+Index, that lists all operators and keywords, alphabetically ordered.
+Appendix B holds all tables like operator precedence,
+C is the cookbook which shows you common algorithms in native Perl 6.
+Appendix D is a kind of 'perldelta' between a fairly recent version
+of Perl 5 and Perl 6 and E stands for exciting or excellence showing
+just the glamorous and fast to understand bits to impress the world.
+Links to other information sources are to be found in F and G stands
+for glossary where all the computer science terms are explained.
 
 
 Motivation
