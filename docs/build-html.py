@@ -7,7 +7,7 @@ pandoc_cmd2 = '''pandoc -s          --css=styles.css -H _head-inc -B _nav-header
 
 txt_files = glob.glob('*.txt')
 
-DO_THEM_ALL = True
+DO_THEM_ALL = False
 
 for txt_fn in txt_files:
     html_fn = txt_fn[:-3] + 'html'
