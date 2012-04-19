@@ -49,22 +49,26 @@ object of the type **[Block](appendix-a-index.html#block-type)**
 
 # C
 
-*capture* &mdash;
+<a id="capture"/>
+**capture** &mdash;
 
-*closure* &mdash;
+<a id="closure"/>
+**closure** &mdash;
 routines whose state (content of all local variables) is
 completely preserved until the next execution,
 mostly used as a fancy alias for a *[block](#block)*
 
-*coderef* &mdash;
+<a id="coderef"/>
+**coderef** &mdash;
 reference (pointer) to an executable block of code (routine)
 
-*compilation* &mdash;
+<a id="compilation"/>
+**compilation** &mdash;
 reading the human written source code and make it an
 executable (piece of) program
 
 <a id="compile-time"/>
-*compile time* &mdash;
+**compile time** &mdash;
 time when Perl converts source code to executable form (bytecode),
 is always before *[runtime](#runtime)*
 even if code can be compiled via **[eval](appendix-a-index.html#eval)** and
@@ -74,17 +78,20 @@ already runnung, to run code at the begin of compile time use
 **[CHECK](appendix-a-index.html#check-phaser)** to run at the end of
 compile time for that unit (mostly the file or the to be **eval**ed string)
 
-*context* &mdash;
+<a id="context"/>
+**context** &mdash;
 when executing a function or operator Perl considers the
 expression from which the call was to return a
 [scalar](#scalar-type) or other kind of result
 
-*context variable* &mdash;
+<a id="context-variable"/>
+**context variable** &mdash;
 name for **[$\_](appendix-a-index.html#context-var)**,
 which is used by built in Perl functions as an implicit
 parameter and as memory of the last result
 
-*currying* &mdash;
+<a id="currying"/>
+**currying** &mdash;
 creating a *[subroutine](routine)* that calls another with certain
 *[parameter](#parameter)* to be predefined
 
@@ -161,7 +168,7 @@ operators that alter the meaning of other normal operators
 # O
 
 <a id="OOP"/>
-*OOP* *(object oriented orogramming)* &mdash; programming paradigm (style), that
+**OOP** *(object oriented orogramming)* &mdash; programming paradigm (style), that
 arranges data and functions that belong together into so called
 objects
 
@@ -169,34 +176,35 @@ objects
 # P
 
 <a id="OOP"/>
-*parameter* &mdash;
+**parameter** &mdash;
 value passed to a method or *[subroutine](routine)*,
 mostly as part of the signature
 
 <a id="parsetree"/>
-*parsetree* &mdash;
+**parsetree** &mdash;
 hierarchical data representing the logical structure
 of a program, also called *[AST](#AST)*
 
 <a id="phaser"/>
-[phaser](appendix-b-grouped.html#closure-traits) &mdash;
+**[phaser](appendix-b-grouped.html#closure-traits)** &mdash;
 Perl 6 term for specially named subblocks withe special runtimes
 aka closure traits &mdash;
 example: **[BEGIN](appendix-a-index.html#BEGIN-phaser)**
 
 <a id="pipe"/>
-*pipe* &mdash; connection between 2 processes, move data (mostly only in
+**pipe** &mdash; connection between 2 processes, move data (mostly only in
 one direction) without buffering
 
 <a id="POD"/>
-*[POD](tablet-2-basic-syntax.html#pod)* 
+**[POD](tablet-2-basic-syntax.html#pod)**
 *(Plain Old Documentation)* &mdash; 
 a markup language to embeded  documentation into Perl source code,
 has in Perl 6 the ability to store data into special variables 
 like **[\$=pod](appendix-a-index.html#pod-pod-var)** to be retrieved later
 
 <a id="pointy-block"/>
-*pointy block* &mdash; a block that is given readonly *[parameters](parameter)* with
+**pointy block** &mdash;
+a block that is given readonly *[parameters](parameter)* with
 **[-\>](appendix-a-index.html#arrow-op)** or rw parameters with
 **[<-\>](appendix-a-index.html#lower-minus-greater-op)**
 
@@ -208,40 +216,46 @@ like **[\$=pod](appendix-a-index.html#pod-pod-var)** to be retrieved later
 # R
 
 <a id="reference"/>
-*reference* &mdash;
+**reference** &mdash;
 address of data in memory, often termed a capture in Perl 6
 
 <a id="regular-expression"/>
-*regular expression* &mdash; in Perl5: pattern matching notation, either
+**regular expression** &mdash; in Perl5: pattern matching notation, either
 regex, token or rule in Perl6
 
 <a id="routine"/>
-*routine* &mdash;
+**routine** &mdash;
 block of code callable by name,
 can have a *[signature](#signature)* and a return type,
 objects of the type **[SoftRoutine](appendix-a-index.html#softroutine-type)**
 and **[HardRoutine](appendix-a-index.html#hardroutine-type)**
 
 <a id="run-time"/>
-*run time* &mdash; time when execution hits a certain part of the program,
+**run time** &mdash; time when execution hits a certain part of the program,
 after *[compile time](#compile-time)*
 
 
 # S
 
-*scope* &mdash; the block of code within which an identifier is usable
+<a id="scope"/>
+**scope** &mdash;
+area within which an identifier (like a variable) is usable,
+normally the current [block](#block)
 
-*sigil* &mdash; character that serves as a prefix to categorize the
+<a id="sigil"/>
+**sigil** &mdash; character that serves as a prefix to categorize the
 following name, most prominent in Perl are the variable
 [sigils](appendix-b-grouped.html#sigils)
 : **[$](appendix-a-index.html#dollar-sigil)**,
 **[@](appendix-a-index.html#at-sigil)** and
 **[%](appendix-a-index.html#percent-sigil)**
 
-*signature* &mdash; function parameters (left-hand side of a binding),
+<a id="signature"/>
+**signature** &mdash; function parameters (left-hand side of a binding),
 surrounded by round parentheses
 
-*slang* &mdash;
+<a id="slang"/>
+**slang** &mdash;
 sublanguages of Perl 6, their grammar is mostly stored
 in [special variables](appendix-b-grouped.html#special-variables)
 with the [twigil](#twigil) \~, such as
@@ -252,27 +266,34 @@ you can change or alter them with this keyword by using the
 or **[supersede](appendix-a-index.html#supersede)** command
 
 
-*slice* &mdash; part of an array or list
+<a id="slice"/>
+**slice** &mdash;
+part of an array or list
 
-*slurpy array* &mdash;
+<a id="slurpy array"/>
+**slurpy array** &mdash;
 array parameter that receives all (slurps) all optional
 *[subroutine](#routine)* arguments
 
-*subroutine* &mdash;
+<a id="subroutine"/>
+**subroutine** &mdash; much used, Perl 5-ish term for [routine](#routine)
 
 # T
 
-*topicalizer* &mdash;
+<a id="topicalizer"/>
+**topicalizer** &mdash;
 every keyword that sets the **[$\_](appendix-a-index.html#context-var)**
 variable, like *[given](appendix-a-index.html#given)*
 and *[for](appendix-a-index.html#for)*
 
-*trait* &mdash;
+<a id="yadda-operator"/>
+**trait** &mdash;
 additional property of a variable, defined at *[compile time](#compile-time)*,
 see **[but](appendix-a-index.html#but)**, what other languages call
 *trait* Perl calls [role](#role)
 
-*[twigil](appendix-b-grouped.html#twigils)* &mdash;
+<a id="yadda-operator"/>
+**[twigil](appendix-b-grouped.html#twigils)** &mdash;
 second(ary) *[sigil](#sigil)* indicating a
 special property of a variable
 
@@ -288,7 +309,7 @@ special property of a variable
 # Y
 
 <a id="yadda-operator"/>
-*[yadda operator](operators.html#yadda)* &mdash;
+**[yadda operator](operators.html#yadda)** &mdash;
 placeholder for later to be written code, because in empty
 routines are forbidden, comes in 3 flavours:
 **[...](appendix-a-index.html#triple-dot-yadda-op)**,
