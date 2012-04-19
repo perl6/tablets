@@ -129,6 +129,10 @@ by Perl 6, considered as a branch of Declarative Programming
 
 # I
 
+<a id="invocant"/>
+**invocant** &mdash; *[routine](#routine)* or term that called
+the piece of code of issue
+
 <a id="iteration"/>
 **iteration** &mdash;
 repeated executing of a term or *[block](#block)*, enforced by
@@ -329,8 +333,8 @@ second(ary) *[sigil](#sigil)* indicating a special property of a variable,
 
 <a id="yadda-operator"/>
 **[yadda operator](operators.html#yadda)** &mdash;
-placeholder for later to be written code, because in empty
-[routines](#routine) are forbidden, comes in 3 flavours:
+placeholder for later to be written code inside a [routine](#routine),
+because empty ones are forbidden, comes in 3 flavours:
 **[...](appendix-a-index.html#triple-dot-yadda-op)** (fail),
 **[???](appendix-a-index.html#triple-question-mark)** (warn) and
 **[!!!](appendix-a-index.html#triple-exclamation-mark)** (die)
