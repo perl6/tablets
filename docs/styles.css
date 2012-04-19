@@ -2,7 +2,17 @@
 
 body {
     background-color: #eee;
-    color: #2a2a2a;
+    color: #333;
+    width: 80%;
+    font-family: 'Oxygen', sans-serif;
+}
+
+#main-box {
+    background-color: #fff;
+    border: 2px solid #ccc;
+    margin: 20px;
+    padding: 20px;
+    line-height: 1.4;
 }
 
 .you-provide {
@@ -19,19 +29,19 @@ a:visited {
 }
 
 table {
-    background-color: #ddd;
+    background-color: #eee;
     padding-left: 2px;
-    border: 2px solid #bbb;
+    border: 2px solid #ccc;
     border-collapse: collapse;
 }
 
 th {
-    background-color: #bbb;
+    background-color: #d4d4d4;
     padding-right: 4px;
 }
 
 tr, td, th {
-    border: 2px solid #bbb;
+    border: 2px solid #ccc;
     padding-left: 4px;
     padding-left: 4px;
 }
@@ -41,18 +51,17 @@ dt {
 }
 
 pre {
-    border: 1px solid #ccc;
-    background-color: #ddd;
+    border: 1px solid #ddd;
+    background-color: #eee;
     padding-left: 6px;
     padding-right: 2px;
-    padding-bottom: 5px;
-    padding-top: 5px;
-    margin-left: 34px;
+    padding-top: 2px;
+    padding-bottom: 2px;
 }
 
 blockquote {
-    background-color: #bcd;
-    border: 1px solid #abc;
+    background-color: #cde;
+    border: 1px solid #bcd;
     padding-top: 2px;
     padding-bottom: 2px;
     padding-left: 16px;
@@ -61,7 +70,6 @@ blockquote {
 
 h1,h2,h3,h4,h5,h6 {
     color: #444;
-    font-family: sans-serif;
 }
 
 h3, h5 {

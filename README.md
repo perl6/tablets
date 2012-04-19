@@ -1,9 +1,11 @@
 Overview
 ========
 
-These are the Perl Tablets, translated from html (where they currently
-reside at the Perl 6 SocialText wiki), into
+These are the Perl Tablets, translated from html (which currently
+still reside at the Perl 6 SocialText wiki), into
 [Pandoc-Markdown](http://johnmacfarlane.net/pandoc/).
+
+They are available online at <http://tablets.perl6.org>.
 
 
 
@@ -37,7 +39,6 @@ Publishing the Tablets
 ======================
 
 `scp` the docs/*.html files and the styles.css file to the web.
-These may end up appearing at <http://tablets.perl6.org/>.
 
 
 
