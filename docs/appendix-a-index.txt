@@ -3744,6 +3744,7 @@ strings are taken as single words), short form of
 **[:quotewords](#quotewords-adverb)**, used in
 **[\<\<...\>\>](#double-angle-brackets)**
 
+<a id="ww-subrule"/>
 **\<ww\>**
 *[(predefined subrule)](appendix-b-grouped.html#subrules)* &mdash;
 zero-width space inside of a word between two
@@ -3754,56 +3755,67 @@ zero-width space inside of a word between two
 
 # X
 
+<a id="X-op"/>
 **X**
 *[(list op)](tablet-4-operators.html#list-generation)* &mdash;
 Cross product of two arrays, alias of
 **[cross](#cross)** method &mdash;
 example: *1,2 X 3,4 == 1,3,1,4,2,3,2,4;*
 
+<a id="x-op"/>
 **x**
 *[(string op)](tablet-4-operators.html#string-context)* &mdash;
 string replicate operator to single string &mdash;
 example: *'ab' x 3 == 'ababab';*
 
+<a id="X-metaop"/>
 **X**<span class="you-provide">op</span>
 *[(meta op)](appendix-b-grouped.html#metaoperators)* &mdash;
 Cross product with hyper operator, alias of
 **[crosswith](#crosswith)** method &mdash;
 example: *\<a b\> X\~ \<y z\> == \<ay az by bz\>;*
 
+<a id="X-filetest"/>
 **:X**
 *[(filetest op)](appendix-b-grouped.html#filetest-ops)* &mdash;
 check if file is executable by real uid/gid
 
+<a id="x-filetest"/>
 **:x**
 *[(filetest op)](appendix-b-grouped.html#filetest-ops)* &mdash;
 check if file is executable by effective uid/gid
 
-**:x** *[(quoting
-adverb)](appendix-b-grouped.html#quoting-adverbs)* &mdash;
+<a id="x-adverb"/>
+**:x**
+*[(quoting adverb)](appendix-b-grouped.html#quoting-adverbs)* &mdash;
 quoted string will be evaluated as Perl code (like
 **[eval](#eval)**) and replaced with its result,
 alias to **[Q](#capital-q-op)**
 **[:exec](#exec-adverb)** **/.../** and
 **[qx/.../](#qx-op)**
 
+<a id="x-modifier"/>
 **:x**(<span class="you-provide">n</span>)
 *[(regex modifier)](appendix-b-grouped.html#regex-modifier)* &mdash;
 searching n times (n is an int) with this pattern
 
+<a id="X-escape"/>
 **\\X\[<span class="you-provide">n</span>\]**
 *[(escape sequence)](appendix-b-grouped.html#escape-sequences)* &mdash;
 anything but the character given in hexadecimal (brackets
 optional)
 
+<a id="x-escape"/>
 **\\x\[<span class="you-provide">n</span>\]**
 *[(escape sequence)](appendix-b-grouped.html#escape-sequences)* &mdash;
 character given in hexadecimal (brackets optional)
 
+<a id="xdigit-subrule"/>
 **\<xdigit\>**
 *[(predefined subrule)](appendix-b-grouped.html#subrules)* &mdash;
 single hexadecimal digit char
 
+<a id="xor-op"/>
 **xor**
 *[(logical op)](tablet-4-operators.html#logical-selection)* &mdash;
 [infix](#infix-category) logical *eXclusive OR*
@@ -3811,6 +3823,7 @@ operator (*XOR*), **[True](#true)** if only one side
 has positive value, returns otherwise left value, low precedence
 version of **[\^\^](#double-caret-op)**
 
+<a id="xx-op"/>
 **xx**
 *[(infix list op)](tablet-4-operators.html#list-generation)* &mdash;
 replicate a list *$n* (second operand) times &mdash;
