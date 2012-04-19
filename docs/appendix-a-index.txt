@@ -230,7 +230,7 @@ raises a number to a power, forces numeric context
 *[(regex metachar)](appendix-b-grouped.html#quantifier)* &mdash;
 not backtracking, greedy quantifier taking zero or more findings
 
-**\*\*** <span class="you-provide">n</span>
+**\*\***<span class="you-provide">n</span>
 *[(regex metachar)](appendix-b-grouped.html#quantifier)* &mdash;
 quantifier for explicit repeat char or group, like
 **[x](#x)** *(string op)* does outside of a regex &mdash;
@@ -361,7 +361,7 @@ first positional submatch, there is **`$1`**, **`$2`**, ... too
 [**`$/[0]`**](#backslash-var), former $0 is now
 [**\$\*EXECUTABLE\_NAME**](#executable-name-global-var)
 
-**:** &mdash;
+**:**() &mdash;
 *[pair](tablet-3-variables#pair)*
 generation operator, also known as *adverbial* syntax
 
@@ -1352,7 +1352,7 @@ default
 *[(special var)](appendix-b-grouped.html#global-variables)* &mdash;
 running OS distribution, you might want to use `$*DISTRO.name`,
 see also: **[`$*KERNEL`](#kernel-global-var)** and
-**[`$*VM`](#vm-global-var)**
+**[\$\*VM](#vm-global-var)**
 
 **$\?DISTRO**
 *[(special var)](appendix-b-grouped.html#global-variables)* &mdash;
@@ -3748,13 +3748,13 @@ Cross product of two arrays, alias of
 **[cross](#cross)** method &mdash;
 example: *1,2 X 3,4 == 1,3,1,4,2,3,2,4;*
 
-**x** *[(string
-op)](tablet-4-operators.html#string-context)*
+**x**
+*[(string op)](tablet-4-operators.html#string-context)* &mdash;
 string replicate operator to single string &mdash;
 example: *'ab' x 3 == 'ababab';*
 
-**X**<span class="you-provide">op</span> *[(meta
-op)](appendix-b-grouped.html#metaoperators)*
+**X**<span class="you-provide">op</span>
+*[(meta op)](appendix-b-grouped.html#metaoperators)* &mdash;
 Cross product with hyper operator, alias of
 **[crosswith](#crosswith)** method &mdash;
 example: *\<a b\> X\~ \<y z\> == \<ay az by bz\>;*
