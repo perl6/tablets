@@ -146,13 +146,13 @@ several values, example: (A and B) or C, creat them with
 # L
 
 <a id="list-contex"/>
-**list context** -
+**list context** &mdash;
 
 <a id="LTM"/>
-**LTM** *(longest token matching)* &mdash; when searching a pattern
-with alternatives (sub|substr) the search will continue after
-finding the pattern 'sub' because of looking for the longest
-alternative
+**LTM** *(longest token matching)* &mdash;
+when searching a pattern with alternatives (sub|substr)
+the search will continue after finding the pattern 'sub'
+because of looking for the longest alternative
 
 # M
 
@@ -161,16 +161,22 @@ alternative
 operators that alter the meaning of other normal operators
 
 <a id="metaprogramming"/>
-**metaprogramming** -
+**metaprogramming** &mdash;
 
 # N
+
+<a id="named-parameter"/>
+**named parameter** &mdash;
+
+<a id="numeric-context"/>
+**numeric context** &mdash;
 
 # O
 
 <a id="OOP"/>
-**OOP** *(object oriented orogramming)* &mdash; programming paradigm (style), that
-arranges data and functions that belong together into so called
-objects
+**OOP** *(object oriented orogramming)* &mdash;
+programming paradigm (style), that arranges data and functions
+that belong together into so called objects
 
 
 # P

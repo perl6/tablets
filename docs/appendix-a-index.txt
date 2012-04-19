@@ -37,7 +37,7 @@ high precedence version of [**not**](#not)
 <a id="exclamation-twigil"/>
 **\!**
 *[(twigil)](appendix-b-grouped.html#twigils)* &mdash;
-[twigil](#twigil) of private class and object variables
+[twigil](appendix-g-glossary.html#twigil) of private class and object variables
 
 <a id="exclamation-signature"/>
 **\!**
@@ -93,7 +93,7 @@ works even inside regexes as a
 starts comments to the lineending like **\#**, just makes
 documenting comments that end up in
 *[&routine.WHY.content](#why-introspection)* on the
-following *[routine](#routine)*
+following *[routine](appendix-g-glossary.html#routine)*
 
 <a id="pound-apostrophe"/>
 **[\#\`( )](tablet-2-basic-syntax.html#multi-line)** &mdash;
@@ -147,7 +147,7 @@ example: `\d % ','` matches `1,2,3,4,5`
 <a id="double-percent-op"/>
 **%%**
 *[(numeric op)](tablet-4-operators.html#numeric-context)*  &mdash;
-**[True](#true)** if the left value is evenly
+**[True](#True)** if the left value is evenly
 divisible by the right value
 
 <a id="double-percent-metachar"/>
@@ -160,10 +160,10 @@ example: `\d %% ','` matches `1,2,3,4,5,`
 <a id="ampersand"/><a id="ampersand-sigil"/>
 **[&](tablet-3-variables#callable)**
 *[(sigil)](appendix-b-grouped.html#sigils)* &mdash;
-*[sigil](#sigil)* of
+*[sigil](appendix-g-glossary.html#sigil)* of
 [callables](tablet-3-variables#callable)
 like [subs](#sub), [methods](#method)
-and other [blocks](#block)
+and other [blocks](appendix-g-glossary.html#block)
 
 <a id="ampersand-context-op"/>
 **&**()
@@ -174,7 +174,7 @@ context, alias to **[code()](#code_context_op)**
 <a id="ampersand-op"/>
 **&**
 *[(junctive op)](tablet-4-operators.html#junctions)* &mdash;
-*[junctive](#junction)* *AND*, requires that all
+*[junctive](appendix-g-glossary.html#junction)* *AND*, requires that all
 conditions are met, see also: **[all](#all)**
 
 <a id="ampersand-metachar"/>
@@ -186,7 +186,7 @@ match multiple patterns (*AND*-connection of patterns)
 **&&**
 *[(logical op)](tablet-4-operators.html#logical-selection)* &mdash;
 short circuit *AND*, evals right side if left side returns
-**[True](#true)**, high precedence version of
+**[True](#True)**, high precedence version of
 **[and](#and)**
 
 <a id="single-quotation"/>
@@ -195,27 +195,32 @@ short circuit *AND*, evals right side if left side returns
 simple quoting, just / and ' must be escaped, alias to
 **[q/.../](#q-op)** or **Q :q/.../**
 
-**()** &mdash;
+<a id="round-brackets"/>
+**( )** &mdash;
 grouping of values (parameters) to a *[Parcel](parcel-type)*
 
-**()**
+<a id="round-brackets-metachar"/>
+**( )**
 *[(regex metachar)](appendix-b-grouped.html#regex-metacharacter)* &mdash;
 encompass a *subregex* / *submatch* , results land in
 **[@()](#round-brackets-var)** or
 **[$0](#0-var)**... (not limited to $9 anymore)
 
-**@()**
+<a id="round-brackets-var"/>
+**@( )**
 *[(special var)](appendix-b-grouped.html#match-variables)* &mdash;
 holds positional submatches, **`$()[n]`** is alias to
-[**`$/[n]`**](#match-var) and [**`$n`**](#0-var)
+[**`$/[n]`**](#slash-var) and [**`$n`**](#0-var)
 
+<a id="asterisk-op"/>
 **\***
 *[(numeric op)](tablet-4-operators.html#numeric-context)* &mdash;
 multiplies numbers, forces numeric context
 
+<a id="asterisk"/>
 **\***
 *(term)* &mdash;
-synonym for **[Whatever](#whatever)**, for example, means **[Inf](#Inf)**
+synonym for **[Whatever](#Whatever)**, for example, means **[Inf](#Inf)**
 in a [range operator](#range-op) (**..**), means the
 end of an array in a slice operator so that negative indices access
 array elements relative to one beyond the final element
@@ -227,7 +232,7 @@ array elements relative to one beyond the final element
 
 **\***
 *[(twigil)](appendix-b-grouped.html#twigils)* &mdash;
-*[twigil](#twigil)* of global variables
+*[twigil](appendix-g-glossary.html#twigil)* of global variables
 
 **\***
 *[(regex metachar)](appendix-b-grouped.html#quantifier)* &mdash;
@@ -252,7 +257,7 @@ example: `(ha)**3` matches `(hahaha)`
 *[(context op)](appendix-b-grouped.html#contextualizers)*
 *[(numeric op)](tablet-4-operators.html#numeric-context)* &mdash
 [infix](#infix-category) addition operator,
-forces [numeric context](#numeric-context)
+forces [numeric context](appendix-g-glossary.html#numeric-context)
 
 **+**
 *[(regex metachar)](appendix-b-grouped.html#quantifier)* &mdash;
@@ -266,7 +271,7 @@ bitwise *AND*, forces numeric context
 *[(sequence traversal)](tablet-4-operators.html#traversing-sequence)* &mdash;
 generic autoincrement, calls internal iterator of that object,
 before (prefix) or after (suffix) the
-[evaluation](#evaluation) of the surrounding term,
+[evaluation](appendix-g-glossary.html#evaluation) of the surrounding term,
 alias to **[succ](#succ)**
 
 **+<**
@@ -298,23 +303,24 @@ forces numeric context (and negates)
 *[(sequence traversal)](tablet-4-operators.html#traversing-sequence)* &mdash;
 generic autodecrement, calls internal iterator of that object,
 before (prefix) or after (suffix) the
-[evaluation](#evaluation) of the surrounding term,
+[evaluation](appendix-g-glossary.html#evaluation) of the surrounding term,
 alias to **[pred](#pred)**
 
 **--\>**
 *[(signature symbol)](appendix-b-grouped.html#signature-symbols)* &mdash;
 declares the type of the return value of a
-*[routine](#routine)*, type name is placed after
+*[routine](appendix-g-glossary#routine)*, type name is placed after
 this arrow at the end of a signature
 
 **-\>**
 *[(signature symbol)](appendix-b-grouped.html#signature-symbols)* &mdash;
-declares named parameters for a *[block](#block)* (pointy block)
+declares named parameters for a *[block](appendix-g-glossary.html#block)*
+(pointy block)
 
 <a id="dot"/><a id="dot-twigil"/>
 **.**
 *[(twigil)](appendix-b-grouped.html#twigils)* &mdash;
-*[twigil](#twigil)* of public accessors
+*[twigil](appendix-g-glossary.html#twigil)* of public accessors
 (getter/setter methods)
 
 **.** *[(regex
@@ -336,7 +342,7 @@ operator, infix operator for list generation
 **...**
 *[(yadda op)](tablet-4-operators.html#yadda)* &mdash;
 term that calls **[fail](#fail)** (exception),
-marks unimplemented empty *[routine](#routine)*
+marks unimplemented empty *[routine](appendix-g-glossary.html#routine)*
 bodies
 
 **/** *[(numeric op)](tablet-4-operators.html#numeric-context)*
@@ -351,7 +357,7 @@ type](appendix-b-grouped.html#immutable-types)
 **$/** 
 *[(special var)](appendix-b-grouped.html#match-variables)* &mdash;
 last created match object of this
-*[block](#block)*
+*[block](appendix-g-glossary.html#block)*
 
 **//**
 *[(logical op)](tablet-4-operators.html#logical-selection)* &mdash;
@@ -386,8 +392,8 @@ example: *":" \~ one (<r w x o R W X O e z s f d l p S b c t u g k T B M A C\>)*
 
 **:**
 *[(twigil)](appendix-b-grouped.html#twigils)* &mdash;
-*[twigil](#twigil)* of autogenerated named
-parameters of a *[block](#block)*
+*[twigil](appendix-g-glossary.html#twigil)* of autogenerated named
+parameters of a *[block](appendix-g-glossary.html#block)*
 
 **:**<span class="you-provide">N</span>\<<span class="you-provide">n</span>\> &mdash;
 [general radix form](tablet-2-basic-syntax.html#general-radix-form)
@@ -400,13 +406,13 @@ suffix of all labels you can jump to with **[goto](#goto)**
 
 **:**
 *[(signature symbol)](appendix-b-grouped.html#signature-symbols)* &mdash;
-prefix of a *[named parameter](#named-parameter)* in
+prefix of a *[named parameter](appendix-g-glossary.html#named-parameter)* in
 a signature, they are positional when without colon
 
 **::**
 *[(sigil)](appendix-b-grouped.html#sigils)* &mdash;
-abstraction [sigil](#sigil) and namespace
-separator in variable / [routine](#routine) /
+abstraction [sigil](appendix-g-glossary.html#sigil) and namespace
+separator in variable / [routine](appendix-g-glossary.html#routine) /
 namespace names (like in Perl 5)
 
 **::**
@@ -430,13 +436,13 @@ separates [statements](tablet-2-basic-syntax.html#statements)
 **<**
 *[(num comparison)](tablet-4-operators.html#numerical-comparison)* &mdash;
 [infix](#infix-category) op, less than,
-**[True](#true)** if numerically ordered the left
+**[True](#True)** if numerically ordered the left
 comes before the right operand
 
 **<-\>**
 *[(signature symbol)](appendix-b-grouped.html#signature-symbols)* &mdash;
 double pointy syntax to assign a rw parameter to a
-*[block](#block)*
+*[block](appendix-g-glossary.html#block)*
 
 **\<\<**
 *[(meta op)](appendix-b-grouped.html#metaoperators)* &mdash;
@@ -477,14 +483,14 @@ numeric less-equal-greater comparison for sortable classes, does
 *[(quoting op)](appendix-b-grouped.html#quoting-ops)* &mdash;
 [circumfix](#circumfix-category) quoting operator
 for grouping with autoquoting, alias to
-**[Q](#capital-q-op)** **:q**
+**[Q](#Q-op)** **:q**
 **[:ww](#ww-adverb)** **/.../** or
 **[qw/.../](#qw-op)**
 
 **< \>**
 *[(twigil)](appendix-b-grouped.html#twigils)* &mdash;
 [circumfix](#circumfix-category)
-*[twigil](#twigil)* of named captures, **`$<...>`**
+*[twigil](appendix-g-glossary.html#twigil)* of named captures, **`$<...>`**
 is alias to [**`$/<...>`**](#match-var), was $& and
 $MATCH in Perl 5
 
@@ -496,12 +502,12 @@ embraces an subrule (assertion)
 **[=](tablet-3-variables#assignment)**
 *(Op)* &mdash;
 [assignment](tablet-3-variables#assignment),
-right side is [evaluated](#evaluation) and assigned
+right side is [evaluated](appendix-g-glossary.html#evaluation) and assigned
 to the left
 
 **=**
 *[(twigil)](appendix-b-grouped.html#twigils)* &mdash;
-[pod](#pod) variable, mapped content from pod
+[POD](appendix-g-glossary.html#POD) variable, mapped content from POD
 sections of this file &mdash;
 examples:
 [**`$=pod`**](#pod-pod-var) and
@@ -519,7 +525,7 @@ if both vars are bound to same memory location
 
 **==**
 *[(num comparison)](tablet-4-operators.html#numerical-comparison)* &mdash;
-**[True](#true)** if values are equal in
+**[True](#True)** if values are equal in
 numerical context, as **[eq](#eq)** does in *[string
 context](tablet-4-operators.html#string-context)*
 
@@ -556,8 +562,8 @@ binds operator (right) as hyper operator to an array (left)
 **[?](tablet-4-operators.html#logical-selection)**
 *[(context op)](appendix-b-grouped.html#contextualizers)* &mdash;
 forces *[boolean context](tablet-4-operators.html#bool-context)*
-in an expression, returns **[False](#false)** when
-value is 0 or empty, otherwise **[True](#true)**,
+in an expression, returns **[False](#False)** when
+value is 0 or empty, otherwise **[True](#True)**,
 high precedence version of **[so](#so-op)**
 
 **?**
@@ -570,12 +576,12 @@ quantifier for 0 or 1 occurrence in Regexes
 
 **?**
 *[(twigil)](appendix-b-grouped.html#twigils)* &mdash;
-*[twigil](#twigil)* (secondary sigil) for
+*[twigil](appendix-g-glossary.html#twigil)* (secondary sigil) for
 constant compiler hint variables
 
 **\<?\>**
 *[(predefined subrule)](appendix-b-grouped.html#subrules)* &mdash;
-matches nothing, returns always **[True](#true)**,
+matches nothing, returns always **[True](#True)**,
 opposite of [**`<!>`**](#exclamation-mark-subrule)
 
 **?&**
@@ -634,7 +640,8 @@ original list, alias to **[triangle](#triangle)**
 
 **\\** &mdash;
 [capture generator](tablet-3-variables#capture),
-creates a *[capture](#capture)* that holds the following structure
+creates a *[capture](appendix-g-glossary.html#capture)*
+that holds the following structure
 
 **\\** *(escape char)* &mdash;
 all escape sequences with a width 
@@ -644,8 +651,8 @@ and [regexes](appendix-b-grouped.html#escape-sequences) start with it
 <a id="caret"/><a id="caret-op"/>
 **\^**
 *[(junctive op)](tablet-4-operators.html#junctions)* &mdash;
-*[junctive](#junction)* *XOR*, requires that one
-value in a list is **[True](#true)**, see also
+*[junctive](appendix-g-glossary.html#junction)* *XOR*, requires that one
+value in a list is **[True](#True)**, see also
 **[one](#one)**
 
 **\^** &mdash; upto operator, `^$limit expands to 0 ..\^ +$limit range`
@@ -658,7 +665,7 @@ limit value, in scalar context see smartmatch
 **\^**
 *[(twigil)](appendix-b-grouped.html#twigils)* &mdash;
 autogenerated positional parameters of a
-*[block](#block)*, position results from
+*[block](appendix-g-glossary.html#block)*, position results from
 alphabetical order of all $\^-Variables
 
 **\^**
@@ -673,7 +680,7 @@ start of the string
 **\^\^**
 *[(logical op)](tablet-4-operators.html#logical-selection)* &mdash;
 logical *XOR*, combines expressions, returns
-**[True](#true)** when only one expression is true,
+**[True](#True)** when only one expression is true,
 otherwise false, high precedence version of
 **[xor](#xor)**
 
@@ -695,7 +702,7 @@ identified as a hash or contains a **[=\>](#fatarrow)**
 <a id="pipe"/> <a id="pipe-op"/>
 **|**
 *[(junctive op)](tablet-4-operators.html#junctions)* &mdash;
-*[junctive](#junction)* *OR*,
+*[junctive](appendix-g-glossary.html#junction)* *OR*,
 requires that a condition is fulfilled
 - see also: **[any](#any)**
 
@@ -712,7 +719,7 @@ object into arglist, (named parameter)
 **||**
 *[(logical op)](tablet-4-operators.html#logical-selection)* &mdash;
 short circuit *OR*, evaluates sequentially, ends evaluation at
-the first expression that returns **[True](#true)**,
+the first expression that returns **[True](#True)**,
 high precedence version of **[or](#or)**
 
 **||**
@@ -733,9 +740,9 @@ forces *[string context](tablet-4-operators.html#string-context)*
 
 **\~**
 *[(twigil)](appendix-b-grouped.html#twigils)* &mdash;
-*[twigil](#twigil)* for a
+*[twigil](appendix-g-glossary.html#twigil)* for a
 [grammar](#grammar) of a sublanguage like
-**[$\~MAIN](#main-lang-var)**
+**[$\~MAIN](#MAIN-lang-var)**
 
 **\~&** *[(string op)](tablet-4-operators.html#string-context)* &mdash;
 characterwise *AND*, forces *[string
@@ -782,7 +789,7 @@ value in numeric context
 **after**
 *[(generic comparison)](tablet-4-operators.html#generic-comparison)* &mdash;
 generic comparison operator used by the Order class,
-**[True](#true)** if left should follow right
+**[True](#True)** if left should follow right
 
 **\<!after <span class="you-provide">p</span>\>**
 *[(predefined subrule)](appendix-b-grouped.html#subrules)* &mdash;
@@ -798,8 +805,8 @@ pattern will match
 
 **all**
 *[(junctive op)](tablet-4-operators.html#junctions)* &mdash;
-*[junctive](#junction)* *AND* operator,
-**[True](#true)** if all conditions (elements of a
+*[junctive](appendix-g-glossary.html#junction)* *AND* operator,
+**[True](#True)** if all conditions (elements of a
 following list) are fulfilled, see also:
 **[&](#junctive-and)**
 
@@ -835,7 +842,7 @@ Perl 6 object (default routine parameter type, excludes
 **any**
 *[(junctive op)](tablet-4-operators.html#junctions)* &mdash; 
 *[junctive](#junction)* *OR* operator,
-**[True](#true)** when any one condition (of a
+**[True](#True)** when any one condition (of a
 following list) is true in bool context, see also:
 **[|](#junctive-or)**
 
@@ -940,7 +947,7 @@ $base is smaller than 2 or larger than 36
 **before**
 *[(generic comparison)](tablet-4-operators.html#generic-comparison)* &mdash;
 generic comparison operator used by the Order class,
-**[True](#true)** when left should precede right
+**[True](#True)** when left should precede right
 
 **\<!before <span class="you-provide">p</span>\>**
 *[(predefined subrule)](appendix-b-grouped.html#subrules)* &mdash;
@@ -958,7 +965,7 @@ will match
 *[(closure trait)](appendix-b-grouped.html#closure-traits)* &mdash;
 marks as a prefix a special block or statement, executed at
 *[compile time](appendix-g-glossary.html#compile-time)*,
-[ASAP](appendix-g-glossary.html#asap), only ever runs once
+[ASAP](appendix-g-glossary.html#ASAP), only ever runs once
 
 **Bit**
 *[(immutable type)](appendix-b-grouped.html#immutable-types)* &mdash;
@@ -988,7 +995,7 @@ reference to current block
 **Bool**
 *[(immutable type)](appendix-b-grouped.html#immutable-types)* &mdash;
 Perl boolean, type of values that can be either
-**[True](#true)** or **[False](#false)**
+**[True](#True)** or **[False](#False)**
 which is in full length *Bool::True* and *Bool::False*
 
 **break**
@@ -1088,7 +1095,7 @@ alias to *[.join('')](#join)*
 *[(closure trait)](appendix-b-grouped.html#closure-traits)* &mdash;
 marks as a prefix a special block to catch
 **[Exceptions](#exception-type)**, before
-**[LEAVE](#leave-phaser)**
+**[LEAVE](#LEAVE-phaser)**
 
 **categorize**
 *[(array method)](tablet-3-variables#array-methods)* &mdash;
@@ -1136,8 +1143,8 @@ changes the current working directory
 **CHECK**
 *[(closure trait)](appendix-b-grouped.html#closure-traits)* &mdash;
 marks as a prefix a special block or statement, executed at
-*[compile time](appendix-g-glossary.html#compile-time)* ALAP, only ever runs
-once
+*[compile time](appendix-g-glossary.html#compile-time)*
+[ALAP](appendix-g-glossary.html#ALAP), only ever runs once
 
 **chmod** &mdash; changes access rights of files
 
@@ -1200,7 +1207,7 @@ long form of **[:c](#c-adverb)**, included in
 general [infix](#infix-category) sort comparator,
 result is *Order::Increase* (numerically -1) if
 **[before](#before)** is
-**[True](#true)** - *Order::Same* (numerically 0) if
+**[True](#True)** - *Order::Same* (numerically 0) if
 **[eqv](#eqv)** - *Order::Decrease* (numerically 1)
 if **[after](#after)**, see also:
 **[leg](#leg)** and
@@ -1270,7 +1277,7 @@ marks as a prefix a special block to catch control
 **[Exception](#exception-type)** (like
 **[next](#next)** / **[last](#last)**
 / **[return](#return)** etc), before
-**[LEAVE](#leave-phaser)**
+**[LEAVE](#LEAVE-phaser)**
 
 **Cool**
 *[(undefined value type)](appendix-b-grouped.html#undefined-types)* &mdash;
@@ -1452,7 +1459,7 @@ number of pairs
 introduces the alternative block after an
 **[if](#if)** or **[elsif](#elsif)**
 that is executed, when conditions of all alternatives resulted
-in **[false](#false)**, see also
+in **[false](#False)**, see also
 **[default](#default)**
 
 **[elsif](tablet-6-blocks.html#elsif)**
@@ -1466,13 +1473,12 @@ into raw binary UTF (**[Buf](#buf-type)**)
 
 **END**
 *[(closure trait)](appendix-b-grouped.html#closure-traits)* &mdash;
-marks as a prefix a special block, executed at run time, ALAP,
-only ever runs once
+marks as a prefix a special block, executed at run time,
+[ALAP](appendix-g-glossary.html#ALAP), only ever runs once
 
 **end**
 *[(array op & method)](tablet-3-variables#array-methods)* &mdash;
-last index of that list, see also:
-**[elems](#elems)**
+last index of that list, see also: **[elems](#elems)**
 
 **ENTER**
 *[(closure trait)](appendix-b-grouped.html#closure-traits)* &mdash;
@@ -1611,7 +1617,8 @@ anything but form feed
 *[(escape sequence)](appendix-b-grouped.html#escape-sequences)* &mdash;
 form feed
 
-**fail** &mdash; causes the routine to return an unthrown
+**fail** &mdash;
+causes the [routine](appendix-g-glossary.html#routine) to return an unthrown
 **[Exception](#exception-type)**, if *use fatal;* is
 in effect where the routine was called from, it throws the exception
 
@@ -1631,14 +1638,15 @@ Perl rational (unlimited precision in both parts)
 **[ff](tablet-4-operators.html#flipflop)**
 *(conditional op)* - tests **[$\_](#context-var)**
 against two values, flip flop operator in the style of awk, can
-test the right operand and become **[False](#false)**
-on the same evaluation it became **[True](#true)**
+test the right operand and become **[False](#False)**
+on the same evaluation it became **[True](#True)**
 formerly .. in scalar context
 
 **[fff](tablet-4-operators.html#flipflop)**
-*(conditional op)* - tests **[\$\_](#context-var)**
+*(conditional op)* &mdash;
+tests **[\$\_](#context-var)**
 against two values, flip flop operator in the style of sed, after
-became **[True](#true)**
+became **[True](#True)**
 (**[$\_](#context-op)** is larger then left value),
 right side will be tested during next loop
 *[iteration](#interation)*, formerly ... in scalar
@@ -1648,21 +1656,21 @@ context
 *[(special var)](appendix-b-grouped.html#compiler-hint-variables)* &mdash;
 current filename of source file
 
-**FIRST** *[(closure
-trait)](appendix-b-grouped.html#closure-traits)*
+**FIRST**
+*[(closure trait)](appendix-b-grouped.html#closure-traits)* &mdash;
 marks as a prefix a special block or statement, executed at loop
 initialization time, before any
-**[ENTER](#enter-phaser)**
+**[ENTER](#ENTER-phaser)**
 
-**first** *[(array op &
-method)](tablet-3-variables#array-methods)*
+**first**
+*[(array op & method)](tablet-3-variables#array-methods)* &mdash;
 returns first value of a list that passes a condition (first
 paramter); the condition is a closure that takes one value at a time
 (as [**`$_`**](#context-var) or `$^a`); works
 like [**grep**](#grep) &mdash; example : `first {$_ %% 2}, 1..5 ; # returns 2`
 
-**flat**() *[(context
-op)](appendix-b-grouped.html#contextualizers)*
+**flat**()
+*[(context op)](appendix-b-grouped.html#contextualizers)* &mdash;
 forces flat list context, opposite of
 **[lol()](#lol)** &mdash;
 example: `([2,3],[4,5]).flat` or `flat([2,3],[4,5])` results in: `[2..5]`
@@ -1672,12 +1680,14 @@ example: `([2,3],[4,5]).flat` or `flat([2,3],[4,5])` results in: `[2..5]`
 **[reverse](#reverse)** and
 **[invert](#invert)**
 
-**floor** *(num method)* &mdash; **[Int](#int-type)**
+**floor** *(num method)* &mdash;
+**[Int](#int-type)**
 (whole number) part of a **[Rat](#rat-type)**, just
 leaves the digits after the dot (".") out
 
 **[fmt](tablet-2-basic-syntax.html#fmt)**
-*(formater)* &mdash; variable method for simple
+*(formater)* &mdash;
+variable method for simple
 **[printf](#printf)** - like formating, takes a
 format specifier and returns a [string](#str-type) ,
 format specifier accepts only 1 value placeholder, in case of a hash
@@ -1685,25 +1695,24 @@ max. 2; second, optional parameter is delimiter between values or
 pairs (in case of a hash);
 
 **[for](tablet-6-blocks.html#for)**
-*[(block
-modifier)](appendix-b-grouped.html#loops)*
+*[(block modifier)](appendix-b-grouped.html#loops)* &mdash;
 loop that only iterates over the following list and sets
 **[$\_](#context-var)** for each
 *[iteration](#interation)* (contextualizer), see
 also: **[given](#given)**
 
-**[fork](tablet-5-io.html#processes)**
+**[fork](tablet-5-io.html#processes)** &mdash;
 creates a copy of the current process and returns in the
 original process a Proc object of the child (0 in num context) and
 in the child a proc object of the original (process ID in num
 context)
 
-**from-radians** &mdash; convert from radians to $base (second parameter),
+**from-radians** &mdash;
+convert from radians to $base (second parameter),
 opposite of **[to-radians](#to-radians)**
 
 **[:function](tablet-2-basic-syntax.html#interpolation)**
-*[(quoting
-adverb)](appendix-b-grouped.html#quoting-adverbs)*
+*[(quoting adverb)](appendix-b-grouped.html#quoting-adverbs)* &mdash;
 demands evaluation of functions (subs and methods), that start
 with the **[&-sigil](#ampersand-sigil)** and
 replacing them with the result, long form of
@@ -1833,7 +1842,7 @@ also **[first](#first)** &mdash; example : `grep {$_ %% 2}, 1..5 ; # returns 2 4
 **gt**
 *[(string comparison)](tablet-4-operators.html#string-comparison)* &mdash;
 [infix](#infix-category) operator, greater than
-or equal, **[True](#true)** if alphabetically
+or equal, **[True](#True)** if alphabetically
 ordered the right comes before the left (see also
 **[lt](#lt)**, **[leg](#leg)** and **<**)
 
@@ -1917,7 +1926,7 @@ same letter, short for **[:ignorecase](#ignorecase-modifier)**
 **[if](tablet-6-blocks.html#if)**
 *[(block modifier)](appendix-b-grouped.html#conditionals)* &mdash;
 if the following expression *[evals](#evaluation)*
-to **[True](#true)**, the block after that will be
+to **[True](#True)**, the block after that will be
 run, opposite of **[unless](#unless)**, can also be
 written at the end of an expression
 
@@ -1992,7 +2001,7 @@ but stay [infix](#infix-category) (between) two terms
 **INIT**
 *[(closure trait)](appendix-b-grouped.html#closure-traits)* &mdash;
 marks as a prefix a special block or statement, executed at run
-time, ASAP, only ever runs once
+time, [ASAP](appendix-g-glossary.html#ASAP), only ever runs once
 
 **inline** *(sub trait)* &mdash;
 
@@ -2049,7 +2058,7 @@ report if file has sticky bit set
 **KEEP**
 *[(closure trait)](appendix-b-grouped.html#closure-traits)* &mdash;
 marks as a prefix a special block, executed at every successful
-block exit, part of **[LEAVE](#leave-phaser)** queue
+block exit, part of **[LEAVE](#LEAVE-phaser)** queue
 
 **:keepall**
 *[(regex modifier)](appendix-b-grouped.html#regex-modifier)* &mdash;
@@ -2059,15 +2068,15 @@ forces subrules to memorize everything (even comments)
 *[(special var)](appendix-b-grouped.html#global-variables)* &mdash;
 (core or type of the) running operating system, use
 *$\*KERNEL.name* instead of Perl 5s $OSNAME, see also:
-**[$\*DISTRO](#distro-global-var)** and
-**[$\*VM](#vm-global-var)**
+**[\$\*DISTRO](#distro-global-var)** and
+**[\$\*VM](#vm-global-var)**
 
-**$?KERNEL**
+**\$?KERNEL**
 *[(special var)](appendix-b-grouped.html#global-variables)* &mdash; 
 kernel (core operating system) the program was compiled for,
 might want to use use `$?KERNEL.name`, see also:
-**[?\*DISTRO](#distro-compiler-var)** and
-**[$?VM](#vm-compiler-var)**
+**[\$?DISTRO](#distro-compiler-var)** and
+**[\$?VM](#vm-compiler-var)**
 
 **key**
 *[(pair method)](tablet-3-variables#pair)* &mdash;
@@ -2091,7 +2100,7 @@ returns list of hash keys
 
 **[kill](tablet-5-io.html#processes)** &mdash;
 sends the given $signal to the process(es) given and returns a
-boolean value indicating success (**[True](#true)**)
+boolean value indicating success (**[True](#True)**)
 
 **kv**
 *[(hash method)](tablet-3-variables#hash-methods)* &mdash;
@@ -2121,7 +2130,7 @@ current set of interwoven languages
 **LAST**
 *[(closure trait)](appendix-b-grouped.html#closure-traits)* &mdash;
 marks as a prefix a special block, executed at loop termination
-time, after any **[LEAVE](#leave-phaser)**
+time, after any **[LEAVE](#LEAVE-phaser)**
 
 **last**
 *[(flow control)](appendix-b-grouped.html#jump-commands)* &mdash;
@@ -2148,7 +2157,7 @@ least common multiple, see also: **[gcd](#gcd)**
 **le**
 *[(string comparison)](tablet-4-operators.html#string-comparison)* &mdash;
 [infix](#infix-category) operator, result is
-**[True](#true)** if left side is lower than or
+**[True](#True)** if left side is lower than or
 equal than the right, see also: **[lt](#lt)**,
 **[gt](#gt)** and **[ge](#ge)**
 
@@ -2225,7 +2234,7 @@ a single lowercase character
 **lt**
 *[(string comparison)](tablet-4-operators.html#string-comparison)* &mdash;
 [infix](#infix-category) operator, lower than,
-**[True](#true)** if alphabetically ordered the left
+**[True](#True)** if alphabetically ordered the left
 comes before the right
 
 
@@ -2374,7 +2383,7 @@ also name of the automatically called constructor method
 **NEXT**
 *[(closure trait)](appendix-b-grouped.html#closure-traits)* &mdash;
 marks as a prefix a special block, executed at loop continuation
-time, before any **[leave](#leave-phaser)**
+time, before any **[leave](#LEAVE-phaser)**
 
 **next**
 *[(flow control)](appendix-b-grouped.html#jump-commands)* &mdash;
@@ -2392,7 +2401,7 @@ example: *@a = Nil, Nil; \# array has zero elements*
 
 **none**
 *[(junctive op)](tablet-4-operators.html#junctions)* &mdash;
-return **[True](#true)** when a value is not
+return **[True](#True)** when a value is not
 part of a set, *[junctive](#junction)* *NOT*
 operator
 
@@ -2403,7 +2412,7 @@ normalize (repair) Unicode (UTF) string
 *[(context op)](appendix-b-grouped.html#contextualizers)* &mdash;
 logical *NOT* operator, converts to *[boolean
 context](tablet-4-operators.html#bool-context)*
-which means it returns **[False](#false)** if
+which means it returns **[False](#False)** if
 value is positive or otherwise, low precedence version of
 **[!()](#exclamation-mark-op)**
 
@@ -2442,7 +2451,7 @@ example: *subset Month of Int where { 1 <= $\^a <= 12 }*
 **one**
 *[(junctive op)](tablet-4-operators.html#junctions)* &mdash;
 *[junctive](#junction)* *XOR* operator,
-**[True](#true)** if only one expression (of a
+**[True](#True)** if only one expression (of a
 following list) is true in bool context, see also:
 **[|](#junctive-xor)**
 
@@ -2462,7 +2471,7 @@ options from command line
 op)](tablet-4-operators.html#logical-selection)*
 short circuit *OR*, [evaluates](#evaluation)
 sequentially, ends evaluation at the first expression that returns
-**[True](#true)**, low precedence version of
+**[True](#True)**, low precedence version of
 **[||](#high-or)**, similar to
 **[orelse](#orelse)**
 
@@ -2634,7 +2643,7 @@ for **[:p](#p-modifier)**
 *[(closure trait)](appendix-b-grouped.html#closure-traits)* &mdash;
 marks as a prefix a special block, assert postcondition,
 executed at every block exit, after
-**[LEAVE](#leave-phaser)**
+**[LEAVE](#LEAVE-phaser)**
 
 **postcircumfix**
 *[(grammatical category)](appendix-b-grouped.html#categories)* &mdash;
@@ -2656,7 +2665,7 @@ term &mdash; example (greater as): *@a \>\>++*
 **PRE**
 *[(closure trait)](appendix-b-grouped.html#closure-traits)* &mdash;
 marks as a prefix a special block, assert precondition, executed
-at every block entry, before **[ENTER](#enter-phaser)**
+at every block entry, before **[ENTER](#ENTER-phaser)**
 
 **pred**
 *[(sequence traversion)](tablet-4-operators.html#traversing-sequence)* &mdash;
@@ -3518,7 +3527,7 @@ and $UID in Perl 5
 *[(closure trait)](appendix-b-grouped.html#closure-traits)* &mdash;
 marks as a prefix a special block, executed at every
 unsuccessful block exit, part of
-**[LEAVE](#leave-phaser)** queue
+**[LEAVE](#LEAVE-phaser)** queue
 
 **uniq** *(list method)* &mdash; only unique elements of a list
 
@@ -3526,7 +3535,7 @@ unsuccessful block exit, part of
 *[(block
 modifier)](appendix-b-grouped.html#conditionals)*
 if the following expression *[evals](#evaluation)*
-to **[False](#false)**, the block after that will
+to **[False](#False)**, the block after that will
 be run, can also be written at the end of an expression, opposite of
 **[if](#if)**
 
@@ -3534,7 +3543,7 @@ be run, can also be written at the end of an expression, opposite of
 *[(block modifier)](appendix-b-grouped.html#loops)* &mdash;
 runs block repeatedly as long as the following expression
 *[evals](#evaluation)* to
-**[False](#false)**, can be combined with
+**[False](#False)**, can be combined with
 **[repeat](#repeat)**, can also be written at the
 end of an expression, opposite of **[while](#while)**
 
@@ -3692,7 +3701,7 @@ object ID (type)
 *[(block modifier)](appendix-b-grouped.html#loops)* &mdash;
 runs block repeatedly as long as the following expression
 *[evals](#evaluation)* to
-**[True](#true)**, can be combined with
+**[True](#True)**, can be combined with
 **[repeat](#repeat)**, can also be written at the
 end of an expression, opposite of **[until](#until)**
 
@@ -3819,7 +3828,7 @@ single hexadecimal digit char
 **xor**
 *[(logical op)](tablet-4-operators.html#logical-selection)* &mdash;
 [infix](#infix-category) logical *eXclusive OR*
-operator (*XOR*), **[True](#true)** if only one side
+operator (*XOR*), **[True](#True)** if only one side
 has positive value, returns otherwise left value, low precedence
 version of **[\^\^](#double-caret-op)**
 
