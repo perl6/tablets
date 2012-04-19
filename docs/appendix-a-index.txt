@@ -1348,18 +1348,18 @@ single (decimal) digit char aka
 returns all files of a given directory, excluding . and .. by
 default
 
-**$\*DISTRO**
+**\$\*DISTRO**
 *[(special var)](appendix-b-grouped.html#global-variables)* &mdash;
 running OS distribution, you might want to use `$*DISTRO.name`,
 see also: **[\$\*KERNEL](#kernel-global-var)** and
 **[\$\*VM](#vm-global-var)**
 
-**$\?DISTRO**
+**\$\?DISTRO**
 *[(special var)](appendix-b-grouped.html#global-variables)* &mdash;
 [OS](#kernel-compiler-var) distribution the
 program was compiled for, see also:
 **[\$?KERNEL](#kernel-compiler-var)** and
-**[\$*VM](#vm-compiler-var)**
+**[\$\*VM](#vm-compiler-var)**
 
 **[div](operators.html)** integer division
 
