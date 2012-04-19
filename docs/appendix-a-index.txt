@@ -1,10 +1,5 @@
 % Perl 6 Tablets Appendix A - Index
 
-**Navigation:** [A](#a) [B](#b) [C](#c) [D](#d) [E](#e)
-[F](#f) [G](#g) [H](#h) [I](#i) [J](#j) [K](#k) [L](#l)
-[M](#m#) [N](#n) [O](#o) [P](#p) [Q](#q) [R](#r) [S](#s)
-[T](#t#) [U](#u) [V](#v) [W](#w) [X](#x) [Y](#y) [Z](#z)
-
 This index contains an alphanumeric sorted list (sorted without
 prefixes like colon, slash, sigil or twigil) of all operators,
 methods, builtins, options, modifier and special variables (in
@@ -20,7 +15,12 @@ class="you-provide">var</span> any variable, <span
 class="you-provide">op</span> any operator, and <span
 class="you-provide">p</span> for a regex pattern.
 
-Before alpha chars (a-z) come the other in ASCII order:
+**Navigation:** [A](#a) [B](#b) [C](#c) [D](#d) [E](#e)
+[F](#f) [G](#g) [H](#h) [I](#i) [J](#j) [K](#k) [L](#l)
+[M](#m#) [N](#n) [O](#o) [P](#p) [Q](#q) [R](#r) [S](#s)
+[T](#t#) [U](#u) [V](#v) [W](#w) [X](#x) [Y](#y) [Z](#z)
+
+Before alpha chars (a-z) in ASCII order:
 `! " # $ % & ' ( * + , - . / 0 : ; < = > ? @ [ \ ^ _ { | ~`
 
 
@@ -55,17 +55,21 @@ negates (mostly [comparison operators](tablet-4-operators.html#comparison))
 *[(special var)](appendix-b-grouped.html#special-variables)* &mdash;
 last error message
 
+<a id="exclamation-mark-subrule"/>
 **\<\!\>**
 *[(predefined subrule)](appendix-b-grouped.html#subrules)* &mdash;
 inverse of [**\<?\>**](#question_mark_subrule), returns always false
 
+<a id="double-exclamation-mark"/>
 **!!** *[(conditional op)](appendix-b-grouped.html#conditionals)* &mdash; 
 just second part of the ternary (conditional) operator after
 **[??](#ternary-op)**, no op on its own
 
+<a id="triple-exclamation-mark"/>
 **!!!** *[(yadda op)](tablet-4-operators.html#yadda)* &mdash;
 yadda operator that calls **[die](#die)**
 
+<a id="double-quotation-marks"/>
 **[" "](tablet-2-basic-syntax.html#double-quotes)**
 *[(quoting op)](appendix-b-grouped.html#quoting-ops)* &mdash;
 double quoting, interpolates with
@@ -78,17 +82,20 @@ double quoting, interpolates with
 control chars), alias to **[qq/.../](#qq-op)** or
 **Q** **[:qq](#qq-adverb)** **/.../**
 
+<a id="pound"/>
 **[\#](tablet-2-basic-syntax.html#single-line)** &mdash;
 starts a comment that continues to the end of the line,
 works even inside regexes as a
 *[regex metachar](appendix-b-grouped.html#regex-metacharacter)*
 
+<a id="pound-equal"/>
 **[\#=](tablet-2-basic-syntax.html#pod)** &mdash;
 starts comments to the lineending like **\#**, just makes
 documenting comments that end up in
 *[&routine.WHY.content](#why-introspection)* on the
 following *[routine](#routine)*
 
+<a id="pound-apostrophe"/>
 **[\#\`( )](tablet-2-basic-syntax.html#multi-line)** &mdash;
 starts a multi-line comment that continues to the closing
 bracket, works with any combination of bracket pairs
@@ -109,6 +116,7 @@ forces scalar context, alias to the **[item()](#item)** function
 *[(regex metachar)](appendix-b-grouped.html#regex-metacharacter)* &mdash;
 end of the string
 
+<a id="double-dollar-metachar"/>
 **$$**
 *[(regex metachar)](appendix-b-grouped.html#regex-metacharacter)* &mdash;
 end of a line
@@ -1405,7 +1413,7 @@ default for scalars - not for lists
 **$\*EGID**
 *[(special var)](appendix-b-grouped.html#global-variables)* &mdash;
 effective global ID of the running process
-\(**[$\*PID](#pid-global-var)**\) owner,
+(**[\$\*PID](#pid-global-var)**) owner,
 was @\) and $EGID in Perl 5
 
 **elems** *[(array op &
@@ -1733,8 +1741,7 @@ establish a connection to a net host and retrieve information
 **$\*GID**
 *[(special var)](appendix-b-grouped.html#global-variables)* &mdash; 
 real global ID of the running process
-\(**[$\*PID](#pid-global-var)**\) owner, was @( and
-$GID in Perl 5
+(**[\$\*PID](#pid-global-var)**) owner, was @( and $GID in Perl 5
 
 **gist** *(formater)* &mdash;
 generates a **[Str](#str-type)** with the essential content of
@@ -2026,19 +2033,19 @@ block exit, part of **[LEAVE](#leave-phaser)** queue
 *[(regex modifier)](appendix-b-grouped.html#regex-modifier)* &mdash;
 forces subrules to memorize everything (even comments)
 
-**$\*KERNEL**
+**\$\*KERNEL**
 *[(special var)](appendix-b-grouped.html#global-variables)* &mdash;
 (core or type of the) running operating system, use
 *$\*KERNEL.name* instead of Perl 5s $OSNAME, see also:
-**[\$\*DISTRO](#distro-global-var)** and
-**[\$\*VM](#vm-global-var)**
+**[$\*DISTRO](#distro-global-var)** and
+**[$\*VM](#vm-global-var)**
 
-**\$?KERNEL**
+**$?KERNEL**
 *[(special var)](appendix-b-grouped.html#global-variables)* &mdash; 
 kernel (core operating system) the program was compiled for,
 might want to use use `$?KERNEL.name`, see also:
-**[\?\*DISTRO](#distro-compiler-var)** and
-**[\$?VM](#vm-compiler-var)**
+**[?\*DISTRO](#distro-compiler-var)** and
+**[$?VM](#vm-compiler-var)**
 
 **key**
 *[(pair method)](tablet-3-variables#pair)* &mdash;
@@ -2456,7 +2463,7 @@ declarator)](appendix-b-grouped.html#scope-declarator)*
 introduces **[package](#package)** &mdash; scoped
 names for variables and routines
 
-**$\*OUT** *[(special var)](appendix-b-grouped.html#global-variables)* &mdash;
+**\$\*OUT** *[(special var)](appendix-b-grouped.html#global-variables)* &mdash;
 standard output (command line mostly), see also
 **[$\*IN](#in-global-var)**
 
@@ -2467,7 +2474,6 @@ short for **:overlap**
 **:overlap** *[(regex modifier)](appendix-b-grouped.html#regex-modifier)* &mdash;
 searching at all positions just one time (with backtracking),
 long for **:ov**
-
 
 
 # P
@@ -3483,8 +3489,8 @@ local time zone
 op)](appendix-b-grouped.html#filetest-ops)*
 report if file has setuid bit set
 
-**\\U\[<span class="you-provide">n</span>\]** *[(escape
-sequence)](appendix-b-grouped.html#escape-sequences)*
+**\\U\[<span class="you-provide">n</span>\]**
+*[(escape sequence)](appendix-b-grouped.html#escape-sequences)* &mdash;
 everything within the brackets is uppercase
 
 **uc** &mdash; make all string chars uppercase
@@ -3513,16 +3519,15 @@ be run, can also be written at the end of an expression, opposite of
 **[if](#if)**
 
 **[until](tablet-6-blocks.html#until)**
-*[(block
-modifier)](appendix-b-grouped.html#loops)*
+*[(block modifier)](appendix-b-grouped.html#loops)* &mdash;
 runs block repeatedly as long as the following expression
 *[evals](#evaluation)* to
 **[False](#false)**, can be combined with
 **[repeat](#repeat)**, can also be written at the
 end of an expression, opposite of **[while](#while)**
 
-**unwrap** &mdash; remove an enclosing subroutine, see also:
-**[wrap](#wrap)**
+**unwrap** &mdash;
+remove an enclosing subroutine, see also: **[wrap](#wrap)**
 
 **\<upper\>**
 *[(predefined subrule)](appendix-b-grouped.html#subrules)* &mdash;
@@ -3571,13 +3576,13 @@ context](#list-context) does
 returns an array of just the values &mdash; example: *(1 =\> 2, 3 =\>
 4).values; \# returns (2,4)*
 
-**$\*VM**
+**\$\*VM**
 *[(special var)](appendix-b-grouped.html#global-variables)* &mdash;
 running virtual machine, might want to use *$\*VM.name*, see
-also: **[$\*DISTRO](#distro-global-var)** and
-**[$\*KERNEL](#kernel-global-var)**
+also: **[\$\*DISTRO](#distro-global-var)** and
+**[\$\*KERNEL](#kernel-global-var)**
 
-**$?VM**
+**\$?VM**
 *[(special var)](appendix-b-grouped.html#global-variables)* &mdash;
 virtual machine the program is compiled for, see also:
 **[$?DISTRO](#distro-compiler-var)** and
