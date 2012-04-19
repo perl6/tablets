@@ -21,57 +21,55 @@ class="you-provide">p</span> for a regex pattern.
 [T](#t#) [U](#u) [V](#v) [W](#w) [X](#x) [Y](#y) [Z](#z)
 
 Before alpha chars (a-z) in ASCII order:
-[!](#exclamation-mark) ["](#double-quotation-marks) [\#](#pound)
-[$](#dollar-sign)      [%](#percent)                [&](#ampersand)
-`' ( * + , - . / 0 : ; < = > ? @ [ \ ^ _ { | ~`
-
+[`! " #`](#exclamation) [`$ % &`](#dollar) [`' ( *`](#single-quotation) [`+ , -`](#plus)
+[`. / 0`](#dot) [`: ; <`](#colon) [`= > ?`](#equal) [`@ [ \`](#at) [`^ _ {`](#caret)   [`| ~`](#pipe)
 
 Punctuation
 ===========
 
-<a id="exclamation-mark"/><a id="exclamation-mark-op"/>
+<a id="exclamation"/><a id="exclamation-op"/>
 **\!** 
 *[(context op)](appendix-b-grouped.html#contextualizers)* &mdash;
 logical negation (*NOT*), forces
 [boolean context](tablet-4-operators.html#bool-context),
 high precedence version of [**not**](#not)
 
-<a id="exclamation-mark-twigil"/>
+<a id="exclamation-twigil"/>
 **\!**
 *[(twigil)](appendix-b-grouped.html#twigils)* &mdash;
 [twigil](#twigil) of private class and object variables
 
-<a id="exclamation-mark-signature"/>
+<a id="exclamation-signature"/>
 **\!**
 *[(signature symbol)](appendix-b-grouped.html#signature-symbols)* &mdash;
 suffix for a required parameter in signatures, thats default if it's a named
 parameter, not is it's a positional
 
-<a id="exclamation-mark-metaop"/>
+<a id="exclamation-metaop"/>
 **\!**<span class="you-provide">op</span> 
 *[(meta op)](appendix-b-grouped.html#metaoperators)* &mdash;
 negates (mostly [comparison operators](tablet-4-operators.html#comparison))
 
-<a id="exclamation-mark-var"/>
+<a id="exclamation-var"/>
 **\$\!**
 *[(special var)](appendix-b-grouped.html#special-variables)* &mdash;
 last error message
 
-<a id="exclamation-mark-subrule"/>
+<a id="exclamation-subrule"/>
 **\<\!\>**
 *[(predefined subrule)](appendix-b-grouped.html#subrules)* &mdash;
 inverse of [**\<?\>**](#question_mark_subrule), returns always false
 
-<a id="double-exclamation-mark"/>
+<a id="double-exclamation"/>
 **!!** *[(conditional op)](appendix-b-grouped.html#conditionals)* &mdash; 
 just second part of the ternary (conditional) operator after
 **[??](#ternary-op)**, no op on its own
 
-<a id="triple-exclamation-mark"/>
+<a id="triple-exclamation"/>
 **!!!** *[(yadda op)](tablet-4-operators.html#yadda)* &mdash;
 yadda operator that calls **[die](#die)**
 
-<a id="double-quotation-marks"/>
+<a id="double-quotation"/>
 **[" "](tablet-2-basic-syntax.html#double-quotes)**
 *[(quoting op)](appendix-b-grouped.html#quoting-ops)* &mdash;
 double quoting, interpolates with
@@ -102,7 +100,7 @@ following *[routine](#routine)*
 starts a multi-line comment that continues to the closing
 bracket, works with any combination of bracket pairs
 
-<a id="dollar-sign"/> <a id="dollar-sigil"/>
+<a id="dollar"/> <a id="dollar-sigil"/>
 **[\$](tablet-3-variables.html#scalar)**
 *[(sigil)](appendix-b-grouped.html#sigils)* &mdash;
 [prefix](#prefix-category) of [scalar
@@ -191,6 +189,7 @@ short circuit *AND*, evals right side if left side returns
 **[True](#true)**, high precedence version of
 **[and](#and)**
 
+<a id="single-quotation"/>
 **[' '](tablet-2-basic-syntax.html#single-quotes)**
 *[(quoting op)](appendix-b-grouped.html#quoting-ops)* &mdash;
 simple quoting, just / and ' must be escaped, alias to
@@ -248,6 +247,7 @@ quantifier for explicit repeat char or group, like
 **[x](#x)** *(string op)* does outside of a regex &mdash;
 example: `(ha)**3` matches `(hahaha)`
 
+<a id="plus"/><a id="plus-op"/>
 **+**
 *[(context op)](appendix-b-grouped.html#contextualizers)*
 *[(numeric op)](tablet-4-operators.html#numeric-context)* &mdash
@@ -311,6 +311,7 @@ this arrow at the end of a signature
 *[(signature symbol)](appendix-b-grouped.html#signature-symbols)* &mdash;
 declares named parameters for a *[block](#block)* (pointy block)
 
+<a id="dot"/><a id="dot-twigil"/>
 **.**
 *[(twigil)](appendix-b-grouped.html#twigils)* &mdash;
 *[twigil](#twigil)* of public accessors
@@ -373,6 +374,7 @@ first positional submatch, there is **`$1`**, **`$2`**, ... too
 [**`$/[0]`**](#backslash-var), former $0 is now
 [**\$\*EXECUTABLE\_NAME**](#executable-name-global-var)
 
+<a id="colon"/><a id="colon-adverb"/>
 **:**() &mdash;
 *[pair](tablet-3-variables#pair)*
 generation operator, also known as *adverbial* syntax
@@ -490,6 +492,7 @@ $MATCH in Perl 5
 *[(regex metachar)](appendix-b-grouped.html#regex-metacharacter)* &mdash;
 embraces an subrule (assertion)
 
+<a id="equal"/><a id="equal-op"/>
 **[=](tablet-3-variables#assignment)**
 *(Op)* &mdash;
 [assignment](tablet-3-variables#assignment),
@@ -597,6 +600,7 @@ logical *XOR*, forces operands into boolean context
 *[(bool op)](tablet-4-operators.html#bool-context)* &mdash;
 logical *OR*, forces operands into boolean context
 
+<a id="at"/><a id="at-sigil"/>
 **@**
 *[(sigil)](appendix-b-grouped.html#sigils)* &mdash;
 [sigil](#sigil) of an [array](tablet-3-variables#array)
@@ -637,6 +641,7 @@ all escape sequences with a width
 inside [quotes](appendix-b-grouped.html#control-chars)
 and [regexes](appendix-b-grouped.html#escape-sequences) start with it
 
+<a id="caret"/><a id="caret-op"/>
 **\^**
 *[(junctive op)](tablet-4-operators.html#junctions)* &mdash;
 *[junctive](#junction)* *XOR*, requires that one
@@ -687,6 +692,7 @@ context var, result of the last command, can set by topicalizers
 encloses blocks and creates a coderef, or a hashref when it is
 identified as a hash or contains a **[=\>](#fatarrow)**
 
+<a id="pipe"/> <a id="pipe-op"/>
 **|**
 *[(junctive op)](tablet-4-operators.html#junctions)* &mdash;
 *[junctive](#junction)* *OR*,
@@ -1532,7 +1538,8 @@ maybe error message in
 parameter defines a parser grammar which should understand the
 string
 
-**evalfile** - **[eval](#eval)** a file like 'do'
+**evalfile** &mdash;
+**[eval](#eval)** a file like 'do'
 did in Perl 5, with optional second parameter, which is a
 *[grammar](#grammar)* that can parse that file
 
@@ -1608,8 +1615,8 @@ form feed
 **[Exception](#exception-type)**, if *use fatal;* is
 in effect where the routine was called from, it throws the exception
 
-**Failure** *[(undefined value
-type)](appendix-b-grouped.html#undefined-types)*
+**Failure**
+*[(undefined value type)](appendix-b-grouped.html#undefined-types)* &mdash;
 data type object for an error, thrown by an unhandled
 **[Exception](#exception-type)**
 
@@ -1824,7 +1831,7 @@ at a time (as [**`$_`**](#context-var) or `$^a`); see
 also **[first](#first)** &mdash; example : `grep {$_ %% 2}, 1..5 ; # returns 2 4`
 
 **gt**
-*[(string comparison)](tablet-4-operators.html#string-comparison)*
+*[(string comparison)](tablet-4-operators.html#string-comparison)* &mdash;
 [infix](#infix-category) operator, greater than
 or equal, **[True](#true)** if alphabetically
 ordered the right comes before the left (see also
@@ -3087,41 +3094,40 @@ any whitespace character, horizontal (
 *[(predefined subrule)](appendix-b-grouped.html#subrules)* &mdash;
 match the zero-width space between two identical chars
 
-**:samecase** *[(regex
-modifier)](appendix-b-grouped.html#regex-modifier)*
+**:samecase**
+*[(regex modifier)](appendix-b-grouped.html#regex-modifier)* &mdash;
 only for substitutions, replacing with chars that have the same
 case pattern as the replaced, long for
 **[:ii](#ii-modifier)**
 
-**:samemark** *[(regex
-modifier)](appendix-b-grouped.html#regex-modifier)*
+**:samemark**
+*[(regex modifier)](appendix-b-grouped.html#regex-modifier)* &mdash;
 substitute with chars that has same mark/accent pattern as the
-matched string, long for ":mm"
+matched string, long for **[:mm](#mm-modifier)**
 
-**:samespace** *[(regex
-modifier)](appendix-b-grouped.html#regex-modifier)*
+**:samespace**
+*[(regex modifier)](appendix-b-grouped.html#regex-modifier)* &mdash;
 smart space mapping for substitutions, long for
 **[:ss](#ss-modifier)**,
 **[ss/.../.../](#ss-op)** is alias to
 **s:samespace/.../.../** &mdash; example: *ss/teh hsa/the has/;*
 
-**[say](tablet-5-io.html#say)**
+**[say](tablet-5-io.html#say)** &mdash;
 makes output via command line
 (**[$\*OUT](#out-global-var)**) like
 **[print](#print)**, but appends a newline
 (**[\\n](#backslash-n)**)
 
-**[say](tablet-5-io.html#say-for-files)**
+**[say](tablet-5-io.html#say-for-files)** &mdash;
 *(handle method)* &mdash; writes a stream into a file and appends
 **[\\n](#backslash-n)**
 
-**Scalar** *[(mutable
-type)](appendix-b-grouped.html#mutable-types)*
+**Scalar**
+*[(mutable type)](appendix-b-grouped.html#mutable-types)* &mdash;
 object to hold a Perl scalar, a variable for a single value
 
 **[:scalar](tablet-2-basic-syntax.html#interpolation)**
-*[(quoting
-adverb)](appendix-b-grouped.html#quoting-adverbs)*
+*[(quoting adverb)](appendix-b-grouped.html#quoting-adverbs)* &mdash;
 demands evaluation of scalar variables that start with the
 **[$-sigil](#dollar-sigil)**, long form of
 **[:s](#s-adverb)**, included in
@@ -3129,30 +3135,30 @@ demands evaluation of scalar variables that start with the
 **[qq/.../](#qq-op)** and
 **[<<...\>\>](#double-angle-brackets)**
 
-**scope\_declarator** *[(grammatical
-category)](appendix-b-grouped.html#categories)*
+**scope\_declarator**
+*[(grammatical category)](appendix-b-grouped.html#categories)* &mdash;
 internal namespace for [scope
 declarators](appendix-b-grouped.html#scope-declarator)
 - example: *[my](#my), [our](#our) ,
 [has](#has) , [state](#state)*
 
-**seed** &mdash; initialize a random number generator, optionally with a
-value
+**seed** &mdash;
+initialize a random number generator, optionally with a value
 
-**Seq** *[(immutable
-type)](appendix-b-grouped.html#immutable-types)*
+**Seq**
+*[(immutable type)](appendix-b-grouped.html#immutable-types)* &mdash;
 A list of values (can be generated lazily)
 
-**SeqIter** *[(mutable
-type)](appendix-b-grouped.html#mutable-types)*
+**SeqIter**
+*[(mutable type)](appendix-b-grouped.html#mutable-types)* &mdash;
 Iterator over a Seq
 
-**Set** *[(immutable
-type)](appendix-b-grouped.html#immutable-types)*
+**Set**
+*[(immutable type)](appendix-b-grouped.html#immutable-types)* &mdash;
 unordered collection of values that allows no duplicates
 
-**set** *[(array op &
-method)](tablet-3-variables#array-methods)*
+**set**
+*[(array op & method)](tablet-3-variables#array-methods)* &mdash;
 creates a Set
 
 **sigil**
@@ -3160,7 +3166,8 @@ creates a Set
 word to name the namespace for sigils, used to redifine them or
 define your own with a macro
 
-**sign** &mdash; 1 when $x (only parameter) \> 0, -1 if < 0, 0 when = 0,
+**sign** &mdash;
+1 when $x (only parameter) \> 0, -1 if < 0, 0 when = 0,
 undefined when undefined
 
 **Signature**
@@ -3176,41 +3183,32 @@ returns a capture object with the signature of this routine
 signature of a subroutine. Normally declared implicitly, by
 providing a parameter list and/or return type
 
-**:sigspace** *[(regex
-modifier)](appendix-b-grouped.html#regex-modifier)*
+**:sigspace**
+*[(regex modifier)](appendix-b-grouped.html#regex-modifier)* &mdash;
 whitespace separates now subregex and don't stand for spaces to
 look for, long for for **[:s](#s-modifier)**,
 **[ms/.../](#ms-op)** is alias to
 **m:sigspace/.../**
 
 **[sin](operators.html)**
-*[(numeric
-op)](tablet-4-operators.html#numeric-context)*
+*[(numeric op)](tablet-4-operators.html#numeric-context)* &mdash;
 sine, trigonometric function, takes angle in radian; see also
 **[to-radians](#to-radians)**,
 **[cos](#cos)**, **[tan](#tan)**
 
 **[:single](tablet-2-basic-syntax.html#single-quotes)**
-*[(quoting
-adverb)](appendix-b-grouped.html#quoting-adverbs)*
+*[(quoting adverb)](appendix-b-grouped.html#quoting-adverbs)* &mdash;
 simple quoting (slashes and '), alias to
 **['...'](#single-quotation-marks)** and
 **[q/.../](#q-op)**, long for
 **[:q](#q-adverb)**
 
-**sleep** &mdash; attempt to sleep (stop the program) for up to <span class="you-provide">f</span> (only
-parameter) seconds (with sub-second resolution)
+**sleep** &mdash;
+attempt to sleep (stop the program) for up to
+<span class="you-provide">f</span> (only parameter)
+seconds (with sub-second resolution)
 
-**slang** &mdash; sublanguages of Perl 6, their grammar is mostly stored
-in [special
-variables](appendix-b-grouped.html#special-variables)
-with the [twigil](#twigil) \~, such as
-**[\$\~Regex](#regex-lang-var)** or
-**[\$\~MAIN](#main-lang-var)** (main language); you
-can change or alter them with this keyword by using the *augment* or
-*supersede* command
-
-**[slurp](tablet-2-basic-syntax.html#files)**
+**[slurp](tablet-2-basic-syntax.html#files)** &mdash;
 *(path|file handle method)* &mdash; reads an entire file into a string
 without a file handle
 
@@ -3221,10 +3219,9 @@ context](tablet-4-operators.html#bool-context)*,
 low precedence alternative to
 **[?](#question-mark-op)**
 
-**SoftRoutine** *[(mutable
-type)](appendix-b-grouped.html#mutable-types)*
-*[routine](#routine)* that is committed to
-staying mutable
+**SoftRoutine**
+*[(mutable type)](appendix-b-grouped.html#mutable-types)* &mdash;
+*[routine](#routine)* that is committed to staying mutable
 
 **\<space\>**
 *[(predefined subrule)](appendix-b-grouped.html#subrules)* &mdash;
