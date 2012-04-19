@@ -855,29 +855,29 @@ only for loops) that are started at certain times. They are traits
 (compile time property) of a block object. Those marked with a * can
 also be used within an expression as in "BEGIN my $x = 3 * 3;".
 
-------------------------------------------------------  ---------------------------------------------------------------------
-[BEGIN](appendix-a-index.html#begin-phaser) {...}*      at compile time, ASAP, only ever runs once
-[CHECK](appendix-a-index.html#check-phaser) {...}*      at compile time, ALAP, only ever runs once
+------------------------------------------------------  ------------------------------------------------------------------
+[BEGIN](appendix-a-index.html#BEGIN-phaser) {...}*      at compile time, ASAP, only ever runs once
+[CHECK](appendix-a-index.html#CHECK-phaser) {...}*      at compile time, ALAP, only ever runs once
 &nbsp;                                                  &nbsp;
-[INIT](appendix-a-index.html#init-phaser) {...}*        at run time, ASAP, only ever runs once
-[END](appendix-a-index.html#end-phaser) {...}           at run time, ALAP, only ever runs once
+[INIT](appendix-a-index.html#INIT-phaser) {...}*        at run time, ASAP, only ever runs once
+[END](appendix-a-index.html#END-phaser) {...}           at run time, ALAP, only ever runs once
 &nbsp;                                                  &nbsp;
-[START](appendix-a-index.html#start-phaser) {...}*      on first ever execution, once per closure clone
-[ENTER](appendix-a-index.html#enter-phaser) {...}*      at every block entry time, repeats on loop blocks.
-[LEAVE](appendix-a-index.html#leave-phaser) {...}       at every block exit time
-[KEEP](appendix-a-index.html#keep-phaser) {...}         at every successful block exit, part of LEAVE queue
-[UNDO](appendix-a-index.html#undo-phaser) {...}         at every unsuccessful block exit, part of LEAVE queue
+[START](appendix-a-index.html#START-phaser) {...}*      on first ever execution, once per closure clone
+[ENTER](appendix-a-index.html#ENTER-phaser) {...}*      at every block entry time, repeats on loop blocks.
+[LEAVE](appendix-a-index.html#LEAVE-phaser) {...}       at every block exit time
+[KEEP](appendix-a-index.html#KEEP-phaser) {...}         at every successful block exit, part of LEAVE queue
+[UNDO](appendix-a-index.html#UNDO-phaser) {...}         at every unsuccessful block exit, part of LEAVE queue
 &nbsp;                                                  &nbsp;
-[FIRST](appendix-a-index.html#first-phaser) {...}*      at loop initialization time, before any ENTER
-[NEXT](appendix-a-index.html#next-phaser) {...}         at loop continuation time, before any LEAVE
-[LAST](appendix-a-index.html#last-phaser) {...}         at loop termination time, after any LEAVE
+[FIRST](appendix-a-index.html#FIRST-phaser) {...}*      at loop initialization time, before any ENTER
+[NEXT](appendix-a-index.html#NEXT-phaser) {...}         at loop continuation time, before any LEAVE
+[LAST](appendix-a-index.html#LAST-phaser) {...}         at loop termination time, after any LEAVE
 &nbsp;                                                  &nbsp;
-[PRE](appendix-a-index.html#pre-phaser) {...}           assert precondition at every block entry, before ENTER
-[POST](appendix-a-index.html#post-phaser) {...}         assert postcondition at every block exit, after LEAVE
+[PRE](appendix-a-index.html#PRE-phaser) {...}           assert precondition at every block entry, before ENTER
+[POST](appendix-a-index.html#POST-phaser) {...}         assert postcondition at every block exit, after LEAVE
 &nbsp;                                                  &nbsp;
-[CATCH](appendix-a-index.html#catch-phaser) {...}       catch exceptions, before LEAVE
-[CONTROL](appendix-a-index.html#control-phaser) {...}   catch control exceptions (like next/last/return etc), before LEAVE
-------------------------------------------------------  ---------------------------------------------------------------------
+[CATCH](appendix-a-index.html#CATCH-phaser) {...}       catch exceptions, before LEAVE
+[CONTROL](appendix-a-index.html#CONTROL-phaser) {...}   catch control exceptions (like next/last/return etc), before LEAVE
+------------------------------------------------------  ------------------------------------------------------------------
 
 
 
@@ -901,21 +901,17 @@ Conditionals
 ------------
 
 ----------------------------------------  -----------------------------------------------------------------------------------
-[if](appendix-a-index.html#if)            when following expression evals in boolean context to True,
-                                          the block that following after that will be executed
+[if](appendix-a-index.html#if)            when following expression evals in boolean context to True, the block that following after that will be executed
 
-[elsif](appendix-a-index.html#elsif)      works like if, but only recognized if no preceding
-                                          "if" or "elsif" clause was executed
+[elsif](appendix-a-index.html#elsif)      works like if, but only recognized if no preceding "if" or "elsif" clause was executed
 
-[else](appendix-a-index.html#else)        following block will be executed, when no preceding
-                                          "if" or "elsif" clause was executed
+[else](appendix-a-index.html#else)        following block will be executed, when no preceding "if" or "elsif" clause was executed
 
 [unless](appendix-a-index.html#unless)    opposite of if, no "elsif" or "else" is allowed to follow
 
 [given](appendix-a-index.html#given)      evals an expression into scalar context assignes it to `$_` for the following block
 
-[when](appendix-a-index.html#when)        smartmatches an expression against `$_`; if the result
-                                          is True, the following block will be executed
+[when](appendix-a-index.html#when)        smartmatches an expression against `$_`; if the result is True, the following block will be executed
 
 [default](appendix-a-index.html#default)  following block will be executed, when no "when" clause was executed
 ----------------------------------------  -----------------------------------------------------------------------------------
@@ -1047,7 +1043,7 @@ In routine and block definitions can be also some character with special meaning
 
 [`:`](appendix-a-index.html#colon-signature)                  prefix of named parameter, positional when without
 
-[`::`](appendix-a-index.html#colon-colon-signature)           prefix of a variable type introduced in a signature
+[`::`](appendix-a-index.html#double-colon-signature)          prefix of a variable type introduced in a signature
 
 [`<->`](appendix-a-index.html#lower-minus-greater-signature)  prefix of named writeable parameters for a block (double pointy block syntax)
 
