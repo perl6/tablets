@@ -34,7 +34,7 @@ reading](io.html#file) is simpler then ever (and autochomp included).
 
 
 
-Automatic multithreading
+Automatic Multithreading
 ========================
 
 Applying operations to junctions and arrays is now syntactically
@@ -61,7 +61,7 @@ Comparison
 Here are junctions, then chained comparison operators.
 
                   Perl 5                                     Perl 6
-    if ($a == 3 or $a == 4 or $a == 7) {...}        if $a = 3 | 4 | 7 {...}
+    if ($a == 3 or $a == 4 or $a == 7) {...}        if $a == 3 | 4 | 7 {...}
     if (4 < $a and $a < 12) {...}                   if 4 < $a < 12 {...}
     if (4 < $a and $a <= 12) {...}                  if $a ~~ 4^..12 {...}
     $a = defined $b ? $b : $c;                      $a = $b // $c;

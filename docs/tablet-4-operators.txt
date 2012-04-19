@@ -90,7 +90,7 @@ String Comparison
 
 
 
-joined comparison
+Joined Comparison
 -----------------
 
     3 < $a == $a < 7
@@ -161,11 +161,11 @@ yadda
 
 
 
-context forcing scalar ops
+Context Forcing Scalar Ops
 ==========================
 
 
-bool context
+Bool Context
 ------------
 
     ? !
@@ -173,7 +173,7 @@ bool context
 
 
 
-numeric context
+Numeric Context
 ---------------
 
     + - * ** / % %%
@@ -182,13 +182,13 @@ numeric context
 
 
 
-### numerical selection ###
+### Numerical Selection ###
 
     min max minmax
 
 
 
-String context
+String Context
 --------------
 
     ~ x
@@ -196,11 +196,11 @@ String context
 
 
 
-Ops for arrays/lists
+List Ops
 ====================
 
 
-List generation
+List Generation
 ---------------
 
 The simplest way to create a list is by repeating some values:
@@ -284,16 +284,17 @@ precedence table
 
 
 
-intentionally not existing ops
-==============================
+Intentionally Not Existing
+==========================
 
 xxx
 
 
+Selfmade Operators
+==================
 
-making own operators
-====================
+How to make your own is subject [this chapter](tablet-10-metaprogramming.txt#)
+in the metaprogramming tablet.
 
-xxx
 
 ***
