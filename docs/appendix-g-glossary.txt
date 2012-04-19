@@ -154,6 +154,12 @@ when searching a pattern with alternatives (sub|substr)
 the search will continue after finding the pattern 'sub'
 because of looking for the longest alternative
 
+<a id="lvalue"/>
+**lvalue** &mdash;
+when searching a pattern with alternatives (sub|substr)
+the search will continue after finding the pattern 'sub'
+because of looking for the longest alternative
+
 # M
 
 <a id="metaoperator"/>
@@ -161,7 +167,10 @@ because of looking for the longest alternative
 operators that alter the meaning of other normal operators
 
 <a id="metaprogramming"/>
-**metaprogramming** &mdash;
+**metaprogramming** &mdash; 
+
+<a id="MMD"/>
+**MMD** *(multimethod dispatch)* &mdash; 
 
 # N
 
@@ -231,10 +240,11 @@ regex, token or rule in Perl6
 
 <a id="routine"/>
 **routine** &mdash;
-block of code callable by name,
+[block](#block) of code callable by name,
 can have a *[signature](#signature)* and a return type,
-objects of the type **[SoftRoutine](appendix-a-index.html#softroutine-type)**
-and **[HardRoutine](appendix-a-index.html#hardroutine-type)**
+when block is [compiled](#compilation) it becomes an object of the type
+**[SoftRoutine](appendix-a-index.html#softroutine-type)**
+or **[HardRoutine](appendix-a-index.html#hardroutine-type)**
 
 <a id="run-time"/>
 **run time** &mdash; time when execution hits a certain part of the program,
@@ -242,6 +252,9 @@ after *[compile time](#compile-time)*
 
 
 # S
+
+<a id="scalar"/>
+**scalar** &mdash;
 
 <a id="scope"/>
 **scope** &mdash;
