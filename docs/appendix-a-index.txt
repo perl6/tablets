@@ -4,7 +4,7 @@ This index contains an alphanumeric sorted list (sorted without
 prefixes like colon, slash, sigil or twigil) of all operators,
 methods, builtins, options, modifier and special variables (in
 **bold**) with short explanations. Each term is followed by a link
-(in round brackets) to a condensed summary listing of its category
+«in french brackets» to a condensed summary listing of its category
 in [appendix B](appendix-b-grouped.html).
 
 Sometimes are added green placeholder. <span
@@ -67,7 +67,8 @@ just second part of the ternary (conditional) operator after
 
 <a id="triple-exclamation"/>
 **!!!** *[«yadda op»](tablet-4-operators.html#yadda)* &mdash;
-yadda operator that calls **[die](#die)**
+[yadda operator](appendix-g-glossary.html#yadda-operator)
+that calls **[die](#die)**
 
 <a id="double-quotation"/>
 **[" "](tablet-2-basic-syntax.html#double-quotes)**
@@ -96,7 +97,7 @@ documenting comments that end up in
 following *[routine](appendix-g-glossary.html#routine)*
 
 <a id="pound-apostrophe"/>
-**[\#\`( »](tablet-2-basic-syntax.html#multi-line)** &mdash;
+**[\#\`( )](tablet-2-basic-syntax.html#multi-line)** &mdash;
 starts a multi-line comment that continues to the closing
 bracket, works with any combination of bracket pairs
 
@@ -219,7 +220,7 @@ multiplies numbers, forces numeric context
 
 <a id="asterisk"/>
 **\***
-*(term)* &mdash;
+*«term»* &mdash;
 synonym for **[Whatever](#Whatever)**, for example, means **[Inf](#Inf)**
 in a [range operator](#range-op) (**..**), means the
 end of an array in a slice operator so that negative indices access
@@ -341,7 +342,8 @@ operator, infix operator for list generation
 
 **...**
 *[«yadda op»](tablet-4-operators.html#yadda)* &mdash;
-term that calls **[fail](#fail)** (exception),
+[yadda operator](appendix-g-glossary.html#yadda-operator) that calls
+**[fail](#fail)** (exception),
 marks unimplemented empty *[routine](appendix-g-glossary.html#routine)*
 bodies
 
@@ -428,7 +430,7 @@ creates an alias to a variable at runtime
 (*[binding](tablet-3-variables#binding)*)
 
 **[;](tablet-2-basic-syntax.html#statements)**
-*(terminator)* &mdash;
+*«terminator»* &mdash;
 separates [statements](tablet-2-basic-syntax.html#statements)
 (commands) or [array indices](tablet-3-variables#array-slices)
 - example: `@[2;3]` instead of `@a[2][3]`
@@ -544,7 +546,7 @@ rightward pointing feed operator that adds values to an existing
 list (append-mode)
 
 **=\>**
-*(op)* &mdash;
+*«op»* &mdash;
 pair (and hash) constructor, called *fatarrow*
 
 **\>**
@@ -596,7 +598,8 @@ see also: **[ff](#ff)** and **[fff](#fff)**
 
 **???**
 *[«yadda op»](tablet-4-operators.html#yadda)* &mdash;
-yadda operator that calles **[warn](#warn)**
+[yadda operator](appendix-g-glossary.html#yadda-operator)
+that calls **[warn](#warn)**
 
 **?\^**
 *[«bool op»](tablet-4-operators.html#bool-context)* &mdash;
@@ -616,7 +619,7 @@ logical *OR*, forces operands into boolean context
 forces (flattened) array context, alias to
 **[list(»](#list)** function
 
-<span class="you-provide">var</span>**\[ \]**
+<span class="you-provide">var</span>**\[ \]** &mdash;
 [postcircumfix](#postcircumfix-category) operator,
 appended on an array var, returns an array slice with values which
 indexes was inside the brackets
@@ -694,7 +697,7 @@ context var, result of the last command, can set by topicalizers
 (**[given](#given)** and **[for](#for)**)
 
 **{}**
-*(terminator)* &mdash;
+«terminator» &mdash;
 [circumfix](#circumfix-category) operator,
 encloses blocks and creates a coderef, or a hashref when it is
 identified as a hash or contains a **[=\>](#fatarrow)**
@@ -765,7 +768,7 @@ characterwise or, forces *[string
 context](tablet-4-operators.html#string-context)*
 
 **[\~\~](tablet-4-operators.html#smartmatch)**
-*(comparison op)* &mdash;
+*«comparison op»* &mdash;
 smartmatch operator, compares (almost) all
 variable and data types according a
 [table](appendix-b-grouped.html#smartmatch)
@@ -2241,7 +2244,7 @@ comes before the right
 
 # M
 
-**[m//](tablet-9-regexes.html#matching)**
+**[m/ /](tablet-9-regexes.html#matching)**
 *[«regex quoting op»](appendix-b-grouped.html#quoting-ops)* &mdash;
 perform a regex based search in place (m stands for *match* ),
 similar to **[match](#match)**-method
@@ -2328,7 +2331,7 @@ introduces a module name, a package that performs special actions on loading
 *[«special var»](appendix-b-grouped.html#compiler-hint-variables)* &mdash;
 reference to the current module
 
-**[ms//](tablet-9-regexes.html#matching)**
+**[ms/ /](tablet-9-regexes.html#matching)**
 *[«regex quoting op»](appendix-b-grouped.html#quoting-ops)* &mdash;
 perform a regex based search in place, spaces are just subrule
 separators, alias to **m:s/.../** or **m**
@@ -3057,7 +3060,7 @@ alias to **[Q](#capital-q-op)**
 force sequential (synchronous) evaluation, suppresses any
 explicit or implicit parallelism
 
-**[s///](tablet-9-regexes.html#regex-operators)**
+**[s/ / /](tablet-9-regexes.html#regex-operators)**
 *[«regex quoting op»](appendix-b-grouped.html#quoting-ops)* &mdash;
 perform a substitution based on rx-matches in place, creates
 anonymous regex, alias to **Q [:subst](#subst-adverb)
@@ -3254,35 +3257,34 @@ separator
 string like **[printf](#printf)**, but returns the
 string instead of outputting it
 
-**sqrt** &mdash; square root of $n (**[Num](#num-type)** -
-first and only parameter)
+**sqrt** &mdash;
+square root of $n (**[Num](#num-type)** - first and only parameter)
 
-**[ss///](tablet-9-regexes.html#substitution)**
-*[«regex quoting
-op»](appendix-b-grouped.html#quoting-ops)*
+**[ss/ / /](tablet-9-regexes.html#substitution)**
+*[«regex quoting op»](appendix-b-grouped.html#quoting-ops)* &mdash;
 performs **[rx](#rx)** based substitution, spaces
 are just subrule separators, alias to **s:ss/.../.../**, e.g.:
 ss/teh hsa/the has/;
 
-**:ss** *[«regex
-modifier»](appendix-b-grouped.html#regex-modifier)*
+**:ss**
+*[«regex modifier»](appendix-b-grouped.html#regex-modifier)* &mdash;
 only for for substitution, whitespace separates subregexes like
 **[:sigspace](#sigspace-modifier)**, but also in the
 second part, short for
 **[:samespace](#samespace-modifier)**
 
-<span class="you-provide">n</span> **:st** *[«regex
-modifier»](appendix-b-grouped.html#regex-modifier)*
+**:st**
+*[«regex modifier»](appendix-b-grouped.html#regex-modifier)* &mdash;
 demands the nth finding, has many aliases (:nd :rd :th) for
 correct spelling (:1st)
 
-**START** *[«closure
-trait»](appendix-b-grouped.html#closure-traits)*
+**START**
+*[«closure trait»](appendix-b-grouped.html#closure-traits)* &mdash;
 marks as a prefix a special block or statement, executed on
 first ever execution, once per closure clone
 
-**Stash** *[«mutable
-type»](appendix-b-grouped.html#mutable-types)*
+**Stash**
+*[«mutable type»](appendix-b-grouped.html#mutable-types)* &mdash;
 A symbol table hash (package, module, class, lexpad, etc)
 
 **stat**
@@ -3290,49 +3292,47 @@ A symbol table hash (package, module, class, lexpad, etc)
 available information about a file or link (call *stat :link* as
 former lstat)
 
-**state** *[«scope
-declarator»](appendix-b-grouped.html#scope-declarator)*
+**state**
+*[«scope declarator»](appendix-b-grouped.html#scope-declarator)* &mdash;
 introduces lexically scoped but persistent names (known only in
 the enclosing block, but retain their values between invocations)
 
-**statement\_control** *[«grammatical
-category»](appendix-b-grouped.html#categories)*
+**statement\_control**
+*[«grammatical category»](appendix-b-grouped.html#categories)* &mdash;
 internal namespace for block modifier like
-[conditionals](appendix-b-grouped.html#conditionals)
-or
+[conditionals](appendix-b-grouped.html#conditionals) or
 [loops](appendix-b-grouped.html#loops)
 that stay in front of it
 
-**statement\_mod\_cond** *[«grammatical
-category»](appendix-b-grouped.html#categories)*
+**statement\_mod\_cond**
+*[«grammatical category»](appendix-b-grouped.html#categories)* &mdash;
 internal namespace for words that come after a statement and
 handle if the statement will be executed &mdash; example : ***$a++
 [if](#if)** $a \> 3*
 
-**statement\_mod\_loop** *[«grammatical
-category»](appendix-b-grouped.html#categories)*
+**statement\_mod\_loop**
+*[«grammatical category»](appendix-b-grouped.html#categories)* &mdash;
 internal namespace for [special group of block
 modifier](appendix-b-grouped.html#loops)
 that turn the [block](#block) into a loop &mdash; example :
 **[loop](#loop)**,
 **[repeat](#repeat)**, **[for](#for)**
 
-**statement\_prefix** *[«grammatical
-category»](appendix-b-grouped.html#categories)*
+**statement\_prefix**
+*[«grammatical category»](appendix-b-grouped.html#categories)* &mdash;
 internal namespace for block modifier &mdash; example :
 ***[do](#do)***
 
-**Str** *[«immutable
-type»](appendix-b-grouped.html#immutable-types)*
+**Str**
+*[«immutable type»](appendix-b-grouped.html#immutable-types)* &mdash;
 Perl string, finite sequence of Unicode characters
 
-**Sub** *[«mutable
-type»](appendix-b-grouped.html#mutable-types)*
+**Sub**
+*[«mutable type»](appendix-b-grouped.html#mutable-types)* &mdash;
 Perl subroutine object
 
 **[sub](tablet-6-blocks.html#sub)**
-*[«routine
-type»](appendix-b-grouped.html#routine-types)*
+*[«routine type»](appendix-b-grouped.html#routine-types)* &mdash;
 defines a subroutine, a block callable by name &mdash;
 example: *name();*
 
@@ -3349,15 +3349,14 @@ define a subtype &mdash;
 example: subset Month of Int where { 1 <= $\^a <= 12 }
 
 **[subst](tablet-9-regexes.html#substitution)**
-*(string method)* &mdash; method alias to
+*(string method)* &mdash; 
+method alias to
 *[s/.../.../](#s-op) , $str.subst( /pattern/,
 "replacement" )*, equals $str \~\~ s/pattern/replacement/;
 
 **[:subst](tablet-2-basic-syntax.html#regex)**
-*[«quoting
-adverb»](appendix-b-grouped.html#quoting-adverbs)*
-parse as [substitution
-regex](tablet-9-regexes.html#substitution)
+*[«quoting adverb»](appendix-b-grouped.html#quoting-adverbs)* &mdash;
+parse as [substitution regex](tablet-9-regexes.html#substitution)
 , **Q [:subst](#subst-adverb) /.../.../** is alias to
 **[s/.../.../](#s-op)**
 
@@ -3489,16 +3488,18 @@ whose absolute value is not greater than the absolute value of $f
 **trusts** &mdash;
 allows a class the acess to otherwised sealed namespaces
 
+<a id="twigil-category"/>
 **twigil**
 *[«grammatical category»](appendix-b-grouped.html#categories)* &mdash;
-internal namespace for
-[twigils](tablet-3-variables#twigils)
-, used to redifine them or define your own with a macro
+internal namespace for [twigils](appendix-g-glossary.html#twigil),
+used to redifine them or define your own with a macro
 
+<a id="type_declarator"/>
 **type\_declarator**
 *[«grammatical category»](appendix-b-grouped.html#categories)* &mdash;
 - example: **[subset](#subset)**
 
+<a id="TZ-global-var"/>
 **$\*TZ** *[«special var»](appendix-b-grouped.html#global-variables)* &mdash;
 local time zone
 

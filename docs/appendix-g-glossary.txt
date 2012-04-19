@@ -292,16 +292,16 @@ every keyword that sets the **[$\_](appendix-a-index.html#context-var)**
 variable, like *[given](appendix-a-index.html#given)*
 and *[for](appendix-a-index.html#for)*
 
-<a id="yadda-operator"/>
+<a id="trait"/>
 **trait** &mdash;
 additional property of a variable, defined at *[compile time](#compile-time)*,
 see **[but](appendix-a-index.html#but)**, what other languages call
 *trait* Perl calls [role](#role)
 
-<a id="yadda-operator"/>
+<a id="twigil"/>
 **[twigil](appendix-b-grouped.html#twigils)** &mdash;
-second(ary) *[sigil](#sigil)* indicating a
-special property of a variable
+second(ary) *[sigil](#sigil)* indicating a special property of a variable,
+[(more details here)](tablet-3-variables#twigils)
 
 
 # U
@@ -317,9 +317,9 @@ special property of a variable
 <a id="yadda-operator"/>
 **[yadda operator](operators.html#yadda)** &mdash;
 placeholder for later to be written code, because in empty
-routines are forbidden, comes in 3 flavours:
-**[...](appendix-a-index.html#triple-dot-yadda-op)**,
-**[???](appendix-a-index.html#triple-question-mark)** and
-**[!!!](appendix-a-index.html#triple-exclamation-mark)**
+[routines](#routine) are forbidden, comes in 3 flavours:
+**[...](appendix-a-index.html#triple-dot-yadda-op)** (fail),
+**[???](appendix-a-index.html#triple-question-mark)** (warn) and
+**[!!!](appendix-a-index.html#triple-exclamation-mark)** (die)
 
 # Z
