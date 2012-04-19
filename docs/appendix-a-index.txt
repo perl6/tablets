@@ -2114,7 +2114,7 @@ returns list of key-value pairs
 *[(filetest op)](appendix-b-grouped.html#filetest-ops)* &mdash;
 file is a symbolic link
 
-**\\L\**[<span class="you-provide">n</span>**\]**
+**\\L\[**<span class="you-provide">n</span>**\]**
 *[(escape sequence)](appendix-b-grouped.html#escape-sequences)* &mdash;
 everything within the brackets is lowercase
 
@@ -3334,19 +3334,20 @@ Perl subroutine object
 **[sub](tablet-6-blocks.html#sub)**
 *[(routine
 type)](appendix-b-grouped.html#routine-types)*
-defines a subroutine, a block callable by name &mdash; example:
-*name();*
+defines a subroutine, a block callable by name &mdash;
+example: *name();*
 
-**Submethod** *[(mutable
-type)](appendix-b-grouped.html#mutable-types)*
+**Submethod**
+*[(mutable type)](appendix-b-grouped.html#mutable-types)* &mdash;
 Perl subroutine acting like a method
 
-**submethod** *[(routine
-type)](appendix-b-grouped.html#routine-types)*
+**submethod**
+*[(routine type)](appendix-b-grouped.html#routine-types)* &mdash;
 defines methods, not inherited by subclasses
 
-**subset** &mdash; define a subtype, eg subset Month of Int where { 1 <=
-$\^a <= 12 }
+**subset** &mdash;
+define a subtype &mdash;
+example: subset Month of Int where { 1 <= $\^a <= 12 }
 
 **[subst](tablet-9-regexes.html#substitution)**
 *(string method)* &mdash; method alias to
@@ -3710,40 +3711,49 @@ end of an expression, opposite of **[until](#until)**
 package, that support that object, long name in *[string
 context](tablet-4-operators.html#string-context)*
 
+<a id="WHY-introspection"/>
 **WHY**
 *[(introspection method)](appendix-b-grouped.html#object-introspection)* &mdash;
 reserved for documentation, see also
 **[\#=](#pound-equal)**
 
+<a id="will-do-routine-trait"/>
 **will do**
 *[(routine trait)](appendix-b-grouped.html#routine-traits)* &mdash;
 block of code executed when the subroutine is called. Normally
 declared implicitly, by providing a block after the subroutine's
 signature definition
 
+<a id="words"/>
 **words**
 *(string method)* &mdash;
 splits a sting into a list of words &mdash;
 example: `$input.words($limit)` equals [`$input.comb( / \\S+ /,
 $limit )`](#comb)
 
+<a id="words-adverb"/>
 **[:words](tablet-2-basic-syntax.html#quote-words)**
 *[(quoting adverb)](appendix-b-grouped.html#quoting-adverbs)* &mdash;
 split quoted string on words (on whitespaces), no quote
 protection, long form of **[:w](#w-adverb)**, used
 in **[qw/.../](#qw-op)**
 
+<a id="wrap"/>
 **wrap** &mdash;
-creates enveloping subroutine (see also **[unwrap](#unwrap)**)
+creates enveloping [routine](#routine) that is called instead of the original,
+but can forward to it, see also **[unwrap](#unwrap)**
 
+<a id="write"/>
 **[write](tablet-5-io.html#read)**
 *(Buf method)* &mdash; writes content of all parameter into that buffer
 
+<a id="ws-subrule"/>
 **\<ws\>**
 *[(predefined subrule)](appendix-b-grouped.html#subrules)* &mdash;
 whitespace between words aka
 **[\\s\*](#backslash-s)**
 
+<a id="ww-adverb"/>
 **[:ww](tablet-2-basic-syntax.html#quote-words)**
 *[(quoting adverb)](appendix-b-grouped.html#quoting-adverbs)* &mdash;
 split quoted string into words (on whitespaces) but with quote
