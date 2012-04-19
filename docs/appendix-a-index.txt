@@ -1361,15 +1361,15 @@ program was compiled for, see also:
 **[\$?KERNEL](#kernel-compiler-var)** and
 **[\$*VM](#vm-compiler-var)**
 
-**[div](operators.html)** integer division
+**[div](operators.html)** &mdash; integer division
 
-**[do](tablet-6-blocks.html#do)**
+**[do](tablet-6-blocks.html#do)** &mdash;
 executes a block (do once loop)
 
 **does** &mdash; checks if an objekt inherits a role (parameter)
 
-**dotty** *[(grammatical
-category)](appendix-b-grouped.html#categories)*
+**dotty**
+*[(grammatical category)](appendix-b-grouped.html#categories)* &mdash;
 
 **[:double](tablet-2-basic-syntax.html#double-quotes)**
 *[(quoting
