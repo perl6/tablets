@@ -8,8 +8,8 @@ Sigils
 ------
 
 All variables in Perl begin with a sigil. They mark the 3 primary var
-types. The 4th sigil is for callables (routines) and the 5th is for
-layers (namespaces) that organize the previous 4.
+types. The 4th sigil is for callables ([routines](appendix-g-glossary.html#routine))
+and the 5th is for layers (namespaces) that organize the previous 4.
 
 ------------------------------------------------  --------------------------------------------------------------------------------------------------------
 [`$`](appendix-a-index.html#dollar-sigil)         scalar, single value, can be of any data type
@@ -20,8 +20,8 @@ layers (namespaces) that organize the previous 4.
 ------------------------------------------------  --------------------------------------------------------------------------------------------------------
 
 The first 4 can also be used as prefix operators, called
-contextualizers, that force different contexts, but there are much
-more different contexts then 4.
+[contextualizers](#Contextualizers), that force different contexts,
+but there are much more different contexts then 4.
 
 Twigils
 -------
@@ -964,17 +964,11 @@ type \[name\] \[trait\] (signature) { block }
 
 ### Routine Modifier ###
 
--------------------------------------------------------  ---------------------------------------------------
-[multi](appendix-a-index.html#multi-routine-modifier)    marks routines, witch can have siblings with same
-                                                         name but different signature; when called, the
-                                                         one with matching sig is executed
-
-[only](appendix-a-index.html#only-routine-modifier)      routines which dont' allow to have an multi
-                                                         sibling (is default, you may leave it out)
-
-[proto](appendix-a-index.html#proto-routine-modifier)    fallback for multi, if no multi signature matches
-                                                         the caller, a proto with same name is executed
--------------------------------------------------------  ---------------------------------------------------
+-----------------------------------------------------  ---------------------------------------------------
+[multi](appendix-a-index.html#multi-routine-modifier)  marks routines, witch can have siblings with same name but different signature; when called, the one with matching sig is executed
+[only](appendix-a-index.html#only-routine-modifier)    routines which dont' allow to have an multi sibling (is default, you may leave it out)
+[proto](appendix-a-index.html#proto-routine-modifier)  fallback for multi, if no multi signature matches the caller, a proto with same name is executed
+-----------------------------------------------------  ---------------------------------------------------
 
 
 ### Routine Traits ###
@@ -984,32 +978,17 @@ routine traits.
 
 ----------------------------------------------------------  -------------------------------------------------------------------------------------
 [export](appendix-a-index.html#export-routine-trait)        this routine will be exported my the current module by default
-
-[will do](appendix-a-index.html#will-do-routine-trait)      block of code executed when the subroutine is called.
-                                                            Normally declared implicitly, by providing a block after
-                                                            the subroutine's signature definition
-
-[signature](appendix-a-index.html#signature-routine-trait)  signature of a subroutine. Normally declared implicitly,
-                                                            by providing a parameter list and/or return type
-
+[will do](appendix-a-index.html#will-do-routine-trait)      block of code executed when the subroutine is called. Normally declared implicitly, by providing a block after the subroutine's signature definition
+[signature](appendix-a-index.html#signature-routine-trait)  signature of a subroutine. Normally declared implicitly, by providing a parameter list and/or return type
 [as](appendix-a-index.html#as-routine-trait)                inner type constraint that a routine imposes on its return value
-
 [of](appendix-a-index.html#of-routine-trait)                official return type of the routine
-
 [cached](appendix-a-index.html#cached-routine-trait)        marks a subroutine as being memoized
-
 [rw](appendix-a-index.html#rw-routine-trait)                marks a subroutine as returning an lvalue
-
 [parsed](appendix-a-index.html#parsed-routine-trait)        macro is parsed once, is hygienic, only parsed can be used
-
 [reparsed](appendix-a-index.html#reparsed-routine-trait)    macro parsed twice, not hygienic, later parsed can be used
-
 [tighter](appendix-a-index.html#tighter-routine-trait)      specifies the precedence of an operator higher than an existing operator as seen here
-
 [looser](appendix-a-index.html#looser-routine-trait)        specifies the precedence of an operator lower than an existing operator as seen here
-
 [equiv](appendix-a-index.html#equiv-routine-trait)          specifies the precedence of an operator same as an existing operator as seen here
-
 [assoc](appendix-a-index.html#assoc-routine-trait)          specifies the associativity of an operator explicitly as seen here
 ----------------------------------------------------------  -------------------------------------------------------------------------------------
 
@@ -1031,27 +1010,17 @@ routine traits.
 
 In routine and block definitions can be also some character with special meaning
 
-------------------------------------------------------------  -----------------------------------------------------------------------
-[`!`](appendix-a-index.html#exclamation-mark-signature)       suffix of required parameter (default when named, not positional)
-
-[`*`](appendix-a-index.html#asterisk-signature)               prefix of slurpy arrays
-
-`-->`                                                         [prefix of return type](appendix-a-index.html#minus-minus-greater-signature)
-                                                              (couldn't link the arrow due wiki syntax)
-
-[`->`](appendix-a-index.html#minus-greater-signature)         prefix of named readonly parameters for a block (pointy block syntax)
-
-[`:`](appendix-a-index.html#colon-signature)                  prefix of named parameter, positional when without
-
-[`::`](appendix-a-index.html#double-colon-signature)          prefix of a variable type introduced in a signature
-
-[`<->`](appendix-a-index.html#lower-minus-greater-signature)  prefix of named writeable parameters for a block (double pointy block syntax)
-
-[`?`](appendix-a-index.html#question-mark-signature)          suffix of optional parameter (default when positional, not named)
-
-[`^`](appendix-a-index.html#caret-signature)                  prefix of metaclass methods, `$obj.^methods();` is shortcut for
-                                                              [`$obj.HOW.methods($obj);`](ap-b-lookup.html#object-introspection)
-------------------------------------------------------------  -----------------------------------------------------------------------
+-------------------------------------------------------------  ------------------------------------------------------------------------------------------------------------------
+[`!`](appendix-a-index.html#exclamation-mark-signature)        suffix of required parameter (default when named, not positional)
+[`*`](appendix-a-index.html#asterisk-signature)                prefix of slurpy arrays
+[`-->`](appendix-a-index.html#double-minus-greater-signature)  prefix of return type
+[`->`](appendix-a-index.html#minus-greater-signature)          prefix of named readonly parameters for a block (pointy block syntax)
+[`:`](appendix-a-index.html#colon-signature)                   prefix of named parameter, positional when without
+[`::`](appendix-a-index.html#double-colon-signature)           prefix of a variable type introduced in a signature
+[`<->`](appendix-a-index.html#lower-minus-greater-signature)   prefix of named writeable parameters for a block (double pointy block syntax)
+[`?`](appendix-a-index.html#question-mark-signature)           suffix of optional parameter (default when positional, not named)
+[`^`](appendix-a-index.html#caret-signature)                   prefix of metaclass methods, `$obj.^methods();` is shortcut for [`$obj.HOW.methods($obj);`](#object-introspection)
+-------------------------------------------------------------  ------------------------------------------------------------------------------------------------------------------
 
 ### Callframe Methods ###
 
