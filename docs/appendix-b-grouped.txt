@@ -986,7 +986,7 @@ type \[name\] \[trait\] (signature) { block }
 [phasers](#closure-traits) (closure traits) can also be seen as
 routine traits.
 
-----------------------------------------------------------  -----------------------------------------------------------------------------------
+----------------------------------------------------------  -------------------------------------------------------------------------------------
 [export](appendix-a-index.html#export-routine-trait)        this routine will be exported my the current module by default
 
 [will do](appendix-a-index.html#will-do-routine-trait)      block of code executed when the subroutine is called.
@@ -1015,7 +1015,7 @@ routine traits.
 [equiv](appendix-a-index.html#equiv-routine-trait)          specifies the precedence of an operator same as an existing operator as seen here
 
 [assoc](appendix-a-index.html#assoc-routine-trait)          specifies the associativity of an operator explicitly as seen here
-----------------------------------------------------------  -----------------------------------------------------------------------------------
+----------------------------------------------------------  -------------------------------------------------------------------------------------
 
 
 ### Parameter Traits ###

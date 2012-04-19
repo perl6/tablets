@@ -15,11 +15,11 @@ programmer. Therefore I create a sorted and complete list of all
 features and details with examples and short comments. Nevertheless I
 try to make it readable like a book, require as little previous
 knowledge as possible, and explain most things along the way, or at
-least explain them in the Index. A well-functioning mind and a grasp of
-some basic programming concepts should therefore be enough to learn
-Perl 6 with these tablets. For a brief explanation and some overviews
-from various points of view, there are several chapters in the
-appendix that make it even more useful.
+least explain them in the [Glossary](appendix-g-glossary.html).
+A well-functioning mind and a grasp of some basic programming concepts
+should therefore be enough to learn Perl 6 with these tablets.
+For a brief explanation and some overviews from various points of view,
+there are several chapters in the appendix that make it even more useful.
 
 
 
@@ -58,11 +58,13 @@ Chapter 3 .. 10 are about the concrete syntax and appendix A is the
 Index, that lists all operators and keywords, alphabetically ordered.
 Appendix B holds all tables like operator precedence,
 C is the cookbook which shows you common algorithms in native Perl 6.
-Appendix D is a kind of 'perldelta' between a fairly recent version
-of Perl 5 and Perl 6 and E stands for exciting or excellence showing
-just the glamorous and fast to understand bits to impress the world.
+Appendix D is a kind of 'perldelta' describing the most drastic changes
+between a fairly recent version of Perl 5 and Perl 6.
+E stands for exciting or excellence showing just the glamorous and
+fast to understand bits to impress the world.
 Links to other information sources are to be found in F and G stands
-for glossary where all the computer science terms are explained.
+for [glossary](appendix-g-glossary.html)
+where all the computer science terms are explained.
 
 
 Motivation
