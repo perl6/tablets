@@ -386,7 +386,7 @@ first positional submatch, there is **`$1`**, **`$2`**, ... too
 generation operator, also known as *adverbial* syntax
 
 **:**
-*[(filetest op)](appendix-b-grouped.html#filetest-ops)* &mdash;
+*[(io test method)](appendix-b-grouped.html#Test-Methods)* &mdash;
 start of all file test ops &mdash;
 example: *":" \~ one (<r w x o R W X O e z s f d l p S b c t u g k T B M A C\>)*
 
@@ -905,7 +905,7 @@ replaces them, see also: **[supersede](#supersede)**
 # B
 
 **:b**
-*[(filetest op)](appendix-b-grouped.html#filetest-ops)* &mdash;
+*[(io test method)](appendix-b-grouped.html#Test-Methods)* &mdash;
 file is a block special file (e.g. Harddisks, CDROMs and RAM areas)
 
 **:b**
@@ -1027,7 +1027,7 @@ searching on byte level, see also:
 # C
 
 **:c**
-*[(filetest op)](appendix-b-grouped.html#filetest-ops)* &mdash;
+*[(io test method)](appendix-b-grouped.html#Test-Methods)* &mdash;
 file is a character special file (e.g. terminals modems)
 
 **:c**
@@ -1314,7 +1314,7 @@ current working directory as **[Str](#str-type)**
 # D
 
 **:d**
-*[(filetest op)](appendix-b-grouped.html#filetest-ops)* &mdash;
+*[(io test method)](appendix-b-grouped.html#Test-Methods)* &mdash;
 check if file is a directory
 
 **\\D**
@@ -1420,7 +1420,7 @@ dynamic scope
 # E
 
 **:e**
-*[(filetest op)](appendix-b-grouped.html#filetest-ops)* &mdash;
+*[(io test method)](appendix-b-grouped.html#Test-Methods)* &mdash;
 tests if file exists
 
 **\\E**
@@ -1596,7 +1596,7 @@ this routine will be exported by the current module by default
 # F
 
 **:f**
-*[(filetest op)](appendix-b-grouped.html#filetest-ops)* &mdash;
+*[(io test method)](appendix-b-grouped.html#Test-Methods)* &mdash;
 file is a plain file (no socket or dir, ...etc.)
 
 **:f**
@@ -1724,7 +1724,7 @@ replacing them with the result, long form of
 # G
 
 **:g**
-*[(filetest op)](appendix-b-grouped.html#filetest-ops)* &mdash;
+*[(io test method)](appendix-b-grouped.html#Test-Methods)* &mdash;
 report if file has setgid bit set
 
 **:g**
@@ -2052,7 +2052,7 @@ example: *join("-", 1..5) \# returns '1-2-3-4-5' - or (1..5).join("-")*
 # K
 
 **:k**
-*[(filetest op)](appendix-b-grouped.html#filetest-ops)* &mdash;
+*[(io test method)](appendix-b-grouped.html#Test-Methods)* &mdash;
 report if file has sticky bit set
 
 **KEEP**
@@ -2111,7 +2111,7 @@ returns list of key-value pairs
 # L
 
 **:l**
-*[(filetest op)](appendix-b-grouped.html#filetest-ops)* &mdash;
+*[(io test method)](appendix-b-grouped.html#Test-Methods)* &mdash;
 file is a symbolic link
 
 **\\L\[**<span class="you-provide">n</span>**\]**
@@ -2436,11 +2436,11 @@ and **[FatRat](#FatRat)**)
 # O
 
 **:O**
-*[(filetest op)](appendix-b-grouped.html#filetest-ops)* &mdash;
+*[(io test method)](appendix-b-grouped.html#Test-Methods)* &mdash;
 tests if file is owned by real uid
 
 **:o**
-*[(filetest op)](appendix-b-grouped.html#filetest-ops)* &mdash;
+*[(io test method)](appendix-b-grouped.html#Test-Methods)* &mdash;
 tests if file is owned by effective uid
 
 **of**
@@ -2509,7 +2509,7 @@ long for **:ov**
 
 # P
 
-**:p** *[(filetest op)](appendix-b-grouped.html#filetest-ops)* &mdash;
+**:p** *[(io test method)](appendix-b-grouped.html#Test-Methods)* &mdash;
 file is a named pipe (FIFO), or filehandle is a pipe
 
 **[:p](tablet-2-basic-syntax.html#paths)**
@@ -2682,8 +2682,8 @@ variable &mdash; example: *[++$a](#plus-plus)*
 internal namespace of [metaoperator](#metaoperator) that
 [circumfix](#circumfix-category) (surrounds) other
 operator but stay [prefix](#prefix-category) (before)
-another term &mdash; example (square brackets): *[+] @a \# sums up all
-elements of @a *
+another term &mdash;
+example (in square brackets): `[+] @a # sums up all elements of @a`
 
 **prefix\_postfix\_meta\_operator**
 *[(grammatical category)](appendix-b-grouped.html#categories)* &mdash;
@@ -2839,11 +2839,11 @@ and return results (unlike Perl 5), alias to **Q
 # R
 
 **:R**
-*[(filetest op)](appendix-b-grouped.html#filetest-ops)* &mdash;
+*[(io test method)](appendix-b-grouped.html#Test-Methods)* &mdash;
 check if file is readable by real uid/gid
 
 **:r**
-*[(filetest op)](appendix-b-grouped.html#filetest-ops)* &mdash;
+*[(io test method)](appendix-b-grouped.html#Test-Methods)* &mdash;
 check if file is readable by effective uid/gid
 
 **\\R**
@@ -3052,29 +3052,28 @@ alias to **[Q](#capital-q-op)**
 
 # S
 
-**S**<span class="you-provide">op</span> *[(meta
-op)](appendix-b-grouped.html#metaoperators)*
+**S**<span class="you-provide">op</span>
+*[(meta op)](appendix-b-grouped.html#metaoperators)* &mdash;
 force sequential (synchronous) evaluation, suppresses any
 explicit or implicit parallelism
 
 **[s///](tablet-9-regexes.html#regex-operators)**
-*[(regex quoting
-op)](appendix-b-grouped.html#quoting-ops)*
+*[(regex quoting op)](appendix-b-grouped.html#quoting-ops)* &mdash;
 perform a substitution based on rx-matches in place, creates
 anonymous regex, alias to **Q [:subst](#subst-adverb)
 /.../.../** and **[.subst()](#subst)** *(string
 method)*
 
-**:S** *[(filetest
-op)](appendix-b-grouped.html#filetest-ops)*
+**:S**
+*[(test method)](appendix-b-grouped.html#Test-Methods)* &mdash;
 file is a socket
 
-**:s** *[(filetest
-op)](appendix-b-grouped.html#filetest-ops)*
+**:s**
+*[(test method)](appendix-b-grouped.html#Test-Methods)* &mdash;
 file has size greater than 0 (zero)
 
-**:s** *[(quoting
-adverb)](appendix-b-grouped.html#quoting-adverbs)*
+**:s**
+*[(quoting adverb)](appendix-b-grouped.html#quoting-adverbs)* &mdash;
 demands evaluation of scalar variables that start with the
 **[$-sigil](#dollar-sigil)**, long form of
 **[:scalar](#scalar-adverb)**, included in
@@ -3082,19 +3081,19 @@ demands evaluation of scalar variables that start with the
 **[qq/.../](#qq-op)** and
 **[<<...\>\>](#double-angle-brackets)**
 
-**:s** *[(regex
-modifier)](appendix-b-grouped.html#regex-modifier)*
+**:s**
+*[(regex modifier)](appendix-b-grouped.html#regex-modifier)* &mdash;
 whitespace separates now subregex and don't stand for spaces to
 look for, short for **[:sigspace](#sigspace-modifier)**,
 **[ms/.../](#ms-op)** is alias to
 **m:sigspace/.../**
 
-**\\S** *[(escape
-sequence)](appendix-b-grouped.html#escape-sequences)*
+**\\S**
+*[(escape sequence)](appendix-b-grouped.html#escape-sequences)* &mdash;
 anything but whitespace
 
-**\\s** *[(escape
-sequence)](appendix-b-grouped.html#escape-sequences)*
+**\\s**
+*[(escape sequence)](appendix-b-grouped.html#escape-sequences)* &mdash;
 any whitespace character, horizontal (
 **[\\h](#backslash-h)** ) and vertical (
 **[\\v](#backslash-v)** )
@@ -3286,8 +3285,8 @@ first ever execution, once per closure clone
 type)](appendix-b-grouped.html#mutable-types)*
 A symbol table hash (package, module, class, lexpad, etc)
 
-**stat** *[(filetest
-op)](appendix-b-grouped.html#filetest-ops)*
+**stat**
+*[(test method)](appendix-b-grouped.html#Test-Methods)* &mdash;
 available information about a file or link (call *stat :link* as
 former lstat)
 
@@ -3382,7 +3381,7 @@ attributes of a **[class](#class)** or
 # T
 
 **:t**
-*[(filetest op)](appendix-b-grouped.html#filetest-ops)* &mdash;
+*[(io test method)](appendix-b-grouped.html#Test-Methods)* &mdash;
 filehandle is opened to a tty (terminal)
 
 **\\T**
@@ -3507,31 +3506,40 @@ local time zone
 
 # U
 
-**:u** *[(filetest
-op)](appendix-b-grouped.html#filetest-ops)*
+<a id="u-test"/>
+**:u**
+*[(test method)](appendix-b-grouped.html#test-methods)* &mdash;
 report if file has setuid bit set
 
+<a id="backslash-U"/>
 **\\U\[<span class="you-provide">n</span>\]**
 *[(escape sequence)](appendix-b-grouped.html#escape-sequences)* &mdash;
 everything within the brackets is uppercase
 
+<a id="uc"/>
 **uc** &mdash; make all string chars uppercase
 
+<a id="ucfirst"/>
 **ucfirst** &mdash; make first char of a string uppercase
 
+<a id="UID-global-var"/>
 **$\*UID** *[(special var)](appendix-b-grouped.html#global-variables)* &mdash;
 real user ID of the running process
 (**[\$\*PID](#pid-global-var)**) owner (user), was @<
 and $UID in Perl 5
 
+<a id="UNDO-phaser"/>
 **UNDO**
 *[(closure trait)](appendix-b-grouped.html#closure-traits)* &mdash;
 marks as a prefix a special block, executed at every
 unsuccessful block exit, part of
 **[LEAVE](#LEAVE-phaser)** queue
 
-**uniq** *(list method)* &mdash; only unique elements of a list
+<a id="uniq"/>
+**uniq** *(list method)* &mdash;
+only unique elements of a list (no value twice)
 
+<a id="unless"/>
 **[unless](tablet-6-blocks.html#unless)**
 *[(block
 modifier)](appendix-b-grouped.html#conditionals)*
@@ -3540,6 +3548,7 @@ to **[False](#False)**, the block after that will
 be run, can also be written at the end of an expression, opposite of
 **[if](#if)**
 
+<a id="until"/>
 **[until](tablet-6-blocks.html#until)**
 *[(block modifier)](appendix-b-grouped.html#loops)* &mdash;
 runs block repeatedly as long as the following expression
@@ -3548,80 +3557,94 @@ runs block repeatedly as long as the following expression
 **[repeat](#repeat)**, can also be written at the
 end of an expression, opposite of **[while](#while)**
 
+<a id="unwrap"/>
 **unwrap** &mdash;
 remove an enclosing subroutine, see also: **[wrap](#wrap)**
 
+<a id="upper-subrule"/>
 **\<upper\>**
 *[(predefined subrule)](appendix-b-grouped.html#subrules)* &mdash;
 a single uppercase character
 
+<a id="uri"/>
 **[uri](io.html)** &mdash;
 returns IO::Streamable descendant for accessing content of that
 URI (only pramameter typed **[Str](#str-type)**)
 
+<a id="USAGE-compiler-var"/>
 **$?USAGE**
 *[(special var)](appendix-b-grouped.html#global-variables)* &mdash;
 default usage message generated at compile time
 
+<a id="use"/>
 **[use](subroutines.html)**
 load a module, check Perl version, import definitions (see
 **[need](#need)** and
 **[import](#import)**)
 
 
-
 # V
 
+<a id="backslash-V"/>
 **\\V**
 *[(escape sequence)](appendix-b-grouped.html#escape-sequences)* &mdash;
 anything but vertical whitespace
 
+<a id="backslash-v"/>
 **\\v**
 *[(escape sequence)](appendix-b-grouped.html#escape-sequences)* &mdash;
 vertical whitespace character (LF | CR | FF | Line Tab | Next
 Line | Line Separator | Paragraph Separator), see also:
 **[\\s](#backslash-s)** (whitespace)
 
+<a id="value"/>
 **value**
 *[(pair method)](tablet-3-variables#pair)* &mdash;
 gets value (second) value of a pair (opposite of
 **[key](#key)**) &mdash; example: (key =\> 'val').value;
 \# returns 'val'
 
+<a id="values-array"/>
 **values**
 *[(array op & method)](tablet-3-variables#array-methods)* &mdash;
 returns an array of values like the var itself in [list
 context](#list-context) does
 
+<a id="values"/>
 **values**
 *[(hash method)](tablet-3-variables#hash-methods)* &mdash;
 returns an array of just the values &mdash; example: *(1 =\> 2, 3 =\>
 4).values; \# returns (2,4)*
 
+<a id="VM-global-var"/>
 **\$\*VM**
 *[(special var)](appendix-b-grouped.html#global-variables)* &mdash;
 running virtual machine, might want to use *$\*VM.name*, see
 also: **[\$\*DISTRO](#distro-global-var)** and
 **[\$\*KERNEL](#kernel-global-var)**
 
-**\$?VM**
+<a id="VM-compiler-var"/>
+**\$\?VM**
 *[(special var)](appendix-b-grouped.html#global-variables)* &mdash;
 virtual machine the program is compiled for, see also:
-**[$?DISTRO](#distro-compiler-var)** and
-**[$?KERNEL](#kernel-compiler-var)**
+**[\$\?DISTRO](#distro-compiler-var)** and
+**[\$\?KERNEL](#kernel-compiler-var)**
 
 
 
 # W
 
+<a id="W-test"/>
 **:W**
-*[(filetest op)](appendix-b-grouped.html#filetest-ops)* &mdash;
+*[(test method)](appendix-b-grouped.html#Test-Methods)* &mdash;
 check if file is writeable by real uid/gid
 
+<a id="w-test"/>
 **:w**
-*[(filetest op)](appendix-b-grouped.html#filetest-ops)* &mdash;
+*[(io test method)](appendix-b-grouped.html#Test-Methods)* &mdash;
 check if file is writeable by effective uid/gid
 
+<a id="w-adverb"/>
 **[:w](tablet-2-basic-syntax.html#quote-words)**
 *[(quoting adverb)](appendix-b-grouped.html#quoting-adverbs)* &mdash;
 split quoted string on words (on whitespaces), no quote
@@ -3629,30 +3652,36 @@ protection, short form of
 **[:words](#words-adverb)**, used in
 **[qw/.../](#qw-op)**
 
+<a id="backslash-W"/>
 **\\W**
 *[(escape sequence)](appendix-b-grouped.html#escape-sequences)* &mdash;
 anything but a word character
 
+<a id="backslash-w"/>
 **\\w**
 *[(escape sequence)](appendix-b-grouped.html#escape-sequences)* &mdash;
 word character (Unicode alphanumeric plus "\_")
 
+<a id="pipe-w"/>
 **|w**
 *[(escape sequence)](appendix-b-grouped.html#escape-sequences)* &mdash;
 word boundary, zero width space between two **\\w**, alias to
 **[<wb\>](#wb-subrule)**, see also:
 **[|c](#pipe-c)** and **[|g](#pipe-g)**
 
+<a id="wait"/>
 **[wait](tablet-5-io.html#processes)** &mdash;
 waits for a child process to terminate and returns the child
 status object, process ID in numeric context
 
+<a id="warn"/>
 **[warn](tablet-5-io.html#warn)** &mdash;
 makes output via standart error output ($ERR - usually the
 command line), similar to **[note](#note)**, but
 works more like **[print](#print)**, without
 appending **[\\n](#backslash-n)**
 
+<a id="wb-subrule"/>
 **\<wb\>**
 *[(predefined subrule)](appendix-b-grouped.html#subrules)* &mdash;
 zero-width word boundary between an 
@@ -3661,19 +3690,23 @@ zero-width word boundary between an
 **[\\b](#backslash-b)**, alias to **|w**, see also
 **[\<ww\>](#ww-subrule)**
 
+<a id="WHAT-introspection"/>
 **WHAT**
 *[(introspection method)](appendix-b-grouped.html#object-introspection)* &mdash;
 short name of the class that an object belongs to
 
+<a id="Whatever"/>
 **Whatever**
 *[(undefined value type)](appendix-b-grouped.html#undefined-types)* &mdash;
 Wildcard (like Any, but subject to do-what-I-mean via multi
 method dispatch), alias to **[\*](#asterisk)**
 
+<a id="WHEN-introspection"/>
 **WHEN**
 *[(introspection method)](appendix-b-grouped.html#object-introspection)* &mdash;
 (reserved for events?)
 
+<a id="when"/>
 **[when](tablet-6-blocks.html#when)**
 *[(block modifier)](appendix-b-grouped.html#conditionals)* &mdash;
 executes its following code block, when parameter matches
@@ -3682,22 +3715,27 @@ against **[$\_](#context-var)** (set by
 **[for](#for)**), see also:
 **[default](#default)**
 
+<a id="WHENCE-introspection"/>
 **WHENCE**
 *[(introspection method)](appendix-b-grouped.html#object-introspection)* &mdash;
 autovivification of closures
 
+<a id="WHERE-introspection"/>
 **WHERE**
 *[(introspection method)](appendix-b-grouped.html#object-introspection)* &mdash;
 memory address of the object
 
+<a id="where"/>
 **where** &mdash;
 defines subtypes of data &mdash;
 example: *subset Month of Int where { 1 <= $\^a <= 12 }*
 
+<a id="WHICH-introspection"/>
 **WHICH**
 *[(introspection method)](appendix-b-grouped.html#object-introspection)* &mdash;
 object ID (type)
 
+<a id="while"/>
 **[while](tablet-6-blocks.html#while)**
 *[(block modifier)](appendix-b-grouped.html#loops)* &mdash;
 runs block repeatedly as long as the following expression
@@ -3706,6 +3744,7 @@ runs block repeatedly as long as the following expression
 **[repeat](#repeat)**, can also be written at the
 end of an expression, opposite of **[until](#until)**
 
+<a id="WHO-introspection"/>
 **WHO**
 *[(introspection method)](appendix-b-grouped.html#object-introspection)* &mdash;
 package, that support that object, long name in *[string
@@ -3794,14 +3833,14 @@ Cross product with hyper operator, alias of
 **[crosswith](#crosswith)** method &mdash;
 example: *\<a b\> X\~ \<y z\> == \<ay az by bz\>;*
 
-<a id="X-filetest"/>
+<a id="X-test"/>
 **:X**
-*[(filetest op)](appendix-b-grouped.html#filetest-ops)* &mdash;
+*[(io test method)](appendix-b-grouped.html#Test-Methods)* &mdash;
 check if file is executable by real uid/gid
 
-<a id="x-filetest"/>
+<a id="x-test"/>
 **:x**
-*[(filetest op)](appendix-b-grouped.html#filetest-ops)* &mdash;
+*[(io test method)](appendix-b-grouped.html#Test-Methods)* &mdash;
 check if file is executable by effective uid/gid
 
 <a id="x-adverb"/>
@@ -3818,13 +3857,13 @@ alias to **[Q](#capital-q-op)**
 *[(regex modifier)](appendix-b-grouped.html#regex-modifier)* &mdash;
 searching n times (n is an int) with this pattern
 
-<a id="X-escape"/>
+<a id="backslash-X"/>
 **\\X\[<span class="you-provide">n</span>\]**
 *[(escape sequence)](appendix-b-grouped.html#escape-sequences)* &mdash;
 anything but the character given in hexadecimal (brackets
 optional)
 
-<a id="x-escape"/>
+<a id="backslash-x"/>
 **\\x\[<span class="you-provide">n</span>\]**
 *[(escape sequence)](appendix-b-grouped.html#escape-sequences)* &mdash;
 character given in hexadecimal (brackets optional)

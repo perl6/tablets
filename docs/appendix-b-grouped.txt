@@ -572,11 +572,11 @@ Any              Any             scalars are identical     `$_ === X`
 
 
 
-Filetest Ops
+Test Methods
 ------------
 
-Use it as in `$file.:X` or `$file ~~ :X`. (NOTE 2010-11-07: in rakudo
-this is `$filename.IO ~~ :X`).
+They replace the old filetest ops (like -e).
+Use it as in `$filename.IO ~~ :X` or `$filename.IO.X`.
 
 -------  --------------------------------------------------------------
 :r       file is readable by effective uid/gid.

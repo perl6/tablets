@@ -215,7 +215,7 @@ a block that is given readonly *[parameters](parameter)* with
 **[<-\>](appendix-a-index.html#lower-minus-greater-op)**
 
 <a id="property"/>
-*property* &mdash; metadata of a variable set at runtime
+**property** &mdash; metadata of a variable set at runtime
 
 # Q
 
