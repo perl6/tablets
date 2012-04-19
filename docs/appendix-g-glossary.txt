@@ -52,7 +52,7 @@ executable (piece of) program
 
 *compile time* &mdash;
 time when Perl converts source code to executable form (bytecode),
-is always before *[runtime](appendix-a-index.html#runtime)*
+is always before *[runtime](#runtime)*
 even if code can be compiled via **[eval](appendix-a-index.html#eval)** and
 **[evalfile](appendix-a-index.html#evalfile)** when the program is
 already runnung, to run code at the begin of compile time use
@@ -201,11 +201,22 @@ following name, most prominent in Perl are the variable
 *signature* &mdash; function parameters (left-hand side of a binding),
 surrounded by round parentheses
 
+*slang* &mdash;
+sublanguages of Perl 6, their grammar is mostly stored
+in [special variables](appendix-b-grouped.html#special-variables)
+with the [twigil](#twigil) \~, such as
+**[\$\~Regex](appendix-a-index.html#regex-lang-var)** or
+**[\$\~MAIN](appendix-a-index.html#main-lang-var)** (main language),
+you can change or alter them with this keyword by using the
+**[augment](appendix-a-index.html#augment)**
+or **[supersede](appendix-a-index.html#supersede)** command
+
+
 *slice* &mdash; part of an array or list
 
 *slurpy array* &mdash;
 array parameter that receives all (slurps) all optional
-*[subroutine](routine)* arguments
+*[subroutine](#routine)* arguments
 
 *subroutine* &mdash;
 
