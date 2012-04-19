@@ -1,0 +1,26 @@
+<div id="main-box">
+<p>
+<a href="introduction.html">Intro</a>&nbsp;&nbsp;&nbsp;
+<b>Chapter:</b>&nbsp;&nbsp;
+<a href="tablet-0-history.html">0. History</a>&nbsp;&nbsp;
+<a href="tablet-1-language-design.html">1. Design</a>&nbsp;&nbsp;
+<a href="tablet-2-basic-syntax.html">2. Basic</a>&nbsp;&nbsp;
+<a href="tablet-3-variables.html">3. Var</a>&nbsp;&nbsp;
+<a href="tablet-4-operators.html">4. Op</a>&nbsp;&nbsp;
+<a href="tablet-5-io.html">5. IO</a>&nbsp;&nbsp;
+<a href="tablet-6-blocks.html">6. Block</a>&nbsp;&nbsp;
+<a href="tablet-7-subroutines.html">7. Sub</a>&nbsp;&nbsp;
+<a href="tablet-8-objects.html">8. OOP</a>&nbsp;&nbsp;
+<a href="tablet-9-regexes.html">9. Regex</a>&nbsp;&nbsp;
+<a href="tablet-10-metaprogramming.html">10. Meta</a>
+<br/>
+<a href="index.html">Overview</a>&nbsp;&nbsp;
+<b>Appendix:</b>&nbsp;&nbsp;
+<a href="appendix-a-index.html">A. Index</a>&nbsp;&nbsp;
+<a href="appendix-b-grouped.html">B. Grouped</a>&nbsp;&nbsp;
+<a href="appendix-c-cookbook.html">C. Cookbook</a>&nbsp;&nbsp;
+<a href="appendix-d-delta.html">D. Delta</a>&nbsp;&nbsp;
+<a href="appendix-e-exciting.html">E. Exciting</a>&nbsp;&nbsp;
+<a href="appendix-f-links.html">F. Links</a>&nbsp;&nbsp;
+<a href="appendix-g-glossary.html">G. Glossary</a>
+</p>

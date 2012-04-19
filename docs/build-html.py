@@ -2,8 +2,8 @@
 
 import glob, os.path
 
-pandoc_cmd  = '''pandoc -s --toc -N --css=styles.css -B _nav -A _nav -o %s %s'''
-pandoc_cmd2 = '''pandoc -s          --css=styles.css -B _nav -A _nav -o %s %s'''
+pandoc_cmd  = '''pandoc -s --toc -N --css=styles.css -H _head-inc -B _nav-header -A _nav-footer -o %s %s'''
+pandoc_cmd2 = '''pandoc -s          --css=styles.css -H _head-inc -B _nav-header -A _nav-footer -o %s %s'''
 
 txt_files = glob.glob('*.txt')
 
