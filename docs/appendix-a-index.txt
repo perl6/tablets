@@ -3562,11 +3562,10 @@ internal namespace for [routine declarators](appendix-b-grouped.html#routine-typ
 <a id="rule"/>
 **rule**
 *[«routine type»](appendix-b-grouped.html#routine-types)* &mdash;
-alias for ***[regex](#regex)**
+alias for **[regex](#regex)**
 **[:ratchet](#ratchet-modifier)**
-**[:sigspace](#sigspace-modifier)*** in a grammar,
-see **[regex](#regex)**,
-**[token](#token)**
+**[:sigspace](#sigspace-modifier)** in a [grammar](#grammar) &mdash;
+see also: **[regex](#regex)**, **[token](#token)**
 
 <a id="run"/>
 **[run](tablet-5-io.html#processes)** &mdash;
