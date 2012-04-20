@@ -20,36 +20,36 @@ and the 5th is for layers (namespaces) that organize the previous 4.
 ------------------------------------------------  --------------------------------------------------------------------------------------------------------
 
 The first 4 can also be used as prefix operators, called
-[contextualizers](#Contextualizers), that force different contexts,
+[contextualizers](#contextualizers), that force different contexts,
 but there are much more different contexts then 4.
+
 
 Twigils
 -------
 
 Twigil is short for secondary sigil. They follow after a primary sigil and mark special namespaces or variables with special meanings and properties.
 
----------------------------------------------------------  ------------------------------------------------------------
-`$foo`                                                     ordinary scoping (no twigil)
-[`$.foo`](appendix-a-index.html#dot-twigil)                object attribute public accessor
-[`$!foo`](appendix-a-index.html#exclamation-mark-twigil)   object attribute private storage
-[`$^foo`](appendix-a-index.html#caret-twigil)              self-declared formal positional parameter
-[`$:foo`](appendix-a-index.html#colon-twigil)              self-declared formal named parameter
-[`$*foo`](appendix-a-index.html#asterisk-twigil)           contextualizable global variable
-[`$?foo`](appendix-a-index.html#question-mark-twigil)      compiler hint variable
-[`$=foo`](appendix-a-index.html#equal-sign-twigil)         pod variable
-[`$<foo>`](appendix-a-index.html#angle-brackets-twigil)    match variable, short for `$/<foo>` or even `$/{'foo'}`
-[`$~foo`](appendix-a-index.html#tilde-twigil)              the foo sublanguage seen by the parser at this lexical spot
----------------------------------------------------------  ------------------------------------------------------------
-
+-------------------------------------------------------  ------------------------------------------------------------
+`$foo`                                                   ordinary scoping (no twigil)
+[`$.foo`](appendix-a-index.html#dot-twigil)              object attribute public accessor
+[`$!foo`](appendix-a-index.html#exclamation-twigil)      object attribute private storage
+[`$^foo`](appendix-a-index.html#caret-twigil)            self-declared formal positional parameter
+[`$:foo`](appendix-a-index.html#colon-twigil)            self-declared formal named parameter
+[`$*foo`](appendix-a-index.html#asterisk-twigil)         contextualizable global variable
+[`$?foo`](appendix-a-index.html#question-twigil)         compiler hint variable
+[`$=foo`](appendix-a-index.html#equal-twigil)            pod variable
+[`$<foo>`](appendix-a-index.html#angle-brackets-twigil)  match variable, short for `$/<foo>` or even `$/{'foo'}`
+[`$~foo`](appendix-a-index.html#tilde-twigil)            the foo sublanguage seen by the parser at this lexical spot
+-------------------------------------------------------  ------------------------------------------------------------
 
 
 Special Variables
 -----------------
 
---------------------------------------------------  ------------------------
-[`$_`](appendix-a-index.html#context-var)           context variable
-[`$!`](appendix-a-index.html#exclamation-mark-var)  error msg
---------------------------------------------------  ------------------------
+---------------------------------------------  ------------------------
+[`$_`](appendix-a-index.html#context-var)      context variable
+[`$!`](appendix-a-index.html#exclamation-var)  error msg
+---------------------------------------------  ------------------------
 
 
 ### Match Variables ###
@@ -99,8 +99,8 @@ $*DEBUGGING                                                               &nbsp;
 compiler constants (fixed at compile time)
 
 ----------------------------------------------------------------  ------------------------------------------------------------------
-[`$?KERNEL`](appendix-a-index.html#kernel-compiler-var)           for which operating System was this program compiled?
-[`$?DISTRO`](appendix-a-index.html#distro-compiler-var)           Which OS distribution am I compiling under?
+[`$?KERNEL`](appendix-a-index.html#KERNEL-compiler-var)           for which operating System was this program compiled?
+[`$?DISTRO`](appendix-a-index.html#DISTRO-compiler-var)           Which OS distribution am I compiling under?
 [`$?VM`](appendix-a-index.html#vm-compiler-var)                   Which virtual machine am I compiling under
 `$?XVM`                                                           Which virtual machine am I cross-compiling for
 [`$?PERL`](appendix-a-index.html#perl-compiler-var)               Which Perl am I compiled for?
@@ -125,7 +125,7 @@ File-scoped [POD](basic-syntax.html#pod) data
 -----------------------------------------------------  ----------------------------------------
 [`$=pod`](appendix-a-index.html#pod-pod-var)           surrounding POD object
 [`$=data`](appendix-a-index.html#data-pod-var)         data block handle (=begin DATA ... =end)
-[`@=COMMENT`](appendix-a-index.html#comment-pod-var)   All the comment blocks in the file
+[`@=COMMENT`](appendix-a-index.html#COMMENT-pod-var)   All the comment blocks in the file
 -----------------------------------------------------  ----------------------------------------
 
 ### Slang Variables ###
@@ -133,12 +133,12 @@ File-scoped [POD](basic-syntax.html#pod) data
 sublanguage seen by the parser at this lexical spot
 
 -------------------------------------------------------  ------------------------------------------------
-[`$~MAIN`](appendix-a-index.html#main-lang-var)          the current main language (e.g. Perl statements)
-[`$~Quote`](appendix-a-index.html#q-lang-var)            the current root of quoting language
-[`$~Quasi`](appendix-a-index.html#quasi-lang-var)        the current root of quasiquoting language
-[`$~Regex`](appendix-a-index.html#regex-lang-var)        the current root of regex language
-[`$~Trans`](appendix-a-index.html#trans-lang-var)        the current root of transliteration language
-[`$~P5Regex`](appendix-a-index.html#p5regex-lang-var)    the current root of the Perl regex language
+[`$~MAIN`](appendix-a-index.html#MAIN-slang-var)         the current main language (e.g. Perl statements)
+[`$~Quote`](appendix-a-index.html#Quote-slang-var)       the current root of quoting language
+[`$~Quasi`](appendix-a-index.html#Quasi-slang-var)       the current root of quasiquoting language
+[`$~Regex`](appendix-a-index.html#Regex-slang-var)       the current root of regex language
+[`$~Trans`](appendix-a-index.html#Trans-slang-var)       the current root of transliteration language
+[`$~P5Regex`](appendix-a-index.html#P5Regex-slang-var)   the current root of the Perl regex language
 -------------------------------------------------------  ------------------------------------------------
 
 Scope Declarator
