@@ -388,11 +388,11 @@ X       list    `infix:<!>($a; $b; $c)`
 Categories
 ----------
 
-### Main ###
+### MAIN ###
 
-These are the categories of the main language grammar. The first
-category is the metacategory that can used to produce new
-ones. Sublanguages such as quoting and regexes can provide their own.
+These are the categories of the main language grammar, stored in $~MAIN.
+The first category is the metacategory that can used to produce new ones.
+Sublanguages such as quoting and regexes can provide their own.
 
     category:<prefix>
     circumfix:<( )>
@@ -427,7 +427,7 @@ ones. Sublanguages such as quoting and regexes can provide their own.
 
 ### Regex ###
 
-The Regex language has following categories:
+The default Regex language as stored in $~Regex has following categories:
 
     assertion:sym<!>
     backslash:sym<w>
@@ -440,57 +440,55 @@ The Regex language has following categories:
 Metaoperators
 -------------
 
-M. appear mostly before or around regular operators and give them
-different meaning or greater range.  They can be nested like `@a X[+=]
-@b`, but be careful with that.  In the example V stands for Value, L
-for left Value, and R for right. A number is the array index.  Words
-in the second column are short explanation or an aliasing method if
-followed by `()`.
+appear mostly before or around regular operators and give them different
+meaning or greater range.  They can be nested like `@a X[+=] @b`,
+but be careful with that.  In the example V stands for Value,
+L for left Value, and R for right. A number is the array index.
+Words in the second column are short explanation or an aliasing method
+if followed by `()`.
 
--------  --------------  ----------------------------------------------------------
-`op=`    self assign     known from P5, `$L <op>= $R` equals `$L = $L op $R`
+-------  -----------  ----------------------------------------------------------
+`op=`    self assign  known from P5, `$L <op>= $R` equals `$L = $L op $R`
 
-`!op`    negation        known from P5, `$L !<op> $R` equals `!($L op $R)`\
+`!op`    negation     known from P5, `$L !<op> $R` equals `!($L op $R)`\
 
-`Rop`    reverse         reverses the order of the operands\
+`Rop`    reverse      reverses the order of the operands\
 
-`Sop`    sequence        like reduction, only synchronous, execution in listed
-                         order is guaranteed; suppresses any explicit or
-                         implicit parallelism
+`Sop`    sequence     like reduction, only synchronous, execution in listed order is
+                      guaranteed; suppresses any explicit or implicit parallelism
 
-`>>op`   hyper           processes arrays eager and in parallel or applies a
-                         single value to all array elements;
-                         `@E = $L[0] op $R[0], $L[1] op $R[1], ...;`
+`>>op`   hyper        processes arrays eager and in parallel or applies a
+                      single value to all array elements;
+                      `@E = $L[0] op $R[0], $L[1] op $R[1], ...;`
 
-`<<op`   hyper           like above, points to the side which determines
-                         dimensionality;
-                         `@E = $L[0] op $R[0], $L[1] op $R[1], ...;`
+`<<op`   hyper        like above, points to the side which determines dimensionality;
+                      `@E = $L[0] op $R[0], $L[1] op $R[1], ...;`
 
-`[op]`   reduce()        applies the operator between all elements of an array;
-                         `$result = $V[0] op $V[1] op ...;`
+`[op]`   reduce()     applies the operator between all elements of an array;
+                      `$result = $V[0] op $V[1] op ...;`
 
-`[\op]`  triangle()      applies above reduction to a series of lists made of
-                         array slices ranging in length from 1 to the complete
-                         length of the original list;
-                         `@result = $V[0], $V[0] op $V[1],
-                         $V[0] op $V[1] op $V[2], ...;`
+`[\op]`  triangle()   applies above reduction to a series of lists made of
+                      array slices ranging in length from 1 to the complete
+                      length of the original list;
+                      `@result = $V[0], $V[0] op $V[1],
+                      $V[0] op $V[1] op $V[2], ...;`
 
-`Xop`    crosswith()     performs the operator to all the pairs of the Cartesian
-                         product of two arrays; `@result = $L[0] op $R[0],
-                         $L[0] op $R[1], $L[1] op $R[0], $L[1] op $R[1]`
+`Xop`    crosswith()  performs the operator to all the pairs of the Cartesian
+                      product of two arrays; `@result = $L[0] op $R[0],
+                      $L[0] op $R[1], $L[1] op $R[0], $L[1] op $R[1]`
 
-`Zop`    zipwith()       like hyper, but evaluates lazy,
-                         `@result = $L[0] op $R[0], $L[1] op $R[1], ...`
--------  --------------  ----------------------------------------------------------
+`Zop`    zipwith()    like hyper, but evaluates lazy,
+                      `@result = $L[0] op $R[0], $L[1] op $R[1], ...`
+-------  -----------  ----------------------------------------------------------
 
 
 
 Unicode operators
 -----------------
 
-The two hyper operators can be written with the Unicode "chevron"
-signs (also documented as "French Quotes") or with double less than or
-greater than signs (documented as "Texas Quotes").
+The two hyper operators can be written with the Unicode signs (also documented
+as "French Quotes") or with double less than or greater than signs (documented
+as "Texas Quotes").
 
     « aka <<
     » aka >>
