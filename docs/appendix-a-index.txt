@@ -7,13 +7,16 @@ methods, builtins, options, modifier and special variables (in
 «in french brackets» to a condensed summary listing of its category
 in [appendix B](appendix-b-grouped.html).
 
-Sometimes are added green placeholder. <span
-class="you-provide">n</span> stands for a integer number, <span
-class="you-provide">f</span> is a floating point number, <span
-class="you-provide">s</span> string, <span
-class="you-provide">var</span> any variable, <span
-class="you-provide">op</span> any operator, and <span
-class="you-provide">p</span> for a regex pattern.
+Sometimes are added green placeholder.
+<span class="you-provide">n</span> stands for a [integer number](#Int-type),
+<span class="you-provide">f</span> is a floating [point number](#Num-type),
+<span class="you-provide">s</span> [string](#Str-type),
+<span class="you-provide">var</span> any variable,
+<span class="you-provide">op</span> any operator,
+and <span class="you-provide">p</span> for a 
+   *[regex](appendix-g-glossary.html#regex)* pattern
+and <span class="you-provide">t</span> any
+   *[term](appendix-g-glossary.html#term)*.
 
 <a id="nav-top"/>
 **Navigation:** [A](#a) [B](#b) [C](#c) [D](#d) [E](#e)
@@ -22,8 +25,9 @@ class="you-provide">p</span> for a regex pattern.
 [T](#t) [U](#u) [V](#v) [W](#w) [X](#x) [Y](#y) [Z](#z)
 
 Before alpha chars (a-z) in ASCII order:
-[`! " #`](#exclamation) [`$ % &`](#dollar) [`' ( *`](#single-quotation) [`+ , -`](#plus)
-[`. / 0`](#dot) [`: ; <`](#colon) [`= > ?`](#equal) [`@ [ \`](#at) [`^ _ {`](#caret)   [`| ~`](#pipe)
+[`! " #`](#exclamation)  [`$ % &`](#dollar)  [`' ( *`](#single-quotation)
+[`+ , -`](#plus)         [`. / 0`](#dot)     [`: ; <`](#colon) [`= > ?`](#equal)
+[`@ [ \`](#at)           [`^ _ {`](#caret)   [`| ~`](#pipe)
 
 Punctuation
 ===========
@@ -1863,7 +1867,7 @@ Int $status (first parameter) to the calling environment
 **exp** &mdash;
 exponentiate, alias method to: $base (first parameter)
 **[\*\*](#double-asterisk-op)** $exponent (second
-parameter - defaults to e)
+parameter - defaults to e - the euler constant)
 
 <a id="export"/><a id="export-rouine-trait"/>
 **export**
@@ -1904,7 +1908,7 @@ form feed
 <a id="fail"/>
 **fail** &mdash;
 causes the [routine](appendix-g-glossary.html#routine) to return an unthrown
-**[Exception](#exception-type)**, if *use fatal;* is
+**[Exception](#Exception-type)**, if *use fatal;* is
 in effect where the *[routine](appendix-g-glossary.html#routine)* was called from,
 it throws the exception
 
@@ -1912,7 +1916,7 @@ it throws the exception
 **Failure**
 *[«undefined value type»](appendix-b-grouped.html#undefined-types)* &mdash;
 data type object for an error, thrown by an unhandled
-**[Exception](#exception-type)**
+**[Exception](#Exception-type)**
 
 <a id="False"/>
 **False** &mdash;
@@ -2676,7 +2680,7 @@ or `say map { chr $\_ }, 66..69`
 **Match**
 *[«mutable type»](appendix-b-grouped.html#mutable-types)* &mdash;
 Perl match object, usually produced by applying a pattern of
-*[regular expression](#regular-expression)* to a
+*[regular expression](#regex)* to a
 string
 
 <a id="match"/>
@@ -2856,7 +2860,7 @@ but appends a newline (**[\\n](#backslash-n)**) like **[say](#say)**
 <a id="Num-type"/>
 **Num**
 *[«immutable type»](appendix-b-grouped.html#immutable-types)* &mdash;
-Perl number (approximate Real, generally via floating point)
+Perl number (approximate "real", generally via floating point)
 
 <a id="numerator"/>
 **numerator**
@@ -3179,7 +3183,7 @@ example (greater as): *++<< @a*
 
 <a id="print"/>
 **[print](tablet-5-io.html#print)** &mdash;
-sends a [string](#Str) to an output stream
+sends a [string](#Str-type) to an output stream
 (default is (**[$\*OUT](#OUT-global-var)**, but can also be any 
 *[file handle](tablet-5-io.html#print-for-files)* )
 without adding a newline like **[say](#say)**

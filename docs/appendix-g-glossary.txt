@@ -113,6 +113,10 @@ considered contract in Perl 6
 
 # E
 
+<a id="expression"/>
+**expression** &mdash;
+
+
 <a id="evaluation"/>
 **evaluation** &mdash;
 transforming something, that it gets ready for practical usage -
@@ -201,7 +205,7 @@ that belong together into so called objects
 
 # P
 
-<a id="OOP"/>
+<a id="parameter"/>
 **parameter** &mdash;
 value passed to a method or *[subroutine](routine)*,
 mostly as part of the signature
@@ -245,8 +249,8 @@ a block that is given readonly *[parameters](parameter)* with
 **reference** &mdash;
 address of data in memory, often termed a capture in Perl 6
 
-<a id="regular-expression"/>
-**regular expression** &mdash; in Perl5: pattern matching notation, either
+<a id="regex"/>
+**Regex** *(regular expression)* &mdash; in Perl5: pattern matching notation, either
 regex, token or rule in Perl6
 
 <a id="routine"/>
@@ -309,6 +313,9 @@ array parameter that receives all (slurps) all optional
 **subroutine** &mdash; much used, Perl 5-ish term for [routine](#routine)
 
 # T
+
+<a id="term"/>
+**term** &mdash;
 
 <a id="topicalizer"/>
 **topicalizer** &mdash;

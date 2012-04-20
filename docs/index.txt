@@ -9,10 +9,14 @@ lightweight introduction, try [my Perl 6 Tutorial](#) or the Book
 [Learning Perl 6](http://www.learningperl6.com/Chapters/). If that is
 too easy, read [the specs](http://perlcabal.org/syn/).
 
+---
+
 **DISCLAIMER:**
 
-This documentation is currently transferred into that format,
-the data here is partial and subject to drastic changes.
+This documentation is currently **under construction**, we mean that literally.
+Therefore the data presented is partial and subject to drastic changes.
+
+Tablets 1-4 have some substance, but most complete are Appenices A, B, D and E.
 
 ---
 
