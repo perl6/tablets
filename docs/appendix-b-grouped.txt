@@ -16,7 +16,7 @@ and the 5th is for layers (namespaces) that organize the previous 4.
 [`@`](appendix-a-index.html#at-sigil)             ordered array, indexed list of scalar
 [`%`](appendix-a-index.html#percent-sigil)        unordered hash (associative array), 2 column table with unique IDs (keys) and associated values (value)
 [`&`](appendix-a-index.html#ampersand-sigil)      code/rule/token/regex
-[`::`](appendix-a-index.html#colon-colon-sigil)   abstraction: package/module/class/role/subset/enum/type/grammar
+[`::`](appendix-a-index.html#double-colon-sigil)  abstraction: package/module/class/role/subset/enum/type/grammar
 ------------------------------------------------  --------------------------------------------------------------------------------------------------------
 
 The first 4 can also be used as prefix operators, called
@@ -902,17 +902,11 @@ Conditionals
 
 ----------------------------------------  -----------------------------------------------------------------------------------
 [if](appendix-a-index.html#if)            when following expression evals in boolean context to True, the block that following after that will be executed
-
 [elsif](appendix-a-index.html#elsif)      works like if, but only recognized if no preceding "if" or "elsif" clause was executed
-
 [else](appendix-a-index.html#else)        following block will be executed, when no preceding "if" or "elsif" clause was executed
-
 [unless](appendix-a-index.html#unless)    opposite of if, no "elsif" or "else" is allowed to follow
-
 [given](appendix-a-index.html#given)      evals an expression into scalar context assignes it to `$_` for the following block
-
 [when](appendix-a-index.html#when)        smartmatches an expression against `$_`; if the result is True, the following block will be executed
-
 [default](appendix-a-index.html#default)  following block will be executed, when no "when" clause was executed
 ----------------------------------------  -----------------------------------------------------------------------------------
 
@@ -923,16 +917,12 @@ Loops
 --------------------------------------  -----------------------------------------------------------
 [loop](appendix-a-index.html#loop)      general (endless) loop, unless used as an C-style-loop,
                                         evals following expression into void context
-
 [repeat](appendix-a-index.html#repeat)  initial command for while or until loops that have their
                                         condtion at the end
-
 [while](appendix-a-index.html#repeat)   loop with negative exit condition (exit when False),
                                         condition, evals expression into boolean context
-
 [until](appendix-a-index.html#until)    loop with positive exit condition(exit when True),
                                         evals expression into boolean context
-
 [for](appendix-a-index.html#for )       evals expression into lazy list context and iterates over
                                         that list from first to last value, sets each time `$_`
                                         (can be combined with when as well),
@@ -1023,6 +1013,9 @@ In routine and block definitions can be also some character with special meaning
 -------------------------------------------------------------  ------------------------------------------------------------------------------------------------------------------
 
 ### Callframe Methods ###
+
+of objects provided by **[callframe](appendix-a-index.html#callframe)** and
+**[caller](appendix-a-index.html#caller)**
 
     args
     callframe

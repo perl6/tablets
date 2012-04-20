@@ -102,6 +102,9 @@ creating a *[subroutine](routine)* that calls another with certain
 **declarative programming** &mdash; programming paradigm that expresses the
 logic of a computation without describing its control flow
 
+<a id="delegation"/>
+**delegation** &mdash; 
+
 <a id="design-by-contract"/>
 **design by contract** &mdash; programming style in which parameters and
 return values from routines must meet conditions; A signature is
@@ -112,8 +115,12 @@ considered contract in Perl 6
 
 <a id="evaluation"/>
 **evaluation** &mdash;
-executing a piece of program, before that all
-variables will be replaced with their content
+transforming something, that it gets ready for practical usage -
+sometimes means that just replacing in a piece of code all variables with there
+current content, cometimes more like interpreting or compiling something;
+inside quotes and regexes ot has the first meaning,
+the command **[eval](appendix-a-index.html#eval)** and
+**[evalfile](appendix-a-index.html#evalfile)**does the second
 
 # F
 
@@ -279,14 +286,14 @@ surrounded by round parentheses
 
 <a id="slang"/>
 **slang** &mdash;
-sublanguages of Perl 6, their grammar is mostly stored
-in [special variables](appendix-b-grouped.html#special-variables)
-with the [twigil](#twigil) \~, such as
-**[\$\~Regex](appendix-a-index.html#regex-lang-var)** or
+sublanguages of Perl 6, quoting or *[regular expression](#regular expression)*
+are completely independent languages, the grammar to parse them is mostly stored
+in [special variables](appendix-b-grouped.html#slang-variables)
+with the [twigil](#twigil) \~, 
 **[\$\~MAIN](appendix-a-index.html#main-lang-var)** (main language),
-you can change or alter them with this keyword by using the
+you can change or alter them by using the keyword 
 **[augment](appendix-a-index.html#augment)**
-or **[supersede](appendix-a-index.html#supersede)** command
+or **[supersede](appendix-a-index.html#supersede)**
 
 
 <a id="slice"/>
