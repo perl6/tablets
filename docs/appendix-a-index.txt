@@ -1918,7 +1918,8 @@ data type object for an error, thrown by an unhandled
 **False** &mdash;
 *[boolean](#Bool-type)* value aka
 Bool::False, 0 in numeric context, '' (empty) in
-*[string context](tablet-4-operators.html#string-context)*
+*[string context](tablet-4-operators.html#string-context)*,
+opposite of **[True](#True)**
 
 <a id="FatRat-type"/>
 **FatRat**
