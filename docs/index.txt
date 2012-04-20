@@ -20,8 +20,6 @@ Tablets 1-4 have some substance, but most complete are Appenices A, B, D and E.
 
 ---
 
-**Contents:**
-
 [Preface and Introduction](introduction.html)
 
 [Tablet 0: History](tablet-0-history.html)
@@ -73,5 +71,3 @@ appendix A but grouped by topic)
 [Appendix F: Links](appendix-f-links.html)
 
 [Appendix G: Glossary](appendix-g-glossary.html)
-
-***
