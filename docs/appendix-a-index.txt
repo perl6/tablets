@@ -351,6 +351,11 @@ declares named parameters for a *[block](appendix-g-glossary.html#block)*
 *[«regex metachar»](appendix-b-grouped.html#regex-metacharacter)* &mdash;
 matches any character (including a newline, unlike in Perl 5)
 
+<a id="dot-subrule"/>
+\<**.**<span class="you-provide">s</span>\> &mdash;
+prefix for a *[subrule](appendix-g-glossary.html#subrule)*
+that doesn't capture (matches will not be remembered)
+
 <a id="double-dot"/><a id="double-dot-op"/><a id="range-op"/>
 **..**
 *[«ranges»](tablet-4-operators.html#ranges)*,

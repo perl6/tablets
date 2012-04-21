@@ -313,6 +313,9 @@ array parameter that receives all (slurps) all optional
 <a id="subroutine"/>
 **subroutine** &mdash; much used, Perl 5-ish term for [routine](#routine)
 
+<a id="subrule"/>
+**subrule** &mdash; 
+
 # T
 
 <a id="term"/>
