@@ -767,7 +767,7 @@ prefix of metaclass methods, `$obj.\^methods();` is shortcut for
 *[«regex Metachar»](appendix-b-grouped.html#regex-metacharacter)* &mdash;
 start of the string
 
-<a id="doule-caret-op"/>
+<a id="double-caret-op"/>
 **\^\^**
 *[«logical op»](tablet-4-operators.html#logical-selection)* &mdash;
 logical *XOR*, combines expressions, returns
