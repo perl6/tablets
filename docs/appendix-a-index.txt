@@ -2353,6 +2353,7 @@ example (exclamation mark): ` 4 != 5 `
 marks as a prefix a special block or statement, executed at run
 time, [ASAP](appendix-g-glossary.html#ASAP), only ever runs once
 
+<a id="inline"/>
 **inline** *(sub trait)* &mdash;
 
 <a id="Instant-type"/>
@@ -2364,9 +2365,8 @@ a point on the continuous atomic timeline
 **Int**
 *[«immutable type»](appendix-b-grouped.html#immutable-types)* &mdash;
 Perl integer, objext type to hold whole number like &mdash;1, 2 or
-6000, allows **[Inf](#inf)** / NaN, arbitrary
-precision, use it as method to convert into a **Int** like the Perl
-5 "int"
+6000, allows **[Inf](#inf)** / NaN, arbitrary precision,
+use it as method to convert into a **Int** like the Perl 5 "int"
 
 **invert**
 *[«hash op & method»](tablet-3-variables#hash-methods)* &mdash;
@@ -2381,9 +2381,11 @@ pairs (hash), returning a **[Pair](#pair)**
 *[«mutable type»](appendix-b-grouped.html#mutable-types)* &mdash;
 Perl filehandle
 
+<a id="is"/>
 **is** &mdash;
-bind a *[traits](appendix-g-glossary.html#trait)* to a variable
+bind a *[trait](appendix-g-glossary.html#trait)* to a variable
 
+<a id="item"/><a id="item-op"/>
 **item()**
 *[«context op»](appendix-b-grouped.html#contextualizers)* &mdash;
 forces scalar context, alias to **[$(»](#dollar-op)**
@@ -3486,8 +3488,7 @@ and sets the return value &mdash; see also: **[leave](#leave)**
 <a id="returns"/>
 **returns** 
 *[«routine trait»](appendix-b-grouped.html#)* &mdash;
-describing the
-type of value is produced (returned)
+describing the type of value is produced (returned)
 
 <a id="reverse"/>
 **reverse**
@@ -3586,7 +3587,8 @@ marks a *[routine](appendix-g-glossary.html#routine)* as returning an
 <a id="rw-parameter-trait"/>
 **rw**
 *[«parameter trait»](appendix-b-grouped.html#parameter-traits)* &mdash;
-mutable parameter (rw stands for: read write)
+mutable parameter (rw stands for: read write), can be changed by the
+*[routine](appendix-g-glossary.html#routine)* given to
 
 <a id="rw-modifier"/>
 **:rw**
@@ -3739,7 +3741,8 @@ unordered collection of values that allows no duplicates
 <a id="set"/>
 **set**
 *[«array op & method»](tablet-3-variables#array-methods)* &mdash;
-creates a Set
+creates a **[Set](#Set-type)** &mdash;
+example:
 
 <a id="sigil"/><a id="sigil-category"/>
 **sigil**
@@ -3795,9 +3798,9 @@ attempt to sleep (stop the program) for up to
 seconds (with sub-second resolution)
 
 <a id="slurp"/>
-**[slurp](tablet-2-basic-syntax.html#files)** &mdash;
-*«path and file handle method»* &mdash; reads an entire file into a string
-without a file handle
+**[slurp](tablet-2-basic-syntax.html#files)**
+*«path and file handle method»* &mdash;
+reads an entire file into a string without a file handle
 
 <a id="so"/><a id="so-op"/>
 **so**
