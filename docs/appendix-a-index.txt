@@ -413,7 +413,7 @@ first positional submatch, there is **`$1`**, **`$2`**, ... too
 (don't stops at **`$9`** like Perl 5), alias to
 [**`$()[0]`**](#round-brackets-var) and
 [**`$/[0]`**](#slash-var), P5s $0 is 
-[**\$\*EXECUTABLE\_NAME**](#executable-name-global-var)
+[**\$\*EXECUTABLE\_NAME**](#EXECUTABLE-NAME-global-var)
 
 <a id="colon"/><a id="colon-adverb"/>
 **:**() &mdash;
@@ -1331,7 +1331,7 @@ searching on character level (default), see also:
 <a id="chdir"/>
 **[chdir](tablet-5-io.html#dir)**
 changes the current working directory
-(**[$\*CWD](#cwd-global-var)**)
+(**[$\*CWD](#CWD-global-var)**)
 
 <a id="CHECK-phaser"/>
 **CHECK**
@@ -1601,7 +1601,7 @@ returns the denominator of a rational number
 **die** &mdash;
 throws a fatal **[Exception](#exception-type)**, the default
 exception handler **[print](#print)**'s each element
-of the list to **[$\*ERR](#err-global-var)**
+of the list to **[$\*ERR](#ERR-global-var)**
 
 <a id="digit-subrule"/>
 **\<digit\>**
@@ -1618,8 +1618,8 @@ default
 **\$\*DISTRO**
 *[«special var»](appendix-b-grouped.html#global-variables)* &mdash;
 running OS distribution, you might want to use `$*DISTRO.name`,
-see also: **[\$\*KERNEL](#kernel-global-var)** and
-**[\$\*VM](#vm-global-var)**
+see also: **[\$\*KERNEL](#KERNEL-global-var)** and
+**[\$\*VM](#VM-global-var)**
 
 <a id="DISTRO-compiler-var"/>
 **\$\?DISTRO**
@@ -2304,7 +2304,7 @@ just import definitions from an already loaded module (see
 **\$\*IN**
 *[«special var»](appendix-b-grouped.html#global-variables)* &mdash;
 file handle for thestandard input (command line mostly), see also
-**[$\*OUT](#out-global-var)**, is STDIN in P5
+**[$\*OUT](#OUT-global-var)**, is STDIN in P5
 
 <a id="INC-global-var"/>
 **\@\*INC**
@@ -2431,8 +2431,8 @@ forces subrules to memorize everything (even comments)
 *[«special var»](appendix-b-grouped.html#global-variables)* &mdash;
 (core or type of the) running operating system, use
 *$\*KERNEL.name* instead of Perl 5s $OSNAME, see also:
-**[\$\*DISTRO](#distro-global-var)** and
-**[\$\*VM](#vm-global-var)**
+**[\$\*DISTRO](#DISTRO-global-var)** and
+**[\$\*VM](#VM-global-var)**
 
 <a id="KERNEL-compiler-var"/>
 **\$?KERNEL**
@@ -2493,7 +2493,7 @@ everything within the brackets is lowercase
 <a id="LANG-global-var"/>
 **$\*LANG**
 *[«special var»](appendix-b-grouped.html#global-variables)* &mdash;
-LANG variable from **[%\*ENV](#env-global-var)**
+LANG variable from **[%\*ENV](#ENV-global-var)**
 that defines what human language is used
 
 <a id="LANG-compiler-var"/>
@@ -2947,7 +2947,7 @@ names for variables and routines
 **\$\*OUT**
 *[«special var»](appendix-b-grouped.html#global-variables)* &mdash;
 file handle for standard output (command line mostly), see also
-**[$\*IN](#in-global-var)**, is STDOUT in P5
+**[$\*IN](#IN-global-var)**, is STDOUT in P5
 
 <a id="ov-modifier"/>
 **:ov** *[«regex modifier»](appendix-b-grouped.html#regex-modifier)* &mdash;
@@ -2971,7 +2971,7 @@ file is a named pipe (FIFO), or filehandle is a pipe
 **[:p](tablet-2-basic-syntax.html#paths)**
 *[«quoting adverb»](appendix-b-grouped.html#quoting-adverbs)* &mdash;
 quote paths and create path object that know the right format of
-the current **[$\*KERNEL](#kernel-global-var)** with
+the current **[$\*KERNEL](#KERNEL-global-var)** with
 **Q :p /.../ **, short for **[:path](#path-adverb)**
 
 <a id="p-modifier"/>
@@ -3058,7 +3058,7 @@ later defined rules can't be applied, opposite of
 **[:path](tablet-2-basic-syntax.html#paths)**
 *[«quoting adverb»](appendix-b-grouped.html#quoting-adverbs)* &mdash;
 quote paths and create path object that know the right format of
-the current **[$\*KERNEL](#kernel-global-var)** with
+the current **[$\*KERNEL](#KERNEL-global-var)** with
 **Q :path /.../ **, long for **[:p](#p-adverb)**
 
 <a id="perl"/>
@@ -3682,15 +3682,15 @@ matched string, long for **[:mm](#mm-modifier)**
 <a id="samespace-modifier"/>
 **:samespace**
 *[«regex modifier»](appendix-b-grouped.html#regex-modifier)* &mdash;
-smart space mapping for substitutions, long for
-**[:ss](#ss-modifier)**,
-**[ss/.../.../](#ss-op)** is alias to
-**s:samespace/.../.../** &mdash; example: *ss/teh hsa/the has/;*
+smart space mapping for substitutions, long alias of
+**[:ss](#ss-modifier)** &mdash;
+example: *ss/teh hsa/the has/;* &mdash;
+see also: **[:sigspace](#sigspace-modifier)**
 
 <a id="say"/>
 **[say](tablet-5-io.html#say)** &mdash;
 makes output via command line
-(**[$\*OUT](#out-global-var)**) like
+(**[$\*OUT](#OUT-global-var)**) like
 **[print](#print)**, but appends a newline
 (**[\\n](#backslash-n)**)
 
@@ -3844,23 +3844,23 @@ string like **[printf](#printf)**, but returns the
 string instead of outputting it
 
 <a id="sqrt"/>
-**sqrt** &mdash;
-square root of $n (**[Num](#Num-type)** - first and only parameter)
+**sqrt**([Num](#Num-type) $f) &mdash;
+square root of $f &mdash; see also: **[exp](#exp)**
 
 <a id="ss"/><a id="ss-op"/>
 **[ss/ / /](tablet-9-regexes.html#substitution)**
 *[«regex quoting op»](appendix-b-grouped.html#quoting-ops)* &mdash;
 performs **[rx](#rx)** based substitution, spaces
-are just subrule separators, alias to **s:ss/.../.../**, e.g.:
-ss/teh hsa/the has/;
+are just subrule separators,
+`ss/.../.../` is alias to [`s:ss/.../.../`](#ss-modifier) &mdash;
+example: `ss/teh hsa/the has/;`
 
 <a id="ss-modifier"/>
 **:ss**
 *[«regex modifier»](appendix-b-grouped.html#regex-modifier)* &mdash;
 only for for substitution, whitespace separates subregexes like
 **[:sigspace](#sigspace-modifier)**, but also in the
-second part, short for
-**[:samespace](#samespace-modifier)**
+second part, short alais of **[:samespace](#samespace-modifier)**
 
 <a id="st-modifier"/>
 **:st**
@@ -4248,8 +4248,8 @@ returns an array of just the values &mdash; example: *(1 =\> 2, 3 =\>
 **\$\*VM**
 *[«special var»](appendix-b-grouped.html#global-variables)* &mdash;
 running virtual machine, might want to use *$\*VM.name*, see
-also: **[\$\*DISTRO](#distro-global-var)** and
-**[\$\*KERNEL](#kernel-global-var)**
+also: **[\$\*DISTRO](#DISTRO-global-var)** and
+**[\$\*KERNEL](#KERNEL-global-var)**
 
 <a id="VM-compiler-var"/>
 **\$\?VM**
@@ -4393,7 +4393,7 @@ by providing a block after the subroutine's signature definition
 
 <a id="words"/>
 **words**
-*(string method)* &mdash;
+*«string method»* &mdash;
 splits a sting into a list of words &mdash;
 example: `$input.words($limit)` equals [`$input.comb( / \\S+ /,
 $limit )`](#comb)
@@ -4412,7 +4412,8 @@ but can forward to it, opposite of **[unwrap](#unwrap)**
 
 <a id="write"/>
 **[write](tablet-5-io.html#read)**
-*(Buf method)* &mdash; writes content of all parameter into that buffer
+*«Buf method»* &mdash;
+writes content of all parameter into that buffer
 
 <a id="ws-subrule"/>
 **\<ws\>**
