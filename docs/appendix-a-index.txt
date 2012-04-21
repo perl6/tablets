@@ -130,8 +130,7 @@ matches the end of a line (no more multile mode)
 <a id="percent-sigil"/>
 **%**
 *[«sigil»](appendix-b-grouped.html#sigils)* &mdash;
-[prefix](#prefix-category) of [hash
-variables](tablet-3-variables#hash)
+[prefix](#prefix-category) of [hash variables](tablet-3-variables#hash)
 
 <a id="percent-op"/>
 **%**
@@ -241,7 +240,7 @@ multiplies numbers, forces numeric context
 **\***
 *[«twigil»](appendix-b-grouped.html#twigils)* &mdash;
 *[twigil](appendix-g-glossary.html#twigil)* of global variables that
-are accessible in all *[scopes](appendix-g-glossary.html##scope)*
+are accessible in all *[scopes](appendix-g-glossary.html#scope)*
 
 <a id="asterisk-matachar"/>
 **\***
@@ -595,7 +594,7 @@ context](tablet-4-operators.html#string-context)*
 *[infix](#infix-category)* check for identity - equality of
 value and [type](appendix-b-grouped.html#value-types)
 
-<a id="double-equal-greater-op"/>
+<a id="double-equal-greater-op"/><a id="pipe-right"/>
 **==\>**
 *[«sequencer op»](tablet-4-operators.html#feed-ops)* &mdash;
 rightward pointing feed operator, take return value of left side
@@ -607,10 +606,10 @@ and feed as parameter to the right
 rightward pointing feed operator that adds values to an existing
 list (append-mode)
 
-<a id="equal-greater-op"/>
+<a id="equal-greater-op"/><a id="fat-arrow"/>
 **=\>**
 *«op»* &mdash;
-pair (and hash) constructor, called *fatarrow*
+**[Pair](#Pair-type)** (and hash) constructor, called *fatarrow*
 
 <a id="greater-op"/>
 **\>**
@@ -791,8 +790,7 @@ context var, result of the last command, can set by topicalizers
 «terminator» &mdash;
 [circumfix](#circumfix-category) operator,
 encloses blocks and creates a *[coderef](appendix-g-glossary.html#coderef)*,
-or a hashref when it is
-identified as a hash or contains a **[=\>](#fatarrow)**
+or a hashref when it is identified as a hash or contains a **[=\>](#fat-arrow)**
 
 <a id="pipe"/><a id="pipe-op"/><a id="junctive-xor"/>
 **|**
@@ -1588,8 +1586,7 @@ removes all values of which indices are passed
 <a id="delete-hash"/>
 **delete**
 *[«hash method»](tablet-3-variables#hash-methods)* &mdash;
-removes all [pairs](#pair) of which keys are
-passed
+removes all [pairs](#pair) of which keys are passed
 
 <a id="denominator"/>
 **denominator**
@@ -1660,7 +1657,7 @@ The difference between two Instants
 **dynamic**
 *[«parameter trait»](appendix-b-grouped.html#parameter-traits)* &mdash;
 parameter is an "environmental" variable, a lexical in the
-dynamic scope
+dynamic *[scope](appendix-g-glossary.html#scope)*
 
 
 
@@ -2221,14 +2218,14 @@ introduces attribute names, see also
 <a id="Hash-type"/>
 **Hash**
 *[«mutable type»](appendix-b-grouped.html#mutable-types)* &mdash;
-Perl hash, a two column table of *Scalar*, values in one column
-are keys to refer to the values in the other column
+Perl hash, a two column table of **[Scalar](#Scalar-type)**,
+values in one column are keys to refer to the values in the other column,
+can be also seen as a **[Set](#Set-type)** of **[Pairs](#Pair-type)**
 
 <a id="hash"/><a id="hash-op"/>
 **hash**
 *[«context op»](appendix-b-grouped.html#contextualizers)* &mdash;
-enforces hash-list context, alias to
-**[%(»](#percent-op)**
+enforces hash-list context, alias to **[%()](#percent-op)**
 
 <a id="hash-adverb"/>
 **[:hash](tablet-2-basic-syntax.html#interpolation)**
@@ -2249,13 +2246,12 @@ equal to **[:to](#to-adverb)**
 <a id="HOW-introspection"/>
 **HOW**
 *[«introspection method»](appendix-b-grouped.html#object-introspection)* &mdash;
-get an instance the objects metaclass, its "Higher Order
-Workings"
+get an instance the objects metaclass, its "Higher Order Workings"
 
 <a id="hyper"/>
 **hyper** &mdash;
-forces none-lazy list context, that ignores the order of
-results (allows parallel computing)
+forces none-lazy list context, that ignores the order of results
+(allows parallel computing)
 
 
 # I
@@ -2348,8 +2344,8 @@ example (equal sign): ` $a += 5 `
 internal namespace of
 [metaoperator](#metaoperator) that
 [prefix](#prefix-category) (precedes) other operator
-but stay [infix](#infix-category) (between) two terms
-- example (exclamation mark): ` 4 != 5 `
+but stay [infix](#infix-category) (between) two terms &mdash;
+example (exclamation mark): ` 4 != 5 `
 
 <a id="INIT-phaser"/>
 **INIT**
@@ -2386,7 +2382,7 @@ pairs (hash), returning a **[Pair](#pair)**
 Perl filehandle
 
 **is** &mdash;
-bind a traits to a variable
+bind a *[traits](appendix-g-glossary.html#trait)* to a variable
 
 **item()**
 *[«context op»](appendix-b-grouped.html#contextualizers)* &mdash;
@@ -2594,7 +2590,7 @@ be iterated, alias to **[@(»](#at-op)**, see also
 <a id="log"/>
 **[log](operators.html)** &mdash;
 logarithm of $x (first parameter) to the $base (second optional
-parameter - default is *e*, together also known as *ln*)
+parameter - default is *e* (euler constant), together also known as *ln*)
 
 <a id="log10"/>
 **[log10](operators.html)** &mdash;
@@ -2768,7 +2764,8 @@ when name is called, the one with matching signature is run
 **my**
 *[«scope declarator»](appendix-b-grouped.html#scope-declarator)* &mdash;
 introduces lexically scoped names, which exists only in the
-current scope (usually a block)
+current *[scope](appendix-g-glossary.html#scope)* and cease to exist,
+once this scope is executed
 
 
 
@@ -2934,14 +2931,14 @@ plural of **ord**, takes a **[Str](#Str-type)** and returns a list of
 <a id="orelse"/>
 **orelse** *«logical op»* &mdash; logical *OR* short circuit operator,
 transferring an error code from first to second block/command, if
-first do not succeed, similar to **[//](#high-err)**,
-see also **[andthen](#andthen)**
+first do not succeed, similar to **[//](#high-err)** &mdash;
+see also: **[andthen](#andthen)**
 
 <a id="our"/>
 **our**
 *[«scope declarator»](appendix-b-grouped.html#scope-declarator)* &mdash;
-introduces **[package](#package)** &mdash; scoped
-names for variables and routines
+introduces **[package](#package)**-scoped names for variables and
+*[routines](#routine)*
 
 <a id="OUT-global-var"/>
 **\$\*OUT**
@@ -2952,20 +2949,21 @@ file handle for standard output (command line mostly), see also
 <a id="ov-modifier"/>
 **:ov** *[«regex modifier»](appendix-b-grouped.html#regex-modifier)* &mdash;
 searching at all positions just one time (with backtracking),
-short for **:overlap**
+short for **[:overlap](#overlap#modifier)**
 
 <a id="overlap-modifier"/>
 **:overlap**
 *[«regex modifier»](appendix-b-grouped.html#regex-modifier)* &mdash;
 searching at all positions just one time (with backtracking),
-long for **:ov**
+long for **[:ov](#ov-modifier)**
 
 
 # P
 
 <a id="p-test"/>
 **:p** *[«io test method»](appendix-b-grouped.html#Test-Methods)* &mdash;
-file is a named pipe (FIFO), or filehandle is a pipe
+file is a named *[pipe](#pipe)* (FIFO),
+or filehandle is a pipe
 
 <a id="p-adverb"/>
 **[:p](tablet-2-basic-syntax.html#paths)**
@@ -3499,7 +3497,7 @@ returns all the members in the opposite order. Use
 **[invert](#invert)** for hashes
 
 <a id="rindex"/>
-**rindex** *(string method)* &mdash;
+**rindex** *«string method»* &mdash;
 finds the last occurrence of a
 substring in a string and returns the numerical position, opposite
 or **[index](#index)**
@@ -3509,7 +3507,7 @@ or **[index](#index)**
 deletes a directory with given name
 
 <a id="role"/>
-**role** *(block modifier)* &mdash;
+**role** *«block modifier»* &mdash;
 container for methods that can extend a class using **[does](#does)**
 
 <a id="ROLE-compiler-var"/>
@@ -3530,14 +3528,15 @@ duplication can occur (like rolling dice), **[pick](#pick)**
 works without duplication
 
 <a id="roots"/>
-**roots** (Num $f, Int $n) &mdash; compute the $n'th root of $f
+**roots** (Num $f, Int $n) &mdash; compute the $n'th root of $f &mdash;
+see also **[exp](#exp)** and **[log](#log)**
 
 <a id="rotate"/>
 **[rotate](tablet-3-variables)**
 *[«array method»](tablet-3-variables#array-methods)* &mdash;
 put some elements (number is first parameter) of a list to the
-end; rotates backward with negative parameter; *@a .= rotate;\_ is
-alias to \_@a.push: @a.shift; *
+end; rotates backward with negative parameter; `@a .= rotate;` is
+alias to `@a.push: @a.shift;`
 
 <a id="round"/>
 **round** &mdash;
@@ -3547,7 +3546,7 @@ returns the nearest *[integer](#Int-type)* of only parameter
 **roundrobin**
 *[«array method»](tablet-3-variables#array-methods)* &mdash;
 kind of **[zip](#zip)** that ignores empty lists &mdash;
-example: *roundrobin([1..3],[1,2],[1]) = 1,1,1,2,2,3 *
+example: `roundrobin([1..3],[1,2],[1]) = 1,1,1,2,2,3`
 
 <a id="ROUTINE-compiler-var"/>
 **&?ROUTINE**
@@ -3557,9 +3556,8 @@ current **[Routine](#Routine-type)** object
 <a id="routine-declarator-category"/>
 **routine\_declarator**
 *[«grammatical category»](appendix-b-grouped.html#categories)* &mdash;
-internal namespace for [routine declarators](appendix-b-grouped.html#routine-types)
-- example: *[sub](#sub),
-[method](#method)*
+internal namespace for [routine declarators](appendix-b-grouped.html#routine-types) &mdash;
+example: **[sub](#sub)**, **[method](#method)**
 
 <a id="rule"/>
 **rule**

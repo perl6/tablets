@@ -223,7 +223,8 @@ example: **[BEGIN](appendix-a-index.html#BEGIN-phaser)**
 
 <a id="pipe"/>
 **pipe** &mdash; connection between 2 processes, move data (mostly only in
-one direction) without buffering
+one direction) without buffering, can also mean just the connection of
+several commands via **[==\>](appendix-a-index.html#double-equal-greater-op)** and alike
 
 <a id="POD"/>
 **[POD](tablet-2-basic-syntax.html#pod)**
