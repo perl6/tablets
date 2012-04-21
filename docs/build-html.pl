@@ -5,7 +5,7 @@ use v5.10;
 my $pandoc_cmd = {
     normal => 'pandoc -s --toc -N --css=styles.css -H _head-inc -B _nav-header -A _nav-footer -o %s %s',
     appendixAG => 'pandoc -s      --css=styles.css -H _head-inc -B _nav-header -A _nav-footer -o %s %s',
-    index =>  'pandoc -s          --css=styles.css -H _head-inc                               -o %s %s',
+    index =>      'pandoc -s  -N    --css=styles.css -H _head-inc                               -o %s %s',
 };
 
 for my $txt_file (<*.txt>) {

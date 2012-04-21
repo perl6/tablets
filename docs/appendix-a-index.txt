@@ -147,8 +147,8 @@ forces hash context, alias to the **[hash(»](#hash)** function
 **%**<span class="you-provide">s</span>
 *[«regex metachar»](appendix-b-grouped.html#quantifier)* &mdash;
 quantifier that repeat char or group as long as separated by
-right expression &mdash;
-example: `\d % ','` matches `1,2,3,4,5`
+right expression &mdash; example: `\d % ','` matches `1,2,3,4,5` &mdash;
+see also: **[%%](#double-percent-metachar)**
 
 <a id="double-percent-op"/>
 **%%**
@@ -160,7 +160,7 @@ divisible by the right value
 **%%**<span class="you-provide">s</span>
 *[«regex metachar»](appendix-b-grouped.html#quantifier)* &mdash;
 quantifier that repeat char or group as long as separated by
-right expression like %. but allows trailing separator &mdash;
+right expression (like %), but allows trailing separator &mdash;
 example: `\d %% ','` matches `1,2,3,4,5,`
 
 <a id="ampersand"/><a id="ampersand-sigil"/>
@@ -592,7 +592,7 @@ context](tablet-4-operators.html#string-context)*
 
 <a id="triple-equal-op"/><a id="identity-op"/>
 **===** *«comparison op»* &mdash;
-checks for infix identity, equality of
+*[infix](#infix-category)* check for identity - equality of
 value and [type](appendix-b-grouped.html#value-types)
 
 <a id="double-equal-greater-op"/>
@@ -1839,8 +1839,8 @@ normal execution, which Perl 6 can both generate and handle
 <a id="exec-adverb"/>
 **:exec**
 *[«quoting adverb»](appendix-b-grouped.html#quoting-adverbs)* &mdash;
-quoted string will be evaluated as Perl code (like
-**[eval](#eval)**) replaced with its result, alias to
+quoted [string](#Str) will be *[evaluated](appendix-g-glossary.html#evaluation)*
+as Perl code (like **[eval](#eval)**) replaced with its result, alias to
 **Q :x** and **[qx/.../](#qx-op)**
 
 <a id="EXECUTABLE-NAME-global-var"/>
@@ -1890,7 +1890,7 @@ file is a plain file (no socket or dir, ...etc.)
 demands evaluation of functions (subs and methods), that start
 with the **[&-sigil](#ampersand-sigil)** and
 replacing them with the result, long form of
-**[:function](#function-adverb)** , included in
+**[:function](#function-adverb)**, included in 
 **["..."](#double-quotation)**,
 **[qq/.../](#qq-op)** and
 **[<<...\>\>](#double-angle-brackets)**
@@ -1898,12 +1898,12 @@ replacing them with the result, long form of
 <a id="backslash-F"/>
 **\\F**
 *[«escape sequence»](appendix-b-grouped.html#escape-sequences)* &mdash;
-anything but form feed
+any character but form feed
 
 <a id="backslash-f"/>
 **\\f**
 *[«escape sequence»](appendix-b-grouped.html#escape-sequences)* &mdash;
-form feed
+form feed character
 
 <a id="fail"/>
 **fail** &mdash;
@@ -2323,8 +2323,7 @@ lists, does in most context same as **[\*](#asterisk)**
 **infix**
 *[«grammatical category»](appendix-b-grouped.html#categories)* &mdash;
 namespace of symbols that stay between two statements, that
-become their parameters &mdash; example: *$a + $b \# is same as
-$a.&infix:<+\>($b)*
+become their parameters &mdash; example: `$a + $b ` is same as `$a.&infix:<+\>($b)`
 
 <a id="infix-circumfix-meta-category"/>
 **infix\_circumfix\_meta\_operator**
@@ -2406,7 +2405,7 @@ Perl list
 *[«array method»](tablet-3-variables#array-methods)* &mdash;
 concatenates list elements into a string, optionally inserting
 another string between the elements &mdash;
-example: `join("-", 1..5) # returns '1-2-3-4-5' or (1..5).join("-")`
+example: `join("-", 1..5) # returns '1-2-3-4-5'` alternative syntax: `(1..5).join("-")`
 
 
 # K
@@ -2818,8 +2817,7 @@ continuation time, before any **[leave](#LEAVE-phaser)**
 <a id="next"/>
 **next**
 *[«flow control»](appendix-b-grouped.html#jump-commands)* &mdash;
-start the the next following loop
-*[iteration](#interation)*
+start the the next following loop *[iteration](#interation)*
 
 <a id="nextsame"/>
 **nextsame** &mdash;
@@ -3612,8 +3610,8 @@ alias to **[Q](#capital-q-op)**
 <a id="s-metaop"/>
 **S**<span class="you-provide">op</span>
 *[«meta op»](appendix-b-grouped.html#metaoperators)* &mdash;
-force sequential (synchronous) evaluation, suppresses any
-explicit or implicit parallelism
+force sequential (synchronous) evaluation,
+suppresses any explicit or implicit parallelism
 
 <a id="s-op"/>
 **[s/ / /](tablet-9-regexes.html#regex-operators)**
@@ -3703,7 +3701,7 @@ makes output via command line
 <a id="Scalar-type"/>
 **Scalar**
 *[«mutable type»](appendix-b-grouped.html#mutable-types)* &mdash;
-object to hold a Perl scalar, a variable for a single value
+object to hold a Perl scalar, a variable for a single value of any type
 
 <a id="scalar-adverb"/>
 **[:scalar](tablet-2-basic-syntax.html#interpolation)**
@@ -3728,12 +3726,12 @@ initialize a random number generator, optionally with a value
 <a id="Seq-type"/>
 **Seq**
 *[«immutable type»](appendix-b-grouped.html#immutable-types)* &mdash;
-A list of values (can be generated lazily)
+a list of values (can be generated lazily)
 
 <a id="SeqIter-type"/>
 **SeqIter**
 *[«mutable type»](appendix-b-grouped.html#mutable-types)* &mdash;
-Iterator over a Seq
+iterator over a Seq
 
 <a id="Set-type"/>
 **Set**
@@ -3752,9 +3750,8 @@ word to name the namespace for sigils, used to redifine them or
 define your own with a macro
 
 <a id="sign"/>
-**sign** &mdash;
-its 1 when $x (only parameter) is greater than 0,
--1 if \< 0, 0 when = 0, undefined when undefined
+**sign**($f) &mdash;
+ 1 if $f is greater than 0, -1 if \< 0, 0 when equal 0, undefined when undefined
 
 <a id="Signature-type"/>
 **Signature**
@@ -3927,7 +3924,8 @@ internal namespace for block modifier &mdash; example :
 <a id="Str-type"/>
 **Str**
 *[«immutable type»](appendix-b-grouped.html#immutable-types)* &mdash;
-Perl string, finite sequence of Unicode characters
+Perl string, a finite sequence of [unicode](appendix-g-glossary.html#unicode)
+characters
 
 <a id="Sub-type"/>
 **Sub**
@@ -4358,7 +4356,7 @@ memory address of the object
 <a id="where"/>
 **where** &mdash;
 defines subtypes of data &mdash;
-example: *subset Month of Int where { 1 <= $\^a <= 12 }*
+example: `subset Month of Int where { 1 <= $\^a <= 12 }`
 
 <a id="WHICH-introspection"/>
 **WHICH**
@@ -4448,20 +4446,20 @@ zero-width space inside of a word between two
 *[«list op»](tablet-4-operators.html#list-generation)* &mdash;
 Cross product of two arrays, alias of
 **[cross](#cross)** method &mdash;
-example: *1,2 X 3,4 == 1,3,1,4,2,3,2,4;*
+example: `1,2 X 3,4 == 1,3,1,4,2,3,2,4;`
 
 <a id="x-op"/>
 **x**
 *[«string op»](tablet-4-operators.html#string-context)* &mdash;
 string replicate operator to single string &mdash;
-example: *'ab' x 3 == 'ababab';*
+example: `'ab' x 3 == 'ababab';`
 
 <a id="X-metaop"/>
 **X**<span class="you-provide">op</span>
 *[«meta op»](appendix-b-grouped.html#metaoperators)* &mdash;
 Cross product with hyper operator, alias of
 **[crosswith](#crosswith)** method &mdash;
-example: *\<a b\> X\~ \<y z\> == \<ay az by bz\>;*
+example: `<a b> X~ <y z> == <ay az by bz>;`
 
 <a id="X-test"/>
 **:X**
@@ -4515,7 +4513,7 @@ version of **[\^\^](#double-caret-op)**
 **xx**
 *[«infix list op»](tablet-4-operators.html#list-generation)* &mdash;
 replicate a list *$n* (second operand) times &mdash;
-example: *'ab' xx 3 = \<ab ab ab\>*
+example: `'ab' xx 3 = <ab ab ab>`
 
 
 # Y
@@ -4526,9 +4524,9 @@ example: *'ab' xx 3 = \<ab ab ab\>*
 <a id="Z-op"/>
 **Z**
 *[«list op»](tablet-4-operators.html#list-generation)* &mdash;
-alias to **[zip](#zip-op)**,
+alias to `[zip](#zip-op)`,
 joines 2 lists and stops when 1 list runs out of elements, returning
-always an list with an even length &mdash; example: *1,2,3,4 Z 8,9 == 1,8,2,9*
+always an list with an even length &mdash; example: `1,2,3,4 Z 8,9 == 1,8,2,9`
 
 <a id="Z-metaop"/>
 **Z**<span class="you-provide">op</span>
@@ -4541,11 +4539,11 @@ operator and produces in that manner a new list
 *[«array op & method»](tablet-3-variables#array-methods)* &mdash;
 zip operator, joines 2 lists, alias to
 **[Z](#capital-z-op)** operator &mdash;
-example: *@a Z @b = (@a; @b).zip*
+example: `@a Z @b = (@a; @b).zip
 
 <a id="zipwith"/>
 **zipwith**
 *(list method)* &mdash; alias to **[Z metaoperator](#capital-z-metaop)** &mdash;
-example: *@a Z\~ @b = (@a; @b).zipwith(&[\~]) = (@a; @b).zip.slice.map { .reduce(&[\~]) }*
+example: `@a Z~ @b = (@a; @b).zipwith(&[~]) = (@a; @b).zip.slice.map { .reduce(&[~]) }`
 
 ***

@@ -337,6 +337,9 @@ second(ary) *[sigil](#sigil)* indicating a special property of a variable,
 
 # U
 
+<a id="unicode"/>
+**unicode** &mdash;
+
 # V
 
 # W
