@@ -2583,10 +2583,10 @@ containing a string - example: `$str.lines($limit)` equals
 works also on file handles
 
 <a id="list"/>
-**list()**
+**list*()
 *[«context op»](appendix-b-grouped.html#contextualizers)* &mdash;
 almost a no-op, just makes sure that $item (first parameter) can
-be iterated, alias to **[@(»](#at-op)**, see also
+be iterated, alias to **[@()](#at-op)**, see also
 **[flat](#flat)** and **[lol](#lol)**
 
 <a id="log"/>
@@ -2600,7 +2600,7 @@ logarithm to the base of 10,
 also known as *log* on calculators and *lg* in math classes
 
 <a id="lol"/>
-**lol**
+**lol**()
 *[«context op»](appendix-b-grouped.html#contextualizers)* &mdash;
 forces list of list context on a value, meaning a list which
 values are not contextualized further (can be lists themthelves),
@@ -3805,8 +3805,7 @@ reads an entire file into a string without a file handle
 <a id="so"/><a id="so-op"/>
 **so**
 *[«context op»](appendix-b-grouped.html#contextualizers)* &mdash;
-converts value into the *[boolean
-context](tablet-4-operators.html#bool-context)*,
+converts value into the *[boolean context](tablet-4-operators.html#bool-context)*,
 low precedence alternative to
 **[?](#question-mark-op)**
 
