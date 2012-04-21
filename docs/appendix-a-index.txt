@@ -3409,7 +3409,7 @@ correct spelling (:3rd)
 
 <a id="read"/>
 **[read](tablet-5-io.html#read)**
-*(Buf method)* &mdash;
+*«Buf method»* &mdash;
 read <span class="you-provide">n</span> (first parameter) bytes from a buffer
 
 <a id="readline"/>
@@ -3428,7 +3428,7 @@ re-starts processing of the current loop turn
 
 <a id="reduce"/>
 **reduce**
-*(list method)* &mdash; alias to **[[ ]](#square-brackets-metaop)** -
+*«list method»* &mdash; alias to **[[ ]](#square-brackets-metaop)** -
 [metaoperator](appendix-b-grouped.html#metaoperators)
 : `[+] @a = @a.reduce(&[+])`
 
@@ -3695,7 +3695,7 @@ makes output via command line
 (**[\\n](#backslash-n)**)
 
 **[say](tablet-5-io.html#say-for-files)** &mdash;
-*(handle method)* &mdash; writes a stream into a file and appends
+*«handle method»* &mdash; writes a stream into a file and appends
 **[\\n](#backslash-n)**
 
 <a id="Scalar-type"/>
@@ -3798,7 +3798,7 @@ seconds (with sub-second resolution)
 
 <a id="slurp"/>
 **[slurp](tablet-2-basic-syntax.html#files)** &mdash;
-*(path|file handle method)* &mdash; reads an entire file into a string
+*«path and file handle method»* &mdash; reads an entire file into a string
 without a file handle
 
 <a id="so"/><a id="so-op"/>
@@ -3952,7 +3952,7 @@ defines methods, not inherited by subclasses like a **[method](#method)**
 <a id="subset"/>
 **subset** &mdash;
 define a subtype &mdash;
-example: subset Month of Int where { 1 <= $\^a <= 12 }
+example: `subset Month of Int where { 1 <= $\^a <= 12 }`
 
 <a id="subst"/>
 **[subst](tablet-9-regexes.html#substitution)**
@@ -4540,7 +4540,7 @@ operator and produces in that manner a new list
 *[«array op & method»](tablet-3-variables#array-methods)* &mdash;
 zip operator, joines 2 lists, alias to
 **[Z](#capital-z-op)** operator &mdash;
-example: `@a Z @b = (@a; @b).zip
+example: `@a Z @b = (@a; @b).zip`
 
 <a id="zipwith"/>
 **zipwith**
