@@ -18,6 +18,9 @@ questions like: "Can I do *functional programming* in Perl 6?" or
 **ALAP** *(as late as possible)* &mdash; within a given execution phase
 ([compile time](#compile-time) or [run time](#run-time))
 
+<a id="argument"/>
+**argument** &mdash; another word for *[parameter](#parameter)*
+
 <a id="ASAP"/>
 **ASAP** *(as soon as possible)* &mdash; within a given execution phase
 (*[compile time](#compile-time)* or [run time](#run-time))

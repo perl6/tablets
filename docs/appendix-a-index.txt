@@ -535,10 +535,11 @@ and feed as parameter to the left, see also
 <a id="lower-equal-greater-op"/><a id="spaceship-op"/>
 **\<=\>**
 *[«num comparison»](tablet-4-operators.html#numerical-comparison)* &mdash;
-numeric less-equal-greater comparison for sortable classes, does
-**[cmp](#cmp)** in numeric context as
-**[leg](#leg)** does in
-*[string](#Str-type)* context
+numeric, infix less-equal-greater comparison for sortable classes,
+so called "spaceship operator",
+does a **[cmp](#cmp)** of the into numeric context converted values of both sides,
+as **[leg](#leg)** does in *[string](#Str-type)* context &mdash;
+example: `3 <=> 4` returns `-1`, `3 <=> 3` returns `0`, `4 <=> 3` returns `1`
 
 <a id="angle-brackets-op"/>
 **[< \>](tablet-2-basic-syntax.html#quote-words)**
@@ -1422,7 +1423,7 @@ result is *Order::Increase* (numerically -1) if
 **[eqv](#eqv)** - *Order::Decrease* (numerically 1)
 if **[after](#after)**, see also:
 **[leg](#leg)** and
-**[<=\>](#spaceship-op)**)
+**[\<=\>](#spaceship-op)**)
 
 <a id="cntrl-subrule"/>
 **\<cntrl\>**
@@ -2912,7 +2913,7 @@ see also: **[|](#pipe-op)**
 **only**
 *[routine modifier](appendix-b-grouped.html#routine-modifier)* &mdash;
 permits only one *[routine](appendix-g-glossary.html#routine)*
-of the same name in this block (no [MMD](appendix-g-glossary.html##MMD))
+of the same name in this block (no [MMD](appendix-g-glossary.html#MMD))
 
 <a id="open"/>
 **[open](tablet-5-io.html#open)**
@@ -3054,7 +3055,7 @@ overwriting a possible set
 <a id="Parcel-type"/>
 **Parcel** 
 *[«immutable type»](appendix-b-grouped.html#immutable-types)* &mdash;
-Arguments in a comma list
+*[arguments](appendix-g-glossary.html#argument)* in a comma list
 
 <a id="parcel"/><a id="parcel-parameter-trait"/>
 **parcel**
