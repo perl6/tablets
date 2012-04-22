@@ -1353,35 +1353,35 @@ marks as a prefix a special block or statement, executed at
 [ALAP](appendix-g-glossary.html#ALAP), only ever runs once
 
 <a id="chmod"/>
-**chmod** &mdash; changes access rights of files (like on Unix)
+**chmod** &mdash;
+changes access rights of files (like on Unix)
 
 <a id="chomp"/>
-**chomp** *(string method)* &mdash; returns a
-[string](#Str-type) with the last newline (if there
-is one) removed (from only parameter)
+**chomp** *(string method)* &mdash;
+returns a [string](#Str-type) with the last newline
+(if there is one) removed (from only parameter)
 
 <a id="chop"/>
-**chop** *(string method)* &mdash; returns a
-[string](#Str-type) with the last character removed
-(from only parameter)
+**chop** *(string method)* &mdash;
+returns a [string](#Str-type) with the last character removed (from only parameter)
 
 <a id="chown"/>
 **chown** &mdash; changes owner of files
 
 <a id="chroot"/>
-**[chroot](tablet-5-io.html#chroot)**
+**[chroot](tablet-5-io.html#chroot)** &mdash;
 change root directory on POSIX systems
 
-**circumfix** *[«grammatical
-category»](appendix-b-grouped.html#categories)*
+<a id="circumfix-category"/>
+**circumfix** *[«grammatical category»](appendix-b-grouped.html#categories)* &mdash;
 operator namespace of two parted ops that surround the
 statement, op or variable they affect, most prominent example may be
 the [double quotes](#double-quotation)
 
-**class** *(block modifier)* &mdash; following block will build an object,
-see also **[method](#method)**,
-**[submethod](#submethod)** and
-**[has](#has)**
+<a id="class"/>
+**class** *(block modifier)* &mdash; 
+following block will build an object, see also **[method](#method)**,
+**[submethod](#submethod)** and **[has](#has)**
 
 <a id="CLASS-compiler-var"/>
 **$?CLASS**
