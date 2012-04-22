@@ -7,22 +7,14 @@ These are the Perl Tablets, written in
 They are available online at <http://tablets.perl6.org>.
 
 
-
 How to Help
 ===========
 
-The Appendix A (Index) document needs anchor tags added. These anchor
-tags are linked to primarily from Appendix B (Lookup & Short
-Reference).
-
 To contribute, pore over Appendix B looking at the various links to
-the main Index, and when you see an anchor id that is not present in
-the index (ap-a-index.txt), please add it directly above the relevant
-paragraph like so:
+the main Index (Appendix A), and when you see an perl 6 term without a link
+look into the index how its anchor is named and set the link
+(appendix-a-index.txt#anchor).
 
-    <a id="dollar-sigil"/>
-
-(that one's already present).
 
 Rules for Anchor Names
 ======================
