@@ -555,7 +555,7 @@ for grouping with autoquoting, alias to
 *[«twigil»](appendix-b-grouped.html#twigils)* &mdash;
 [circumfix](#circumfix-category)
 *[twigil](appendix-g-glossary.html#twigil)* of named captures, **`$<...>`**
-is alias to [**`$/<...>`**](#match-var), is $& and $MATCH in Perl 5
+is alias to [**`$/<...>`**](#match-var), is *$&* and *$MATCH* in Perl 5
 
 <a id="angle-brackets-metachar"/>
 **\< \>**
@@ -1651,7 +1651,8 @@ program was compiled for, see also:
 executes a block (do once loop)
 
 <a id="does"/>
-**does** &mdash; checks if an objekt inherits a role (parameter)
+**does** &mdash;
+checks if an objekt inherits a **[role](#role)** (only parameter)
 
 <a id="dotty-category"/>
 **dotty**
@@ -1710,7 +1711,7 @@ opposite of **[lazy](#lazy)**
 *[«special var»](appendix-b-grouped.html#global-variables)* &mdash;
 effective global ID of the running process
 (**[\$\*PID](#PID-global-var)**) owner,
-is @\) and \$EGID in Perl 5
+is *@\)* and *\$EGID* in Perl 5
 
 <a id="elems"/><a id="elems-aray"/>
 **elems**
@@ -1814,14 +1815,14 @@ the left, short circuit or,low precedence version of
 **\$\*ERR**
 *[«special var»](appendix-b-grouped.html#global-variables)* &mdash;
 file handle for the standard error output (command line mostly),
-STDERR in Perl 5
+*STDERR* in Perl 5
 
 <a id="EUID-global-var"/>
 **\$\*EUID**
 *[«special var»](appendix-b-grouped.html#global-variables)* &mdash;
 effective user ID of the running process
-(**[\$\*PID](#PID-global-var)**) owner, is @\> and
-$EUID in Perl 5
+(**[\$\*PID](#PID-global-var)**) owner, is *@\>* and
+*$EUID* in Perl 5
 
 <a id="eval"/>
 **eval** &mdash;
@@ -1833,8 +1834,8 @@ parser **[grammar](#Grammar-type)** which should understand the string
 
 <a id="evalfile"/>
 **evalfile** &mdash;
-**[eval](#eval)** a file like 'do'
-did in Perl 5, with optional second parameter, which is a
+**[eval](#eval)** a file like *do* did in Perl 5,
+with optional second parameter, which is a
 *[grammar](#Grammar-type)* that can parse that file
 
 <a id="ex-modifier"/>
@@ -1860,7 +1861,7 @@ as Perl code (like **[eval](#eval)**) replaced with its result, alias to
 <a id="EXECUTABLE-NAME-global-var"/>
 **\$\*EXECUTABLE\_NAME**
 *[«special var»](appendix-b-grouped.html#global-variables)* &mdash;
-name of the main scripts file name, **[$0](#0-var)** in Perl 5
+name of the main scripts file name, is *$0* in Perl 5
 
 <a id="exhaustive-modifier"/>
 **:exhaustive**
@@ -2109,7 +2110,7 @@ establish a connection to a net host and retrieve information
 **\$\*GID**
 *[«special var»](appendix-b-grouped.html#global-variables)* &mdash; 
 real global ID of the running process
-(**[\$\*PID](#PID-global-var)**) owner, @( and $GID in Perl 5
+(**[\$\*PID](#PID-global-var)**) owner, *@(* and *$GID* in Perl 5
 
 <a id="gist"/>
 **gist** *«formater»* &mdash;
@@ -2390,7 +2391,7 @@ a point on the continuous atomic timeline
 *[«immutable type»](appendix-b-grouped.html#immutable-types)* &mdash;
 Perl integer, objext type to hold whole number like &mdash;1, 2 or
 6000, allows **[Inf](#Inf)** / NaN, arbitrary precision,
-use it as method to convert into a **Int** like the Perl 5 "int"
+use it as method to convert into a **Int** like the Perl 5 *int*
 
 **invert**
 *[«hash op & method»](tablet-3-variables#hash-methods)* &mdash;
@@ -2452,7 +2453,7 @@ forces subrules to memorize everything (even comments)
 **\$\*KERNEL**
 *[«special var»](appendix-b-grouped.html#global-variables)* &mdash;
 (core or type of the) running operating system, use
-*$\*KERNEL.name* instead of Perl 5s $OSNAME, see also:
+*$\*KERNEL.name* instead of Perl 5s *$OSNAME*, see also:
 **[\$\*DISTRO](#DISTRO-global-var)** and
 **[\$\*VM](#VM-global-var)**
 
@@ -3095,7 +3096,7 @@ you get the data structure again, bit like *Data::Dump*
 <a id="PERL-global-var"/>
 **$\*PERL**
 *[«special var»](appendix-b-grouped.html#global-variables)* &mdash;
-Perl version running under, is $] and $\^V in Perl 5
+Perl version running under, is *$]* and *$\^V* in Perl 5
 
 <a id="PERL-compiler-var"/>
 **$?PERL**
@@ -3116,7 +3117,7 @@ duplication), take **[roll](#roll)** to enable duplication
 <a id="PID-global-var"/>
 **$\*PID**
 *[«special var»](appendix-b-grouped.html#global-variables)* &mdash;
-ID of the running process, is $$ and $PID in Perl 5
+ID of the running process, is *$$* and *$PID* in Perl 5
 
 <a id="pod-pod-var"/>
 **$=pod**
@@ -3467,7 +3468,7 @@ builtin type that holds a compiled regular expression
 a pattern definition (without
 **[:ratchet](#ratchet-modifier)** and
 **[:sigspace](#sigspace-modifier)**), can be put in
-a **[grammar](#grammar)**, similar to qr/.../ in
+a **[grammar](#grammar)**, similar to *qr/.../* in
 Perl 5, see **[rule](#rule)**,
 **[token](#token)**
 
@@ -4042,7 +4043,7 @@ tangent, trigonometric function, takes angle in radian; see also
 **[cos](#cos)**, **[sin](#sin)**
 
 <a id="temp"/>
-**temp** &mdash; defines variables as temporary, synonym for the Perl 5 *local*
+**temp** &mdash; defines variables as temporary, synonym for *local* in  Perl 5
 
 <a id="term"/><a id="term-category"/>
 **term**
@@ -4178,7 +4179,7 @@ everything within the brackets is uppercase
 <a id="UID-global-var"/>
 **$\*UID** *[«special var»](appendix-b-grouped.html#global-variables)* &mdash;
 real user ID of the running process
-(**[\$\*PID](#PID-global-var)**) owner (user), is @< and $UID in Perl 5
+(**[\$\*PID](#PID-global-var)**) owner (user), is *@<* and *$UID* in Perl 5
 
 <a id="UNDO-phaser"/>
 **UNDO**
