@@ -3132,7 +3132,8 @@ executed at every block exit, after
 **postcircumfix**
 *[«grammatical category»](appendix-b-grouped.html#categories)* &mdash;
 operator namespace of ops, that stay after one statement or
-variable, but do surround a second - example(square brackets): *$a[2]*
+variable, but do surround a second &mdash;
+example(square brackets): `$a[2]`
 
 <a id="postfix-category"/>
 **postfix**
@@ -3146,8 +3147,8 @@ variable (like $a++)
 internal namespace of
 [metaoperator](#metaoperator) that
 [prefix](#prefix-category) (precedes) other operator
-but stay [postfix](#postfix-category) (after) another
-term &mdash; example (greater as): *@a \>\>++*
+but stay [postfix](#postfix-category) (after) another term &mdash;
+example (greater as): `@a \>\>++`
 
 <a id="PRE-phaser"/>
 **PRE**
@@ -3156,25 +3157,24 @@ marks as a prefix a special block, assert precondition, executed
 at every block entry, before **[ENTER](#ENTER-phaser)**
 
 <a id="pred"/>
-**pred**
+**pred**(Num $f)
 *[«sequence traversion»](tablet-4-operators.html#traversing-sequence)* &mdash;
-returns the predecessor of $x (only parameter), alias to **--**
-operator, see also **[succ](#succ)**
+returns the predecessor of $f, alias to **[--](#auto-decrement)**
+operator, opposite of **[succ](#succ)**
 
 <a id="prefix-category"/>
 **prefix**
 *[«grammatical category»](appendix-b-grouped.html#categories)* &mdash;
-operator namespace of ops, that stay before a statement or
-variable &mdash; example: *[++$a](#plus-plus)*
+operator namespace of ops, that stay before a statement or variable &mdash;
+example: `[++$a](#plus-plus)`
 
 <a id="prefix-circumfix-meta-operator-category"/>
 **prefix\_circumfix\_meta\_operator**
 *[«grammatical category»](appendix-b-grouped.html#categories)* &mdash;
 internal namespace of [metaoperator](#metaoperator) that
 [circumfix](#circumfix-category) (surrounds) other
-operator but stay [prefix](#prefix-category) (before)
-another term &mdash;
-example (in square brackets): `[+] @a # sums up all elements of @a`
+operator but stay [prefix](#prefix-category) (before) another term &mdash;
+example (in square brackets): `[+] @a` - sums up all elements of @a
 
 <a id="prefix-postfix-meta-operator-category"/>
 **prefix\_postfix\_meta\_operator**
@@ -3979,10 +3979,10 @@ parse as [substitution regex](tablet-9-regexes.html#substitution)
 the scalar substring function like in Perl 5
 
 <a id="succ"/>
-**succ**
+**succ**(Num $f)
 *[«sequence traversion»](tablet-4-operators.html#traversing-sequence)* &mdash;
-returns the successor of $x (only parameter), alias to **++**
-operator (see **[pred](#pred)**)
+returns the successor of $f, alias to **[++](#auto-increment)**
+operator, opposite of **[pred](#pred)**
 
 <a id="supersede"/>
 **supersede**
