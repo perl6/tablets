@@ -191,7 +191,7 @@ since, because they were much harder to maintain than the Synopses
 ("abstracts" or "comparisons" (with Perl 5)). The Synopsis documents,
 along with the test suite, form the official specification of Perl
 6. More details on that can be found in [the history
-section](history.html).
+section](tablet-0-history.html).
 
 The Synopses are continually edited because the more we think about
 the syntax and semantics, the more detailed the picture gets. The
