@@ -205,6 +205,6 @@ Native Perl 6 (new idioms)
   * `%hash<key>` instead of `%hash{'key'}`, or `%hash<< key1 key2 >>` instead of `%hash{ 'key1', 'key2' }`
   * `loop` instead of `while (1)`
 
-For more native Perl 6, read the [cookbook](ap-c-cookbook.html).
+For more native Perl 6, read the [cookbook](appendix-c-cookbook.html).
 
 ***
