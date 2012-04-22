@@ -433,7 +433,7 @@ example: *`$pair = :key('value')`*
 start of all test methods
 (r w x o R W X O e z s f d l p S b c t u g k T B M A C)
 in the adverbial form &mdash;
-example: `$filename.IO ~~ :X`
+example: *`$filename.IO ~~ :X`*
 
 <a id="colon-twigil"/>
 **:**
@@ -616,7 +616,9 @@ list (append-mode)
 <a id="equal-greater-op"/><a id="fat-arrow"/>
 **=\>**
 *«op»* &mdash;
-**[Pair](#Pair-type)** (and hash) constructor, called *fatarrow*
+**[Pair](#Pair-type)** (and Hash) constructor called *fat arrow* &mdash;
+example: `$pair = 'key' => 'value';` &mdash;
+alternative to the *[adverbial syntax](#colon-adverb)*
 
 <a id="greater-op"/>
 **\>**
@@ -869,8 +871,8 @@ context](tablet-4-operators.html#string-context)*
 
 <a id="tilde-caret-op"/>
 **\~\^** *[«string op»](tablet-4-operators.html#string-context)* &mdash;
-characterwise *XOR*, forces *[string
-context](tablet-4-operators.html#string-context)*
+characterwise *XOR*,
+forces *[string context](tablet-4-operators.html#string-context)*
 
 <a id="tilde-pipe-op"/>
 **\~|** *[«string op»](tablet-4-operators.html#string-context)* &mdash;
@@ -1451,10 +1453,9 @@ searching on codepoint level (between codepoints), see also:
 <a id="comb"/>
 **comb**
 *«string method»* &mdash;
-$str.comb(/pattern/) equals $str \~\~
-m:g/pattern/ , except it returns the list of findings, not a match
-object like **.match(rx/.../)** aka **[m/.../](#m-op)**,
-default pattern is rx/./
+`$str.comb(/pattern/)` equals [`$str ~~ m:g/pattern/`](#m-op),
+except it returns the list of findings, not a [match object](#match-var),
+default pattern is [`rx/./`](#rx)
 
 <a id="COMMENT-pod-var"/>
 **@=COMMENT**
@@ -1496,10 +1497,9 @@ then going to the right, short for
 **CONTROL**
 *[«closure trait»](appendix-b-grouped.html#closure-traits)* &mdash;
 marks as a prefix a special block to catch control
-**[Exception](#Exception-type)** (like
-**[next](#next)** / **[last](#last)**
-/ **[return](#return)** etc), before
-**[LEAVE](#LEAVE-phaser)**
+**[Exception](#Exception-type)**
+(like **[next](#next)** / **[last](#last)** / **[return](#return)** etc),
+before **[LEAVE](#LEAVE-phaser)**
 
 <a id="Cool-type"/>
 **Cool**
@@ -1527,12 +1527,17 @@ returns how many parameters this
 <a id="cross"/>
 **cross** *«list method»* &mdash;
 alias to **[X operator](#capital-x)** &mdash;
-example: @a X @b = (@a; @b).cross
+example: `@a X @b = (@a; @b).cross`
 
 <a id="crosswith"/>
 **crosswith** *«list method»* &mdash;
-alias to **[X metaoperator](#capital-x-metaop)**: @a X\~ @b = (@a;
-@b).crosswith(&[\~]) = (@a; @b).cross.slice.map { .reduce(&[\~]) }
+metaoperator that seeks every combination of one element of one list with an
+element of a second list and applies then an infix operator to that pair,
+returns a list the results &mdash;
+example: `1 .. 3 X* 2,3 ` returns `2 3 4 6 6 9` &mdash;
+alias method to **[X metaoperator](#capital-x-metaop)**,  
+*`@a X~ @b`* equals *`(@a; @b).crosswith(&[~])`* equals
+`(@a; @b).cross.slice.map { .reduce(&[~]) }`
 
 <a id="CWD-global-var"/>
 **$\*CWD**
@@ -1652,7 +1657,7 @@ executes a block (do once loop)
 *[«quoting adverb»](appendix-b-grouped.html#quoting-adverbs)* &mdash;
 *double quoting*, **q** with interpolation of variables, alias
 to **["..."](#double-quotation)**, **[qq
-/.../](#qq-op)** and **Q :s :a :h :f :c :b /.../**,
+/.../](#qq-op)** and `Q :s :a :h :f :c :b /.../`,
 long for **[:qq](#qq-adverb)**
 
 <a id="Duration-type"/>
@@ -3025,7 +3030,8 @@ internal namespace for &mdash; example:
 <a id="Pair-type"/>
 **Pair**
 *[«mutable type»](appendix-b-grouped.html#mutable-types)* &mdash;
-object to hold a single key-to-value association
+object to hold a single key-to-value association, created with a
+*[fat arrow](#fat-arrow)* or the *[adverbial notation](#colon-adverb)*
 
 <a id="pairs"/>
 **pairs**
