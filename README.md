@@ -1,8 +1,7 @@
 Overview
 ========
 
-These are the Perl Tablets, translated from html (which currently
-still reside at the Perl 6 SocialText wiki), into
+These are the Perl Tablets, written in 
 [Pandoc-Markdown](http://johnmacfarlane.net/pandoc/).
 
 They are available online at <http://tablets.perl6.org>.
@@ -25,13 +24,22 @@ paragraph like so:
 
 (that one's already present).
 
+Rules for Anchor Names
+======================
+
+* Anchors are case sensitive, if the term is "BEGIN", the anchor is also "BEGIN".
+* Parts of the anchor name are divided by a minus ("-").
+* None alphanumeric chars are descibed as lowercase name.
+* But use for that only one word, "=" is "equal" not "equal sign".
+* "==" is double-equal, "===" is "triple-equal"
+* A secondary anchor can dexribe the name of an operator.
 
 
 Generating the html
 ===================
 
 After updating any .txt files, to regenerate the corresponding html
-files, run `./build-html.py` in the docs directory.
+files, run `./build-html.pl` in the docs directory.
 
 
 
@@ -40,6 +48,13 @@ Publishing the Tablets
 
 `scp` the docs/*.html files and the styles.css file to the web.
 
+
+LICENSE
+=======
+
+Creative Commonc Attribution-ShareAlike 3.0 Unported (CC BY-SA 3.0) 
+
+http://creativecommons.org/licenses/by-sa/3.0/deed.en
 
 
 TODO
