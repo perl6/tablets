@@ -990,6 +990,10 @@ magic command-line input handle, is ARGV in P5
 *[«special var»](appendix-b-grouped.html#global-variables)* &mdash; 
 arguments (parameter) to a program (script), is @ARGV in P5
 
+<a id="args"/>
+**args**
+*[«callframe method»](appendix-b-grouped.html#callframe-methods)* &mdash;
+
 <a id="arity"/>
 **arity**
 *«routine method»* &mdash;
@@ -1963,6 +1967,10 @@ right side will be tested during next loop
 *[«special var»](appendix-b-grouped.html#compiler-hint-variables)* &mdash;
 current filename of source file
 
+<a id="file"/>
+**file**
+*[«callframe method»](appendix-b-grouped.html#callframe-methods)* &mdash;
+
 <a id="FIRST-phaser"/>
 **FIRST**
 *[«closure trait»](appendix-b-grouped.html#closure-traits)* &mdash;
@@ -2324,7 +2332,7 @@ include pathes (but not for standard library modules), is @INC in P5
 finds the first occurrence of a substring in a string
 and returns the numerical position, opposite or **[rindex](#rindex)**
 
-<a id="Inf/>
+<a id="Inf"/>
 **Inf** &mdash;
 indicates infinity, useful to generate infinite lazy
 lists, does in most context same as **[\*](#asterisk)**
@@ -2368,7 +2376,9 @@ marks as a prefix a special block or statement, executed at run
 time, [ASAP](appendix-g-glossary.html#ASAP), only ever runs once
 
 <a id="inline"/>
-**inline** *(sub trait)* &mdash;
+**inline** *[«callframe method»](appendix-b-grouped.html#callframe-methods)* &mdash;
+**[False](#False)** if that block is called like a
+*[routine](appendix-g-glossary.html#routine)*
 
 <a id="Instant-type"/>
 **Instant**
@@ -2402,7 +2412,7 @@ bind a *[trait](appendix-g-glossary.html#trait)* to a variable
 <a id="item"/><a id="item-op"/>
 **item()**
 *[«context op»](appendix-b-grouped.html#contextualizers)* &mdash;
-forces scalar context, alias to **[$(»](#dollar-op)**
+forces scalar context, alias to **[$()](#dollar-op)**
 
 <a id="Iterator-type"/>
 **Iterator**
