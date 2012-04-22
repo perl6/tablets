@@ -10,10 +10,10 @@ They are available online at <http://tablets.perl6.org>.
 How to Help
 ===========
 
-To contribute, pore over Appendix B looking at the various links to
-the main Index (Appendix A), and when you see an perl 6 term without a link
-look into the index how its anchor is named and set the link
-(appendix-a-index.txt#anchor).
+One way to contribute is to pore over Appendix B taking note of the
+various links to the main Index (Appendix A). When you see a Perl 6
+term in Appendix B without a link, find its corresponding anchor in
+the Index, then (in Appendix B) create link to it.
 
 
 Rules for Anchor Names
@@ -44,14 +44,6 @@ Publishing the Tablets
 LICENSE
 =======
 
-Creative Commonc Attribution-ShareAlike 3.0 Unported (CC BY-SA 3.0) 
+Creative Commons Attribution-ShareAlike 3.0 Unported (CC BY-SA 3.0) 
 
 http://creativecommons.org/licenses/by-sa/3.0/deed.en
-
-
-TODO
-====
-
-  * add LICENSE file (and add note about it to this README)
-
-  * add CONTRIBUTORS file
