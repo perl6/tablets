@@ -361,7 +361,7 @@ that doesn't capture (matches will not be remembered)
 *[«ranges»](tablet-4-operators.html#ranges)*,
 *[«list op»](tablet-4-operators.html#list-generation)* &mdash;
 [infix](#infix-category) range generating operator,
-produces a **[Range](Range-type)** object in
+produces a **[Range](#Range-type)** object in
 [item context](appendix-b-grouped.html#contextualizers)
 which generate lists in *list context*
 
@@ -1271,10 +1271,10 @@ call (right-hand side of a binding)
 <a id="cat"/>
 **cat**
 *[«array method»](tablet-3-variables#array-methods)* &mdash;
-converts values of a list into *[string
-context](tablet-4-operators.html#string-context)*
+converts values of a *[list](appendix-g-glossary.html#list-context)* into
+*[string context](tablet-4-operators.html#string-context)*
 and joines them like with **[\~](#tilde-op)**,
-alias to *[.join(''»](#join)*
+alias to [`.join('')`](#join)
 
 <a id="CATCH-phaser"/>
 **CATCH**
@@ -1390,8 +1390,8 @@ name of the current class
 special form of map to classify a list values (values - optional
 second parameter), with a closure (mapper - first parameter); the
 return value of the closure determines, under which key the value
-appears in the resulting hash, classify { chr $\_ }, 97..99 returns
-{"a" =\> [97], "b" =\> [98], "c" =\> [99] } , values are always
+appears in the resulting hash, `classify { chr $\_ }, 97..99` returns
+`{"a" => [97], "b" => [98], "c" => [99] }` , values are always
 listrefs (see also **[categorize](#categorize)**)
 
 <a id="close"/>
