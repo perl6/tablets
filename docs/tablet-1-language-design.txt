@@ -174,7 +174,7 @@ Trends
 ======
 
 As a consequence of these principles, [various trends can be
-observed](appendix-d-perl-5-perl-6-delta.html#trends).
+observed](appendix-d-delta.html#trends).
 
 
 
