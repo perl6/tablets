@@ -51,10 +51,10 @@ http://creativecommons.org/licenses/by-sa/3.0/deed.en
 CONTRIBUTORS
 ============
 
-lichtkind <lichtkind@cpan.org>
-uvtc
-raiph
-Siddhant
-samlh
-moritz
+* lichtkind <lichtkind@cpan.org>
+* uvtc
+* raiph
+* Siddhant
+* samlh
+* moritz
 
