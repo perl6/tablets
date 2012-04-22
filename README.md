@@ -13,7 +13,7 @@ How to Help
 One way to contribute is to pore over Appendix B taking note of the
 various links to the main Index (Appendix A). When you see a Perl 6
 term in Appendix B without a link, find its corresponding anchor in
-the Index, then (in Appendix B) create link to it.
+the Index, then (in Appendix B) create a link to it.
 
 
 Rules for Anchor Names
