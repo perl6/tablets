@@ -2076,14 +2076,14 @@ greater than or equal, see also **[gt](#gt)** and
 
 <a id="get"/>
 **[get](tablet-5-io.html#get)**
-*(handle method)* &mdash;
+*«handle method»* &mdash;
 returns a line (item context) or all lines
 (list context) from that input stream like a file or [command
 line](tablet-5-io.html#command-line)
 
 <a id="getc"/>
 **[getc](tablet-5-io.html#getc)**
-*(handle method)* &mdash;
+*«handle method»* &mdash;
 reads one character from a file via file
 handle
 
@@ -2103,7 +2103,7 @@ real global ID of the running process
 (**[\$\*PID](#PID-global-var)**) owner, @( and $GID in Perl 5
 
 <a id="gist"/>
-**gist** *(formater)* &mdash;
+**gist** *«formater»* &mdash;
 generates a **[Str](#Str-type)** with the essential content of
 that object for human consumption (like in error messages),
 **[Mu](#Mu-type)** will foreward to **[.perl](#perl)**
@@ -2144,7 +2144,7 @@ random selection <span class="you-provide">n</span> (only parameter) of hash
 
 <a id="grammar"/>
 **grammar**
-*(block modifier)* &mdash;
+*«block modifier»* &mdash;
 special kind of **[class](#class)**
 with methods that execute **[regex](#regex)**,
 **[token](#token)**, 
@@ -3191,7 +3191,7 @@ example (in square brackets): `[+] @a` - sums up all elements of @a
 internal namespace of [metaoperator](#metaoperator) that
 [postfix](#postfix-category) other operator but stay
 [prefix](#prefix-category) (before) another term &mdash;
-example (greater as): *++<< @a*
+example (greater as): `++<< @a`
 
 <a id="print"/>
 **[print](tablet-5-io.html#print)** &mdash;
@@ -3278,18 +3278,16 @@ characters
 **[qp](tablet-2-basic-syntax.html#paths)**
 *[«quoting op»](appendix-b-grouped.html#quoting-ops)* &mdash;
 path quoting, quoted string will be evaled as an file or
-directory path, alias to **Q [:p](#p-adverb) /.../**
-and **Q [:path](#path-adverb) /.../**
+directory path, alias to [`Q :p /.../`](#p-adverb)
+and [`Q :path /.../`](#path-adverb)
 
 <a id="qq"/><a id="qq-op"/>
 **[qq](tablet-2-basic-syntax.html#double-quotes)**
 *[«quoting op»](appendix-b-grouped.html#quoting-ops)* &mdash;
 *double quoting*, **q** with interpolation of variables,
 closures, and special chars, alias to
-**["..."](#double-quotation)** and **Q :s, :a,
-:h, :f, :c, :b /.../** and **Q** **[:qq](#qq-adverb)**
-**/.../** and **Q** **[:double](#double-averb)**
-**/.../**
+**["..."](#double-quotation)** and `Q :s, :a, :h, :f, :c, :b /.../`
+and `Q` [`:qq`](#qq-adverb) `/.../` and `Q` [`:double`](#double-averb) `/.../`
 
 <a id="qq-adverb"/>
 **[:qq](tablet-2-basic-syntax.html#double-quotes)**
@@ -3297,8 +3295,8 @@ closures, and special chars, alias to
 *double quoting*, **q** with interpolation of variables and
 [blocks](#block) , alias to
 **["..."](#double-quotation)**,
-**[qq/.../](#qq-op)** and **Q :s, :a, :h, :f, :c, :b
-/.../**, short for **[:double](#double-adverb)**
+**[qq/.../](#qq-op)** and `Q :s, :a, :h, :f, :c, :b /.../`,
+short for **[:double](#double-adverb)**
 
 <a id="qqx"/><a id="qqx-op"/>
 **[qqx](tablet-2-basic-syntax.html#code)**
@@ -3347,8 +3345,8 @@ strings are taken as single words), long form of
 <a id="qw"/><a id="qw-op"/>
 **[qw](tablet-2-basic-syntax.html#quote-words)**
 *[«quoting op»](appendix-b-grouped.html#quoting-ops)* &mdash;
-splits result on words (as in Perl 5); alias to **Q :q :w
-/.../** or **[<...\>](#angle-brackets)**
+splits result on words (as in Perl 5); alias to `Q :q :w /.../` or
+**[<...\>](#angle-brackets)**
 
 <a id="qx"/><a id="qx-op"/>
 **[qx](tablet-2-basic-syntax.html#code)**
@@ -4473,7 +4471,7 @@ example: `'ab' x 3 == 'ababab';`
 <a id="X-metaop"/>
 **X**<span class="you-provide">op</span>
 *[«meta op»](appendix-b-grouped.html#metaoperators)* &mdash;
-Cross product with hyper operator, alias of
+cross product with hyper operator, alias of
 **[crosswith](#crosswith)** method &mdash;
 example: `<a b> X~ <y z> == <ay az by bz>;`
 
