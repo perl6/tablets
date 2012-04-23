@@ -1991,24 +1991,24 @@ like [**grep**](#grep) &mdash; example : `first {$_ %% 2}, 1..5 ; # returns 2`
 **flat**()
 *[«context op»](appendix-b-grouped.html#contextualizers)* &mdash;
 forces flat list context, opposite of
-**[lol(»](#lol)** &mdash;
+**[lol()](#lol)** &mdash;
 example: `([2,3],[4,5]).flat` or `flat([2,3],[4,5])` results in: `[2..5]`
 
 <a id="flip"/>
-**flip** *(string method)* &mdash; reverses order of characters in
+**flip** *«string method»* &mdash; reverses order of characters in
 [string](#Str-type) , see also:
 **[reverse](#reverse)** and
 **[invert](#invert)**
 
 <a id="floor"/>
-**floor** *(num method)* &mdash;
+**floor** *«num method»* &mdash;
 **[Int](#Int-type)**
 (whole number) part of a **[Rat](#Rat-type)**, just
 leaves the digits after the dot (".") out
 
 <a id="fmt"/>
 **[fmt](tablet-2-basic-syntax.html#fmt)**
-*(formater)* &mdash;
+*«formater»* &mdash;
 variable method for simple
 **[printf](#printf)** - like formating, takes a
 format specifier and returns a [string](#Str-type) ,
