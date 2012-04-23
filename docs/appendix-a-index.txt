@@ -672,7 +672,8 @@ opposite of [**\<!\>**](#exclamation-subrule)
 logical *AND* op, and combinator, forces binary context
 
 <a id="double-question"/><a id="double-question-double-exclamation"/><a id="conditional-op"/>
-**?? !!** *«conditional op»* &mdash;
+**?? !!**
+*[«conditional»](appendix-b-grouped.html#conditionals)* &mdash;
 ternary or conditional operator,
 shortcut for **[if](#if)** and
 **[else](#else)** &mdash;
@@ -1584,7 +1585,7 @@ transforms raw binary UTF
 
 <a id="default"/>
 **[default](tablet-6-blocks.html#default)**
-*[«block modifier»](appendix-b-grouped.html#conditionals)* &mdash;
+*[«conditional»](appendix-b-grouped.html#conditionals)* &mdash;
 following block will be run if no **[when](#when)**
 clause in surrounding block matched
 
@@ -1726,7 +1727,7 @@ number of pairs
 
 <a id="else"/>
 **[else](tablet-6-blocks.html#else)**
-*[«block modifier»](appendix-b-grouped.html#conditionals)* &mdash;
+*[«conditional»](appendix-b-grouped.html#conditionals)* &mdash;
 introduces the alternative block after an
 **[if](#if)** or **[elsif](#elsif)**
 that is executed, when conditions of all alternatives resulted
@@ -1735,7 +1736,7 @@ in **[false](#False)**, see also
 
 <a id="else"/>
 **[elsif](tablet-6-blocks.html#elsif)**
-*[«block modifier»](appendix-b-grouped.html#conditionals)* &mdash;
+*[«conditional»](appendix-b-grouped.html#conditionals)* &mdash;
 alternative **[if](#if)** clause
 
 <a id="encode"/>
@@ -1945,7 +1946,7 @@ Perl rational (unlimited precision in both parts)
 
 <a id="ff"/><a id="ff-op"/>
 **[ff](tablet-4-operators.html#flipflop)**
-*(conditional op)* &mdash;
+*[«conditional»](appendix-b-grouped.html#conditionals)* &mdash;
 tests **[$\_](#context-var)**
 against two values, flip flop operator in the style of awk, can
 test the right operand and become **[False](#False)**
@@ -1954,7 +1955,7 @@ in P5 .. in scalar context
 
 <a id="fff"/><a id="fff-op"/>
 **[fff](tablet-4-operators.html#flipflop)**
-*(conditional op)* &mdash;
+*[«conditional»](appendix-b-grouped.html#conditionals)* &mdash;
 tests **[\$\_](#context-var)**
 against two values, flip flop operator in the style of sed, after
 became **[True](#True)**
@@ -2121,7 +2122,7 @@ that object for human consumption (like in error messages),
 
 <a id="given"/>
 **[given](tablet-6-blocks.html#given)**
-*[«block modifier»](appendix-b-grouped.html#conditionals)* &mdash;
+*[«conditional»](appendix-b-grouped.html#conditionals)* &mdash;
 part of a case-like construct, puts the following value into the
 [context variable](#context-var) (thatswhy called
 contextualizer) for **[when](#when)** clauses, see
@@ -2288,7 +2289,7 @@ same letter, short for **[:ignorecase](#ignorecase-modifier)**
 
 <a id="if"/>
 **[if](tablet-6-blocks.html#if)**
-*[«block modifier»](appendix-b-grouped.html#conditionals)* &mdash;
+*[«conditional»](appendix-b-grouped.html#conditionals)* &mdash;
 if the following expression *[evals](#evaluation)*
 to **[True](#True)**, the block after that will be
 run, opposite of **[unless](#unless)**, can also be
@@ -4198,8 +4199,7 @@ only unique elements of a list (no value twice)
 
 <a id="unless"/>
 **[unless](tablet-6-blocks.html#unless)**
-*[«block
-modifier»](appendix-b-grouped.html#conditionals)*
+*[«conditional»](appendix-b-grouped.html#conditionals)* &mdash;
 if the following expression *[evals](#evaluation)*
 to **[False](#False)**, the block after that will
 be run, can also be written at the end of an expression, opposite of
@@ -4366,7 +4366,7 @@ method dispatch), alias to **[\*](#asterisk)**
 
 <a id="when"/>
 **[when](tablet-6-blocks.html#when)**
-*[«block modifier»](appendix-b-grouped.html#conditionals)* &mdash;
+*[«conditional»](appendix-b-grouped.html#conditionals)* &mdash;
 executes its following code block, when parameter matches
 against **[$\_](#context-var)** (set by
 **[given](#given)** or

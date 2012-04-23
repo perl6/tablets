@@ -898,15 +898,18 @@ Jump Commands
 Conditionals
 ------------
 
-----------------------------------------  -----------------------------------------------------------------------------------
-[if](appendix-a-index.html#if)            when following expression evals in boolean context to True, the block that following after that will be executed
-[elsif](appendix-a-index.html#elsif)      works like if, but only recognized if no preceding "if" or "elsif" clause was executed
-[else](appendix-a-index.html#else)        following block will be executed, when no preceding "if" or "elsif" clause was executed
-[unless](appendix-a-index.html#unless)    opposite of if, no "elsif" or "else" is allowed to follow
-[given](appendix-a-index.html#given)      evals an expression into scalar context assignes it to `$_` for the following block
-[when](appendix-a-index.html#when)        smartmatches an expression against `$_`; if the result is True, the following block will be executed
-[default](appendix-a-index.html#default)  following block will be executed, when no "when" clause was executed
-----------------------------------------  -----------------------------------------------------------------------------------
+--------------------------------------------  -----------------------------------------------------------------------------------
+[if](appendix-a-index.html#if)                when following expression evals in boolean context to True, the block that following after that will be executed
+[elsif](appendix-a-index.html#elsif)          works like if, but only recognized if no preceding "if" or "elsif" clause was executed
+[else](appendix-a-index.html#else)            following block will be executed, when no preceding "if" or "elsif" clause was executed
+[unless](appendix-a-index.html#unless)        opposite of **if**, no "elsif" or "else" is allowed to follow
+[?? !!](appendix-a-index.html#conditional-op) short form of if {} else {}
+[ff](appendix-a-index.html#ff)                awk style flip flop, in P5 .. in scalar context
+[fff](appendix-a-index.html#fff)              sed style flip flop, in P5 ... in scalar context
+[given](appendix-a-index.html#given)          evals an expression into scalar context assignes it to **\$\_** for the following block
+[when](appendix-a-index.html#when)            smartmatches an expression against `$_`; if the result is True, the following block will be executed
+[default](appendix-a-index.html#default)      following block will be executed, when no "when" clause was executed
+--------------------------------------------  -----------------------------------------------------------------------------------
 
 
 Loops
