@@ -26,6 +26,14 @@ Rules for Anchor Names
 * "==" is double-equal, "===" is "triple-equal"
 * A secondary anchor can dexribe the name of an operator.
 
+Format Rules for Index A
+========================
+
+* Perl 6 builtins are bold (\*\*...\*\*)
+* terms and Perl 5 builtins are italic (\*...\*)
+* code snipptes are in (\`...\`)
+* between item name, its explanation and additional infos is an &mdash; (\&mdash\;)
+
 
 Generating the html
 ===================
