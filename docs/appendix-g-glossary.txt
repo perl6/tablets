@@ -55,11 +55,16 @@ syntactically just a piece of code inside curly brackets
 (**{}**), when [evaluated](#evaluation) it becomes an
 object of the type **[Block](appendix-a-index.html#block-type)**
 
+<a id="bool-context"/>
+**boolean context** &mdash;
+[Bool](appendix-a-index.html#Bool-type)
 
 # [C](#nav-top)
 
 <a id="capture"/>
 **capture** &mdash;
+arguments of a specific function call,
+stored in objects of the type [Capture](#Capture-type)
 
 <a id="closure"/>
 **closure** &mdash;
@@ -91,7 +96,7 @@ compile time for that unit (mostly the file or the to be **eval**ed string)
 **context** &mdash;
 when executing a function or operator Perl considers the
 expression from which the call was to return a
-[scalar](#scalar-type) or other kind of result
+[scalar](appendix-a-index.html#Scalar-type) or other kind of result
 
 <a id="context-variable"/>
 **context variable** &mdash;
@@ -131,7 +136,7 @@ considered contract in Perl 6
 transforming something, that it gets ready for practical usage -
 sometimes means that just replacing in a piece of code all variables with there
 current content, cometimes more like interpreting or compiling something;
-inside quotes and regexes ot has the first meaning,
+inside quotes and [regexes](#regex) ot has the first meaning,
 the command **[eval](appendix-a-index.html#eval)** and
 **[evalfile](appendix-a-index.html#evalfile)**does the second
 
@@ -156,7 +161,7 @@ the piece of code of issue
 <a id="iteration"/>
 **iteration** &mdash;
 repeated executing of a term or *[block](#block)*, enforced by
-[iterators](appendix-b-grouped.html#Loops)
+[iterators](appendix-b-grouped.html#loops)
 
 # [J](#nav-top)
 
@@ -171,6 +176,7 @@ several values, example: (A and B) or C, creat them with
 
 <a id="list-contex"/>
 **list context** &mdash;
+[Array](appendix-a-index.html#Array-type)
 
 <a id="LTM"/>
 **LTM** *(longest token matching)* &mdash;
@@ -203,6 +209,7 @@ operators that alter the meaning of other normal operators
 
 <a id="numeric-context"/>
 **numeric context** &mdash;
+[Num](appendix-a-index.html#Num-type)
 
 # [O](#nav-top)
 
@@ -264,8 +271,9 @@ a block that is given readonly *[parameters](parameter)* with
 address of data in memory, often termed a capture in Perl 6
 
 <a id="regex"/>
-**Regex** *(regular expression)* &mdash; in Perl5: pattern matching notation, either
-regex, token or rule in Perl6
+**Regex** *(regular expression)* &mdash;
+in Perl5 its a pattern matching notation, here a whole language that does the same
+
 
 <a id="routine"/>
 **routine** &mdash;
@@ -282,8 +290,8 @@ after *[compile time](#compile-time)*
 
 # [S](#nav-top)
 
-<a id="scalar"/>
-**scalar** &mdash;
+<a id="scalar-context"/>
+**scalar context** &mdash; [Scalar](appendix-a-index.html#Scalar-type)
 
 <a id="scope"/>
 **scope** &mdash;
@@ -323,11 +331,19 @@ part of an array or list
 array parameter that receives all (slurps) all optional
 *[subroutine](#routine)* arguments
 
+<a id="string-context"/>
+**string context** &mdash;
+[Str](appendix-a-index.html#Str-type)
+
 <a id="subroutine"/>
 **subroutine** &mdash; much used, Perl 5-ish term for [routine](#routine)
 
 <a id="subrule"/>
-**subrule** &mdash; 
+**subrule** &mdash;
+piece of a *[regular expression](#regex)* that has a name,
+its findings are stored under that name,
+some of them were used so often, that their built into to language as
+[predefined subrules](appendix-b-grouped.html#subrules)
 
 # [T](#nav-top)
 
