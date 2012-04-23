@@ -2823,7 +2823,7 @@ demands the nth finding (:2nd), has many aliases
 **[:th](#th-modifier)**) for correct spelling
 
 <a id="name"/>
-**name** *(routine method)* &mdash;
+**name** *«routine method»* &mdash;
 returns the name of of a *[routine](appendix-g-glossary.html#routine)*,
 handy when it was stored in a scalar
 
@@ -2874,11 +2874,9 @@ normalize (repair) Unicode (UTF) string
 <a id="not"/>
 **not**
 *[«context op»](appendix-b-grouped.html#contextualizers)* &mdash;
-logical *NOT* operator, converts to *[boolean
-context](tablet-4-operators.html#bool-context)*
-which means it returns **[False](#False)** if
-value is positive or otherwise, low precedence version of
-**[!(»](#exclamation-mark-op)**
+logical *NOT* operator,
+converts to *[boolean context](appendix-g-glossary.html#bool-context)*,
+low precedence version of **[!()](#exclamation-mark-op)**
 
 <a id="note"/>
 **[note](tablet-5-io.html#note)** &mdash;
@@ -4204,7 +4202,8 @@ only unique elements of a list (no value twice)
 if the following expression *[evals](#evaluation)*
 to **[False](#False)**, the block after that will
 be run, can also be written at the end of an expression, opposite of
-**[if](#if)**
+**[if](#if)**,  alias to **if** **[not](#not)**,
+no **[elsif](#elsif)** or **[else](#else)** is allowed to follow
 
 <a id="until"/>
 **[until](tablet-6-blocks.html#until)**
@@ -4213,7 +4212,8 @@ runs block repeatedly as long as the following expression
 *[evals](#evaluation)* to
 **[False](#False)**, can be combined with
 **[repeat](#repeat)**, can also be written at the
-end of an expression, opposite of **[while](#while)**
+end of an expression, opposite of **[while](#while)**,
+alias to **while** **[not](#not)**
 
 <a id="unwrap"/>
 **unwrap** &mdash;
