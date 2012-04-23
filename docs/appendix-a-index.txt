@@ -3101,12 +3101,12 @@ syntax; use **[eval](#eval)** onto that string and
 you get the data structure again, bit like *Data::Dump*
 
 <a id="PERL-global-var"/>
-**$\*PERL**
+**\$\*PERL**
 *[«special var»](appendix-b-grouped.html#global-variables)* &mdash;
-Perl version running under, is *$]* and *$\^V* in Perl 5
+Perl version running under, in Perl 5: *\$\]* and *\$\^V* 
 
 <a id="PERL-compiler-var"/>
-**$?PERL**
+**\$?PERL**
 *[«special var»](appendix-b-grouped.html#compiler-hint-variables)* &mdash;
 Perl version this program is compiled for
 
@@ -3122,9 +3122,9 @@ select a number (optional first parameter) of random vaues (without
 duplication), take **[roll](#roll)** to enable duplication
 
 <a id="PID-global-var"/>
-**$\*PID**
+**\$\*PID**
 *[«special var»](appendix-b-grouped.html#global-variables)* &mdash;
-ID of the running process, is *$$* and *$PID* in Perl 5
+ID of the running process, in Perl 5 *\$\$* and *\$PID*
 
 <a id="pod-pod-var"/>
 **$=pod**
@@ -3320,7 +3320,7 @@ short for **[:double](#double-adverb)**
 <a id="qqx"/><a id="qqx-op"/>
 **[qqx](tablet-2-basic-syntax.html#code)**
 *[«quoting op»](appendix-b-grouped.html#quoting-ops)* &mdash;
-run as system call and return results; is *qx/.../* in Perl 5
+run as system call and return results, in Perl 5: *qx/.../*
 
 <a id="Quasi-slang-var"/>
 **$\~Quasi**
@@ -4050,7 +4050,11 @@ tangent, trigonometric function, takes angle in radian; see also
 **[cos](#cos)**, **[sin](#sin)**
 
 <a id="temp"/>
-**temp** &mdash; defines variables as temporary, synonym for *local* in  Perl 5
+**temp** &mdash; 
+temporarily replaces the value of an existing variable or
+*[routine](appendix-g-glossary.html#routine)*, etc.
+in a given scope
+defines variables as temporary, in Perl 5: *local*
 
 <a id="term"/><a id="term-category"/>
 **term**
