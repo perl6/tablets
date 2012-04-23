@@ -3004,8 +3004,8 @@ or filehandle is a pipe
 **[:p](tablet-2-basic-syntax.html#paths)**
 *[«quoting adverb»](appendix-b-grouped.html#quoting-adverbs)* &mdash;
 quote paths and create path object that know the right format of
-the current **[$\*KERNEL](#KERNEL-global-var)** with
-**Q :p /.../ **, short for **[:path](#path-adverb)**
+the current **[\$\*KERNEL](#KERNEL-global-var)** with
+**`Q :p /.../`**, short for **[:path](#path-adverb)**
 
 <a id="p-modifier"/>
 **:p**(<span class="you-provide">n</span>)
@@ -3113,7 +3113,7 @@ Perl version this program is compiled for
 <a id="Perl5-modifier"/>
 **:Perl5**
 *[«regex modifier»](appendix-b-grouped.html#regex-modifier)* &mdash;
-activate old Perl 5 regex rules, alias to **[:P5](#p5-modifier)**
+activate old Perl 5 regex rules, alias to **[:P5](#P5-modifier)**
 
 <a id="pick"/>
 **pick**
@@ -4051,10 +4051,7 @@ tangent, trigonometric function, takes angle in radian; see also
 
 <a id="temp"/>
 **temp** &mdash; 
-temporarily replaces the value of an existing variable or
-*[routine](appendix-g-glossary.html#routine)*, etc.
-in a given scope
-defines variables as temporary, in Perl 5: *local*
+, in Perl 5: *local*
 
 <a id="term"/><a id="term-category"/>
 **term**
