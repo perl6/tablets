@@ -2701,8 +2701,8 @@ tells the parser the rules of parsing Perl
 **map**
 *[«array op & method»](tablet-3-variables#array-methods)* &mdash;
 take a list, perform a block on each member, return a list of
-the results &mdash; example: `say map { chr $\_ }, 66..69` *(is "B C D E")*
-or `say map { chr $\_ }, 66..69`
+the results &mdash; example: `say map { chr $_ }, 66..69` *(is "B C D E")*
+or `say map { chr $_ }, 66..69`
 
 <a id="Match-type"/>
 **Match**
