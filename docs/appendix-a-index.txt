@@ -26,8 +26,8 @@ and <span class="you-provide">t</span> any
 
 Before alpha chars (a-z) in ASCII order:
 [`! " #`](#exclamation)  [`$ % &`](#dollar)  [`' ( *`](#single-quotation)
-[`+ , -`](#plus)         [`. / 0`](#dot)     [`: ; <`](#colon) [`= > ?`](#equal)
-[`@ [ \`](#at)           [`^ _ {`](#caret)   [`| ~`](#pipe)
+[`+ , -`](#plus)         [`. / 0`](#dot)     [`: ; <`](#colon)
+[`= > ?`](#equal)        [`@ [ \`](#at)      [`^ _ {`](#caret)   [`| ~`](#pipe)
 
 Punctuation
 ===========
@@ -2791,7 +2791,9 @@ most (generic) undefined value object
 marks *[routines](appendix-g-glossary.html#routine)* that can have sibling
 with same name but different *[signature](#signature)*,
 when name is called, the one with matching signature is run
-(*[multimethod dispatch](appendix-g-glossary.html#MMD)*)
+(*[multimethod dispatch](appendix-g-glossary.html#MMD)*) &mdash;
+example: `multi sub name (...) {...}` &mdash;
+opposite of: **[only](#only)**
 
 <a id="my"/>
 **my**
@@ -2812,8 +2814,8 @@ anything but (logical) newline
 <a id="backslash-n"/>
 **\\n**
 *[«escape sequence»](appendix-b-grouped.html#escape-sequences)* &mdash;
-an unicode newline character, its \\u000A | \\u000B | \\u000C |
-\\u000D | \\u0085 | \\u2028 | \\u2029 | \\u000D\\u000A
+an *[unicode](appendix-g-glossary.html#unicode)* newline character,
+these are `u000A | \u000B | \u000C | \u000D | \u0085 | \u2028 | \u2029 | \u000D\u000A`
 
 <a id="nd-modifier"/>
 <span class="you-provide">n</span>**:nd**
@@ -2858,7 +2860,7 @@ same *[signature](#signature)*, similar to javas SUPER
 **Nil**
 *[«undefined value type»](appendix-b-grouped.html#undefined-types)* &mdash;
 unlike *undef* in Perl 5 it really means no value here &mdash;
-example: *@a = Nil, Nil; \# array has zero elements*
+example: *`@a = Nil, Nil;`* result array has zero elements
 
 <a id="none"/>
 **none**
@@ -2868,7 +2870,7 @@ part of a set, *[junctive](#junction)* *NOT*
 operator
 
 <a id="normalize"/>
-**normalize** *(string method)* &mdash;
+**normalize** *«string method»* &mdash;
 normalize (repair) Unicode (UTF) string
 
 <a id="not"/>
@@ -2927,7 +2929,9 @@ see also: **[|](#pipe-op)**
 **only**
 *[routine modifier](appendix-b-grouped.html#routine-modifier)* &mdash;
 permits only one *[routine](appendix-g-glossary.html#routine)*
-of the same name in this block (no [MMD](appendix-g-glossary.html#MMD))
+of the same name in this block (no [MMD](appendix-g-glossary.html#MMD)) &mdash;
+example: `only sub name (...) {...}` &mdash;
+opposite of: **[multi](#multi)**
 
 <a id="open"/>
 **[open](tablet-5-io.html#open)**
@@ -3018,14 +3022,14 @@ activate old Perl 5 regex rules, alias to **[:Perl5](#Perl5-modifier)**
 **$\~P5Regex**
 *[«special var»](appendix-b-grouped.html#slang-variables)* &mdash;
 current [grammar](#grammar) of the Perl 5
-compatible regular expression language
+compatible regular expression *[slang](appendix-g-glossary.html#slang)*
 
 <a id="pack"/>
 **[pack](tablet-2-basic-syntax.html#pack)**
 format values into or from a condensed format
 
 <a id="package"/>
-**package** *(block modifier)* &mdash;
+**package** *«block modifier»* &mdash;
 defines this Block or File as
 namespace (almost like in Perl 5), some uses are now better to do
 with **[module](#module)** and
@@ -3057,8 +3061,7 @@ returns all contents as an array or pairs (key,value)
 <a id="PairSeq-type"/>
 **PairSeq**
 *[«mutable type»](appendix-b-grouped.html#mutable-types)* &mdash;
-a **[Seq](#Seq-type)** (sequence) of
-**[Pairs](#Pair-type)**
+a **[Seq](#Seq-type)** (sequence) of **[Pairs](#Pair-type)**
 
 <a id="panic-modifier"/>
 **:panic**
@@ -3093,7 +3096,7 @@ the current **[$\*KERNEL](#KERNEL-global-var)** with
 
 <a id="perl"/>
 **[perl](tablet-2-basic-syntax.html#perl)**
-*(formater)* &mdash; transforms data structure into Perl 6 source
+*«formater»* &mdash; transforms data structure into Perl 6 source
 syntax; use **[eval](#eval)** onto that string and
 you get the data structure again, bit like *Data::Dump*
 
