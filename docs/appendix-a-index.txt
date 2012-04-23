@@ -4187,9 +4187,9 @@ everything within the brackets is uppercase
 **ucfirst** &mdash; make first char of a string uppercase
 
 <a id="UID-global-var"/>
-**$\*UID** *[«special var»](appendix-b-grouped.html#global-variables)* &mdash;
+**\$\*UID** *[«special var»](appendix-b-grouped.html#global-variables)* &mdash;
 real user ID of the running process
-(**[\$\*PID](#PID-global-var)**) owner (user), is *@<* and *$UID* in Perl 5
+(**[\$\*PID](#PID-global-var)**) owner (user), is *\@\<* and *\$UID* in Perl 5
 
 <a id="UNDO-phaser"/>
 **UNDO**
