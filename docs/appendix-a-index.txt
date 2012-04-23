@@ -3004,8 +3004,9 @@ or filehandle is a pipe
 **[:p](tablet-2-basic-syntax.html#paths)**
 *[«quoting adverb»](appendix-b-grouped.html#quoting-adverbs)* &mdash;
 quote paths and create path object that know the right format of
-the current **[\$\*KERNEL](#KERNEL-global-var)** with
-**`Q :p /.../`**, short for **[:path](#path-adverb)**
+the current **[\$\*KERNEL](#KERNEL-global-var)** &mdash;
+example: **`Q :p /.../`** &mdash;
+short for **[:path](#path-adverb)** or use **[qp](#qp-op)** directly
 
 <a id="p-modifier"/>
 **:p**(<span class="you-provide">n</span>)
@@ -3044,8 +3045,8 @@ reference to the current package
 **package\_declarator**
 *[«grammatical category»](appendix-b-grouped.html#categories)* &mdash;
 internal namespace for &mdash; example:
-*[package](#package) ,
-[module](#module) , [class](#class)*
+*[package](#package),
+[module](#module), [class](#class)*
 
 <a id="Pair-type"/>
 **Pair**
@@ -3091,8 +3092,9 @@ later defined rules can't be applied, opposite of
 **[:path](tablet-2-basic-syntax.html#paths)**
 *[«quoting adverb»](appendix-b-grouped.html#quoting-adverbs)* &mdash;
 quote paths and create path object that know the right format of
-the current **[$\*KERNEL](#KERNEL-global-var)** with
-**Q :path /.../ **, long for **[:p](#p-adverb)**
+the current **[$\*KERNEL](#KERNEL-global-var)** &mdash;
+example: **`Q :path /.../`** &mdash;
+long for **[:p](#p-adverb)** or use **[qp](#qp-op)** directly
 
 <a id="perl"/>
 **[perl](tablet-2-basic-syntax.html#perl)**
