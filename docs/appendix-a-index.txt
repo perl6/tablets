@@ -449,7 +449,7 @@ for literals, makes a number <span class="you-provide">n</span> in base
 example: `:2<1000001>` is decimal 65
 
 <a id="colon-label"/>
-**:**<span class="you-provide">s</span> *(flow control)* &mdash;
+**:**<span class="you-provide">s</span> *«flow control»* &mdash;
 suffix of all labels you can jump to with **[goto](#goto)**
 
 <a id="colon-signature"/>
@@ -1191,12 +1191,13 @@ raw binary data
 <a id="bytes"/>
 **bytes**
 *«string method»* &mdash;
-returns number of bytes used (a sort of length)
+number of bytes (a sort of P5's *length*)
 
 <a id="bytes-modifier"/>
 **:bytes**
 *[«regex modifier»](appendix-b-grouped.html#regex-modifier)* &mdash;
-searching on byte level, see also:
+searching on byte level &mdash;
+see also: 
 **[chars](#chars-modifier)**,
 **[:codes](#codes-modifier)**,
 **[:graphs](#graphs-modifier)**
@@ -1238,9 +1239,9 @@ named character or control character
 <a id="pipe-c"/>
 **|c**
 *[«escape sequence»](appendix-b-grouped.html#escape-sequences)* &mdash;
-codepoint boundary, zero width space between two unicode
-codepoints, see also: **[|g](#pipe-g)** and
-**[|w](#pipe-w)**
+codepoint boundary, zero width space between two
+*[unicode](appendix-g-glossary.html#unicode)* codepoints &mdash;
+see also: **[|g](#pipe-g)** and **[|w](#pipe-w)**
 
 <a id="cached"/><a id="cached-routine-trait"/>
 **cached**
@@ -1322,10 +1323,9 @@ convert number into character according a
 character table (UTF), reverse of **[ord](#ord)**
 
 <a id="chrs"/>
-**chrs** *«num method»* &mdash; plural of **[chr](#chr)**, takes a list of
-**[Int](#Int-type)** and returns a
-**[Str](#Str-type)**, reverse of
-**[ords](#ords)**
+**chrs** *«num method»* &mdash;
+plural of **[chr](#chr)**, takes a list of **[Int](#Int-type)** and returns a
+**[Str](#Str-type)**, reverse of **[ords](#ords)**
 
 <a id="chars"/>
 **chars**
@@ -1358,12 +1358,12 @@ marks as a prefix a special block or statement, executed at
 changes access rights of files (like on Unix)
 
 <a id="chomp"/>
-**chomp** *(string method)* &mdash;
+**chomp** *«string method»* &mdash;
 returns a [string](#Str-type) with the last newline
 (if there is one) removed (from only parameter)
 
 <a id="chop"/>
-**chop** *(string method)* &mdash;
+**chop** *«string method»* &mdash;
 returns a [string](#Str-type) with the last character removed (from only parameter)
 
 <a id="chown"/>
@@ -1406,7 +1406,7 @@ listrefs (see also **[categorize](#categorize)**)
 
 <a id="close"/>
 **[close](tablet-5-io.html#close)**
-*(filehandle method)* &mdash;
+*«filehandle method»* &mdash;
 releasing the connection to a file via a file handler
 
 <a id="closure-adverb"/>
@@ -1480,11 +1480,11 @@ real (**[Num](#Num-type)**), see also
 **[abs](#abs)**
 
 <a id="constant"/>
-**constant** *(var trait)* &mdash;
+**constant** *«var trait»* &mdash;
 makes so declared var (*is constant*) a real constant
 
 <a id="contend"/>
-**contend** *(block modifier)* &mdash;
+**contend** *«block modifier»* &mdash;
 marks a block as atomic, concurrent proceses have to wait
 
 <a id="continue"/>
@@ -1578,7 +1578,7 @@ lines of it
 
 <a id="decode"/>
 **[decode](tablet-5-io.html#read)**
-*(Buf method)* &mdash;
+*«Buf method»* &mdash;
 transforms raw binary UTF
 (**[Buf](#Buf-type)**) into readable UTF Text
 (**[Str](#Str-type)**)
@@ -1649,7 +1649,7 @@ program was compiled for, see also:
 
 <a id="do"/>
 **[do](tablet-6-blocks.html#do)** &mdash;
-executes a block (do once loop)
+executes a *[block](appendix-g-glossary.html#block)*, the "do once" loop
 
 <a id="does"/>
 **does** &mdash;
@@ -1984,8 +1984,8 @@ before any **[ENTER](#ENTER-phaser)**
 *[«array op & method»](tablet-3-variables#array-methods)* &mdash;
 returns first value of a list that passes a condition (first
 paramter); the condition is a closure that takes one value at a time
-(as [**`$_`**](#context-var) or `$^a`); works
-like [**grep**](#grep) &mdash; example : `first {$_ %% 2}, 1..5 ; # returns 2`
+(as [**`$_`**](#context-var) or `$^a`),
+works like [**grep**](#grep) &mdash; example : `first {$_ %% 2}, 1..5 ; # returns 2`
 
 <a id="flat"/>
 **flat**()
@@ -2076,7 +2076,7 @@ greatest common divisor (see also: **[lcm](#lcm)**)
 
 <a id="gather"/>
 **[gather](tablet-6-blocks.html#gather-and-take)**
-*(block modifier)* &mdash;
+*«block modifier»* &mdash;
 performs the following block once, returns a
 list of all values passed by **[take](#take)**
 
@@ -2558,10 +2558,12 @@ make string lowercase
 **lcfirst** *(string op & method)* &mdash;
 make first character of a string lowercase
 
-<a id="lcm"/>
+<a id="lcm"/><a id="lcm-op"/>
 **lcm**
 *[«numeric infix op»](tablet-4-operators.html#numeric-context)* &mdash;
-least common multiple, see also: **[gcd](#gcd)**
+least common multiple &mdash;
+example: `4 lcm 6` returns: `12` &mdash;
+see also: **[gcd](#gcd)**
 
 <a id="le"/>
 **le**
@@ -2590,8 +2592,7 @@ operator in *[string
 context](tablet-4-operators.html#string-context)*,
 leg stands for lower/equal/greater, **[cmp](#cmp)**
 is the more general form, **[<=\>](#spaceship-op)**
-does same in [numerical
-context](#numerical-context), is cmp in P5
+does same in [numerical context](#numerical-context), is *cmp* in P5
 
 <a id="let"/>
 **let** &mdash;
@@ -3174,7 +3175,7 @@ internal namespace of
 [metaoperator](#metaoperator) that
 [prefix](#prefix-category) (precedes) other operator
 but stay [postfix](#postfix-category) (after) another term &mdash;
-example (greater as): `@a \>\>++`
+example (greater as): `@a >>++`
 
 <a id="PRE-phaser"/>
 **PRE**
@@ -4194,7 +4195,7 @@ unsuccessful block exit, part of
 **[LEAVE](#LEAVE-phaser)** queue
 
 <a id="uniq"/>
-**uniq** *(list method)* &mdash;
+**uniq** *«list method»* &mdash;
 only unique elements of a list (no value twice)
 
 <a id="unless"/>
@@ -4575,7 +4576,7 @@ example: `@a Z @b = (@a; @b).zip`
 
 <a id="zipwith"/>
 **zipwith**
-*(list method)* &mdash; alias to **[Z metaoperator](#capital-z-metaop)** &mdash;
+*«list method»* &mdash; alias to **[Z metaoperator](#capital-z-metaop)** &mdash;
 example: `@a Z~ @b = (@a; @b).zipwith(&[~]) = (@a; @b).zip.slice.map { .reduce(&[~]) }`
 
 ***
