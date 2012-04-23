@@ -889,7 +889,7 @@ variable and data types according a
 
 
 
-# A
+# [A](#nav-top)
 
 <a id="a-adverb"/>
 **:a**
@@ -1055,7 +1055,7 @@ replaces them, see also: **[supersede](#supersede)**
 
 
 
-# B
+# [B](#nav-top)
 
 <a id="b-test"/>
 **:b**
@@ -1202,7 +1202,7 @@ searching on byte level, see also:
 
 
 
-# C
+# [C](#nav-top)
 
 <a id="c-test"/>
 **:c**
@@ -1551,7 +1551,7 @@ current working directory as **[Str](#Str-type)**
 
 
 
-# D
+# [D](#nav-top)
 
 <a id="d-test"/>
 **:d**
@@ -1679,7 +1679,7 @@ dynamic *[scope](appendix-g-glossary.html#scope)*
 
 
 
-# E
+# [E](#nav-top)
 
 <a id="e-test"/>
 **:e**
@@ -1890,7 +1890,7 @@ the current **[module](#module)** by default
 
 
 
-# F
+# [F](#nav-top)
 
 <a id="f-test"/>
 **:f**
@@ -2046,7 +2046,9 @@ replacing them with the result, long form of
 **[qq/.../](#qq-op)** and
 **[<<...\>\>](#double-angle-brackets)**
 
-# G
+
+
+# [G](#nav-top)
 
 <a id="g-test"/>
 **:g**
@@ -2195,7 +2197,7 @@ ordered the right comes before the left (see also
 
 
 
-# H
+# [H](#nav-top)
 
 <a id="h-test"/>
 **:h**
@@ -2274,7 +2276,8 @@ forces none-lazy list context, that ignores the order of results
 (allows parallel computing)
 
 
-# I
+
+# [I](#nav-top)
 
 <a id="i-modifier"/>
 **:i**
@@ -2420,7 +2423,8 @@ forces scalar context, alias to **[$()](#dollar-op)**
 Perl list
 
 
-# J
+
+# [J](#nav-top)
 
 <a id="join"/>
 **join**
@@ -2430,7 +2434,8 @@ another string between the elements &mdash;
 example: `join("-", 1..5) # returns '1-2-3-4-5'` alternative syntax: `(1..5).join("-")`
 
 
-# K
+
+# [K](#nav-top)
 
 <a id="k-test"/>
 **:k**
@@ -2500,7 +2505,7 @@ returns list of key-value pairs
 
 
 
-# L
+# [L](#nav-top)
 
 <a id="l-test"/>
 **:l**
@@ -2657,7 +2662,7 @@ comes before the right
 
 
 
-# M
+# [M](#nav-top)
 
 <a id="m-op"/>
 **[m/ /](tablet-9-regexes.html#matching)**
@@ -2795,7 +2800,7 @@ once this scope is executed
 
 
 
-# N
+# [N](#nav-top)
 
 <a id="backslash-N"/>
 **\\N**
@@ -2891,8 +2896,7 @@ and **[FatRat](#FatRat-type)**)
 
 
 
-# O
-
+# [O](#nav-top)
 
 <a id="O-test"/>
 **:O**
@@ -2984,7 +2988,8 @@ searching at all positions just one time (with backtracking),
 long for **[:ov](#ov-modifier)**
 
 
-# P
+
+# [P](#nav-top)
 
 <a id="p-test"/>
 **:p** *[«io test method»](appendix-b-grouped.html#Test-Methods)* &mdash;
@@ -3257,7 +3262,7 @@ key already exists, it will point to an array of both values
 
 
 
-# Q
+# [Q](#nav-top)
 
 <a id="Q-op"/>
 **[Q](tablet-2-basic-syntax.html#quoting)**
@@ -3367,7 +3372,7 @@ alias to **Q [:x](#x-adverb) /.../** or **Q [:exec](#exec-adverb) /.../**
 
 
 
-# R
+# [R](#nav-top)
 
 <a id="R-test"/>
 **:R**
@@ -3629,7 +3634,7 @@ alias to **[Q](#capital-q-op)**
 
 
 
-# S
+# [S](#nav-top)
 
 <a id="s-metaop"/>
 **S**<span class="you-provide">op</span>
@@ -4012,7 +4017,7 @@ attributes of a **[class](#class)** or
 
 
 
-# T
+# [T](#nav-top)
 
 <a id="t-test"/>
 **:t**
@@ -4157,7 +4162,7 @@ local time zone
 
 
 
-# U
+# [U](#nav-top)
 
 <a id="u-test"/>
 **:u**
@@ -4235,7 +4240,8 @@ load a module, check Perl version, import definitions (vars and routines),
 see also **[need](#need)** and **[import](#import)**)
 
 
-# V
+
+# [V](#nav-top)
 
 <a id="backslash-V"/>
 **\\V**
@@ -4284,7 +4290,7 @@ virtual machine the program is compiled for, see also:
 
 
 
-# W
+# [W](#nav-top)
 
 <a id="W-test"/>
 **:W**
@@ -4464,7 +4470,7 @@ zero-width space inside of a word between two
 
 
 
-# X
+# [X](#nav-top)
 
 <a id="X-op"/>
 **X**
@@ -4541,10 +4547,11 @@ replicate a list *$n* (second operand) times &mdash;
 example: `'ab' xx 3 = <ab ab ab>`
 
 
-# Y
+
+# [Y](#nav-top)
 
 
-# Z
+# [Z](#nav-top)
 
 <a id="Z-op"/>
 **Z**

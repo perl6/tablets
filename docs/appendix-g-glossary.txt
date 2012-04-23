@@ -13,7 +13,7 @@ questions like: "Can I do *functional programming* in Perl 6?" or
 [T](#t#) [U](#u) [V](#v) [W](#w) [X](#x) [Y](#y) [Z](#z)
 
 
-# A
+# [A](#nav-top)
 
 <a id="ALAP"/>
 **ALAP** *(as late as possible)* &mdash; within a given execution phase
@@ -26,12 +26,16 @@ questions like: "Can I do *functional programming* in Perl 6?" or
 **ASAP** *(as soon as possible)* &mdash; within a given execution phase
 (*[compile time](#compile-time)* or [run time](#run-time))
 
+<a id="ASCII"/>
+**ASCII** &mdash; 
+
+
 <a id="AST"/>
 **AST** *(abstract syntax tree)* &mdash; tree like data structure, in which
 source code is transformed, before running the programm
 
 
-# B
+# [B](#nav-top)
 
 <a id="backtracking"/>
 **backtracking** &mdash;
@@ -51,7 +55,8 @@ syntactically just a piece of code inside curly brackets
 (**{}**), when [evaluated](#evaluation) it becomes an
 object of the type **[Block](appendix-a-index.html#block-type)**
 
-# C
+
+# [C](#nav-top)
 
 <a id="capture"/>
 **capture** &mdash;
@@ -100,7 +105,7 @@ creating a *[subroutine](routine)* that calls another with certain
 *[parameter](#parameter)* to be predefined
 
 
-# D
+# [D](#nav-top)
 
 <a id="declarative-programming"/>
 **declarative programming** &mdash; programming paradigm that expresses the
@@ -115,7 +120,7 @@ return values from routines must meet conditions; A signature is
 considered contract in Perl 6
 
 
-# E
+# [E](#nav-top)
 
 <a id="expression"/>
 **expression** &mdash;
@@ -130,7 +135,7 @@ inside quotes and regexes ot has the first meaning,
 the command **[eval](appendix-a-index.html#eval)** and
 **[evalfile](appendix-a-index.html#evalfile)**does the second
 
-# F
+# [F](#nav-top)
 
 <a id="functional-programming"/>
 **functional programming** &mdash;
@@ -140,9 +145,9 @@ by Perl 6, considered as a branch of Declarative Programming
 
 # G
 
-# H
+# [H](#nav-top)
 
-# I
+# [I](#nav-top)
 
 <a id="invocant"/>
 **invocant** &mdash; *[routine](#routine)* or term that called
@@ -153,16 +158,16 @@ the piece of code of issue
 repeated executing of a term or *[block](#block)*, enforced by
 [iterators](appendix-b-grouped.html#Loops)
 
-# J
+# [J](#nav-top)
 
 <a id="junction"/>
 **junction** &mdash; a type of value that holds a logical combination of
 several values, example: (A and B) or C, creat them with 
 [junctive ops](tablet-4-operators.html#)
 
-# K
+# [K](#nav-top)
 
-# L
+# [L](#nav-top)
 
 <a id="list-contex"/>
 **list context** &mdash;
@@ -179,7 +184,7 @@ when searching a pattern with alternatives (sub|substr)
 the search will continue after finding the pattern 'sub'
 because of looking for the longest alternative
 
-# M
+# [M](#nav-top)
 
 <a id="metaoperator"/>
 **[metaoperator](appendix-b-grouped.html#metaoperators)** &mdash;
@@ -191,7 +196,7 @@ operators that alter the meaning of other normal operators
 <a id="MMD"/>
 **MMD** *(multimethod dispatch)* &mdash; 
 
-# N
+# [N](#nav-top)
 
 <a id="named-parameter"/>
 **named parameter** &mdash;
@@ -199,7 +204,7 @@ operators that alter the meaning of other normal operators
 <a id="numeric-context"/>
 **numeric context** &mdash;
 
-# O
+# [O](#nav-top)
 
 <a id="OOP"/>
 **OOP** *(object oriented orogramming)* &mdash;
@@ -207,7 +212,7 @@ programming paradigm (style), that arranges data and functions
 that belong together into so called objects
 
 
-# P
+# [P](#nav-top)
 
 <a id="parameter"/>
 **parameter** &mdash;
@@ -246,9 +251,13 @@ a block that is given readonly *[parameters](parameter)* with
 <a id="property"/>
 **property** &mdash; metadata of a variable set at runtime
 
-# Q
+# [Q](#nav-top)
 
-# R
+<a id="quoting"/>
+**quoting** &mdash;
+
+
+# [R](#nav-top)
 
 <a id="reference"/>
 **reference** &mdash;
@@ -271,7 +280,7 @@ or **[HardRoutine](appendix-a-index.html#hardroutine-type)**
 after *[compile time](#compile-time)*
 
 
-# S
+# [S](#nav-top)
 
 <a id="scalar"/>
 **scalar** &mdash;
@@ -320,7 +329,7 @@ array parameter that receives all (slurps) all optional
 <a id="subrule"/>
 **subrule** &mdash; 
 
-# T
+# [T](#nav-top)
 
 <a id="term"/>
 **term** &mdash;
@@ -343,18 +352,18 @@ second(ary) *[sigil](#sigil)* indicating a special property of a variable,
 [(more details here)](tablet-3-variables#twigils)
 
 
-# U
+# [U](#nav-top)
 
 <a id="unicode"/>
 **unicode** &mdash;
 
-# V
+# [V](#nav-top)
 
-# W
+# [W](#nav-top)
 
-# X
+# [X](#nav-top)
 
-# Y
+# [Y](#nav-top)
 
 <a id="yadda-operator"/>
 **[yadda operator](operators.html#yadda)** &mdash;
@@ -364,4 +373,4 @@ because empty ones are forbidden, comes in 3 flavours:
 **[???](appendix-a-index.html#triple-question-mark)** (warn) and
 **[!!!](appendix-a-index.html#triple-exclamation-mark)** (die)
 
-# Z
+# [Z](#nav-top)
