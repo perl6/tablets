@@ -356,6 +356,10 @@ second(ary) *[sigil](#sigil)* indicating a special property of a variable,
 
 <a id="unicode"/>
 **unicode** &mdash;
+format to save text in, that can contain almost any letter or symbol known to men,
+not just *[ASCII](#ASCII)*, its [fully supported](appendix-d-delta.html#unicode)
+by Perl 6, which means any part of a a program might use any character or symbol,
+strange names that start with UTF are most probably Unicode formats
 
 # [V](#nav-top)
 
