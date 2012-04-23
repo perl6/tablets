@@ -19,6 +19,9 @@ questions like: "Can I do *functional programming* in Perl 6?" or
 **ALAP** *(as late as possible)* &mdash; within a given execution phase
 ([compile time](#compile-time) or [run time](#run-time))
 
+<a id="and"/>
+**and** &mdash; logical operation
+
 <a id="argument"/>
 **argument** &mdash; another word for *[parameter](#parameter)*
 
@@ -200,7 +203,11 @@ operators that alter the meaning of other normal operators
 **metaprogramming** &mdash; 
 
 <a id="MMD"/>
-**MMD** *(multimethod dispatch)* &mdash; 
+**MMD** *(multimethod dispatch)* &mdash;
+technique where several *[routines](#routine)* can have the same name,
+but different *[signatures](#signature)*, when the name is called - the
+suitable routine is seleted via *MMD* &mdash;
+see also: **[multi](appendix-a-index.html#multi)**
 
 # [N](#nav-top)
 
@@ -217,6 +224,9 @@ operators that alter the meaning of other normal operators
 **OOP** *(object oriented orogramming)* &mdash;
 programming paradigm (style), that arranges data and functions
 that belong together into so called objects
+
+<a id="or"/>
+**or** &mdash; logical operation
 
 
 # [P](#nav-top)
@@ -308,14 +318,14 @@ following name, most prominent in Perl are the variable
 
 <a id="signature"/>
 **signature** &mdash; function parameters (left-hand side of a binding),
-surrounded by round parentheses
+surrounded by round parentheses in the definition of a *[routine](#routine)*
 
 <a id="slang"/>
 **slang** &mdash;
 sublanguages of Perl 6, quoting or *[regular expression](#regular expression)*
 are completely independent languages, the grammar to parse them is mostly stored
 in [special variables](appendix-b-grouped.html#slang-variables)
-with the [twigil](#twigil) \~, 
+with the [twigil](#twigil) **\~**, 
 **[\$\~MAIN](appendix-a-index.html#main-lang-var)** (main language),
 you can change or alter them by using the keyword 
 **[augment](appendix-a-index.html#augment)**
@@ -382,6 +392,9 @@ strange names that start with UTF are most probably Unicode formats
 # [W](#nav-top)
 
 # [X](#nav-top)
+
+<a id="xor"/>
+**xor** &mdash; logical operation
 
 # [Y](#nav-top)
 
