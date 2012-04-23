@@ -1439,7 +1439,7 @@ output
 **code**
 *[«context op»](appendix-b-grouped.html#contextualizers)* &mdash;
 forces [callable](tablet-3-variables#callable)
-context, alias to **[&(»](#ampersand-context-op)**
+context, alias to **[&()](#ampersand-context-op)**
 
 <a id="code-adverb"/>
 **:code**
@@ -1740,7 +1740,7 @@ alternative **[if](#if)** clause
 
 <a id="encode"/>
 **[encode](tablet-5-io.html#read)**
-*(Buf method)* &mdash;
+*«Buf method»* &mdash;
 transforms readable UTF Text (**[Str](#Str-type)**)
 into raw binary UTF (**[Buf](#Buf-type)**)
 
@@ -1748,7 +1748,7 @@ into raw binary UTF (**[Buf](#Buf-type)**)
 **END**
 *[«closure trait»](appendix-b-grouped.html#closure-traits)* &mdash;
 marks as a prefix a special block, executed at run time,
-[ALAP](appendix-g-glossary.html#ALAP), only ever runs once
+*[ALAP](appendix-g-glossary.html#ALAP)*, only ever runs once
 
 <a id="end"/>
 **end**
@@ -1759,19 +1759,18 @@ last index of that list, see also: **[elems](#elems)**
 **ENTER**
 *[«closure trait»](appendix-b-grouped.html#closure-traits)* &mdash;
 marks as a prefix a special block or statement, executed at
-every block entry time, repeats on [loop](appendix-b-grouped.html#loops)
-blocks
+every block entry time, repeats on [loop](appendix-b-grouped.html#loops) blocks
 
 <a id="Enum-type"/>
 **Enum**
 *[«immutable type»](appendix-b-grouped.html#immutable-types)* &mdash;
-an immutable Pair
+an immutable **[Pair](#Pair-type)**
 
 <a id="enum"/>
 **enum** &mdash; enum takes a list of keys or pairs and adds values to any
 keys that are not already part of a pair (one more than the previous
-key had) &mdash; example: *%hash = enum <<:Mon(1) Tue Wed Thu Fri Sat
-Sun\>\>; *
+key had) &mdash;
+example: `%hash = enum <<:Mon(1) Tue Wed Thu Fri Sat Sun>>;`
 
 <a id="Enum-type"/>
 **EnumMap**
@@ -1781,7 +1780,7 @@ A mapping of Enums with no duplicate keys
 <a id="ENV-global-var"/>
 **%\*ENV**
 *[«special var»](appendix-b-grouped.html#global-variables)* &mdash;
-environment variables (of the shell), is %ENV in P5
+environment variables (of the shell), is *%ENV* in P5
 
 <a id="eq"/><a id="eq-op"/>
 **eq**
@@ -1800,7 +1799,7 @@ operator](appendix-b-grouped.html#table-of-precedence)
 same as an existing operator
 
 <a id="eqv"/>
-**eqv** *(comparison op)* &mdash;
+**eqv** *«comparison op»* &mdash;
 [infix](#infix-category)
 operator, compares the dynamic state of objects and values, in
 contrast with static **[=](#triple-equal)**
@@ -1874,7 +1873,7 @@ backtracking), long for **[:ex](#ex-modifier)**
 member, scalar method
 
 <a id="exit"/>
-**exit** *(flow control)* &mdash;
+**exit** *«flow control»* &mdash;
 stops all program execution, and returns
 Int $status (first parameter) to the calling environment
 
@@ -2149,7 +2148,7 @@ ans **[roll](#roll)**
 **grabpair**
 *[«hash method»](tablet-3-variables#hash-methods)* &mdash;
 random selection <span class="you-provide">n</span> (only parameter) of hash
-**[pairs](#pair)**, (each pair only once) , see also
+**[pairs](#pair)**, (each pair only once), see also
 **[pick](#pick)** ans **[roll](#roll)**
 
 <a id="grammar"/>
