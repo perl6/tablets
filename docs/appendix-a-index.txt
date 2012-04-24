@@ -1968,10 +1968,6 @@ right side will be tested during next loop
 *[«special var»](appendix-b-grouped.html#compiler-hint-variables)* &mdash;
 current filename of source file
 
-<a id="file"/>
-**file**
-*[«callframe method»](appendix-b-grouped.html#callframe-methods)* &mdash;
-
 <a id="FIRST-phaser"/>
 **FIRST**
 *[«closure trait»](appendix-b-grouped.html#closure-traits)* &mdash;
@@ -2482,7 +2478,7 @@ KeyHash of UInt (does **[Bag](#Bag-type)** in list/array context)
 
 <a id="KeySet-type"/>
 **KeySet** *[«mutable type»](appendix-b-grouped.html#mutable-types)* &mdash;
-KeyHash of **[Bool](#Bool-type)** (does *[Set](#Set-type)* in list context)
+KeyHash of **[Bool](#Bool-type)** (does **[Set](#Set-type)** in list context)
 
 <a id="keys-array"/>
 **keys** *[«array op & method»](tablet-3-variables#array-methods)* &mdash;
@@ -2608,8 +2604,7 @@ current line number
 returns a chomped list of lines
 (chunks of character separated by **[\\n](#backslash-n)**)
 containing a string - example: `$str.lines($limit)` equals
-[`$str.comb( / \^\^ \\N\* /, $limit )`](#comb),
-works also on file handles
+[`$str.comb( / ^^ \N* /, $limit )`](#comb), works also on file handles
 
 <a id="list"/>
 **list**()
@@ -4264,34 +4259,33 @@ Line | Line Separator | Paragraph Separator), see also:
 <a id="value"/>
 **value**
 *[«pair method»](tablet-3-variables#pair)* &mdash;
-gets value (second) value of a pair (opposite of
-**[key](#key)**) &mdash; example: (key =\> 'val').value;
-\# returns 'val'
+gets value (second) value of a pair (opposite of **[key](#key)**) &mdash;
+example: `(key => 'val').value;` returns `'val'`
 
 <a id="values-array"/>
 **values**
 *[«array op & method»](tablet-3-variables#array-methods)* &mdash;
-returns an array of values like the var itself in [list
-context](#list-context) does
+returns an array of values like the var itself in
+[list context](appendix-g-glossary.html#list-context) does
 
 <a id="values"/>
 **values**
 *[«hash method»](tablet-3-variables#hash-methods)* &mdash;
-returns an array of just the values &mdash; example: *(1 =\> 2, 3 =\>
-4).values; \# returns (2,4)*
+returns an array of just the values &mdash;
+example: `(1 => 2, 3 => 4).values;` returns `2,4`
 
 <a id="VM-global-var"/>
 **\$\*VM**
 *[«special var»](appendix-b-grouped.html#global-variables)* &mdash;
-running virtual machine, might want to use *$\*VM.name*, see
-also: **[\$\*DISTRO](#DISTRO-global-var)** and
+running virtual machine, might want to use `*$*VM.name` &mdash;
+see also: **[\$\*DISTRO](#DISTRO-global-var)** and
 **[\$\*KERNEL](#KERNEL-global-var)**
 
 <a id="VM-compiler-var"/>
 **\$\?VM**
 *[«special var»](appendix-b-grouped.html#global-variables)* &mdash;
-virtual machine the program is compiled for, see also:
-**[\$\?DISTRO](#distro-compiler-var)** and
+virtual machine the program is compiled for &mdash;
+see also: **[\$\?DISTRO](#distro-compiler-var)** and
 **[\$\?KERNEL](#kernel-compiler-var)**
 
 
@@ -4563,7 +4557,7 @@ example: `'ab' xx 3 = <ab ab ab>`
 <a id="Z-op"/>
 **Z**
 *[«list op»](tablet-4-operators.html#list-generation)* &mdash;
-alias to `[zip](#zip-op)`,
+alias to **[zip](#zip-op)**,
 joines 2 lists and stops when 1 list runs out of elements, returning
 always an list with an even length &mdash; example: `1,2,3,4 Z 8,9 == 1,8,2,9`
 
@@ -4583,6 +4577,6 @@ example: `@a Z @b = (@a; @b).zip`
 <a id="zipwith"/>
 **zipwith**
 *«list method»* &mdash; alias to **[Z metaoperator](#capital-z-metaop)** &mdash;
-example: `@a Z~ @b = (@a; @b).zipwith(&[~]) = (@a; @b).zip.slice.map { .reduce(&[~]) }`
+example: `@a Z~ @b` aka `(@a; @b).zipwith(&[~])` aka `(@a; @b).zip.slice.map { .reduce(&[~]) }`
 
 ***
