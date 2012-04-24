@@ -179,20 +179,20 @@ context, alias to **[code()](#code-context)**
 <a id="ampersand-op"/>
 **&**
 *[«junctive op»](tablet-4-operators.html#junctions)* &mdash;
-*[junctive](appendix-g-glossary.html#junction)* *AND*, requires that all
-conditions are met, see also: **[all](#all)**
+*[junctive](appendix-g-glossary.html#junction)* *[AND](appendix-g-glossary.html#and)*,
+requires that all conditions are met, see also: **[all](#all)**
 
 <a id="ampersand-metachar"/>
 **&**
 *[«regex metachar»](appendix-b-grouped.html#regex-metacharacter)* &mdash;
-match multiple patterns (*AND*-connection of patterns)
+match multiple patterns (*[AND](appendix-g-glossary.html#and)*-connection of patterns)
 
 <a id="double-ampersand-metachar"/>
 **&&**
 *[«logical op»](tablet-4-operators.html#logical-selection)* &mdash;
-short circuit *AND*, evals right side if left side returns
-**[True](#True)**, high precedence version of
-**[and](#and)**
+short circuit *[AND](appendix-g-glossary.html#and)*,
+evals right side if left side returns **[True](#True)**,
+high precedence version of **[and](#and)**
 
 <a id="single-quotation"/>
 **[' '](tablet-2-basic-syntax.html#single-quotes)**
@@ -280,7 +280,7 @@ quantifier for one or more findings
 <a id="plus-ampersand-op"/>
 **+&**
 *[«numeric op»](tablet-4-operators.html#numeric-context)* &mdash;
-bitwise *AND*, forces numeric context
+bitwise *[AND](appendix-g-glossary.html#and)*, forces numeric context
 
 <a id="double-plus-op"/><a id="auto-increment"/>
 **++**
@@ -303,12 +303,12 @@ shift right in numeric context
 <a id="plus-caret-op"/>
 **+\^**
 *[«numeric op»](tablet-4-operators.html#numeric-context)* &mdash;
-bitwise *XOR* in numeric context
+bitwise *[XOR](appendix-g-glossary.html#xor)* in numeric context
 
 <a id="plus-pipe-op"/>
 **+|**
 *[«numeric op»](tablet-4-operators.html#numeric-context)* &mdash;
-bitwise *OR* in numeric context
+bitwise *[OR](appendix-g-glossary.html#or)* in numeric context
 
 <a id="comma"/><a id="comma-op"/>
 **[,](tablet-3-variables#array)** 
@@ -669,7 +669,7 @@ opposite of [**\<!\>**](#exclamation-subrule)
 <a id="question-ampersand-op"/>
 **?&**
 *[«bool op»](tablet-4-operators.html#bool-context)* &mdash;
-logical *AND* op, and combinator, forces binary context
+logical *[AND](appendix-g-glossary.html#and)* op, forces binary context
 
 <a id="double-question"/><a id="double-question-double-exclamation"/><a id="conditional-op"/>
 **?? !!**
@@ -688,12 +688,12 @@ that calls **[warn](#warn)**
 <a id="question-caret-op"/>
 **?\^**
 *[«bool op»](tablet-4-operators.html#bool-context)* &mdash;
-logical *XOR*, forces operands into boolean context
+logical *[XOR](appendix-g-glossary.html#xor)*, forces operands into boolean context
 
 <a id="question-pipe-op"/>
 **?|**
 *[«bool op»](tablet-4-operators.html#bool-context)* &mdash;
-logical *OR*, forces operands into boolean context
+logical *[OR](appendix-g-glossary.html#or)*, forces operands into boolean context
 
 <a id="at"/><a id="at-sigil"/>
 **@**
@@ -746,9 +746,9 @@ and [regexes](appendix-b-grouped.html#escape-sequences) start with it
 <a id="caret"/><a id="caret-op"/>
 **\^**
 *[«junctive op»](tablet-4-operators.html#junctions)* &mdash;
-*[junctive](appendix-g-glossary.html#junction)* *XOR*, requires that one
-value in a list is **[True](#True)**, see also
-**[one](#one)**
+*[junctive](appendix-g-glossary.html#junction)* *[XOR](appendix-g-glossary.html#xor)*,
+requires that one value in a list is **[True](#True)** &mdash;
+see also **[one](#one)**
 
 <a id="caret-upto"/>
 **\^** &mdash; upto operator, `^$limit` expands to `0 ..\^ +$limit` range
@@ -780,8 +780,8 @@ start of the string
 <a id="double-caret-op"/>
 **\^\^**
 *[«logical op»](tablet-4-operators.html#logical-selection)* &mdash;
-logical *XOR*, combines expressions, returns
-**[True](#True)** when only one expression is true,
+logical *[XOR](appendix-g-glossary.html#xor)*, combines expressions,
+returns **[True](#True)** when only one expression is true,
 otherwise false, high precedence version of
 **[xor](#xor)**
 
@@ -806,15 +806,15 @@ or a hashref when it is identified as a hash or contains a **[=\>](#fat-arrow)**
 <a id="pipe"/><a id="pipe-op"/><a id="junctive-xor"/>
 **|**
 *[«junctive op»](tablet-4-operators.html#junctions)* &mdash;
-*[junctive](appendix-g-glossary.html#junction)* *OR*,
-requires that a condition is fulfilled
-- see also: **[any](#any)**
+*[junctive](appendix-g-glossary.html#junction)* *[OR](appendix-g-glossary.html#or)*,
+requires that a condition is fulfilled &mdash;
+see also: **[any](#any)**
 
 <a id="pipe-metachar"/>
 **|**
 *[«regex Metachar»](appendix-b-grouped.html#regex-metacharacter)* &mdash; 
-match alternate patterns with longest token matching (*OR* &mdash;
-temporal simultaneous connection of patterns)
+match alternate patterns with longest token matching
+(*[OR](appendix-g-glossary.html#or)* - temporal simultaneous connection of patterns)
 
 <a id="pipe-context"/>
 **|**()
@@ -825,7 +825,7 @@ object into arglist, (named parameter)
 <a id="double-pipe-op"/>
 **||**
 *[«logical op»](tablet-4-operators.html#logical-selection)* &mdash;
-short circuit *OR*, evaluates sequentially,
+short circuit *[OR](appendix-g-glossary.html#or)*, evaluates sequentially,
 ends [evaluation](appendix-g-glossary.html#evaluation) at
 the first expression that returns **[True](#True)**,
 high precedence version of **[or](#or)**
@@ -834,7 +834,7 @@ high precedence version of **[or](#or)**
 **||**
 *[«regex Metachar»](appendix-b-grouped.html#regex-metacharacter)* &mdash;
 match alternate patterns (temporal consequent alternatives) as
-connected with a logical *OR*
+connected with a logical *[OR](appendix-g-glossary.html#or)*
 
 <a id="double-pipe-context"/>
 **||**()
@@ -858,8 +858,8 @@ forces *[string context](tablet-4-operators.html#string-context)*
 
 <a id="tilde-ampersand-op"/>
 **\~&** *[«string op»](tablet-4-operators.html#string-context)* &mdash;
-characterwise *AND*, forces *[string
-context](tablet-4-operators.html#string-context)*
+characterwise *[AND](appendix-g-glossary.html#and)*,
+forces *[string context](tablet-4-operators.html#string-context)*
 
 <a id="tilde-lower-op"/>
 **\~<** *[«string op»](tablet-4-operators.html#string-context)* &mdash;
@@ -873,7 +873,7 @@ context](tablet-4-operators.html#string-context)*
 
 <a id="tilde-caret-op"/>
 **\~\^** *[«string op»](tablet-4-operators.html#string-context)* &mdash;
-characterwise *XOR*,
+characterwise *[XOR](appendix-g-glossary.html#xor)*,
 forces *[string context](tablet-4-operators.html#string-context)*
 
 <a id="tilde-pipe-op"/>
@@ -930,10 +930,10 @@ pattern will match
 <a id="all"/>
 **all**
 *[«junctive op»](tablet-4-operators.html#junctions)* &mdash;
-*[junctive](appendix-g-glossary.html#junction)* *AND* operator,
+*[junctive](appendix-g-glossary.html#junction)* *[AND](appendix-g-glossary.html#and)* operator,
 **[True](#True)** if all conditions (elements of a
-following list) are fulfilled, see also:
-**[&](#junctive-and)**
+following list) are fulfilled &mdash;
+see also: **[&](#junctive-and)**
 
 <a id="alnum-subrule"/>
 **\<alnum\>**
@@ -948,15 +948,14 @@ a single alphabetic character
 <a id="and"/>
 **and**
 *[«logical op»](tablet-4-operators.html#logical-selection)* &mdash;
-short circuit logical *AND*, returns the last defined value
-(from left to right), low precedence version of
-**[&&](#high-and)**, similar to
-**[andthen](#andthen)**
+short circuit logical *[AND](appendix-g-glossary.html#and)*,
+returns the last defined value (from left to right),
+low precedence version of **[&&](#high-and)**, similar to **[andthen](#andthen)**
 
 <a id="andthen"/>
 **andthen**
 *«logical op»* &mdash;
-logical *AND* short circuit operator,
+logical *[AND](appendix-g-glossary.html#and)* short circuit operator,
 transferring **[$\_](#context-var)** from first to
 second block/expression, if first do succeed, see also:
 **[orelse](#orelse)**
@@ -976,7 +975,7 @@ Perl 6 object (default *[routine](appendix-g-glossary.html#routine)*
 <a id="any"/>
 **any**
 *[«junctive op»](tablet-4-operators.html#junctions)* &mdash; 
-*[junctive](#junction)* *OR* operator,
+*[junctive](#junction)* *[OR](appendix-g-glossary.html#or)* operator,
 **[True](#True)** when any one condition (of a
 following list) is true in bool context, see also:
 **[|](#junctive-or)**
@@ -2927,7 +2926,7 @@ example: `subset Month of Int where { 1 <= $^a <= 12 }`
 <a id="one"/>
 **one**
 *[«junctive op»](tablet-4-operators.html#junctions)* &mdash;
-*[junctive](#junction)* *XOR* operator,
+*[junctive](#junction)* *[XOR](appendix-g-glossary.html#xor)* operator,
 **[True](#True)** if only one expression (of a
 following list) is true in bool context&mdash;
 see also: **[|](#pipe-op)**
@@ -2953,7 +2952,7 @@ options from command line
 <a id="or"/>
 **or**
 *[«logical op»](tablet-4-operators.html#logical-selection)* &mdash;
-short circuit *OR*, [evaluates](#evaluation)
+short circuit *[OR](appendix-g-glossary.html#or)*, [evaluates](#evaluation)
 sequentially, ends evaluation at the first expression that returns
 **[True](#True)**, low precedence version of
 **[||](#high-or)**, similar to
@@ -2970,7 +2969,8 @@ plural of **ord**, takes a **[Str](#Str-type)** and returns a list of
 **[Int](#Int-type)**, reverse of **[chars](#chars)**
 
 <a id="orelse"/>
-**orelse** *«logical op»* &mdash; logical *OR* short circuit operator,
+**orelse** *«logical op»* &mdash;
+logical *[OR](appendix-g-glossary.html#or)* short circuit operator,
 transferring an error code from first to second block/command, if
 first do not succeed, similar to **[//](#high-err)** &mdash;
 see also: **[andthen](#andthen)**
@@ -4551,9 +4551,10 @@ single hexadecimal digit char
 **xor**
 *[«logical op»](tablet-4-operators.html#logical-selection)* &mdash;
 [infix](#infix-category) logical *eXclusive OR*
-operator (*XOR*), **[True](#True)** if only one side
-has positive value, returns otherwise left value, low precedence
-version of **[\^\^](#double-caret-op)**
+operator (*[XOR](appendix-g-glossary.html#xor)*),
+**[True](#True)** if only one side has positive value,
+returns otherwise left value,
+low precedence version of **[\^\^](#double-caret-op)**
 
 <a id="xx-op"/>
 **xx**
