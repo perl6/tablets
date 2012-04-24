@@ -1542,7 +1542,7 @@ returns a list the results &mdash;
 example: `1 .. 3 X* 2,3 ` returns `2 3 4 6 6 9` &mdash;
 alias method to **[X metaoperator](#capital-x-metaop)**,  
 *`@a X~ @b`* equals *`(@a; @b).crosswith(&[~])`* equals
-`(@a; @b).cross.slice.map { .reduce(&[~]) }`
+`(@a; @b).cross.lol.map { .reduce(&[~]) }`
 
 <a id="CWD-global-var"/>
 **$\*CWD**
@@ -4592,6 +4592,6 @@ example: `@a Z @b = (@a; @b).zip`
 <a id="zipwith"/>
 **zipwith**
 *«list method»* &mdash; alias to **[Z metaoperator](#capital-z-metaop)** &mdash;
-example: `@a Z~ @b` aka `(@a; @b).zipwith(&[~])` aka `(@a; @b).zip.slice.map { .reduce(&[~]) }`
+example: `@a Z~ @b` aka `(@a; @b).zipwith(&[~])` aka `(@a; @b).zip.lol.map { .reduce(&[~]) }`
 
 ***
