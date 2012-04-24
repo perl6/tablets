@@ -19,15 +19,15 @@ and <span class="you-provide">t</span> any
    *[term](appendix-g-glossary.html#term)*.
 
 <a id="nav-top"/>
-**Navigation:** [A](#a) [B](#b) [C](#c) [D](#d) [E](#e)
+**Navigation: [A](#a) [B](#b) [C](#c) [D](#d) [E](#e)
 [F](#f) [G](#g) [H](#h) [I](#i) [J](#j) [K](#k) [L](#l)
 [M](#m) [N](#n) [O](#o) [P](#p) [Q](#q) [R](#r) [S](#s)
-[T](#t) [U](#u) [V](#v) [W](#w) [X](#x) [Y](#y) [Z](#z)
+[T](#t) [U](#u) [V](#v) [W](#w) [X](#x) [Y](#y) [Z](#z)**
 
 Before alpha chars (a-z) in ASCII order:
-[`! " #`](#exclamation)  [`$ % &`](#dollar)  [`' ( *`](#single-quotation)
-[`+ , -`](#plus)         [`. / 0`](#dot)     [`: ; <`](#colon)
-[`= > ?`](#equal)        [`@ [ \`](#at)      [`^ _ {`](#caret)   [`| ~`](#pipe)
+**[`! " #`](#exclamation) [`$ % &`](#dollar)  [`' ( *`](#single-quotation)
+[`+ , -`](#plus)          [`. / 0`](#dot)     [`: ; <`](#colon)
+[`= > ?`](#equal)         [`@ [ \`](#at)      [`^ _ {`](#caret)   [`| ~`](#pipe)**
 
 Punctuation
 ===========
