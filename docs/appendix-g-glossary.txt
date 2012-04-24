@@ -75,6 +75,10 @@ routines whose state (content of all local variables) is
 completely preserved until the next execution,
 mostly used as a fancy alias for a *[block](#block)*
 
+<a id="codepoint"/>
+**codepoint** &mdash;
+*[unicode](#unicode)*
+
 <a id="coderef"/>
 **coderef** &mdash;
 reference (pointer) to an executable block of code (routine)
@@ -152,6 +156,10 @@ style, [strongly supported](appendix-d-delta.html#functional-programming)
 by Perl 6, considered as a branch of Declarative Programming
 
 # G
+
+<a id="grapheme"/>
+**grapheme** &mdash;
+*[unicode](#unicode)*
 
 # [H](#nav-top)
 
