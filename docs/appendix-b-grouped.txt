@@ -712,9 +712,9 @@ Regex Metacharacter
 `[...]`  group patterns without capturing
 `{...}`  execute a closure (Perl 6 code) within a rule
 `<...>`  match a subrule (assertion
-`|`      match alternate patterns (logigical OR with LTM)
-`||`     match alternate patterns (sequential OR)
-`&`      match multiple patterns (AND)
+`|`      match alternate patterns (logical [OR](appendix-g-glossary.html#or) with [LTM](appendix-g-glossary.html#LTM))
+`||`     match alternate patterns (sequential [OR](appendix-g-glossary.html#or))
+`&`      match multiple patterns ([AND](appendix-g-glossary.html#and))
 `**`     muliply this (meta)char/subrule times the following digit on right side
 `%`      match this (meta)char/subrule as long as separated by (meta)char/subrule on the right
 `%%`     like %, but allows trailing separator
@@ -931,7 +931,7 @@ Routines
 --------
 
 routine definition: \[[scope](ap-b-lookup.html#scopes)\] \[modifier\]
-type \[name\] \[trait\] (signature) { block }
+type \[name\] \[trait\] ([signature](appendix-g-glossary.html#signature)) { block }
 
 
 ### Routine Types ###
@@ -941,10 +941,10 @@ type \[name\] \[trait\] (signature) { block }
 [method](appendix-a-index.html#method)          inheritable object methods
 [submethod](appendix-a-index.html#submethod)    not inheritable methods
 [regex](appendix-a-index.html#regex)            routine that executes a regular expression
-[rule](appendix-a-index.html#rule)              alias to regex :ratchet :sigspace
-[token](appendix-a-index.html#token)            alias to regex :ratchet
-[macro](appendix-a-index.html#macro)            routine that is compiled to an AST at BEGIN (ASAP, compile time)
-[quasi](appendix-a-index.html#quasi)            block that is compiled to an AST at runtime
+[rule](appendix-a-index.html#rule)              alias to regex [:ratchet](appendix-a-index.html#ratchet-modifier) [:sigspace](appendix-a-index.html#sigspace-modifier)
+[token](appendix-a-index.html#token)            alias to regex [:ratchet](appendix-a-index.html#ratchet-modifier)
+[macro](appendix-a-index.html#macro)            routine that is compiled to an [AST](appendix-g-glossary.html#AST) at BEGIN ([ASAP](appendix-g-glossary.html#ASAP), compile time)
+[quasi](appendix-a-index.html#quasi)            block that is compiled to an [AST](appendix-g-glossary.html#AST) at runtime
 ----------------------------------------------  ----------------------------------------------------------------
 
 
