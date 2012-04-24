@@ -10,10 +10,16 @@ They are available online at <http://tablets.perl6.org>.
 How to Help
 ===========
 
-One way to contribute is to pore over Appendix B taking note of the
-various links to the main Index (Appendix A). When you see a PerlÂ 6
-term in Appendix B without a link, find its corresponding anchor in
-the Index, then (in Appendix B) create a link to it.
+* Just start reading and report issues if your not sure.
+
+* Please pore over Appendix B taking note of the various links to the
+  main Index (Appendix A). When you see a Perl 6 term without a link,
+  find its corresponding anchor in the Index, then (in Appendix B) create a link to it.
+
+* Several it terms in the glossary (Appendix G) are still unexplained.
+
+* The Tablet 1: History needs a lot of help, especially information from people
+  who were involved in the subprojects.
 
 
 Rules for Anchor Names
