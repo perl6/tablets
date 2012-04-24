@@ -2065,9 +2065,9 @@ searching for any finding (not just the first), short for
 <a id="pipe-g"/>
 **|g**
 *[«escape sequence»](appendix-b-grouped.html#escape-sequences)* &mdash;
-grapheme boundary, zero width space between two unicode
-graphemes, see also: **[|c](#pipe-c)** and
-**[|w](#pipe-w)**
+grapheme boundary, zero width space between two 
+*[unicode](appendix-g-glossary.html#unicode)* graphemes &mdash;
+see also: **[|c](#pipe-c)** and **[|w](#pipe-w)**
 
 <a id="gcd"/>
 **gcd**
@@ -2299,15 +2299,14 @@ written at the end of an expression
 **:ignorecase**
 *[«regex modifier»](appendix-b-grouped.html#regex-modifier)* &mdash;
 uppercase and lowercase variants of a letter are taken as the
-same letter, long for **[:i](#i-modifier)**
-(as in Perl 5)
+same letter, long for **[:i](#i-modifier)** (as in Perl 5)
 
 <a id="ignoremark-modifier"/>
 **:ignoremark**
 *[«regex modifier»](appendix-b-grouped.html#regex-modifier)* &mdash;
-comparing base characters (Unicode non-mark characters) while
-ignoring any trailing mark characters, long for
-**[:m](#m-modifier)**
+comparing base characters (*[unicode](appendix-g-glossary.html#unicode)*
+non-mark characters) while ignoring any trailing mark characters,
+long for **[:m](#m-modifier)**
 
 <a id="ii-modifier"/>
 **:ii**
@@ -2551,11 +2550,11 @@ forces lazy evaluation (calculate values as late as possible),
 default for lists - not scalars
 
 <a id="lc"/>
-**lc** *(string op & method)* &mdash;
+**lc** *«string op & method»* &mdash;
 make string lowercase
 
 <a id="lcfirst"/>
-**lcfirst** *(string op & method)* &mdash;
+**lcfirst** *«string op & method»* &mdash;
 make first character of a string lowercase
 
 <a id="lcm"/><a id="lcm-op"/>
@@ -2606,7 +2605,7 @@ current line number
 
 <a id="lines"/>
 **[lines](basic-syntax.html)**
-*(string & iomethod)* &mdash;
+*«string & iomethod»* &mdash;
 returns a chomped list of lines
 (chunks of character separated by **[\\n](#backslash-n)**)
 containing a string - example: `$str.lines($limit)` equals
@@ -2614,7 +2613,7 @@ containing a string - example: `$str.lines($limit)` equals
 works also on file handles
 
 <a id="list"/>
-**list*()
+**list**()
 *[«context op»](appendix-b-grouped.html#contextualizers)* &mdash;
 almost a no-op, just makes sure that $item (first parameter) can
 be iterated, alias to **[@()](#at-op)**, see also
@@ -2674,9 +2673,9 @@ similar to **[match](#match)**-method
 
 <a id="m-modifier"/>
 **:m** *[«regex modifier»](appendix-b-grouped.html#regex-modifier)* &mdash;
-comparing base characters (Unicode non-mark characters) while
-ignoring any trailing mark characters, short for
-**[:ignoremark](#ignoremark-modifier)**
+comparing base characters (*[unicode](appendix-g-glossary.html#unicode)*
+non-mark characters) while ignoring any trailing mark characters,
+short for **[:ignoremark](#ignoremark-modifier)**
 
 <a id="Macro-type"/>
 **Macro**
@@ -2724,7 +2723,7 @@ match object that end up also in **[$/](#match-var)**
 returns the numerically largest value from a given list
 
 <a id="maybe"/>
-**maybe** *(block modifier)* &mdash;
+**maybe** *«block modifier»* &mdash;
 
 <a id="Method-type"/>
 **Method**
@@ -2871,7 +2870,7 @@ operator
 
 <a id="normalize"/>
 **normalize** *«string method»* &mdash;
-normalize (repair) Unicode (UTF) string
+normalize (repair) *[unicode](appendix-g-glossary.html#unicode)* (UTF) string
 
 <a id="not"/>
 **not**
@@ -2954,8 +2953,8 @@ sequentially, ends evaluation at the first expression that returns
 
 <a id="ord"/>
 **ord** *«string method»* &mdash;
-converts a character into number according a character table (Unicode),
-reverse of **[char](#char)**
+converts a character into number according a character table
+(*[unicode](appendix-g-glossary.html#unicode)*), reverse of **[char](#char)**
 
 <a id="ords"/>
 **ords** *«string method»* &mdash;
@@ -3331,7 +3330,7 @@ current [grammar](#grammar) of the quasiquoting language
 
 <a id="quasi"/>
 **quasi**
-*(block modifier)* &mdash;
+*«block modifier»* &mdash;
 quasi quoting, the following commented will be compiles and
 the *[AST](appendix-g-glossary.html#ast)* will be returned as result,
 see also: **[:code](#code-adverb)**
@@ -3873,7 +3872,8 @@ makes an array of substrings from a string and a separator
 
 <a id="sprintf"/>
 **[sprintf](tablet-2-basic-syntax.html#sprintf)**
-*(formater)* &mdash; inserts formated values out of variables into a
+*«formater»* &mdash;
+inserts formated values out of variables into a
 string like **[printf](#printf)**, but returns the
 string instead of outputting it
 
@@ -3990,7 +3990,7 @@ example: `subset Month of Int where { 1 <= $\^a <= 12 }`
 
 <a id="subst"/>
 **[subst](tablet-9-regexes.html#substitution)**
-*(string method)* &mdash; 
+*«string method»* &mdash; 
 method alias to
 *[s/.../.../](#s-op) , $str.subst( /pattern/,
 "replacement" )*, equals $str \~\~ s/pattern/replacement/;
@@ -4325,7 +4325,8 @@ anything but a word character
 <a id="backslash-w"/>
 **\\w**
 *[«escape sequence»](appendix-b-grouped.html#escape-sequences)* &mdash;
-word character (Unicode alphanumeric plus "\_")
+word character
+(*[unicode](appendix-g-glossary.html#unicode)* alphanumeric plus "\_")
 
 <a id="pipe-w"/>
 **|w**
@@ -4521,7 +4522,7 @@ alias to **[Q](#capital-q-op)**
 <a id="x-modifier"/>
 **:x**(<span class="you-provide">n</span>)
 *[«regex modifier»](appendix-b-grouped.html#regex-modifier)* &mdash;
-searching n times (n is an int) with this pattern
+searching n times with this pattern
 
 <a id="backslash-X"/>
 **\\X\[<span class="you-provide">n</span>\]**
