@@ -95,8 +95,8 @@ is always before *[runtime](#runtime)*
 even if code can be compiled via **[eval](appendix-a-index.html#eval)** and
 **[evalfile](appendix-a-index.html#evalfile)** when the program is
 already runnung, to run code at the begin of compile time use
-**[BEGIN](appendix-a-index.html#begin-phaser)** and
-**[CHECK](appendix-a-index.html#check-phaser)** to run at the end of
+**[BEGIN](appendix-a-index.html#BEGIN-phaser)** and
+**[CHECK](appendix-a-index.html#CHECK-phaser)** to run at the end of
 compile time for that unit (mostly the file or the to be **eval**ed string)
 
 <a id="context"/>
@@ -338,7 +338,7 @@ sublanguages of Perl 6, quoting or *[regular expression](#regular expression)*
 are completely independent languages, the grammar to parse them is mostly stored
 in [special variables](appendix-b-grouped.html#slang-variables)
 with the [twigil](#twigil) **\~**, 
-**[\$\~MAIN](appendix-a-index.html#main-lang-var)** (main language),
+**[\$\~MAIN](appendix-a-index.html#MAIN-lang-var)** (main language),
 you can change or alter them by using the keyword 
 **[augment](appendix-a-index.html#augment)**
 or **[supersede](appendix-a-index.html#supersede)**

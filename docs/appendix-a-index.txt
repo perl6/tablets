@@ -288,7 +288,7 @@ bitwise *[AND](appendix-g-glossary.html#and)*, forces numeric context
 generic autoincrement, calls internal iterator of that object,
 before (prefix) or after (suffix) the
 [evaluation](appendix-g-glossary.html#evaluation) of the surrounding term,
-alias to **[succ](#succ)**
+alias to **[succ](#succ)**, opposite of **[--](#<a id="auto-decrement"/>)**
 
 <a id="plus-lower-op"/>
 **+<**
@@ -327,7 +327,7 @@ forces numeric context (and negates)
 generic autodecrement, calls internal iterator of that object,
 before (prefix) or after (suffix) the
 [evaluation](appendix-g-glossary.html#evaluation) of the surrounding term,
-alias to **[pred](#pred)**
+alias to **[pred](#pred)**, opposite of **[++](#<a id="auto-increment"/>)**
 
 <a id="double-minus-greater-signature"/>
 **--\>**
@@ -769,7 +769,7 @@ alphabetical order of all $\^-Variables
 <a id="caret-signature"/>
 **\^**
 *[«signature symbol»](appendix-b-grouped.html#signature-symbols)* &mdash;
-prefix of metaclass methods, `$obj.\^methods();` is shortcut for
+prefix of metaclass methods, `$obj.^methods();` is shortcut for
 [`$obj.HOW.methods($obj);`](#HOW-introspection)
 
 <a id="caret-metachar"/>
@@ -1072,17 +1072,6 @@ included in **["..."](#double-quotation)**,
 **[qq/.../](#qq-op)** and
 **[<<...\>\>](#double-angle-brackets)**
 
-<a id="backslash-B"/>
-**\\B**
-*[«escape sequence»](appendix-b-grouped.html#escape-sequences)* &mdash;
-Match when not on a word boundary
-
-<a id="backslash-b"/>
-**\\b**
-*[«escape sequence»](appendix-b-grouped.html#escape-sequences)* &mdash;
-zero-width word boundary aka
-**[<wb\>](#wb-subrule)**
-
 <a id="backslash-adverb"/>
 **[:backslash](tablet-2-basic-syntax.html#interpolation)**
 *[«quoting adverb»](appendix-b-grouped.html#quoting-adverbs)* &mdash;
@@ -1236,11 +1225,12 @@ any character except the bracketed named or control character
 named character or control character
 
 <a id="pipe-c"/>
-**|c**
+**\<|c\>**
 *[«escape sequence»](appendix-b-grouped.html#escape-sequences)* &mdash;
 codepoint boundary, zero width space between two
-*[unicode](appendix-g-glossary.html#unicode)* codepoints &mdash;
-see also: **[|g](#pipe-g)** and **[|w](#pipe-w)**
+*[unicode](appendix-g-glossary.html#unicode)* codepoints,
+opposite is **\<!|g\>** &mdash;
+see also: **[\<|g\>](#pipe-g)** and **[\<|w\>](#pipe-w)**
 
 <a id="cached"/><a id="cached-routine-trait"/>
 **cached**
@@ -2066,11 +2056,12 @@ searching for any finding (not just the first), short for
 **[:global](#global-modifier)**
 
 <a id="pipe-g"/>
-**|g**
+**\<|g\>**
 *[«escape sequence»](appendix-b-grouped.html#escape-sequences)* &mdash;
 grapheme boundary, zero width space between two 
-*[unicode](appendix-g-glossary.html#unicode)* graphemes &mdash;
-see also: **[|c](#pipe-c)** and **[|w](#pipe-w)**
+*[unicode](appendix-g-glossary.html#unicode)* graphemes,
+opposite is **\<!|g\>**&mdash;
+see also: **[\<|c\>](#pipe-c)** and **[\<|w\>](#pipe-w)**
 
 <a id="gcd"/>
 **gcd**
@@ -4343,11 +4334,11 @@ word character
 (*[unicode](appendix-g-glossary.html#unicode)* alphanumeric plus "\_")
 
 <a id="pipe-w"/>
-**|w**
+**\<|w\>**
 *[«escape sequence»](appendix-b-grouped.html#escape-sequences)* &mdash;
 word boundary, zero width space between two **\\w**, alias to
-**[<wb\>](#wb-subrule)**, see also:
-**[|c](#pipe-c)** and **[|g](#pipe-g)**
+**[<wb\>](#wb-subrule)**, opposite is **\<!|w\>**  &mdash;
+see also: **[\<|c\>](#pipe-c)** and **[\<|g\>](#pipe-g)**
 
 <a id="wait"/>
 **[wait](tablet-5-io.html#processes)** &mdash;
@@ -4364,10 +4355,9 @@ without appending a **[\\n](#backslash-n)**
 **\<wb\>**
 *[«predefined subrule»](appendix-b-grouped.html#subrules)* &mdash;
 zero-width word boundary between an 
-**[\\w](#backslash-w)** and a
-**[\\W](#backslash-capital-w)** character aka
-**[\\b](#backslash-b)**, alias to **|w**, see also
-**[\<ww\>](#ww-subrule)**
+**[\\w](#backslash-w)** and a **[\\W](#backslash-capital-w)** character,
+alias to **[\<|w\>](#pipe-w)** &mdash;
+see also **[\<ww\>](#ww-subrule)**
 
 <a id="WHAT-introspection"/>
 **WHAT**
@@ -4377,7 +4367,7 @@ short name of the class that an object belongs to
 <a id="Whatever"/><a id="Whatever-type"/>
 **Whatever**
 *[«undefined value type»](appendix-b-grouped.html#undefined-types)* &mdash;
-Wildcard (like **[Any](Any-type)**, but subject to do-what-I-mean via
+Wildcard (like **[Any](#Any-type)**, but subject to do-what-I-mean via
 *[multi method dispatch](appendix-g-glossary.html#MMD)*),
 alias to **[\*](#asterisk)**
 

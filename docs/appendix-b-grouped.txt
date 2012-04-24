@@ -767,8 +767,6 @@ and methods like comb('...')).
 
 ------------  --------------------------------------------------------------------
 `\0[ ... ]`   character given in octal (brackets optional)
-`\b`          word boundary
-`\B`          Match when not on a word boundary
 `\c[ ... ]`   named character or control character
 `\C[ ... ]`   any character except the bracketed named or control character
 `\d`          digit
@@ -798,12 +796,12 @@ and methods like comb('...')).
 `\X[ ... ]`   anything but the character given in hexadecimal (brackets optional)
 ------------  --------------------------------------------------------------------
 
-zero-width boundaries begin with a pipe symbol
+zero-width boundaries begin with a pipe symbol. To negate put a ! in front.
 
 ------  -------------------------------------------------------------------
-`|c`    codepoint boundary (always matches in grapheme/codepoint mode)
-`|g`    grapheme boundary (always matches in grapheme mode)
-`|w`    word boundary aka <wb>
+`<|c>`  codepoint boundary (always matches in grapheme/codepoint mode)
+`<|g>`  grapheme boundary (always matches in grapheme mode)
+`<|w>`  word boundary aka \<wb\>
 ------  -------------------------------------------------------------------
 
 
