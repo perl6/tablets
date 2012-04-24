@@ -4127,7 +4127,9 @@ example : **[of](#of)**
 <a id="trans"/>
 **[trans](regexes.html#transliteration)**
 *«string method»* &mdash;
-method name for **[tr/.../.../](#tr-op)** operator,
+transliteration, replacing several specific character of a string with other chars,
+much more effective than with several **[s/.../.../](#s-op)**
+method alias for **[tr/.../.../](#tr-op)** operator,
 `$str.trans( %mapping )` equals
 `$str ~~ tr/%mapping.sort.keys/%mapping.sort.values/;`
 
@@ -4375,8 +4377,9 @@ short name of the class that an object belongs to
 <a id="Whatever"/><a id="Whatever-type"/>
 **Whatever**
 *[«undefined value type»](appendix-b-grouped.html#undefined-types)* &mdash;
-Wildcard (like Any, but subject to do-what-I-mean via multi
-method dispatch), alias to **[\*](#asterisk)**
+Wildcard (like **[Any](Any-type)**, but subject to do-what-I-mean via
+*[multi method dispatch](appendix-g-glossary.html#MMD)*),
+alias to **[\*](#asterisk)**
 
 <a id="WHEN-introspection"/>
 **WHEN**
@@ -4443,9 +4446,8 @@ by providing a block after the subroutine's signature definition
 <a id="words"/>
 **words**
 *«string method»* &mdash;
-splits a sting into a list of words &mdash;
-example: `$input.words($limit)` equals [`$input.comb( / \\S+ /,
-$limit )`](#comb)
+splits a [string](#Str-type) into a list of words &mdash;
+example: `$input.words($limit)` equals [`$input.comb( / \S+ /, $limit )`](#comb)
 
 <a id="words-adverb"/>
 **[:words](tablet-2-basic-syntax.html#quote-words)**
