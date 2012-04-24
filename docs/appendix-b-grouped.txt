@@ -762,8 +762,7 @@ and thatswhy also included in the next list.
 Escape Sequences
 ----------------
 
-To be used just inside of regexes (m/.../, s/.../.../ and tr/.../.../
-and methods like comb('...')).
+To be used just inside of regexes (rx/.../, m/.../, s/.../.../ and tr/.../.../).
 
 ------------  --------------------------------------------------------------------
 `\0[ ... ]`   character given in octal (brackets optional)
@@ -796,7 +795,8 @@ and methods like comb('...')).
 `\X[ ... ]`   anything but the character given in hexadecimal (brackets optional)
 ------------  --------------------------------------------------------------------
 
-zero-width boundaries begin with a pipe symbol. To negate put a ! in front.
+zero-width boundaries begin with a pipe symbol.
+To negate put a ! in front of the pipe symbol.
 
 ------  -------------------------------------------------------------------
 `<|c>`  codepoint boundary (always matches in grapheme/codepoint mode)

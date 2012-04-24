@@ -429,7 +429,7 @@ example: *`$pair = :key('value')`*
 
 <a id="colon-test"/>
 **:**
-*[«io test method»](appendix-b-grouped.html#Test-Methods)* &mdash;
+*[«io test method»](appendix-b-grouped.html#test-methods)* &mdash;
 start of all test methods
 (r w x o R W X O e z s f d l p S b c t u g k T B M A C)
 in the adverbial form &mdash;
@@ -1059,7 +1059,7 @@ replaces them, see also: **[supersede](#supersede)**
 
 <a id="b-test"/>
 **:b**
-*[«io test method»](appendix-b-grouped.html#Test-Methods)* &mdash;
+*[«io test method»](appendix-b-grouped.html#test-methods)* &mdash;
 file is a block special file (e.g. Harddisks, CDROMs and RAM areas)
 
 <a id="b-adverb"/>
@@ -1196,7 +1196,7 @@ see also:
 
 <a id="c-test"/>
 **:c**
-*[«io test method»](appendix-b-grouped.html#Test-Methods)* &mdash;
+*[«io test method»](appendix-b-grouped.html#test-methods)* &mdash;
 file is a character special file (e.g. terminals modems)
 
 <a id="c-adverb"/>
@@ -1544,7 +1544,7 @@ current working directory as **[Str](#Str-type)**
 
 <a id="d-test"/>
 **:d**
-*[«io test method»](appendix-b-grouped.html#Test-Methods)* &mdash;
+*[«io test method»](appendix-b-grouped.html#test-methods)* &mdash;
 check if file is a directory
 
 <a id="backslash-D"/>
@@ -1672,7 +1672,7 @@ dynamic *[scope](appendix-g-glossary.html#scope)*
 
 <a id="e-test"/>
 **:e**
-*[«io test method»](appendix-b-grouped.html#Test-Methods)* &mdash;
+*[«io test method»](appendix-b-grouped.html#test-methods)* &mdash;
 tests if file exists
 
 <a id="backslash-E"/>
@@ -1888,7 +1888,7 @@ the current **[module](#module)** by default
 
 <a id="f-test"/>
 **:f**
-*[«io test method»](appendix-b-grouped.html#Test-Methods)* &mdash;
+*[«io test method»](appendix-b-grouped.html#test-methods)* &mdash;
 file is a plain file (no socket or dir, ...etc.)
 
 <a id="f-adverb"/>
@@ -2046,7 +2046,7 @@ replacing them with the result, long form of
 
 <a id="g-test"/>
 **:g**
-*[«io test method»](appendix-b-grouped.html#Test-Methods)* &mdash;
+*[«io test method»](appendix-b-grouped.html#test-methods)* &mdash;
 report if file has setgid bit set
 
 <a id="g-modifier"/>
@@ -2433,7 +2433,7 @@ example: `join("-", 1..5) # returns '1-2-3-4-5'` alternative syntax: `(1..5).joi
 
 <a id="k-test"/>
 **:k**
-*[«io test method»](appendix-b-grouped.html#Test-Methods)* &mdash;
+*[«io test method»](appendix-b-grouped.html#test-methods)* &mdash;
 report if file has sticky bit set
 
 <a id="KEEP-phaser"/>
@@ -2502,7 +2502,7 @@ returns list of key-value pairs
 
 <a id="l-test"/>
 **:l**
-*[«io test method»](appendix-b-grouped.html#Test-Methods)* &mdash;
+*[«io test method»](appendix-b-grouped.html#test-methods)* &mdash;
 file is a symbolic link
 
 <a id="backslash-L"/>
@@ -2904,12 +2904,12 @@ and **[FatRat](#FatRat-type)**)
 
 <a id="O-test"/>
 **:O**
-*[«io test method»](appendix-b-grouped.html#Test-Methods)* &mdash;
+*[«io test method»](appendix-b-grouped.html#test-methods)* &mdash;
 tests if file is owned by real uid
 
 <a id="o-test"/>
 **:o**
-*[«io test method»](appendix-b-grouped.html#Test-Methods)* &mdash;
+*[«io test method»](appendix-b-grouped.html#test-methods)* &mdash;
 tests if file is owned by effective uid
 
 <a id="of"/>
@@ -2999,7 +2999,7 @@ long for **[:ov](#ov-modifier)**
 # [P](#nav-top)
 
 <a id="p-test"/>
-**:p** *[«io test method»](appendix-b-grouped.html#Test-Methods)* &mdash;
+**:p** *[«io test method»](appendix-b-grouped.html#test-methods)* &mdash;
 file is a named *[pipe](#pipe)* (FIFO),
 or filehandle is a pipe
 
@@ -3384,12 +3384,12 @@ alias to **Q [:x](#x-adverb) /.../** or **Q [:exec](#exec-adverb) /.../**
 
 <a id="R-test"/>
 **:R**
-*[«io test method»](appendix-b-grouped.html#Test-Methods)* &mdash;
+*[«io test method»](appendix-b-grouped.html#test-methods)* &mdash;
 check if file is readable by real uid/gid
 
 <a id="r-test"/>
 **:r**
-*[«io test method»](appendix-b-grouped.html#Test-Methods)* &mdash;
+*[«io test method»](appendix-b-grouped.html#test-methods)* &mdash;
 check if file is readable by effective uid/gid
 
 <a id="backslash-R"/>
@@ -3660,12 +3660,12 @@ suppresses any explicit or implicit parallelism
 
 <a id="S-test"/>
 **:S**
-*[«test method»](appendix-b-grouped.html#Test-Methods)* &mdash;
+*[«test method»](appendix-b-grouped.html#test-methods)* &mdash;
 file is a socket
 
 <a id="s-test"/>
 **:s**
-*[«test method»](appendix-b-grouped.html#Test-Methods)* &mdash;
+*[«test method»](appendix-b-grouped.html#test-methods)* &mdash;
 file has size greater than 0 (zero)
 
 <a id="s-adverb"/>
@@ -3919,7 +3919,7 @@ a symbol table hash (package, module, class, lexpad, etc)
 
 <a id="stat"/>
 **stat**
-*[«test method»](appendix-b-grouped.html#Test-Methods)* &mdash;
+*[«test method»](appendix-b-grouped.html#test-methods)* &mdash;
 available information about a file or link
 (call `stat :link` as former lstat)
 
@@ -4030,7 +4030,7 @@ attributes of a **[class](#class)** or
 
 <a id="t-test"/>
 **:t**
-*[«io test method»](appendix-b-grouped.html#Test-Methods)* &mdash;
+*[«io test method»](appendix-b-grouped.html#test-methods)* &mdash;
 filehandle is opened to a tty (terminal)
 
 <a id="backslash-t"/>
@@ -4306,12 +4306,12 @@ see also: **[\$\?DISTRO](#distro-compiler-var)** and
 
 <a id="W-test"/>
 **:W**
-*[«test method»](appendix-b-grouped.html#Test-Methods)* &mdash;
+*[«test method»](appendix-b-grouped.html#test-methods)* &mdash;
 check if file is writeable by real uid/gid
 
 <a id="w-test"/>
 **:w**
-*[«io test method»](appendix-b-grouped.html#Test-Methods)* &mdash;
+*[«io test method»](appendix-b-grouped.html#test-methods)* &mdash;
 check if file is writeable by effective uid/gid
 
 <a id="w-adverb"/>
@@ -4337,7 +4337,7 @@ word character
 **\<|w\>**
 *[«escape sequence»](appendix-b-grouped.html#escape-sequences)* &mdash;
 word boundary, zero width space between two **\\w**, alias to
-**[<wb\>](#wb-subrule)**, opposite is **\<!|w\>**  &mdash;
+**[\<wb\>](#wb-subrule)**, opposite is **\<!|w\>**  &mdash;
 see also: **[\<|c\>](#pipe-c)** and **[\<|g\>](#pipe-g)**
 
 <a id="wait"/>
@@ -4505,12 +4505,12 @@ example: `<a b> X~ <y z> == <ay az by bz>;`
 
 <a id="X-test"/>
 **:X**
-*[«io test method»](appendix-b-grouped.html#Test-Methods)* &mdash;
+*[«io test method»](appendix-b-grouped.html#test-methods)* &mdash;
 check if file is executable by real uid/gid
 
 <a id="x-test"/>
 **:x**
-*[«io test method»](appendix-b-grouped.html#Test-Methods)* &mdash;
+*[«io test method»](appendix-b-grouped.html#test-methods)* &mdash;
 check if file is executable by effective uid/gid
 
 <a id="x-adverb"/>
