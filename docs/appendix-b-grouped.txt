@@ -54,12 +54,12 @@ Special Variables
 
 ### Match Variables ###
 
------------------------------------------------------  -----------------------------------------------------------------------
+-----------------------------------------------------  -----------------------------------------------------------------------------
 [`$/`](appendix-a-index.html#slash-var)                last created match object of this block
 [`$<...>`](appendix-a-index.html#angle-brackets-var)   alias to named capture, see Twigils above
-[`$0 .. $9`](appendix-a-index.html#0-var)              alias to positional capture (most like in P5 - `$1 .. $9`)
+[`$0 ...`](appendix-a-index.html#0-var)                alias to positional capture, like in P5 - `$1 .. $9` but doesn't stop at `$9`
 [`@()`](appendix-a-index.html#round-brackets-var)      array that holds $0 .. $9 and rest and positional submatches
------------------------------------------------------  -----------------------------------------------------------------------
+-----------------------------------------------------  -----------------------------------------------------------------------------
 
 ### Global Variables ###
 
@@ -67,26 +67,26 @@ context variable, default global (run time), any of them are now
 objects with several methods
 
 ------------------------------------------------------------------------  -------------------------------------------------------------------
-[`@*ARGS`](appendix-a-index.html#args-global-var)                         Arguments (Parameter) to a program (script), formerly @ARGV
-[`$*ARGFILES`](appendix-a-index.html#argfiles-global-var)                 magic command-line input handle
-[`$*IN`](appendix-a-index.html#in-global-var)                             standard input handle (command line mostly)
-[`$*OUT`](appendix-a-index.html#out-global-var)                           standard output (command line mostly)
-[`$*ERR`](appendix-a-index.html#err-global-var)                           standard error output (command line mostly)
-[`$*CWD`](appendix-a-index.html#cwd-global-var)                           current working directory (Str)
-[`@*INC`](appendix-a-index.html#inc-global-var)                           include pathes (but not for std library modules), formerly @INC
-[`$*LANG`](appendix-a-index.html#lang-global-var)                         LANG variable from `%*ENV` that defines what human language is used
-[`%*ENV`](appendix-a-index.html#env-global-var)                           system environment variables, formerly %ENV
-[`%*OPTS`](appendix-a-index.html#opts-global-var)                         options from command line
-[`$*TZ`](appendix-a-index.html#tz-global-var)                             local time zone
-[`$*EXECUTABLE_NAME`](appendix-a-index.html#executable-name-global-var)   former $0
-[`$*PERL`](appendix-a-index.html#perl-global-var)                         perl version running under, was formerly `$^V` or `$]`
-[`$*KERNEL`](appendix-a-index.html#kernel-global-var)                     operating system running under
-[`$*DISTRO`](appendix-a-index.html#distro-global-var)                     OS distribution am I running under
-[`$*PID`](appendix-a-index.html#pid-global-var)                           ID of the running process,
-[`$*GID`](appendix-a-index.html#gid-global-var)                           real global ID of the running process owner, formerly @(
-[`$*UID`](appendix-a-index.html#uid-global-var)                           real user ID of the running process owner (user), formerly @\<
-[`$*EGID`](appendix-a-index.html#egid-global-var)                         effective global ID, formerly @)
-[`$*EUID`](appendix-a-index.html#euid-global-var)                         effective user ID, formerly @\>
+[`@*ARGS`](appendix-a-index.html#ARGS-global-var)                         Arguments (Parameter) to a program (script), formerly @ARGV
+[`$*ARGFILES`](appendix-a-index.html#ARGFILES-global-var)                 magic command-line input handle
+[`$*IN`](appendix-a-index.html#IN-global-var)                             standard input handle (command line mostly)
+[`$*OUT`](appendix-a-index.html#OUT-global-var)                           standard output (command line mostly)
+[`$*ERR`](appendix-a-index.html#ERR-global-var)                           standard error output (command line mostly)
+[`$*CWD`](appendix-a-index.html#CWD-global-var)                           current working directory (Str)
+[`@*INC`](appendix-a-index.html#INC-global-var)                           include pathes (but not for std library modules), formerly @INC
+[`$*LANG`](appendix-a-index.html#LANG-global-var)                         LANG variable from `%*ENV` that defines what human language is used
+[`%*ENV`](appendix-a-index.html#ENV-global-var)                           system environment variables, formerly %ENV
+[`%*OPTS`](appendix-a-index.html#OPTS-global-var)                         options from command line
+[`$*TZ`](appendix-a-index.html#TZ-global-var)                             local time zone
+[`$*EXECUTABLE_NAME`](appendix-a-index.html#EXECUTABLE-NAME-global-var)   former $0
+[`$*PERL`](appendix-a-index.html#PERL-global-var)                         perl version running under, was formerly `$^V` or `$]`
+[`$*KERNEL`](appendix-a-index.html#KERNEL-global-var)                     operating system running under
+[`$*DISTRO`](appendix-a-index.html#DISTRO-global-var)                     OS distribution am I running under
+[`$*PID`](appendix-a-index.html#PID-global-var)                           ID of the running process,
+[`$*GID`](appendix-a-index.html#GID-global-var)                           real global ID of the running process owner, formerly @(
+[`$*UID`](appendix-a-index.html#UID-global-var)                           real user ID of the running process owner (user), formerly @\<
+[`$*EGID`](appendix-a-index.html#EGID-global-var)                         effective global ID, formerly @)
+[`$*EUID`](appendix-a-index.html#EUID-global-var)                         effective user ID, formerly @\>
 $*ON_DIE                                                                  exception handler, run befor die, formerly `$SIG{__DIE__}`
 $*ON_WARN                                                                 exception handler, run befor warn, formerly `$SIG{__WARN__}`
 $*COMPILING                                                               &nbsp;
@@ -107,14 +107,14 @@ compiler constants (fixed at compile time)
 [`$?ENC`](appendix-a-index.html#ENC-compiler-var)                 current [encoding](appendix-g-glossary.html#encoding)
 [`$?NF`](appendix-a-index.html#NF-compiler-var)                    
 [`%?LANG`](appendix-a-index.html#LANG-compiler-var)               Hash of Grammar # What is the current set of interwoven languages?
-[`$?GRAMMAR`](appendix-a-index.html#grammar-compiler-var)         current grammar
-[`$?FILE`](appendix-a-index.html#file-compiler-var)               current filename of source file
-[`$?MODULE`](appendix-a-index.html#module-compiler-var)           current module
-[`$?PACKAGE`](appendix-a-index.html#package-compiler-var)         current package
-[`$?CLASS`](appendix-a-index.html#class-compiler-var)             current class
-[`::?CLASS`](appendix-a-index.html#class-package-compiler-var)    current class (as package name)
-[`$?ROLE`](appendix-a-index.html#role-compiler-var)               current role (as variable)
-[`::?ROLE`](appendix-a-index.html#role-package-compiler-var)      current role (as package or type name)
+[`$?GRAMMAR`](appendix-a-index.html#GRAMMAR-compiler-var)         current grammar
+[`$?FILE`](appendix-a-index.html#FILE-compiler-var)               current filename of source file
+[`$?MODULE`](appendix-a-index.html#mODULE-compiler-var)           current module
+[`$?PACKAGE`](appendix-a-index.html#PACKAGE-compiler-var)         current package
+[`$?CLASS`](appendix-a-index.html#CLASS-compiler-var)             current class
+[`::?CLASS`](appendix-a-index.html#CLASS-package-compiler-var)    current class (as package name)
+[`$?ROLE`](appendix-a-index.html#ROLE-compiler-var)               current role (as variable)
+[`::?ROLE`](appendix-a-index.html#ROLE-package-compiler-var)      current role (as package or type name)
 [`&?ROUTINE`](appendix-a-index.html#ROUTINE-compiler-var)         current sub or method
 [`&?BLOCK`](appendix-a-index.html#BLOCK-compiler-var)             reference to current block
 [`$?LINE`](appendix-a-index.html#LINE-compiler-var)               current line number
