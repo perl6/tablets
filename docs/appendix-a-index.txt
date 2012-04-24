@@ -2457,7 +2457,7 @@ forces subrules to memorize everything (even comments)
 **\$\*KERNEL**
 *[«special var»](appendix-b-grouped.html#global-variables)* &mdash;
 (core or type of the) running operating system, use
-*$\*KERNEL.name* instead of Perl 5s *$OSNAME*, see also:
+*`$*KERNEL.name`* instead of Perl 5s *$OSNAME* &mdash; see also:
 **[\$\*DISTRO](#DISTRO-global-var)** and
 **[\$\*VM](#VM-global-var)**
 
@@ -2465,7 +2465,7 @@ forces subrules to memorize everything (even comments)
 **\$?KERNEL**
 *[«special var»](appendix-b-grouped.html#global-variables)* &mdash; 
 kernel (core operating system) the program was compiled for,
-might want to use use `$?KERNEL.name`, see also:
+might want to use use `$?KERNEL.name` &mdash; see also:
 **[\$?DISTRO](#distro-compiler-var)** and
 **[\$?VM](#vm-compiler-var)**
 
@@ -2482,12 +2482,11 @@ KeyHash of UInt (does **[Bag](#Bag-type)** in list/array context)
 
 <a id="KeySet-type"/>
 **KeySet** *[«mutable type»](appendix-b-grouped.html#mutable-types)* &mdash;
-KeyHash of **[Bool](#Bool-type)** (does Set in
-list/array context)
+KeyHash of **[Bool](#Bool-type)** (does *[Set](#Set-type)* in list context)
 
 <a id="keys-array"/>
 **keys** *[«array op & method»](tablet-3-variables#array-methods)* &mdash;
-returns the list array indexes
+returns the list of array indexes
 
 <a id="keys"/><a id="keys-hash"/>
 **keys** *[«hash method»](tablet-3-variables#hash-methods)* &mdash;
