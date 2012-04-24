@@ -1739,6 +1739,11 @@ in **[false](#False)**, see also
 *[«conditional»](appendix-b-grouped.html#conditionals)* &mdash;
 alternative **[if](#if)** clause
 
+<a id="ENC-compiler-var"/>
+**\$\?ENC**
+*[«special var»](appendix-b-grouped.html#compiler-hint-variables)* &mdash;
+current *[encoding](appendix-g-glossary.html#encoding)*
+
 <a id="encode"/>
 **[encode](tablet-5-io.html#read)**
 *«Buf method»* &mdash;
@@ -1967,6 +1972,10 @@ right side will be tested during next loop
 **$?FILE**
 *[«special var»](appendix-b-grouped.html#compiler-hint-variables)* &mdash;
 current filename of source file
+
+<a id="file"/>
+**file**
+*[«callframe method»](appendix-b-grouped.html#callframe-methods)* &mdash;
 
 <a id="FIRST-phaser"/>
 **FIRST**
@@ -2848,6 +2857,11 @@ start the the next following loop *[iteration](#interation)*
 **nextsame** &mdash;
 get from the dispatcher the next candidate with the
 same *[signature](#signature)*, similar to javas SUPER
+
+<a id="NF-compiler-var"/>
+**\$\?NF**
+*[«special var»](appendix-b-grouped.html#compiler-hint-variables)* &mdash;
+
 
 <a id="Nil-type"/>
 **Nil**

@@ -134,8 +134,8 @@ considered contract in Perl 6
 
 # [E](#nav-top)
 
-<a id="expression"/>
-**expression** &mdash;
+<a id="encoding"/>
+**encoding** &mdash;
 
 
 <a id="evaluation"/>
@@ -146,6 +146,10 @@ current content, cometimes more like interpreting or compiling something;
 inside quotes and [regexes](#regex) ot has the first meaning,
 the command **[eval](appendix-a-index.html#eval)** and
 **[evalfile](appendix-a-index.html#evalfile)**does the second
+
+<a id="expression"/>
+**expression** &mdash;
+
 
 # [F](#nav-top)
 
