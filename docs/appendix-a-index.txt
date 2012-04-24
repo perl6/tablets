@@ -2893,7 +2893,7 @@ low precedence version of **[!()](#exclamation-mark-op)**
 
 <a id="note"/>
 **[note](tablet-5-io.html#note)** &mdash;
-makes output via command line ($ERR) like **[warn](#warn)**,
+makes output via command line (**[$\*ERR](#ERR-global-var)**) like **[warn](#warn)**,
 but appends a newline (**[\\n](#backslash-n)**) like **[say](#say)**
 
 <a id="Num-type"/>
@@ -4354,10 +4354,9 @@ status object, process ID in numeric context
 
 <a id="warn"/>
 **[warn](tablet-5-io.html#warn)** &mdash;
-makes output via standart error output ($ERR - usually the
-command line), similar to **[note](#note)**, but
-works more like **[print](#print)**, without
-appending **[\\n](#backslash-n)**
+makes output via standart error output (**[$\*ERR](#ERR-global-var)**)
+like **[note](#note)**, but works more like **[print](#print)**,
+without appending a **[\\n](#backslash-n)**
 
 <a id="wb-subrule"/>
 **\<wb\>**
