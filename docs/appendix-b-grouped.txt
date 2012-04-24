@@ -101,12 +101,12 @@ compiler constants (fixed at compile time)
 ----------------------------------------------------------------  ------------------------------------------------------------------
 [`$?KERNEL`](appendix-a-index.html#KERNEL-compiler-var)           for which operating System was this program compiled?
 [`$?DISTRO`](appendix-a-index.html#DISTRO-compiler-var)           Which OS distribution am I compiling under?
-[`$?VM`](appendix-a-index.html#vm-compiler-var)                   Which virtual machine am I compiling under
+[`$?VM`](appendix-a-index.html#VM-compiler-var)                   Which virtual machine am I compiling under
 `$?XVM`                                                           Which virtual machine am I cross-compiling for
-[`$?PERL`](appendix-a-index.html#perl-compiler-var)               Which Perl am I compiled for?
-[`$?ENC`](appendix-a-index.html#enc-compiler-var)                 current [encoding](appendix-g-glossary.html#encoding)
-[`$?NF`](appendix-a-index.html#enc-compiler-var)                  
-[`%?LANG`](appendix-a-index.html#lang-compiler-var)               Hash of Grammar # What is the current set of interwoven languages?
+[`$?PERL`](appendix-a-index.html#PERL-compiler-var)               Which Perl am I compiled for?
+[`$?ENC`](appendix-a-index.html#ENC-compiler-var)                 current [encoding](appendix-g-glossary.html#encoding)
+[`$?NF`](appendix-a-index.html#NF-compiler-var)                    
+[`%?LANG`](appendix-a-index.html#LANG-compiler-var)               Hash of Grammar # What is the current set of interwoven languages?
 [`$?GRAMMAR`](appendix-a-index.html#grammar-compiler-var)         current grammar
 [`$?FILE`](appendix-a-index.html#file-compiler-var)               current filename of source file
 [`$?MODULE`](appendix-a-index.html#module-compiler-var)           current module
@@ -115,9 +115,9 @@ compiler constants (fixed at compile time)
 [`::?CLASS`](appendix-a-index.html#class-package-compiler-var)    current class (as package name)
 [`$?ROLE`](appendix-a-index.html#role-compiler-var)               current role (as variable)
 [`::?ROLE`](appendix-a-index.html#role-package-compiler-var)      current role (as package or type name)
-[`&?ROUTINE`](appendix-a-index.html#routine-compiler-var)         current sub or method
-[`&?BLOCK`](appendix-a-index.html#block-compiler-var)             reference to current block
-[`$?LINE`](appendix-a-index.html#line-compiler-var)               current line number
+[`&?ROUTINE`](appendix-a-index.html#ROUTINE-compiler-var)         current sub or method
+[`&?BLOCK`](appendix-a-index.html#BLOCK-compiler-var)             reference to current block
+[`$?LINE`](appendix-a-index.html#LINE-compiler-var)               current line number
 ----------------------------------------------------------------  ------------------------------------------------------------------
 
 ### POD Variables ###

@@ -1537,11 +1537,10 @@ example: `@a X @b = (@a; @b).cross`
 <a id="crosswith"/>
 **crosswith** *«list method»* &mdash;
 metaoperator that seeks every combination of one element of one list with an
-element of a second list and applies then an infix operator to that pair,
-returns a list the results &mdash;
-example: `1 .. 3 X* 2,3 ` returns `2 3 4 6 6 9` &mdash;
-alias method to **[X metaoperator](#capital-x-metaop)**,  
-*`@a X~ @b`* equals *`(@a; @b).crosswith(&[~])`* equals
+element of a second list and applies then an [infix](#infix-category) operator
+to that pair, returns a list the results,
+alias method to **[X metaoperator](#capital-x-metaop)** &mdash;
+example: *`@a X~ @b`* equals *`(@a; @b).crosswith(&[~])`* equals
 `(@a; @b).cross.lol.map { .reduce(&[~]) }`
 
 <a id="CWD-global-var"/>
@@ -2714,15 +2713,18 @@ string
 
 <a id="match"/>
 **match** *«string method»* &mdash;
-method alias to **[m/.../](#m-op)**,
-\$str.match( /<span class="you-provide">p</span>/ )
-equals \$str \~\~ m/<span class="you-provide">p</span>/;, returns a
-match object that end up also in **[$/](#match-var)**
+method alias to **[m/.../](#m-op)** operator,
+`$str.match( /`<span class="you-provide">`p`</span>`/ )`
+equals `$str ~~ m/`<span class="you-provide">`p`</span>`/;`,
+returns a match object that end up also in **[$/](#match-var)** &mdash;
+see also **[comb](#comb)**
 
-<a id="max"/>
+<a id="max"/><a id="max-op"/>
 **max**
 *[«array op & method»](tablet-3-variables#array-methods)* &mdash;
-returns the numerically largest value from a given list
+returns the [numerically](appendix-g-glossary.html#numeric-context)
+largest value from a given list &mdash;
+see also: **[min](#min-op)** and **[minmax](#minmax-op)**
 
 <a id="maybe"/>
 **maybe** *«block modifier»* &mdash;
@@ -2738,16 +2740,19 @@ type of Perl method object
 defines a method (inheritable *[routine](appendix-g-glossary.html#routine)*)
 in a **[class](#class)**
 
-<a id="min"/>
+<a id="min"/><a id="min-op"/>
 **min**
 *[«array op & method»](tablet-3-variables#array-methods)* &mdash;
-returns the numerically smallest value from a given list
+returns the [numerically](appendix-g-glossary.html#numeric-context)
+smallest value from a given list &mdash;
+see also: **[max](#max-op)** and **[minmax](#minmax-op)** 
 
-<a id="minmax"/>
+<a id="minmax"/><a id="minmax-op"/>
 **minmax**
 *[«array op & method»](tablet-3-variables#array-methods)* &mdash;
-returns the highest and lowest values from a list, as a 2 item
-list
+returns the [numerically](appendix-g-glossary.html#numeric-context)
+highest and lowest values from a list, as a 2 item list &mdash;
+see also: **[min](#min-op)** and **[max](#max-op)**
 
 <a id="mm-modifier"/>
 **:mm**
@@ -2784,7 +2789,7 @@ separators, alias to **m:s/.../** or **m**
 <a id="Mu-type"/>
 **Mu**
 *[«undefined value type»](appendix-b-grouped.html#undefined-types)* &mdash;
-most (generic) undefined value object
+most (generic) undefined value
 
 <a id="multi"/><a id="multi-routine-modifier"/>
 **multi**
@@ -3445,8 +3450,8 @@ ended
 <a id="rd-modifier"/>
 <span class="you-provide">n</span>**:rd**
 *[«regex modifier»](appendix-b-grouped.html#regex-modifier)* &mdash;
-demands the nth finding, has many aliases (:st :nd :th) for
-correct spelling (:3rd)
+demands the nth finding, has many aliases (**:st :nd :th*) for
+correct spelling (`:3rd`)
 
 <a id="read"/>
 **[read](tablet-5-io.html#read)**
@@ -3588,12 +3593,12 @@ returns the nearest *[integer](#Int-type)* of only parameter
 **roundrobin**
 *[«array method»](tablet-3-variables#array-methods)* &mdash;
 kind of **[zip](#zip)** that ignores empty lists &mdash;
-example: `roundrobin([1..3],[1,2],[1]) = 1,1,1,2,2,3`
+example: `roundrobin([1..3],[1,2],[1])` returns `1,1,1,2,2,3`
 
 <a id="ROUTINE-compiler-var"/>
 **&?ROUTINE**
 *[«special var»](appendix-b-grouped.html#compiler-hint-variables)* &mdash;
-current **[Routine](#Routine-type)** object
+current *[routine](appendix-g-glossary#routine)* object
 
 <a id="routine-declarator-category"/>
 **routine\_declarator**
@@ -3648,19 +3653,19 @@ alias to **[Q](#capital-q-op)**
 
 # [S](#nav-top)
 
-<a id="s-metaop"/>
-**S**<span class="you-provide">op</span>
-*[«meta op»](appendix-b-grouped.html#metaoperators)* &mdash;
-force sequential (synchronous) evaluation,
-suppresses any explicit or implicit parallelism
-
 <a id="s-op"/>
 **[s/ / /](tablet-9-regexes.html#regex-operators)**
 *[«regex quoting op»](appendix-b-grouped.html#quoting-ops)* &mdash;
 perform a substitution based on rx-matches in place, creates
 anonymous regex, alias to **Q [:subst](#subst-adverb)
-/.../.../** and **[.subst(»](#subst)** *(string
-method)*
+/.../.../** and **[.subst()](#subst)** &mdash;
+see also **[ss/.../.../](#ss-op)** and **[m/.../](#m-op)**
+
+<a id="S-metaop"/>
+**S**<span class="you-provide">op</span>
+*[«meta op»](appendix-b-grouped.html#metaoperators)* &mdash;
+force sequential (synchronous) evaluation,
+suppresses any explicit or implicit parallelism
 
 <a id="S-test"/>
 **:S**
