@@ -25,12 +25,16 @@ How to Help
 Rules for Anchor Names
 ======================
 
+* Index A has following rules:
 * Anchors are case sensitive, if the term is "BEGIN", the anchor is also "BEGIN".
 * Parts of the anchor name are divided by a minus ("-").
 * None alphanumeric chars are descibed as lowercase name.
 * But use for that only one word, "=" is "equal" not "equal sign".
 * "==" is double-equal, "===" is "triple-equal"
 * A secondary anchor can dexribe the name of an operator.
+* Index G has following rules:
+* Anchor uses always the abbreviation, acronym or short form.
+* Acronyms are uppercase rest is always lower case.
 
 Format Rules for Index A
 ========================
