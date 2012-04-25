@@ -958,8 +958,9 @@ low precedence version of **[&&](#high-and)**, similar to **[andthen](#andthen)*
 *«logical op»* &mdash;
 logical *[AND](appendix-g-glossary.html#and)* short circuit operator,
 transferring **[$\_](#context-var)** from first to
-second block/expression, if first do succeed, see also:
-**[orelse](#orelse)**
+second block/expression, if first do succeed &mdash;
+example: `{...} andthen { .say }` &mdash;
+see also: **[orelse](#orelse)**
 
 <a id="anon"/>
 **anon**
@@ -1180,7 +1181,8 @@ raw binary data
 <a id="bytes"/>
 **bytes**
 *«string method»* &mdash;
-number of bytes (a sort of Perl 5's *length*)
+number of bytes (a sort of Perl 5's *length*) &mdash;
+see also: **[chars](#chars)**
 
 <a id="bytes-modifier"/>
 **:bytes**
@@ -1308,20 +1310,24 @@ macro
 lowest integer not less than $x (only parameter)
 
 <a id="chr"/>
-**chr** *«num method»* &mdash;
+**chr**([Int](#Int-type) [--\>](#double-minus-greater-signature) [Str](#Str-type))
+*«num method»* &mdash;
 convert number into character according a
 character table (UTF), reverse of **[ord](#ord)**
 
 <a id="chrs"/>
-**chrs** *«num method»* &mdash;
-plural of **[chr](#chr)**, takes a list of **[Int](#Int-type)** and returns a
-**[Str](#Str-type)**, reverse of **[ords](#ords)**
+**chrs**([Array](#Array-type) [of](#of) [Int](#Int-type) 
+         [--\>](#double-minus-greater-signature) [Str](#Str-type))
+*«num method»* &mdash;
+converts every number to a character with that index and combines them to one string,
+plural of **[chr](#chr)**, reverse of **[ords](#ords)**
 
 <a id="chars"/>
 **chars**
 *«string method»* &mdash;
 returns number of characters of a [string](#Str-type),
-is *length* in Perl 5
+in Perl 5: *length* &mdash;
+see also: **[bytes](#bytes)**
 
 <a id="chars-modifier"/>
 **:chars**
@@ -1871,7 +1877,7 @@ stops all program execution, and returns
 Int $status (first parameter) to the calling environment
 
 <a id="exp"/><a id="exp-op"/>
-**exp**([Num](#Num-type) $base, [Num](#Num-type) $exp? --> [Num](#Num-type)) &mdash;
+**exp**([Num](#Num-type) $base, [Num](#Num-type) $exp? [--\>](#double-minus-greater-signature) [Num](#Num-type)) &mdash;
 exponentiate, alias method to: $base **[\*\*](#double-asterisk-op)** $exp
 (defaults to *[e](appendix-g-glossary.html#e)*)
 
@@ -2959,20 +2965,24 @@ sequentially, ends evaluation at the first expression that returns
 **[orelse](#orelse)**
 
 <a id="ord"/>
-**ord** *«string method»* &mdash;
+**ord**([Str](#Str-type) [--\>](#double-minus-greater-signature) [Int](#Int-type))
+*«string method»* &mdash;
 converts a character into number according a character table
 (*[unicode](appendix-g-glossary.html#unicode)*), reverse of **[char](#char)**
 
 <a id="ords"/>
-**ords** *«string method»* &mdash;
-plural of **ord**, takes a **[Str](#Str-type)** and returns a list of
-**[Int](#Int-type)**, reverse of **[chars](#chars)**
+**ords**([Str](#Str-type) [--\>](#double-minus-greater-signature)
+         [Array](#Array-type) [of](#of) [Int](#Int-type))
+*«string method»* &mdash;
+get the index numbers of some characters,
+plural of **[ord](#ord)**, reverse of **[chrs](#chrs)**
 
 <a id="orelse"/>
 **orelse** *«logical op»* &mdash;
 logical *[OR](appendix-g-glossary.html#or)* short circuit operator,
 transferring an error code from first to second block/command, if
 first do not succeed, similar to **[//](#high-err)** &mdash;
+example: `{...} orelse { note $! } `&mdash;
 see also: **[andthen](#andthen)**
 
 <a id="our"/>
@@ -3583,8 +3593,10 @@ end; rotates backward with negative parameter; `@a .= rotate;` is
 alias to `@a.push: @a.shift;`
 
 <a id="round"/>
-**round** &mdash;
-returns the nearest *[integer](#Int-type)* of only parameter
+**round**(Num $f [--\>](#double-minus-greater-signature) Int) &mdash;
+returns the nearest *[integer](#Int-type)* &mdash;
+example: `round 5.5` returns `6`
+
 
 <a id="roundrobin"/>
 **roundrobin**
@@ -4579,8 +4591,9 @@ example: `'ab' xx 3 = <ab ab ab>`
 **Z**
 *[«list op»](tablet-4-operators.html#list-generation)* &mdash;
 alias to **[zip](#zip-op)**,
-joines 2 lists and stops when 1 list runs out of elements, returning
-always an list with an even length &mdash; example: `1,2,3,4 Z 8,9 == 1,8,2,9`
+joines 2 lists and stops when one list runs out of elements, returning
+always an list with an even length &mdash;
+example: `1,2,3,4 Z 8,9 == 1,8,2,9` &mdash; see also: **[roundrobin](#roundrobin)**
 
 <a id="Z-metaop"/>
 **Z**<span class="you-provide">op</span>
@@ -4592,7 +4605,7 @@ operator and produces in that manner a new list
 **zip**
 *[«array op & method»](tablet-3-variables#array-methods)* &mdash;
 zip operator, joines 2 lists, alias to
-**[Z](#capital-z-op)** operator &mdash;
+**[Z operator](#capital-z-op)** &mdash;
 example: `@a Z @b = (@a; @b).zip`
 
 <a id="zipwith"/>
