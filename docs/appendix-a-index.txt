@@ -19,10 +19,10 @@ and <span class="you-provide">t</span> any
    *[term](appendix-g-glossary.html#term)*.
 
 <a id="nav-top"/>
-**Navigation: [A](#a) [B](#b) [C](#c) [D](#d) [E](#e)
-[F](#f) [G](#g) [H](#h) [I](#i) [J](#j) [K](#k) [L](#l)
-[M](#m) [N](#n) [O](#o) [P](#p) [Q](#q) [R](#r) [S](#s)
-[T](#t) [U](#u) [V](#v) [W](#w) [X](#x) [Y](#y) [Z](#z)**
+**Navigation:     [A](#a) [B](#b) [C](#c) [Cn](#cn) [D](#d)  [E](#e)
+[F](#f) [G](#g)   [H](#h) [I](#i) [J](#j) [K](#k)   [L](#l)  [M](#m)
+[N](#n) [O](#o)   [P](#p) [Pn](#pn)       [Q](#q)   [R](#r)  [Rn](#rn)
+[S](#s) [Sn](#sn) [T](#t) [U](#u) [V](#v) [W](#w)   [X](#x)  [Y](#y)   [Z](#z)**
 
 Before alpha chars (a-z) in ASCII order:
 **[`! " #`](#exclamation) [`$ % &`](#dollar)  [`' ( *`](#single-quotation)
@@ -586,7 +586,7 @@ result is assigned to &mdash;
 example: *($a += 3; equals $a = $a + 3)*
 
 <a id="equal-colon-equal-op"/>
-**=:=** *(comparison op)* &mdash;
+**=:=** *«comparison op»* &mdash;
 compares [binding](tablet-3-variables#binding),
 if both vars are bound to same memory location
 
@@ -1429,6 +1429,10 @@ if **[after](#after)**, see also:
 **[leg](#leg)** and
 **[\<=\>](#spaceship-op)**)
 
+
+
+# [Cn](#nav-top)
+
 <a id="cntrl-subrule"/>
 **\<cntrl\>**
 *[«predefined subrule»](appendix-b-grouped.html#subrules)* &mdash;
@@ -1974,13 +1978,14 @@ in Perl 5: *..* in scalar context
 <a id="fff"/><a id="fff-op"/>
 **[fff](tablet-4-operators.html#flipflop)**
 *[«conditional»](appendix-b-grouped.html#conditionals)* &mdash;
-tests **[\$\_](#context-var)**
-against two values, flip flop operator in the style of sed, after
-became **[True](#True)**
+flip flop operator in the style of sed,
+tests **[\$\_](#context-var)** against two values,
+after return value became **[True](#True)**
 (**[$\_](#context-op)** is larger then left value),
 right side will be tested during next loop
-*[iteration](appendix-g-glossary.html#interation)*, in Perl 5: *...* in
-*[scalar context](appendix-g-glossary.html#scalar-contex)*
+*[iteration](appendix-g-glossary.html#interation)*,
+can be combined with [**^**](#caret-range) to exclude borders
+in Perl 5: *...* in *[scalar context](appendix-g-glossary.html#scalar-contex)*
 
 <a id="FILE-compiler-var"/>
 **$?FILE**
@@ -2216,7 +2221,7 @@ returns all values of an array that pass a filter condition
 (first parameter), the condition is a closure that takes one value
 at a time (as [**`$_`**](#context-var) or `$^a`) &mdash;
 see also **[first](#first)** &mdash;
-example : `grep {$_ %% 2}, 1..5;` returns: `2, 4`
+example : `grep {$_ %% 2}, 1..5;` returns `2, 4`
 
 <a id="gt"/><a id="gt-op"/>
 **gt**
@@ -2785,16 +2790,16 @@ returns the [numerically](appendix-g-glossary.html#numeric-context)
 highest and lowest values from a list, as a 2 item list &mdash;
 see also: **[min](#min-op)** and **[max](#max-op)**
 
+<a id="mkdir"/>
+**[mkdir](tablet-5-io.html#mkdir)** &mdash;
+creates a directory with given name
+
 <a id="mm-modifier"/>
 **:mm**
 *[«regex modifier»](appendix-b-grouped.html#regex-modifier)* &mdash;
 substitute with chars that has same mark/accent pattern as the
 matched string, short for
 **[:samemark](#samemark-modifier)**
-
-<a id="makedir"/>
-**[mkdir](tablet-5-io.html#mkdir)** &mdash;
-creates a directory with given name
 
 <a id="mod"/>
 **mod** *«numeric op»* &mdash;
@@ -3181,6 +3186,9 @@ duplication), take **[roll](#roll)** to enable duplication
 **\$\*PID**
 *[«special var»](appendix-b-grouped.html#global-variables)* &mdash;
 ID of the running process, in Perl 5: *\$\$* and *\$PID*
+
+
+# [Pn](#nav-top)
 
 <a id="pod-pod-var"/>
 **$=pod**
@@ -3602,6 +3610,10 @@ opposite or **[index](#index)**
 **[rmdir](tablet-5-io.html#rmdir)** &mdash; 
 deletes a directory with given name
 
+
+
+# [Rn](#nav-top)
+
 <a id="role"/>
 **role** *«block modifier»* &mdash;
 container for methods that can extend a class using **[does](#does)**
@@ -3899,6 +3911,10 @@ seconds (with sub-second resolution)
 *«path and file handle method»* &mdash;
 reads an entire file into a string without a [*file handle*](IO-type)
 
+
+
+# [Sn](#nav-top)
+
 <a id="so"/><a id="so-op"/>
 **so**
 *[«context op»](appendix-b-grouped.html#contextualizers)* &mdash;
@@ -4099,7 +4115,7 @@ attributes of a **[class](#class)** or
 <a id="t-test"/>
 **:t**
 *[«io test method»](appendix-b-grouped.html#test-methods)* &mdash;
-filehandle is opened to a tty (terminal)
+[*file handle*](IO-type) is opened to a "tty" (terminal)
 
 <a id="backslash-t"/>
 **\\T**
