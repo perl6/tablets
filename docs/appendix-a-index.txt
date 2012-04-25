@@ -12,11 +12,10 @@ Sometimes are added green placeholder.
 <span class="you-provide">f</span> is a floating [point number](#Num-type),
 <span class="you-provide">s</span> [string](#Str-type),
 <span class="you-provide">var</span> any variable,
-<span class="you-provide">op</span> any operator,
-and <span class="you-provide">p</span> for a 
-   *[regex](appendix-g-glossary.html#regex)* pattern
-and <span class="you-provide">t</span> any
-   *[term](appendix-g-glossary.html#term)*.
+<span class="you-provide">p</span> a *[regex](appendix-g-glossary.html#regex)*,
+<span class="you-provide">l</span> a list,
+<span class="you-provide">op</span> any operator and
+<span class="you-provide">t</span> any *[term](appendix-g-glossary.html#term)*.
 
 <a id="nav-top"/>
 **Navigation:     [A](#a) [B](#b) [C](#c) [Cn](#cn) [D](#d)  [E](#e)
@@ -140,7 +139,7 @@ gives remainder of a modulo division, forces numeric context
 <a id="percent-context-op"/>
 **%**()
 *[«context op»](appendix-b-grouped.html#contextualizers)* &mdash;
-forces hash context, alias to the **[hash(»](#hash)** function
+forces hash context, alias to the **[hash()](#hash)** function
 
 <a id="percent-metachar"/>
 **%**<span class="you-provide">s</span>
@@ -234,7 +233,7 @@ multiplies numbers, forces numeric context
 **\***
 *[«signature symbol»](appendix-b-grouped.html#signature-symbols)* &mdash;
 [prefix](#prefix-category) which indicates
-*slurpy* arrays in signatures
+[*slurpy arrays*](#slurpy-array) in signatures
 
 <a id="asterisk-twigil"/>
 **\***
@@ -263,12 +262,12 @@ not backtracking, greedy quantifier taking zero or more findings
 *[«regex metachar»](appendix-b-grouped.html#quantifier)* &mdash;
 quantifier for explicit repeat char or group, like
 **[x](#x-op)** *(string op)* does outside of a regex &mdash;
-example: `(ha)**3` matches `(hahaha)`
+example: `(ha)**3` only matches `'hahaha'`
 
 <a id="plus"/><a id="plus-op"/><a id="plus-context"/>
 **+**
 *[«context op»](appendix-b-grouped.html#contextualizers)*
-*[«numeric op»](tablet-4-operators.html#numeric-context)* &mdash
+*[«numeric op»](tablet-4-operators.html#numeric-context)* &mdash;
 [infix](#infix-category) addition operator,
 forces [numeric context](appendix-g-glossary.html#numeric-context)
 
@@ -4655,7 +4654,8 @@ low precedence version of **[\^\^](#double-caret-op)**
 <a id="xx-op"/>
 **xx**
 *[«infix list op»](tablet-4-operators.html#list-generation)* &mdash;
-replicate a list *$n* (second operand) times &mdash;
+replicate a list <span class="you-provide">l</span> (left operand)
+<span class="you-provide">n</span> times (right operand) &mdash;
 example: `'ab' xx 3 = <ab ab ab>`
 
 

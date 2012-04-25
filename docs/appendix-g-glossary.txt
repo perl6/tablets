@@ -354,7 +354,7 @@ or **[supersede](appendix-a-index.html#supersede)**
 **slice** &mdash;
 part of an array or list
 
-<a id="slurpy array"/>
+<a id="slurpy-array"/>
 **slurpy array** &mdash;
 array parameter that receives all (slurps) all optional
 *[subroutine](#routine)* arguments
