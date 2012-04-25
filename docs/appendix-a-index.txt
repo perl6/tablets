@@ -2631,7 +2631,7 @@ be iterated, alias to **[@()](#at-op)**, see also
 **[flat](#flat)** and **[lol](#lol)**
 
 <a id="log"/>
-**[log](operators.html)**(Num $x, Num $base?) &mdash;
+**[log](operators.html)**([Num](#Num-type) $x, [Num](#Num-type) $base?) &mdash;
 logarithm of $x to the $base
 (default is *[e](appendix-g-glossary.html#e)*, together also known as *ln*)
 
@@ -2870,13 +2870,13 @@ start the the next following loop *[iteration](appendix-g-glossary.html#interati
 <a id="nextsame"/>
 **nextsame** &mdash;
 get from the dispatcher the next candidate with the
-same *[signature](appendix-g-glossary.html#signature)*, similar to javas *SUPER*
+same *[signature](appendix-g-glossary.html#signature)*, similar to Javas *SUPER*
 
 <a id="NF-compiler-var"/>
 **\$\?NF**
 *[«special var»](appendix-b-grouped.html#compiler-hint-variables)* &mdash;
 method name (options: `<NFC NFKC NFD NFKD>`) how strings are going to be normalized,
-`Str.codes` and `Str.bytes` have an optional
+[**codes**](#codes) and [**bytes**](#bytes) have an optional
 [pramameter](appendix-g-glossary.html#parameter) which method should be used,
 that defaults to **\$\?NF**
 
@@ -3217,7 +3217,7 @@ marks as a prefix a special block, assert precondition, executed
 at every block entry, before **[ENTER](#ENTER-phaser)**
 
 <a id="pred"/>
-**pred**(Num $f)
+**pred**([Num](#Num-type) $f)
 *[«sequence traversion»](tablet-4-operators.html#traversing-sequence)* &mdash;
 returns the predecessor of $f, alias to **[--](#auto-decrement)**
 operator, opposite of **[succ](#succ)**
@@ -3611,7 +3611,7 @@ end; rotates backward with negative parameter; `@a .= rotate;` is
 alias to `@a.push: @a.shift;`
 
 <a id="round"/>
-**round**(Num $f [--\>](#double-minus-greater-signature) Int) &mdash;
+**round**([Num](#Num-type) $f [--\>](#double-minus-greater-signature) [Int](#Int-type)) &mdash;
 returns the nearest *[integer](#Int-type)* &mdash;
 example: `round 5.5` returns `6`
 
@@ -4050,7 +4050,7 @@ parse as [substitution regex](tablet-9-regexes.html#substitution)
 the scalar substring function like in Perl 5
 
 <a id="succ"/>
-**succ**(Num $f)
+**succ**([Num](#Num-type) $f)
 *[«sequence traversion»](tablet-4-operators.html#traversing-sequence)* &mdash;
 returns the successor of $f, alias to **[++](#auto-increment)**
 operator, opposite of **[pred](#pred)**
@@ -4363,10 +4363,8 @@ check if file is writeable by effective uid ([**\$\*EUID**](#EUID-global-var))
 <a id="w-adverb"/>
 **[:w](tablet-2-basic-syntax.html#quote-words)**
 *[«quoting adverb»](appendix-b-grouped.html#quoting-adverbs)* &mdash;
-split quoted string on words (on whitespaces), no quote
-protection, short form of
-**[:words](#words-adverb)**, used in
-**[qw/.../](#qw-op)**
+split quoted string on words (on whitespaces), no quote protection, 
+short form of **[:words](#words-adverb)**, used in **[qw/.../](#qw-op)**
 
 <a id="backslash-W"/>
 **\\W**
@@ -4376,8 +4374,7 @@ anything but a word character ([**\\w**](#backslash-w))
 <a id="backslash-w"/>
 **\\w**
 *[«escape sequence»](appendix-b-grouped.html#escape-sequences)* &mdash;
-word character
-(*[unicode](appendix-g-glossary.html#unicode)* alphanumeric -
+a word character (*[unicode](appendix-g-glossary.html#unicode)* alphanumeric -
 A..Z, a..z,0..9, "\_")
 
 <a id="pipe-w"/>
