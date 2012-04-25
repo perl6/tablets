@@ -418,7 +418,7 @@ okt/dec/hex range, alternate syntax without the zero is preferred
 first positional submatch, there is **`$1`**, **`$2`**, ... too
 (don't stops at **`$9`** like Perl 5), alias to
 [**`$()[0]`**](#round-brackets-var) and
-[**`$/[0]`**](#slash-var), P5s $0 is 
+[**`$/[0]`**](#slash-var), Perl 5: *\$0* is 
 [**\$\*EXECUTABLE\_NAME**](#EXECUTABLE-NAME-global-var)
 
 <a id="colon"/><a id="colon-adverb"/>
@@ -963,12 +963,12 @@ second block/expression, if first do succeed, see also:
 
 <a id="anon"/>
 **anon**
-*[«scope declarator»](appendix-b-grouped.html#scope-declarator)* &mdash
+*[«scope declarator»](appendix-b-grouped.html#scope-declarator)* &mdash;
 introduces names that aren't to be stored anywhere (anonymous)
 
 <a id="Any"/><a id="Any-type"/>
 **Any**
-*[«undefined value type»](appendix-b-grouped.html#undefined-types)* &mdash
+*[«undefined value type»](appendix-b-grouped.html#undefined-types)* &mdash;
 Perl 6 object (default *[routine](appendix-g-glossary.html#routine)*
 *[parameter](appendix-g-glossary.html#parameter)* type, excludes
 *[junctions](appendix-g-glossary.html#junction)*)
@@ -984,12 +984,12 @@ following list) is true in bool context, see also:
 <a id="ARGFILES-global-var"/>
 **$\*ARGFILES**
 *[«special var»](appendix-b-grouped.html#global-variables)* &mdash; 
-magic command-line input handle, is ARGV in P5
+magic command-line input handle, in Perl 5: *ARGV*
 
 <a id="ARGS-global-var"/>
 **@\*ARGS**
 *[«special var»](appendix-b-grouped.html#global-variables)* &mdash; 
-arguments (parameter) to a program (script), is @ARGV in P5
+arguments (parameter) to a program (script), in Perl 5: *@ARGV*
 
 <a id="args"/>
 **args**
@@ -1180,7 +1180,7 @@ raw binary data
 <a id="bytes"/>
 **bytes**
 *«string method»* &mdash;
-number of bytes (a sort of P5's *length*)
+number of bytes (a sort of Perl 5's *length*)
 
 <a id="bytes-modifier"/>
 **:bytes**
@@ -1773,7 +1773,7 @@ A mapping of Enums with no duplicate keys
 <a id="ENV-global-var"/>
 **%\*ENV**
 *[«special var»](appendix-b-grouped.html#global-variables)* &mdash;
-environment variables (of the shell), is *%ENV* in P5
+environment variables (of the shell), in Perl 5: *%ENV*
 
 <a id="eq"/><a id="eq-op"/>
 **eq**
@@ -1943,7 +1943,7 @@ tests **[$\_](#context-var)**
 against two values, flip flop operator in the style of awk, can
 test the right operand and become **[False](#False)**
 on the same evaluation it became **[True](#True)**
-in P5 .. in scalar context
+in Perl 5 *..* in scalar context
 
 <a id="fff"/><a id="fff-op"/>
 **[fff](tablet-4-operators.html#flipflop)**
@@ -1953,7 +1953,8 @@ against two values, flip flop operator in the style of sed, after
 became **[True](#True)**
 (**[$\_](#context-op)** is larger then left value),
 right side will be tested during next loop
-*[iteration](appendix-g-glossary.html#interation)*, in P5 *...* in scalar context
+*[iteration](appendix-g-glossary.html#interation)*, in Perl 5 *...* in
+*[scalar context](appendix-g-glossary.html#scalar-contex)*
 
 <a id="FILE-compiler-var"/>
 **$?FILE**
@@ -2316,12 +2317,12 @@ just import definitions from an already loaded module (see
 **\$\*IN**
 *[«special var»](appendix-b-grouped.html#global-variables)* &mdash;
 file handle for thestandard input (command line mostly), see also
-**[$\*OUT](#OUT-global-var)**, is STDIN in P5
+**[$\*OUT](#OUT-global-var)**, in Perl 5: *STDIN*
 
 <a id="INC-global-var"/>
 **\@\*INC**
 *[«special var»](appendix-b-grouped.html#global-variables)* &mdash;
-include pathes (but not for standard library modules), is @INC in P5
+include pathes (but not for standard library modules), in Perl 5: *@INC*
 
 <a id="index"/>
 **index** *(string method)* &mdash;
@@ -2583,7 +2584,7 @@ operator in *[string
 context](tablet-4-operators.html#string-context)*,
 leg stands for lower/equal/greater, **[cmp](#cmp)**
 is the more general form, **[<=\>](#spaceship-op)**
-does same in [numerical context](#numerical-context), is *cmp* in P5
+does same in [numerical context](#numerical-context), in Perl 5: *cmp*
 
 <a id="let"/>
 **let** &mdash;
@@ -2984,7 +2985,7 @@ introduces **[package](#package)**-scoped names for variables and
 **\$\*OUT**
 *[«special var»](appendix-b-grouped.html#global-variables)* &mdash;
 file handle for standard output (command line mostly), see also
-**[$\*IN](#IN-global-var)**, is STDOUT in P5
+**[$\*IN](#IN-global-var)**, in Perl 5: *STDOUT*
 
 <a id="ov-modifier"/>
 **:ov** *[«regex modifier»](appendix-b-grouped.html#regex-modifier)* &mdash;
@@ -3924,7 +3925,7 @@ a symbol table hash (package, module, class, lexpad, etc)
 **stat**
 *[«test method»](appendix-b-grouped.html#test-methods)* &mdash;
 available information about a file or link
-(call `stat :link` as former lstat)
+(call `stat :link` instead of Perl 5: *lstat*)
 
 <a id="state"/>
 **state**
