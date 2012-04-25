@@ -1700,7 +1700,7 @@ opposite of **[lazy](#lazy)**
 *[«special var»](appendix-b-grouped.html#global-variables)* &mdash;
 effective global ID of the running process
 (**[\$\*PID](#PID-global-var)**) owner,
-is *@\)* and *\$EGID* in Perl 5
+in Perl 5: *@\)* and *\$EGID*
 
 <a id="elems"/><a id="elems-aray"/>
 **elems**
@@ -1807,14 +1807,14 @@ the left, short circuit or,low precedence version of
 **\$\*ERR**
 *[«special var»](appendix-b-grouped.html#global-variables)* &mdash;
 file handle for the standard error output (command line mostly),
-*STDERR* in Perl 5
+in Perl 5: *STDERR*
 
 <a id="EUID-global-var"/>
 **\$\*EUID**
 *[«special var»](appendix-b-grouped.html#global-variables)* &mdash;
 effective user ID of the running process
-(**[\$\*PID](#PID-global-var)**) owner, is *@\>* and
-*$EUID* in Perl 5
+(**[\$\*PID](#PID-global-var)**) owner,
+in Perl 5: *@\>* and *$EUID* 
 
 <a id="eval"/>
 **eval** &mdash;
@@ -2908,12 +2908,12 @@ and **[FatRat](#FatRat-type)**)
 <a id="O-test"/>
 **:O**
 *[«io test method»](appendix-b-grouped.html#test-methods)* &mdash;
-tests if file is owned by real uid
+tests if file is owned by real uid ([**\$\*UID**](#UID-global-var))
 
 <a id="o-test"/>
 **:o**
 *[«io test method»](appendix-b-grouped.html#test-methods)* &mdash;
-tests if file is owned by effective uid
+tests if file is owned by effective uid ([**\$\*EUID**](#EUID-global-var))
 
 <a id="of"/>
 **of**
@@ -3389,12 +3389,14 @@ alias to **Q [:x](#x-adverb) /.../** or **Q [:exec](#exec-adverb) /.../**
 <a id="R-test"/>
 **:R**
 *[«io test method»](appendix-b-grouped.html#test-methods)* &mdash;
-check if file is readable by real uid/gid
+check if file is readable by real uid ([**\$\*UID**](#UID-global-var))
+/ gid ([**\$\*EUID**](#EUID-global-var))
 
 <a id="r-test"/>
 **:r**
 *[«io test method»](appendix-b-grouped.html#test-methods)* &mdash;
-check if file is readable by effective uid/gid
+check if file is readable by effective uid ([**\$\*EUID**](#EUID-global-var))
+/ gid ([**\$\*EUID**](#EUID-global-var))
 
 <a id="backslash-R"/>
 **\\R**
@@ -4311,12 +4313,14 @@ see also: **[\$\?DISTRO](#distro-compiler-var)** and
 <a id="W-test"/>
 **:W**
 *[«test method»](appendix-b-grouped.html#test-methods)* &mdash;
-check if file is writeable by real uid/gid
+check if file is writeable by real uid ([**\$\*UID**](#UID-global-var)) /
+gid ([**\$\*GID**](#GID-global-var))
 
 <a id="w-test"/>
 **:w**
 *[«io test method»](appendix-b-grouped.html#test-methods)* &mdash;
-check if file is writeable by effective uid/gid
+check if file is writeable by effective uid ([**\$\*EUID**](#EUID-global-var))
+/ gid ([**\$\*EGID**](#EGID-global-var))
 
 <a id="w-adverb"/>
 **[:w](tablet-2-basic-syntax.html#quote-words)**
@@ -4510,12 +4514,14 @@ example: `<a b> X~ <y z> == <ay az by bz>;`
 <a id="X-test"/>
 **:X**
 *[«io test method»](appendix-b-grouped.html#test-methods)* &mdash;
-check if file is executable by real uid/gid
+check if file is executable by real uid ([**\$\*UID**](#UID-global-var))
+/ gid ([**\$\*GID**](#GID-global-var))
 
 <a id="x-test"/>
 **:x**
 *[«io test method»](appendix-b-grouped.html#test-methods)* &mdash;
-check if file is executable by effective uid/gid
+check if file is executable by effective uid ([**\$\*EUID**](#EUID-global-var))
+/ gid ([**\$\*EGID**](#EGID-global-var))
 
 <a id="x-adverb"/>
 **:x**
