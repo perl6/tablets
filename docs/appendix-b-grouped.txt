@@ -105,7 +105,7 @@ compiler constants (fixed at compile time)
 `$?XVM`                                                           Which virtual machine am I cross-compiling for
 [`$?PERL`](appendix-a-index.html#PERL-compiler-var)               Which Perl am I compiled for?
 [`$?ENC`](appendix-a-index.html#ENC-compiler-var)                 current [encoding](appendix-g-glossary.html#encoding)
-[`$?NF`](appendix-a-index.html#NF-compiler-var)                    
+[`$?NF`](appendix-a-index.html#NF-compiler-var)                   default string normalization method
 [`%?LANG`](appendix-a-index.html#LANG-compiler-var)               Hash of Grammar # What is the current set of interwoven languages?
 [`$?GRAMMAR`](appendix-a-index.html#GRAMMAR-compiler-var)         current grammar
 [`$?FILE`](appendix-a-index.html#FILE-compiler-var)               current filename of source file

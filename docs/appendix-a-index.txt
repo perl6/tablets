@@ -63,7 +63,7 @@ last error message
 <a id="exclamation-subrule"/>
 **\<\!\>**
 *[«predefined subrule»](appendix-b-grouped.html#subrules)* &mdash;
-inverse of [**\<?\>**](#question-subrule), returns always false
+inverse of [**\<?\>**](#question-subrule), returns always **[False](#False)**
 
 <a id="double-exclamation"/>
 **!!** *[«conditional op»](appendix-b-grouped.html#conditionals)* &mdash; 
@@ -1255,7 +1255,7 @@ callframe object, that has the
 <a id="callwith"/>
 **callwith** &mdash;
 callable-method by which one can call a sub with a
-different [signature](#signature)
+different [signature](appendix-g-glossary.html#signature)
 
 <a id="capitalize"/>
 **capitalize** &mdash;
@@ -1561,8 +1561,8 @@ a single digit character
 **\$=data**
 *[«special var»](appendix-b-grouped.html#pod-variables)* &mdash;
 handle for the data block (=begin data ... =end data),
-use *$=data.lines* to *[iterate](#interation)* over the
-lines of it
+use *$=data.lines* to *[iterate](appendix-g-glossary.html#interation)*
+over the lines of it
 
 <a id="decode"/>
 **[decode](tablet-5-io.html#read)**
@@ -1719,8 +1719,7 @@ number of pairs
 introduces the alternative block after an
 **[if](#if)** or **[elsif](#elsif)**
 that is executed, when conditions of all alternatives resulted
-in **[false](#False)**, see also
-**[default](#default)**
+in **[False](#False)** &mdash; see also: **[default](#default)**
 
 <a id="else"/>
 **[elsif](tablet-6-blocks.html#elsif)**
@@ -1954,7 +1953,7 @@ against two values, flip flop operator in the style of sed, after
 became **[True](#True)**
 (**[$\_](#context-op)** is larger then left value),
 right side will be tested during next loop
-*[iteration](#interation)*, in P5 ... in scalar context
+*[iteration](appendix-g-glossary.html#interation)*, in P5 *...* in scalar context
 
 <a id="FILE-compiler-var"/>
 **$?FILE**
@@ -2014,7 +2013,7 @@ pairs (in case of a hash);
 *[«block modifier»](appendix-b-grouped.html#loops)* &mdash;
 loop that only iterates over the following list and sets
 **[$\_](#context-var)** for each
-*[iteration](#interation)* (contextualizer), see
+*[iteration](appendix-g-glossary.html#interation)* (contextualizer), see
 also: **[given](#given)**
 
 <a id="fork"/>
@@ -2786,7 +2785,7 @@ most (generic) undefined value
 **multi**
 *[«routine modifier»](appendix-b-grouped.html#routine-modifier)* &mdash;
 marks *[routines](appendix-g-glossary.html#routine)* that can have sibling
-with same name but different *[signature](#signature)*,
+with same name but different *[signature](appendix-g-glossary.html#signature)*,
 when name is called, the one with matching signature is run
 (*[multimethod dispatch](appendix-g-glossary.html#MMD)*) &mdash;
 example: `multi sub name (...) {...}` &mdash;
@@ -2846,17 +2845,20 @@ continuation time, before any **[leave](#LEAVE-phaser)**
 <a id="next"/>
 **next**
 *[«flow control»](appendix-b-grouped.html#jump-commands)* &mdash;
-start the the next following loop *[iteration](#interation)*
+start the the next following loop *[iteration](appendix-g-glossary.html#interation)*
 
 <a id="nextsame"/>
 **nextsame** &mdash;
 get from the dispatcher the next candidate with the
-same *[signature](#signature)*, similar to javas SUPER
+same *[signature](appendix-g-glossary.html#signature)*, similar to javas *SUPER*
 
 <a id="NF-compiler-var"/>
 **\$\?NF**
 *[«special var»](appendix-b-grouped.html#compiler-hint-variables)* &mdash;
-
+method name (options: `<NFC NFKC NFD NFKD>`) how strings are going to be normalized,
+`Str.codes` and `Str.bytes` have an optional
+[pramameter](appendix-g-glossary.html#parameter) which method should be used,
+that defaults to **\$\?NF**
 
 <a id="Nil-type"/>
 **Nil**
@@ -2868,7 +2870,7 @@ example: *`@a = Nil, Nil;`* result array has zero elements
 **none**
 *[«junctive op»](tablet-4-operators.html#junctions)* &mdash;
 return **[True](#True)** when a value is not
-part of a set, *[junctive](#junction)* *NOT*
+part of a set, *[junctive](appendix-g-glossary.html#junction)* *NOT*
 operator
 
 <a id="normalize"/>
@@ -2922,7 +2924,8 @@ example: `subset Month of Int where { 1 <= $^a <= 12 }`
 <a id="one"/>
 **one**
 *[«junctive op»](tablet-4-operators.html#junctions)* &mdash;
-*[junctive](#junction)* *[XOR](appendix-g-glossary.html#xor)* operator,
+*[junctive](appendix-g-glossary.html#junction)*
+*[XOR](appendix-g-glossary.html#xor)* operator,
 **[True](#True)** if only one expression (of a
 following list) is true in bool context&mdash;
 see also: **[|](#pipe-op)**
