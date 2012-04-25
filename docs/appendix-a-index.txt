@@ -1182,7 +1182,7 @@ raw binary data
 **bytes**
 *«string method»* &mdash;
 number of bytes (a sort of Perl 5's *length*) &mdash;
-see also: **[chars](#chars)**
+see also: **[chars](#chars)**, [**codes*](#codes), [**graphs*](#graphs)
 
 <a id="bytes-modifier"/>
 **:bytes**
@@ -1443,6 +1443,12 @@ context, alias to **[&()](#ampersand-context-op)**
 *[«quoting adverb»](appendix-b-grouped.html#quoting-adverbs)* &mdash;
 quasi quoting, the commented will be compiles and the AST will
 be returned as result, see also: **[quasi](#quasi)**
+
+<a id="codes/>
+**codes**
+*«string mmethod»* &mdash;
+number of codepoints in the string in a language-independent way &mdash;
+see also: [**bytes*](#bytes), [**chars*](#chars), [**graphs*](#graphs)
 
 <a id="codes-modifier"/>
 **:codes**
@@ -2172,6 +2178,12 @@ grammar of the currently used language (mostly **[$\~MAIN](#main-slang-var)**)
 *[«predefined subrule»](appendix-b-grouped.html#subrules)* &mdash;
 a "graphical" character
 
+<a id="graphs/>
+**graphs**
+*«string mmethod»* &mdash;
+number of graphemes in the string in a language-independent way &mdash;
+see also: [**bytes*](#bytes), [**chars*](#chars), [**codes*](#codes)
+
 <a id="graphs-modifier"/>
 **:graphs**
 *[«regex modifier»](appendix-b-grouped.html#regex-modifier)* &mdash;
@@ -2608,7 +2620,8 @@ current line number
 returns a chomped list of lines
 (chunks of character separated by **[\\n](#backslash-n)**)
 containing a string - example: `$str.lines($limit)` equals
-[`$str.comb( / ^^ \N* /, $limit )`](#comb), works also on file handles
+[`$str.comb( / ^^ \N* /, $limit )`](#comb), works also on file handles &mdash;
+see also [**words**](#words)
 
 <a id="list"/>
 **list**()
@@ -3370,6 +3383,12 @@ operator namespace, used to define new quoting ops with a macro
 *[«grammatical category»](appendix-b-grouped.html#categories)* &mdash;
 operator namespace, used to define new quoting adverbs
 
+<a id="quotemeta"/>
+**quotemeta**
+*«string method»* &mdash;
+returns the input string with all non-"word" characters
+([**\\W**](#backslash-W)) back-slashed
+
 <a id="quotemarks-adverb"/>
 **[:quotewords](tablet-2-basic-syntax.html#quote-words)**
 *[«quoting adverb»](appendix-b-grouped.html#quoting-adverbs)* &mdash;
@@ -3552,8 +3571,8 @@ returns all the members in the opposite order. Use
 <a id="rindex"/>
 **rindex** *«string method»* &mdash;
 finds the last occurrence of a
-substring in a string and returns the numerical position, opposite
-or **[index](#index)**
+substring in a string and returns the numerical position,
+opposite or **[index](#index)**
 
 <a id="rmdir"/>
 **[rmdir](tablet-5-io.html#rmdir)** &mdash; 
@@ -3889,7 +3908,10 @@ and replace them with values (third - optional)
 
 <a id="split"/>
 **split** &mdash;
-makes an array of substrings from a string and a separator
+splits a string according a delimiter (string or regex)
+into an array of substrings &mdash;
+example: `split(rx/-/, "1-2-4-5")` returns `1,2,3,4` &mdash;
+see also: [**comb**](#comb)
 
 <a id="sprintf"/>
 **[sprintf](tablet-2-basic-syntax.html#sprintf)**
@@ -4349,13 +4371,14 @@ protection, short form of
 <a id="backslash-W"/>
 **\\W**
 *[«escape sequence»](appendix-b-grouped.html#escape-sequences)* &mdash;
-anything but a word character
+anything but a word character ([**\\w**](#backslash-w))
 
 <a id="backslash-w"/>
 **\\w**
 *[«escape sequence»](appendix-b-grouped.html#escape-sequences)* &mdash;
 word character
-(*[unicode](appendix-g-glossary.html#unicode)* alphanumeric plus "\_")
+(*[unicode](appendix-g-glossary.html#unicode)* alphanumeric -
+A..Z, a..z,0..9, "\_")
 
 <a id="pipe-w"/>
 **\<|w\>**
@@ -4461,7 +4484,8 @@ by providing a block after the subroutine's signature definition
 **words**
 *«string method»* &mdash;
 splits a [string](#Str-type) into a list of words &mdash;
-example: `$input.words($limit)` equals [`$input.comb( / \S+ /, $limit )`](#comb)
+example: `$input.words($limit)` equals [`$input.comb( / \S+ /, $limit )`](#comb) &mdash;
+see also [**lines**](#lines)
 
 <a id="words-adverb"/>
 **[:words](tablet-2-basic-syntax.html#quote-words)**
