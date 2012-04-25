@@ -1406,7 +1406,7 @@ listrefs (see also **[categorize](#categorize)**)
 <a id="close"/>
 **[close](tablet-5-io.html#close)**
 *«filehandle method»* &mdash;
-releasing the connection to a file via a file handler
+releasing the connection to a file via a [*file handle*](IO-type)
 
 <a id="closure-adverb"/>
 **[:closure](tablet-2-basic-syntax.html#interpolation)**
@@ -1823,7 +1823,7 @@ the left, short circuit or,low precedence version of
 <a id="ERR-global-var"/>
 **\$\*ERR**
 *[«special var»](appendix-b-grouped.html#global-variables)* &mdash;
-file handle for the standard error output (command line mostly),
+[*file handle*](IO-type) for the standard error output (command line mostly),
 in Perl 5: *STDERR*
 
 <a id="EUID-global-var"/>
@@ -2116,8 +2116,7 @@ line](tablet-5-io.html#command-line)
 <a id="getc"/>
 **[getc](tablet-5-io.html#getc)**
 *«handle method»* &mdash;
-reads one character from a file via file
-handle
+reads one character from a file via [*file handle*](IO-type)
 
 <a id="getlogin"/>
 **getlogin** &mdash;
@@ -2178,21 +2177,23 @@ random selection <span class="you-provide">n</span> (only parameter) of hash
 **grammar**
 *«block modifier»* &mdash;
 special kind of **[class](#class)**
-with methods that execute **[regex](#regex)**,
-**[token](#token)**, 
-**[rule](#rule)** and produce [match objects](#match-var)
+with methods like **[regex](#regex)**, **[token](#token)**, **[rule](#rule)**
+that execute [*regex*](appendix-g-glossary.html#regex) and are named subpatterns,
+produces a [match object](#match-var), the name is ment like in
+"Parsing Expression Grammar" (PEG)
 
 <a id="GRAMMAR-compiler-var"/>
 **\$?GRAMMAR**
 *[«special var»](appendix-b-grouped.html#compiler-hint-variables)* &mdash;
-grammar of the currently used language (mostly **[$\~MAIN](#main-slang-var)**)
+[grammar](#grammar) of the currently used [*slang*](appendix-g-glossary.html#slang)
+(mostly **[$\~MAIN](#MAIN-slang-var)**)
 
 <a id="graph-subrule"/>
 **\<graph\>**
 *[«predefined subrule»](appendix-b-grouped.html#subrules)* &mdash;
-a "graphical" character
+a "graphical" character, calles [*grapheme*](#grapheme)
 
-<a id="graphs/>
+<a id="graphs"/>
 **graphs**([Str](#Str-type) [--\>](#double-minus-greater-signature) [Int](#Int-type))
 *«string mmethod»* &mdash;
 number of *[unicode](appendix-g-glossary.html#unicode)*
@@ -2212,9 +2213,10 @@ also: see also: **[:bytes](#bytes-modifier)**,
 **grep**
 *[«array op & method»](tablet-3-variables#array-methods)* &mdash;
 returns all values of an array that pass a filter condition
-(first parameter); the condition is a closure that takes one value
-at a time (as [**`$_`**](#context-var) or `$^a`); see
-also **[first](#first)** &mdash; example : `grep {$_ %% 2}, 1..5 ; # returns 2 4`
+(first parameter), the condition is a closure that takes one value
+at a time (as [**`$_`**](#context-var) or `$^a`) &mdash;
+see also **[first](#first)** &mdash;
+example : `grep {$_ %% 2}, 1..5;` returns: `2, 4`
 
 <a id="gt"/><a id="gt-op"/>
 **gt**
@@ -2350,7 +2352,7 @@ just import definitions from an already loaded module (see
 <a id="IN-global-var"/>
 **\$\*IN**
 *[«special var»](appendix-b-grouped.html#global-variables)* &mdash;
-file handle for thestandard input (command line mostly), see also
+[*file handle*](IO-type) for the standard input (command line mostly), see also
 **[$\*OUT](#OUT-global-var)**, in Perl 5: *STDIN*
 
 <a id="INC-global-var"/>
@@ -2638,8 +2640,9 @@ current line number
 returns a chomped list of lines
 (chunks of character separated by **[\\n](#backslash-n)**)
 containing a string - example: `$str.lines($limit)` equals
-[`$str.comb( / ^^ \N* /, $limit )`](#comb), works also on file handles &mdash;
-see also [**words**](#words)
+[`$str.comb( / ^^ \N* /, $limit )`](#comb),
+works also on [*file handles*](IO-type) &mdash;
+see also: [**words**](#words)
 
 <a id="list"/>
 **list**()
@@ -2981,7 +2984,7 @@ opposite of: **[multi](#multi)**
 <a id="open"/>
 **[open](tablet-5-io.html#open)**
 *«path method»* &mdash;
-establishes a connection to a file via a file path name file handler
+establishes a connection to a file via a [*file handle*](IO-type)
 
 <a id="OPTS-global-var"/>
 **$\*OPTS**
@@ -3027,8 +3030,8 @@ introduces **[package](#package)**-scoped names for variables and
 <a id="OUT-global-var"/>
 **\$\*OUT**
 *[«special var»](appendix-b-grouped.html#global-variables)* &mdash;
-file handle for standard output (command line mostly), see also
-**[$\*IN](#IN-global-var)**, in Perl 5: *STDOUT*
+[*file handle*](IO-type) for standard output (command line mostly) &mdash;
+see also: **[$\*IN](#IN-global-var)**, in Perl 5: *STDOUT*
 
 <a id="ov-modifier"/>
 **:ov** *[«regex modifier»](appendix-b-grouped.html#regex-modifier)* &mdash;
@@ -3894,7 +3897,7 @@ seconds (with sub-second resolution)
 <a id="slurp"/>
 **[slurp](tablet-2-basic-syntax.html#files)**
 *«path and file handle method»* &mdash;
-reads an entire file into a string without a file handle
+reads an entire file into a string without a [*file handle*](IO-type)
 
 <a id="so"/><a id="so-op"/>
 **so**

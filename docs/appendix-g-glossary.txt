@@ -303,7 +303,6 @@ address of data in memory, often termed a capture in Perl 6
 **Regex** *(regular expression)* &mdash;
 in Perl5 its a pattern matching notation, here a whole language that does the same
 
-
 <a id="routine"/>
 **routine** &mdash;
 [block](#block) of code callable by name,
