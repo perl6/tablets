@@ -555,7 +555,7 @@ for grouping with autoquoting, alias to
 *[«twigil»](appendix-b-grouped.html#twigils)* &mdash;
 [circumfix](#circumfix-category)
 *[twigil](appendix-g-glossary.html#twigil)* of named captures, **`$<...>`**
-is alias to [**`$/<...>`**](#match-var), is *$&* and *$MATCH* in Perl 5
+is alias to [**`$/<...>`**](#match-var), in Perl 5: *$&* and *$MATCH*
 
 <a id="angle-brackets-metachar"/>
 **\< \>**
@@ -1859,7 +1859,7 @@ as Perl code (like **[eval](#eval)**) replaced with its result, alias to
 <a id="EXECUTABLE-NAME-global-var"/>
 **\$\*EXECUTABLE\_NAME**
 *[«special var»](appendix-b-grouped.html#global-variables)* &mdash;
-name of the main scripts file name, is *$0* in Perl 5
+name of the main scripts file name, in Perl 5: *$0* 
 
 <a id="exhaustive-modifier"/>
 **:exhaustive**
@@ -1949,7 +1949,7 @@ tests **[$\_](#context-var)**
 against two values, flip flop operator in the style of awk, can
 test the right operand and become **[False](#False)**
 on the same evaluation it became **[True](#True)**
-in Perl 5 *..* in scalar context
+in Perl 5: *..* in scalar context
 
 <a id="fff"/><a id="fff-op"/>
 **[fff](tablet-4-operators.html#flipflop)**
@@ -1959,7 +1959,7 @@ against two values, flip flop operator in the style of sed, after
 became **[True](#True)**
 (**[$\_](#context-op)** is larger then left value),
 right side will be tested during next loop
-*[iteration](appendix-g-glossary.html#interation)*, in Perl 5 *...* in
+*[iteration](appendix-g-glossary.html#interation)*, in Perl 5: *...* in
 *[scalar context](appendix-g-glossary.html#scalar-contex)*
 
 <a id="FILE-compiler-var"/>
@@ -2112,7 +2112,7 @@ establish a connection to a net host and retrieve information
 **\$\*GID**
 *[«special var»](appendix-b-grouped.html#global-variables)* &mdash; 
 real global ID of the running process
-(**[\$\*PID](#PID-global-var)**) owner, *@(* and *$GID* in Perl 5
+(**[\$\*PID](#PID-global-var)**) owner, in Perl 5: *@(* and *$GID*
 
 <a id="gist"/>
 **gist** *«formater»* &mdash;
@@ -2968,7 +2968,7 @@ sequentially, ends evaluation at the first expression that returns
 **ord**([Str](#Str-type) [--\>](#double-minus-greater-signature) [Int](#Int-type))
 *«string method»* &mdash;
 converts a character into number according a character table
-(*[unicode](appendix-g-glossary.html#unicode)*), reverse of **[char](#char)**
+(*[unicode](appendix-g-glossary.html#unicode)*), reverse of **[chr](#chr)**
 
 <a id="ords"/>
 **ords**([Str](#Str-type) [--\>](#double-minus-greater-signature)
@@ -3143,7 +3143,7 @@ duplication), take **[roll](#roll)** to enable duplication
 <a id="PID-global-var"/>
 **\$\*PID**
 *[«special var»](appendix-b-grouped.html#global-variables)* &mdash;
-ID of the running process, in Perl 5 *\$\$* and *\$PID*
+ID of the running process, in Perl 5: *\$\$* and *\$PID*
 
 <a id="pod-pod-var"/>
 **$=pod**
@@ -3497,8 +3497,7 @@ a pattern definition (without
 **[:ratchet](#ratchet-modifier)** and
 **[:sigspace](#sigspace-modifier)**), can be put in
 a **[grammar](#grammar)**, similar to *qr/.../* in
-Perl 5, see **[rule](#rule)**,
-**[token](#token)**
+Perl 5, see **[rule](#rule)**, **[token](#token)**
 
 <a id="regex-adverb"/>
 **[:regex](tablet-2-basic-syntax.html#regex)**
@@ -4161,6 +4160,11 @@ alias to **[[\\ ]](#square-brackets-backslash-metaop)**
 [metaoperator](appendix-b-grouped.html#metaoperators) &mdash;
 example: `[\+] @a = @a.triangle(&[+])`
 
+<a id="trim"/>
+**trim** *«string method»* &mdash;
+returns a copy of the string, with leading and trailing whitespace
+([**\\s**](#backslash-s)) removed
+
 <a id="True"/>
 **True** &mdash; *[boolean](#Bool-type)* value aka
 Bool::True, 1 in numeric context, opposite of **[False](#False)**
@@ -4213,7 +4217,7 @@ everything within the brackets is uppercase
 <a id="UID-global-var"/>
 **\$\*UID** *[«special var»](appendix-b-grouped.html#global-variables)* &mdash;
 real user ID of the running process
-(**[\$\*PID](#PID-global-var)**) owner (user), is *\@\<* and *\$UID* in Perl 5
+(**[\$\*PID](#PID-global-var)**) owner (user), in Perl 5: *\@\<* and *\$UID* 
 
 <a id="UNDO-phaser"/>
 **UNDO**
