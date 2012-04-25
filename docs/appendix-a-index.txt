@@ -1949,6 +1949,15 @@ opposite of **[True](#True)**
 *[«immutable type»](appendix-b-grouped.html#immutable-types)* &mdash;
 Perl rational (unlimited precision in both parts)
 
+<a id="fc"/>
+**fc**([Str](#Str-type) [--\>](#double-minus-greater-signature) [Str](#Str-type))
+*«string method»* &mdash;
+return a copy of a string where the *[Unicode](appendix-g-glossary.html#unicode)*
+"fold case" operation is done upon,
+suitable for doing caseless string comparisons &mdash;
+see also: [**lc**](#lc) and [**uc**](#uc)
+
+
 <a id="ff"/><a id="ff-op"/>
 **[ff](tablet-4-operators.html#flipflop)**
 *[«conditional»](appendix-b-grouped.html#conditionals)* &mdash;
@@ -2564,8 +2573,10 @@ forces lazy evaluation (calculate values as late as possible),
 default for lists - not scalars
 
 <a id="lc"/>
-**lc** *«string op & method»* &mdash;
-make string lowercase
+**lc**([Str](#Str-type) [--\>](#double-minus-greater-signature) [Str](#Str-type))
+*«string method»* &mdash;
+return a copy of a string where all characters are lowercase &mdash;
+see also: [**fc**](#fc) and [**uc**](#uc)
 
 <a id="lcfirst"/>
 **lcfirst** *«string op & method»* &mdash;
@@ -4245,7 +4256,8 @@ everything within the brackets is uppercase
 **uc**([Str](#Str-type) [--\>](#double-minus-greater-signature) [Str](#Str-type))
 *«string method»* &mdash;
 return a copy of a string where all characters are uppercase,
-usable as operator and as method
+usable as operator and as method &mdash;
+see also: [**fc**](#fc) and [**lc**](#lc)
 
 <a id="UID-global-var"/>
 **\$\*UID** *[«special var»](appendix-b-grouped.html#global-variables)* &mdash;
