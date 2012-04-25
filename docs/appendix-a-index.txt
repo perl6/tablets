@@ -1353,13 +1353,17 @@ marks as a prefix a special block or statement, executed at
 changes access rights of files (like on Unix)
 
 <a id="chomp"/>
-**chomp** *«string method»* &mdash;
-returns a [string](#Str-type) with the last newline
-(if there is one) removed (from only parameter)
+**chomp**([Str](#Str-type) [--\>](#double-minus-greater-signature) [Str](#Str-type))
+*«string method»* &mdash;
+returns a copy of a [string](#Str-type) with the
+last newline ([**\\n**](#backslash-n)) (if there is one) removed &mdash;
+see also: [**chop**](#chop), [**trim**](#trim)
 
 <a id="chop"/>
-**chop** *«string method»* &mdash;
-returns a [string](#Str-type) with the last character removed (from only parameter)
+**chop**([Str](#Str-type) [--\>](#double-minus-greater-signature) [Str](#Str-type))
+*«string method»* &mdash;
+returns a copy of a [string](#Str-type) with the last character removed &mdash;
+see also: [**chomp**](#chomp), [**substr**](#substr)
 
 <a id="chown"/>
 **chown** &mdash; changes owner of files
@@ -3073,7 +3077,8 @@ compatible regular expression *[slang](appendix-g-glossary.html#slang)*
 
 <a id="pack"/>
 **[pack](tablet-2-basic-syntax.html#pack)**
-format values into or from a condensed format
+format values into or from a condensed format,
+which is specified by keys or an own template
 
 <a id="package"/>
 **package** *«block modifier»* &mdash;
@@ -4062,8 +4067,12 @@ parse as [substitution regex](tablet-9-regexes.html#substitution)
 **[s/.../.../](#s-op)**
 
 <a id="substr"/>
-**substr** *«string method»* &mdash;
-the scalar substring function like in Perl 5
+**substr**([Str](#Str-type) $string, [Int](#Int-type) $start, [Int](#Int-type)
+             $length? [--\>](#double-minus-greater-signature) [Str](#Str-type))
+*«string method»* &mdash;
+return a substring of $string from $start position and maybe with $length,
+works like in Perl 5 except fourth parameter was cut &mdash;
+see also: [**chop**](#chop)
 
 <a id="succ"/>
 **succ**([Num](#Num-type) $f)
@@ -4207,7 +4216,8 @@ example: `[\+] @a = @a.triangle(&[+])`
 <a id="trim"/>
 **trim** *«string method»* &mdash;
 returns a copy of the string, with leading and trailing whitespace
-([**\\s**](#backslash-s)) removed
+([**\\s**](#backslash-s)) removed &mdash;
+see also: [**chomp**](#chomp)
 
 <a id="True"/>
 **True** &mdash; *[boolean](#Bool-type)* value aka
