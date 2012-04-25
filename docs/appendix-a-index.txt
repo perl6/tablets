@@ -1179,10 +1179,10 @@ raw binary data
 **but** &mdash; adds a **[role](#role)** to a **[class](#class)**
 
 <a id="bytes"/>
-**bytes**
+**bytes**([Str](#Str-type) [--\>](#double-minus-greater-signature) [Int](#Int-type))
 *«string method»* &mdash;
 number of bytes (a sort of Perl 5's *length*) &mdash;
-see also: **[chars](#chars)**, [**codes*](#codes), [**graphs*](#graphs)
+see also: [**chars**](#chars), [**codes**](#codes), [**graphs**](#graphs)
 
 <a id="bytes-modifier"/>
 **:bytes**
@@ -1323,11 +1323,10 @@ converts every number to a character with that index and combines them to one st
 plural of **[chr](#chr)**, reverse of **[ords](#ords)**
 
 <a id="chars"/>
-**chars**
+**chars**([Str](#Str-type) [--\>](#double-minus-greater-signature) [Int](#Int-type))
 *«string method»* &mdash;
-returns number of characters of a [string](#Str-type),
-in Perl 5: *length* &mdash;
-see also: **[bytes](#bytes)**
+returns number of characters of a string, in Perl 5: *length* &mdash;
+see also: **[bytes](#bytes)**, [**codes**](#codes), [**graphs**](#graphs)
 
 <a id="chars-modifier"/>
 **:chars**
@@ -1445,9 +1444,11 @@ quasi quoting, the commented will be compiles and the AST will
 be returned as result, see also: **[quasi](#quasi)**
 
 <a id="codes/>
-**codes**
+**codes**([Str](#Str-type) [--\>](#double-minus-greater-signature) [Int](#Int-type))
 *«string mmethod»* &mdash;
-number of codepoints in the string in a language-independent way &mdash;
+number of *[unicode](appendix-g-glossary.html#unicode)*
+*[codepoints](appendix-g-glossary.html#codepoints) of a string in a
+language-independent way &mdash;
 see also: [**bytes*](#bytes), [**chars*](#chars), [**graphs*](#graphs)
 
 <a id="codes-modifier"/>
@@ -2179,10 +2180,12 @@ grammar of the currently used language (mostly **[$\~MAIN](#main-slang-var)**)
 a "graphical" character
 
 <a id="graphs/>
-**graphs**
+**graphs**([Str](#Str-type) [--\>](#double-minus-greater-signature) [Int](#Int-type))
 *«string mmethod»* &mdash;
-number of graphemes in the string in a language-independent way &mdash;
-see also: [**bytes*](#bytes), [**chars*](#chars), [**codes*](#codes)
+number of *[unicode](appendix-g-glossary.html#unicode)*
+*[graphemes](appendix-g-glossary.html#graphemes)* of a string,
+in a language-independent way &mdash;
+see also: [**bytes**](#bytes), [**chars**](#chars), [**codes**](#codes)
 
 <a id="graphs-modifier"/>
 **:graphs**
@@ -2894,8 +2897,10 @@ part of a set, *[junctive](appendix-g-glossary.html#junction)* *NOT*
 operator
 
 <a id="normalize"/>
-**normalize** *«string method»* &mdash;
-normalize (repair) *[unicode](appendix-g-glossary.html#unicode)* (UTF) string
+**normalize**([Str](#Str-type) [--\>](#double-minus-greater-signature) [Str](#Str-type))
+*«string method»* &mdash;
+normalize (repair) *[unicode](appendix-g-glossary.html#unicode)* 
+*[string](#Str-type)*
 
 <a id="not"/>
 **not**
@@ -4001,7 +4006,7 @@ internal namespace for block modifier &mdash; example :
 <a id="Str-type"/>
 **Str**
 *[«immutable type»](appendix-b-grouped.html#immutable-types)* &mdash;
-Perl string, a finite sequence of [unicode](appendix-g-glossary.html#unicode)
+Perl string: a finite sequence of [unicode](appendix-g-glossary.html#unicode)
 characters
 
 <a id="Sub-type"/>
