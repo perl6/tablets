@@ -782,7 +782,7 @@ To be used just inside of regexes (rx/.../, m/.../, s/.../.../ and tr/.../.../).
 `\Q[ ... ]`   all metacharacters within the brackets match as literal characters
 `\r`          return
 `\R`          anything but a return
-`\s`          any whitespace character
+`\s`          any whitespace character, \\h | \\v
 `\S`          anything but whitespace
 `\t`          a tab
 `\T`          anything but a tab

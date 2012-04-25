@@ -938,7 +938,8 @@ see also: **[&](#junctive-and)**
 <a id="alnum-subrule"/>
 **\<alnum\>**
 *[«predefined subrule»](appendix-b-grouped.html#subrules)* &mdash;
-a single alphanumeric character, equivalent to **\<+alpha +digit\>**
+a single alphanumeric character,
+equivalent to **\<+[alpha](#alpha-subrule) +[digit](#digit-subrule)\>**
 
 <a id="alpha-subrule"/>
 **\<alpha\>**
@@ -1555,7 +1556,7 @@ a single nondigit character
 <a id="backslash-d"/>
 **\\d**
 *[«escape sequence»](appendix-b-grouped.html#escape-sequences)* &mdash;
-a single digit character
+a single digit character, alias to [**\<digit\>**](#digit-subrule)
 
 <a id="data-pod-var"/>
 **\$=data**
@@ -1609,8 +1610,7 @@ of the list to **[$\*ERR](#ERR-global-var)**
 <a id="digit-subrule"/>
 **\<digit\>**
 *[«predefined subrule»](appendix-b-grouped.html#subrules)* &mdash;
-single (decimal) digit char aka
-**[\\d](#backslash-d)**
+single (decimal) digit char, alias to **[\\d](#backslash-d)**
 
 <a id="dir"/>
 **[dir](tablet-5-io.html#dir)** &mdash;
