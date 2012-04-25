@@ -1232,7 +1232,7 @@ named character or control character
 *[«escape sequence»](appendix-b-grouped.html#escape-sequences)* &mdash;
 codepoint boundary, zero width space between two
 *[unicode](appendix-g-glossary.html#unicode)* codepoints,
-opposite is **\<!|g\>** &mdash;
+opposite is **\<!|c\>** &mdash;
 see also: **[\<|g\>](#pipe-g)** and **[\<|w\>](#pipe-w)**
 
 <a id="cached"/><a id="cached-routine-trait"/>

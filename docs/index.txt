@@ -18,6 +18,8 @@ Therefore the data presented is partial and subject to drastic changes.
 
 Tablets 1-4 have some substance, but most complete are Appenices A, B, D and E.
 
+If you like to help, [look here](https://github.com/perl6/tablets).
+
 ---
 
 [Preface and Introduction](introduction.html)
