@@ -134,6 +134,13 @@ considered contract in Perl 6
 
 # [E](#nav-top)
 
+<a id="e"/>
+**e** *(euler number)* &mdash;
+about 2.7182818284, fundamental mathematical constant,
+important to the commands 
+**[exp](appendix-a-index.html#exp)** and **[log](appendix-a-index.html#log)**
+
+
 <a id="encoding"/>
 **encoding** &mdash;
 

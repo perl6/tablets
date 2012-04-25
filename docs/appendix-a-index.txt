@@ -1871,9 +1871,9 @@ stops all program execution, and returns
 Int $status (first parameter) to the calling environment
 
 <a id="exp"/><a id="exp-op"/>
-**exp**(Num $base, Num $exp? --> Num) &mdash;
+**exp**([Num](#Num-type) $base, [Num](#Num-type) $exp? --> [Num](#Num-type)) &mdash;
 exponentiate, alias method to: $base **[\*\*](#double-asterisk-op)** $exp
-(defaults to e - the euler constant)
+(defaults to *[e](appendix-g-glossary.html#e)*)
 
 <a id="export"/><a id="export-rouine-trait"/>
 **export**
@@ -2612,9 +2612,9 @@ be iterated, alias to **[@()](#at-op)**, see also
 **[flat](#flat)** and **[lol](#lol)**
 
 <a id="log"/>
-**[log](operators.html)** &mdash;
-logarithm of $x (first parameter) to the $base (second optional
-parameter - default is *e* (euler constant), together also known as *ln*)
+**[log](operators.html)**(Num $x, Num $base?) &mdash;
+logarithm of $x to the $base
+(default is *[e](appendix-g-glossary.html#e)*, together also known as *ln*)
 
 <a id="log10"/>
 **[log10](operators.html)** &mdash;
