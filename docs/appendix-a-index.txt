@@ -4072,6 +4072,7 @@ parse as [substitution regex](tablet-9-regexes.html#substitution)
 *«string method»* &mdash;
 return a substring of $string from $start position and maybe with $length,
 works like in Perl 5 except fourth parameter was cut &mdash;
+example: `substr('Hackathon', 1, 3)` returns `'ack'` &mdash;
 see also: [**chop**](#chop)
 
 <a id="succ"/>
