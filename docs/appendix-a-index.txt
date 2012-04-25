@@ -4115,6 +4115,12 @@ correct spelling (:2nd)
 specifies the [precedence of an operator](appendix-b-grouped.html#table-of-precedence)
 higher than an existing operator
 
+<a id="titlecase"/>
+**titlecase**([Str](#Str-type) [--\>](#double-minus-greater-signature) [Str](#Str-type))
+*«string method»* &mdash;
+performs a [Unicode](appendix-g-glossary.html#unicode) titlecase operation
+on the first character of each word of the string
+
 <a id="to-adverb"/>
 **[:to](tablet-2-basic-syntax.html#heredocs)**
 *[«quoting adverb»](appendix-b-grouped.html#quoting-adverbs)* &mdash;
@@ -4230,11 +4236,11 @@ report if file has setuid bit set
 *[«escape sequence»](appendix-b-grouped.html#escape-sequences)* &mdash;
 everything within the brackets is uppercase
 
-<a id="uc"/>
-**uc** &mdash; make all string chars uppercase
-
-<a id="ucfirst"/>
-**ucfirst** &mdash; make first char of a string uppercase
+<a id="uc"/><a id="uc-op"/>
+**uc**([Str](#Str-type) [--\>](#double-minus-greater-signature) [Str](#Str-type))
+*«string method»* &mdash;
+return a copy of a string where all characters are uppercase,
+usable as operator and as method
 
 <a id="UID-global-var"/>
 **\$\*UID** *[«special var»](appendix-b-grouped.html#global-variables)* &mdash;
@@ -4303,7 +4309,7 @@ see also **[need](#need)** and **[import](#import)**)
 <a id="backslash-V"/>
 **\\V**
 *[«escape sequence»](appendix-b-grouped.html#escape-sequences)* &mdash;
-anything but vertical whitespace
+anything but vertical whitespace ([**\\v**](#backslash-v))
 
 <a id="backslash-v"/>
 **\\v**
@@ -4333,7 +4339,7 @@ example: `(1 => 2, 3 => 4).values;` returns `2,4`
 <a id="VM-global-var"/>
 **\$\*VM**
 *[«special var»](appendix-b-grouped.html#global-variables)* &mdash;
-running virtual machine, might want to use `*$*VM.name` &mdash;
+running virtual machine, might want to use `$*VM.name` &mdash;
 see also: **[\$\*DISTRO](#DISTRO-global-var)** and
 **[\$\*KERNEL](#KERNEL-global-var)**
 
