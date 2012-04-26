@@ -39,8 +39,8 @@ Punctuation
 <a id="exclamation-context"/><a id="negation-op"/>
 **\!** 
 *[«context op»](appendix-b-grouped.html#contextualizers)* &mdash;
-logical negation ([*NOT*](appendix-g-glossary.html#not)), forces
-[boolean context](tablet-4-operators.html#bool-context),
+*[prefix](#prefix-category)* logical negation ([*NOT*](appendix-g-glossary.html#not)),
+forces [boolean context](tablet-4-operators.html#bool-context),
 high precedence version of [**not**](#not)
 
 <a id="exclamation-twigil"/>
@@ -198,7 +198,7 @@ match multiple patterns (*[AND](appendix-g-glossary.html#and)*-connection of pat
 <a id="double-ampersand-metachar"/><a id="logical-and"/>
 **&&**
 *[«logical op»](tablet-4-operators.html#logical-selection)* &mdash;
-short circuit logical *[AND](appendix-g-glossary.html#and)*,
+*[infix](#infix-category)* short circuit logical *[AND](appendix-g-glossary.html#and)*,
 [evaluates](appendix-g-glossary.html#evaluation) sequentially left to right
 its operands until one is [**False**](#False) in
 [*boolean context*](appendix-g-glossary.html#boolean-context),
@@ -423,7 +423,7 @@ last created match object of this
 **//**
 *[«logical op»](tablet-4-operators.html#logical-selection)* &mdash;
 short circuit *defined or*, returns the first defined value
-(from left to right), similar to **[||](#double-pipe-op)**,
+(from left to right), similar to **[||](#double-pipe-op)** &mdash;
 high precedence version of **[err](#err)**
 
 <a id="backslash-0"/><a id="backslash-zero"/>
@@ -708,13 +708,14 @@ opposite of [**\<!\>**](#exclamation-subrule)
 *[«bool op»](tablet-4-operators.html#bool-context)* &mdash;
 logical *[AND](appendix-g-glossary.html#and)* op, forces binary context
 
-<a id="double-question"/><a id="double-question-double-exclamation"/><a id="conditional-op"/>
+<a id="double-question"/><a id="double-question-double-exclamation"/>
+<a id="conditional-op"/><a id="ternary-op"/>
 **?? !!**
 *[«conditional»](appendix-b-grouped.html#conditionals)* &mdash;
 ternary or conditional operator,
 shortcut for **[if](#if)** and
 **[else](#else)** &mdash;
-see also: **[ff](#ff)** and **[fff](#fff)**
+see also: [**||**](#logical-or), [**ff**](#ff), [**fff**](#fff)
 
 <a id="triple-question"/><a id="triple-question-op"/><a id="triple-question-yadda"/>
 **???**
@@ -873,14 +874,14 @@ object into arglist, (named parameter)
 <a id="double-pipe-op"/><a id="logical-or"/>
 **||**
 *[«logical op»](tablet-4-operators.html#logical-selection)* &mdash;
-short circuit logical *[OR](appendix-g-glossary.html#or)*, 
+*[infix](#infix-category)* short circuit logical *[OR](appendix-g-glossary.html#or)*, 
 [evaluates](appendix-g-glossary.html#evaluation) sequentially left to right
 its operands until one is [**True**](#True) in boolean context,
 if there is one then the result is **True** in bool context,
 otherwise the first *True* value is returned or the last one,
 high precedence version of **[or](#or)** &mdash;
 example: `(3 || 5)` returns `3` &mdash;
-see also: [**|**](#junctive-or)
+see also: [**|**](#junctive-or), [**?? !!**](#ternary-op)
 
 <a id="double-pipe-metachar"/>
 **||**
@@ -1003,7 +1004,7 @@ a single alphabetic character
 <a id="and"/>
 **and**
 *[«logical op»](tablet-4-operators.html#logical-selection)* &mdash;
-short circuit logical *[AND](appendix-g-glossary.html#and)*,
+*[infix](#infix-category)* short circuit logical *[AND](appendix-g-glossary.html#and)*,
 [evaluates](appendix-g-glossary.html#evaluation) sequentially left to right
 its operands until one is [**False**](#False) in
 [*boolean context*](appendix-g-glossary.html#boolean-context),
@@ -3018,7 +3019,7 @@ normalize (repair) *[unicode](appendix-g-glossary.html#unicode)*
 <a id="not"/>
 **not**
 *[«context op»](appendix-b-grouped.html#contextualizers)* &mdash;
-logical [*NOT*](appendix-g-glossary.html#not) operator,
+*[prefix](#prefix-category)* logical [*NOT*](appendix-g-glossary.html#not) operator,
 converts to *[boolean context](appendix-g-glossary.html#bool-context)*,
 low precedence version of **[!()](#exclamation-op)**
 
@@ -3101,7 +3102,7 @@ options from command line
 <a id="double-pipe-op"/><a id="logical-or"/>
 **||**
 *[«logical op»](tablet-4-operators.html#logical-selection)* &mdash;
-short circuit logical *[OR](appendix-g-glossary.html#or)*, 
+*[infix](#infix-category)*, short circuit, logical, *[OR](appendix-g-glossary.html#or)*, 
 [evaluates](appendix-g-glossary.html#evaluation) sequentially left to right
 its operands until one is [**True**](#True) in boolean context,
 if there is one then the result is **True** in bool context,
@@ -4714,13 +4715,13 @@ zero-width space inside of a word between two
 *[«list op»](tablet-4-operators.html#list-generation)* &mdash;
 Cross product of two arrays, alias of
 **[cross](#cross)** method &mdash;
-example: `1,2 X 3,4 == 1,3,1,4,2,3,2,4;`
+example: `1,2 X 3,4` retuns `1,3,1,4,2,3,2,4;`
 
 <a id="x-op"/>
 **x**
 *[«string op»](tablet-4-operators.html#string-context)* &mdash;
 string replicate operator to single string &mdash;
-example: `'ab' x 3 == 'ababab';`
+example: `'ab' x 3` returns `'ababab';`
 
 <a id="X-metaop"/>
 **X**<span class="you-provide">op</span>
@@ -4774,7 +4775,7 @@ single hexadecimal digit char
 <a id="xor-op"/>
 **xor**
 *[«logical op»](tablet-4-operators.html#logical-selection)* &mdash;
-[infix](#infix-category) logical (*[XOR](appendix-g-glossary.html#xor)*) operator
+*[infix](#infix-category)* logical (*[XOR](appendix-g-glossary.html#xor)*) operator
 that operates with into *[bool context](appendix-g-glossary.html#bool-context)*
 converted values of both operands without changing their content,
 in *bool context* it returns **[True](#True)** or *False* as expected,
@@ -4787,10 +4788,10 @@ see also: [**or**](#or), [**err**](#err)
 
 <a id="xx-op"/>
 **xx**
-*[«infix list op»](tablet-4-operators.html#list-generation)* &mdash;
+*[«list op»](tablet-4-operators.html#list-generation)* &mdash;
 replicate a list <span class="you-provide">l</span> (left operand)
 <span class="you-provide">n</span> times (right operand) &mdash;
-example: `'ab' xx 3 = <ab ab ab>`
+example: `'ab' xx 3` returns `<ab ab ab>`
 
 
 
@@ -4803,27 +4804,27 @@ example: `'ab' xx 3 = <ab ab ab>`
 **Z**
 *[«list op»](tablet-4-operators.html#list-generation)* &mdash;
 alias to **[zip](#zip-op)**,
-joines 2 lists and stops when one list runs out of elements, returning
-always an list with an even length &mdash;
+joines *[infix](#infix-category)* 2 lists and stops when one list runs out of elements,
+returning always an list with an even length &mdash;
 example: `1,2,3,4 Z 8,9 == 1,8,2,9` &mdash; see also: **[roundrobin](#roundrobin)**
 
 <a id="Z-metaop"/>
 **Z**<span class="you-provide">op</span>
 *[«meta op»](appendix-g-glossary.html#metaoperators)* &mdash;
-joines the values from same position of 2 lists with following
-operator and produces in that manner a new list
+joines *[infix](#infix-category)* the values from same position of 2 lists
+with following operator and produces in that manner a new list
 
 <a id="zip"/>
 **zip**
 *[«array op & method»](tablet-3-variables#array-methods)* &mdash;
-zip operator, joines 2 lists, alias to
+*[infix](#infix-category)* zip operator, joines 2 lists, alias to
 **[Z operator](#Z-op)** &mdash;
 example: `@a Z @b = (@a; @b).zip`
 
 <a id="zipwith"/>
 **zipwith**
 *[«meta op»](appendix-g-glossary.html#metaoperators)* &mdash;
-alias method  to **[Z metaoperator](#Z-metaop)** &mdash;
+alias method to **[Z metaoperator](#Z-metaop)** &mdash;
 example: `@a Z~ @b` aka `(@a; @b).zipwith(&[~])` aka `(@a; @b).zip.lol.map { .reduce(&[~]) }`
 
 ***

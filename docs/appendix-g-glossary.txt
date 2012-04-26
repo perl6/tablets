@@ -285,7 +285,7 @@ following operator working with that logic:
 [**or**](appendix-a-index.html#or)
 [**orelse**](appendix-a-index.html#orelse),
 [**err**](appendix-a-index.html#err) &mdash;
-other logical operations are: [*and*](#and) and [*xor*](#xor), [*not*](#not)
+other logical operations are: [*and*](#and), [*xor*](#xor), [*not*](#not)
 
 
 # [P](#nav-top)
