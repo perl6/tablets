@@ -150,6 +150,7 @@ Variable
   * [special variables](appendix-b-grouped.html#special-variables)
      have their own namespace (`$*VARNAME` and `$?VARNAME`),
      also token (`__LINE__`) will now be found there
+  * no *Data::Dump*, use `$var.perl.say` instead
 
 Strings
 -------
