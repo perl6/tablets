@@ -198,9 +198,15 @@ match multiple patterns (*[AND](appendix-g-glossary.html#and)*-connection of pat
 <a id="double-ampersand-metachar"/><a id="logical-and"/>
 **&&**
 *[«logical op»](tablet-4-operators.html#logical-selection)* &mdash;
-short circuit *[AND](appendix-g-glossary.html#and)*,
-evals right side if left side returns **[True](#True)**,
-high precedence version of **[and](#and)**
+short circuit logical *[AND](appendix-g-glossary.html#and)*,
+[evaluates](appendix-g-glossary.html#evaluation) sequentially left to right
+its operands until one is [**False**](#False) in
+[*boolean context*](appendix-g-glossary.html#boolean-context),
+if one was **False** the result in *boolean context* is **False**,
+otherwise the last evaluated operand,
+high precedence version of [**and**](#logical-and) &mdash;
+example: `0 and 7` returns `0` &mdash;
+see also: **[&](#junctive-and)**
 
 <a id="single-quotation"/>
 **[' '](tablet-2-basic-syntax.html#single-quotes)**
@@ -315,12 +321,14 @@ shift right in numeric context
 <a id="plus-caret-op"/><a id="numeric-xor"/>
 **+\^**
 *[«numeric op»](tablet-4-operators.html#numeric-context)* &mdash;
-bitwise *[XOR](appendix-g-glossary.html#xor)* in numeric context
+[infix](#infix-category) bitwise *[XOR](appendix-g-glossary.html#xor)*,
+that looks at ot operands in numeric context
 
 <a id="plus-pipe-op"/><a id="numeric-or"/>
 **+|**
 *[«numeric op»](tablet-4-operators.html#numeric-context)* &mdash;
-bitwise *[OR](appendix-g-glossary.html#or)*, forces numeric context
+[infix](#infix-category) bitwise *[OR](appendix-g-glossary.html#or)*,
+forces numeric context
 
 <a id="comma"/><a id="comma-op"/>
 **[,](tablet-3-variables#array)** 
@@ -381,9 +389,12 @@ which generate lists in *list context*
 
 <a id="triple-dot"/><a id="triple-dot-op"/><a id="sequence-op"/>
 **[...](tablet-4-operators.html#sequence-operator)**
-*[«list op»](tablet-4-operators.html#list-generation)*
-[infix](#infix-category) sequence generating
-operator, infix operator for list generation
+*[«list op»](tablet-4-operators.html#list-generation)* &mdash;
+*[infix](#infix-category)* [sequence](#Seq-type) generating operator,
+can figure from example number out if a series is arithmetic (give 2)
+or geometric (give 3), can produce a sequence with a generator routine &mdash;
+example: `@a = 1, 2, 4 ...` infite lazy list of all powers of two, 
+`1, 1, *+*, ... 1000` returns fibonacci numbers lower equal then 1000
 
 <a id="triple-dot-yadda"/>
 **...**
@@ -400,8 +411,7 @@ divides numbers, forces numeric context
 <a id="slash-composer"/>
 **/** *[«rat composer»](tablet-2-basic-syntax.html#rational-number)*
 inside round brackets (for example `(3/7)`), gives you a
-rational number \([immutable type](appendix-b-grouped.html#immutable-types)
-\) that keeps track of its numerator and denominator
+[rational number](#Rat-type) that keeps track of its numerator and denominator
 
 <a id="slash-var"/><a id="match-var"/>
 **$/** 
@@ -551,7 +561,7 @@ see also: **[==\>](#double-equal-greater-op)**
 <a id="lower-equal-greater-op"/><a id="spaceship-op"/>
 **\<=\>**
 *[«num comparison»](tablet-4-operators.html#numerical-comparison)* &mdash;
-numeric, infix less-equal-greater comparison for sortable classes,
+numeric, *[infix](#infix-category)* less-equal-greater comparison for sortable classes,
 so called "spaceship operator",
 does a **[cmp](#cmp)** of the into numeric context converted values of both sides,
 as **[leg](#leg)** does in *[string](#Str-type)* context &mdash;
@@ -646,12 +656,11 @@ alternative to the *[adverbial syntax](#colon-adverb)*
 <a id="greater-op"/>
 **\>**
 *[«num comparison»](tablet-4-operators.html#numerical-comparison)* &mdash;
-[infix](#infix-category) op, numeric greater than
+*[infix](#infix-category)* op, numeric greater than
 
 <a id="greater-equal-op"/>
 **\>=** *[«num comparison»](tablet-4-operators.html#numerical-comparison)*
-[infix](#infix-category) op, numeric greater than
-or equal
+*[infix](#infix-category)* comparison op, numeric greater than or equal
 
 <a id="double-greater-metaop"/>
 **\>\>**
@@ -716,12 +725,14 @@ that calls **[warn](#warn)**
 <a id="question-caret-op"/><a id="boolean-xor"/>
 **?\^**
 *[«bool op»](tablet-4-operators.html#bool-context)* &mdash;
-logical *[XOR](appendix-g-glossary.html#xor)*, forces operands into boolean context
+logical *[infix](#infix-category)* *[XOR](appendix-g-glossary.html#xor)*,
+forces operands into boolean context
 
 <a id="question-pipe-op"/><a id="boolean-or"/>
 **?|**
 *[«bool op»](tablet-4-operators.html#bool-context)* &mdash;
-logical *[OR](appendix-g-glossary.html#or)*, forces operands into boolean context
+*[infix](#infix-category)* logical *[OR](appendix-g-glossary.html#or)*,
+forces operands into boolean context
 
 <a id="at"/><a id="at-sigil"/>
 **@**
@@ -778,7 +789,8 @@ and [regexes](appendix-b-grouped.html#escape-sequences) start with it
 <a id="caret"/><a id="caret-op"/><a id="junctive-xor"/>
 **\^**
 *[«junctive op»](tablet-4-operators.html#junctions)* &mdash;
-*[junctive](appendix-g-glossary.html#junction)* *[XOR](appendix-g-glossary.html#xor)*,
+*[junctive](appendix-g-glossary.html#junction)* *[infix](#infix-category)*
+*[XOR](appendix-g-glossary.html#xor)*,
 requires that one value in a list is **[True](#True)** &mdash;
 see also **[one](#one)**
 
@@ -861,10 +873,14 @@ object into arglist, (named parameter)
 <a id="double-pipe-op"/><a id="logical-or"/>
 **||**
 *[«logical op»](tablet-4-operators.html#logical-selection)* &mdash;
-short circuit *[OR](appendix-g-glossary.html#or)*, evaluates sequentially,
-ends [evaluation](appendix-g-glossary.html#evaluation) at
-the first expression that returns **[True](#True)**,
-high precedence version of **[or](#or)**
+short circuit logical *[OR](appendix-g-glossary.html#or)*, 
+[evaluates](appendix-g-glossary.html#evaluation) sequentially left to right
+its operands until one is [**True**](#True) in boolean context,
+if there is one then the result is **True** in bool context,
+otherwise the first *True* value is returned or the last one,
+high precedence version of **[or](#or)** &mdash;
+example: `(3 || 5)` returns `3` &mdash;
+see also: [**|**](#junctive-or)
 
 <a id="double-pipe-metachar"/>
 **||**
@@ -988,17 +1004,23 @@ a single alphabetic character
 **and**
 *[«logical op»](tablet-4-operators.html#logical-selection)* &mdash;
 short circuit logical *[AND](appendix-g-glossary.html#and)*,
-returns the last defined value (from left to right),
-low precedence version of **[&&](#high-and)**, similar to **[andthen](#andthen)**
+[evaluates](appendix-g-glossary.html#evaluation) sequentially left to right
+its operands until one is [**False**](#False) in
+[*boolean context*](appendix-g-glossary.html#boolean-context),
+if one was **False** the result in *boolean context* is **False**,
+otherwise the last evaluated operand,
+low precedence version of **[&&](#logical-and)** &mdash;
+example: `'hurray' and 0` returns `0` &mdash;
+see also: **[andthen](#andthen)**, **[all](#all)**
 
 <a id="andthen"/>
 **andthen**
 *«logical op»* &mdash;
 logical *[AND](appendix-g-glossary.html#and)* short circuit operator,
-transferring **[$\_](#context-var)** from first to
-second block/expression, if first do succeed &mdash;
+transferring **[$\_](#context-var)** from first to second block or expression,
+if first did succeed &mdash;
 example: `{...} andthen { .say }` &mdash;
-see also: **[orelse](#orelse)**
+see also: [**orelse**](#orelse), [**and**](#orelse)
 
 <a id="anon"/>
 **anon**
@@ -1859,8 +1881,8 @@ environment variables (of the shell), in Perl 5: *%ENV*
 [infix](#infix-category) operator, proves
 equality in forced *[string
 context](tablet-4-operators.html#string-context)*
-as does **[==](#double-equal-op)** in numeric
-context
+as does **[==](#double-equal-op)** in
+[numeric context](appendix-g-glossary.html#numeric-context)
 
 <a id="equiv"/>
 **equiv**
@@ -1878,8 +1900,8 @@ contrast with static **[=](#triple-equal)**
 <a id="err"/><a id="err-op"/>
 **err** *[«logical op»](tablet-4-operators.html#logical-selection)* &mdash;
 short circuit defined or, returns the first defined value from
-the left, short circuit or,low precedence version of
-**[//](#defined-or)**
+the left, low precedence version of **[//](#defined-or)** &mdash;
+see also: [**or**](#or)
 
 <a id="ERR-global-var"/>
 **\$\*ERR**
@@ -1890,8 +1912,7 @@ in Perl 5: *STDERR*
 <a id="EUID-global-var"/>
 **\$\*EUID**
 *[«special var»](appendix-b-grouped.html#global-variables)* &mdash;
-effective user ID of the running process
-(**[\$\*PID](#PID-global-var)**) owner,
+effective user ID of the running process (**[\$\*PID](#PID-global-var)**) owner,
 in Perl 5: *@\>* and *$EUID* 
 
 <a id="eval"/>
@@ -3077,11 +3098,17 @@ options from command line
 <a id="or"/>
 **or**
 *[«logical op»](tablet-4-operators.html#logical-selection)* &mdash;
-short circuit *[OR](appendix-g-glossary.html#or)*, [evaluates](#evaluation)
-sequentially, ends evaluation at the first expression that returns
-**[True](#True)**, low precedence version of
-**[||](#high-or)**, similar to
-**[orelse](#orelse)**
+<a id="double-pipe-op"/><a id="logical-or"/>
+**||**
+*[«logical op»](tablet-4-operators.html#logical-selection)* &mdash;
+short circuit logical *[OR](appendix-g-glossary.html#or)*, 
+[evaluates](appendix-g-glossary.html#evaluation) sequentially left to right
+its operands until one is [**True**](#True) in boolean context,
+if there is one then the result is **True** in bool context,
+otherwise the first *True* value is returned or the last one,
+low precedence version of **[||](#logical-or)** &mdash;
+example: `?('hurray' or 5)` returns `True` &mdash;
+see also: [**orelse**](#orelse) , [**any**](#any)
 
 <a id="ord"/>
 **ord** ([Str](#Str-type) [--\>](#double-minus-greater-signature) [Int](#Int-type))

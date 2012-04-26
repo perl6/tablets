@@ -32,7 +32,7 @@ following operator working with that logic:
 [**all**](appendix-a-index.html#all),
 [**and**](appendix-a-index.html#and)
 [**andthen**](appendix-a-index.html#andthen) &mdash;
-see also [*or*](#or), [*xor*](#xor), [*not*](#not)
+other logical operations are [*or*](#or), [*xor*](#xor), [*not*](#not)
 
 <a id="argument"/>
 **argument** &mdash; another word for *[parameter](#parameter)*
@@ -256,7 +256,7 @@ see also: **[multi](appendix-a-index.html#multi)**
 logical operation that changes a true into false and vice versa,
 following operator working with that logic:
 [**!()**](appendix-a-index.html#negation-op), [**not**](appendix-a-index.html#not) &mdash;
-see also [*and*](#and), [*or*](#or), [*xor*](#xor) 
+other logical operations are: [*and*](#and), [*or*](#or), [*xor*](#xor) 
 
 
 <a id="numeric-context"/>
@@ -285,7 +285,7 @@ following operator working with that logic:
 [**or**](appendix-a-index.html#or)
 [**orelse**](appendix-a-index.html#orelse),
 [**err**](appendix-a-index.html#err) &mdash;
-see also [*and*](#and) and [*xor*](#xor), [*not*](#not)
+other logical operations are: [*and*](#and) and [*xor*](#xor), [*not*](#not)
 
 
 # [P](#nav-top)
