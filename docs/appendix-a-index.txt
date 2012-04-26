@@ -421,9 +421,9 @@ first positional submatch, there is **`$1`**, **`$2`**, ... too
 [**\$\*EXECUTABLE\_NAME**](#EXECUTABLE-NAME-global-var)
 
 <a id="colon"/><a id="colon-adverb"/>
-**:**() &mdash;
-*[pair](tablet-3-variables#pair)*
-generation operator, also known as *adverbial* syntax &mdash;
+**:**<span class="you-provide">s</span>(<span class="you-provide">s</span>) &mdash;
+*[pair](#Pair-type)* generation operator,
+also known as *adverbial* syntax &mdash;
 example: *`$pair = :key('value')`*
 
 <a id="colon-test"/>
@@ -1380,7 +1380,7 @@ change root directory on POSIX systems
 
 <a id="cis"/>
 **cis** *«num method»* &mdash;
-see also: [**polar**](#polar), [**unpolar**](#unpolar)
+see also: [**conj**](#conj), [**polar**](#polar), [**unpolar**](#unpolar)
 
 <a id="circumfix-category"/>
 **circumfix** *[«grammatical category»](appendix-b-grouped.html#categories)* &mdash;
@@ -3229,8 +3229,7 @@ magnitude or angle corresponding to the
 [complex number](#Complex-type) (only parameter),
 the magnitude is non-negative, and the angle in the
 [range](#range-op) -π ..\^ π &mdash;
-see also: [**cis**](#cis), [**unpolar**](#unpolar)
-
+see also: [**cis**](#cis), [**conj**](#conj), [**unpolar**](#unpolar)
 
 <a id="pop"/>
 **pop**
@@ -3668,8 +3667,8 @@ name of the current role
 **roll**
 *[«array method»](tablet-3-variables#array-methods)* &mdash;
 selects <span class="you-provide">n</span> (first parameter) values from an array,
-duplication can occur (like rolling dice), **[pick](#pick)**
-works without duplication
+duplication can occur (like rolling dice),
+**[pick](#pick)** works without duplication
 
 <a id="roots"/>
 **roots** (Num $f, Int $n) &mdash; compute the $n'th root of $f &mdash;
@@ -3688,7 +3687,8 @@ alias to `@a.push: @a.shift;`
 «num method» &mdash;
 returns the nearest whole number &mdash;
 example: `round 5.5` returns `6`, `round -5.5` returns `-5` &mdash;
-see also: [**ceiling**](#ceiling), [**floor**](#floor), [**truncate**](#truncate)
+see also: [**abs**](#abs), [**ceiling**](#ceiling), [**floor**](#floor),
+[**truncate**](#truncate)
 
 
 <a id="roundrobin"/>
@@ -4360,7 +4360,7 @@ no **[elsif](#elsif)** or **[else](#else)** is allowed to follow
 
 <a id="unpolar"/>
 **unpolar** *«num method»* &mdash;
-see also: [**cis**](#cis)
+see also: [**cis**](#cis), [**conj**](#conj), [**polar**](#polar)
 
 <a id="until"/>
 **[until](tablet-6-blocks.html#until)**
@@ -4737,7 +4737,8 @@ example: `@a Z @b = (@a; @b).zip`
 
 <a id="zipwith"/>
 **zipwith**
-*«list method»* &mdash; alias to **[Z metaoperator](#Z-metaop)** &mdash;
+*[«meta op»](appendix-b-grouped.html#metaoperators)* &mdash;
+alias method  to **[Z metaoperator](#Z-metaop)** &mdash;
 example: `@a Z~ @b` aka `(@a; @b).zipwith(&[~])` aka `(@a; @b).zip.lol.map { .reduce(&[~]) }`
 
 ***
