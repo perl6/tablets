@@ -7,10 +7,10 @@ questions like: "Can I do *functional programming* in Perl 6?" or
 "What kind of *iterators* are present and how they are spelled?"
 
 <a id="nav-top"/>
-**Navigation:** [A](#a) [B](#b) [C](#c) [D](#d) [E](#e)
-[F](#f) [G](#g) [H](#h) [I](#i) [J](#j) [K](#k) [L](#l)
+**Navigation:    [A](#a) [B](#b) [C](#c) [D](#d) [E](#e)
+[F](#f)  [G](#g) [H](#h) [I](#i) [J](#j) [K](#k) [L](#l)
 [M](#m#) [N](#n) [O](#o) [P](#p) [Q](#q) [R](#r) [S](#s)
-[T](#t#) [U](#u) [V](#v) [W](#w) [X](#x) [Y](#y) [Z](#z)
+[T](#t#) [U](#u) [V](#v) [W](#w) [X](#x) [Y](#y) [Z](#z)**
 
 
 # [A](#nav-top)
@@ -20,9 +20,19 @@ questions like: "Can I do *functional programming* in Perl 6?" or
 ([compile time](#compile-time) or [run time](#run-time))
 
 <a id="and"/>
-**and** &mdash; logical operation that has only a true result if both operands
-(incoming information) are also true, otherwise result is false,
-see also [*or*](#or) and [*xor*](#xor) 
+**and** &mdash;
+logical operation that has only the result **True** if both operands
+(incoming information) are also true, otherwise result is **False**
+following operator working with that logic:
+[**|**](appendix-a-index.html#junctive-and),
+[**||**](appendix-a-index.html#logical-and),
+[**+|**](appendix-a-index.html#numeric-and),
+[**?|**](appendix-a-index.html#boolean-and),
+[**~|**](appendix-a-index.html#string-and),
+[**all**](appendix-a-index.html#all),
+[**and**](appendix-a-index.html#and)
+[**andthen**](appendix-a-index.html#andthen) &mdash;
+see also [*or*](#or), [*xor*](#xor), [*not*](#not)
 
 <a id="argument"/>
 **argument** &mdash; another word for *[parameter](#parameter)*
@@ -241,6 +251,14 @@ see also: **[multi](appendix-a-index.html#multi)**
 <a id="named-parameter"/>
 **named parameter** &mdash;
 
+<a id="not"/>
+**not** &mdash;
+logical operation that changes a true into false and vice versa,
+following operator working with that logic:
+[**!()**](appendix-a-index.html#negation-op), [**not**](appendix-a-index.html#not) &mdash;
+see also [*and*](#and), [*or*](#or), [*xor*](#xor) 
+
+
 <a id="numeric-context"/>
 **numeric context** &mdash;
 [Num](appendix-a-index.html#Num-type)
@@ -253,9 +271,21 @@ programming paradigm (style), that arranges data and functions
 that belong together into so called objects
 
 <a id="or"/>
-**or** &mdash; logical operation that has a true result if at least one of two
-operands (incoming information) is also true, otherwise result is false,
-see also [*and*](#and) and [*xor*](#xor) 
+**or** &mdash;
+logical operation that has a the result **True** if at least one of two
+operands (incoming information) is also true, otherwise result is **False**
+following operator working with that logic:
+[**|**](appendix-a-index.html#junctive-or),
+[**||**](appendix-a-index.html#logical-or),
+[**//**](appendix-a-index.html#defined-or),
+[**+|**](appendix-a-index.html#numeric-or),
+[**?|**](appendix-a-index.html#boolean-or),
+[**~|**](appendix-a-index.html#string-or),
+[**any**](appendix-a-index.html#any),
+[**or**](appendix-a-index.html#or)
+[**orelse**](appendix-a-index.html#orelse),
+[**err**](appendix-a-index.html#err) &mdash;
+see also [*and*](#and) and [*xor*](#xor), [*not*](#not)
 
 
 # [P](#nav-top)
@@ -314,7 +344,9 @@ address of data in memory, often termed a capture in Perl 6
 
 <a id="regex"/>
 **Regex** *(regular expression)* &mdash;
-in Perl5 its a pattern matching notation, here a whole language that does the same
+in Perl 5 its a pattern matching notation,
+in Perl 6 a whole rearranged language that does the same,
+a [whole page](tablet-9-regexes.html) is dedicated just about that subject
 
 <a id="routine"/>
 **routine** &mdash;
@@ -426,9 +458,17 @@ strange names that start with UTF are most probably Unicode formats
 
 <a id="xor"/>
 **xor** *(eXclusive OR)* &mdash;
-logical operation that has a true result if only one of two
-operands (incoming information) is also true, otherwise result is false,
-see also [*and*](#and) and [*or*](#or) 
+logical operation that has a the result **True** if only one of two
+operands (incoming information) is also true, otherwise result is **False**,
+following operator working with that logic:
+[**\^**](appendix-a-index.html#junctive-xor),
+[**\^\^**](appendix-a-index.html#logical-xor),
+[**+\^**](appendix-a-index.html#numeric-xor),
+[**?\^**](appendix-a-index.html#boolean-xor),
+[**~\^**](appendix-a-index.html#string-xor),
+[**one**](appendix-a-index.html#one),
+[**xor**](appendix-a-index.html#xor) &mdash;
+other logical operations are: [*and*](#and), [*or*](#or), [*not*](#not)
 
 
 # [Y](#nav-top)
