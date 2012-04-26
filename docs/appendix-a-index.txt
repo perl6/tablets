@@ -2189,9 +2189,11 @@ real global ID of the running process
 (**[\$\*PID](#PID-global-var)**) owner, in Perl 5: *@(* and *$GID*
 
 <a id="gist"/>
-**gist** *«formater»* &mdash;
-generates a **[Str](#Str-type)** with the essential content of
-that object for human consumption (like in error messages),
+**gist**
+( [--\>](#double-minus-greater-signature) [Str](#Str-type))
+*«formater»* &mdash;
+generates a string with the essential content of that object
+for human consumption (like in error messages),
 **[Mu](#Mu-type)** will foreward to **[.perl](#perl)**
 
 <a id="given"/>
@@ -3222,9 +3224,12 @@ long for **[:p](#p-adverb)** or use **[qp](#qp-op)** directly
 
 <a id="perl"/>
 **[perl](tablet-2-basic-syntax.html#perl)**
-*«formater»* &mdash; transforms data structure (object) into Perl 6 source syntax,
-use **[eval](#eval)** onto that string and you get the data structure again,
-bit like Perl 5 *Data::Dump*
+( [--\>](#double-minus-greater-signature) [Str](#Str-type))
+*«formater»* &mdash;
+transforms data structure (object) into syntax of Perl 6 source code,
+in most cases **[eval](#eval)** turn it back into the data structure,
+use instead of Perl 5: *Data::Dump* &mdash;
+see also: [**gist**](#gist)
 
 <a id="PERL-global-var"/>
 **\$\*PERL**
