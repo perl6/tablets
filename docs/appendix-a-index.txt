@@ -809,10 +809,14 @@ start of the string
 <a id="double-caret-op"/>
 **\^\^**
 *[«logical op»](tablet-4-operators.html#logical-selection)* &mdash;
-logical *[XOR](appendix-g-glossary.html#xor)*, combines expressions,
-returns **[True](#True)** when only one expression is true,
-otherwise false, high precedence version of
-**[xor](#xor)**
+[infix](#infix-category) logical (*[XOR](appendix-g-glossary.html#xor)*) operator
+that operates with into *[bool context](appendix-g-glossary.html#bool-context)*
+converted values of both operands without changing their content,
+in *bool context* it returns **[True](#True)** or *False* as expected,
+in any other context it returns the first none empty value, 
+the second when both are empty and [**Nil**](#Nil-type) when both are not empty,
+[high precedence](appendix-b-grouped.html#table-of-precedence) version of **[xor](#xor)** &mdash;
+example: `say ('dang' ^^ '')` returns `'dang'`
 
 <a id="doule-caret-metachar"/>
 **\^\^**
@@ -3232,7 +3236,7 @@ long for **[:p](#p-adverb)** or use **[qp](#qp-op)** directly
 *«formater»* &mdash;
 transforms data structure (object) into syntax of Perl 6 source code,
 in most cases **[eval](#eval)** turn it back into the data structure,
-use instead of Perl 5: *Data::Dump* &mdash;
+use instead of Perl 5: *Data::Dumper* &mdash;
 see also: [**gist**](#gist)
 
 <a id="PERL-global-var"/>
@@ -3306,8 +3310,8 @@ example(square brackets): `$a[2]`
 <a id="postfix-category"/>
 **postfix**
 *[«grammatical category»](appendix-b-grouped.html#categories)* &mdash;
-operator namespace of ops, that stay after a statement or
-variable (like $a++)
+operator namespace of ops, that stay after a statement or variable &mdash;
+example: [`$a++`](#auto-increment)
 
 <a id="postfix-prefix-meta-operator-category"/>
 **postfix\_prefix\_meta\_operator**
@@ -3322,19 +3326,19 @@ example (greater as): [`@a >>++`](#double-greater-metaop)
 **PRE**
 *[«closure trait»](appendix-b-grouped.html#closure-traits)* &mdash;
 marks as a prefix a special block, assert precondition, executed
-at every block entry, before **[ENTER](#ENTER-phaser)**
+at every block entry, before [**ENTER**](#ENTER-phaser)
 
 <a id="pred"/>
 **pred** ([Num](#Num-type) $f)
 *[«sequence traversion»](tablet-4-operators.html#traversing-sequence)* &mdash;
-returns the predecessor of $f, alias to **[--](#auto-decrement)**
-operator, opposite of **[succ](#succ)**
+returns the predecessor of $f, alias to [**--**](#auto-decrement)
+operator, opposite of [**succ**](#succ)
 
 <a id="prefix-category"/>
 **prefix**
 *[«grammatical category»](appendix-b-grouped.html#categories)* &mdash;
 operator namespace of ops, that stay before a statement or variable &mdash;
-example: `[++$a](#plus-plus)`
+example: [`++$a`](#auto-increment)
 
 <a id="prefix-circumfix-meta-operator-category"/>
 **prefix\_circumfix\_meta\_operator**
@@ -4740,11 +4744,14 @@ single hexadecimal digit char
 <a id="xor-op"/>
 **xor**
 *[«logical op»](tablet-4-operators.html#logical-selection)* &mdash;
-[infix](#infix-category) logical *eXclusive OR*
-operator (*[XOR](appendix-g-glossary.html#xor)*),
-**[True](#True)** if only one side has positive value,
-returns otherwise left value,
-low precedence version of **[\^\^](#double-caret-op)**
+[infix](#infix-category) logical (*[XOR](appendix-g-glossary.html#xor)*) operator
+that operates with into *[bool context](appendix-g-glossary.html#bool-context)*
+converted values of both operands without changing their content,
+in *bool context* it returns **[True](#True)** or *False* as expected,
+in any other context it returns the first none empty value, 
+the second when both are empty and [**Nil**](#Nil-type) when both are not empty,
+low precedence version of [**\^\^**](#double-caret-op) &mdash;
+example: `say (5 xor 0)` returns `5`
 
 <a id="xx-op"/>
 **xx**

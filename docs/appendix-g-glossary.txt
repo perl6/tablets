@@ -425,7 +425,8 @@ strange names that start with UTF are most probably Unicode formats
 # [X](#nav-top)
 
 <a id="xor"/>
-**xor** &mdash; logical operation that has a true result if only one of two
+**xor** *(eXclusive OR)* &mdash;
+logical operation that has a true result if only one of two
 operands (incoming information) is also true, otherwise result is false,
 see also [*and*](#and) and [*or*](#or) 
 
