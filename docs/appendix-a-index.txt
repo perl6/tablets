@@ -508,8 +508,8 @@ on the right
 <a id="double-lower-double-equal-op"/>
 **\<\<==**
 *[«sequencer op»](tablet-4-operators.html#feed-ops)* &mdash;
-leftward pointing feed operator that adds values to an existing
-list (append-mode)
+leftward pointing feed operator that adds values to an existing list (append-mode) &mdash;
+see also: [*\<==*](#lower-double-equal-op) and [*==\>\>*](#double-equal-double-greater-op)
 
 <a id="double-angle-brackets-op"/>
 **[<< \>\>](tablet-2-basic-syntax.html#quote-words)**
@@ -521,15 +521,15 @@ of variables, alias to **Q** **[:qq](#qq-adverb)** **[:ww](#ww-adverb)** **/.../
 <a id="lower-equal-op"/>
 **\<=**
 *[«num comparison»](tablet-4-operators.html#numerical-comparison)* &mdash;
-less than or equal, numeric comparison operator see also **<**
-and **\>=**
+less than or equal, numeric comparison operator &mdash;
+see also: [**<**](#lower-op) and [**\>=**](#greater-equal-op)
 
 <a id="lower-double-equal-op"/><a id="left-pipe-op"/>
 **\<==**
 *[«sequencer op»](tablet-4-operators.html#feed-ops)* &mdash;
 leftward pointing feed operator, take return value of right side
-and feed as parameter to the left, see also
-**[=\>](#equal-equal-greater-op)**
+and feed as parameter to the left &mdash;
+see also: **[==\>](#double-equal-greater-op)**
 
 <a id="lower-equal-greater-op"/><a id="spaceship-op"/>
 **\<=\>**
@@ -582,7 +582,7 @@ examples:
 *[«meta op»](appendix-b-grouped.html#metaoperators)* &mdash;
 self assignment, left side is one operand and place where the
 result is assigned to &mdash;
-example: *($a += 3; equals $a = $a + 3)*
+example: `$a += 3;` equals `$a = $a + 3`
 
 <a id="equal-colon-equal-op"/>
 **=:=** *«comparison op»* &mdash;
@@ -605,13 +605,15 @@ value and [type](appendix-b-grouped.html#value-types)
 **==\>**
 *[«sequencer op»](tablet-4-operators.html#feed-ops)* &mdash;
 rightward pointing feed operator, take return value of left side
-and feed as parameter to the right
+and feed as parameter to the right &mdash;
+see also: [*\<==*](#lower-double-equal-op) and [*==\>\>*](#double-equal-double-greater-op)
+
 
 <a id="double-equal-double-greater-op"/>
 **==\>\>**
 *[«sequencer op»](tablet-4-operators.html#feed-ops)* &mdash;
-rightward pointing feed operator that adds values to an existing
-list (append-mode)
+rightward pointing feed operator that adds values to an existing list (append-mode) &mdash;
+see also: [*==\>*](#double-equal-greater-op) and [*\<\<==*](#double-lower-double-equal-op)
 
 <a id="equal-greater-op"/><a id="fat-arrow"/>
 **=\>**
@@ -1818,7 +1820,7 @@ environment variables (of the shell), in Perl 5: *%ENV*
 [infix](#infix-category) operator, proves
 equality in forced *[string
 context](tablet-4-operators.html#string-context)*
-as does **[=](#equal-equal-op)** in numeric
+as does **[==](#double-equal-op)** in numeric
 context
 
 <a id="equiv"/>
