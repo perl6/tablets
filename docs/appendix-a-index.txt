@@ -1660,9 +1660,13 @@ removes all [pairs](#pair) of which keys are passed
 
 <a id="denominator"/>
 **denominator**
-*[«rat method»](tablet-2-basic-syntax.html#rational-number)*
+( [--\>](#double-minus-greater-signature) [Int](#Int-type))
+*[«rat method»](tablet-2-basic-syntax.html#rational-number)* &mdash;
 returns the denominator of a rational number
-(value type **[Rat](#Rat-type)** and **[FatRat](#FatRat-type)**)
+(value type **[Rat](#Rat-type)** and **[FatRat](#FatRat-type)**),
+opposite of [**numerator**](#numerator) &mdash;
+see also: [**nude**](#nude)
+
 
 <a id="die"/>
 **die** &mdash;
@@ -2989,17 +2993,26 @@ low precedence version of **[!()](#exclamation-op)**
 makes output via command line (**[$\*ERR](#ERR-global-var)**) like **[warn](#warn)**,
 but appends a newline (**[\\n](#backslash-n)**) like **[say](#say)**
 
+<a id="nude"/>
+**nude**
+( [--\>](#double-minus-greater-signature) [Seq](Seq-type)\[[Int](#Int-type)\])
+*[«rat method»](tablet-2-basic-syntax.html#rational-number)* &mdash;
+returns a list of numerator and denominator &mdash;
+see also: [**numerator**](#numerator) and [**denominator**](#denominator)
+
 <a id="Num-type"/>
 **Num**
 *[«immutable type»](appendix-b-grouped.html#immutable-types)* &mdash;
 Perl number (approximate "real", generally via floating point)
 
 <a id="numerator"/>
+( [--\>](#double-minus-greater-signature) [Int](#Int-type))
 **numerator**
 *[«rat method»](tablet-2-basic-syntax.html#rational-number)* &mdash;
 returns the numerator of a rational number (value type **[Rat](#Rat-type)**
-and **[FatRat](#FatRat-type)**)
-
+and **[FatRat](#FatRat-type)**),
+opposite of [**denominator**](#denominator) &mdash;
+see also: [**nude**](#nude)
 
 
 # [O](#nav-top)
@@ -3209,9 +3222,9 @@ long for **[:p](#p-adverb)** or use **[qp](#qp-op)** directly
 
 <a id="perl"/>
 **[perl](tablet-2-basic-syntax.html#perl)**
-*«formater»* &mdash; transforms data structure into Perl 6 source
-syntax; use **[eval](#eval)** onto that string and
-you get the data structure again, bit like *Data::Dump*
+*«formater»* &mdash; transforms data structure (object) into Perl 6 source syntax,
+use **[eval](#eval)** onto that string and you get the data structure again,
+bit like Perl 5 *Data::Dump*
 
 <a id="PERL-global-var"/>
 **\$\*PERL**
@@ -3549,8 +3562,7 @@ iterator over a **Range**
 <a id="Rat-type"/>
 **Rat**
 *[«immutable type»](appendix-b-grouped.html#immutable-types)* &mdash;
-Perl rational number (exact **[Real](#Real-type)**
-numerator, limited denominator)
+Perl rational number (exact **[Real](#Real-type)** numerator, limited denominator)
 
 <a id="ratchet-modifier"/>
 **:ratchet**
