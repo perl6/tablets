@@ -903,8 +903,10 @@ that starting with the
 **[<<...\>\>](#double-angle-brackets)**
 
 <a id="abs"/>
-**abs** *«numeric op»* &mdash; returns numeric absolute value, converts
-value in numeric context
+**abs** *«numeric op»* &mdash;
+returns numeric absolute value, converts value in numeric context &mdash;
+example: `abs -4.76` returns `4.76` as does `abs 4.76` &mdash;
+see also: [**round**](#round), [**sign**](#sign), [**truncate**](#truncate)
 
 <a id="after"/>
 **after**
@@ -1178,7 +1180,7 @@ raw binary data
 **but** &mdash; adds a **[role](#role)** to a **[class](#class)**
 
 <a id="bytes"/>
-**bytes**([Str](#Str-type) [--\>](#double-minus-greater-signature) [Int](#Int-type))
+**bytes** ([Str](#Str-type) [--\>](#double-minus-greater-signature) [Int](#Int-type))
 *«string method»* &mdash;
 number of bytes (a sort of Perl 5's *length*) &mdash;
 see also: [**chars**](#chars), [**codes**](#codes), [**graphs**](#graphs)
@@ -1261,8 +1263,8 @@ different [signature](appendix-g-glossary.html#signature)
 
 <a id="capitalize"/>
 **capitalize** &mdash;
-alias to a wordwise **ucirst**( **lc**( **[$\_](#context-var)** ) ),
-makes first char of every word upper case, rest lowercase
+alias to a wordwise *ucfirst* (exists only in Perl 5),
+makes first char of every word uppercase, rest lowercase
 
 <a id="Capture-type"/>
 **[Capture](tablet-3-variables#capture)**
@@ -1300,29 +1302,32 @@ categorisation
 <a id="category-category"/>
 **category**
 *[«grammatical category»](appendix-b-grouped.html#categories)* &mdash;
-grammatical category of all grammatical categories
-(metacategory), useful in case you want to create a new one with a
-macro
+grammatical category of all grammatical categories (metacategory),
+useful in case you want to create a new one with a macro
 
 <a id="ceiling"/>
-**[ceiling](operators.html)** &mdash;
-lowest integer not less than $x (only parameter)
+**ceiling**
+([Num](#Num-type) $x [--\>](#double-minus-greater-signature) [Int](#Int-type))
+*«num method»* &mdash;
+lowest integer not less than $x, rounding up to the next whole number &mdash;
+example: `ceiling 5.4` returns `6`, `ceiling -5.4` returns `-5`  &mdash;
+see also: [**floor**](#floor), [**round**](#round), [**truncate**](#truncate)
 
 <a id="chr"/>
-**chr**([Int](#Int-type) [--\>](#double-minus-greater-signature) [Str](#Str-type))
+**chr** ([Int](#Int-type) [--\>](#double-minus-greater-signature) [Str](#Str-type))
 *«num method»* &mdash;
 convert number into character according a
 character table (UTF), reverse of **[ord](#ord)**
 
 <a id="chrs"/>
-**chrs**([Array](#Array-type) [of](#of) [Int](#Int-type) 
+**chrs** ([Array](#Array-type) [of](#of) [Int](#Int-type) 
          [--\>](#double-minus-greater-signature) [Str](#Str-type))
 *«num method»* &mdash;
 converts every number to a character with that index and combines them to one string,
 plural of **[chr](#chr)**, reverse of **[ords](#ords)**
 
 <a id="chars"/>
-**chars**([Str](#Str-type) [--\>](#double-minus-greater-signature) [Int](#Int-type))
+**chars** ([Str](#Str-type) [--\>](#double-minus-greater-signature) [Int](#Int-type))
 *«string method»* &mdash;
 returns number of characters of a string, in Perl 5: *length* &mdash;
 see also: **[bytes](#bytes)**, [**codes**](#codes), [**graphs**](#graphs)
@@ -1352,14 +1357,14 @@ marks as a prefix a special block or statement, executed at
 changes access rights of files (like on Unix)
 
 <a id="chomp"/>
-**chomp**([Str](#Str-type) [--\>](#double-minus-greater-signature) [Str](#Str-type))
+**chomp** ([Str](#Str-type) [--\>](#double-minus-greater-signature) [Str](#Str-type))
 *«string method»* &mdash;
 returns a copy of a [string](#Str-type) with the
 last newline ([**\\n**](#backslash-n)) (if there is one) removed &mdash;
 see also: [**chop**](#chop), [**trim**](#trim)
 
 <a id="chop"/>
-**chop**([Str](#Str-type) [--\>](#double-minus-greater-signature) [Str](#Str-type))
+**chop** ([Str](#Str-type) [--\>](#double-minus-greater-signature) [Str](#Str-type))
 *«string method»* &mdash;
 returns a copy of a [string](#Str-type) with the last character removed &mdash;
 see also: [**chomp**](#chomp), [**substr**](#substr)
@@ -1370,6 +1375,10 @@ see also: [**chomp**](#chomp), [**substr**](#substr)
 <a id="chroot"/>
 **[chroot](tablet-5-io.html#chroot)** &mdash;
 change root directory on POSIX systems
+
+<a id="cis"/>
+**cis** *«num method»* &mdash;
+see also: [**polar**](#polar), [**unpolar**](#unpolar)
 
 <a id="circumfix-category"/>
 **circumfix** *[«grammatical category»](appendix-b-grouped.html#categories)* &mdash;
@@ -1451,7 +1460,7 @@ quasi quoting, the commented will be compiles and the AST will
 be returned as result, see also: **[quasi](#quasi)**
 
 <a id="codes/>
-**codes**([Str](#Str-type) [--\>](#double-minus-greater-signature) [Int](#Int-type))
+**codes** ([Str](#Str-type) [--\>](#double-minus-greater-signature) [Int](#Int-type))
 *«string mmethod»* &mdash;
 number of *[unicode](appendix-g-glossary.html#unicode)*
 *[codepoints](appendix-g-glossary.html#codepoints) of a string in a
@@ -1483,11 +1492,19 @@ all the comment blocks in the file
 *[«immutable type»](appendix-b-grouped.html#immutable-types)* &mdash;
 Perl object type to hold a complex number (the thing with the i == sqrt(-1))
 
+<a id="conj"/>
+**conj**
+([Complex](#Complex-type) $c [--\>](#double-minus-greater-signature) [Complex](#Complex-type))
+«complex method» &mdash;
+returns ($c.re - $c.im\i), the complex conjugate
+see also: [**cis**](#cis), [**polar**](#polar), [**unpolar**](#unpolar)
+
 <a id="conjugate"/>
-**[conjugate](operators.html)**
-convert [complex number](#complex-type) into
-real (**[Num](#Num-type)**), see also
-**[abs](#abs)**
+**conjugate**
+«complex method» &mdash;
+convert [complex number](#complex-type) into real (**[Num](#Num-type)**) &mdash;
+see also: [**abs**](#abs), [**sign**](#sign), [**truncate**](#truncate),
+[**unpolar**](#unpolar), [**re**](#re), [**im**](#im)
 
 <a id="constant"/>
 **constant** *«var trait»* &mdash;
@@ -1882,8 +1899,8 @@ searching at all positions as long as it findes something (with
 backtracking), long for **[:ex](#ex-modifier)**
 
 <a id="exists"/>
-**exists** &mdash; checks for existence of a variable, array or hash
-member, scalar method
+**exists** &mdash; checks for existence of a variable,
+array or hash element, also scalar method
 
 <a id="exit"/>
 **exit** *«flow control»* &mdash;
@@ -1891,7 +1908,8 @@ stops all program execution, and returns
 Int $status (first parameter) to the calling environment
 
 <a id="exp"/><a id="exp-op"/>
-**exp**([Num](#Num-type) $base, [Num](#Num-type) $exp? [--\>](#double-minus-greater-signature) [Num](#Num-type)) &mdash;
+**exp** ([Num](#Num-type) $base, [Num](#Num-type) $exp?
+         [--\>](#double-minus-greater-signature) [Num](#Num-type)) &mdash;
 exponentiate, alias method to: $base **[\*\*](#double-asterisk-op)** $exp
 (defaults to *[e](appendix-g-glossary.html#e)*)
 
@@ -1957,7 +1975,7 @@ opposite of **[True](#True)**
 Perl rational (unlimited precision in both parts)
 
 <a id="fc"/>
-**fc**([Str](#Str-type) [--\>](#double-minus-greater-signature) [Str](#Str-type))
+**fc** ([Str](#Str-type) [--\>](#double-minus-greater-signature) [Str](#Str-type))
 *«string method»* &mdash;
 return a copy of a string where the *[Unicode](appendix-g-glossary.html#unicode)*
 "fold case" operation is done upon,
@@ -2008,7 +2026,8 @@ before any **[ENTER](#ENTER-phaser)**
 returns first value of a list that passes a condition (first
 paramter); the condition is a closure that takes one value at a time
 (as [**`$_`**](#context-var) or `$^a`),
-works like [**grep**](#grep) &mdash; example : `first {$_ %% 2}, 1..5 ; # returns 2`
+works like [**grep**](#grep) &mdash;
+example : `first {$_ %% 2}, 1..5 ; # returns 2`
 
 <a id="flat"/>
 **flat**()
@@ -2024,10 +2043,12 @@ example: `([2,3],[4,5]).flat` or `flat([2,3],[4,5])` results in: `[2..5]`
 **[invert](#invert)**
 
 <a id="floor"/>
-**floor** *«num method»* &mdash;
-**[Int](#Int-type)**
-(whole number) part of a **[Rat](#Rat-type)**, just
-leaves the digits after the dot (".") out
+**floor**
+([Num](#Num-type) $x [--\>](#double-minus-greater-signature) [Int](#Int-type))
+*«num method»* &mdash;
+highest integer not greater than $x, rounds down no the next whole number &mdash;
+example: `floor 5.4` returns `5` `floor -5.4` returns `-6` &mdash;
+see also: [**ceiling**](#ceiling), [**round**](#round), [**truncate**](#truncate)
 
 <a id="fmt"/>
 **[fmt](tablet-2-basic-syntax.html#fmt)**
@@ -2198,7 +2219,7 @@ produces a [match object](#match-var), the name is ment like in
 a "graphical" character, calles [*grapheme*](#grapheme)
 
 <a id="graphs"/>
-**graphs**([Str](#Str-type) [--\>](#double-minus-greater-signature) [Int](#Int-type))
+**graphs** ([Str](#Str-type) [--\>](#double-minus-greater-signature) [Int](#Int-type))
 *«string mmethod»* &mdash;
 number of *[unicode](appendix-g-glossary.html#unicode)*
 *[graphemes](appendix-g-glossary.html#graphemes)* of a string,
@@ -2348,6 +2369,12 @@ long for **[:m](#m-modifier)**
 only for substitutions, replacing with chars that have the same
 case pattern as the replaced, short for
 **[:samecase](#samecase-modifier)**
+
+<a id="im"/>
+**im**
+«complex method» &mdash;
+imaginary part of a complex number &mdash;
+see also: [**truncate**](#truncate), [**unpolar**](#unpolar), [**re**](#re)
 
 **[import](subroutines.html)**
 just import definitions from an already loaded module (see
@@ -2583,7 +2610,7 @@ forces lazy evaluation (calculate values as late as possible),
 default for lists - not scalars
 
 <a id="lc"/>
-**lc**([Str](#Str-type) [--\>](#double-minus-greater-signature) [Str](#Str-type))
+**lc** ([Str](#Str-type) [--\>](#double-minus-greater-signature) [Str](#Str-type))
 *«string method»* &mdash;
 return a copy of a string where all characters are lowercase &mdash;
 see also: [**fc**](#fc) and [**uc**](#uc)
@@ -2656,7 +2683,7 @@ be iterated, alias to **[@()](#at-op)**, see also
 **[flat](#flat)** and **[lol](#lol)**
 
 <a id="log"/>
-**[log](operators.html)**([Num](#Num-type) $x, [Num](#Num-type) $base?) &mdash;
+**[log](operators.html)** ([Num](#Num-type) $x, [Num](#Num-type) $base?) &mdash;
 logarithm of $x to the $base
 (default is *[e](appendix-g-glossary.html#e)*, together also known as *ln*)
 
@@ -2919,7 +2946,7 @@ part of a set, *[junctive](appendix-g-glossary.html#junction)* *NOT*
 operator
 
 <a id="normalize"/>
-**normalize**([Str](#Str-type) [--\>](#double-minus-greater-signature) [Str](#Str-type))
+**normalize** ([Str](#Str-type) [--\>](#double-minus-greater-signature) [Str](#Str-type))
 *«string method»* &mdash;
 normalize (repair) *[unicode](appendix-g-glossary.html#unicode)* 
 *[string](#Str-type)*
@@ -3005,13 +3032,13 @@ sequentially, ends evaluation at the first expression that returns
 **[orelse](#orelse)**
 
 <a id="ord"/>
-**ord**([Str](#Str-type) [--\>](#double-minus-greater-signature) [Int](#Int-type))
+**ord** ([Str](#Str-type) [--\>](#double-minus-greater-signature) [Int](#Int-type))
 *«string method»* &mdash;
 converts a character into number according a character table
 (*[unicode](appendix-g-glossary.html#unicode)*), reverse of **[chr](#chr)**
 
 <a id="ords"/>
-**ords**([Str](#Str-type) [--\>](#double-minus-greater-signature)
+**ords** ([Str](#Str-type) [--\>](#double-minus-greater-signature)
          [Array](#Array-type) [of](#of) [Int](#Int-type))
 *«string method»* &mdash;
 get the index numbers of some characters,
@@ -3195,11 +3222,13 @@ ID of the running process, in Perl 5: *\$\$* and *\$PID*
 surrounding *[POD](#pod)* object
 
 <a id="polar"/>
-**polar** &mdash;
+**polar** «complex method» &mdash;
 magnitude or angle corresponding to the
 [complex number](#Complex-type) (only parameter),
 the magnitude is non-negative, and the angle in the
-[range](#range-op) -π ..\^ π
+[range](#range-op) -π ..\^ π &mdash;
+see also: [**cis**](#cis), [**unpolar**](#unpolar)
+
 
 <a id="pop"/>
 **pop**
@@ -3248,7 +3277,7 @@ marks as a prefix a special block, assert precondition, executed
 at every block entry, before **[ENTER](#ENTER-phaser)**
 
 <a id="pred"/>
-**pred**([Num](#Num-type) $f)
+**pred** ([Num](#Num-type) $f)
 *[«sequence traversion»](tablet-4-operators.html#traversing-sequence)* &mdash;
 returns the predecessor of $f, alias to **[--](#auto-decrement)**
 operator, opposite of **[succ](#succ)**
@@ -3510,6 +3539,12 @@ ended
 demands the nth finding, has many aliases (**:st :nd :th*) for
 correct spelling (`:3rd`)
 
+<a id="re"/>
+**re**
+«complex method» &mdash;
+real part of a complex number &mdash;
+see also: [**im**](#im), [**unpolar**](#unpolar), [**truncate**](#truncate)
+
 <a id="read"/>
 **[read](tablet-5-io.html#read)**
 *«Buf method»* &mdash;
@@ -3646,9 +3681,12 @@ end; rotates backward with negative parameter; `@a .= rotate;` is
 alias to `@a.push: @a.shift;`
 
 <a id="round"/>
-**round**([Num](#Num-type) $f [--\>](#double-minus-greater-signature) [Int](#Int-type)) &mdash;
-returns the nearest *[integer](#Int-type)* &mdash;
-example: `round 5.5` returns `6`
+**round**
+([Num](#Num-type) $f [--\>](#double-minus-greater-signature) [Int](#Int-type))
+«num method» &mdash;
+returns the nearest whole number &mdash;
+example: `round 5.5` returns `6`, `round -5.5` returns `-5` &mdash;
+see also: [**ceiling**](#ceiling), [**floor**](#floor), [**truncate**](#truncate)
 
 
 <a id="roundrobin"/>
@@ -3859,8 +3897,10 @@ word to name the namespace for sigils, used to redifine them or
 define your own with a macro
 
 <a id="sign"/>
-**sign**($f) &mdash;
- 1 if $f is greater than 0, -1 if \< 0, 0 when equal 0, undefined when undefined
+**sign** ($f) &mdash;
+ 1 if $f is greater than 0, -1 if \< 0, 0 when equal 0,
+ undefined when undefined &mdash;
+ see also: [**abs**](#abs), [**round**](#round)
 
 <a id="Signature-type"/>
 **Signature**
@@ -3960,7 +4000,7 @@ string like **[printf](#printf)**, but returns the
 string instead of outputting it
 
 <a id="sqrt"/>
-**sqrt**([Num](#Num-type) $f) &mdash;
+**sqrt** ([Num](#Num-type) $f) &mdash;
 square root of $f &mdash; see also: **[exp](#exp)**
 
 <a id="ss"/><a id="ss-op"/>
@@ -4085,7 +4125,7 @@ parse as [substitution regex](tablet-9-regexes.html#substitution)
 **[s/.../.../](#s-op)**
 
 <a id="substr"/>
-**substr**([Str](#Str-type) $string, [Int](#Int-type) $start, [Int](#Int-type)
+**substr** ([Str](#Str-type) $string, [Int](#Int-type) $start, [Int](#Int-type)
              $length? [--\>](#double-minus-greater-signature) [Str](#Str-type))
 *«string method»* &mdash;
 return a substring of $string from $start position and maybe with $length,
@@ -4094,7 +4134,7 @@ example: `substr('Hackathon', 1, 3)` returns `'ack'` &mdash;
 see also: [**chop**](#chop)
 
 <a id="succ"/>
-**succ**([Num](#Num-type) $f)
+**succ** ([Num](#Num-type) $f)
 *[«sequence traversion»](tablet-4-operators.html#traversing-sequence)* &mdash;
 returns the successor of $f, alias to **[++](#auto-increment)**
 operator, opposite of **[pred](#pred)**
@@ -4160,7 +4200,7 @@ specifies the [precedence of an operator](appendix-b-grouped.html#table-of-prece
 higher than an existing operator
 
 <a id="titlecase"/>
-**titlecase**([Str](#Str-type) [--\>](#double-minus-greater-signature) [Str](#Str-type))
+**titlecase** ([Str](#Str-type) [--\>](#double-minus-greater-signature) [Str](#Str-type))
 *«string method»* &mdash;
 performs a [Unicode](appendix-g-glossary.html#unicode) titlecase operation
 on the first character of each word of the string
@@ -4244,9 +4284,12 @@ Bool::True, 1 in numeric context, opposite of **[False](#False)**
 
 <a id="truncate"/>
 **truncate**
-*«num op»* &mdash;
-closest *[integer](#Int-type)* to $f (only parameter)
-whose absolute value is not greater than the absolute value of $f
+([Num](#Num-type) $f [--\>](#double-minus-greater-signature) [Int](#Int-type))
+*«num method»* &mdash;
+just truncates the fractional part &mdash;
+examples: `truncate 4.27` returns `4`, `truncate -5.5` returns `-5` &mdash;
+see also: [**abs**](#abs), [**conjugate**](#conjugate),
+          [**round**](#round), [**sign**](#sign)
 
 <a id="trusts"/>
 **trusts** &mdash;
@@ -4282,7 +4325,7 @@ report if file has setuid bit set
 everything within the brackets is uppercase
 
 <a id="uc"/><a id="uc-op"/>
-**uc**([Str](#Str-type) [--\>](#double-minus-greater-signature) [Str](#Str-type))
+**uc** ([Str](#Str-type) [--\>](#double-minus-greater-signature) [Str](#Str-type))
 *«string method»* &mdash;
 return a copy of a string where all characters are uppercase,
 usable as operator and as method &mdash;
@@ -4302,7 +4345,7 @@ unsuccessful block exit, part of
 
 <a id="uniq"/>
 **uniq** *«list method»* &mdash;
-only unique elements of a list (no value twice)
+returns only unique elements of a list (no value twice)
 
 <a id="unless"/>
 **[unless](tablet-6-blocks.html#unless)**
@@ -4312,6 +4355,10 @@ to **[False](#False)**, the block after that will
 be run, can also be written at the end of an expression, opposite of
 **[if](#if)**,  alias to **if** **[not](#not)**,
 no **[elsif](#elsif)** or **[else](#else)** is allowed to follow
+
+<a id="unpolar"/>
+**unpolar** *«num method»* &mdash;
+see also: [**cis**](#cis)
 
 <a id="until"/>
 **[until](tablet-6-blocks.html#until)**
@@ -4622,7 +4669,7 @@ alias to **[Q](#capital-q-op)**
 **[qx/.../](#qx-op)**
 
 <a id="x-modifier"/>
-**:x**(<span class="you-provide">n</span>)
+**:x** (<span class="you-provide">n</span>)
 *[«regex modifier»](appendix-b-grouped.html#regex-modifier)* &mdash;
 searching n times with this pattern
 
