@@ -62,7 +62,7 @@ last error message
 <a id="exclamation-subrule"/>
 **\<\!\>**
 *[«predefined subrule»](appendix-b-grouped.html#subrules)* &mdash;
-inverse of [**\<?\>**](#question-subrule), returns always **[False](#False)**
+opposite of [**\<?\>**](#question-subrule), returns always **[False](#False)**
 
 <a id="double-exclamation"/>
 **!!** *[«conditional op»](appendix-b-grouped.html#conditionals)* &mdash; 
@@ -1459,13 +1459,13 @@ context, alias to **[&()](#ampersand-context-op)**
 quasi quoting, the commented will be compiles and the AST will
 be returned as result, see also: **[quasi](#quasi)**
 
-<a id="codes/>
+<a id="codes"/>
 **codes** ([Str](#Str-type) [--\>](#double-minus-greater-signature) [Int](#Int-type))
 *«string mmethod»* &mdash;
 number of *[unicode](appendix-g-glossary.html#unicode)*
 *[codepoints](appendix-g-glossary.html#codepoints) of a string in a
 language-independent way &mdash;
-see also: [**bytes*](#bytes), [**chars*](#chars), [**graphs*](#graphs)
+see also: [**bytes*](#bytes), [**chars**](#chars), [**graphs**](#graphs)
 
 <a id="codes-modifier"/>
 **:codes**
@@ -2248,8 +2248,8 @@ example : `grep {$_ %% 2}, 1..5;` returns `2, 4`
 *[«string comparison»](tablet-4-operators.html#string-comparison)* &mdash;
 [infix](#infix-category) operator, greater than
 or equal, **[True](#True)** if alphabetically
-ordered the right comes before the left (see also
-**[lt](#lt)**, **[leg](#leg)** and **<**)
+ordered the right comes before the left &mdash;
+see also: **[lt](#lt)**, **[leg](#leg)** and [**<**](#lower-op)
 
 
 
@@ -2721,8 +2721,8 @@ a single lowercase character
 **lt**
 *[«string comparison»](tablet-4-operators.html#string-comparison)* &mdash;
 [infix](#infix-category) operator, lower than,
-**[True](#True)** if alphabetically ordered the left
-comes before the right
+**[True](#True)** if alphabetically ordered the left comes before the right &mdash;
+see also: **[gt](#gt)**, **[leg](#leg)** and [**\>**](#greater-op)
 
 
 
