@@ -126,6 +126,10 @@ end of the string
 *[«regex metachar»](appendix-b-grouped.html#regex-metacharacter)* &mdash;
 matches the end of a line (no more multile mode)
 
+
+
+# [%](#nav-top)
+
 <a id="percent-sigil"/>
 **%**
 *[«sigil»](appendix-b-grouped.html#sigils)* &mdash;
@@ -263,6 +267,10 @@ not backtracking, greedy quantifier taking zero or more findings
 quantifier for explicit repeat char or group, like
 **[x](#x-op)** *(string op)* does outside of a regex &mdash;
 example: `(ha)**3` only matches `'hahaha'`
+
+
+
+# [+](#nav-top)
 
 <a id="plus"/><a id="plus-op"/><a id="plus-context"/>
 **+**
@@ -410,6 +418,10 @@ short circuit *defined or*, returns the first defined value
 character given in octal, decimal or hex (when <span class="you-provide">s</span>
 is 'o', 'd' or 'x'), brackets are optional, first number has to be inside
 okt/dec/hex range, alternate syntax without the zero is preferred
+
+
+
+# [0](#nav-top)
 
 <a id="0-var"/><a id="zero-var"/><a id="number-var"/>
 **$0**
@@ -561,6 +573,10 @@ is alias to [**`$/<...>`**](#match-var), in Perl 5: *$&* and *$MATCH*
 *[«regex metachar»](appendix-b-grouped.html#regex-metacharacter)* &mdash;
 embraces an subrule (assertion)
 
+
+
+# [=](#nav-top)
+
 <a id="equal"/><a id="equal-op"/>
 **[=](tablet-3-variables#assignment)**
 *«Op»* &mdash;
@@ -636,6 +652,10 @@ or equal
 **\>\>**
 *[«meta op»](appendix-b-grouped.html#metaoperators)* &mdash;
 binds operator (right) as hyper operator to an array (left)
+
+
+
+# [?](#nav-top)
 
 <a id="question"/><a id="question-op"/><a id="question-context"/>
 **[?](tablet-4-operators.html#logical-selection)**
@@ -744,7 +764,11 @@ all escape sequences with a width
 inside [quotes](appendix-b-grouped.html#control-chars)
 and [regexes](appendix-b-grouped.html#escape-sequences) start with it
 
-<a id="caret"/><a id="caret-op"/>
+
+
+# [\^](#nav-top)
+
+<a id="caret"/> <a id="caret-op"/>
 **\^**
 *[«junctive op»](tablet-4-operators.html#junctions)* &mdash;
 *[junctive](appendix-g-glossary.html#junction)* *[XOR](appendix-g-glossary.html#xor)*,
@@ -1389,7 +1413,7 @@ statement, op or variable they affect, most prominent example may be
 the [double quotes](#double-quotation)
 
 <a id="class"/>
-**class** *(block modifier)* &mdash; 
+**class** *«block modifier»* &mdash; 
 following block will build an object, see also **[method](#method)**,
 **[submethod](#submethod)** and **[has](#has)**
 
@@ -1618,7 +1642,7 @@ following block will be run if no **[when](#when)**
 clause in surrounding block matched
 
 <a id="defer"/>
-**defer** *(block modifier)* &mdash;
+**defer** * *«block modifier»* &mdash;
 
 <a id="defined"/>
 **defined** &mdash; scalar method tests whether a value has been assigned
@@ -2394,7 +2418,7 @@ just import definitions from an already loaded module (see
 include pathes (but not for standard library modules), in Perl 5: *@INC*
 
 <a id="index"/>
-**index** *(string method)* &mdash;
+**index** *«string method»* &mdash;
 finds the first occurrence of a substring in a string
 and returns the numerical position, opposite or **[rindex](#rindex)**
 
