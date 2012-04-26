@@ -1559,7 +1559,7 @@ returns how many parameters this
 
 <a id="cross"/>
 **cross** *«list method»* &mdash;
-alias to **[X operator](#capital-x)** &mdash;
+alias to **[X operator](#X-op)** &mdash;
 example: `@a X @b = (@a; @b).cross`
 
 <a id="crosswith"/>
@@ -1567,7 +1567,7 @@ example: `@a X @b = (@a; @b).cross`
 metaoperator that seeks every combination of one element of one list with an
 element of a second list and applies then an [infix](#infix-category) operator
 to that pair, returns a list the results,
-alias method to **[X metaoperator](#capital-x-metaop)** &mdash;
+alias method to **[X metaoperator](#X-metaop)** &mdash;
 example: *`@a X~ @b`* equals *`(@a; @b).crosswith(&[~])`* equals
 `(@a; @b).cross.lol.map { .reduce(&[~]) }`
 
@@ -2956,7 +2956,7 @@ normalize (repair) *[unicode](appendix-g-glossary.html#unicode)*
 *[«context op»](appendix-b-grouped.html#contextualizers)* &mdash;
 logical *NOT* operator,
 converts to *[boolean context](appendix-g-glossary.html#bool-context)*,
-low precedence version of **[!()](#exclamation-mark-op)**
+low precedence version of **[!()](#exclamation-op)**
 
 <a id="note"/>
 **[note](tablet-5-io.html#note)** &mdash;
@@ -3430,7 +3430,7 @@ see also: **[:code](#code-adverb)**
 **$\~Quote**
 *[«special var»](appendix-b-grouped.html#slang-variables)* &mdash;
 current [grammar](#grammar) of the quoting
-language as used by the [Q-operator](#capital-q-op)
+language as used by the [Q-operator](#Q-op)
 and any other quoting op
 
 <a id="quote-category"/>
@@ -3745,7 +3745,7 @@ gives the regex the right to change the string (operand)
 **[rx](tablet-9-regexes.html#regex-operators)**
 *[«regex quoting op»](appendix-b-grouped.html#quoting-ops)* &mdash;
 creates anonymous regex, that can me then assigned into a var,
-alias to **[Q](#capital-q-op)**
+alias to **[Q](#Q-op)**
 **[:regex](#regex-adverb)** **/.../** and
 **[regex](#regex)** *(routine type)*
 
@@ -4498,7 +4498,7 @@ without appending a **[\\n](#backslash-n)**
 **\<wb\>**
 *[«predefined subrule»](appendix-b-grouped.html#subrules)* &mdash;
 zero-width word boundary between an 
-**[\\w](#backslash-w)** and a **[\\W](#backslash-capital-w)** character,
+**[\\w](#backslash-w)** and a **[\\W](#backslash-W)** character,
 alias to **[\<|w\>](#pipe-w)** &mdash;
 see also **[\<ww\>](#ww-subrule)**
 
@@ -4664,7 +4664,7 @@ check if file is executable by effective uid ([**\$\*EUID**](#EUID-global-var))
 *[«quoting adverb»](appendix-b-grouped.html#quoting-adverbs)* &mdash;
 quoted string will be evaluated as Perl code (like
 **[eval](#eval)**) and replaced with its result,
-alias to **[Q](#capital-q-op)**
+alias to **[Q](#Q-op)**
 **[:exec](#exec-adverb)** **/.../** and
 **[qx/.../](#qx-op)**
 
@@ -4730,12 +4730,12 @@ operator and produces in that manner a new list
 **zip**
 *[«array op & method»](tablet-3-variables#array-methods)* &mdash;
 zip operator, joines 2 lists, alias to
-**[Z operator](#capital-z-op)** &mdash;
+**[Z operator](#Z-op)** &mdash;
 example: `@a Z @b = (@a; @b).zip`
 
 <a id="zipwith"/>
 **zipwith**
-*«list method»* &mdash; alias to **[Z metaoperator](#capital-z-metaop)** &mdash;
+*«list method»* &mdash; alias to **[Z metaoperator](#Z-metaop)** &mdash;
 example: `@a Z~ @b` aka `(@a; @b).zipwith(&[~])` aka `(@a; @b).zip.lol.map { .reduce(&[~]) }`
 
 ***
