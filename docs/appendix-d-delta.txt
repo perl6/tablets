@@ -132,7 +132,6 @@ Operator
   * `...` becomes `fff`
   * `cmp` becomes `leg` - `cmp` is now for general comparison, `leg` in string context
   * `? :` becomes `?? !!` - ternary operator
-  * `length` becomes `chars` - number of chars in a string
 
 
 
@@ -143,28 +142,27 @@ Variable
     `%hash{'key'}` replaces `$hash{'key'}` and `%hash{'key1', 'key2'}`
     replaces `@hash{'key1', 'key2'}`
   * `$hash{'key'}` is now mostly `%hash<key>`
-  * `scalar @a` becomes `+@a`
+  * `scalar @a` becomes `+@a` (**+** forces numeric context)
   * arrays, hashes, formats, directories and filehandles are internal
-    objects with procedural Interfaces and can be saved in scalar
-    variables.
+    objects with procedural interfaces and can be saved in scalar variables.
   * [special variables](appendix-b-grouped.html#special-variables)
      have their own namespace (`$*VARNAME` and `$?VARNAME`),
      also token (`__LINE__`) will now be found there
-  * no *Data::Dump*, use `$var.perl.say` instead
+  * no *Data::Dump*, use [`$var.perl.say`](appendix-a-index.html#perl) instead
 
 Strings
 -------
 
   * no *length*, `length(@a)` is now `elems @a` and `length $str` is `chars $str;`
-  * no *ucfirst* use **titlecase**
+  * no *ucfirst* use [**titlecase**](appendix-a-index.html#titlecase)
 
 
 Flow Control
 ------------
 
-  * no *each*, use `.pairs` or `.kv` instead
-  * no *foreach*
-  * no C-style *for*, use `loop` instead, 
+  * no *foreach*, only [**for**](appendix-a-index.html#for)
+  * no *each*, use [**.pairs**](appendix-a-index.html#pairs) or [**.kv**](appendix-a-index.html#kv) instead
+  * no C-style *for*, use [**loop**](appendix-a-index.html#loop) instead
   * `do {...} while (...);` becomes `repeat {...} while ...;`
 
 
