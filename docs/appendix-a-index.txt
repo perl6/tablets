@@ -1,12 +1,13 @@
 % Perl 6 Tablets Appendix A - Index
 
-This index contains an alphanumeric sorted list (sorted without
-prefixes like colon, slash, sigil or twigil) of all operators,
-methods, builtins, options, modifier and special variables (in
-**bold**) with short explanations. Each term is followed by a link
-«in french brackets» to a condensed summary listing of its category
-in [appendix B](appendix-b-grouped.html) or to the according category
-in the tablets.
+This index contains an alphanumeric sorted list (sorted without prefixes
+like colon, slash, sigil or twigil) of all operators, methods, builtins,
+options, modifier and special variables with short explanations.
+After each method is (in round brackets) its signature,
+telling you the value type of the parameters and the return value.
+Each term is followed by a link «in french brackets» to a condensed summary
+listing of its category in [appendix B](appendix-b-grouped.html)
+or to the according category in the tablets.
 
 Sometimes are added green placeholder.
 <span class="you-provide">n</span> stands for a [integer number](#Int-type),
@@ -32,10 +33,11 @@ Before alpha chars (a-z) in ASCII order:
 Punctuation
 ===========
 
-<a id="exclamation"/><a id="exclamation-op"/><a id="exclamation-context"/>
+<a id="exclamation"/><a id="exclamation-op"/>
+<a id="exclamation-context"/><a id="negation-op"/>
 **\!** 
 *[«context op»](appendix-b-grouped.html#contextualizers)* &mdash;
-logical negation (*NOT*), forces
+logical negation ([*NOT*](appendix-g-glossary.html#not)), forces
 [boolean context](tablet-4-operators.html#bool-context),
 high precedence version of [**not**](#not)
 
@@ -308,7 +310,7 @@ shift left in numeric context
 *[«numeric op»](tablet-4-operators.html#numeric-context)* &mdash;
 shift right in numeric context
 
-<a id="plus-caret-op"/>
+<a id="plus-caret-op"/><a id="numeric-xor"/>
 **+\^**
 *[«numeric op»](tablet-4-operators.html#numeric-context)* &mdash;
 bitwise *[XOR](appendix-g-glossary.html#xor)* in numeric context
@@ -710,7 +712,7 @@ see also: **[ff](#ff)** and **[fff](#fff)**
 [yadda operator](appendix-g-glossary.html#yadda-operator)
 that calls **[warn](#warn)**
 
-<a id="question-caret-op"/>
+<a id="question-caret-op"/><a id="boolean-xor"/>
 **?\^**
 *[«bool op»](tablet-4-operators.html#bool-context)* &mdash;
 logical *[XOR](appendix-g-glossary.html#xor)*, forces operands into boolean context
@@ -772,7 +774,7 @@ and [regexes](appendix-b-grouped.html#escape-sequences) start with it
 
 # [\^](#nav-top)
 
-<a id="caret"/> <a id="caret-op"/>
+<a id="caret"/><a id="caret-op"/><a id="junctive-xor"/>
 **\^**
 *[«junctive op»](tablet-4-operators.html#junctions)* &mdash;
 *[junctive](appendix-g-glossary.html#junction)* *[XOR](appendix-g-glossary.html#xor)*,
@@ -806,7 +808,7 @@ prefix of metaclass methods, `$obj.^methods();` is shortcut for
 *[«regex Metachar»](appendix-b-grouped.html#regex-metacharacter)* &mdash;
 start of the string
 
-<a id="double-caret-op"/>
+<a id="double-caret-op"/><a id="logical-xor"/>
 **\^\^**
 *[«logical op»](tablet-4-operators.html#logical-selection)* &mdash;
 [infix](#infix-category) logical (*[XOR](appendix-g-glossary.html#xor)*) operator
@@ -816,7 +818,7 @@ in *bool context* it returns **[True](#True)** or *False* as expected,
 in any other context it returns the first none empty value, 
 the second when both are empty and [**Nil**](#Nil-type) when both are not empty,
 [high precedence](appendix-b-grouped.html#table-of-precedence) version of **[xor](#xor)** &mdash;
-example: `say ('dang' ^^ '')` returns `'dang'`
+example: `('dang' ^^ '')` returns `'dang'`
 
 <a id="doule-caret-metachar"/>
 **\^\^**
@@ -836,7 +838,7 @@ context var, result of the last command, can set by topicalizers
 encloses blocks and creates a *[coderef](appendix-g-glossary.html#coderef)*,
 or a hashref when it is identified as a hash or contains a **[=\>](#fat-arrow)**
 
-<a id="pipe"/><a id="pipe-op"/><a id="junctive-xor"/>
+<a id="pipe"/><a id="pipe-op"/><a id="junctive-or"/>
 **|**
 *[«junctive op»](tablet-4-operators.html#junctions)* &mdash;
 *[junctive](appendix-g-glossary.html#junction)* *[OR](appendix-g-glossary.html#or)*,
@@ -904,7 +906,7 @@ context](tablet-4-operators.html#string-context)*
 characterwise right shift, forces *[string
 context](tablet-4-operators.html#string-context)*
 
-<a id="tilde-caret-op"/>
+<a id="tilde-caret-op"/><a id="string-xor"/>
 **\~\^** *[«string op»](tablet-4-operators.html#string-context)* &mdash;
 characterwise *[XOR](appendix-g-glossary.html#xor)*,
 forces *[string context](tablet-4-operators.html#string-context)*
@@ -2994,7 +2996,7 @@ normalize (repair) *[unicode](appendix-g-glossary.html#unicode)*
 <a id="not"/>
 **not**
 *[«context op»](appendix-b-grouped.html#contextualizers)* &mdash;
-logical *NOT* operator,
+logical [*NOT*](appendix-g-glossary.html#not) operator,
 converts to *[boolean context](appendix-g-glossary.html#bool-context)*,
 low precedence version of **[!()](#exclamation-op)**
 
@@ -4751,7 +4753,7 @@ in *bool context* it returns **[True](#True)** or *False* as expected,
 in any other context it returns the first none empty value, 
 the second when both are empty and [**Nil**](#Nil-type) when both are not empty,
 low precedence version of [**\^\^**](#double-caret-op) &mdash;
-example: `say (5 xor 0)` returns `5`
+example: `(5 xor 0)` returns `5`
 
 <a id="xx-op"/>
 **xx**
