@@ -20,7 +20,9 @@ questions like: "Can I do *functional programming* in Perl 6?" or
 ([compile time](#compile-time) or [run time](#run-time))
 
 <a id="and"/>
-**and** &mdash; logical operation
+**and** &mdash; logical operation that has only a true result if both operands
+(incoming information) are also true, otherwise result is false,
+see also [*or*](#or) and [*xor*](#xor) 
 
 <a id="argument"/>
 **argument** &mdash; another word for *[parameter](#parameter)*
@@ -30,12 +32,17 @@ questions like: "Can I do *functional programming* in Perl 6?" or
 (*[compile time](#compile-time)* or [run time](#run-time))
 
 <a id="ASCII"/>
-**ASCII** &mdash; 
-
+**ASCII** &mdash;
+short name of an american body that sets standards, but in computer science
+its often synonym for a particular standard that enumerates 127 character,
+95 of them are visible the rest are control character, e.g. "begin a new line",
+its basically A-Z, a-z, 0-9 and some extra symbols like \$, \%, \&,
+what you find on your keyboard and what an american typically needs,
+to enable the rest of the world more fully there is [*unicode*](#unicode)
 
 <a id="AST"/>
 **AST** *(abstract syntax tree)* &mdash; tree like data structure, in which
-source code is transformed, before running the programm
+source code is transformed, while [parsing](#parsing) it
 
 
 # [B](#nav-top)
@@ -246,7 +253,9 @@ programming paradigm (style), that arranges data and functions
 that belong together into so called objects
 
 <a id="or"/>
-**or** &mdash; logical operation
+**or** &mdash; logical operation that has a true result if at least one of two
+operands (incoming information) is also true, otherwise result is false,
+see also [*and*](#and) and [*xor*](#xor) 
 
 
 # [P](#nav-top)
@@ -260,6 +269,9 @@ mostly as part of the signature
 **parsetree** &mdash;
 hierarchical data representing the logical structure
 of a program, also called *[AST](#AST)*
+
+<a id="parsing"/>
+**parsing** &mdash;
 
 <a id="phaser"/>
 **[phaser](appendix-b-grouped.html#closure-traits)** &mdash;
@@ -413,7 +425,10 @@ strange names that start with UTF are most probably Unicode formats
 # [X](#nav-top)
 
 <a id="xor"/>
-**xor** &mdash; logical operation
+**xor** &mdash; logical operation that has a true result if only one of two
+operands (incoming information) is also true, otherwise result is false,
+see also [*and*](#and) and [*or*](#or) 
+
 
 # [Y](#nav-top)
 
