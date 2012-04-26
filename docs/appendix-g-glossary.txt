@@ -216,7 +216,8 @@ because of looking for the longest alternative
 
 <a id="metaoperator"/>
 **[metaoperator](appendix-b-grouped.html#metaoperators)** &mdash;
-operators that alter the meaning of other normal operators
+operators that alter the meaning or expand the scope of other normal operators,
+[a listing of them](appendix-b-grouped.html#metaoperators)
 
 <a id="metaprogramming"/>
 **metaprogramming** &mdash; 

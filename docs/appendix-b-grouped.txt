@@ -492,8 +492,10 @@ The two hyper operators can be written with the Unicode signs (also documented
 as "French Quotes") or with double less than or greater than signs (documented
 as "Texas Quotes").
 
-    « aka <<
-    » aka >>
+--- --------------------------------------------- -------
+ «  [<<](appendix-a-index.html#double-lower-op)   Hyperop, right side dictates length of result
+ »  [>>](appendix-a-index.html#double-greater-op) Hyperop, left side dictates length of result
+--- --------------------------------------------- -------
 
 
 Contextualizers

@@ -5,7 +5,8 @@ prefixes like colon, slash, sigil or twigil) of all operators,
 methods, builtins, options, modifier and special variables (in
 **bold**) with short explanations. Each term is followed by a link
 «in french brackets» to a condensed summary listing of its category
-in [appendix B](appendix-b-grouped.html).
+in [appendix B](appendix-b-grouped.html) or to the according category
+in the tablets.
 
 Sometimes are added green placeholder.
 <span class="you-provide">n</span> stands for a [integer number](#Int-type),
@@ -51,7 +52,7 @@ parameter, not is it's a positional
 
 <a id="exclamation-metaop"/>
 **\!**<span class="you-provide">op</span> 
-*[«meta op»](appendix-b-grouped.html#metaoperators)* &mdash;
+*[«meta op»](appendix-g-glossary.html#metaoperators)* &mdash;
 negates (mostly [comparison operators](tablet-4-operators.html#comparison))
 
 <a id="exclamation-var"/>
@@ -511,11 +512,12 @@ comes before the right operand
 double pointy syntax to assign a rw parameter to a
 *[block](appendix-g-glossary.html#block)*
 
-<a id="double-lower-op"/>
+<a id="double-lower-metaop"/>
 **\<\<**
-*[«meta op»](appendix-b-grouped.html#metaoperators)* &mdash;
-applies the operator on the left as hyper operator to the array
-on the right
+*[«meta op»](appendix-g-glossary.html#metaoperators)* &mdash;
+hyper metaopeartor, right side dicates the lengths of the  result,
+has a [unicode sibling](appendix-b-grouped.html#unicode-operators) &mdash;
+example: ` 2 <<+=<< @b` increments numeric value of every array element by 2
 
 <a id="double-lower-double-equal-op"/>
 **\<\<==**
@@ -595,7 +597,7 @@ examples:
 
 <a id="equal-metaop"/>
 <span class="you-provide">op</span>**=**
-*[«meta op»](appendix-b-grouped.html#metaoperators)* &mdash;
+*[«meta op»](appendix-g-glossary.html#metaoperators)* &mdash;
 self assignment, left side is one operand and place where the
 result is assigned to &mdash;
 example: `$a += 3;` equals `$a = $a + 3`
@@ -650,8 +652,10 @@ or equal
 
 <a id="double-greater-metaop"/>
 **\>\>**
-*[«meta op»](appendix-b-grouped.html#metaoperators)* &mdash;
-binds operator (right) as hyper operator to an array (left)
+*[«meta op»](appendix-g-glossary.html#metaoperators)* &mdash;
+hyper metaopeartor, left side dicates the lengths of the  result,
+has a [unicode sibling](appendix-b-grouped.html#unicode-operators) &mdash;
+example: ` @a >>++` increments numeric value of every array element
 
 
 
@@ -740,14 +744,14 @@ encompas these brackets
 
 <a id="square-brackets-metaop"/><a id="reduce-op"/>
 **\[**<span class="you-provide">op</span>**\]**
-*[«meta op»](appendix-b-grouped.html#metaoperators)* &mdash;
+*[«meta op»](appendix-g-glossary.html#metaoperators)* &mdash;
 [circumfix](#circumfix-category) reduction
 metaop, applies the operator between all elements of an array, alias
 to **[reduce](#reduce)**
 
 <a id="square-brackets-backslash-metaop"/><a id="triangle-op"/>
 **\[\\**<span class="you-provide">op</span>**\]**
-*[«meta op»](appendix-b-grouped.html#metaoperators)* &mdash;
+*[«meta op»](appendix-g-glossary.html#metaoperators)* &mdash;
 [circumfix](#circumfix-category) reduction
 metaop, applies above reduction to a series of lists made of array
 slices ranging in length from 1 to the complete length of the
@@ -2443,7 +2447,7 @@ become their parameters &mdash; example: `$a + $b ` is same as `$a.&infix:<+\>($
 **infix\_circumfix\_meta\_operator**
 *[«grammatical category»](appendix-b-grouped.html#categories)* &mdash;
 internal namespace of
-[metaoperator](#metaoperator) that
+[metaoperator](appendix-g-glossary.html#metaoperator) that
 [circumfix](#circumfix-category) other operator but
 stay [infix](#infix-category) (between) two terms
 (mostly lists) &mdash; example (the arrows): ` @a <<+<< @b `
@@ -2451,7 +2455,7 @@ stay [infix](#infix-category) (between) two terms
 <a id="infix-postfix-meta-category"/>
 **infix\_postfix\_meta\_operator**
 *[«grammatical category»](appendix-b-grouped.html#categories)* &mdash;
-internal namespace of [metaoperator](#metaoperator)
+internal namespace of [metaoperator](appendix-g-glossary.html#metaoperator)
 that [postfix](#postfix-category) other operator but
 stay [infix](#infix-category) (between) two terms &mdash;
 example (equal sign): ` $a += 5 `
@@ -2460,7 +2464,7 @@ example (equal sign): ` $a += 5 `
 **infix\_prefix\_meta\_operator**
 *[«grammatical category»](appendix-b-grouped.html#categories)* &mdash;
 internal namespace of
-[metaoperator](#metaoperator) that
+[metaoperator](appendix-g-glossary.html#metaoperator) that
 [prefix](#prefix-category) (precedes) other operator
 but stay [infix](#infix-category) (between) two terms &mdash;
 example (exclamation mark): ` 4 != 5 `
@@ -2997,7 +3001,7 @@ but appends a newline (**[\\n](#backslash-n)**) like **[say](#say)**
 
 <a id="nude"/>
 **nude**
-( [--\>](#double-minus-greater-signature) [Seq](Seq-type)\[[Int](#Int-type)\])
+( [--\>](#double-minus-greater-signature) [Seq](#Seq-type)\[[Int](#Int-type)\])
 *[«rat method»](tablet-2-basic-syntax.html#rational-number)* &mdash;
 returns a list of numerator and denominator &mdash;
 see also: [**numerator**](#numerator) and [**denominator**](#denominator)
@@ -3263,7 +3267,8 @@ ID of the running process, in Perl 5: *\$\$* and *\$PID*
 <a id="pod-pod-var"/>
 **$=pod**
 *[«special var»](appendix-b-grouped.html#pod-variables)* &mdash;
-surrounding *[POD](#pod)* object
+object that contains all surrounding *[POD](appendix-g-glossary.html#POD)*
+documentation
 
 <a id="polar"/>
 **polar** «complex method» &mdash;
@@ -3308,10 +3313,10 @@ variable (like $a++)
 **postfix\_prefix\_meta\_operator**
 *[«grammatical category»](appendix-b-grouped.html#categories)* &mdash;
 internal namespace of
-[metaoperator](#metaoperator) that
+[metaoperator](appendix-g-glossary.html#metaoperator) that
 [prefix](#prefix-category) (precedes) other operator
 but stay [postfix](#postfix-category) (after) another term &mdash;
-example (greater as): `@a >>++`
+example (greater as): [`@a >>++`](#double-greater-metaop)
 
 <a id="PRE-phaser"/>
 **PRE**
@@ -3334,7 +3339,7 @@ example: `[++$a](#plus-plus)`
 <a id="prefix-circumfix-meta-operator-category"/>
 **prefix\_circumfix\_meta\_operator**
 *[«grammatical category»](appendix-b-grouped.html#categories)* &mdash;
-internal namespace of [metaoperator](#metaoperator) that
+internal namespace of [metaoperator](appendix-g-glossary.html#metaoperator) that
 [circumfix](#circumfix-category) (surrounds) other
 operator but stay [prefix](#prefix-category) (before) another term &mdash;
 example (in square brackets): `[+] @a` - sums up all elements of @a
@@ -3342,7 +3347,7 @@ example (in square brackets): `[+] @a` - sums up all elements of @a
 <a id="prefix-postfix-meta-operator-category"/>
 **prefix\_postfix\_meta\_operator**
 *[«grammatical category»](appendix-b-grouped.html#categories)* &mdash;
-internal namespace of [metaoperator](#metaoperator) that
+internal namespace of [metaoperator](appendix-g-glossary.html#metaoperator) that
 [postfix](#postfix-category) other operator but stay
 [prefix](#prefix-category) (before) another term &mdash;
 example (greater as): `++<< @a`
@@ -3542,7 +3547,7 @@ return (CR), as in Perl 5
 
 <a id="R-metaop"/>
 **R**<span class="you-provide">op</span>
-*[«meta op»](appendix-b-grouped.html#metaoperators)* &mdash;
+*[«meta op»](appendix-g-glossary.html#metaoperators)* &mdash;
 reverse operands &mdash;
 example: `4 R- 3` result is `-1 = 3 - 4`
 
@@ -3609,7 +3614,7 @@ re-starts processing of the current loop turn
 <a id="reduce"/>
 **reduce**
 *«list method»* &mdash; alias to **[[ ]](#square-brackets-metaop)** -
-[metaoperator](appendix-b-grouped.html#metaoperators)
+[metaoperator](appendix-g-glossary.html#metaoperators)
 : `[+] @a = @a.reduce(&[+])`
 
 <a id="Regex-type"/>
@@ -3806,7 +3811,7 @@ see also **[ss/.../.../](#ss-op)** and **[m/.../](#m-op)**
 
 <a id="S-metaop"/>
 **S**<span class="you-provide">op</span>
-*[«meta op»](appendix-b-grouped.html#metaoperators)* &mdash;
+*[«meta op»](appendix-g-glossary.html#metaoperators)* &mdash;
 force sequential (synchronous) evaluation,
 suppresses any explicit or implicit parallelism
 
@@ -4312,7 +4317,7 @@ aka **[tr/.../.../](#tr-op)**)
 <a id="triangle"/>
 **triangle** *«list method»* &mdash;
 alias to **[[\\ ]](#square-brackets-backslash-metaop)**
-[metaoperator](appendix-b-grouped.html#metaoperators) &mdash;
+[metaoperator](appendix-g-glossary.html#metaoperators) &mdash;
 example: `[\+] @a = @a.triangle(&[+])`
 
 <a id="trim"/>
@@ -4685,7 +4690,7 @@ example: `'ab' x 3 == 'ababab';`
 
 <a id="X-metaop"/>
 **X**<span class="you-provide">op</span>
-*[«meta op»](appendix-b-grouped.html#metaoperators)* &mdash;
+*[«meta op»](appendix-g-glossary.html#metaoperators)* &mdash;
 cross product with hyper operator, alias of
 **[crosswith](#crosswith)** method &mdash;
 example: `<a b> X~ <y z> == <ay az by bz>;`
@@ -4765,7 +4770,7 @@ example: `1,2,3,4 Z 8,9 == 1,8,2,9` &mdash; see also: **[roundrobin](#roundrobin
 
 <a id="Z-metaop"/>
 **Z**<span class="you-provide">op</span>
-*[«meta op»](appendix-b-grouped.html#metaoperators)* &mdash;
+*[«meta op»](appendix-g-glossary.html#metaoperators)* &mdash;
 joines the values from same position of 2 lists with following
 operator and produces in that manner a new list
 
@@ -4778,7 +4783,7 @@ example: `@a Z @b = (@a; @b).zip`
 
 <a id="zipwith"/>
 **zipwith**
-*[«meta op»](appendix-b-grouped.html#metaoperators)* &mdash;
+*[«meta op»](appendix-g-glossary.html#metaoperators)* &mdash;
 alias method  to **[Z metaoperator](#Z-metaop)** &mdash;
 example: `@a Z~ @b` aka `(@a; @b).zipwith(&[~])` aka `(@a; @b).zip.lol.map { .reduce(&[~]) }`
 
