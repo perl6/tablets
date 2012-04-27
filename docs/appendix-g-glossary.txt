@@ -360,6 +360,9 @@ in Perl 5 its a pattern matching notation,
 in Perl 6 a whole rearranged language that does the same,
 a [whole page](tablet-9-regexes.html) is dedicated just about that subject
 
+<a id="reify">
+**Reify* &mdash;
+
 <a id="routine"/>
 **routine** &mdash;
 [block](#block) of code callable by name,
