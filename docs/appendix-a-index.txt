@@ -279,6 +279,12 @@ quantifier for explicit repeat char or group, like
 **[x](#x-op)** *(string op)* does outside of a regex &mdash;
 example: `(ha)**3` only matches `'hahaha'`
 
+<a id="asterisk-asterisk-question-metachar"/>
+**\*\*?**
+*[«regex metachar»](appendix-b-grouped.html#quantifier)* &mdash;
+quantifier for minimal matching, just as much to fulfill with the pattern &mdash;
+example: ``
+
 
 
 # [+](#nav-top)
@@ -427,16 +433,16 @@ short circuit *defined or*, returns the first defined value
 (from left to right), similar to **[||](#pipe-pipe-op)** &mdash;
 high precedence version of **[err](#err)**
 
+
+
+# [0](#nav-top)
+
 <a id="backslash-0"/><a id="backslash-zero"/>
 **\\0**<span class="you-provide">s</span>**\[**<span class="you-provide">n</span>**]**
 *[«escape sequence»](appendix-b-grouped.html#escape-sequences)* &mdash; 
 character given in octal, decimal or hex (when <span class="you-provide">s</span>
 is 'o', 'd' or 'x'), brackets are optional, first number has to be inside
 okt/dec/hex range, alternate syntax without the zero is preferred
-
-
-
-# [0](#nav-top)
 
 <a id="0-var"/><a id="zero-var"/><a id="number-var"/>
 **$0**
@@ -1601,7 +1607,7 @@ before **[LEAVE](#LEAVE-phaser)**
 <a id="Cool-type"/>
 **Cool**
 *[«undefined value type»](appendix-b-grouped.html#undefined-types)* &mdash;
-Perl 6 Convenient OO Loopbacks,
+Perl 6 Convenient [OO](appendix-g-glossary.html#OOP) Loopbacks,
 
 <a id="copy"/><a id="copy-parameter-trait"/>
 **copy**

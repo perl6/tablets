@@ -203,15 +203,15 @@ different section.
 
 ### Undefined types ###
 
----------  -----------------------------------------------------------------
-Mu         Most Undefined
-Failure    Failure (lazy exceptions, thrown if not handled properly)
-Any        Perl 6 object (default routine parameter type, excludes junction)
-Cool       Perl 6 Convenient OO Loopbacks
-Whatever   Wildcard (like Any, but subject to do-what-I-mean via MMD)
-Int        Any Int object
-Widget     Any Widget object
----------  -----------------------------------------------------------------
+--------------------------  -----------------------------------------------------------------
+[Mu](#Mu-type)              Most Undefined
+[Failure](#Failure-type)    Failure (lazy exceptions, thrown if not handled properly)
+[Any](#Any-type)            Perl 6 object (default routine parameter type, excludes junction)
+[Cool](#Cool-type)          Perl 6 Convenient OO Loopbacks
+[Whatever](#Whatever-type)  Wildcard (like Any, but subject to do-what-I-mean via [MMD](appendix-g-glossary.html#MMD))
+[Int](#Int-type)            Any Int object
+Widget                      Any Widget object
+--------------------------  -----------------------------------------------------------------
 
 
 
@@ -617,22 +617,25 @@ The basic quoting operator (Q) does nothing, just taking literally
 what you quoted as a string. But with several adverbs, it behaves like
 the well known following ops:
 
-    q//         Q :q //
-    ' '         Q :q //
-    qq//        Q :qq //
-    " "         Q :qq //
-    qw//        Q :q :w //
-    < >         Q :q :w //
-    << >>       Q :qq :ww //
-    qp//        Q :path //
-    qx//        Q :exec //
-    rx//        Q :regex //
-    m//         Q :match //
-    ms//        Q :match :sigspace //
-    s///        Q :subst ///
-    ss///       Q :subst :samespace ///
-    tr///       Q :trans ///
-    quasi {}    Q :code //
+Op        Translated Into Quoting Adverbs
+--------  -------------------------------------------------
+q//       Q :q //
+' '       Q :q //
+qq//      Q :qq //
+" "       Q :qq //
+qw//      Q :q :w //
+< >       Q :q :w //
+<< >>     Q :qq :ww //
+qp//      Q :path //
+qx//      Q :exec //
+rx//      Q :regex //
+m//       Q :match //
+ms//      Q :match :sigspace //
+s///      Q :subst ///
+ss///     Q :subst :samespace ///
+tr///     Q :trans ///
+quasi {}  Q :code //
+--------  ----------------------------
 
 
 
@@ -766,45 +769,45 @@ Escape Sequences
 
 To be used just inside of regexes (rx/.../, m/.../, s/.../.../ and tr/.../.../).
 
-------------  --------------------------------------------------------------------
-`\0[ ... ]`   character given in octal (brackets optional)
-`\c[ ... ]`   named character or control character
-`\C[ ... ]`   any character except the bracketed named or control character
-`\d`          digit
-`\D`          nondigit
-`\e`          escape character
-`\E`          anything but an escape character
-`\f`          form feed
-`\F`          anything but a form feed
-`\n`          (logical) newline
-`\N`          anything but a (logical) newline
-`\h`          horizontal whitespace
-`\H`          anything but horizontal whitespace
-`\L[ ... ]`   Everything within the brackets is lowercase
-`\Q[ ... ]`   all metacharacters within the brackets match as literal characters
-`\r`          return
-`\R`          anything but a return
-`\s`          any whitespace character, \\h | \\v
-`\S`          anything but whitespace
-`\t`          a tab
-`\T`          anything but a tab
-`\U[ ... ]`   Everything within the brackets is uppercase
-`\v`          vertical whitespace
-`\V`          anything but vertical whitespace
-`\w`          word character (Unicode alphanumeric plus "_")
-`\W`          anything but a word character
-`\x[ ... ]`   character given in hexadecimal (brackets optional)
-`\X[ ... ]`   anything but the character given in hexadecimal (brackets optional)
-------------  --------------------------------------------------------------------
+---------------------------  --------------------------------------------------------------------
+[`\0[ ... ]`](#backslash-0)   character given in octal (brackets optional)
+[`\c[ ... ]`](#backslash-c)   named character or control character
+[`\C[ ... ]`](#backslash-C)   any character except the bracketed named or control character
+[`\d`](#backslash-d)          digit
+[`\D`](#backslash-D)          nondigit
+[`\e`](#backslash-e)          escape character
+[`\E`](#backslash-E)          anything but an escape character
+[`\f`](#backslash-f)          form feed
+[`\F`](#backslash-F)          anything but a form feed
+[`\n`](#backslash-n)          (logical) newline
+[`\N`](#backslash-N)          anything but a (logical) newline
+[`\h`](#backslash-h)          horizontal whitespace
+[`\H`](#backslash-H)          anything but horizontal whitespace
+[`\L[ ... ]`](#backslash-L)   Everything within the brackets is lowercase
+[`\Q[ ... ]`](#backslash-Q)   all metacharacters within the brackets match as literal characters
+[`\r`](#backslash-r)          return
+[`\R`](#backslash-R)          anything but a return
+[`\s`](#backslash-s)          any whitespace character, \\h | \\v
+[`\S`](#backslash-S)          anything but whitespace
+[`\t`](#backslash-t)          a tab
+[`\T`](#backslash-T)          anything but a tab
+[`\U[ ... ]`](#backslash-U)   Everything within the brackets is uppercase
+[`\v`](#backslash-v)          vertical whitespace
+[`\V`](#backslash-V)          anything but vertical whitespace
+[`\w`](#backslash-X)          word character (Unicode alphanumeric plus "_")
+[`\W`](#backslash-X)          anything but a word character
+[`\x[ ... ]`](#backslash-x)  character given in hexadecimal (brackets optional)
+[`\X[ ... ]`](#backslash-X)  anything but the character given in hexadecimal (brackets optional)
+---------------------------  --------------------------------------------------------------------
 
 zero-width boundaries begin with a pipe symbol.
 To negate put a ! in front of the pipe symbol.
 
-------  -------------------------------------------------------------------
-`<|c>`  codepoint boundary (always matches in grapheme/codepoint mode)
-`<|g>`  grapheme boundary (always matches in grapheme mode)
-`<|w>`  word boundary aka \<wb\>
-------  -------------------------------------------------------------------
+-----------------  -------------------------------------------------------------------
+[`<|c>`](#pipe-c)  [codepoint](appendix-g-glossary.html#codepoint) boundary (always matches in grapheme/codepoint mode)
+[`<|g>`](#pipe-g)  [grapheme](appendix-g-glossary.html#grapheme) boundary (always matches in grapheme mode)
+[`<|w>`](#pipe-w)  word boundary aka \<wb\>
+-----------------  -------------------------------------------------------------------
 
 
 
@@ -813,35 +816,34 @@ Subrules
 
 predefined rules (see routine type rule) for any grammar or
 regex. They can have prefixes: . (dot) marks a non-capturing subrule,
-? and ! are also non-capturing positive and negative zero width
-assertions,
+? and ! are also non-capturing positive and negative zero width assertions.
 
----------------------  -------------------------------------------------
-`<alpha>`              single alphabetic character
-`<upper>`              uppercase char
-`<lower>`              lowercase char
-`<digit>`              single digit
-`<xdigit>`             hexadecimal digit
-`<alnum>`              alphanumeric char, equivalent to <+alpha +digit>
-`<punct>`              punctuation char
-`<ident>`              an identifier
-`<print>`              printable char
-`<graph>`              "graphical" char like kanji
-`<cntrl>`              control char, e.g. newline and backspace
-`<blank>`              mostly a space or tab
-`<space>`              whitespace character aka \s
-`<ws>`                 whitespace, roughly equals \s*
-`<wb>`                 zero-width word boundary, spot with between \w and \W
-`<ww>`                 zero-width inside word spot between \w and \w
-`<?before pattern>`    zero-width lookahead
-`<!before pattern>`    negative zero-width lookahead, true if the pattern does not match
-`<?after pattern>`     zero-width lookbehind
-`<!after pattern>`     negative zero-width lookbehind
-`<?same>`              zero-width between two identical chars
-`<prior>`              last matched pattern
-`<?>`                  matches nothing, always true
-`<!>`                  always false
----------------------  -------------------------------------------------
+-----------------------------------------------  -------------------------------------------------
+[`<alpha>`](#alpha-subrule)                      single alphabetic character
+[`<upper>`](#upper-subrule)                      uppercase char
+[`<lower>`](#lower-subrule)                      lowercase char
+[`<digit>`](#digit-subrule)                      single digit
+[`<xdigit>`](#xdigit-subrule)                    hexadecimal digit
+[`<alnum>`](#alnum-subrule)                      alphanumeric char, equivalent to <+alpha +digit>
+[`<punct>`](#punct-subrule)                      punctuation char
+[`<ident>`](#ident-subrule)                      an identifier
+[`<print>`](#print-subrule)                      printable char
+[`<graph>`](#graph-subrule)                      "graphical" char like kanji
+[`<cntrl>`](#cntrl-subrule)                      control char, e.g. newline and backspace
+[`<blank>`](#blank-subrule)                      mostly a space or tab
+[`<space>`](#space-subrule)                      whitespace character aka \s
+[`<ws>`](#ws-subrule)                            whitespace, roughly equals \s*
+[`<wb>`](#wb-subrule)                            zero-width word boundary, spot with between \w and \W
+[`<ww>`](#ww-subrule)                            zero-width inside word spot between \w and \w
+[`<?before pattern>`](#before-subrule)           zero-width lookahead
+[`<!before pattern>`](#before-negative-subrule)  negative zero-width lookahead, true if the pattern does not match
+[`<?after pattern>`](#after-subrule)             zero-width lookbehind
+[`<!after pattern>`](#after-negative-subrule)    negative zero-width lookbehind
+[`<?same>`](#same-subrule)                       zero-width between two identical chars
+[`<prior>`](#prior-subrule)                      last matched pattern
+[`<?>`](#question-subrule)                       matches nothing, always true
+[`<!>`](#exclamation-subrule)                    always false
+-----------------------------------------------  -------------------------------------------------
 
 
 Flow Control
@@ -853,7 +855,7 @@ Closure Traits
 aka phasers. Every block can contain special named blocks (some are
 only for loops) that are started at certain times. They are traits
 (compile time property) of a block object. Those marked with a * can
-also be used within an expression as in "BEGIN my $x = 3 * 3;".
+also be used within an expression as in `BEGIN my $x = 3 * 3;`.
 
 ------------------------------------------------------  ------------------------------------------------------------------
 [BEGIN](appendix-a-index.html#BEGIN-phaser) {...}*      at compile time, ASAP, only ever runs once
@@ -1001,10 +1003,10 @@ In routine and block definitions can be also some character with special meaning
 -------------------------------------------------------------  ------------------------------------------------------------------------------------------------------------------
 [`!`](appendix-a-index.html#exclamation-mark-signature)        suffix of required parameter (default when named, not positional)
 [`*`](appendix-a-index.html#asterisk-signature)                prefix of slurpy arrays
-[`-->`](appendix-a-index.html#minus-minus-greater-signature)  prefix of return type
+[`-->`](appendix-a-index.html#minus-minus-greater-signature)   prefix of return type
 [`->`](appendix-a-index.html#minus-greater-signature)          prefix of named readonly parameters for a block (pointy block syntax)
 [`:`](appendix-a-index.html#colon-signature)                   prefix of named parameter, positional when without
-[`::`](appendix-a-index.html#colon-colon-signature)           prefix of a variable type introduced in a signature
+[`::`](appendix-a-index.html#colon-colon-signature)            prefix of a variable type introduced in a signature
 [`<->`](appendix-a-index.html#lower-minus-greater-signature)   prefix of named writeable parameters for a block (double pointy block syntax)
 [`?`](appendix-a-index.html#question-mark-signature)           suffix of optional parameter (default when positional, not named)
 [`^`](appendix-a-index.html#caret-signature)                   prefix of metaclass methods, `$obj.^methods();` is shortcut for [`$obj.HOW.methods($obj);`](#object-introspection)

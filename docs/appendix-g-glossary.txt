@@ -361,7 +361,7 @@ in Perl 6 a whole rearranged language that does the same,
 a [whole page](tablet-9-regexes.html) is dedicated just about that subject
 
 <a id="reify">
-**reify* &mdash;
+**reify** &mdash;
 
 <a id="routine"/>
 **routine** &mdash;
