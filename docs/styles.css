@@ -2,7 +2,7 @@
 
 body {
     background-color: #eee;
-    color: #333;
+    color: #335;
     width: 80%;
     font-family: 'Oxygen', sans-serif;
 }
@@ -60,7 +60,7 @@ pre {
 }
 
 blockquote {
-    background-color: #cde;
+    background-color: #cdf;
     border: 1px solid #bcd;
     padding-top: 2px;
     padding-bottom: 2px;
