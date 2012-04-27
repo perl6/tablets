@@ -3,12 +3,6 @@
 This index contains an alphanumeric sorted list (sorted without prefixes
 like colon, slash, sigil or twigil) of all operators, methods, builtins,
 options, modifier and special variables with short explanations.
-After each method is its signature (in round brackets),
-telling you the value type of the parameters and the return value.
-Each term is followed by a link «in french brackets» to a condensed summary
-listing of its category in [appendix B](appendix-b-grouped.html)
-or to the according category in the tablets.
-
 Sometimes are added green placeholder.
 <span class="you-provide">n</span> stands for a [integer number](#Int-type),
 <span class="you-provide">f</span> is a floating [point number](#Num-type),
@@ -18,6 +12,12 @@ Sometimes are added green placeholder.
 <span class="you-provide">l</span> a list,
 <span class="you-provide">op</span> any operator and
 <span class="you-provide">t</span> any *[term](appendix-g-glossary.html#term)*.
+After each method is its signature (in round brackets), telling you
+the value type (same as in placeholders) of the parameters and the return value.
+Each term is followed by a link «in french brackets» to a condensed summary
+listing of its category in [appendix B](appendix-b-grouped.html)
+or to the according category in the tablets.
+
 
 <a id="nav-top"/>
 **Navigation:     [A](#a) [B](#b) [C](#c) [Cn](#cn) [D](#d)  [E](#e)
@@ -1882,7 +1882,7 @@ environment variables (of the shell), in Perl 5: *%ENV*
 [infix](#infix-category) operator, proves
 equality in forced *[string
 context](tablet-4-operators.html#string-context)*
-as does **[==](#double-equal-op)** in
+as does [**==**](#double-equal-op) in
 [numeric context](appendix-g-glossary.html#numeric-context)
 
 <a id="equiv"/>
@@ -1896,13 +1896,13 @@ same as an existing operator
 **eqv** *«comparison op»* &mdash;
 [infix](#infix-category)
 operator, compares the dynamic state of objects and values, in
-contrast with static **[=](#triple-equal)**
+contrast with static [**===**](#triple-equal)
 
 <a id="err"/><a id="err-op"/>
 **err** *[«logical op»](tablet-4-operators.html#logical-selection)* &mdash;
 short circuit defined or, returns the first defined value from
 the left, low precedence version of **[//](#defined-or)** &mdash;
-see also: [**or**](#or)
+see also: [**or**](#or), [**xor**](#xor)
 
 <a id="ERR-global-var"/>
 **\$\*ERR**
@@ -3110,7 +3110,7 @@ if there is one then the result is **True** in bool context,
 otherwise the first *True* value is returned or the last one,
 low precedence version of **[||](#logical-or)** &mdash;
 example: `?('hurray' or 5)` returns `True` &mdash;
-see also: [**orelse**](#orelse) , [**any**](#any)
+see also: [**any**](#any), [**orelse**](#orelse), [**err**](#err), [**xor**](#xor)
 
 <a id="ord"/>
 **ord** ([Str](#Str-type) [--\>](#double-minus-greater-signature) [Int](#Int-type))
