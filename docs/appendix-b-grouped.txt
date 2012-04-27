@@ -919,9 +919,10 @@ Loops
 
 --------------------------------------  -----------------------------------------------------------
 [loop](appendix-a-index.html#loop)      general (endless) loop, unless used as an C-style-loop, evals following expression into void context
-[repeat](appendix-a-index.html#repeat)  initial command for while or until loops that have their condtion at the end
 [while](appendix-a-index.html#repeat)   loop with negative exit condition (exit when False), condition, evals expression into boolean context
 [until](appendix-a-index.html#until)    loop with positive exit condition(exit when True), evals expression into boolean context
+[repeat](appendix-a-index.html#repeat)  initial command for while or until loops that have their condtion at the end
+[do](appendix-a-index.html#do)          runs that block in any case one time, "do once"-loop
 [for](appendix-a-index.html#for )       evals expression into lazy list context and iterates over that list from first to last value, sets each time `$_` (can be combined with when as well),
 --------------------------------------  -----------------------------------------------------------
 

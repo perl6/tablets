@@ -3,7 +3,7 @@
 This index contains an alphanumeric sorted list (sorted without prefixes
 like colon, slash, sigil or twigil) of all operators, methods, builtins,
 options, modifier and special variables with short explanations.
-After each method is (in round brackets) its signature,
+After each method is its signature (in round brackets),
 telling you the value type of the parameters and the return value.
 Each term is followed by a link «in french brackets» to a condensed summary
 listing of its category in [appendix B](appendix-b-grouped.html)
@@ -761,8 +761,8 @@ encompas these brackets
 **\[**<span class="you-provide">op</span>**\]**
 *[«meta op»](appendix-g-glossary.html#metaoperators)* &mdash;
 [circumfix](#circumfix-category) reduction
-metaop, applies the operator between all elements of an array, alias
-to **[reduce](#reduce)**
+metaop, applies the operator between all elements of an array,
+alias to [**reduce**](#reduce)
 
 <a id="square-brackets-backslash-metaop"/><a id="triangle-op"/>
 **\[\\**<span class="you-provide">op</span>**\]**
@@ -2469,8 +2469,9 @@ lists, does in most context same as **[\*](#asterisk)**
 <a id="infix-category"/>
 **infix**
 *[«grammatical category»](appendix-b-grouped.html#categories)* &mdash;
-namespace of symbols that stay between two statements, that
-become their parameters &mdash; example: `$a + $b ` is same as `$a.&infix:<+\>($b)`
+namespace of symbols that stay between two statements,
+that become their parameters &mdash;
+example ([plus](#plus-op)): `$a + $b ` is same as `$a.&infix:<+>($b)`
 
 <a id="infix-circumfix-meta-category"/>
 **infix\_circumfix\_meta\_operator**
@@ -2478,8 +2479,8 @@ become their parameters &mdash; example: `$a + $b ` is same as `$a.&infix:<+\>($
 internal namespace of
 [metaoperator](appendix-g-glossary.html#metaoperator) that
 [circumfix](#circumfix-category) other operator but
-stay [infix](#infix-category) (between) two terms
-(mostly lists) &mdash; example (the arrows): ` @a <<+<< @b `
+stay [infix](#infix-category) (between) two terms (mostly lists) &mdash;
+example: ([arrows](#double-lower-metaop)): `@a <<+<< @b`
 
 <a id="infix-postfix-meta-category"/>
 **infix\_postfix\_meta\_operator**
@@ -2487,7 +2488,7 @@ stay [infix](#infix-category) (between) two terms
 internal namespace of [metaoperator](appendix-g-glossary.html#metaoperator)
 that [postfix](#postfix-category) other operator but
 stay [infix](#infix-category) (between) two terms &mdash;
-example (equal sign): ` $a += 5 `
+example ([equal sign](#equal-metaop)): `$a += 5`
 
 <a id="infix-prefix-meta-category"/>
 **infix\_prefix\_meta\_operator**
@@ -2496,7 +2497,7 @@ internal namespace of
 [metaoperator](appendix-g-glossary.html#metaoperator) that
 [prefix](#prefix-category) (precedes) other operator
 but stay [infix](#infix-category) (between) two terms &mdash;
-example (exclamation mark): ` 4 != 5 `
+example ([exclamation mark](#exclamation-metaop)): `4 != 5`
 
 <a id="INIT-phaser"/>
 **INIT**
@@ -3209,9 +3210,8 @@ reference to the current package
 <a id="package-declarator-category"/>
 **package\_declarator**
 *[«grammatical category»](appendix-b-grouped.html#categories)* &mdash;
-internal namespace for &mdash; example:
-*[package](#package),
-[module](#module), [class](#class)*
+internal namespace for &mdash;
+example: [**package**](#package), [**module**](#module), [**class**](#class)
 
 <a id="Pair-type"/>
 **Pair**
@@ -3336,13 +3336,13 @@ executed at every block exit, after
 *[«grammatical category»](appendix-b-grouped.html#categories)* &mdash;
 operator namespace of ops, that stay after one statement or
 variable, but do surround a second &mdash;
-example(square brackets): `$a[2]`
+example([square brackets](#postcircumfix-square-brackets-op)): `$a[2]`
 
 <a id="postfix-category"/>
 **postfix**
 *[«grammatical category»](appendix-b-grouped.html#categories)* &mdash;
 operator namespace of ops, that stay after a statement or variable &mdash;
-example: [`$a++`](#auto-increment)
+example ([**++**](#auto-increment)): [`$a++`](#auto-increment)
 
 <a id="postfix-prefix-meta-operator-category"/>
 **postfix\_prefix\_meta\_operator**
@@ -3351,7 +3351,7 @@ internal namespace of
 [metaoperator](appendix-g-glossary.html#metaoperator) that
 [prefix](#prefix-category) (precedes) other operator
 but stay [postfix](#postfix-category) (after) another term &mdash;
-example (greater as): [`@a >>++`](#double-greater-metaop)
+example ([**\>\>**](#double-greater-metaop)): `@a >>++`
 
 <a id="PRE-phaser"/>
 **PRE**
@@ -3369,7 +3369,7 @@ operator, opposite of [**succ**](#succ)
 **prefix**
 *[«grammatical category»](appendix-b-grouped.html#categories)* &mdash;
 operator namespace of ops, that stay before a statement or variable &mdash;
-example: [`++$a`](#auto-increment)
+example ([**++**](#auto-increment)): `++$a`
 
 <a id="prefix-circumfix-meta-operator-category"/>
 **prefix\_circumfix\_meta\_operator**
@@ -3377,7 +3377,7 @@ example: [`++$a`](#auto-increment)
 internal namespace of [metaoperator](appendix-g-glossary.html#metaoperator) that
 [circumfix](#circumfix-category) (surrounds) other
 operator but stay [prefix](#prefix-category) (before) another term &mdash;
-example (in square brackets): `[+] @a` - sums up all elements of @a
+example: ([square brackets](#square-brackets-metaop)): `[+] @a` - sums up all elements of @a
 
 <a id="prefix-postfix-meta-operator-category"/>
 **prefix\_postfix\_meta\_operator**
@@ -3385,7 +3385,7 @@ example (in square brackets): `[+] @a` - sums up all elements of @a
 internal namespace of [metaoperator](appendix-g-glossary.html#metaoperator) that
 [postfix](#postfix-category) other operator but stay
 [prefix](#prefix-category) (before) another term &mdash;
-example (greater as): `++<< @a`
+example ([**\<\<**](double-lower-metaop)): `++<< @a`
 
 <a id="print"/>
 **[print](tablet-5-io.html#print)** &mdash;
@@ -3513,18 +3513,19 @@ see also: **[:code](#code-adverb)**
 **$\~Quote**
 *[«special var»](appendix-b-grouped.html#slang-variables)* &mdash;
 current [grammar](#grammar) of the quoting
-language as used by the [Q-operator](#Q-op)
-and any other quoting op
+language as used by the [Q-operator](#Q-op) and any other quoting op
 
 <a id="quote-category"/>
 **quote**
 *[«grammatical category»](appendix-b-grouped.html#categories)* &mdash;
-operator namespace, used to define new quoting ops with a macro
+operator namespace used to define new 
+[quoting ops](appendix-b-grouped.html#quoting-ops) with a macro
 
 <a id="quote-mod-category"/>
 **quote\_mod**
 *[«grammatical category»](appendix-b-grouped.html#categories)* &mdash;
-operator namespace, used to define new quoting adverbs
+operator namespace used to define new 
+[quoting adverbs](appendix-b-grouped.html#quoting-adverbs)
 
 <a id="quotemeta"/>
 **quotemeta**
@@ -3648,9 +3649,11 @@ re-starts processing of the current loop turn
 
 <a id="reduce"/>
 **reduce**
-*«list method»* &mdash; alias to **[[ ]](#square-brackets-metaop)** -
-[metaoperator](appendix-g-glossary.html#metaoperators)
-: `[+] @a = @a.reduce(&[+])`
+*«list method»* &mdash; alias to **[\[ \]](#square-brackets-metaop)** &mdash;
+[metaoperator](appendix-g-glossary.html#metaoperators) that applies an 
+[*infix*](#infix-category) operator between each adjacent elements of a list
+and evaluates this term to a single value &mdash;
+example: `[+] @a` is equivalent to `@a.reduce(&[+])` numerical sum of all elements
 
 <a id="Regex-type"/>
 **Regex** 
@@ -3786,8 +3789,7 @@ current *[routine](appendix-g-glossary#routine)* object
 <a id="routine-declarator-category"/>
 **routine\_declarator**
 *[«grammatical category»](appendix-b-grouped.html#categories)* &mdash;
-internal namespace for [routine declarators](appendix-b-grouped.html#routine-types) &mdash;
-example: **[sub](#sub)**, **[method](#method)**
+internal namespace for [routine declarators](appendix-b-grouped.html#routine-types)
 
 <a id="rule"/>
 **rule**
@@ -3946,7 +3948,8 @@ demands evaluation of scalar variables that start with the
 **scope\_declarator**
 *[«grammatical category»](appendix-b-grouped.html#categories)* &mdash;
 internal namespace for
-*[scope declarators](appendix-b-grouped.html#scope-declarator)*
+*[scope declarators](appendix-b-grouped.html#scope-declarator)* in case you want
+to create your own
 
 <a id="seed"/>
 **seed** &mdash;
@@ -3976,8 +3979,8 @@ example:
 <a id="sigil"/><a id="sigil-category"/>
 **sigil**
 *[«grammatical category»](appendix-b-grouped.html#categories)* &mdash;
-word to name the namespace for sigils, used to redifine them or
-define your own with a macro
+word to name the namespace for [sigils](appendix-b-grouped.html#sigils),
+used to redifine them or define your own with a macro
 
 <a id="sign"/>
 **sign** ($f) &mdash;
@@ -4142,28 +4145,26 @@ that stay in front of it
 **statement\_mod\_cond**
 *[«grammatical category»](appendix-b-grouped.html#categories)* &mdash;
 internal namespace for words that come after a statement and
-handle if the statement will be executed &mdash; example : `$a++
-if $a > 3`
+handle if the statement will be executed &mdash;
+example (if): `$a++ if $a > 3`
 
 <a id="statement-mod-loop-category"/>
 **statement\_mod\_loop**
 *[«grammatical category»](appendix-b-grouped.html#categories)* &mdash;
-internal namespace for [special group of block
-modifier](appendix-b-grouped.html#loops)
-that turn the [block](#block) into a loop &mdash; example :
-**[loop](#loop)**,
-**[repeat](#repeat)**, **[for](#for)**
+internal namespace for
+[special group of block modifier](appendix-b-grouped.html#loops)
+that turn the [block](#block) into a loop
 
 <a id="statement-prefix-category"/>
 **statement\_prefix**
 *[«grammatical category»](appendix-b-grouped.html#categories)* &mdash;
-internal namespace for block modifier &mdash; example :
-***[do](#do)***
+internal namespace for block modifier &mdash;
+example: [**do**](#do)
 
 <a id="Str-type"/>
 **Str**
 *[«immutable type»](appendix-b-grouped.html#immutable-types)* &mdash;
-Perl string: a finite sequence of [unicode](appendix-g-glossary.html#unicode)
+Perl string - a finite sequence of [unicode](appendix-g-glossary.html#unicode)
 characters
 
 <a id="Sub-type"/>
@@ -4268,7 +4269,8 @@ tangent, trigonometric function, takes angle in radian; see also
 <a id="term"/><a id="term-category"/>
 **term**
 *[«grammatical category»](appendix-b-grouped.html#categories)* &mdash;
-namespace of terms, used to redifine them or make a new with a macro
+namespace of terms, used to redifine them or make a new with a macro &mdash;
+example: [**\***](#asterisk-term)
 
 <a id="th-modifier"/>
 <span class="you-provide">n</span>**:th**
@@ -4321,6 +4323,7 @@ string into others, alias to **Q [:trans](#trans-adverb) /.../.../**
 <a id="trait-auxiliary-category"/>
 **trait\_auxiliary**
 *[«grammatical category»](appendix-b-grouped.html#categories)* &mdash;
+example: [**is**](#is)
 
 <a id="trait-verb-category"/>
 **trait\_verb**

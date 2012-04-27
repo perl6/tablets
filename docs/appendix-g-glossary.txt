@@ -67,7 +67,9 @@ is going a few steps to the left (it goes back)
 <a id="binding"/>
 **[binding](tablet-3-variables#binding)** &mdash;
 making two variables share the same content by pointing to same
-memory location
+memory location, done i Perl 6 with 
+[**:=**](appendix-a-index.html#runtime-binding-op) 
+and [**::=**](appendix-a-index.html#compiletime-binding-op)
 
 <a id="block"/>
 **block** &mdash;
@@ -98,7 +100,9 @@ mostly used as a fancy alias for a *[block](#block)*
 
 <a id="coderef"/>
 **coderef** &mdash;
-reference (pointer) to an executable block of code (routine)
+[*reference*] to an executable [*block*](#block) of code ([*routine*](#routine)),
+in Perl 6 there are just [objects](#object) representing a routine that can be
+[attributes](#attribute) of other objects
 
 <a id="compilation"/>
 **compilation** &mdash;
@@ -265,6 +269,9 @@ other logical operations are: [*and*](#and), [*or*](#or), [*xor*](#xor)
 
 # [O](#nav-top)
 
+<a id="object"/>
+**object** &mdash; [*OOP*](#OOP)
+
 <a id="OOP"/>
 **OOP** *(object oriented orogramming)* &mdash;
 programming paradigm (style), that arranges data and functions
@@ -317,9 +324,11 @@ several commands via **[==\>](appendix-a-index.html#double-equal-greater-op)** a
 <a id="POD"/>
 **[POD](tablet-2-basic-syntax.html#pod)**
 *(Plain Old Documentation)* &mdash; 
-a markup language to embeded  documentation into Perl source code,
+a markup language to embeded documentation into Perl source code,
 has in Perl 6 the ability to store data into special variables 
-like **[\$=pod](appendix-a-index.html#pod-pod-var)** to be retrieved later
+like **[\$=pod](appendix-a-index.html#pod-pod-var)** to be retrieved later,
+all pod-directives start with a equal sign - more details are written in the
+[basics tablet](tablet-2-basic-syntax.html#pod)
 
 <a id="pointy-block"/>
 **pointy block** &mdash;
@@ -339,8 +348,11 @@ a block that is given readonly *[parameters](parameter)* with
 # [R](#nav-top)
 
 <a id="reference"/>
-**reference** &mdash;
-address of data in memory, often termed a capture in Perl 6
+**reference** *(or pointer)* &mdash;
+address of a specific location in the computers memory,
+officially there are no references in Perl 6, 
+but there are several container types that can hold other container of values,
+and there is [binding](#binding)
 
 <a id="regex"/>
 **Regex** *(regular expression)* &mdash;
