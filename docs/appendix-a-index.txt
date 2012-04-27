@@ -420,11 +420,11 @@ divides numbers, forces numeric context
 inside round brackets (for example `(3/7)`), gives you a
 [rational number](#Rat-type) that keeps track of its numerator and denominator
 
-<a id="slash-var"/><a id="match-var"/>
+<a id="slash-var"/><a id="match-var"/><a id="match-object"/>
 **$/** 
 *[«special var»](appendix-b-grouped.html#match-variables)* &mdash;
-last created match object of this
-*[block](appendix-g-glossary.html#block)*
+last created match object of this [*block*](appendix-g-glossary.html#block)
+with the [following methods](appendix-b-grouped.html#match-object-methods)
 
 <a id="slash-slash-op"/><a id="defined-or"/>
 **//**
@@ -3053,8 +3053,8 @@ see also: [**numerator**](#numerator) and [**denominator**](#denominator)
 Perl number (approximate "real", generally via floating point)
 
 <a id="numerator"/>
-( [--\>](#minus-minus-greater-signature) [Int](#Int-type))
 **numerator**
+( [--\>](#minus-minus-greater-signature) [Int](#Int-type))
 *[«rat method»](tablet-2-basic-syntax.html#rational-number)* &mdash;
 returns the numerator of a rational number (value type **[Rat](#Rat-type)**
 and **[FatRat](#FatRat-type)**),
