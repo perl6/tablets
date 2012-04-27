@@ -902,7 +902,9 @@ object into semicolon list, (positional parameter)
 *[«context op»](appendix-b-grouped.html#contextualizers)*,
 *[«string op»](tablet-4-operators.html#string-context)* &mdash;
 forces *[string context](tablet-4-operators.html#string-context)*
-(stringify) and/or concatenate strings, alias for **[cat](#cat)**
+on its operands (stringifies),
+if *[infix](#infix-category)* its concatenate strings -
+an alias for **[cat](#cat)**
 
 <a id="tilde-twigil"/>
 **\~**
@@ -939,7 +941,7 @@ forces *[string context](tablet-4-operators.html#string-context)*
 <a id="doube-tilde-op"/><a id="smartmatch-op"/>
 **[\~\~](tablet-4-operators.html#smartmatch)**
 *«comparison op»* &mdash;
-smartmatch operator, compares (almost) all
+*[infix](#infix-category)* smartmatch operator, compares (almost) all
 variable and data types according a
 [table](appendix-b-grouped.html#smartmatch)
 
