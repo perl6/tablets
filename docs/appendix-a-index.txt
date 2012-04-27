@@ -26,7 +26,7 @@ or to the according category in the tablets.
 [S](#s) [Sn](#sn) [T](#t) [U](#u) [V](#v) [W](#w)   [X](#x)  [Y](#y)   [Z](#z)**
 
 Before alpha chars (a-z) in ASCII order:
-**[`! " #`](#exclamation) [`$ % &`](#dollar)  [`' ( *`](#single-quotation)
+**[`! " #`](#exclamation) [`$ % &`](#dollar)  [`' ( *`](#single-quotes)
 [`+ , -`](#plus)          [`. / 0`](#dot)     [`: ; <`](#colon)
 [`= > ?`](#equal)         [`@ [ \`](#at)      [`^ _ {`](#caret)   [`| ~`](#pipe)**
 
@@ -69,17 +69,17 @@ last error message
 *[«predefined subrule»](appendix-b-grouped.html#subrules)* &mdash;
 opposite of [**\<?\>**](#question-subrule), returns always **[False](#False)**
 
-<a id="double-exclamation"/>
+<a id="exclamation-exclamation"/>
 **!!** *[«conditional op»](appendix-b-grouped.html#conditionals)* &mdash; 
 just second part of the ternary (conditional) operator after
 **[??](#ternary-op)**, no op on its own
 
-<a id="triple-exclamation"/><a id="triple-exclamation-yadda"/>
+<a id="exclamation-exclamation-exclamation"/><a id="exclamation-yadda"/>
 **!!!** *[«yadda op»](tablet-4-operators.html#yadda)* &mdash;
 [yadda operator](appendix-g-glossary.html#yadda-operator)
 that calls **[die](#die)**
 
-<a id="double-quotation"/>
+<a id="double-quotes"/><a id="quotation-quotation"/>
 **[" "](tablet-2-basic-syntax.html#double-quotes)**
 *[«quoting op»](appendix-b-grouped.html#quoting-ops)* &mdash;
 double quoting, interpolates with
@@ -126,7 +126,7 @@ forces scalar context, alias to the **[item()](#item)** function
 *[«regex metachar»](appendix-b-grouped.html#regex-metacharacter)* &mdash;
 end of the string
 
-<a id="double-dollar-metachar"/>
+<a id="dollar-dollar-metachar"/>
 **$$**
 *[«regex metachar»](appendix-b-grouped.html#regex-metacharacter)* &mdash;
 matches the end of a line (no more multile mode)
@@ -155,15 +155,15 @@ forces hash context, alias to the **[hash()](#hash)** function
 *[«regex metachar»](appendix-b-grouped.html#quantifier)* &mdash;
 quantifier that repeat char or group as long as separated by
 right expression &mdash; example: `\d % ','` matches `1,2,3,4,5` &mdash;
-see also: **[%%](#double-percent-metachar)**
+see also: **[%%](#percent-percent-metachar)**
 
-<a id="double-percent-op"/>
+<a id="percent-percent-op"/>
 **%%**
 *[«numeric op»](tablet-4-operators.html#numeric-context)*  &mdash;
 **[True](#True)** if the left value is evenly
 divisible by the right value
 
-<a id="double-percent-metachar"/>
+<a id="percent-percent-metachar"/>
 **%%**<span class="you-provide">s</span>
 *[«regex metachar»](appendix-b-grouped.html#quantifier)* &mdash;
 quantifier that repeat char or group as long as separated by
@@ -195,7 +195,7 @@ requires that all conditions are met, see also: **[all](#all)**
 *[«regex metachar»](appendix-b-grouped.html#regex-metacharacter)* &mdash;
 match multiple patterns (*[AND](appendix-g-glossary.html#and)*-connection of patterns)
 
-<a id="double-ampersand-metachar"/><a id="logical-and"/>
+<a id="ampersand-ampersand-metachar"/><a id="logical-and"/>
 **&&**
 *[«logical op»](tablet-4-operators.html#logical-selection)* &mdash;
 *[infix](#infix-category)* short circuit logical *[AND](appendix-g-glossary.html#and)*,
@@ -208,7 +208,7 @@ high precedence version of [**and**](#logical-and) &mdash;
 example: `0 and 7` returns `0` &mdash;
 see also: **[&](#junctive-and)**
 
-<a id="single-quotation"/>
+<a id="single-quotes"/>
 **[' '](tablet-2-basic-syntax.html#single-quotes)**
 *[«quoting op»](appendix-b-grouped.html#quoting-ops)* &mdash;
 simple quoting, just / and ' must be escaped, alias to
@@ -261,14 +261,14 @@ are accessible in all *[scopes](appendix-g-glossary.html#scope)*
 *[«regex metachar»](appendix-b-grouped.html#quantifier)* &mdash;
 quantifier for zero or more findings
 
-<a id="double-asterisk-op"/>
+<a id="asterisk-asterisk-op"/>
 **\*\***
 *[«numeric op»](tablet-4-operators.html#numeric-context)* &mdash;
 raises a number to a power, forces numeric context &mdash;
 example: `2 ** 3` is 8 because its `2 * 2 * 2` &mdash;
 alias to **[exp](#exp)**
 
-<a id="double-asterisk-metachar"/>
+<a id="asterisk-asterisk-metachar"/>
 **\*\***
 *[«regex metachar»](appendix-b-grouped.html#quantifier)* &mdash;
 not backtracking, greedy quantifier taking zero or more findings
@@ -300,7 +300,7 @@ quantifier for one or more findings
 *[«numeric op»](tablet-4-operators.html#numeric-context)* &mdash;
 bitwise *[AND](appendix-g-glossary.html#and)*, forces numeric context
 
-<a id="double-plus-op"/><a id="auto-increment"/>
+<a id="plus-plus-op"/><a id="auto-increment"/>
 **++**
 *[«sequence traversal»](tablet-4-operators.html#traversing-sequence)* &mdash;
 generic autoincrement, calls internal iterator of that object,
@@ -341,7 +341,7 @@ forces numeric context
 [infix](#infix-category) subtraction operator,
 forces numeric context (and negates)
 
-<a id="double-minus-op"/><a id="auto-decrement"/>
+<a id="minus-minus-op"/><a id="auto-decrement"/>
 **--**
 *[«sequence traversal»](tablet-4-operators.html#traversing-sequence)* &mdash;
 generic autodecrement, calls internal iterator of that object,
@@ -349,7 +349,7 @@ before (prefix) or after (suffix) the
 [evaluation](appendix-g-glossary.html#evaluation) of the surrounding term,
 alias to **[pred](#pred)**, opposite of **[++](#<a id="auto-increment"/>)**
 
-<a id="double-minus-greater-signature"/>
+<a id="minus-minus-greater-signature"/>
 **--\>**
 *[«signature symbol»](appendix-b-grouped.html#signature-symbols)* &mdash;
 declares the type of the return value of a
@@ -378,7 +378,7 @@ matches any character (including a newline, unlike in Perl 5)
 prefix for a *[subrule](appendix-g-glossary.html#subrule)*
 that doesn't capture (matches will not be remembered)
 
-<a id="double-dot"/><a id="double-dot-op"/><a id="range-op"/>
+<a id="dot-dot"/><a id="dot-dot-op"/><a id="range-op"/>
 **..**
 *[«ranges»](tablet-4-operators.html#ranges)*,
 *[«list op»](tablet-4-operators.html#list-generation)* &mdash;
@@ -387,7 +387,7 @@ produces a **[Range](#Range-type)** object in
 [item context](appendix-b-grouped.html#contextualizers)
 which generate lists in *list context*
 
-<a id="triple-dot"/><a id="triple-dot-op"/><a id="sequence-op"/>
+<a id="dot-dot-dot"/><a id="dot-dot-dot-op"/><a id="sequence-op"/>
 **[...](tablet-4-operators.html#sequence-operator)**
 *[«list op»](tablet-4-operators.html#list-generation)* &mdash;
 *[infix](#infix-category)* [sequence](#Seq-type) generating operator,
@@ -396,7 +396,7 @@ or geometric (give 3), can produce a sequence with a generator routine &mdash;
 example: `@a = 1, 2, 4 ...` infite lazy list of all powers of two, 
 `1, 1, *+*, ... 1000` returns fibonacci numbers lower equal then 1000
 
-<a id="triple-dot-yadda"/>
+<a id="dot-yadda"/>
 **...**
 *[«yadda op»](tablet-4-operators.html#yadda)* &mdash;
 [yadda operator](appendix-g-glossary.html#yadda-operator) that calls
@@ -419,11 +419,11 @@ inside round brackets (for example `(3/7)`), gives you a
 last created match object of this
 *[block](appendix-g-glossary.html#block)*
 
-<a id="double-slash-op"/><a id="defined-or"/>
+<a id="slash-slash-op"/><a id="defined-or"/>
 **//**
 *[«logical op»](tablet-4-operators.html#logical-selection)* &mdash;
 short circuit *defined or*, returns the first defined value
-(from left to right), similar to **[||](#double-pipe-op)** &mdash;
+(from left to right), similar to **[||](#pipe-pipe-op)** &mdash;
 high precedence version of **[err](#err)**
 
 <a id="backslash-0"/><a id="backslash-zero"/>
@@ -483,19 +483,19 @@ suffix of all labels you can jump to with **[goto](#goto)**
 prefix of a *[named parameter](appendix-g-glossary.html#named-parameter)* in
 a signature, they are positional when without colon
 
-<a id="double-colon-sigil"/>
+<a id="colon-colon-sigil"/>
 **::**
 *[«sigil»](appendix-b-grouped.html#sigils)* &mdash;
 abstraction [sigil](appendix-g-glossary.html#sigil) and namespace
 separator in variable / [routine](appendix-g-glossary.html#routine) /
 namespace names (like in Perl 5)
 
-<a id="double-colon-signature"/>
+<a id="colon-colon-signature"/>
 **::**
 *[«signature symbol»](appendix-b-grouped.html#signature-symbols)* &mdash;
 introducing a type variable in a signature
 
-<a id="double-colon-equal-op"/><a id="compiletime-binding-op"/>
+<a id="colon-colon-equal-op"/><a id="compiletime-binding-op"/>
 **[::=](tablet-3-variables#binding)** &mdash;
 [binds](tablet-3-variables#binding)
 a value or variable to a variable at compile time
@@ -525,20 +525,20 @@ comes before the right operand
 double pointy syntax to assign a rw parameter to a
 *[block](appendix-g-glossary.html#block)*
 
-<a id="double-lower-metaop"/>
+<a id="lower-lower-metaop"/>
 **\<\<**
 *[«meta op»](appendix-g-glossary.html#metaoperators)* &mdash;
 hyper metaopeartor, right side dicates the lengths of the  result,
 has a [unicode sibling](appendix-b-grouped.html#unicode-operators) &mdash;
 example: ` 2 <<+=<< @b` increments numeric value of every array element by 2
 
-<a id="double-lower-double-equal-op"/>
+<a id="lower-lower-equal-equal-op"/>
 **\<\<==**
 *[«sequencer op»](tablet-4-operators.html#feed-ops)* &mdash;
 leftward pointing feed operator that adds values to an existing list (append-mode) &mdash;
-see also: [*\<==*](#lower-double-equal-op) and [*==\>\>*](#double-equal-double-greater-op)
+see also: [*\<==*](#lower-lower-equal-op) and [*==\>\>*](#equal-equal-greater-greater-op)
 
-<a id="double-angle-brackets-op"/>
+<a id="double-angle-brackets-op"/><a id="texas-brackets"/><a id="texas-brackets-op"/>
 **[<< \>\>](tablet-2-basic-syntax.html#quote-words)**
 *[«quoting op»](appendix-b-grouped.html#quoting-ops)* &mdash;
 [circumfix](#circumfix-category) quoting operator for grouping with
@@ -551,12 +551,12 @@ of variables, alias to **Q** **[:qq](#qq-adverb)** **[:ww](#ww-adverb)** **/.../
 less than or equal, numeric comparison operator &mdash;
 see also: [**<**](#lower-op) and [**\>=**](#greater-equal-op)
 
-<a id="lower-double-equal-op"/><a id="left-pipe-op"/>
+<a id="lower-equal-equal-op"/><a id="left-pipe-op"/>
 **\<==**
 *[«sequencer op»](tablet-4-operators.html#feed-ops)* &mdash;
 leftward pointing feed operator, take return value of right side
 and feed as parameter to the left &mdash;
-see also: **[==\>](#double-equal-greater-op)**
+see also: **[==\>](#equal-equal-greater-op)**
 
 <a id="lower-equal-greater-op"/><a id="spaceship-op"/>
 **\<=\>**
@@ -620,31 +620,31 @@ example: `$a += 3;` equals `$a = $a + 3`
 compares [binding](tablet-3-variables#binding),
 if both vars are bound to same memory location
 
-<a id="double-equal-op"/>
+<a id="equal-equal-op"/>
 **==**
 *[«num comparison»](tablet-4-operators.html#numerical-comparison)* &mdash;
 **[True](#True)** if values are equal in
 numerical context, as **[eq](#eq)** does in *[string
 context](tablet-4-operators.html#string-context)*
 
-<a id="triple-equal-op"/><a id="identity-op"/>
+<a id="equal-equal-equal"/><a id="equal-equal-equal-op"/><a id="identity-op"/>
 **===** *«comparison op»* &mdash;
 *[infix](#infix-category)* check for identity - equality of
 value and [type](appendix-b-grouped.html#value-types)
 
-<a id="double-equal-greater-op"/><a id="pipe-right"/>
+<a id="equal-equal-greater-op"/><a id="pipe-right"/>
 **==\>**
 *[«sequencer op»](tablet-4-operators.html#feed-ops)* &mdash;
 rightward pointing feed operator, take return value of left side
 and feed as parameter to the right &mdash;
-see also: [*\<==*](#lower-double-equal-op) and [*==\>\>*](#double-equal-double-greater-op)
+see also: [*\<==*](#lower-equal-equal-op) and [*==\>\>*](#equal-equal-greater-greater-op)
 
 
-<a id="double-equal-double-greater-op"/>
+<a id="equal-equal-greater-greater-op"/>
 **==\>\>**
 *[«sequencer op»](tablet-4-operators.html#feed-ops)* &mdash;
 rightward pointing feed operator that adds values to an existing list (append-mode) &mdash;
-see also: [*==\>*](#double-equal-greater-op) and [*\<\<==*](#double-lower-double-equal-op)
+see also: [*==\>*](#equal-equal-greater-op) and [*\<\<==*](#lower-lower-equal-equal-op)
 
 <a id="equal-greater-op"/><a id="fat-arrow"/>
 **=\>**
@@ -662,7 +662,7 @@ alternative to the *[adverbial syntax](#colon-adverb)*
 **\>=** *[«num comparison»](tablet-4-operators.html#numerical-comparison)*
 *[infix](#infix-category)* comparison op, numeric greater than or equal
 
-<a id="double-greater-metaop"/>
+<a id="greater-greater-metaop"/>
 **\>\>**
 *[«meta op»](appendix-g-glossary.html#metaoperators)* &mdash;
 hyper metaopeartor, left side dicates the lengths of the  result,
@@ -708,7 +708,7 @@ opposite of [**\<!\>**](#exclamation-subrule)
 *[«bool op»](tablet-4-operators.html#bool-context)* &mdash;
 logical *[AND](appendix-g-glossary.html#and)* op, forces binary context
 
-<a id="double-question"/><a id="double-question-double-exclamation"/>
+<a id="question-question"/><a id="question-question-exclamation-exclamation"/>
 <a id="conditional-op"/><a id="ternary-op"/>
 **?? !!**
 *[«conditional»](appendix-b-grouped.html#conditionals)* &mdash;
@@ -717,7 +717,8 @@ shortcut for **[if](#if)** and
 **[else](#else)** &mdash;
 see also: [**||**](#logical-or), [**ff**](#ff), [**fff**](#fff)
 
-<a id="triple-question"/><a id="triple-question-op"/><a id="triple-question-yadda"/>
+<a id="question-question-question"/><a id="question-question-question-op"/>
+<a id="question-yadda"/>
 **???**
 *[«yadda op»](tablet-4-operators.html#yadda)* &mdash;
 [yadda operator](appendix-g-glossary.html#yadda-operator)
@@ -822,7 +823,7 @@ prefix of metaclass methods, `$obj.^methods();` is shortcut for
 *[«regex Metachar»](appendix-b-grouped.html#regex-metacharacter)* &mdash;
 start of the string
 
-<a id="double-caret-op"/><a id="logical-xor"/>
+<a id="caret-caret-op"/><a id="logical-xor"/>
 **\^\^**
 *[«logical op»](tablet-4-operators.html#logical-selection)* &mdash;
 [infix](#infix-category) logical (*[XOR](appendix-g-glossary.html#xor)*) operator
@@ -871,7 +872,7 @@ match alternate patterns with longest token matching
 flatten [capture](tablet-3-variables#capture)
 object into arglist, (named parameter)
 
-<a id="double-pipe-op"/><a id="logical-or"/>
+<a id="pipe-pipe-op"/><a id="logical-or"/>
 **||**
 *[«logical op»](tablet-4-operators.html#logical-selection)* &mdash;
 *[infix](#infix-category)* short circuit logical *[OR](appendix-g-glossary.html#or)*, 
@@ -883,13 +884,13 @@ high precedence version of **[or](#or)** &mdash;
 example: `(3 || 5)` returns `3` &mdash;
 see also: [**|**](#junctive-or), [**?? !!**](#ternary-op)
 
-<a id="double-pipe-metachar"/>
+<a id="pipe-pipe-metachar"/>
 **||**
 *[«regex Metachar»](appendix-b-grouped.html#regex-metacharacter)* &mdash;
 match alternate patterns (temporal consequent alternatives) as
 connected with a logical *[OR](appendix-g-glossary.html#or)*
 
-<a id="double-pipe-context"/>
+<a id="pipe-pipe-context"/>
 **||**()
 *[«context op»](appendix-b-grouped.html#contextualizers)* &mdash;
 flatten [capture](tablet-3-variables#capture)
@@ -952,7 +953,7 @@ demands [evaluation](appendix-g-glossary.html#evaluation) of array variables,
 that starting with the
 **[@-sigil](#at-sigil)**, short form of
 **[:array](#array-adverb)**, included in
-**["..."](#double-quotation)**,
+**["..."](#double-quotes)**,
 **[qq/.../](#qq-op)** and
 **[<<...\>\>](#double-angle-brackets)**
 
@@ -1077,7 +1078,7 @@ demands [evaluation](appendix-g-glossary.html#evaluation) of array variables
 that starting with the
 **[@-sigil](#at-sigil)**, long form of
 **[:a](#a-adverb)**, included in
-**["..."](#double-quotation)**,
+**["..."](#double-quotes)**,
 **[qq/.../](#qq-op)** and
 **[<<...\>\>](#double-angle-brackets)**
 
@@ -1131,7 +1132,7 @@ file is a block special file (e.g. Harddisks, CDROMs and RAM areas)
 forces evaluation of
 [escape sequences](appendix-b-grouped.html#escape-sequences),
 short form of **[:backslash](#backslash-adverb)**,
-included in **["..."](#double-quotation)**,
+included in **["..."](#double-quotes)**,
 **[qq/.../](#qq-op)** and
 **[<<...\>\>](#double-angle-brackets)**
 
@@ -1141,7 +1142,7 @@ included in **["..."](#double-quotation)**,
 forces evaluation of [escape
 sequences](appendix-b-grouped.html#escape-sequences)
 , long form of **[:b](#b-adverb)**, included in
-**["..."](#double-quotation)**,
+**["..."](#double-quotes)**,
 **[qq/.../](#qq-op)** and
 **[<<...\>\>](#double-angle-brackets)**
 
@@ -1240,7 +1241,7 @@ raw binary data
 **but** &mdash; adds a **[role](#role)** to a **[class](#class)**
 
 <a id="bytes"/>
-**bytes** ([Str](#Str-type) [--\>](#double-minus-greater-signature) [Int](#Int-type))
+**bytes** ([Str](#Str-type) [--\>](#minus-minus-greater-signature) [Int](#Int-type))
 *«string method»* &mdash;
 number of bytes (a sort of Perl 5's *length*) &mdash;
 see also: [**chars**](#chars), [**codes**](#codes), [**graphs**](#graphs)
@@ -1268,7 +1269,7 @@ file is a character special file (e.g. terminals modems)
 *[«quoting adverb»](appendix-b-grouped.html#quoting-adverbs)* &mdash;
 forces evaluation of closures (blocks aka {...}) inside quotes,
 long form of **[:closure](#closure-adverb)**,
-included in **["..."](#double-quotation)**,
+included in **["..."](#double-quotes)**,
 **[qq/.../](#qq-op)** and
 **[<<...\>\>](#double-angle-brackets)**
 
@@ -1367,27 +1368,27 @@ useful in case you want to create a new one with a macro
 
 <a id="ceiling"/>
 **ceiling**
-([Num](#Num-type) $x [--\>](#double-minus-greater-signature) [Int](#Int-type))
+([Num](#Num-type) $x [--\>](#minus-minus-greater-signature) [Int](#Int-type))
 *«num method»* &mdash;
 lowest integer not less than $x, rounding up to the next whole number &mdash;
 example: `ceiling 5.4` returns `6`, `ceiling -5.4` returns `-5`  &mdash;
 see also: [**floor**](#floor), [**round**](#round), [**truncate**](#truncate)
 
 <a id="chr"/>
-**chr** ([Int](#Int-type) [--\>](#double-minus-greater-signature) [Str](#Str-type))
+**chr** ([Int](#Int-type) [--\>](#minus-minus-greater-signature) [Str](#Str-type))
 *«num method»* &mdash;
 convert number into character according a
 character table (UTF), reverse of **[ord](#ord)**
 
 <a id="chrs"/>
 **chrs** ([Array](#Array-type) [of](#of) [Int](#Int-type) 
-         [--\>](#double-minus-greater-signature) [Str](#Str-type))
+         [--\>](#minus-minus-greater-signature) [Str](#Str-type))
 *«num method»* &mdash;
 converts every number to a character with that index and combines them to one string,
 plural of **[chr](#chr)**, reverse of **[ords](#ords)**
 
 <a id="chars"/>
-**chars** ([Str](#Str-type) [--\>](#double-minus-greater-signature) [Int](#Int-type))
+**chars** ([Str](#Str-type) [--\>](#minus-minus-greater-signature) [Int](#Int-type))
 *«string method»* &mdash;
 returns number of characters of a string, in Perl 5: *length* &mdash;
 see also: **[bytes](#bytes)**, [**codes**](#codes), [**graphs**](#graphs)
@@ -1417,14 +1418,14 @@ marks as a prefix a special block or statement, executed at
 changes access rights of files (like on Unix)
 
 <a id="chomp"/>
-**chomp** ([Str](#Str-type) [--\>](#double-minus-greater-signature) [Str](#Str-type))
+**chomp** ([Str](#Str-type) [--\>](#minus-minus-greater-signature) [Str](#Str-type))
 *«string method»* &mdash;
 returns a copy of a [string](#Str-type) with the
 last newline ([**\\n**](#backslash-n)) (if there is one) removed &mdash;
 see also: [**chop**](#chop), [**trim**](#trim)
 
 <a id="chop"/>
-**chop** ([Str](#Str-type) [--\>](#double-minus-greater-signature) [Str](#Str-type))
+**chop** ([Str](#Str-type) [--\>](#minus-minus-greater-signature) [Str](#Str-type))
 *«string method»* &mdash;
 returns a copy of a [string](#Str-type) with the last character removed &mdash;
 see also: [**chomp**](#chomp), [**substr**](#substr)
@@ -1444,7 +1445,7 @@ see also: [**conj**](#conj), [**polar**](#polar), [**unpolar**](#unpolar)
 **circumfix** *[«grammatical category»](appendix-b-grouped.html#categories)* &mdash;
 operator namespace of two parted ops that surround the
 statement, op or variable they affect, most prominent example may be
-the [double quotes](#double-quotation)
+the [double quotes](#double-quotes)
 
 <a id="class"/>
 **class** *«block modifier»* &mdash; 
@@ -1481,7 +1482,7 @@ releasing the connection to a file via a [*file handle*](IO-type)
 *[«quoting adverb»](appendix-b-grouped.html#quoting-adverbs)* &mdash;
 forces evaluation of closures (blocks aka {... }) inside quotes,
 long form of **[:c](#c-adverb)**, included in
-**["..."](#double-quotation)**,
+**["..."](#double-quotes)**,
 **[qq/.../](#qq-op)** and
 **[<<...\>\>](#double-angle-brackets)**
 
@@ -1520,7 +1521,7 @@ quasi quoting, the commented will be compiles and the AST will
 be returned as result, see also: **[quasi](#quasi)**
 
 <a id="codes"/>
-**codes** ([Str](#Str-type) [--\>](#double-minus-greater-signature) [Int](#Int-type))
+**codes** ([Str](#Str-type) [--\>](#minus-minus-greater-signature) [Int](#Int-type))
 *«string mmethod»* &mdash;
 number of *[unicode](appendix-g-glossary.html#unicode)*
 *[codepoints](appendix-g-glossary.html#codepoints) of a string in a
@@ -1554,7 +1555,7 @@ Perl object type to hold a complex number (the thing with the i == sqrt(-1))
 
 <a id="conj"/>
 **conj**
-([Complex](#Complex-type) $c [--\>](#double-minus-greater-signature) [Complex](#Complex-type))
+([Complex](#Complex-type) $c [--\>](#minus-minus-greater-signature) [Complex](#Complex-type))
 «complex method» &mdash;
 returns ($c.re - $c.im\i), the complex conjugate
 see also: [**cis**](#cis), [**polar**](#polar), [**unpolar**](#unpolar)
@@ -1694,7 +1695,7 @@ removes all [pairs](#pair) of which keys are passed
 
 <a id="denominator"/>
 **denominator**
-( [--\>](#double-minus-greater-signature) [Int](#Int-type))
+( [--\>](#minus-minus-greater-signature) [Int](#Int-type))
 *[«rat method»](tablet-2-basic-syntax.html#rational-number)* &mdash;
 returns the denominator of a rational number
 (value type **[Rat](#Rat-type)** and **[FatRat](#FatRat-type)**),
@@ -1752,7 +1753,7 @@ checks if an objekt inherits a **[role](#role)** (only parameter)
 **[:double](tablet-2-basic-syntax.html#double-quotes)**
 *[«quoting adverb»](appendix-b-grouped.html#quoting-adverbs)* &mdash;
 *double quoting*, **q** with interpolation of variables, alias
-to **["..."](#double-quotation)**, **[qq
+to **["..."](#double-quotes)**, **[qq
 /.../](#qq-op)** and `Q :s :a :h :f :c :b /.../`,
 long for **[:qq](#qq-adverb)**
 
@@ -1882,7 +1883,7 @@ environment variables (of the shell), in Perl 5: *%ENV*
 [infix](#infix-category) operator, proves
 equality in forced *[string
 context](tablet-4-operators.html#string-context)*
-as does [**==**](#double-equal-op) in
+as does [**==**](#equal-equal-op) in
 [numeric context](appendix-g-glossary.html#numeric-context)
 
 <a id="equiv"/>
@@ -1896,7 +1897,7 @@ same as an existing operator
 **eqv** *«comparison op»* &mdash;
 [infix](#infix-category)
 operator, compares the dynamic state of objects and values, in
-contrast with static [**===**](#triple-equal)
+contrast with static [**===**](#equal-equal-equal)
 
 <a id="err"/><a id="err-op"/>
 **err** *[«logical op»](tablet-4-operators.html#logical-selection)* &mdash;
@@ -1972,8 +1973,8 @@ Int $status (first parameter) to the calling environment
 
 <a id="exp"/><a id="exp-op"/>
 **exp** ([Num](#Num-type) $base, [Num](#Num-type) $exp?
-         [--\>](#double-minus-greater-signature) [Num](#Num-type)) &mdash;
-exponentiate, alias method to: $base **[\*\*](#double-asterisk-op)** $exp
+         [--\>](#minus-minus-greater-signature) [Num](#Num-type)) &mdash;
+exponentiate, alias method to: $base **[\*\*](#asterisk-asterisk-op)** $exp
 (defaults to *[e](appendix-g-glossary.html#e)*)
 
 <a id="export"/><a id="export-rouine-trait"/>
@@ -1998,7 +1999,7 @@ demands evaluation of functions (subs and methods), that start
 with the **[&-sigil](#ampersand-sigil)** and
 replacing them with the result, long form of
 **[:function](#function-adverb)**, included in 
-**["..."](#double-quotation)**,
+**["..."](#double-quotes)**,
 **[qq/.../](#qq-op)** and
 **[<<...\>\>](#double-angle-brackets)**
 
@@ -2038,7 +2039,7 @@ opposite of **[True](#True)**
 Perl rational (unlimited precision in both parts)
 
 <a id="fc"/>
-**fc** ([Str](#Str-type) [--\>](#double-minus-greater-signature) [Str](#Str-type))
+**fc** ([Str](#Str-type) [--\>](#minus-minus-greater-signature) [Str](#Str-type))
 *«string method»* &mdash;
 return a copy of a string where the *[Unicode](appendix-g-glossary.html#unicode)*
 "fold case" operation is done upon,
@@ -2107,7 +2108,7 @@ example: `([2,3],[4,5]).flat` or `flat([2,3],[4,5])` results in: `[2..5]`
 
 <a id="floor"/>
 **floor**
-([Num](#Num-type) $x [--\>](#double-minus-greater-signature) [Int](#Int-type))
+([Num](#Num-type) $x [--\>](#minus-minus-greater-signature) [Int](#Int-type))
 *«num method»* &mdash;
 highest integer not greater than $x, rounds down no the next whole number &mdash;
 example: `floor 5.4` returns `5` `floor -5.4` returns `-6` &mdash;
@@ -2150,7 +2151,7 @@ demands evaluation of functions (subs and methods), that start
 with the **[&-sigil](#ampersand-sigil)** and
 replacing them with the result, long form of
 **[:f](#f-adverb)** , included in
-**["..."](#double-quotation)**,
+**["..."](#double-quotes)**,
 **[qq/.../](#qq-op)** and
 **[<<...\>\>](#double-angle-brackets)**
 
@@ -2223,7 +2224,7 @@ real global ID of the running process
 
 <a id="gist"/>
 **gist**
-( [--\>](#double-minus-greater-signature) [Str](#Str-type))
+( [--\>](#minus-minus-greater-signature) [Str](#Str-type))
 *«formater»* &mdash;
 generates a string with the essential content of that object
 for human consumption (like in error messages),
@@ -2284,7 +2285,7 @@ produces a [match object](#match-var), the name is ment like in
 a "graphical" character, calles [*grapheme*](#grapheme)
 
 <a id="graphs"/>
-**graphs** ([Str](#Str-type) [--\>](#double-minus-greater-signature) [Int](#Int-type))
+**graphs** ([Str](#Str-type) [--\>](#minus-minus-greater-signature) [Int](#Int-type))
 *«string mmethod»* &mdash;
 number of *[unicode](appendix-g-glossary.html#unicode)*
 *[graphemes](appendix-g-glossary.html#graphemes)* of a string,
@@ -2327,7 +2328,7 @@ demands evaluation of **[hash](#hash)**
 variables that start with the
 **[%-sigil](#percent-sigil)**, long form of
 **[:hash](#hash-adverb)**, included in
-**["..."](#double-quotation)**,
+**["..."](#double-quotes)**,
 **[qq/.../](#qq-op)** and
 **[<<...\>\>](#double-angle-brackets)**
 
@@ -2376,7 +2377,7 @@ enforces hash-list context, alias to **[%()](#percent-op)**
 demands evaluation of hash variables that start with the
 **[%-sigil](#percent-sigil)**, long form of
 **[:h](#h-adverb)**, included in
-**["..."](#double-quotation)**,
+**["..."](#double-quotes)**,
 **[qq/.../](#qq-op)** and
 **[<<...\>\>](#double-angle-brackets)**
 
@@ -2480,7 +2481,7 @@ internal namespace of
 [metaoperator](appendix-g-glossary.html#metaoperator) that
 [circumfix](#circumfix-category) other operator but
 stay [infix](#infix-category) (between) two terms (mostly lists) &mdash;
-example: ([arrows](#double-lower-metaop)): `@a <<+<< @b`
+example: ([arrows](#lower-lower-metaop)): `@a <<+<< @b`
 
 <a id="infix-postfix-meta-category"/>
 **infix\_postfix\_meta\_operator**
@@ -2676,7 +2677,7 @@ forces lazy evaluation (calculate values as late as possible),
 default for lists - not scalars
 
 <a id="lc"/>
-**lc** ([Str](#Str-type) [--\>](#double-minus-greater-signature) [Str](#Str-type))
+**lc** ([Str](#Str-type) [--\>](#minus-minus-greater-signature) [Str](#Str-type))
 *«string method»* &mdash;
 return a copy of a string where all characters are lowercase &mdash;
 see also: [**fc**](#fc) and [**uc**](#uc)
@@ -3012,7 +3013,7 @@ part of a set, *[junctive](appendix-g-glossary.html#junction)* *NOT*
 operator
 
 <a id="normalize"/>
-**normalize** ([Str](#Str-type) [--\>](#double-minus-greater-signature) [Str](#Str-type))
+**normalize** ([Str](#Str-type) [--\>](#minus-minus-greater-signature) [Str](#Str-type))
 *«string method»* &mdash;
 normalize (repair) *[unicode](appendix-g-glossary.html#unicode)* 
 *[string](#Str-type)*
@@ -3031,7 +3032,7 @@ but appends a newline (**[\\n](#backslash-n)**) like **[say](#say)**
 
 <a id="nude"/>
 **nude**
-( [--\>](#double-minus-greater-signature) [Seq](#Seq-type)\[[Int](#Int-type)\])
+( [--\>](#minus-minus-greater-signature) [Seq](#Seq-type)\[[Int](#Int-type)\])
 *[«rat method»](tablet-2-basic-syntax.html#rational-number)* &mdash;
 returns a list of numerator and denominator &mdash;
 see also: [**numerator**](#numerator) and [**denominator**](#denominator)
@@ -3042,7 +3043,7 @@ see also: [**numerator**](#numerator) and [**denominator**](#denominator)
 Perl number (approximate "real", generally via floating point)
 
 <a id="numerator"/>
-( [--\>](#double-minus-greater-signature) [Int](#Int-type))
+( [--\>](#minus-minus-greater-signature) [Int](#Int-type))
 **numerator**
 *[«rat method»](tablet-2-basic-syntax.html#rational-number)* &mdash;
 returns the numerator of a rational number (value type **[Rat](#Rat-type)**
@@ -3100,7 +3101,7 @@ options from command line
 <a id="or"/>
 **or**
 *[«logical op»](tablet-4-operators.html#logical-selection)* &mdash;
-<a id="double-pipe-op"/><a id="logical-or"/>
+<a id="pipe-pipe-op"/><a id="logical-or"/>
 **||**
 *[«logical op»](tablet-4-operators.html#logical-selection)* &mdash;
 *[infix](#infix-category)*, short circuit, logical, *[OR](appendix-g-glossary.html#or)*, 
@@ -3113,13 +3114,13 @@ example: `?('hurray' or 5)` returns `True` &mdash;
 see also: [**any**](#any), [**orelse**](#orelse), [**err**](#err), [**xor**](#xor)
 
 <a id="ord"/>
-**ord** ([Str](#Str-type) [--\>](#double-minus-greater-signature) [Int](#Int-type))
+**ord** ([Str](#Str-type) [--\>](#minus-minus-greater-signature) [Int](#Int-type))
 *«string method»* &mdash;
 converts a character into number according a character table
 (*[unicode](appendix-g-glossary.html#unicode)*), reverse of **[chr](#chr)**
 
 <a id="ords"/>
-**ords** ([Str](#Str-type) [--\>](#double-minus-greater-signature)
+**ords** ([Str](#Str-type) [--\>](#minus-minus-greater-signature)
          [Array](#Array-type) [of](#of) [Int](#Int-type))
 *«string method»* &mdash;
 get the index numbers of some characters,
@@ -3263,7 +3264,7 @@ long for **[:p](#p-adverb)** or use **[qp](#qp-op)** directly
 
 <a id="perl"/>
 **[perl](tablet-2-basic-syntax.html#perl)**
-( [--\>](#double-minus-greater-signature) [Str](#Str-type))
+( [--\>](#minus-minus-greater-signature) [Str](#Str-type))
 *«formater»* &mdash;
 transforms data structure (object) into syntax of Perl 6 source code,
 in most cases **[eval](#eval)** turn it back into the data structure,
@@ -3351,7 +3352,7 @@ internal namespace of
 [metaoperator](appendix-g-glossary.html#metaoperator) that
 [prefix](#prefix-category) (precedes) other operator
 but stay [postfix](#postfix-category) (after) another term &mdash;
-example ([**\>\>**](#double-greater-metaop)): `@a >>++`
+example ([**\>\>**](#greater-greater-metaop)): `@a >>++`
 
 <a id="PRE-phaser"/>
 **PRE**
@@ -3385,7 +3386,7 @@ example: ([square brackets](#square-brackets-metaop)): `[+] @a` - sums up all el
 internal namespace of [metaoperator](appendix-g-glossary.html#metaoperator) that
 [postfix](#postfix-category) other operator but stay
 [prefix](#prefix-category) (before) another term &mdash;
-example ([**\<\<**](double-lower-metaop)): `++<< @a`
+example ([**\<\<**](lower-lower-metaop)): `++<< @a`
 
 <a id="print"/>
 **[print](tablet-5-io.html#print)** &mdash;
@@ -3452,14 +3453,14 @@ modifier](appendix-b-grouped.html#quoting-adverbs)
 **[q](tablet-2-basic-syntax.html#single-quotes)**
 *[«quoting op»](appendix-b-grouped.html#quoting-ops)* &mdash;
 simple quoting (slashes and '), alias to
-**['...'](#single-quotation)** and **Q :q
+**['...'](#single-quotes)** and **Q :q
 /.../** and **Q [:single](#single-adverb) /.../**
 
 <a id="q-adverb"/>
 **[:q](tablet-2-basic-syntax.html#single-quotes)**
 *[«quoting adverb»](appendix-b-grouped.html#quoting-adverbs)* &mdash;
 simple quoting (slashes and '), alias to
-**['...'](#single-quotation)** and **q
+**['...'](#single-quotes)** and **q
 /.../**, short for **[:single](#single-adverb)**
 
 <a id="backslash-Q"/>
@@ -3480,7 +3481,7 @@ and [`Q :path /.../`](#path-adverb)
 *[«quoting op»](appendix-b-grouped.html#quoting-ops)* &mdash;
 *double quoting*, **q** with interpolation of variables,
 closures, and special chars, alias to
-**["..."](#double-quotation)** and `Q :s, :a, :h, :f, :c, :b /.../`
+**["..."](#double-quotes)** and `Q :s, :a, :h, :f, :c, :b /.../`
 and `Q` [`:qq`](#qq-adverb) `/.../` and `Q` [`:double`](#double-averb) `/.../`
 
 <a id="qq-adverb"/>
@@ -3488,7 +3489,7 @@ and `Q` [`:qq`](#qq-adverb) `/.../` and `Q` [`:double`](#double-averb) `/.../`
 *[«quoting adverb»](appendix-b-grouped.html#quoting-adverbs)* &mdash;
 *double quoting*, **q** with interpolation of variables and
 [blocks](#block) , alias to
-**["..."](#double-quotation)**,
+**["..."](#double-quotes)**,
 **[qq/.../](#qq-op)** and `Q :s, :a, :h, :f, :c, :b /.../`,
 short for **[:double](#double-adverb)**
 
@@ -3538,7 +3539,7 @@ returns the input string with all non-"word" characters
 *[«quoting adverb»](appendix-b-grouped.html#quoting-adverbs)* &mdash;
 split quoted string into words (on whitespaces) but with quote
 protection (like in shell - '...' and
-**["..."](#double-quotation)** sourrounded
+**["..."](#double-quotes)** sourrounded
 strings are taken as single words), long form of
 **[:ww](#ww-adverb)**, used in
 **[<<...\>\>](#double-angle-brackets)**
@@ -3767,7 +3768,7 @@ alias to `@a.push: @a.shift;`
 
 <a id="round"/>
 **round**
-([Num](#Num-type) $f [--\>](#double-minus-greater-signature) [Int](#Int-type))
+([Num](#Num-type) $f [--\>](#minus-minus-greater-signature) [Int](#Int-type))
 «num method» &mdash;
 returns the nearest whole number &mdash;
 example: `round 5.5` returns `6`, `round -5.5` returns `-5` &mdash;
@@ -3868,7 +3869,7 @@ file has size greater than 0 (zero)
 demands evaluation of scalar variables that start with the
 **[$-sigil](#dollar-sigil)**, long form of
 **[:scalar](#scalar-adverb)**, included in
-**["..."](#double-quotation)**,
+**["..."](#double-quotes)**,
 **[qq/.../](#qq-op)** and
 **[<<...\>\>](#double-angle-brackets)**
 
@@ -3940,7 +3941,7 @@ object to hold a Perl scalar, a variable for a single value of any type
 demands evaluation of scalar variables that start with the
 **[$-sigil](#dollar-sigil)**, long form of
 **[:s](#s-adverb)**, included in
-**["..."](#double-quotation)**,
+**["..."](#double-quotes)**,
 **[qq/.../](#qq-op)** and
 **[<<...\>\>](#double-angle-brackets)**
 
@@ -4021,7 +4022,7 @@ sine, trigonometric function, takes angle in radian; see also
 **[:single](tablet-2-basic-syntax.html#single-quotes)**
 *[«quoting adverb»](appendix-b-grouped.html#quoting-adverbs)* &mdash;
 simple quoting (slashes and '), alias to
-**['...'](#single-quotation)** and
+**['...'](#single-quotes)** and
 **[q/.../](#q-op)**, long for
 **[:q](#q-adverb)**
 
@@ -4210,7 +4211,7 @@ parse as [substitution regex](tablet-9-regexes.html#substitution)
 
 <a id="substr"/>
 **substr** ([Str](#Str-type) $string, [Int](#Int-type) $start, [Int](#Int-type)
-             $length? [--\>](#double-minus-greater-signature) [Str](#Str-type))
+             $length? [--\>](#minus-minus-greater-signature) [Str](#Str-type))
 *«string method»* &mdash;
 return a substring of $string from $start position and maybe with $length,
 works like in Perl 5 except fourth parameter was cut &mdash;
@@ -4285,7 +4286,7 @@ specifies the [precedence of an operator](appendix-b-grouped.html#table-of-prece
 higher than an existing operator
 
 <a id="titlecase"/>
-**titlecase** ([Str](#Str-type) [--\>](#double-minus-greater-signature) [Str](#Str-type))
+**titlecase** ([Str](#Str-type) [--\>](#minus-minus-greater-signature) [Str](#Str-type))
 *«string method»* &mdash;
 performs a [Unicode](appendix-g-glossary.html#unicode) titlecase operation
 on the first character of each word of the string
@@ -4370,7 +4371,7 @@ Bool::True, 1 in numeric context, opposite of **[False](#False)**
 
 <a id="truncate"/>
 **truncate**
-([Num](#Num-type) $f [--\>](#double-minus-greater-signature) [Int](#Int-type))
+([Num](#Num-type) $f [--\>](#minus-minus-greater-signature) [Int](#Int-type))
 *«num method»* &mdash;
 just truncates the fractional part &mdash;
 examples: `truncate 4.27` returns `4`, `truncate -5.5` returns `-5` &mdash;
@@ -4411,7 +4412,7 @@ report if file has setuid bit set
 everything within the brackets is uppercase
 
 <a id="uc"/><a id="uc-op"/>
-**uc** ([Str](#Str-type) [--\>](#double-minus-greater-signature) [Str](#Str-type))
+**uc** ([Str](#Str-type) [--\>](#minus-minus-greater-signature) [Str](#Str-type))
 *«string method»* &mdash;
 return a copy of a string where all characters are uppercase,
 usable as operator and as method &mdash;
@@ -4697,7 +4698,7 @@ whitespace between words aka
 *[«quoting adverb»](appendix-b-grouped.html#quoting-adverbs)* &mdash;
 split quoted string into words (on whitespaces) but with quote
 protection (like in shell - '...' and
-**["..."](#double-quotation)** sourrounded
+**["..."](#double-quotes)** sourrounded
 strings are taken as single words), short form of
 **[:quotewords](#quotewords-adverb)**, used in
 **[\<\<...\>\>](#double-angle-brackets)**
@@ -4785,7 +4786,7 @@ in *bool context* it returns **[True](#True)** or *False* as expected,
 in any other context it returns the first none empty value, 
 the second when both are empty and [**Nil**](#Nil-type) when both are not empty,
 low [precedence](appendix-b-grouped.html#table-of-precedence) version of
-[**\^\^**](#double-caret-op) &mdash;
+[**\^\^**](#caret-caret-op) &mdash;
 example: `(5 xor 0)` returns `5` &mdash;
 see also: [**or**](#or), [**err**](#err)
 

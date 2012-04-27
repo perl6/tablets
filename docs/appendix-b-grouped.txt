@@ -493,8 +493,8 @@ as "French Quotes") or with double less than or greater than signs (documented
 as "Texas Quotes").
 
 --- --------------------------------------------- -------
- «  [<<](appendix-a-index.html#double-lower-op)   Hyperop, right side dictates length of result
- »  [>>](appendix-a-index.html#double-greater-op) Hyperop, left side dictates length of result
+ «  [<<](appendix-a-index.html#lower-lower-op)   Hyperop, right side dictates length of result
+ »  [>>](appendix-a-index.html#greater-greater-op) Hyperop, left side dictates length of result
 --- --------------------------------------------- -------
 
 
@@ -1001,10 +1001,10 @@ In routine and block definitions can be also some character with special meaning
 -------------------------------------------------------------  ------------------------------------------------------------------------------------------------------------------
 [`!`](appendix-a-index.html#exclamation-mark-signature)        suffix of required parameter (default when named, not positional)
 [`*`](appendix-a-index.html#asterisk-signature)                prefix of slurpy arrays
-[`-->`](appendix-a-index.html#double-minus-greater-signature)  prefix of return type
+[`-->`](appendix-a-index.html#minus-minus-greater-signature)  prefix of return type
 [`->`](appendix-a-index.html#minus-greater-signature)          prefix of named readonly parameters for a block (pointy block syntax)
 [`:`](appendix-a-index.html#colon-signature)                   prefix of named parameter, positional when without
-[`::`](appendix-a-index.html#double-colon-signature)           prefix of a variable type introduced in a signature
+[`::`](appendix-a-index.html#colon-colon-signature)           prefix of a variable type introduced in a signature
 [`<->`](appendix-a-index.html#lower-minus-greater-signature)   prefix of named writeable parameters for a block (double pointy block syntax)
 [`?`](appendix-a-index.html#question-mark-signature)           suffix of optional parameter (default when positional, not named)
 [`^`](appendix-a-index.html#caret-signature)                   prefix of metaclass methods, `$obj.^methods();` is shortcut for [`$obj.HOW.methods($obj);`](#object-introspection)

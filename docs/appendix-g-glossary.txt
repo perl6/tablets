@@ -319,7 +319,7 @@ example: **[BEGIN](appendix-a-index.html#BEGIN-phaser)**
 <a id="pipe"/>
 **pipe** &mdash; connection between 2 processes, move data (mostly only in
 one direction) without buffering, can also mean just the connection of
-several commands via **[==\>](appendix-a-index.html#double-equal-greater-op)** and alike
+several commands via **[==\>](appendix-a-index.html#equal-equal-greater-op)** and alike
 
 <a id="POD"/>
 **[POD](tablet-2-basic-syntax.html#pod)**
@@ -489,8 +489,8 @@ other logical operations are: [*and*](#and), [*or*](#or), [*not*](#not)
 **[yadda operator](operators.html#yadda)** &mdash;
 placeholder for later to be written code inside a [routine](#routine),
 because empty ones are forbidden, comes in 3 flavours:
-**[...](appendix-a-index.html#triple-dot-yadda-op)** (fail),
-**[???](appendix-a-index.html#triple-question-mark)** (warn) and
-**[!!!](appendix-a-index.html#triple-exclamation-mark)** (die)
+**[...](appendix-a-index.html#dot-yadda-op)** (fail),
+**[???](appendix-a-index.html#question-mark)** (warn) and
+**[!!!](appendix-a-index.html#exclamation-mark)** (die)
 
 # [Z](#nav-top)
