@@ -1560,11 +1560,12 @@ all the comment blocks in the file
 <a id="Complex-type"/>
 **Complex**
 *[«immutable type»](appendix-b-grouped.html#immutable-types)* &mdash;
-Perl object type to hold a complex number (the thing with the i == sqrt(-1))
+Perl object type to hold a complex number, consisting of a "real value" (Num)
+and an "imaginary value" (the thing with the i == sqrt(-1))
 
 <a id="conj"/>
 **conj**
-([Complex](#Complex-type) $c [--\>](#minus-minus-greater-signature) [Complex](#Complex-type))
+([Complex](#Complex-type) \$c [--\>](#minus-minus-greater-signature) [Complex](#Complex-type))
 «complex method» &mdash;
 returns ($c.re - $c.im\i), the complex conjugate
 see also: [**cis**](#cis), [**polar**](#polar), [**unpolar**](#unpolar)
@@ -3396,7 +3397,7 @@ example: ([square brackets](#square-brackets-metaop)): `[+] @a` - sums up all el
 internal namespace of [metaoperator](appendix-g-glossary.html#metaoperator) that
 [postfix](#postfix-category) other operator but stay
 [prefix](#prefix-category) (before) another term &mdash;
-example ([**\<\<**](lower-lower-metaop)): `++<< @a`
+example ([**\<\<**](#lower-lower-metaop)): `++<< @a`
 
 <a id="print"/>
 **[print](tablet-5-io.html#print)** &mdash;
