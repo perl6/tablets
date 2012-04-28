@@ -366,7 +366,7 @@ R   List prefix        `print push say die map substr ... [+] [*] any Z=`
 X   Loose and          `and andthen`
 X   Loose or           `or xor orelse`
 X   Sequencer          `<== ==> <<== ==>>`
-N   Terminator         `; {...} unless extra ) ] }`
+N   Terminator         `; {...} unless` `extra ) ] }`
 --  -----------------  ----------------------------------------------------
 
 
@@ -448,39 +448,18 @@ L for left Value, and R for right. A number is the array index.
 Words in the second column are short explanation or an aliasing method
 if followed by `()`.
 
--------  -----------  ----------------------------------------------------------
-`op=`    self assign  known from P5, `$L <op>= $R` equals `$L = $L op $R`
-
-`!op`    negation     known from P5, `$L !<op> $R` equals `!($L op $R)`\
-
-`Rop`    reverse      reverses the order of the operands\
-
-`Sop`    sequence     like reduction, only synchronous, execution in listed order is
-                      guaranteed; suppresses any explicit or implicit parallelism
-
-`>>op`   hyper        processes arrays eager and in parallel or applies a
-                      single value to all array elements;
-                      `@E = $L[0] op $R[0], $L[1] op $R[1], ...;`
-
-`<<op`   hyper        like above, points to the side which determines dimensionality;
-                      `@E = $L[0] op $R[0], $L[1] op $R[1], ...;`
-
-`[op]`   reduce()     applies the operator between all elements of an array;
-                      `$result = $V[0] op $V[1] op ...;`
-
-`[\op]`  triangle()   applies above reduction to a series of lists made of
-                      array slices ranging in length from 1 to the complete
-                      length of the original list;
-                      `@result = $V[0], $V[0] op $V[1],
-                      $V[0] op $V[1] op $V[2], ...;`
-
-`Xop`    crosswith()  performs the operator to all the pairs of the Cartesian
-                      product of two arrays; `@result = $L[0] op $R[0],
-                      $L[0] op $R[1], $L[1] op $R[0], $L[1] op $R[1]`
-
-`Zop`    zipwith()    like hyper, but evaluates lazy,
-                      `@result = $L[0] op $R[0], $L[1] op $R[1], ...`
--------  -----------  ----------------------------------------------------------
+-------------------------------------------------  ----------------------------------------------  ----------------------------------------------------------
+[`op=`](appendix-a-index.html#equal-metaop)        self assign                                     known from P5, `$L <op>= $R` equals `$L = $L op $R`
+[`!op`](appendix-a-index.html#exclamation-metaop)  negation                                        known from P5, `$L !<op> $R` equals `!($L op $R)`\
+[`Rop`](appendix-a-index.html#R-metaop)            reverse                                         reverses the order of the operands\
+[`Sop`](appendix-a-index.html#S-metaop)            sequence                                        like reduction, only synchronous, execution in listed order is guaranteed; suppresses any explicit or implicit parallelism
+[`>>op`](appendix-a-index.html#right-hyperop)      hyper                                           processes arrays eager and in parallel or applies a single value to all array elements, `@E = $L[0] op $R[0], $L[1] op $R[1], ...;`
+[`<<op`](appendix-a-index.html#left-hyperop)       hyper                                           like above, points to the side which determines dimensionality, `@E = $L[0] op $R[0], $L[1] op $R[1], ...;`
+[`[op]`](appendix-a-index.html#reduce-op)          [reduce()](appendix-a-index.html#reduce)        applies the operator between all elements of an array, `$result = $V[0] op $V[1] op ...;`
+[`[\op]`](appendix-a-index.html#triangle-op)       [triangle()](appendix-a-index.html#triangle)    applies above reduction to a series of lists made of array slices ranging in length from 1 to the complete length of the original list, `@result = $V[0], $V[0] op $V[1], $V[0] op $V[1] op $V[2], ...;`
+[`Xop`](appendix-a-index.html#X-metaop)            [crosswith()](appendix-a-index.html#crosswith)  performs the operator to all the pairs of the Cartesian product of two arrays; `@result = $L[0] op $R[0], $L[0] op $R[1], $L[1] op $R[0], $L[1] op $R[1]`
+[`Zop`](appendix-a-index.html#Z-metaop)            [zipwith()](appendix-a-index.html#zipwith)      like hyper, but evaluates lazy, `@result = $L[0] op $R[0], $L[1] op $R[1], ...`
+-----------------------------------------------  ------------------------------------------------  ----------------------------------------------------------
 
 
 

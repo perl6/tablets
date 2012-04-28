@@ -542,7 +542,7 @@ comes before the right operand
 double pointy syntax to assign a rw parameter to a
 *[block](appendix-g-glossary.html#block)*
 
-<a id="lower-lower-metaop"/>
+<a id="lower-lower-metaop"/><a id="left-hyperop"/>
 **\<\<**
 *[«meta op»](appendix-g-glossary.html#metaoperators)* &mdash;
 hyper metaopeartor, right side dicates the lengths of the  result,
@@ -684,12 +684,12 @@ alternative to the *[adverbial syntax](#colon-adverb)*
 **\>=** *[«num comparison»](tablet-4-operators.html#numerical-comparison)*
 *[infix](#infix-category)* comparison op, numeric greater than or equal
 
-<a id="greater-greater-metaop"/>
+<a id="greater-greater-metaop"/><a id="right-hyperop"/>
 **\>\>**
 *[«meta op»](appendix-g-glossary.html#metaoperators)* &mdash;
 hyper metaopeartor, left side dicates the lengths of the  result,
 has a [unicode sibling](appendix-b-grouped.html#unicode-operators) &mdash;
-example: ` @a >>++` increments numeric value of every array element
+example: `@a >>++` increments numeric value of every array element
 
 
 
