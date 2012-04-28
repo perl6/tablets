@@ -490,11 +490,11 @@ The two hyper operators can be written with the Unicode signs (also documented
 as "French Quotes") or with double less than or greater than signs (documented
 as "Texas Quotes").
 
---- -------------------------------------------------------- -------
+--- -------------------------------------------------------- -----------------------------------------------
  «  [\<\<](appendix-a-index.html#lower-lower-op)             Hyperop, right side dictates length of result
  »  [\>\>](appendix-a-index.html#greater-greater-op)         Hyperop, left side dictates length of result
 « » [\<\< \>\>](appendix-a-index.html#double-angle-brackets) [**qw**](appendix-a-index.html#qw-op) with [evaluation](appendix-g-glossary.html#evaluation) and [quote protection](appendix-g-glossary.html#quote-protection)
---- -------------------------------------------------------- -------
+--- -------------------------------------------------------- -----------------------------------------------
 
 
 Contextualizers
@@ -502,21 +502,21 @@ Contextualizers
 
 Infix operator or functions that forcing a context.
 
-------  ---------  ----------------------------------------------------------------------------------------------
-`$()`   item()     [scalar/item context](variables.html#scalar)
-`?`     so()       [boolean](operators.html#bool-context)
-`!`     not()      negated bool context
-`+`     &nbsp;     [numeric](operators.html#numeric-context)
-`-`     &nbsp;     negated num context
-`~`     &nbsp;     [string](operators.html#string-context)
-`@()`   list()     [array/list context](variables.html#array)
-&nbsp;  flat()     flat list
-&nbsp;  lol()      list of list (was slice context before)
-`%()`   hash()     [hash context](variables.html#hash)
-`&()`   code()     [coderef](variables.html#callable), [routines](ap-b-lookup.html#routines)
-`|`     &nbsp;     flatten [capture](variables.html#capture) object into arglist (named parameter)
-`||`    &nbsp;     flatten [capture](variables.html#capture) object into semicolon list (positional parameter)
-------  ---------  ----------------------------------------------------------------------------------------------
+-------------------------------------------  ------------------------------------  ----------------------------------------------------------------------------------------------
+[`$()`](appendix-a-index.html#dollar-op)     [item()](appendix-a-index.html#item)  [scalar/item context](tablet-3-variables.html#scalar)
+[`?`](appendix-a-index.html#dollar-op)       [so()](appendix-a-index.html#so)      [boolean](](tablet-4-operators.html#bool-context)
+[`!`](appendix-a-index.html#exclamation-op)  [not()](appendix-a-index.html#not)    negated bool context
+[`+`](appendix-a-index.html#plus-op)         &nbsp;                                [numeric](](tablet-4-operators.html#numeric-context)
+[`-`](appendix-a-index.html#minus-op)        &nbsp;                                negated num context
+[`~`](appendix-a-index.html#tilde-op)        &nbsp;                                [string](](tablet-4-operators.html#string-context)
+[`@()`](appendix-a-index.html#at-op)         [list()](appendix-a-index.html#list)  [array/list context](variables.html#array)
+&nbsp;                                       [flat()](appendix-a-index.html#flat)  flat list
+&nbsp;                                       [lol()](appendix-a-index.html#lol)    list of list (was slice context before)
+[`%()`](appendix-a-index.html#percent-op)    [hash()](appendix-a-index.html#hash)  [hash context](tablet-3-variables.html#hash)
+[`&()`](appendix-a-index.html#ampersand-op)  [code()](appendix-a-index.html#code)  [coderef](tablet-3-variables.html#callable), [routines](ap-b-lookup.html#routines)
+[`|`](appendix-a-index.html#pipe-op)         &nbsp;                                flatten [capture](tablet-3-variables.html#capture) object into arglist (named parameter)
+[`||`](appendix-a-index.html#pipe-pipe-op)   &nbsp;                                flatten [capture](tablet-3-variables.html#capture) object into semicolon list (positional parameter)
+-------------------------------------------  ------------------------------------  ----------------------------------------------------------------------------------------------
 
 
 
