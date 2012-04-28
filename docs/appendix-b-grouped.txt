@@ -203,76 +203,74 @@ different section.
 
 ### Undefined types ###
 
---------------------------  -----------------------------------------------------------------
-[Mu](#Mu-type)              Most Undefined
-[Failure](#Failure-type)    Failure (lazy exceptions, thrown if not handled properly)
-[Any](#Any-type)            Perl 6 object (default routine parameter type, excludes junction)
-[Cool](#Cool-type)          Perl 6 Convenient OO Loopbacks
-[Whatever](#Whatever-type)  Wildcard (like Any, but subject to do-what-I-mean via [MMD](appendix-g-glossary.html#MMD))
-[Int](#Int-type)            Any Int object
-Widget                      Any Widget object
---------------------------  -----------------------------------------------------------------
+-----------------------------------------------  -----------------------------------------------------------------
+[Mu](appendix-a-index.html#Mu-type)              Most Undefined
+[Failure](appendix-a-index.html#Failure-type)    Failure (lazy exceptions, thrown if not handled properly)
+[Any](appendix-a-index.html#Any-type)            Perl 6 object (default routine parameter type, excludes junction)
+[Cool](appendix-a-index.html#Cool-type)          Perl 6 Convenient OO Loopbacks
+[Whatever](appendix-a-index.html#Whatever-type)  Wildcard (like Any, but subject to do-what-I-mean via [MMD](appendix-g-glossary.html#MMD))
+[Int](appendix-a-index.html#Int-type)            Any Int object
+Widget                                           Any Widget object
+-----------------------------------------------  -----------------------------------------------------------------
 
 
 
 ### Immutable types ###
 
---------------  ------------------------------------------------------------
-Str             Perl string (finite sequence of Unicode characters)
-Bit             Perl single bit (allows traits, aliasing, undef, etc.)
-Int             Perl integer (allows Inf/NaN, arbitrary precision, etc.)
-Num             Perl number (approximate Real, generally via floating point)
-Rat             Perl rational (exact Real, limited denominator)
-FatRat          Perl rational (unlimited precision in both parts)
-Complex         Perl complex number
-Bool            Perl boolean
-&nbsp;          &nbsp;
-Exception       Perl exception
-Block           Executable objects that have lexical scopes
-Seq             A list of values (can be generated lazily)
-Range           A pair of ordered endpoints
-&nbsp;          &nbsp;
-Set             Unordered collection of values that allows no duplicates
-Bag             Unordered collection of values that allows duplicates
-Enum            An immutable Pair
-EnumMap         A mapping of Enums with no duplicate keys
-Signature       Function parameters (left-hand side of a binding)
-Parcel          Arguments in a comma list
-LoL             Arguments in a semicolon list (or equiv, like Z)
-Capture         Function call arguments (right-hand side of a binding)
-Blob            An undifferentiated mass of bits
-Instant         A point on the continuous atomic timeline
-Duration        The difference between two Instants
-HardRoutine     A routine that is committed to not changing
---------------  ------------------------------------------------------------
+-----------------------------------------------------  -------------------------------------------------------------
+[Str](appendix-a-index.html#Str-type)                  Perl string (finite sequence of Unicode characters)
+[Bit](appendix-a-index.html#Bit-type)                  Perl single bit (allows traits, aliasing, undef, etc.)
+[Int](appendix-a-index.html#Int-type)                  Perl integer (allows Inf/NaN, arbitrary precision, etc.)
+[Num](appendix-a-index.html#Num-type)                  Perl number (approximate Real, generally via floating point)
+[Rat](appendix-a-index.html#Rat-type)                  Perl rational (exact Real, limited denominator)
+[FatRat](appendix-a-index.html#FatRat-type)            Perl rational (unlimited precision in both parts)
+[Complex](appendix-a-index.html#Complex-type)          Perl complex number
+[Bool](appendix-a-index.html#Bool-type)                Perl boolean
+[Exception](appendix-a-index.html#Exception-type)      Perl exception
+[Block](appendix-a-index.html#Block-type)              executable objects that have lexical scopes
+[Seq](appendix-a-index.html#Seq-type)                  a list of values (can be generated lazily)
+[Range](appendix-a-index.html#Range-type)              a pair of ordered endpoints
+[Set](appendix-a-index.html#Set-type)                  unordered collection of values that allows no duplicates
+[Bag](appendix-a-index.html#Bag-type)                  unordered collection of values that allows duplicates
+[Enum](appendix-a-index.html#Enum-type)                an immutable Pair
+[EnumMap](appendix-a-index.html#EnumMap-type)          a mapping of Enums with no duplicate keys
+[Signature](appendix-a-index.html#Signature-type)      function parameters (left-hand side of a binding)
+[Parcel](appendix-a-index.html#Parcel-type)            arguments in a comma list
+[LoL](appendix-a-index.html#LoL-type)                  arguments in a semicolon list
+[Capture](appendix-a-index.html#Capture-type)          function call arguments (right-hand side of a binding)
+[Blob](appendix-a-index.html#Blob-type)                an undifferentiated mass of ints, an immutable Buf
+[Instant](appendix-a-index.html#Instant-type)          a point on the continuous atomic timeline
+[Duration](appendix-a-index.html#Duration-type)        difference between two Instants
+[HardRoutine](appendix-a-index.html#HardRoutine-type)  a routine that is committed to not changing
+-----------------------------------------------------  ------------------------------------------------------------
 
 
 
 ### Mutable types ###
 
---------------  ---------------------------------------------------------
-Iterator        Perl list
-SeqIter         Iterator over a Seq
-RangeIter       Iterator over a Range
-Scalar          Perl scalar
-Array           Perl array
-Hash            Perl hash
-KeySet          KeyHash of Bool (does Set in list/array context)
-KeyBag          KeyHash of UInt (does Bag in list/array context)
-Pair            A single key-to-value association
-PairSeq         A Seq of Pairs
-Buf             Perl buffer (a stringish array of memory locations)
-IO              Perl filehandle
-Routine         Base class for all wrappable executable objects
-Sub             Perl subroutine
-Method          Perl method
-Submethod       Perl subroutine acting like a method
-Macro           Perl compile-time subroutine
-Regex           Perl pattern
-Match           Perl match, usually produced by applying a pattern
-Stash           A symbol table hash (package, module, class, lexpad, etc)
-SoftRoutine     A routine that is committed to staying mutable
---------------  ---------------------------------------------------------
+-----------------------------------------------------  ---------------------------------------------------------
+[Iterator](appendix-a-index.html#Failure-type)         Perl list
+[SeqIter](appendix-a-index.html#SeqIter-type)          Iterator over a Seq
+[RangeIter](appendix-a-index.html#RangeIter-type)      Iterator over a Range
+[Scalar](appendix-a-index.html#Scalar-type)            Perl scalar
+[Array](appendix-a-index.html#Array-type)              Perl array
+[Hash](appendix-a-index.html#Hash-type)                Perl hash
+[KeySet](appendix-a-index.html#KeySet-type)            KeyHash of Bool (does Set in list/array context)
+[KeyBag](appendix-a-index.html#KeyBag-type)            KeyHash of UInt (does Bag in list/array context)
+[Pair](appendix-a-index.html#Pair-type)                a single key-to-value association
+[PairSeq](appendix-a-index.html#PairSeq-type)          a Seq of Pairs
+[Buf](appendix-a-index.html#Buf-type)                  Perl buffer (a stringish array of memory locations)
+[IO](appendix-a-index.html#IO-type)                    Perl filehandle
+[Routine](appendix-a-index.html#Routine-type)          base class for all wrappable executable objects
+[Sub](appendix-a-index.html#Sub-type)                  Perl subroutine
+[Method](appendix-a-index.html#Method-type)            Perl method
+[Submethod](appendix-a-index.html#Submethod-type)      Perl subroutine acting like a method
+[Macro](appendix-a-index.html#Macro-type)              Perl compile-time subroutine
+[Regex](appendix-a-index.html#Regex-type)              Perl pattern
+[Match](appendix-a-index.html#Match-type)              Perl match, usually produced by applying a pattern, has [these methods](#match-object-methods)
+[Stash](appendix-a-index.html#Stash-type)              a symbol table hash (package, module, class, lexpad, etc)
+[SoftRoutine](appendix-a-index.html#SoftRoutine-type)  a routine that is committed to staying mutable
+-----------------------------------------------------  ---------------------------------------------------------
 
 
 
