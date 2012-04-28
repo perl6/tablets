@@ -341,6 +341,26 @@ a block that is given readonly *[parameters](parameter)* with
 
 # [Q](#nav-top)
 
+
+<a id="quasiquoting"/>
+**quasiquoting** &mdash;
+
+
+<a id="quote-protection"/>
+**quote protection** &mdash;
+Perl 5 and 6 have the nice [**qw**](appendix-a-index.html#qw-op) operator,
+thats splits a string into words according to the whitespace between words,
+if you wish a word to contain whitespace, you have to put it in quotes:
+`<<these are "three words">>`, this mechanism is called quote protection
+and is provided by the adverb [**:ww**](appendix-a-index.html#ww-adverb)
+aka [**:quotewords**](appendix-a-index.html#quotewords-adverb) which is included
+in [**\<\< \>\>**](appendix-a-index.html#double-angle-brackets-op),
+the adverb [**:w**](appendix-a-index.html#w-adverb) aka
+[**:words**](appendix-a-index.html#words-adverb) which support **qw** as well as
+[**< >**](appendix-a-index.html#angle-brackets-op) don't provide this service:
+`<these are "four words">`
+
+
 <a id="quoting"/>
 **quoting** &mdash;
 

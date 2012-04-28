@@ -546,7 +546,7 @@ leftward pointing feed operator that adds values to an existing list (append-mod
 see also: [*\<==*](#lower-lower-equal-op) and [*==\>\>*](#equal-equal-greater-greater-op)
 
 <a id="double-angle-brackets-op"/><a id="texas-brackets"/><a id="texas-brackets-op"/>
-**[<< \>\>](tablet-2-basic-syntax.html#quote-words)**
+**[\<\< \>\>](tablet-2-basic-syntax.html#quote-words)**
 *[«quoting op»](appendix-b-grouped.html#quoting-ops)* &mdash;
 [circumfix](#circumfix-category) quoting operator for grouping with
 autoquoting and [evaluation](appendix-g-glossary.html#evaluation)
@@ -574,8 +574,8 @@ does a **[cmp](#cmp)** of the into numeric context converted values of both side
 as **[leg](#leg)** does in *[string](#Str-type)* context &mdash;
 example: `3 <=> 4` returns `-1`, `3 <=> 3` returns `0`, `4 <=> 3` returns `1`
 
-<a id="angle-brackets-op"/>
-**[< \>](tablet-2-basic-syntax.html#quote-words)**
+<a id="angle-brackets"/><a id="angle-brackets-op"/>
+**[\< \>](tablet-2-basic-syntax.html#quote-words)**
 *[«quoting op»](appendix-b-grouped.html#quoting-ops)* &mdash;
 [circumfix](#circumfix-category) quoting operator
 for grouping with autoquoting, alias to
@@ -584,7 +584,7 @@ for grouping with autoquoting, alias to
 **[qw/.../](#qw-op)**
 
 <a id="angle-brackets-twigil"/><a id="angle-brackets-var"/>
-**< \>**
+**\< \>**
 *[«twigil»](appendix-b-grouped.html#twigils)* &mdash;
 [circumfix](#circumfix-category)
 *[twigil](appendix-g-glossary.html#twigil)* of named captures, **`$<...>`**

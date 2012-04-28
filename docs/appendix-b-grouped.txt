@@ -650,23 +650,23 @@ can used with any quoting operator like: Q :s/.../ or qq :p /.../.
 
 Short   Long            Meaning
 ------  --------------  -------------------------------------------------
-:q      :single         Interpolate \\\\, \\q and \\' (or whatever)
-:qq     :double         Interpolate with :s, :a, :h, :f, :c, :b
-:s      :scalar         Interpolate \$ vars
-:a      :array          Interpolate @ vars
-:h      :hash           Interpolate % vars
-:f      :function       Interpolate & calls
-:c      :closure        Interpolate {...} expressions
-:b      :backslash      Interpolate \\n, \\t, etc. (implies :q at least)
-:w      :words          Split result on words (no quote protection)
-:ww     :quotewords     Split result on words (with quote protection)
-:p      :path           Return a Path object (see S16 for more options)
-:to     :heredoc        Parse result as heredoc terminator
-:x      :exec           Execute as command and return results
-&nbsp;  :code           Quasiquoting
-&nbsp;  :regex          Parse as regex
-&nbsp;  :subst          Parse as substitution
-&nbsp;  :trans          Parse as transliteration
+:q      :single         interpolate \\\\, \\q and \\' (or whatever)
+:qq     :double         interpolate with :s, :a, :h, :f, :c, :b
+:s      :scalar         interpolate \$ vars
+:a      :array          interpolate @ vars
+:h      :hash           interpolate % vars
+:f      :function       interpolate & calls
+:c      :closure        interpolate {...} expressions
+:b      :backslash      interpolate \\n, \\t, etc. (implies :q at least)
+:w      :words          split result on words (no [quote protection](appendix-g-glossary.html#quote-protection))
+:ww     :quotewords     split result on words (with [quote protection](appendix-g-glossary.html#quote-protection))
+:p      :path           return a Path object (see S16 for more options)
+:to     :heredoc        rarse result as heredoc terminator
+:x      :exec           execute as command and return results
+&nbsp;  :code           quasiquoting
+&nbsp;  :regex          parse as regex
+&nbsp;  :subst          parse as substitution
+&nbsp;  :trans          parse as transliteration
 ------  --------------  -------------------------------------------------
 
 
@@ -769,36 +769,36 @@ Escape Sequences
 
 To be used just inside of regexes (rx/.../, m/.../, s/.../.../ and tr/.../.../).
 
----------------------------  --------------------------------------------------------------------
-[`\0[ ... ]`](#backslash-0)   character given in octal (brackets optional)
-[`\c[ ... ]`](#backslash-c)   named character or control character
-[`\C[ ... ]`](#backslash-C)   any character except the bracketed named or control character
-[`\d`](#backslash-d)          digit
-[`\D`](#backslash-D)          nondigit
-[`\e`](#backslash-e)          escape character
-[`\E`](#backslash-E)          anything but an escape character
-[`\f`](#backslash-f)          form feed
-[`\F`](#backslash-F)          anything but a form feed
-[`\n`](#backslash-n)          (logical) newline
-[`\N`](#backslash-N)          anything but a (logical) newline
-[`\h`](#backslash-h)          horizontal whitespace
-[`\H`](#backslash-H)          anything but horizontal whitespace
-[`\L[ ... ]`](#backslash-L)   Everything within the brackets is lowercase
-[`\Q[ ... ]`](#backslash-Q)   all metacharacters within the brackets match as literal characters
-[`\r`](#backslash-r)          return
-[`\R`](#backslash-R)          anything but a return
-[`\s`](#backslash-s)          any whitespace character, \\h | \\v
-[`\S`](#backslash-S)          anything but whitespace
-[`\t`](#backslash-t)          a tab
-[`\T`](#backslash-T)          anything but a tab
-[`\U[ ... ]`](#backslash-U)   Everything within the brackets is uppercase
-[`\v`](#backslash-v)          vertical whitespace
-[`\V`](#backslash-V)          anything but vertical whitespace
-[`\w`](#backslash-X)          word character (Unicode alphanumeric plus "_")
-[`\W`](#backslash-X)          anything but a word character
+---------------------------  -------------------------------------------------------------------
+[`\0[ ... ]`](#backslash-0)  character given in octal (brackets optional)
+[`\c[ ... ]`](#backslash-c)  named character or control character
+[`\C[ ... ]`](#backslash-C)  any character except the bracketed named or control character
+[`\d`](#backslash-d)         digit
+[`\D`](#backslash-D)         nondigit
+[`\e`](#backslash-e)         escape character
+[`\E`](#backslash-E)         anything but an escape character
+[`\f`](#backslash-f)         form feed
+[`\F`](#backslash-F)         anything but a form feed
+[`\n`](#backslash-n)         (logical) newline
+[`\N`](#backslash-N)         anything but a (logical) newline
+[`\h`](#backslash-h)         horizontal whitespace
+[`\H`](#backslash-H)         anything but horizontal whitespace
+[`\L[ ... ]`](#backslash-L)  Everything within the brackets is lowercase
+[`\Q[ ... ]`](#backslash-Q)  all metacharacters within the brackets match as literal characters
+[`\r`](#backslash-r)         return
+[`\R`](#backslash-R)         anything but a return
+[`\s`](#backslash-s)         any whitespace character, \\h | \\v
+[`\S`](#backslash-S)         anything but whitespace
+[`\t`](#backslash-t)         a tab
+[`\T`](#backslash-T)         anything but a tab
+[`\U[ ... ]`](#backslash-U)  everything within the brackets is uppercase
+[`\v`](#backslash-v)         vertical whitespace
+[`\V`](#backslash-V)         anything but vertical whitespace
+[`\w`](#backslash-X)         word character (Unicode alphanumeric plus "_")
+[`\W`](#backslash-X)         anything but a word character
 [`\x[ ... ]`](#backslash-x)  character given in hexadecimal (brackets optional)
 [`\X[ ... ]`](#backslash-X)  anything but the character given in hexadecimal (brackets optional)
----------------------------  --------------------------------------------------------------------
+---------------------------  -------------------------------------------------------------------
 
 zero-width boundaries begin with a pipe symbol.
 To negate put a ! in front of the pipe symbol.
