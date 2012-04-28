@@ -508,14 +508,14 @@ Infix operator or functions that forcing a context.
 [`!`](appendix-a-index.html#exclamation-op)      [not()](appendix-a-index.html#not)    negated bool context
 [`+`](appendix-a-index.html#plus-op)             &nbsp;                                [numeric](](tablet-4-operators.html#numeric-context)
 [`-`](appendix-a-index.html#minus-op)            &nbsp;                                negated num context
-[`~`](appendix-a-index.html#tilde-op)            &nbsp;                                [string](](tablet-4-operators.html#string-context)
+[`~`](appendix-a-index.html#tilde-context)       &nbsp;                                [string](](tablet-4-operators.html#string-context)
 [`@()`](appendix-a-index.html#at-op)             [list()](appendix-a-index.html#list)  [array/list context](variables.html#array)
 &nbsp;                                           [flat()](appendix-a-index.html#flat)  flat list
 &nbsp;                                           [lol()](appendix-a-index.html#lol)    list of list (was slice context before)
-[`%()`](appendix-a-index.html#percent-op)        [hash()](appendix-a-index.html#hash)  [hash context](tablet-3-variables.html#hash)
-[`&()`](appendix-a-index.html#ampersand-op)      [code()](appendix-a-index.html#code)  [coderef](tablet-3-variables.html#callable), [routines](ap-b-lookup.html#routines)
-[`|`](appendix-a-index.html#pipe-context)         &nbsp;                                flatten [capture](tablet-3-variables.html#capture) object into arglist (named parameter)
-[`||`](appendix-a-index.html#pipe-pipe-context)   &nbsp;                                flatten [capture](tablet-3-variables.html#capture) object into semicolon list (positional parameter)
+[`%()`](appendix-a-index.html#percent-context)   [hash()](appendix-a-index.html#hash)  [hash context](tablet-3-variables.html#hash)
+[`&()`](appendix-a-index.html#ampersand-context) [code()](appendix-a-index.html#code)  [coderef](tablet-3-variables.html#callable), [routines](ap-b-lookup.html#routines)
+[`|`](appendix-a-index.html#pipe-context)        &nbsp;                                flatten [capture](tablet-3-variables.html#capture) object into arglist (named parameter)
+[`||`](appendix-a-index.html#pipe-pipe-context)  &nbsp;                                flatten [capture](tablet-3-variables.html#capture) object into semicolon list (positional parameter)
 -----------------------------------------------  ------------------------------------  ----------------------------------------------------------------------------------------------
 
 
@@ -768,36 +768,36 @@ Escape Sequences
 
 To be used just inside of regexes (rx/.../, m/.../, s/.../.../ and tr/.../.../).
 
----------------------------  -------------------------------------------------------------------
-[`\0[ ... ]`](#backslash-0)  character given in octal (brackets optional)
-[`\c[ ... ]`](#backslash-c)  named character or control character
-[`\C[ ... ]`](#backslash-C)  any character except the bracketed named or control character
-[`\d`](#backslash-d)         digit
-[`\D`](#backslash-D)         nondigit
-[`\e`](#backslash-e)         escape character
-[`\E`](#backslash-E)         anything but an escape character
-[`\f`](#backslash-f)         form feed
-[`\F`](#backslash-F)         anything but a form feed
-[`\n`](#backslash-n)         (logical) newline
-[`\N`](#backslash-N)         anything but a (logical) newline
-[`\h`](#backslash-h)         horizontal whitespace
-[`\H`](#backslash-H)         anything but horizontal whitespace
-[`\L[ ... ]`](#backslash-L)  Everything within the brackets is lowercase
-[`\Q[ ... ]`](#backslash-Q)  all metacharacters within the brackets match as literal characters
-[`\r`](#backslash-r)         return
-[`\R`](#backslash-R)         anything but a return
-[`\s`](#backslash-s)         any whitespace character, \\h | \\v
-[`\S`](#backslash-S)         anything but whitespace
-[`\t`](#backslash-t)         a tab
-[`\T`](#backslash-T)         anything but a tab
-[`\U[ ... ]`](#backslash-U)  everything within the brackets is uppercase
+------------------------------------------------  -------------------------------------------------------------------
+[`\0[ ... ]`](appendix-a-index.html#backslash-0)  character given in octal (brackets optional)
+[`\c[ ... ]`](appendix-a-index.html#backslash-c)  named character or control character
+[`\C[ ... ]`](appendix-a-index.html#backslash-C)  any character except the bracketed named or control character
+[`\d`](appendix-a-index.html#backslash-d)         digit
+[`\D`](appendix-a-index.html#backslash-D)         nondigit
+[`\e`](appendix-a-index.html#backslash-e)         escape character
+[`\E`](appendix-a-index.html#backslash-E)         anything but an escape character
+[`\f`](appendix-a-index.html#backslash-f)         form feed
+[`\F`](appendix-a-index.html#backslash-F)         anything but a form feed
+[`\n`](appendix-a-index.html#backslash-n)         (logical) newline
+[`\N`](appendix-a-index.html#backslash-N)         anything but a (logical) newline
+[`\h`](appendix-a-index.html#backslash-h)         horizontal whitespace
+[`\H`](appendix-a-index.html#backslash-H)         anything but horizontal whitespace
+[`\L[ ... ]`](appendix-a-index.html#backslash-L)  Everything within the brackets is lowercase
+[`\Q[ ... ]`](appendix-a-index.html#backslash-Q)  all metacharacters within the brackets match as literal characters
+[`\r`](appendix-a-index.html#backslash-r)         return
+[`\R`](appendix-a-index.html#backslash-R)         anything but a return
+[`\s`](appendix-a-index.html#backslash-s)         any whitespace character, \\h or \\v
+[`\S`](appendix-a-index.html#backslash-S)         anything but whitespace
+[`\t`](appendix-a-index.html#backslash-t)         a tab
+[`\T`](appendix-a-index.html#backslash-T)         anything but a tab
+[`\U[ ... ]`](appendix-a-index.html#backslash-U)  everything within the brackets is uppercase
 [`\v`](#backslash-v)         vertical whitespace
 [`\V`](#backslash-V)         anything but vertical whitespace
-[`\w`](#backslash-X)         word character (Unicode alphanumeric plus "_")
-[`\W`](#backslash-X)         anything but a word character
-[`\x[ ... ]`](#backslash-x)  character given in hexadecimal (brackets optional)
-[`\X[ ... ]`](#backslash-X)  anything but the character given in hexadecimal (brackets optional)
----------------------------  -------------------------------------------------------------------
+[`\w`](appendix-a-index.html#backslash-X)         word character (Unicode alphanumeric plus "_")
+[`\W`](appendix-a-index.html#backslash-X)         anything but a word character
+[`\x[ ... ]`](appendix-a-index.html#backslash-x)  character given in hexadecimal (brackets optional)
+[`\X[ ... ]`](appendix-a-index.html#backslash-X)  anything but the character given in hexadecimal (brackets optional)
+------------------------------------------------  -------------------------------------------------------------------
 
 zero-width boundaries begin with a pipe symbol.
 To negate put a ! in front of the pipe symbol.

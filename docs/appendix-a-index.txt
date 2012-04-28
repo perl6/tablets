@@ -295,6 +295,8 @@ example: ``
 *[«numeric op»](tablet-4-operators.html#numeric-context)* &mdash;
 [infix](#infix-category) addition operator,
 forces [numeric context](appendix-g-glossary.html#numeric-context)
+on both operands, so it does if its used only as [*prefix*](#prefix-category),
+opposite of [**-**](#minus-op)
 
 <a id="plus-metachar"/>
 **+**
@@ -345,7 +347,9 @@ forces numeric context
 **-**
 *[«numeric op»](tablet-4-operators.html#numeric-context)* &mdash;
 [infix](#infix-category) subtraction operator,
-forces numeric context (and negates)
+forces numeric context on both operands and does so (and negates)
+if used only as [*prefix*](#prefix-category),
+opposite of [**+**](#plus-op)
 
 <a id="minus-minus-op"/><a id="auto-decrement"/>
 **--**
@@ -908,7 +912,7 @@ connected with a logical *[OR](appendix-g-glossary.html#or)*
 flatten [capture](tablet-3-variables#capture)
 object into semicolon list, (positional parameter)
 
-<a id="tilde"/><a id="tilde-op"/>
+<a id="tilde"/><a id="tilde-op"/><a id="tilde-context"/>
 **[\~](tablet-4-operators.html#string-context)**
 *[«context op»](appendix-b-grouped.html#contextualizers)*,
 *[«string op»](tablet-4-operators.html#string-context)* &mdash;
