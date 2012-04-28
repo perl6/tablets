@@ -4733,8 +4733,8 @@ context](tablet-4-operators.html#string-context)*
 <a id="WHY-introspection"/>
 **WHY**
 *[«introspection method»](appendix-b-grouped.html#object-introspection)* &mdash;
-reserved for documentation, see also
-**[\#=](#pound-equal)**
+documentation of that object&mdash;
+see also: **[\#=](#pound-equal)**
 
 <a id="will-do-routine-trait"/>
 **will do**

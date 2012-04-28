@@ -320,16 +320,16 @@ buf64       a uint64 buffer
 Object Introspection
 --------------------
 
----------  ---------------------------------------------------------------
-WHAT       short name of the class that an object belongs to
-WHICH      object ID (type)
-WHO        package, that support that object, long name in string context
-WHERE      memory address of the object
-HOW        object of meta class: "Higher Order Workings"
-WHEN       (reserved for events?)
-WHY        (reserved for documentation)
-WHENCE     autovivification of closures
----------  ---------------------------------------------------------------
+----------------------------------------------------  ---------------------------------------------------------------
+[WHAT](appendix-a-index.html#WHAT-introspection)      short name of the class that an object belongs to
+[WHICH](appendix-a-index.html#WHICH-introspection)    object ID (type)
+[WHO](appendix-a-index.html#WHO-introspection)        package, that support that object, long name in string context
+[WHERE](appendix-a-index.html#WHERE-introspection)    memory address of the object
+[HOW](appendix-a-index.html#HOW-introspection)        object of meta class: "Higher Order Workings"
+[WHEN](appendix-a-index.html#WHEN-introspection)      (reserved for events?)
+[WHY](appendix-a-index.html#WHY-introspection)        (reserved for documentation)
+[WHENCE](appendix-a-index.html#WHENCE-introspection)  autovivification of closures
+----------------------------------------------------  ---------------------------------------------------------------
 
 
 
