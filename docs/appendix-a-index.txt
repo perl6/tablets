@@ -537,7 +537,7 @@ double pointy syntax to assign a rw parameter to a
 *[«meta op»](appendix-g-glossary.html#metaoperators)* &mdash;
 hyper metaopeartor, right side dicates the lengths of the  result,
 has a [unicode sibling](appendix-b-grouped.html#unicode-operators) &mdash;
-example: ` 2 <<+=<< @b` increments numeric value of every array element by 2
+example: `2 <<+=<< @b` increments numeric value of every array element by 2
 
 <a id="lower-lower-equal-equal-op"/>
 **\<\<==**
@@ -545,12 +545,17 @@ example: ` 2 <<+=<< @b` increments numeric value of every array element by 2
 leftward pointing feed operator that adds values to an existing list (append-mode) &mdash;
 see also: [*\<==*](#lower-lower-equal-op) and [*==\>\>*](#equal-equal-greater-greater-op)
 
-<a id="double-angle-brackets-op"/><a id="texas-brackets"/><a id="texas-brackets-op"/>
+<a id="double-angle-brackets"/><a id="double-angle-brackets-op"/>
+<a id="texas-brackets"/><a id="texas-brackets-op"/>
+<a id="french-brackets"/><a id="french-brackets-op"/>
 **[\<\< \>\>](tablet-2-basic-syntax.html#quote-words)**
 *[«quoting op»](appendix-b-grouped.html#quoting-ops)* &mdash;
-[circumfix](#circumfix-category) quoting operator for grouping with
-autoquoting and [evaluation](appendix-g-glossary.html#evaluation)
-of variables, alias to **Q** **[:qq](#qq-adverb)** **[:ww](#ww-adverb)** **/.../**
+[circumfix](#circumfix-category) quoting operator to autoquote of words and return
+them as a list, with [quote protection](appendix-g-glossary.html#quote-protection)
+and [evaluation](appendix-g-glossary.html#evaluation) of variables,
+alias to: **Q** **[:qq](#qq-adverb)** **[:ww](#ww-adverb)** **/.../**
+or `« »` ([unicode](appendix-g-glossary.html#unicode) alias) &mdash;
+see also: [**\< \>**](#angle-brackets-op)
 
 <a id="lower-equal-op"/>
 **\<=**
@@ -577,11 +582,12 @@ example: `3 <=> 4` returns `-1`, `3 <=> 3` returns `0`, `4 <=> 3` returns `1`
 <a id="angle-brackets"/><a id="angle-brackets-op"/>
 **[\< \>](tablet-2-basic-syntax.html#quote-words)**
 *[«quoting op»](appendix-b-grouped.html#quoting-ops)* &mdash;
-[circumfix](#circumfix-category) quoting operator
-for grouping with autoquoting, alias to
-**[Q](#Q-op)** **:q**
-**[:ww](#ww-adverb)** **/.../** or
-**[qw/.../](#qw-op)**
+[circumfix](#circumfix-category) quoting operator that autoquotes words
+and returns them as a list,
+without [quote protection](appendix-g-glossary.html#quote-protection) and
+evaluation of variables like [\<\< \>\>](#double-angle-brackets),
+alias to **[qw/.../](#qw-op)** or
+**[Q](#Q-op)** **:q** **[:ww](#ww-adverb)** **/.../**
 
 <a id="angle-brackets-twigil"/><a id="angle-brackets-var"/>
 **\< \>**
@@ -964,7 +970,7 @@ that starting with the
 **[:array](#array-adverb)**, included in
 **["..."](#double-quotes)**,
 **[qq/.../](#qq-op)** and
-**[<<...\>\>](#double-angle-brackets)**
+**[\<\<...\>\>](#double-angle-brackets)**
 
 <a id="abs"/>
 **abs** *«numeric op»* &mdash;
@@ -1089,7 +1095,7 @@ that starting with the
 **[:a](#a-adverb)**, included in
 **["..."](#double-quotes)**,
 **[qq/.../](#qq-op)** and
-**[<<...\>\>](#double-angle-brackets)**
+**[\<\<...\>\>](#double-angle-brackets)**
 
 <a id="as-parameter-trait"/>
 **as**
@@ -1143,7 +1149,7 @@ forces evaluation of
 short form of **[:backslash](#backslash-adverb)**,
 included in **["..."](#double-quotes)**,
 **[qq/.../](#qq-op)** and
-**[<<...\>\>](#double-angle-brackets)**
+**[\<\<...\>\>](#double-angle-brackets)**
 
 <a id="backslash-adverb"/>
 **[:backslash](tablet-2-basic-syntax.html#interpolation)**
@@ -1153,7 +1159,7 @@ sequences](appendix-b-grouped.html#escape-sequences)
 , long form of **[:b](#b-adverb)**, included in
 **["..."](#double-quotes)**,
 **[qq/.../](#qq-op)** and
-**[<<...\>\>](#double-angle-brackets)**
+**[\<\<...\>\>](#double-angle-brackets)**
 
 <a id="Bag-type"/>
 **Bag**
@@ -1280,7 +1286,7 @@ forces evaluation of closures (blocks aka {...}) inside quotes,
 long form of **[:closure](#closure-adverb)**,
 included in **["..."](#double-quotes)**,
 **[qq/.../](#qq-op)** and
-**[<<...\>\>](#double-angle-brackets)**
+**[\<\<...\>\>](#double-angle-brackets)**
 
 <a id="c-modifier"/>
 **:c**(<span class="you-provide">n</span>)
@@ -1493,7 +1499,7 @@ forces evaluation of closures (blocks aka {... }) inside quotes,
 long form of **[:c](#c-adverb)**, included in
 **["..."](#double-quotes)**,
 **[qq/.../](#qq-op)** and
-**[<<...\>\>](#double-angle-brackets)**
+**[\<\<...\>\>](#double-angle-brackets)**
 
 <a id="cmp"/><a id="cmp-op"/>
 **cmp**
@@ -2011,7 +2017,7 @@ replacing them with the result, long form of
 **[:function](#function-adverb)**, included in 
 **["..."](#double-quotes)**,
 **[qq/.../](#qq-op)** and
-**[<<...\>\>](#double-angle-brackets)**
+**[\<\<...\>\>](#double-angle-brackets)**
 
 <a id="backslash-F"/>
 **\\F**
@@ -2163,7 +2169,7 @@ replacing them with the result, long form of
 **[:f](#f-adverb)** , included in
 **["..."](#double-quotes)**,
 **[qq/.../](#qq-op)** and
-**[<<...\>\>](#double-angle-brackets)**
+**[\<\<...\>\>](#double-angle-brackets)**
 
 
 
@@ -2340,7 +2346,7 @@ variables that start with the
 **[:hash](#hash-adverb)**, included in
 **["..."](#double-quotes)**,
 **[qq/.../](#qq-op)** and
-**[<<...\>\>](#double-angle-brackets)**
+**[\<\<...\>\>](#double-angle-brackets)**
 
 <a id="backslash-H"/>
 **\\H**
@@ -2390,7 +2396,7 @@ demands evaluation of hash variables that start with the
 **[:h](#h-adverb)**, included in
 **["..."](#double-quotes)**,
 **[qq/.../](#qq-op)** and
-**[<<...\>\>](#double-angle-brackets)**
+**[\<\<...\>\>](#double-angle-brackets)**
 
 <a id="heredoc-adverb"/>
 **[:heredoc](tablet-2-basic-syntax.html#heredocs)**
@@ -3547,18 +3553,20 @@ returns the input string with all non-"word" characters
 <a id="quotemarks-adverb"/>
 **[:quotewords](tablet-2-basic-syntax.html#quote-words)**
 *[«quoting adverb»](appendix-b-grouped.html#quoting-adverbs)* &mdash;
-split quoted string into words (on whitespaces) but with quote
-protection (like in shell - '...' and
-**["..."](#double-quotes)** sourrounded
-strings are taken as single words), long form of
-**[:ww](#ww-adverb)**, used in
-**[<<...\>\>](#double-angle-brackets)**
+split quoted string into words (on whitespaces) but with 
+[quote protection](appendix-g-glossary.html#quote-protection),
+long form of **[:ww](#ww-adverb)**,
+used in **[\<\<...\>\>](#double-angle-brackets)**
 
 <a id="qw"/><a id="qw-op"/>
 **[qw](tablet-2-basic-syntax.html#quote-words)**
 *[«quoting op»](appendix-b-grouped.html#quoting-ops)* &mdash;
-splits result on words (as in Perl 5); alias to `Q :q :w /.../` or
-**[<...\>](#angle-brackets)**
+[circumfix](#circumfix-category) quoting operator that autoquotes words
+and returns them as a list (as in Perl 5),
+without [quote protection](appendix-g-glossary.html#quote-protection) and
+evaluation of variables like [\<\< \>\>](#double-angle-brackets),
+alias to **[\< \>](#angle-brackets-op)** or
+**[Q](#Q-op)** **:q** **[:ww](#ww-adverb)** **/.../**
 
 <a id="qx"/><a id="qx-op"/>
 **[qx](tablet-2-basic-syntax.html#code)**
@@ -3882,7 +3890,7 @@ demands evaluation of scalar variables that start with the
 **[:scalar](#scalar-adverb)**, included in
 **["..."](#double-quotes)**,
 **[qq/.../](#qq-op)** and
-**[<<...\>\>](#double-angle-brackets)**
+**[\<\<...\>\>](#double-angle-brackets)**
 
 <a id="s-modifier"/>
 **:s**
@@ -3952,7 +3960,7 @@ demands evaluation of scalar variables that start with the
 **[:s](#s-adverb)**, included in
 **["..."](#double-quotes)**,
 **[qq/.../](#qq-op)** and
-**[<<...\>\>](#double-angle-brackets)**
+**[\<\<...\>\>](#double-angle-brackets)**
 
 <a id="scope-declarator-category"/>
 **scope\_declarator**
@@ -4561,7 +4569,8 @@ check if file is writeable by effective uid ([**\$\*EUID**](#EUID-global-var))
 <a id="w-adverb"/>
 **[:w](tablet-2-basic-syntax.html#quote-words)**
 *[«quoting adverb»](appendix-b-grouped.html#quoting-adverbs)* &mdash;
-split quoted string on words (on whitespaces), no quote protection, 
+split quoted string on words (on whitespaces),
+no [quote protection](appendix-g-glossary.html#quote-protection),
 short form of **[:words](#words-adverb)**, used in **[qw/.../](#qw-op)**
 
 <a id="backslash-W"/>
@@ -4685,8 +4694,9 @@ see also [**lines**](#lines)
 <a id="words-adverb"/>
 **[:words](tablet-2-basic-syntax.html#quote-words)**
 *[«quoting adverb»](appendix-b-grouped.html#quoting-adverbs)* &mdash;
-split quoted string on words (on whitespaces), no quote
-protection, long form of **[:w](#w-adverb)**, used
+split quoted string on words (on whitespaces),
+no [quote protection](appendix-g-glossary.html#quote-protection),
+long form of **[:w](#w-adverb)**, used
 in **[qw/.../](#qw-op)**
 
 <a id="wrap"/>
@@ -4707,12 +4717,10 @@ whitespace between words aka [**\\s\***](#backslash-s)
 <a id="ww-adverb"/>
 **[:ww](tablet-2-basic-syntax.html#quote-words)**
 *[«quoting adverb»](appendix-b-grouped.html#quoting-adverbs)* &mdash;
-split quoted string into words (on whitespaces) but with quote
-protection (like in shell - '...' and
-**["..."](#double-quotes)** sourrounded
-strings are taken as single words), short form of
-**[:quotewords](#quotewords-adverb)**, used in
-**[\<\<...\>\>](#double-angle-brackets)**
+split quoted string into words (on whitespaces) but with
+[quote protection](appendix-g-glossary.html#quote-protection),
+short form of [**:quotewords**](#quotewords-adverb),
+used in [**\<\<...\>\>**](#double-angle-brackets)
 
 <a id="ww-subrule"/>
 **\<ww\>**

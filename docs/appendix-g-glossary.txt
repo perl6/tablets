@@ -357,8 +357,8 @@ aka [**:quotewords**](appendix-a-index.html#quotewords-adverb) which is included
 in [**\<\< \>\>**](appendix-a-index.html#double-angle-brackets-op),
 the adverb [**:w**](appendix-a-index.html#w-adverb) aka
 [**:words**](appendix-a-index.html#words-adverb) which support **qw** as well as
-[**< >**](appendix-a-index.html#angle-brackets-op) don't provide this service:
-`<these are "four words">`
+[**< >**](appendix-a-index.html#angle-brackets-op) don't provide this service,
+that might also be known to shell users: `<these are 'four words'>`
 
 
 <a id="quoting"/>

@@ -492,10 +492,11 @@ The two hyper operators can be written with the Unicode signs (also documented
 as "French Quotes") or with double less than or greater than signs (documented
 as "Texas Quotes").
 
---- --------------------------------------------- -------
- «  [<<](appendix-a-index.html#lower-lower-op)   Hyperop, right side dictates length of result
- »  [>>](appendix-a-index.html#greater-greater-op) Hyperop, left side dictates length of result
---- --------------------------------------------- -------
+--- -------------------------------------------------------- -------
+ «  [\<\<](appendix-a-index.html#lower-lower-op)             Hyperop, right side dictates length of result
+ »  [\>\>](appendix-a-index.html#greater-greater-op)         Hyperop, left side dictates length of result
+« » [\<\< \>\>](appendix-a-index.html#double-angle-brackets) [**qw**](appendix-a-index.html#qw-op) with [evaluation](appendix-g-glossary.html#evaluation) and [quote protection](appendix-g-glossary.html#quote-protection)
+--- -------------------------------------------------------- -------
 
 
 Contextualizers
@@ -803,11 +804,11 @@ To be used just inside of regexes (rx/.../, m/.../, s/.../.../ and tr/.../.../).
 zero-width boundaries begin with a pipe symbol.
 To negate put a ! in front of the pipe symbol.
 
------------------  -------------------------------------------------------------------
-[`<|c>`](#pipe-c)  [codepoint](appendix-g-glossary.html#codepoint) boundary (always matches in grapheme/codepoint mode)
-[`<|g>`](#pipe-g)  [grapheme](appendix-g-glossary.html#grapheme) boundary (always matches in grapheme mode)
-[`<|w>`](#pipe-w)  word boundary aka \<wb\>
------------------  -------------------------------------------------------------------
+--------------------------------------  -------------------------------------------------------------------
+[`<|c>`](appendix-a-index.html#pipe-c)  [codepoint](appendix-g-glossary.html#codepoint) boundary (always matches in grapheme/codepoint mode)
+[`<|g>`](appendix-a-index.html#pipe-g)  [grapheme](appendix-g-glossary.html#grapheme) boundary (always matches in grapheme mode)
+[`<|w>`](appendix-a-index.html#pipe-w)  word boundary aka \<wb\>
+--------------------------------------  -------------------------------------------------------------------
 
 
 
@@ -818,32 +819,32 @@ predefined rules (see routine type rule) for any grammar or
 regex. They can have prefixes: . (dot) marks a non-capturing subrule,
 ? and ! are also non-capturing positive and negative zero width assertions.
 
------------------------------------------------  -------------------------------------------------
-[`<alpha>`](#alpha-subrule)                      single alphabetic character
-[`<upper>`](#upper-subrule)                      uppercase char
-[`<lower>`](#lower-subrule)                      lowercase char
-[`<digit>`](#digit-subrule)                      single digit
-[`<xdigit>`](#xdigit-subrule)                    hexadecimal digit
-[`<alnum>`](#alnum-subrule)                      alphanumeric char, equivalent to <+alpha +digit>
-[`<punct>`](#punct-subrule)                      punctuation char
-[`<ident>`](#ident-subrule)                      an identifier
-[`<print>`](#print-subrule)                      printable char
-[`<graph>`](#graph-subrule)                      "graphical" char like kanji
-[`<cntrl>`](#cntrl-subrule)                      control char, e.g. newline and backspace
-[`<blank>`](#blank-subrule)                      mostly a space or tab
-[`<space>`](#space-subrule)                      whitespace character aka \s
-[`<ws>`](#ws-subrule)                            whitespace, roughly equals \s*
-[`<wb>`](#wb-subrule)                            zero-width word boundary, spot with between \w and \W
-[`<ww>`](#ww-subrule)                            zero-width inside word spot between \w and \w
-[`<?before pattern>`](#before-subrule)           zero-width lookahead
-[`<!before pattern>`](#before-negative-subrule)  negative zero-width lookahead, true if the pattern does not match
-[`<?after pattern>`](#after-subrule)             zero-width lookbehind
-[`<!after pattern>`](#after-negative-subrule)    negative zero-width lookbehind
-[`<?same>`](#same-subrule)                       zero-width between two identical chars
-[`<prior>`](#prior-subrule)                      last matched pattern
-[`<?>`](#question-subrule)                       matches nothing, always true
-[`<!>`](#exclamation-subrule)                    always false
------------------------------------------------  -------------------------------------------------
+--------------------------------------------------------------------  -------------------------------------------------
+[`<alpha>`](appendix-a-index.html#alpha-subrule)                      single alphabetic character
+[`<upper>`](appendix-a-index.html#upper-subrule)                      uppercase char
+[`<lower>`](appendix-a-index.html#lower-subrule)                      lowercase char
+[`<digit>`](appendix-a-index.html#digit-subrule)                      single digit
+[`<xdigit>`](appendix-a-index.html#xdigit-subrule)                    hexadecimal digit
+[`<alnum>`](appendix-a-index.html#alnum-subrule)                      alphanumeric char, equivalent to <+alpha +digit>
+[`<punct>`](appendix-a-index.html#punct-subrule)                      punctuation char
+[`<ident>`](appendix-a-index.html#ident-subrule)                      an identifier
+[`<print>`](appendix-a-index.html#print-subrule)                      printable char
+[`<graph>`](appendix-a-index.html#graph-subrule)                      "graphical" char like kanji
+[`<cntrl>`](appendix-a-index.html#cntrl-subrule)                      control char, e.g. newline and backspace
+[`<blank>`](appendix-a-index.html#blank-subrule)                      mostly a space or tab
+[`<space>`](appendix-a-index.html#space-subrule)                      whitespace character aka \s
+[`<ws>`](appendix-a-index.html#ws-subrule)                            whitespace, roughly equals \s*
+[`<wb>`](appendix-a-index.html#wb-subrule)                            zero-width word boundary, spot with between \w and \W
+[`<ww>`](appendix-a-index.html#ww-subrule)                            zero-width inside word spot between \w and \w
+[`<?before pattern>`](appendix-a-index.html#before-subrule)           zero-width lookahead
+[`<!before pattern>`](appendix-a-index.html#before-negative-subrule)  negative zero-width lookahead, true if the pattern does not match
+[`<?after pattern>`](appendix-a-index.html#after-subrule)             zero-width lookbehind
+[`<!after pattern>`](appendix-a-index.html#after-negative-subrule)    negative zero-width lookbehind
+[`<?same>`](appendix-a-index.html#same-subrule)                       zero-width between two identical chars
+[`<prior>`](appendix-a-index.html#prior-subrule)                      last matched pattern
+[`<?>`](appendix-a-index.html#question-subrule)                       matches nothing, always true
+[`<!>`](appendix-a-index.html#exclamation-subrule)                    always false
+--------------------------------------------------------------------  -------------------------------------------------
 
 Match Object Methods
 --------------------
