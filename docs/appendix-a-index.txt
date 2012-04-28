@@ -652,7 +652,6 @@ rightward pointing feed operator, take return value of left side
 and feed as parameter to the right &mdash;
 see also: [*\<==*](#lower-equal-equal-op) and [*==\>\>*](#equal-equal-greater-greater-op)
 
-
 <a id="equal-equal-greater-greater-op"/>
 **==\>\>**
 *[«sequencer op»](tablet-4-operators.html#feed-ops)* &mdash;
@@ -1883,7 +1882,7 @@ keys that are not already part of a pair (one more than the previous
 key had) &mdash;
 example: `%hash = enum <<:Mon(1) Tue Wed Thu Fri Sat Sun>>;`
 
-<a id="Enum-type"/>
+<a id="EnumMap-type"/>
 **EnumMap**
 *[«immutable type»](appendix-b-grouped.html#immutable-types)* &mdash;
 A mapping of Enums with no duplicate keys
@@ -2425,6 +2424,11 @@ uppercase and lowercase variants of a letter are taken as the
 same letter, short for **[:ignorecase](#ignorecase-modifier)**
 (same as in Perl 5)
 
+<a id="ident-subrule"/>
+**\<ident\>**
+*[«predefined subrule»](appendix-b-grouped.html#subrules)* &mdash;
+an identifier
+
 <a id="if"/>
 **[if](tablet-6-blocks.html#if)**
 *[«conditional»](appendix-b-grouped.html#conditionals)* &mdash;
@@ -2536,8 +2540,8 @@ a point on the continuous atomic timeline
 <a id="Int-type"/>
 **Int**
 *[«immutable type»](appendix-b-grouped.html#immutable-types)* &mdash;
-Perl integer, objext type to hold whole number like &mdash;1, 2 or
-6000, allows **[Inf](#Inf)** / NaN, arbitrary precision,
+Perl integer, objext type to hold whole number like 1, 2 or 6000,
+allows **[Inf](#Inf)** / NaN, arbitrary precision,
 use it as method to convert into a **Int** like the Perl 5 *int*
 
 **invert**
@@ -2775,6 +2779,11 @@ logarithm of $x to the $base
 **[log10](operators.html)** &mdash;
 logarithm to the base of 10,
 also known as *log* on calculators and *lg* in math classes
+
+<a id="LoL-type"/>
+**Lol**
+*[«immutable type»](appendix-b-grouped.html#immutable-types)* &mdash;
+arguments in a semicolon list, name is short fpr "List of Lists"
 
 <a id="lol"/>
 **lol**()
