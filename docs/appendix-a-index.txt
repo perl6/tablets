@@ -64,6 +64,12 @@ negates (mostly [comparison operators](tablet-4-operators.html#comparison))
 *[«special var»](appendix-b-grouped.html#special-variables)* &mdash;
 last error message
 
+<a id="exclamation-assertion"/>
+**!**
+*[«regex metachar»](appendix-b-grouped.html#regex-metacharacter)* &mdash;
+a leading **!** in a subrule a negative zero-width assertion like
+[**<!after ...>*](#after-negative-subrule), opposite of [**?**](#question-assertion)
+
 <a id="exclamation-subrule"/>
 **\<\!\>**
 *[«predefined subrule»](appendix-b-grouped.html#subrules)* &mdash;
@@ -83,14 +89,14 @@ that calls **[die](#die)**
 **[" "](tablet-2-basic-syntax.html#double-quotes)**
 *[«quoting op»](appendix-b-grouped.html#quoting-ops)* &mdash;
 double quoting, interpolates with
-**[:s](#s-adverb)**,
-**[:a](#a-adverb)**,
-**[:h](#h-adverb)**,
-**[:f](#f-adverb)**,
-**[:c](#c-adverb)**,
-**[:b](#b-adverb)** (all vars, functions, blocks,
-control chars), alias to **[qq/.../](#qq-op)** or
-**Q** **[:qq](#qq-adverb)** **/.../**
+[**:s**](#s-adverb),
+[**:a**](#a-adverb),
+[**:h**](#h-adverb),
+[**:f**](#f-adverb),
+[**:c**](#c-adverb),
+[**:b**](#b-adverb) (all vars, functions, blocks,
+control chars), alias to [**qq/.../**](#qq-op) or
+**Q** [**:qq**](#qq-adverb) **/.../**
 
 <a id="pound"/>
 **[\#](tablet-2-basic-syntax.html#single-line)** &mdash;
@@ -256,7 +262,7 @@ multiplies numbers, forces numeric context
 *[twigil](appendix-g-glossary.html#twigil)* of global variables that
 are accessible in all *[scopes](appendix-g-glossary.html#scope)*
 
-<a id="asterisk-matachar"/>
+<a id="asterisk-metachar"/>
 **\***
 *[«regex metachar»](appendix-b-grouped.html#quantifier)* &mdash;
 quantifier for zero or more findings
@@ -713,6 +719,14 @@ quantifier for 0 or 1 occurrence in Regexes
 *[twigil](appendix-g-glossary.html#twigil)* (secondary sigil) for
 constant compiler hint variables
 
+<a id="question-assertion"/>
+**?**
+*[«regex metachar»](appendix-b-grouped.html#regex-metacharacter)* &mdash;
+a leading **?** in a [*subrule*](appendix-g-glossary.html#subrule) indicates
+a positive zero-width assertion like
+[**<?before ...>*](#before-subrule), opposite of [**!**](#exclamation-assertion)
+
+
 <a id="question-subrule"/>
 **\<?\>**
 *[«predefined subrule»](appendix-b-grouped.html#subrules)* &mdash;
@@ -1112,6 +1126,12 @@ following **as**
 inner type constraint that a *[routine](appendix-g-glossary.html#routine)*
 imposes on its return value
 
+<a id="assertion-category"/>
+**assertion**
+*[«grammatical category»](appendix-b-grouped.html#regex)* &mdash;
+namespace for [*regex*](appendix-g-glossary.html#regex) assertions
+like [**!**](#exclamation-assertion)
+
 <a id="assoc"/>
 **assoc**
 *[«routine trait»](appendix-b-grouped.html#routine-traits)* &mdash;
@@ -1153,6 +1173,12 @@ short form of **[:backslash](#backslash-adverb)**,
 included in **["..."](#double-quotes)**,
 **[qq/.../](#qq-op)** and
 **[\<\<...\>\>](#double-angle-brackets)**
+
+<a id="backslash-category"/>
+**backslash**
+*[«grammatical category»](appendix-b-grouped.html#regex)* &mdash;
+internal namespace for [*escape sequences*](appendix-b-grouped.html#escape-sequences)
+like [**\\w**](#backslash-w)
 
 <a id="backslash-adverb"/>
 **[:backslash](tablet-2-basic-syntax.html#interpolation)**
@@ -2467,7 +2493,8 @@ case pattern as the replaced, short for
 imaginary part of a complex number &mdash;
 see also: [**truncate**](#truncate), [**unpolar**](#unpolar), [**re**](#re)
 
-**[import](subroutines.html)**
+<a id="import"/>
+**[import](subroutines.html)** &mdash;
 just import definitions from an already loaded module (see
 **[use](#use)** and **[need](#need)**)
 
@@ -2888,6 +2915,13 @@ see also: **[min](#min-op)** and **[minmax](#minmax-op)**
 <a id="maybe"/>
 **maybe** *«block modifier»* &mdash;
 
+<a id="metachar-category"/>
+**metachar**
+*[«grammatical category»](appendix-b-grouped.html#regex)* &mdash;
+internal namespace for [*regex*](appendix-g-glossary.html#regex)
+[*metacharacters*](appendix-b-grouped.html#regex-metacharacter)
+like [**.**](#dot-metachar)
+
 <a id="Method-type"/>
 **Method**
 *[«mutable type»](appendix-b-grouped.html#mutable-types)* &mdash;
@@ -2928,6 +2962,12 @@ matched string, short for
 **mod** *«numeric op»* &mdash;
 integer modulo operator; wordy alias to
 **[%](#percent)** &mdash; example: `5 mod 4 = 1;`
+
+<a id="mod-internal-category"/>
+**mod\_internal**
+*[«grammatical category»](appendix-b-grouped.html#regex)* &mdash;
+internal namespace for [*regex modifier*](appendix-b-grouped.html#regex-modifier)
+like [**:P5**](#P5-modifier)
 
 <a id="module"/>
 **module** *«block modifier»* &mdash;
@@ -3526,6 +3566,12 @@ short for **[:double](#double-adverb)**
 **[qqx](tablet-2-basic-syntax.html#code)**
 *[«quoting op»](appendix-b-grouped.html#quoting-ops)* &mdash;
 run as system call and return results, in Perl 5: *qx/.../*
+
+<a id="quantifier"/>
+**quantifier**
+*[«grammatical category»](appendix-b-grouped.html#regex)* &mdash;
+internal namespace for [*regex quantifier*](appendix-b-grouped.html#quantifier)
+like [**\***](#asterisk-metachar)
 
 <a id="Quasi-slang-var"/>
 **$\~Quasi**

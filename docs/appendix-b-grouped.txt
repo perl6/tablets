@@ -394,46 +394,47 @@ These are the categories of the main language grammar, stored in $~MAIN.
 The first category is the metacategory that can used to produce new ones.
 Sublanguages such as quoting and regexes can provide their own.
 
-    category:<prefix>
-    circumfix:<( )>
-    dotty:<.>
-    infix:<+>
-    infix_circumfix_meta_operator:{'«','»'}
-    infix_postfix_meta_operator:<=>
-    infix_prefix_meta_operator:<!>
-    package_declarator:<class>
-    postcircumfix:<( )>
-    postfix:<++>
-    postfix_prefix_meta_operator:{'»'}
-    prefix:<++>
-    prefix_circumfix_meta_operator:{'[',']'}
-    prefix_postfix_meta_operator:{'«'}
-    quote:<q>
-    routine_declarator:<sub>
-    scope_declarator:<my>
-    sigil:<$>
-    special_variable:<$!>
-    statement_control:<if>
-    statement_mod_cond:<if>
-    statement_mod_loop:<while>
-    statement_prefix:<do>
-    term:<*>
-    trait_auxiliary:<is>
-    trait_verb:<of>
-    twigil:<?>
-    type_declarator:<subset>
-
+-----------------------------------------------------------------------------------------------------------
+[`category:<prefix>`](appendix-a-index.html#category-category)
+[`circumfix:<( )>`](appendix-a-index.html#circumfix-category)
+[`dotty:<.>`](appendix-a-index.html#dotty-category)
+[`infix:<+>`](appendix-a-index.html#infix-category)
+[`infix_circumfix_meta_operator:{'«','»'}`](appendix-a-index.html#infix-circumfix-meta-operator-category)
+[`infix_postfix_meta_operator:<=>`](appendix-a-index.html#infix-postfix-meta-operator-category)
+[`infix_prefix_meta_operator:<!>`](appendix-a-index.html#infix-prefix-meta-operator-category)
+[`package_declarator:<class>`](appendix-a-index.html#package-declarator-category)
+[`postcircumfix:<( )>`](appendix-a-index.html#postcircumfix-category)
+[`postfix:<++>`](appendix-a-index.html#postfix-category)
+[`postfix_prefix_meta_operator:{'»'}`](appendix-a-index.html#postfix-prefix-meta-operator-category)
+[`prefix:<++>`](appendix-a-index.html#prefix-category)
+[`prefix_circumfix_meta_operator:{'[',']'}`](appendix-a-index.html#prefix-circumfix-meta-operator-category)
+[`prefix_postfix_meta_operator:{'«'}`](appendix-a-index.html#prefix-postfix-meta-operator-category)
+[`quote:<q>`](appendix-a-index.html#quote-category)
+[`routine_declarator:<sub>`](appendix-a-index.html#routine-declarator-category)
+[`scope_declarator:<my>`](appendix-a-index.html#scope-declarator-category)
+[`sigil:<$>`](appendix-a-index.html#sigil-category)
+[`special_variable:<$!>`](appendix-a-index.html#special-variable-category)
+[`statement_control:<if>`](appendix-a-index.html#statement-control-category)
+[`statement_mod_cond:<if>`](appendix-a-index.html#statement-mod-cond-category)
+[`statement_mod_loop:<while>`](appendix-a-index.html#statement-mod-loop-category)
+[`statement_prefix:<do>`](appendix-a-index.html#statement-prefix-category)
+[`term:<*>`](appendix-a-index.html#term-category)
+[`trait_auxiliary:<is>`](appendix-a-index.html#trait-auxiliary-category)
+[`trait_verb:<of>`](appendix-a-index.html#trait-verb-category)
+[`twigil:<?>`](appendix-a-index.html#twigil-category)
+[`type_declarator:<subset>`](appendix-a-index.html#type-declarator-category)
+-----------------------------------------------------------------------------------------------------------
 
 
 ### Regex ###
 
 The default Regex language as stored in $~Regex has following categories:
 
-    assertion:sym<!>
-    backslash:sym<w>
-    metachar:sym<.>
-    mod_internal:sym<P5>
-    quantifier:sym<*>
+[`assertion:sym<!>`](appendix-a-index.html#assertion-category)
+[`backslash:sym<w>`](appendix-a-index.html#backslash-category)
+[`metachar:sym<.>`](appendix-a-index.html#metachar-category)
+[`mod_internal:sym<P5>`](appendix-a-index.html#mod-internal-category)
+[`quantifier:sym<*>`](appendix-a-index.html#quantifier-category)
 
 
 
@@ -673,7 +674,9 @@ Short   Long            Meaning
 Regex Modifier
 --------------
 
-Stay behind the regex op and change the behaviour of the regex, search scope, etc.
+Stay behind the regex op and change the behaviour of the
+[*regex*](appendix-g-glossary.html#regex), its search scope, etc.
+Most can also also put inside a subregex (in brackets).
 
 Short    Long           Meaning
 -------  -------------  ---------------------------------------------------------------------------------------------------------
