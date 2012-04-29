@@ -4146,8 +4146,10 @@ staying mutable (changable)
 **sort**
 *«list method»* &mdash;
 returns the list in a sorted order by measures provided by the first parameter,
-this can either be a block like in `sort {$^a leg $^b}, @input` or shorter as
-`sort ~*, @input` for sorting in [*string context*](appendix-g-glossary.html#string-context)
+this can either be a block like in `sort {$^a leg $^b}, @input` ([see ^](#caret-twigil))
+or shorter with `sort &[leg], @input` ([see leg](#leg))
+or yet even shorter by `sort ~*, @input` ([see ~](#tilde-context))
+for sorting in [*string context*](appendix-g-glossary.html#string-context)
 
 <a id="space-subrule"/>
 **\<space\>**
