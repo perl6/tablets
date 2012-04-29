@@ -1,6 +1,6 @@
 % Perl 6 Tablets Appendix A - Index
 
-This index contains an alphabetic sorted list (as [**leg**](#leg-op) does)
+This index contains an alphabetic sorted list (as decided by [**leg**](#leg-op))
 of all operators, methods, builtins, options, modifier and special variables
 with short explanations, cross references, code examples and Perl 5 equivalents
 It is sorted without prefixes like colon, dot, backslash,
@@ -3739,7 +3739,8 @@ re-starts processing of the current loop turn
 
 <a id="reduce"/>
 **reduce**
-*«list method»* &mdash; alias to **[\[ \]](#square-brackets-metaop)** &mdash;
+*«list method»* &mdash;
+alias to **[\[ \]](#square-brackets-metaop)**
 [metaoperator](appendix-g-glossary.html#metaoperators) that applies an 
 [*infix*](#infix-category) operator between each adjacent elements of a list
 and evaluates this term to a single value &mdash;
@@ -4140,6 +4141,13 @@ low precedence alternative to
 *[«mutable type»](appendix-b-grouped.html#mutable-types)* &mdash;
 *[routine](appendix-g-glossary.html#routine)* that is committed to
 staying mutable (changable)
+
+<a id="sort"/>
+**sort**
+*«list method»* &mdash;
+returns the list in a sorted order by measures provided by the first parameter,
+this can either be a block like in `sort {$^a leg $^b}, @input` or shorter as
+`sort ~*, @input` for sorting in [*string context*](appendix-g-glossary.html#string-context)
 
 <a id="space-subrule"/>
 **\<space\>**
