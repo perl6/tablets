@@ -43,7 +43,7 @@ Punctuation
 **\!** 
 *[«context op»](appendix-b-grouped.html#contextualizers)* &mdash;
 *[prefix](#prefix-category)* logical negation ([*NOT*](appendix-g-glossary.html#not)),
-forces [boolean context](tablet-4-operators.html#bool-context),
+forces [boolean context](appendix-g-glossary.html#bool-context),
 high precedence version of [**not**](#not)
 
 <a id="exclamation-twigil"/>
@@ -128,7 +128,8 @@ variables](tablet-3-variables#scalar)
 <a id="dollar-op"/>
 **$**()
 *[«context op»](appendix-b-grouped.html#contextualizers)* &mdash;
-forces scalar context, alias to the **[item()](#item)** function
+forces [scalar context](appendix-g-glossary.html#scalar-context),
+alias to the **[item()](#item)** function
 
 <a id="dollar-metachar"/>
 **$**
@@ -152,12 +153,14 @@ matches the end of a line (no more multile mode)
 <a id="percent-op"/>
 **%**
 *[«numeric op»](tablet-4-operators.html#numeric-context)* &mdash;
-gives remainder of a modulo division, forces numeric context
+gives remainder of a modulo division,
+forces [numeric context](appendix-g-glossary.html#numeric-context)
 
 <a id="percent-context-op"/>
 **%**()
 *[«context op»](appendix-b-grouped.html#contextualizers)* &mdash;
-forces hash context, alias to the **[hash()](#hash)** function
+forces [hash context](appendix-g-glossary.html#hash-context),
+alias to the **[hash()](#hash)** function
 
 <a id="percent-metachar"/>
 **%**<span class="you-provide">s</span>
@@ -210,10 +213,10 @@ match multiple patterns (*[AND](appendix-g-glossary.html#and)*-connection of pat
 *[infix](#infix-category)* short circuit logical *[AND](appendix-g-glossary.html#and)*,
 [evaluates](appendix-g-glossary.html#evaluation) sequentially left to right
 its operands until one is [**False**](#False) in
-[*boolean context*](appendix-g-glossary.html#boolean-context),
-if one was **False** the result in *boolean context* is **False**,
+[*boolean context*](appendix-g-glossary.html#boolean-context), if one was **False** 
+the result in [boolean context](appendix-g-glossary.html#bool-context) is **False**,
 otherwise the last evaluated operand,
-high precedence version of [**and**](#logical-and) &mdash;
+low precedence alias is [**and**](#logical-and) &mdash;
 example: `0 and 7` returns `0` &mdash;
 see also: **[&](#junctive-and)**
 
@@ -251,7 +254,8 @@ array elements relative to one beyond the final element
 <a id="asterisk-op"/>
 **\***
 *[«numeric op»](tablet-4-operators.html#numeric-context)* &mdash;
-multiplies numbers, forces numeric context
+infix multiplication,
+forces [numeric context](appendix-g-glossary.html#numeric-context)
 
 <a id="asterisk-signature"/>
 **\***
@@ -273,7 +277,8 @@ quantifier for zero or more findings
 <a id="asterisk-asterisk-op"/>
 **\*\***
 *[«numeric op»](tablet-4-operators.html#numeric-context)* &mdash;
-raises a number to a power, forces numeric context &mdash;
+raises a number to a power,
+forces [numeric context](appendix-g-glossary.html#numeric-context) &mdash;
 example: `2 ** 3` is 8 because its `2 * 2 * 2` &mdash;
 alias to **[exp](#exp)**
 
@@ -316,7 +321,8 @@ quantifier for one or more findings
 <a id="plus-ampersand-op"/><a id="numeric-and"/>
 **+&**
 *[«numeric op»](tablet-4-operators.html#numeric-context)* &mdash;
-bitwise *[AND](appendix-g-glossary.html#and)*, forces numeric context
+bitwise *[AND](appendix-g-glossary.html#and)*,
+forces [numeric context](appendix-g-glossary.html#numeric-context)
 
 <a id="plus-plus-op"/><a id="auto-increment"/>
 **++**
@@ -329,24 +335,24 @@ alias to **[succ](#succ)**, opposite of **[--](#<a id="auto-decrement"/>)**
 <a id="plus-lower-op"/>
 **+<**
 *[«numeric op»](tablet-4-operators.html#numeric-context)* &mdash;
-shift left in numeric context
+shift left in [numeric context](appendix-g-glossary.html#numeric-context)
 
 <a id="plus-greater-op"/>
 **+\>**
 *[«numeric op»](tablet-4-operators.html#numeric-context)* &mdash;
-shift right in numeric context
+shift right in [numeric context](appendix-g-glossary.html#numeric-context)
 
 <a id="plus-caret-op"/><a id="numeric-xor"/>
 **+\^**
 *[«numeric op»](tablet-4-operators.html#numeric-context)* &mdash;
 [infix](#infix-category) bitwise *[XOR](appendix-g-glossary.html#xor)*,
-that looks at ot operands in numeric context
+that looks at ot operands in [numeric context](appendix-g-glossary.html#numeric-context)
 
 <a id="plus-pipe-op"/><a id="numeric-or"/>
 **+|**
 *[«numeric op»](tablet-4-operators.html#numeric-context)* &mdash;
 [infix](#infix-category) bitwise *[OR](appendix-g-glossary.html#or)*,
-forces numeric context
+forces [numeric context](appendix-g-glossary.html#numeric-context)
 
 <a id="comma"/><a id="comma-op"/>
 **[,](tablet-3-variables#array)** 
@@ -357,8 +363,8 @@ forces numeric context
 **-**
 *[«numeric op»](tablet-4-operators.html#numeric-context)* &mdash;
 [infix](#infix-category) subtraction operator,
-forces numeric context on both operands and does so (and negates)
-if used only as [*prefix*](#prefix-category),
+forces [numeric context](appendix-g-glossary.html#numeric-context) on both operands
+and does so (and negates) if used only as [*prefix*](#prefix-category),
 opposite of [**+**](#plus-op)
 
 <a id="minus-minus-op"/><a id="auto-decrement"/>
@@ -406,7 +412,7 @@ that doesn't capture (matches will not be remembered)
 [infix](#infix-category) range generating operator,
 produces a **[Range](#Range-type)** object in
 [item context](appendix-b-grouped.html#contextualizers)
-which generate lists in *list context*
+which generate lists in [list context](appendix-g-glossary.html#list-context)
 
 <a id="dot-dot-dot"/><a id="dot-dot-dot-op"/><a id="sequence-op"/>
 **[...](tablet-4-operators.html#sequence-operator)**
@@ -427,7 +433,8 @@ bodies
 
 <a id="slash-op"/>
 **/** *[«numeric op»](tablet-4-operators.html#numeric-context)*
-divides numbers, forces numeric context
+infix division,
+forces [numeric context](appendix-g-glossary.html#numeric-context)
 
 <a id="slash-composer"/>
 **/** *[«rat composer»](tablet-2-basic-syntax.html#rational-number)*
@@ -588,8 +595,8 @@ see also: **[==\>](#equal-equal-greater-op)**
 **\<=\>**
 *[«num comparison»](tablet-4-operators.html#numerical-comparison)* &mdash;
 numeric, *[infix](#infix-category)* less-equal-greater comparison for sortable classes,
-so called "spaceship operator",
-does a **[cmp](#cmp)** of the into numeric context converted values of both sides,
+so called "spaceship operator", does a **[cmp](#cmp)** of the into 
+[numeric context](appendix-g-glossary.html#numeric-context) converted values of both sides,
 as **[leg](#leg)** does in *[string](#Str-type)* context &mdash;
 example: `3 <=> 4` returns `-1`, `3 <=> 3` returns `0`, `4 <=> 3` returns `1`
 
@@ -652,9 +659,8 @@ if both vars are bound to same memory location
 <a id="equal-equal-op"/>
 **==**
 *[«num comparison»](tablet-4-operators.html#numerical-comparison)* &mdash;
-**[True](#True)** if values are equal in
-numerical context, as **[eq](#eq)** does in *[string
-context](tablet-4-operators.html#string-context)*
+**[True](#True)** if values are equal in [numeric context](appendix-g-glossary.html#numeric-context),
+as **[eq](#eq)** does in *[string context](tablet-4-operators.html#string-context)*
 
 <a id="equal-equal-equal"/><a id="equal-equal-equal-op"/><a id="identity-op"/>
 **===** *«comparison op»* &mdash;
@@ -742,7 +748,8 @@ opposite of [**\<!\>**](#exclamation-subrule)
 <a id="question-ampersand-op"/><a id="boolean-and"/>
 **?&**
 *[«bool op»](tablet-4-operators.html#bool-context)* &mdash;
-logical *[AND](appendix-g-glossary.html#and)* op, forces binary context
+logical *[AND](appendix-g-glossary.html#and)* op,
+forces [boolean context](appendix-g-glossary.html#bool-context)
 
 <a id="question-question"/><a id="question-question-exclamation-exclamation"/>
 <a id="conditional-op"/><a id="ternary-op"/>
@@ -764,13 +771,13 @@ that calls **[warn](#warn)**
 **?\^**
 *[«bool op»](tablet-4-operators.html#bool-context)* &mdash;
 logical *[infix](#infix-category)* *[XOR](appendix-g-glossary.html#xor)*,
-forces operands into boolean context
+forces operands into [boolean context](appendix-g-glossary.html#bool-context)
 
 <a id="question-pipe-op"/><a id="boolean-or"/>
 **?|**
 *[«bool op»](tablet-4-operators.html#bool-context)* &mdash;
 *[infix](#infix-category)* logical *[OR](appendix-g-glossary.html#or)*,
-forces operands into boolean context
+forces operands into [boolean context](appendix-g-glossary.html#bool-context)
 
 <a id="at"/><a id="at-sigil"/>
 **@**
@@ -780,8 +787,8 @@ forces operands into boolean context
 <a id="at-op"/><a id="at-context"/><a id="array-context-op"/>
 **@**()
 *[«context op»](appendix-b-grouped.html#contextualizers)* &mdash;
-forces (flattened) array context, alias to
-**[list()](#list)** function
+forces (flattened) [array context](appendix-g-glossary.html#array-context),
+alias to **[list()](#list)** function
 
 <a id="postcircumfix-square-brackets-op"/><a id="slice-op"/>
 <span class="you-provide">var</span>**\[ \]** &mdash;
@@ -845,8 +852,9 @@ see also **[one](#one)**
 <a id="caret-range"/>
 **\^**
 *[«ranges»](tablet-4-operators.html#ranges)* &mdash;
-in [range](#range-op) definitions, it excludes a
-limit value, in scalar context see smartmatch
+in [range](#range-op) definitions,
+it excludes a limit value  in [scalar context](appendix-g-glossary.html#scalar-context) &mdash;
+see also: [~~]()
 
 <a id="caret-twigil"/>
 **\^**
@@ -869,13 +877,13 @@ start of the string
 <a id="caret-caret-op"/><a id="logical-xor"/>
 **\^\^**
 *[«logical op»](tablet-4-operators.html#logical-selection)* &mdash;
-[infix](#infix-category) logical (*[XOR](appendix-g-glossary.html#xor)*) operator
-that operates with into *[bool context](appendix-g-glossary.html#bool-context)*
+[infix](#infix-category) logical ([*XOR*](appendix-g-glossary.html#xor)) operator
+that operates with into [*bool context*](appendix-g-glossary.html#bool-context)
 converted values of both operands without changing their content,
-in *bool context* it returns **[True](#True)** or *False* as expected,
+in *bool context* it returns [**True**](#True) or **False** as expected,
 in any other context it returns the first none empty value, 
 the second when both are empty and [**Nil**](#Nil-type) when both are not empty,
-[high precedence](appendix-b-grouped.html#table-of-precedence) version of **[xor](#xor)** &mdash;
+[high precedence](appendix-b-grouped.html#table-of-precedence) version of [**xor**](#xor) &mdash;
 example: `('dang' ^^ '')` returns `'dang'`
 
 <a id="doule-caret-metachar"/>
@@ -920,7 +928,8 @@ object into arglist, (named parameter)
 *[«logical op»](tablet-4-operators.html#logical-selection)* &mdash;
 *[infix](#infix-category)* short circuit logical *[OR](appendix-g-glossary.html#or)*, 
 [evaluates](appendix-g-glossary.html#evaluation) sequentially left to right
-its operands until one is [**True**](#True) in boolean context,
+its operands until one is [**True**](#True) in 
+[*bool context*](appendix-g-glossary.html#bool-context),
 if there is one then the result is **True** in bool context,
 otherwise the first *True* value is returned or the last one,
 high precedence version of **[or](#or)** &mdash;
@@ -942,8 +951,8 @@ object into semicolon list, (positional parameter)
 <a id="tilde"/><a id="tilde-op"/><a id="tilde-context"/>
 **[\~](tablet-4-operators.html#string-context)**
 *[«context op»](appendix-b-grouped.html#contextualizers)*,
-*[«string op»](tablet-4-operators.html#string-context)* &mdash;
-forces *[string context](tablet-4-operators.html#string-context)*
+*[«string op»](tablet-4-operators.html#string-context)*,
+forces *[string context](appendix-g-glossary.html#string-context)*
 on its operands (stringifies),
 if *[infix](#infix-category)* its concatenate strings -
 an alias for **[cat](#cat)**
@@ -958,33 +967,33 @@ an alias for **[cat](#cat)**
 <a id="tilde-ampersand-op"/><a id="string-and"/>
 **\~&** *[«string op»](tablet-4-operators.html#string-context)* &mdash;
 characterwise *[AND](appendix-g-glossary.html#and)*,
-forces *[string context](tablet-4-operators.html#string-context)*
+forces *[string context](appendix-g-glossary.html#string-context)*
 
 <a id="tilde-lower-op"/>
 **\~<** *[«string op»](tablet-4-operators.html#string-context)* &mdash;
-characterwise left shift, forces *[string
-context](tablet-4-operators.html#string-context)*
+characterwise left shift,
+forces *[string context](appendix-g-glossary.html#string-context)*
 
 <a id="tilde-greater-op"/>
 **\~\>** *[«string op»](tablet-4-operators.html#string-context)* &mdash;
-characterwise right shift, forces *[string
-context](tablet-4-operators.html#string-context)*
+characterwise right shift,
+forces *[string context](appendix-g-glossary.html#string-context)*
 
 <a id="tilde-caret-op"/><a id="string-xor"/>
 **\~\^** *[«string op»](tablet-4-operators.html#string-context)* &mdash;
 characterwise *[XOR](appendix-g-glossary.html#xor)*,
-forces *[string context](tablet-4-operators.html#string-context)*
+forces *[string context](appendix-g-glossary.html#string-context)*
 
 <a id="tilde-pipe-op"/><a id="string-or"/>
 **\~|** *[«string op»](tablet-4-operators.html#string-context)* &mdash;
 characterwise *[OR](appendix-g-glossary.html#or)*,
-forces *[string context](tablet-4-operators.html#string-context)*
+forces *[string context](appendix-g-glossary.html#string-context)*
 
-<a id="doube-tilde-op"/><a id="smartmatch-op"/>
+<a id="tilde-tilde-op"/><a id="smartmatch-op"/>
 **[\~\~](tablet-4-operators.html#smartmatch)**
 *«comparison op»* &mdash;
-*[infix](#infix-category)* smartmatch operator, compares (almost) all
-variable and data types according a
+[*infix*](#infix-category) [*smartmatch*](appendix-g-glossary.html#smartmatch) operator, 
+compares (almost) all variable and data types according a
 [table](appendix-b-grouped.html#smartmatch)
 
 
@@ -1004,7 +1013,8 @@ that starting with the
 
 <a id="abs"/>
 **abs** *«numeric op»* &mdash;
-returns numeric absolute value, converts value in numeric context &mdash;
+returns numeric absolute value,
+converts value into [*numeric context*](appendix-g-glossary.html#numeric-context) &mdash;
 example: `abs -4.76` returns `4.76` as does `abs 4.76` &mdash;
 see also: [**round**](#round), [**sign**](#sign), [**truncate**](#truncate)
 
@@ -1086,8 +1096,8 @@ Perl 6 object (default *[routine](appendix-g-glossary.html#routine)*
 *[«junctive op»](tablet-4-operators.html#junctions)* &mdash; 
 *[junctive](#junction)* *[OR](appendix-g-glossary.html#or)* operator,
 **[True](#True)** when any one condition (of a
-following list) is true in bool context, see also:
-**[|](#junctive-or)**
+following list) is true in [*boolean context*](appendix-g-glossary.html#bool-context)  &mdash;
+see also: [**|**](#junctive-or)
 
 <a id="ARGFILES-global-var"/>
 **$\*ARGFILES**
@@ -1394,7 +1404,7 @@ call (right-hand side of a binding)
 **cat**
 *[«array method»](tablet-3-variables#array-methods)* &mdash;
 converts values of a *[list](appendix-g-glossary.html#list-context)* into
-*[string context](tablet-4-operators.html#string-context)*
+*[string context](appendix-g-glossary.html#string-context)*
 and joines them like with **[\~](#tilde-op)**,
 alias to [`.join('')`](#join)
 
@@ -1936,11 +1946,10 @@ environment variables (of the shell), in Perl 5: *%ENV*
 <a id="eq"/><a id="eq-op"/>
 **eq**
 *[«comparison op»](tablet-4-operators.html#string-comparison)* &mdash;
-[infix](#infix-category) operator, proves
-equality in forced *[string
-context](tablet-4-operators.html#string-context)*
-as does [**==**](#equal-equal-op) in
-[numeric context](appendix-g-glossary.html#numeric-context)
+[infix](#infix-category) operator,
+proves equality in forced [*string context*](tablet-4-operators.html#string-context)
+as does [**==**](#equal-equal-op) in 
+[*numeric context*](appendix-g-glossary.html#numeric-context)
 
 <a id="equiv"/>
 **equiv**
@@ -2085,8 +2094,8 @@ data type object for an error, thrown by an unhandled
 <a id="False"/>
 **False** &mdash;
 *[boolean](#Bool-type)* value aka
-Bool::False, 0 in numeric context, '' (empty) in
-*[string context](tablet-4-operators.html#string-context)*,
+Bool::False, 0 in [*numeric context*](appendix-g-glossary.html#numeric-context),
+'' (empty) in *[string context](appendix-g-glossary.html#string-context)*,
 opposite of **[True](#True)**
 
 <a id="FatRat-type"/>
@@ -2110,7 +2119,7 @@ tests **[$\_](#context-var)**
 against two values, flip flop operator in the style of awk, can
 test the right operand and become **[False](#False)**
 on the same evaluation it became **[True](#True)**
-in Perl 5: *..* in scalar context
+in Perl 5: *..* in [scalar context](appendix-g-glossary.html#scalar-context)
 
 <a id="fff"/><a id="fff-op"/>
 **[fff](tablet-4-operators.html#flipflop)**
@@ -2152,8 +2161,8 @@ example : `first {$_ %% 2}, 1..5 ; # returns 2`
 <a id="flat"/>
 **flat**()
 *[«context op»](appendix-b-grouped.html#contextualizers)* &mdash;
-forces flat list context, opposite of
-**[lol()](#lol)** &mdash;
+forces flat [*list context*](appendix-g-glossary.html#list-context),
+opposite of **[lol()](#lol)** &mdash;
 example: `([2,3],[4,5]).flat` or `flat([2,3],[4,5])` results in: `[2..5]`
 
 <a id="flip"/>
@@ -2191,9 +2200,10 @@ also: **[given](#given)**
 <a id="fork"/>
 **[fork](tablet-5-io.html#processes)** &mdash;
 creates a copy of the current process and returns in the
-original process a Proc object of the child (0 in num context) and
-in the child a proc object of the original (process ID in num
-context)
+original process a Proc object of the child 
+(0 in [*num context*](appendix-g-glossary.html#numeric-context))
+and in the child a proc object of the original
+(process ID in [*numeric context*](appendix-g-glossary.html#numeric-context))
 
 <a id="from-radians"/>
 **from-radians** &mdash;
@@ -2254,9 +2264,9 @@ greater than or equal, see also **[gt](#gt)** and
 <a id="get"/>
 **[get](tablet-5-io.html#get)**
 *«handle method»* &mdash;
-returns a line (item context) or all lines
-(list context) from that input stream like a file or [command
-line](tablet-5-io.html#command-line)
+returns a line ([*item context*](appendix-g-glossary.html#item-context)) or all lines
+([*list context*](appendix-g-glossary.html#list-context)) 
+from that input stream like a file or [command line](tablet-5-io.html#command-line)
 
 <a id="getc"/>
 **[getc](tablet-5-io.html#getc)**
@@ -2426,7 +2436,8 @@ can be also seen as a **[Set](#Set-type)** of **[Pairs](#Pair-type)**
 <a id="hash"/><a id="hash-op"/>
 **hash**
 *[«context op»](appendix-b-grouped.html#contextualizers)* &mdash;
-enforces hash-list context, alias to **[%()](#percent-op)**
+enforces [*hash context*](appendix-g-glossary.html#hash-context),
+alias to **[%()](#percent-op)**
 
 <a id="hash-adverb"/>
 **[:hash](tablet-2-basic-syntax.html#interpolation)**
@@ -2451,8 +2462,8 @@ get an instance the objects metaclass, its "Higher Order Workings"
 
 <a id="hyper"/>
 **hyper** &mdash;
-forces none-lazy list context, that ignores the order of results
-(allows parallel computing)
+forces none-lazy [*list context*](appendix-g-glossary.html#list-context),
+that ignores the order of results (allows parallel computing)
 
 
 
@@ -2527,8 +2538,8 @@ and returns the numerical position, opposite or **[rindex](#rindex)**
 
 <a id="Inf"/>
 **Inf** &mdash;
-indicates infinity, useful to generate infinite lazy
-lists, does in most context same as **[\*](#asterisk)**
+indicates infinity, useful to generate infinite lazy lists,
+does in most [*context*](appendix-g-glossary.html#context) same as **[\*](#asterisk)**
 
 <a id="infix-category"/>
 **infix**
@@ -2606,7 +2617,8 @@ bind a *[trait](appendix-g-glossary.html#trait)* to a variable
 <a id="item"/><a id="item-op"/>
 **item()**
 *[«context op»](appendix-b-grouped.html#contextualizers)* &mdash;
-forces scalar context, alias to **[$()](#dollar-op)**
+forces [scalar context](appendix-g-glossary.html#scalar-context),
+alias to **[$()](#dollar-op)**
 
 <a id="Iterator-type"/>
 **Iterator**
@@ -2669,11 +2681,13 @@ gives the key part of a pair, opposite of
 <a id="KeyBag-type"/>
 **KeyBag**
 *[«mutable type»](appendix-b-grouped.html#mutable-types)* &mdash;
-KeyHash of UInt (does **[Bag](#Bag-type)** in list/array context)
+KeyHash of UInt, does **[Bag](#Bag-type)** in
+[*list context*](appendix-g-glossary.html#list-context)
 
 <a id="KeySet-type"/>
 **KeySet** *[«mutable type»](appendix-b-grouped.html#mutable-types)* &mdash;
-KeyHash of **[Bool](#Bool-type)** (does **[Set](#Set-type)** in list context)
+KeyHash of **[Bool](#Bool-type)** (does **[Set](#Set-type)**
+in [*list context*](appendix-g-glossary.html#list-context)
 
 <a id="keys-array"/>
 **keys** *[«array op & method»](tablet-3-variables#array-methods)* &mdash;
@@ -2779,7 +2793,7 @@ exit the current block with a return value
 **leg**
 *[«string comparison»](tablet-4-operators.html#string-comparison)* &mdash;
 [infix](#infix-category) comparison operator that sees its operands in
-*[string context](tablet-4-operators.html#string-context)*,
+*[string context](appendix-g-glossary.html#string-context)*,
 leg stands for lower/equal/greater and it works otherwise like
 [**cmp**](#cmp) (general form) or 
 [**\<=\>**](#spaceship-op) ([numerical context](#numerical-context),
@@ -2830,9 +2844,9 @@ arguments in a semicolon list, name is short fpr "List of Lists"
 <a id="lol"/>
 **lol**()
 *[«context op»](appendix-b-grouped.html#contextualizers)* &mdash;
-forces list of list context on a value, meaning a list which
-values are not contextualized further (can be lists themthelves),
-opposite of **[flat](#flat)**
+forces list of [*list context*](appendix-g-glossary.html#list-context) on a value,
+meaning a list which values are not contextualized further
+(can be lists themthelves), opposite of **[flat](#flat)**
 
 <a id="loop"/>
 **[loop](tablet-6-blocks.html#loop)**
@@ -3158,7 +3172,7 @@ example: `subset Month of Int where { 1 <= $^a <= 12 }`
 *[junctive](appendix-g-glossary.html#junction)*
 *[XOR](appendix-g-glossary.html#xor)* operator,
 **[True](#True)** if only one expression (of a
-following list) is true in bool context&mdash;
+following list) is true in [*bool context*](appendix-g-glossary.html#bool-context) &mdash;
 see also: **[|](#pipe-op)**
 
 <a id="only"/>
@@ -3185,9 +3199,10 @@ options from command line
 <a id="pipe-pipe-op"/><a id="logical-or"/>
 **||**
 *[«logical op»](tablet-4-operators.html#logical-selection)* &mdash;
-*[infix](#infix-category)*, short circuit, logical, *[OR](appendix-g-glossary.html#or)*, 
-[evaluates](appendix-g-glossary.html#evaluation) sequentially left to right
-its operands until one is [**True**](#True) in boolean context,
+*[infix](#infix-category)*, short circuit, logical,
+*[OR](appendix-g-glossary.html#or)*, [evaluates](appendix-g-glossary.html#evaluation)
+sequentially left to right its operands until one is [**True**](#True) in
+[*bool context*](appendix-g-glossary.html#bool-context),
 if there is one then the result is **True** in bool context,
 otherwise the first *True* value is returned or the last one,
 low precedence version of **[||](#logical-or)** &mdash;
@@ -4464,7 +4479,8 @@ see also: [**chomp**](#chomp)
 
 <a id="True"/>
 **True** &mdash; *[boolean](#Bool-type)* value aka
-Bool::True, 1 in numeric context, opposite of **[False](#False)**
+Bool::True, 1 in [*numeric context*](appendix-g-glossary.html#numeric-context),
+opposite of **[False](#False)**
 
 <a id="truncate"/>
 **truncate**
@@ -4673,8 +4689,8 @@ see also: **[\<|c\>](#pipe-c)** and **[\<|g\>](#pipe-g)**
 
 <a id="wait"/>
 **[wait](tablet-5-io.html#processes)** &mdash;
-waits for a child process to terminate and returns the child
-status object, process ID in numeric context
+waits for a child process to terminate and returns the child status object,
+process ID in [*numeric context*](appendix-g-glossary.html#numeric-context)
 
 <a id="warn"/>
 **[warn](tablet-5-io.html#warn)** &mdash;

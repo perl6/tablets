@@ -83,6 +83,7 @@ object of the type **[Block](appendix-a-index.html#block-type)**
 <a id="bool-context"/>
 **boolean context** &mdash;
 [Bool](appendix-a-index.html#Bool-type)
+[ops](tablet-4-operators.html#bool-context)
 
 # [C](#nav-top)
 
@@ -194,15 +195,29 @@ by Perl 6, considered as a branch of Declarative Programming
 
 <a id="grapheme"/>
 **grapheme** &mdash;
-*[unicode](#unicode)*
+a *[unicode](#unicode)* graphical character like a japanese kanji that may be
+composed out of several [codepoints](#codepoint)
 
 # [H](#nav-top)
+
+<a id="hash"/>
+**hash** &mdash;
+[**Hash**](appendix-a-index.html#Hash-type)
+
+<a id="hash-context"/>
+**hash context** &mdash;
+[hash](#hash)
+
 
 # [I](#nav-top)
 
 <a id="invocant"/>
 **invocant** &mdash; *[routine](#routine)* or term that called
 the piece of code of issue
+
+<a id="item-context"/>
+**scalar context** &mdash;
+was called in Perl 5 [scalar context](#scalar-context)
 
 <a id="iteration"/>
 **iteration** &mdash;
@@ -267,7 +282,6 @@ logical operation that changes a true into false and vice versa,
 following operator working with that logic:
 [**!()**](appendix-a-index.html#negation-op), [**not**](appendix-a-index.html#not) &mdash;
 other logical operations are: [*and*](#and), [*or*](#or), [*xor*](#xor) 
-
 
 <a id="numeric-context"/>
 **numeric context** &mdash;
@@ -405,7 +419,9 @@ after *[compile time](#compile-time)*
 # [S](#nav-top)
 
 <a id="scalar-context"/>
-**scalar context** &mdash; [Scalar](appendix-a-index.html#Scalar-type)
+**scalar context** &mdash;
+is a [*context*](#context) of the [Scalar type](appendix-a-index.html#Scalar-type),
+but is now called [*item context*](#item-context)
 
 <a id="scope"/>
 **scope** &mdash;
@@ -435,7 +451,6 @@ you can change or alter them by using the keyword
 **[augment](appendix-a-index.html#augment)**
 or **[supersede](appendix-a-index.html#supersede)**
 
-
 <a id="slice"/>
 **slice** &mdash;
 part of an array or list
@@ -445,9 +460,14 @@ part of an array or list
 array parameter that receives all (slurps) all optional
 *[subroutine](#routine)* arguments
 
+<a id="smartmatch"/>
+**smartmatch** &mdash;
+*[~~](appendix-a-index.html#smartmatch-op)* 
+
 <a id="string-context"/>
 **string context** &mdash;
 [Str](appendix-a-index.html#Str-type)
+[ops](tablet-4-operators.html#string-context)
 
 <a id="subroutine"/>
 **subroutine** &mdash; much used, Perl 5-ish term for [routine](#routine)
