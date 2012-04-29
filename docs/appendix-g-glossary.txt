@@ -252,6 +252,9 @@ see also: **[multi](appendix-a-index.html#multi)**
 
 # [N](#nav-top)
 
+<a id="named-capure"/>
+**named capure** &mdash;
+
 <a id="named-parameter"/>
 **named parameter** &mdash;
 

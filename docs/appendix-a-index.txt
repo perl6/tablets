@@ -227,9 +227,9 @@ grouping of values (parameters) to a **[Parcel](#Parcel-type)**
 <a id="round-brackets-metachar"/>
 **( )**
 *[«regex metachar»](appendix-b-grouped.html#regex-metacharacter)* &mdash;
-encompass a *subregex* / *submatch* , results land in
-**[@()](#round-brackets-var)** or
-**[$0](#0-var)**... (not limited to $9 anymore)
+encompass a *subregex*, results (*submatches*) land in 
+[**@()**](#round-brackets-var) or [**\$0**](#0-var)... (not limited to $9 anymore) &mdash;
+see also: [\[ \]](#square-brackets-metachar)
 
 <a id="round-brackets-var"/>
 **@( )**
@@ -610,8 +610,10 @@ is alias to [**`$/<...>`**](#match-var), in Perl 5: *$&* and *$MATCH*
 <a id="angle-brackets-metachar"/>
 **\< \>**
 *[«regex metachar»](appendix-b-grouped.html#regex-metacharacter)* &mdash;
-embraces an subrule (assertion)
-
+embraces an subrule (assertion),
+if it doesn't start wit a **.**, **?** or **!** findings will stored under the
+name of the subrule as [*named capures*](appendix-g-glossary.html#named-capure)
+into [`$/<name>`](#match-var) and [`$<name>`](#angle-brackets-var)
 
 
 # [=](#nav-top)
@@ -785,9 +787,15 @@ appended on an array var, returns an array slice with values which
 indexes was inside the brackets
 
 <a id="square-brackets-op"/><a id="array-ref"/>
-**[ ]** &mdash; [circumfix](#circumfix-category) operator
+**[**<span class="you-provide">l</span>**]** &mdash; [circumfix](#circumfix-category) operator
 that creates a reference to an array that holds all values that
 encompas these brackets
+
+<a id="square-brackets-metachar"/>
+**[**<span class="you-provide">p</span>**]**
+*[«regex metachar»](appendix-b-grouped.html#regex-metacharacter)* &mdash;
+encompass a *subregex*, results will not be remembered like with
+[**( )**](#round-brackets-metachar)
 
 <a id="square-brackets-metaop"/><a id="reduce-op"/>
 **\[**<span class="you-provide">op</span>**\]**

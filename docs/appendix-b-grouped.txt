@@ -688,26 +688,26 @@ Short    Long           Meaning
 Regex Metacharacter
 -------------------
 
---------------------------------------------------------  ----------------------------------------------------------------------------------------------------------
-[`.`](appendix-a-index.html#dot-metachar)                 any character
-[`^`](appendix-a-index.html#caret-metachar)               begin of the sring
-[`^^`](appendix-a-index.html#caret-caret-metachar)        begin of a line
-[`$`](appendix-a-index.html#dollar-metachar)              end of the string
-[`$$`](appendix-a-index.html#dollar-dollar-metachar)      end of a line
-[`(...)`](appendix-a-index.html#question-metachar)        group patterns and capture the result
-[`[...]`](appendix-a-index.html#question-metachar)        group patterns without capturing
-[`{...}`](appendix-a-index.html#question-metachar)        execute a closure (Perl 6 code) within a rule
-[`<...>`](appendix-a-index.html#question-metachar)        match a subrule (assertion
-[`|`](appendix-a-index.html#pipe-metachar)                match alternate patterns (logical [OR](appendix-g-glossary.html#or) with [LTM](appendix-g-glossary.html#LTM))
-[`||`](appendix-a-index.html#pipe-pipe--metachar)         match alternate patterns (sequential [OR](appendix-g-glossary.html#or))
-[`&`](appendix-a-index.html#ampersand-metachar)           match multiple patterns ([AND](appendix-g-glossary.html#and))
-[`**`](appendix-a-index.html#asterisk-asterisk-metachar)  muliply this (meta)char/subrule times the following digit on right side
-[`%`](appendix-a-index.html#percent-metachar)             match this (meta)char/subrule as long as separated by (meta)char/subrule on the right
-[`%%`](appendix-a-index.html#percent-percent-metachar)    like %, but allows trailing separator
-[`\`](appendix-a-index.html#escape-char)                  escape a metacharacter to get a literal character, or escape a literal character to get a metacharacter
-[`#`](appendix-a-index.html#pound)                        mark a comment (to the end of the line)
-[`:=`](appendix-a-index.html#colon-equal-op)              bind the result of a match to a hypothetical variable
---------------------------------------------------------  ----------------------------------------------------------------------------------------------------------
+---------------------------------------------------------  ----------------------------------------------------------------------------------------------------------
+[`.`](appendix-a-index.html#dot-metachar)                  any character
+[`^`](appendix-a-index.html#caret-metachar)                begin of the sring
+[`^^`](appendix-a-index.html#caret-caret-metachar)         begin of a line
+[`$`](appendix-a-index.html#dollar-metachar)               end of the string
+[`$$`](appendix-a-index.html#dollar-dollar-metachar)       end of a line
+[`(...)`](appendix-a-index.html#round-brackets-metachar)   group patterns and capture the result
+[`[...]`](appendix-a-index.html#square-brackets-metachar)  group patterns without capturing
+[`{...}`](appendix-a-index.html#question-metachar)         execute a closure (Perl 6 code) within a rule
+[`<...>`](appendix-a-index.html#angle-brackets-metachar)   match a subrule (assertion
+[`|`](appendix-a-index.html#pipe-metachar)                 match alternate patterns (logical [OR](appendix-g-glossary.html#or) with [LTM](appendix-g-glossary.html#LTM))
+[`||`](appendix-a-index.html#pipe-pipe-metachar)           match alternate patterns (sequential [OR](appendix-g-glossary.html#or))
+[`&`](appendix-a-index.html#ampersand-metachar)            match multiple patterns ([AND](appendix-g-glossary.html#and))
+[`**`](appendix-a-index.html#asterisk-asterisk-metachar)   muliply this (meta)char/subrule times the following digit on right side
+[`%`](appendix-a-index.html#percent-metachar)              match this (meta)char/subrule as long as separated by (meta)char/subrule on the right
+[`%%`](appendix-a-index.html#percent-percent-metachar)     like %, but allows trailing separator
+[`\`](appendix-a-index.html#escape-char)                   escape a metacharacter to get a literal character, or escape a literal character to get a metacharacter
+[`#`](appendix-a-index.html#pound)                         mark a comment (to the end of the line)
+[`:=`](appendix-a-index.html#colon-equal-op)               bind the result of a match to a hypothetical variable
+---------------------------------------------------------  ----------------------------------------------------------------------------------------------------------
 
 
 Quantifier
