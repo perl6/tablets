@@ -228,7 +228,6 @@ Widget                                           Any Widget object
 [Bool](appendix-a-index.html#Bool-type)                Perl boolean
 [Exception](appendix-a-index.html#Exception-type)      Perl exception
 [Block](appendix-a-index.html#Block-type)              executable objects that have lexical scopes
-[Seq](appendix-a-index.html#Seq-type)                  a list of values (can be generated lazily)
 [Range](appendix-a-index.html#Range-type)              a pair of ordered endpoints
 [Set](appendix-a-index.html#Set-type)                  unordered collection of values that allows no duplicates
 [Bag](appendix-a-index.html#Bag-type)                  unordered collection of values that allows duplicates
@@ -250,7 +249,6 @@ Widget                                           Any Widget object
 
 -----------------------------------------------------  ---------------------------------------------------------
 [Iterator](appendix-a-index.html#Iterator-type)        Perl list
-[SeqIter](appendix-a-index.html#SeqIter-type)          Iterator over a Seq
 [RangeIter](appendix-a-index.html#RangeIter-type)      Iterator over a Range
 [Scalar](appendix-a-index.html#Scalar-type)            Perl scalar
 [Array](appendix-a-index.html#Array-type)              Perl array
@@ -258,7 +256,6 @@ Widget                                           Any Widget object
 [KeySet](appendix-a-index.html#KeySet-type)            KeyHash of Bool (does Set in list/array context)
 [KeyBag](appendix-a-index.html#KeyBag-type)            KeyHash of UInt (does Bag in list/array context)
 [Pair](appendix-a-index.html#Pair-type)                a single key-to-value association
-[PairSeq](appendix-a-index.html#PairSeq-type)          a Seq of Pairs
 [Buf](appendix-a-index.html#Buf-type)                  Perl buffer (a stringish array of memory locations)
 [IO](appendix-a-index.html#IO-type)                    Perl filehandle
 [Routine](appendix-a-index.html#Routine-type)          base class for all wrappable executable objects

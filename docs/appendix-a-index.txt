@@ -419,7 +419,7 @@ which generate lists in [list context](appendix-g-glossary.html#list-context)
 <a id="dot-dot-dot"/><a id="dot-dot-dot-op"/><a id="sequence-op"/>
 **[...](tablet-4-operators.html#sequence-operator)**
 *[«list op»](tablet-4-operators.html#list-generation)* &mdash;
-*[infix](#infix-category)* [sequence](#Seq-type) generating operator,
+*[infix](#infix-category)* [sequence](appendix-g-glossary.html#sequance) generating operator,
 can figure from example number out if a series is arithmetic (give 2)
 or geometric (give 3), can produce a sequence with a generator routine &mdash;
 example: `@a = 1, 2, 4 ...` infite lazy list of all powers of two, 
@@ -3323,11 +3323,6 @@ object to hold a single key-to-value association, created with a
 *[«hash method»](tablet-3-variables#hash-methods)* &mdash;
 returns all contents as an array or pairs (key,value)
 
-<a id="PairSeq-type"/>
-**PairSeq**
-*[«mutable type»](appendix-b-grouped.html#mutable-types)* &mdash;
-a **[Seq](#Seq-type)** (sequence) of **[Pairs](#Pair-type)**
-
 <a id="panic-modifier"/>
 **:panic**
 *[«regex modifier»](appendix-b-grouped.html#regex-modifier)* &mdash;
@@ -4062,16 +4057,6 @@ to create your own
 <a id="seed"/>
 **seed** &mdash;
 initialize a random number generator, optionally with a value
-
-<a id="Seq-type"/>
-**Seq**
-*[«immutable type»](appendix-b-grouped.html#immutable-types)* &mdash;
-a list of values (can be generated lazily)
-
-<a id="SeqIter-type"/>
-**SeqIter**
-*[«mutable type»](appendix-b-grouped.html#mutable-types)* &mdash;
-iterator over a Seq
 
 <a id="Set-type"/>
 **Set**
