@@ -559,33 +559,33 @@ Test Methods
 They replace the old filetest ops (like -e).
 Use it as in `$filename.IO ~~ :X` or `$filename.IO.X`.
 
--------  --------------------------------------------------------------
-:r       file is readable by effective uid/gid.
-:w       file is writeable by effective uid/gid.
-:x       file is executable by effective uid/gid.
-:o       file is owned by effective uid.
+----------------------------------  --------------------------------------------------------------
+[:r](appendix-a-index.html#r-test)  file is readable by effective [uid](#EUID-global-var)/[gid](#EGID-global-var)
+[:w](appendix-a-index.html#w-test)  file is writeable by effective uid/gid
+[:x](appendix-a-index.html#x-test)  file is executable by effective uid/gid
+[:o](appendix-a-index.html#o-test)  file is owned by effective uid.
 &nbsp;   &nbsp;
-:R       file is readable by real uid/gid.
-:W       file is writeable by real uid/gid.
-:X       file is executable by real uid/gid.
-:O       file is owned by real uid.
+[:R](appendix-a-index.html#R-test)  file is readable by real [uid](#UID-global-var)/[gid](#GID-global-var)
+[:W](appendix-a-index.html#W-test)  file is writeable by real uid/gid
+[:X](appendix-a-index.html#X-test)  file is executable by real uid/gid
+[:O](appendix-a-index.html#O-test)  file is owned by real uid.
 &nbsp;   &nbsp;
-:e       file exists
-:s       file has size greater than 0
+[:e](appendix-a-index.html#e-test)  file exists
+[:s](appendix-a-index.html#s-test)  file has size greater than zero
 &nbsp;   &nbsp;
-:f       file is a plain file.
-:d       file is a directory.
-:l       file is a symbolic link.
-:p       file is a named pipe (FIFO), or filehandle is a pipe.
-:S       file is a socket.
-:b       file is a block special file.
-:c       file is a character special file.
-:t       filehandle is opened to a tty.
+[:f](appendix-a-index.html#f-test)  file is a plain file
+[:d](appendix-a-index.html#d-test)  file is a directory
+[:l](appendix-a-index.html#l-test)  file is a symbolic link
+[:p](appendix-a-index.html#p-test)  file is a named pipe (FIFO), or filehandle is a pipe
+[:S](appendix-a-index.html#S-test)  file is a socket
+[:b](appendix-a-index.html#b-test)  file is a block special file
+[:c](appendix-a-index.html#c-test)  file is a character special file
+[:t](appendix-a-index.html#t-test)  filehandle is opened to a tty
 &nbsp;   &nbsp;
-:u       file has setuid bit set.
-:g       file has setgid bit set.
-:k       file has sticky bit set.
--------  --------------------------------------------------------------
+[:u](appendix-a-index.html#u-test)  file has setuid bit set
+[:g](appendix-a-index.html#g-test)  file has setgid bit set
+[:k](appendix-a-index.html#k-test)  file has sticky bit set
+----------------------------------  --------------------------------------------------------------
 
 
 
@@ -688,41 +688,41 @@ Short    Long           Meaning
 Regex Metacharacter
 -------------------
 
--------  -------------------------------------------------------------------------------------------------------------
-`.`      any character
-`^`      begin of the sring
-`^^`     begin of a line
-`$`      end of the string
-`$$`     end of a line
-`(...)`  group patterns and capture the result
-`[...]`  group patterns without capturing
-`{...}`  execute a closure (Perl 6 code) within a rule
-`<...>`  match a subrule (assertion
-`|`      match alternate patterns (logical [OR](appendix-g-glossary.html#or) with [LTM](appendix-g-glossary.html#LTM))
-`||`     match alternate patterns (sequential [OR](appendix-g-glossary.html#or))
-`&`      match multiple patterns ([AND](appendix-g-glossary.html#and))
-`**`     muliply this (meta)char/subrule times the following digit on right side
-`%`      match this (meta)char/subrule as long as separated by (meta)char/subrule on the right
-`%%`     like %, but allows trailing separator
-`\`      escape a metacharacter to get a literal character, or escape a literal character to get a metacharacter
-`#`      mark a comment (to the end of the line)
-`:=`     bind the result of a match to a hypothetical variable
--------  -------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------  ----------------------------------------------------------------------------------------------------------
+[`.`](appendix-a-index.html#dot-metachar)                 any character
+[`^`](appendix-a-index.html#caret-metachar)               begin of the sring
+[`^^`](appendix-a-index.html#caret-caret-metachar)        begin of a line
+[`$`](appendix-a-index.html#dollar-metachar)              end of the string
+[`$$`](appendix-a-index.html#dollar-dollar-metachar)      end of a line
+[`(...)`](appendix-a-index.html#question-metachar)        group patterns and capture the result
+[`[...]`](appendix-a-index.html#question-metachar)        group patterns without capturing
+[`{...}`](appendix-a-index.html#question-metachar)        execute a closure (Perl 6 code) within a rule
+[`<...>`](appendix-a-index.html#question-metachar)        match a subrule (assertion
+[`|`](appendix-a-index.html#pipe-metachar)                match alternate patterns (logical [OR](appendix-g-glossary.html#or) with [LTM](appendix-g-glossary.html#LTM))
+[`||`](appendix-a-index.html#pipe-pipe--metachar)         match alternate patterns (sequential [OR](appendix-g-glossary.html#or))
+[`&`](appendix-a-index.html#ampersand-metachar)           match multiple patterns ([AND](appendix-g-glossary.html#and))
+[`**`](appendix-a-index.html#asterisk-asterisk-metachar)  muliply this (meta)char/subrule times the following digit on right side
+[`%`](appendix-a-index.html#percent-metachar)             match this (meta)char/subrule as long as separated by (meta)char/subrule on the right
+[`%%`](appendix-a-index.html#percent-percent-metachar)    like %, but allows trailing separator
+[`\`](appendix-a-index.html#escape-char)                  escape a metacharacter to get a literal character, or escape a literal character to get a metacharacter
+[`#`](appendix-a-index.html#pound)                        mark a comment (to the end of the line)
+[`:=`](appendix-a-index.html#colon-equal-op)              bind the result of a match to a hypothetical variable
+--------------------------------------------------------  ----------------------------------------------------------------------------------------------------------
 
 
 Quantifier
 ----------
 
-------  -------------------------------------------------------------------------------------------
-`?`     zero or one
-`+`     one or more
-`*`     zero or more
-`**`    maximal greedy matching
-`**`    muliply this (meta)char/subrule times the following digit on right side
-`**?`   minimal matching
-`%`     match this (meta)char/subrule as long as separated by (meta)char/subrule on the right
-`%%`    like %, but allows trailing separator
-------  -------------------------------------------------------------------------------------------
+------------------------------------------------------------------  -------------------------------------------------------------------------------------------
+[`?`](appendix-a-index.html#question-metachar)                      zero or one
+[`+`](appendix-a-index.html#plus-metachar)                          one or more
+[`*`](appendix-a-index.html#asterisk-metachar)                      zero or more
+[`**`](appendix-a-index.html#asterisk-asterisk-metachar)            maximal greedy matching
+[`**`](appendix-a-index.html#asterisk-asterisk-number-metachar)     muliply this (meta)char/subrule times the following digit on right side
+[`**?`](appendix-a-index.html#asterisk-asterisk-question-metachar)  minimal matching
+[`%`](appendix-a-index.html#percent-metachar)                       match this (meta)char/subrule as long as separated by (meta)char/subrule on the right
+[`%%`](appendix-a-index.html#percent-percent-metachar)              like %, but allows trailing separator
+------------------------------------------------------------------  -------------------------------------------------------------------------------------------
 
 
 Control Chars

@@ -201,7 +201,7 @@ requires that all conditions are met, see also: **[all](#all)**
 *[«regex metachar»](appendix-b-grouped.html#regex-metacharacter)* &mdash;
 match multiple patterns (*[AND](appendix-g-glossary.html#and)*-connection of patterns)
 
-<a id="ampersand-ampersand-metachar"/><a id="logical-and"/>
+<a id="ampersand-ampersand-op"/><a id="logical-and"/>
 **&&**
 *[«logical op»](tablet-4-operators.html#logical-selection)* &mdash;
 *[infix](#infix-category)* short circuit logical *[AND](appendix-g-glossary.html#and)*,
@@ -279,6 +279,7 @@ alias to **[exp](#exp)**
 *[«regex metachar»](appendix-b-grouped.html#quantifier)* &mdash;
 not backtracking, greedy quantifier taking zero or more findings
 
+<a id="asterisk-asterisk-number-metachar"/>
 **\*\***<span class="you-provide">n</span>
 *[«regex metachar»](appendix-b-grouped.html#quantifier)* &mdash;
 quantifier for explicit repeat char or group, like
@@ -809,6 +810,7 @@ original list, alias to **[triangle](#triangle)**
 creates a *[capture](appendix-g-glossary.html#capture)*
 that holds the following structure
 
+<a id="backslash-metachar"/><a id="escape-char"/>
 **\\** *«escape char»* &mdash;
 all escape sequences with a width 
 inside [quotes](appendix-b-grouped.html#control-chars)
