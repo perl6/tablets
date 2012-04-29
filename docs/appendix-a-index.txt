@@ -274,7 +274,7 @@ are accessible in all *[scopes](appendix-g-glossary.html#scope)*
 *[«regex metachar»](appendix-b-grouped.html#quantifier)* &mdash;
 quantifier for zero or more findings
 
-<a id="asterisk-asterisk-op"/>
+<a id="asterisk-asterisk-op"/><a id="power-op"/>
 **\*\***
 *[«numeric op»](tablet-4-operators.html#numeric-context)* &mdash;
 raises a number to a power,
@@ -327,10 +327,11 @@ forces [numeric context](appendix-g-glossary.html#numeric-context)
 <a id="plus-plus-op"/><a id="auto-increment"/>
 **++**
 *[«sequence traversal»](tablet-4-operators.html#traversing-sequence)* &mdash;
-generic autoincrement, calls internal iterator of that object,
-before (prefix) or after (suffix) the
-[evaluation](appendix-g-glossary.html#evaluation) of the surrounding term,
-alias to **[succ](#succ)**, opposite of **[--](#<a id="auto-decrement"/>)**
+generic autoincrement, changes this value to its next neighbour in its ordered set,
+can be used as [prefix](#prefix_category) (take effect before 
+[evaluating](appendix-g-glossary.html#evaluation) the surrounding term)
+or [suffix](#suffix_category) (incrementing afterwards),
+alias to **[succ](#succ)**, opposite of **[--](#auto-decrement)**
 
 <a id="plus-lower-op"/>
 **+<**
@@ -370,9 +371,10 @@ opposite of [**+**](#plus-op)
 <a id="minus-minus-op"/><a id="auto-decrement"/>
 **--**
 *[«sequence traversal»](tablet-4-operators.html#traversing-sequence)* &mdash;
-generic autodecrement, calls internal iterator of that object,
-before (prefix) or after (suffix) the
-[evaluation](appendix-g-glossary.html#evaluation) of the surrounding term,
+generic autodecrement, changes this value to its previous neighbour in its ordered set,
+can be used as [prefix](#prefix_category) (take effect before 
+[evaluating](appendix-g-glossary.html#evaluation) the surrounding term)
+or [suffix](#suffix_category) (incrementing afterwards),
 alias to **[pred](#pred)**, opposite of **[++](#<a id="auto-increment"/>)**
 
 <a id="minus-minus-greater-signature"/>

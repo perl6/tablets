@@ -343,8 +343,8 @@ A   Level              Examples
 --  -----------------  ----------------------------------------------------
 N   Terms              `42 3.14 "eek" qq["foo"] $x :!verbose @$array`
 L   Method postfix     `.meth .+ .? .* .() .[] .{} .<> .<<>> .:: .= .^ .:`
-N   Autoincrement      `++ --`
-R   Exponentiation     `**`
+N   Autoincrement      [`++`](appendix-a-index.html#auto-increment) [`--`](appendix-a-index.html#auto-decrement)
+R   Exponentiation     [`**`](appendix-a-index.html#power-op)
 L   Symbolic unary     `! + - ~ ? | || +^ ~^ ?^ ^`
 L   Multiplicative     `* / % %% +& +< +> ~& ~< ~> ?& div mod gcd lcm`
 L   Additive           `+ - +| +^ ~| ~^ ?| ?^`
@@ -771,8 +771,8 @@ To be used just inside of regexes (rx/.../, m/.../, s/.../.../ and tr/.../.../).
 [`\t`](appendix-a-index.html#backslash-t)         a tab
 [`\T`](appendix-a-index.html#backslash-T)         anything but a tab
 [`\U[ ... ]`](appendix-a-index.html#backslash-U)  everything within the brackets is uppercase
-[`\v`](#backslash-v)         vertical whitespace
-[`\V`](#backslash-V)         anything but vertical whitespace
+[`\v`](appendix-a-index.html#backslash-v)         vertical whitespace
+[`\V`](appendix-a-index.html#backslash-V)         anything but vertical whitespace
 [`\w`](appendix-a-index.html#backslash-X)         word character (Unicode alphanumeric plus "_")
 [`\W`](appendix-a-index.html#backslash-X)         anything but a word character
 [`\x[ ... ]`](appendix-a-index.html#backslash-x)  character given in hexadecimal (brackets optional)

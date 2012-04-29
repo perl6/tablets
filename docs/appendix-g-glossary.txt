@@ -175,9 +175,9 @@ important to the commands
 transforming something, that it gets ready for practical usage -
 sometimes means that just replacing in a piece of code all variables with there
 current content, cometimes more like interpreting or compiling something;
-inside quotes and [regexes](#regex) ot has the first meaning,
+inside quotes and [regexes](#regex) it has the first meaning,
 the command **[eval](appendix-a-index.html#eval)** and
-**[evalfile](appendix-a-index.html#evalfile)**does the second
+**[evalfile](appendix-a-index.html#evalfile)**does the second.
 
 <a id="expression"/>
 **expression** &mdash;
