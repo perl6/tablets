@@ -3,8 +3,8 @@
 Here you find short explanations to most of the computer science terms,
 used in the tablets. These contain also links to specific syntax details,
 that relate to that term. Thatswhy this page is the ideal entry point for
-questions like: "Can I do *functional programming* in Perl 6?" or
-"What kind of *iterators* are present and how they are spelled?"
+questions like: "Can I do [*functional programming*](functional-programming) in Perl 6?"
+or "What kind of [*iterators*](#iterators) are present and how they are spelled?"
 
 <a id="nav-top"/>
 **Navigation:    [A](#a) [B](#b) [C](#c) [D](#d) [E](#e)
@@ -223,6 +223,9 @@ was called in Perl 5 [scalar context](#scalar-context)
 **iteration** &mdash;
 repeated executing of a term or *[block](#block)*, enforced by
 [iterators](appendix-b-grouped.html#loops)
+
+<a id="iterator"/>
+**iterator** &mdash;
 
 # [J](#nav-top)
 

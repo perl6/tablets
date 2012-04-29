@@ -3541,8 +3541,9 @@ key already exists, it will point to an array of both values
 <a id="Q-op"/>
 **[Q](tablet-2-basic-syntax.html#quoting)**
 *[«quoting op»](appendix-b-grouped.html#quoting-ops)* &mdash;
-most basic quoting operator, understands a list of [adverbial
-modifier](appendix-b-grouped.html#quoting-adverbs)
+most basic quoting operator,
+provides just mechanism to encompass a string and return content,
+understands a list of [adverbial modifier](appendix-b-grouped.html#quoting-adverbs)
 
 <a id="q-op"/>
 **[q](tablet-2-basic-syntax.html#single-quotes)**
@@ -3607,8 +3608,9 @@ current [grammar](#grammar) of the quasiquoting language
 <a id="quasi"/>
 **quasi**
 *«block modifier»* &mdash;
-quasi quoting, the following commented will be compiles and
-the *[AST](appendix-g-glossary.html#ast)* will be returned as result,
+quasiquoting, the following commented (mostly in curly brackets)
+will be [*compiled*](appendix-g-glossary.html#compilation) and the
+*[AST](appendix-g-glossary.html#AST)* will be returned as result  &mdash;
 see also: **[:code](#code-adverb)**
 
 <a id="Quote-slang-var"/>
