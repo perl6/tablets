@@ -627,26 +627,26 @@ Quoting Adverbs
 There are a lot more adverbs to fine tune your quoting. The Adverbs
 can used with any quoting operator like: Q :s/.../ or qq :p /.../.
 
-Short   Long            Meaning
-------  --------------  -------------------------------------------------
-:q      :single         interpolate \\\\, \\q and \\' (or whatever)
-:qq     :double         interpolate with :s, :a, :h, :f, :c, :b
-:s      :scalar         interpolate \$ vars
-:a      :array          interpolate @ vars
-:h      :hash           interpolate % vars
-:f      :function       interpolate & calls
-:c      :closure        interpolate {...} expressions
-:b      :backslash      interpolate \\n, \\t, etc. (implies :q at least)
-:w      :words          split result on words (no [quote protection](appendix-g-glossary.html#quote-protection))
-:ww     :quotewords     split result on words (with [quote protection](appendix-g-glossary.html#quote-protection))
-:p      :path           return a Path object (see S16 for more options)
-:to     :heredoc        rarse result as heredoc terminator
-:x      :exec           execute as command and return results
-&nbsp;  :code           quasiquoting
-&nbsp;  :regex          parse as regex
-&nbsp;  :subst          parse as substitution
-&nbsp;  :trans          parse as transliteration
-------  --------------  -------------------------------------------------
+Short                                   Long                                             Meaning
+--------------------------------------  ------------------------------------------------------  -------------------------------------------------
+[:q](appendix-a-index.html#q-adverb)    [:single](appendix-a-index.html#single-adverb)          interpolate \\\\, \\q and \\' (or whatever)
+[:qq](appendix-a-index.html#qq-adverb)  [:double](appendix-a-index.html#double-adverb)          interpolate with :s, :a, :h, :f, :c, :b
+[:s](appendix-a-index.html#s-adverb)    [:scalar](appendix-a-index.html#scalar-adverb)          interpolate \$ vars
+[:a](appendix-a-index.html#a-adverb)    [:array](appendix-a-index.html#array-adverb)            interpolate @ vars
+[:h](appendix-a-index.html#h-adverb)    [:hash](appendix-a-index.html#hash-adverb)              interpolate % vars
+[:f](appendix-a-index.html#f-adverb)    [:function](appendix-a-index.html#function-adverb)      interpolate & calls
+[:c](appendix-a-index.html#c-adverb)    [:closure](appendix-a-index.html#closure-adverb)        interpolate {...} expressions
+[:b](appendix-a-index.html#b-adverb)    [:backslash](appendix-a-index.html#backsalsh-adverb)    interpolate \\n, \\t, etc. (implies :q at least)
+[:w](appendix-a-index.html#w-adverb)    [:words](appendix-a-index.html#words-adverb)            split result on words (no [quote protection](appendix-g-glossary.html#quote-protection))
+[:ww](appendix-a-index.html#ww-adverb)  [:quotewords](appendix-a-index.html#quotewords-adverb)  split result on words (with [quote protection](appendix-g-glossary.html#quote-protection))
+[:p](appendix-a-index.html#p-adverb)    [:path](appendix-a-index.html#path-adverb)              return a Path object (see S16 for more options)
+[:to](appendix-a-index.html#to-adverb)  [:heredoc](appendix-a-index.html#heredoc-adverb)        rarse result as heredoc terminator
+[:x](appendix-a-index.html#x-adverb)    [:exec](appendix-a-index.html#exec-adverb)              execute as command and return results
+&nbsp;                                  [:code](appendix-a-index.html#code-adverb)              quasiquoting
+&nbsp;                                  [:regex](appendix-a-index.html#regex-adverb)            parse as regex
+&nbsp;                                  [:subst](appendix-a-index.html#subst-adverb)            parse as substitution
+&nbsp;                                  [:trans](appendix-a-index.html#trans-adverb)            parse as transliteration
+--------------------------------------  ------------------------------------------------------  -------------------------------------------------
 
 
 
@@ -657,32 +657,31 @@ Stay behind the regex op and change the behaviour of the
 [*regex*](appendix-g-glossary.html#regex), its search scope, etc.
 Most can also also put inside a subregex (in brackets).
 
-Short    Long           Meaning
--------  -------------  ---------------------------------------------------------------------------------------------------------
-:g       :global        searches for any finding
-:x(n)    &nbsp;         searches n times (n is an int)
-:nth(n)  :st :nd :rd    demands the nth finding, has many aliases for correct spelling (:2nd)
-:c(n)    :continue      searches from nth position (counting from 0)
-:p(n)    :pos           searches only on nth position (counting from 0)
-:ov      :overlap       searches on all positionens just one time (activates backtracking)
-:ex      :exhaustive    searches on all positions as long as it findes something (activates backtracking)
-&nbsp;   :ratchet       deactivates backtracking
-&nbsp;   :panic         overwriting of possible set :ratchet for all subrules (activates backtracking)
-&nbsp;   :keepall       subrules have to memorize everything
-:rw      &nbsp;         the regex has the right to change the string
-:s       :sigspace      whitespace just separate parts of the Regex, don't stand for spaces to look for
-:ss      :samespace     as in :s for substitutions, 1st part replaced with 1st part in second half a.s.o. (ss/teh hsa/the has/;)
-:i       :ignorecase    no distinctions between uppercase and lowercase
-:ii      :samecase      substitute with chars of same case as the matching
-:m       :ignoremark    comparing base characters (Unicode non-mark characters) while ignoring any trailing mark characters
-:mm      :samemark      substitute with chars that has same mark/accent pattern as the matched string
-&nbsp;   :bytes         searches on byte level
-&nbsp;   :chars         searches on character level (default)
-&nbsp;   :codes         matches between codepoints
-&nbsp;   :graphs        match language-independent graphemes
-:P5      :Perl5         use the old Regex
--------  -------------  ---------------------------------------------------------------------------------------------------------
-
+Short                                          Long                                                                                                                        Meaning
+---------------------------------------------  --------------------------------------------------------------------------------------------------------------------------  ---------------------------------------------------------------------------------------------------------
+[:g](appendix-a-index.html#g-modifier)         [:global](appendix-a-index.html#g-modifier)                                                                                 searches for any finding
+[:x(n)](appendix-a-index.html#x-modifier)      &nbsp;                                                                                                                      searches n times (n is an int)
+[:nth(n)](appendix-a-index.html#nth-modifier)  [:st](appendix-a-index.html#st-modifier) [:nd](appendix-a-index.html#nd-modifier) [:rd](appendix-a-index.html#rd-modifier)  demands the nth finding, has many aliases for correct spelling (:2nd)
+[:c(n)](appendix-a-index.html#c-modifier)      [:continue](appendix-a-index.html#continue-modifier)                                                                        searches from nth position (counting from 0)
+[:p(n)](appendix-a-index.html#p-modifier)      [:pos](appendix-a-index.html#pos-modifier)                                                                                  searches only on nth position (counting from 0)
+[:ov](appendix-a-index.html#ov-modifier)       [:overlap](appendix-a-index.html#overlap-modifier)                                                                          searches on all positionens just one time (activates [backtracking](appendix-g-glossary.html#backtracking))
+[:ex](appendix-a-index.html#ex-modifier)       [:exhaustive](appendix-a-index.html#exhaustive-modifier)                                                                    searches on all positions as long as it findes something (activates [backtracking](appendix-g-glossary.html#backtracking))
+&nbsp;                                         [:ratchet](appendix-a-index.html#ratchet-modifier)                                                                          deactivates [backtracking](appendix-g-glossary.html#backtracking)
+&nbsp;                                         [:panic](appendix-a-index.html#panic-modifier)                                                                              overwriting of possible set :ratchet for all subrules (activates [backtracking](appendix-g-glossary.html#backtracking))
+&nbsp;                                         [:keepall](appendix-a-index.html#keepall-modifier)                                                                          subrules have to memorize everything
+[:rw](appendix-a-index.html#rw-modifier)       &nbsp;                                                                                                                      the regex has the right to change the string
+[:s](appendix-a-index.html#s-modifier)         [:sigspace](appendix-a-index.html#sigspace-modifier)                                                                        whitespace just separate parts of the Regex, don't stand for spaces to look for
+[:ss](appendix-a-index.html#ss-modifier)       [:samespace](appendix-a-index.html#samespace-modifier)                                                                      as in :s for substitutions, 1st part replaced with 1st part in second half a.s.o. (ss/teh hsa/the has/;)
+[:i](appendix-a-index.html#i-modifier)         [:ignorecase](appendix-a-index.html#ignorecase-modifier)                                                                    no distinctions between uppercase and lowercase
+[:ii](appendix-a-index.html#ii-modifier)       [:samecase](appendix-a-index.html#samecase-modifier)                                                                        substitute with chars of same case as the matching
+[:m](appendix-a-index.html#m-modifier)         [:ignoremark](appendix-a-index.html#ignoremark-modifier)                                                                    comparing base characters (Unicode non-mark characters) while ignoring any trailing mark characters
+[:mm](appendix-a-index.html#mm-modifier)       [:samemark](appendix-a-index.html#samemark-modifier)                                                                        substitute with chars that has same mark/accent pattern as the matched string
+&nbsp;                                         [:bytes](appendix-a-index.html#bytes-modifier)                                                                              searches on byte level
+&nbsp;                                         [:chars](appendix-a-index.html#chars-modifier)                                                                              searches on character level (default)
+&nbsp;                                         [:codes](appendix-a-index.html#codes-modifier)                                                                              matches between [codepoints](appendix-g-glossary.html#codepoints)
+&nbsp;                                         [:graphs](appendix-a-index.html#graphs-modifier)                                                                            match language-independent [graphemes](appendix-g-glossary.html#graphemes)
+[:P5](appendix-a-index.html#gP5-modifier)      [:Perl5](appendix-a-index.html#Perl5-modifier)                                                                              use the Perl 5 Regex syntax
+---------------------------------------------  --------------------------------------------------------------------------------------------------------------------------  ---------------------------------------------------------------------------------------------------------
 
 
 Regex Metacharacter
@@ -810,7 +809,7 @@ regex. They can have prefixes: . (dot) marks a non-capturing subrule,
 [`<ident>`](appendix-a-index.html#ident-subrule)                      an identifier
 [`<print>`](appendix-a-index.html#print-subrule)                      printable char
 [`<graph>`](appendix-a-index.html#graph-subrule)                      "graphical" char like kanji
-[`<cntrl>`](appendix-a-index.html#cntrl-subrule)                      control char, e.g. newline and backspace
+[`<cntrl>`](appendix-a-index.html#cntrl-subrule)                      a [control char](#control-chars)
 [`<blank>`](appendix-a-index.html#blank-subrule)                      mostly a space or tab
 [`<space>`](appendix-a-index.html#space-subrule)                      whitespace character aka \s
 [`<ws>`](appendix-a-index.html#ws-subrule)                            whitespace, roughly equals \s*

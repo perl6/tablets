@@ -59,10 +59,13 @@ source code is transformed, while [parsing](#parsing) it
 
 <a id="backtracking"/>
 **backtracking** &mdash;
-after a part of a pattern didn't match,
-this last operation might not be counted (undone) and the pointer
-for the position in the string where actual matching is taking place
-is going a few steps to the left (it goes back)
+while searching for a [*regex pattern*](#regex) in a string,
+perl has to keep track how far this string matched so far,
+while comparing letter by letter from left to right.
+Thus there have to be pointer that wander from left to right.
+Backtracking refers just to the ability of this pointer to wander
+back leftward a bit and try another possibility after a part of a
+pattern didn't match
 
 <a id="binding"/>
 **[binding](tablet-3-variables#binding)** &mdash;

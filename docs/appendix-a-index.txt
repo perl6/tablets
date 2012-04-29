@@ -1,8 +1,11 @@
 % Perl 6 Tablets Appendix A - Index
 
-This index contains an alphanumeric sorted list (sorted without prefixes
-like colon, slash, sigil or twigil) of all operators, methods, builtins,
-options, modifier and special variables with short explanations.
+This index contains an alphabetic sorted list (as [**leg**](#leg-op) does)
+of all operators, methods, builtins, options, modifier and special variables
+with short explanations, cross references, code examples and Perl 5 equivalents
+It is sorted without prefixes like colon, dot, backslash,
+[*sigil*](appendix-g-glossary.html#sigil) or [*twigil*](appendix-g-glossary.html#twigil)
+and everything that contains punctuation comes first.
 Sometimes are added green placeholder.
 <span class="you-provide">n</span> stands for a [integer number](#Int-type),
 <span class="you-provide">f</span> is a floating [point number](#Num-type),
@@ -20,15 +23,15 @@ or to the according category in the tablets.
 
 
 <a id="nav-top"/>
-**Navigation:     [A](#a) [B](#b) [C](#c) [Cn](#cn) [D](#d)  [E](#e)
-[F](#f) [G](#g)   [H](#h) [I](#i) [J](#j) [K](#k)   [L](#l)  [M](#m)
-[N](#n) [O](#o)   [P](#p) [Pn](#pn)       [Q](#q)   [R](#r)  [Rn](#rn)
-[S](#s) [Sn](#sn) [T](#t) [U](#u) [V](#v) [W](#w)   [X](#x)  [Y](#y)   [Z](#z)**
-
-Before alpha chars (a-z) in ASCII order:
-**[`! " #`](#exclamation) [`$ % &`](#dollar)  [`' ( *`](#single-quotes)
+**Navigation:
+[`! " #`](#exclamation)   [`$ % &`](#dollar)  [`' ( *`](#single-quotes)
 [`+ , -`](#plus)          [`. / 0`](#dot)     [`: ; <`](#colon)
 [`= > ?`](#equal)         [`@ [ \`](#at)      [`^ _ {`](#caret)   [`| ~`](#pipe)**
+
+**[A](#a)  [B](#b)  [C](#c)  [Cn](#cn) [D](#d)  [E](#e)   [F](#f)
+  [G](#g)  [H](#h)  [I](#i)  [J](#j)   [K](#k)  [L](#l)   [M](#m)
+  [N](#n)  [O](#o)  [P](#p)  [Pn](#pn) [Q](#q)  [R](#r)   [Rn](#rn)
+  [S](#s)  [Sn](#sn)[T](#t)  [U](#u)   [V](#v)  [W](#w)   [X](#x)  [Y](#y) [Z](#z)**
 
 
 
@@ -1492,7 +1495,7 @@ see also: [**chomp**](#chomp), [**substr**](#substr)
 change root directory on POSIX systems
 
 <a id="cis"/>
-**cis** *«num method»* &mdash;
+**cis** *«Complex method»* &mdash;
 see also: [**conj**](#conj), [**polar**](#polar), [**unpolar**](#unpolar)
 
 <a id="circumfix-category"/>
@@ -1545,12 +1548,10 @@ long form of **[:c](#c-adverb)**, included in
 *[«generic comparison»](tablet-4-operators.html#generic-comparison)* &mdash;
 general [infix](#infix-category) sort comparator,
 result is *Order::Increase* (numerically -1) if
-**[before](#before)** is
-**[True](#True)** - *Order::Same* (numerically 0) if
-**[eqv](#eqv)** - *Order::Decrease* (numerically 1)
-if **[after](#after)**, see also:
-**[leg](#leg)** and
-**[\<=\>](#spaceship-op)**)
+**[before](#before)** is **[True](#True)** (left side is ordered before right) -
+*Order::Same* (numerically 0) if **[eqv](#eqv)** - 
+*Order::Decrease* (numerically 1) if **[after](#after)** &mdash;
+see also: **[leg](#leg)** and **[\<=\>](#spaceship-op)**)
 
 
 
@@ -1560,7 +1561,7 @@ if **[after](#after)**, see also:
 **\<cntrl\>**
 *[«predefined subrule»](appendix-b-grouped.html#subrules)* &mdash;
 a not visible character that is aimed to control the console
-output
+output, [the complete list](appendix-b-grouped.html#control-chars)
 
 <a id="code"/><a id="code-context"/><a id="code-op"/>
 **code**
@@ -2774,15 +2775,15 @@ time
 *[«flow control»](appendix-b-grouped.html#jump-commands)* &mdash;
 exit the current block with a return value
 
-<a id="leg"/>
+<a id="leg"/><a id="leg-op"/>
 **leg**
 *[«string comparison»](tablet-4-operators.html#string-comparison)* &mdash;
-general [infix](#infix-category) sort comparison
-operator in *[string
-context](tablet-4-operators.html#string-context)*,
-leg stands for lower/equal/greater, **[cmp](#cmp)**
-is the more general form, **[<=\>](#spaceship-op)**
-does same in [numerical context](#numerical-context), in Perl 5: *cmp*
+[infix](#infix-category) comparison operator that sees its operands in
+*[string context](tablet-4-operators.html#string-context)*,
+leg stands for lower/equal/greater and it works otherwise like
+[**cmp**](#cmp) (general form) or 
+[**\<=\>**](#spaceship-op) ([numerical context](#numerical-context),
+in Perl 5: *cmp*
 
 <a id="let"/>
 **let** &mdash;
@@ -3387,7 +3388,7 @@ object that contains all surrounding *[POD](appendix-g-glossary.html#POD)*
 documentation
 
 <a id="polar"/>
-**polar** «complex method» &mdash;
+**polar** «Complex method» &mdash;
 magnitude or angle corresponding to the
 [complex number](#Complex-type) (only parameter),
 the magnitude is non-negative, and the angle in the
@@ -4530,7 +4531,7 @@ be run, can also be written at the end of an expression, opposite of
 no **[elsif](#elsif)** or **[else](#else)** is allowed to follow
 
 <a id="unpolar"/>
-**unpolar** *«num method»* &mdash;
+**unpolar** *«Complex method»* &mdash;
 see also: [**cis**](#cis), [**conj**](#conj), [**polar**](#polar)
 
 <a id="until"/>
