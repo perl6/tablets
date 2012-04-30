@@ -35,7 +35,9 @@ following operator working with that logic:
 other logical operations are [*or*](#or), [*xor*](#xor), [*not*](#not)
 
 <a id="argument"/>
-**argument** &mdash; another word for *[parameter](#parameter)*
+**argument** &mdash;
+a specific value given to a [routine](#routine) at a certain time,
+not to be confused wirh *[parameter](#parameter)*
 
 <a id="ASAP"/>
 **ASAP** *(as soon as possible)* &mdash; within a given execution phase
@@ -89,8 +91,10 @@ object of the type **[Block](appendix-a-index.html#block-type)**
 
 <a id="capture"/>
 **capture** &mdash;
-arguments of a specific function call,
-stored in objects of the type [Capture](#Capture-type)
+is the name of a [type of storage](#Capture-type) for the [*arguments*](#argument)
+of a specific [*routine*](#routine) call. When variables are used in this call
+like: `chop( $text )`, then the capture works like a [*reference*](#reference)
+to this variable and provides access to that variable
 
 <a id="closure"/>
 **closure** &mdash;
@@ -100,7 +104,10 @@ mostly used as a fancy alias for a *[block](#block)*
 
 <a id="codepoint"/>
 **codepoint** &mdash;
-*[unicode](#unicode)*
+A *[unicode](#unicode)* primitive, represented by a specific number,
+that stands for a slightly varying graphical representation.
+Since you can create with *unicode* combined character like an A with an
+flying pig on top, you would have 2 codepoints but only one [*grapheme*](#grapheme)
 
 <a id="coderef"/>
 **coderef** &mdash;
@@ -192,7 +199,9 @@ the command **[eval](appendix-a-index.html#eval)** and
 # [F](#nav-top)
 
 <a id="file-handle"/>
-**file handle** &mdash;
+**file handle** &mdash; 
+[**IO**](appendix-a-index.html#IO-type), 
+can do [test operations](appendix-b-grouped.html#test-methods)
 
 
 <a id="functional-programming"/>
@@ -205,8 +214,8 @@ by Perl 6, considered as a branch of Declarative Programming
 
 <a id="grapheme"/>
 **grapheme** &mdash;
-a *[unicode](#unicode)* graphical character like a japanese kanji that may be
-composed out of several [codepoints](#codepoint)
+a *[unicode](#unicode)* character like a japanese kanji that may be composed
+out of several [codepoints](#codepoint)
 
 # [H](#nav-top)
 
@@ -332,11 +341,11 @@ other logical operations are: [*and*](#and), [*xor*](#xor), [*not*](#not)
 
 <a id="parameter"/>
 **parameter** &mdash;
-a value (in a variable or not) passed to a *[routine](#routine)* as input
-while calling the *routine*, there are 2 kinds of parameter:
-[positional](#positional-parameter) and [named](#named-parameter),
-what kind of parameter are requested or accepted by a routine are defined by its
-[signature](#signature)
+a slot for an [argument](#argument) that a [*routine*](#routine) accepts,
+it usually has a [*type*](#type) that sets limits what values are acceptable,
+there are *required parameter*, *optional parameter*,
+[positional parameter](#positional-parameter) and [named parameter](#named-parameter),
+sum of all parameters is called [signature](#signature)
 
 <a id="parsetree"/>
 **parsetree** &mdash;
