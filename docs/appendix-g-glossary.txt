@@ -326,8 +326,11 @@ other logical operations are: [*and*](#and), [*xor*](#xor), [*not*](#not)
 
 <a id="parameter"/>
 **parameter** &mdash;
-value passed to a method or *[subroutine](routine)*,
-mostly as part of the signature
+a value (in a variable or not) passed to a *[routine](#routine)* as input
+while calling the *routine*, there are 2 kinds of parameter:
+[positional](#positional-parameter) and [named](#named-parameter),
+what kind of parameter are requested or accepted by a routine are defined by its
+[signature](#signature)
 
 <a id="parsetree"/>
 **parsetree** &mdash;
@@ -365,6 +368,10 @@ a block that is given readonly *[parameters](parameter)* with
 
 <a id="property"/>
 **property** &mdash; metadata of a variable set at [run time](#run-time)
+
+<a id="positional-parameter"/>
+**positional parameter** &mdash;
+
 
 # [Q](#nav-top)
 
