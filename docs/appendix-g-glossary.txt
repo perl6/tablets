@@ -144,9 +144,15 @@ creating a *[subroutine](routine)* that calls another with certain
 
 # [D](#nav-top)
 
+<a id="declarand"/>
+**declarand** &mdash; the thing being declared (ex. "\$foo" in "my \$foo;")
+
 <a id="declarative-programming"/>
 **declarative programming** &mdash; programming paradigm that expresses the
 logic of a computation without describing its control flow
+
+<a id="declarator"/>
+**declarator** &mdash; the "my", "our", "has" ... in a declaration like "my $foo;"
 
 <a id="delegation"/>
 **delegation** &mdash; 
