@@ -346,27 +346,27 @@ N   Terms              `42 3.14 "eek" qq["foo"] $x :!verbose @$array`
 L   Method postfix     `.meth .+ .? .* .() .[] .{} .<> .<<>> .:: .= .^ .:`
 N   Autoincrement      [`++`](appendix-a-index.html#auto-increment) [`--`](appendix-a-index.html#auto-decrement)
 R   Exponentiation     [`**`](appendix-a-index.html#power-op)
-L   Symbolic unary     `! + - ~ ? | || +^ ~^ ?^ ^`
-L   Multiplicative     `* / % %% +& +< +> ~& ~< ~> ?& div mod gcd lcm`
-L   Additive           `+ - +| +^ ~| ~^ ?| ?^`
-L   Replication        `x xx`
-X   Concatenation      `~`
-X   Junctive and       `&`
-X   Junctive or        `| ^`
-L   Named unary        `sleep abs sin temp let`
-N   Structural infix   `but does <=> leg cmp .. ..^ ^.. ^..^`
-C   Chaining infix     `!= == < <= > >= eq ne lt le gt ge ~~ === eqv !eqv`
-X   Tight and          `&&`
-X   Tight or           `|| ^^ // min max`
-R   Conditional        `?? !! ff fff`
-R   Item assignment    `= => += -= **= xx= .=`
-L   Loose unary        `so not`
-X   Comma operator     `, :`
-X   List infix         `Z minmax X X~ X* Xeqv ...`
-R   List prefix        `print push say die map substr ... [+] [*] any Z=`
-X   Loose and          `and andthen`
-X   Loose or           `or xor orelse`
-X   Sequencer          `<== ==> <<== ==>>`
+L   Symbolic unary     [`!`](appendix-a-index.html#exclamation-op) [`+`](appendix-a-index.html#plus-op) [`-`](appendix-a-index.html#minus-op) [`~`](appendix-a-index.html#tilde-op) [`?`](appendix-a-index.html#question-op) [`|`](appendix-a-index.html#pipe-op) [`||`](appendix-a-index.html#pipe-pipe-op) [`+^`](appendix-a-index.html#plus-caret-op) [`~^`](appendix-a-index.html#tilde-caret-op) [`?^`](appendix-a-index.html#question-caret-op) [`^`](appendix-a-index.html#caret-op)
+L   Multiplicative     [`*`](appendix-a-index.html#asterisk-op) [`/`](appendix-a-index.html#slash-op) [`%`](appendix-a-index.html#percent-op) [`%%`](appendix-a-index.html#percent-percent-op) [`+&`](appendix-a-index.html#plus-ampersand-op) [`+<`](appendix-a-index.html#plus-lower-op) [`+>`](appendix-a-index.html#plus-greater-op) [`~&`](appendix-a-index.html#tilde-ampersand-op) [`~<`](appendix-a-index.html#tilde-lower-op) [`~>`](appendix-a-index.html#tilde-greater-op) [`?&`](appendix-a-index.html#question-at-op) [`div`](appendix-a-index.html#div) [`mod`](appendix-a-index.html#mod) [`gcd`](appendix-a-index.html#gcd) [`lcm`](appendix-a-index.html#lcm)
+L   Additive           [`+`](appendix-a-index.html#plus-op) [`-`](appendix-a-index.html#minus-op) [`+|`](appendix-a-index.html#plus-pipe-op) [`+^`](appendix-a-index.html#plus-caret-op) [`~|`](appendix-a-index.html#tilde-pipe-op) [`~^`](appendix-a-index.html#tilde-caret-op) [`?|`](appendix-a-index.html#question-pipe-op) [`?^`](appendix-a-index.html#question-caret-op)
+L   Replication        [`x`](appendix-a-index.html#x-op) [`xx`](appendix-a-index.html#xx-op)
+X   Concatenation      [`~`](appendix-a-index.html#tilde-op)
+X   Junctive and       [`&`](appendix-a-index.html#ampersand-op)
+X   Junctive or        [`|`](appendix-a-index.html#pipe-op) [`^`](appendix-a-index.html#caret-op)
+L   Named unary        [`sleep`](appendix-a-index.html#sleep) [`abs`](appendix-a-index.html#abs) [`sin`](appendix-a-index.html#sin) [`temp`](appendix-a-index.html#temp) [`let`](appendix-a-index.html#let)
+N   Structural infix   [`but`](appendix-a-index.html#but) [`does`](appendix-a-index.html#does) [`<=>`](appendix-a-index.html#spaceship-op) [`leg`](appendix-a-index.html#leg) [`cmp`](appendix-a-index.html#cmp) [`..`](appendix-a-index.html#range-op) [`..^ ^.. ^..^`](appendix-a-index.html#caret-range)
+C   Chaining infix     [`!= ==`](appendix-a-index.html#equal-equal-op) [`<`](appendix-a-index.html#lower-op) [`<=`](appendix-a-index.html#lower-equal-op) [`>`](appendix-a-index.html#greater-op) [`>=`](appendix-a-index.html#greater-equal-op) [`eq`](appendix-a-index.html#eq) [`ne`](appendix-a-index.html#ne) [`lt`](appendix-a-index.html#lt) [`le`](appendix-a-index.html#le) [`gt`](appendix-a-index.html#gt) [`ge`](appendix-a-index.html#ge) [`~~`](appendix-a-index.html#smartmatch-op) [`===`](appendix-a-index.html#identity-op) [`eqv !eqv`](appendix-a-index.html#eqv)
+X   Tight and          [`&&`](appendix-a-index.html#ampersand-ampersand-op)
+X   Tight or           [`||`](appendix-a-index.html#ampersand-ampersand-op) [`^^`](appendix-a-index.html#caret-caret-op) [`//`](appendix-a-index.html#slash-slash-op) [`min`](appendix-a-index.html#min) [`max`](appendix-a-index.html#max)
+R   Conditional        [`?? !!`](appendix-a-index.html#ternary-op) [`ff`](appendix-a-index.html#ff-op) [`fff`](appendix-a-index.html#fff-op)
+R   Item assignment    [`=`](appendix-a-index.html#equal-op) [`=>`](appendix-a-index.html#fat-arrow) [`+= -= **= xx= .=`](appendix-a-index.html#equal-metaop)
+L   Loose unary        [`so`](appendix-a-index.html#so) [`not`](appendix-a-index.html#not)
+X   Comma operator     [`,`](appendix-a-index.html#comma-op) [`:`](appendix-a-index.html#colon-op)
+X   List infix         [`Z`](appendix-a-index.html#Z-op) [`minmax`](appendix-a-index.html#minmax) [`X`](appendix-a-index.html#X-op) [`X~ X* Xeqv`](appendix-a-index.html#X-metaop) [`...`](appendix-a-index.html#sequence-op)
+R   List prefix        [`print`](appendix-a-index.html#print) [`push`](appendix-a-index.html#push) [`say`](appendix-a-index.html#say) [`die`](appendix-a-index.html#die) [`map`](appendix-a-index.html#map) [`substr`](appendix-a-index.html#substr) [`...`](appendix-a-index.html#sequence-op) [`[+] [*]`](appendix-a-index.html#square-brackets-metaop) `any` [`Z=`](appendix-a-index.html#Z-metaop)
+X   Loose and          [`and`](appendix-a-index.html#and) [`andthen`](appendix-a-index.html#andthen)
+X   Loose or           [`or`](appendix-a-index.html#or) [`xor`](appendix-a-index.html#xor) [`orelse`](appendix-a-index.html#orelse)
+X   Sequencer          [`<==`](appendix-a-index.html#pipe-left) [`==>`](appendix-a-index.html#pipe-right) [`<<==`](appendix-a-index.html#appending-left-pipe-op) [`==>>`](appendix-a-index.html#appending-right-pipe-op)
 N   Terminator         `; {...} unless` `extra ) ] }`
 --  -----------------  ----------------------------------------------------
 

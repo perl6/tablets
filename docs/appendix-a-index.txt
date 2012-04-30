@@ -558,7 +558,7 @@ hyper metaopeartor, right side dicates the lengths of the  result,
 has a [unicode sibling](appendix-b-grouped.html#unicode-operators) &mdash;
 example: `2 <<+=<< @b` increments numeric value of every array element by 2
 
-<a id="lower-lower-equal-equal-op"/>
+<a id="lower-lower-equal-equal-op"/><a id="appending-left-pipe-op"/>
 **\<\<==**
 *[«sequencer op»](tablet-4-operators.html#feed-ops)* &mdash;
 leftward pointing feed operator that adds values to an existing list (append-mode) &mdash;
@@ -576,7 +576,7 @@ alias to: **Q** **[:qq](#qq-adverb)** **[:ww](#ww-adverb)** **/.../**
 or `« »` ([unicode](appendix-g-glossary.html#unicode) alias) &mdash;
 see also: [**\< \>**](#angle-brackets-op)
 
-<a id="lower-equal-op"/>
+<a id="lower-equal"/><a id="lower-equal-op"/>
 **\<=**
 *[«num comparison»](tablet-4-operators.html#numerical-comparison)* &mdash;
 less than or equal, numeric comparison operator &mdash;
@@ -654,7 +654,7 @@ example: `$a += 3;` equals `$a = $a + 3`
 compares [binding](tablet-3-variables#binding),
 if both vars are bound to same memory location
 
-<a id="equal-equal-op"/>
+<a id="equal-equal"/><a id="equal-equal-op"/>
 **==**
 *[«num comparison»](tablet-4-operators.html#numerical-comparison)* &mdash;
 **[True](#True)** if values are equal in [numeric context](appendix-g-glossary.html#numeric-context),
@@ -4888,7 +4888,7 @@ low [precedence](appendix-b-grouped.html#table-of-precedence) version of
 example: `(5 xor 0)` returns `5` &mdash;
 see also: [**or**](#or), [**err**](#err)
 
-<a id="xx-op"/>
+<a id="xx"/><a id="xx-op"/>
 **xx**
 *[«list op»](tablet-4-operators.html#list-generation)* &mdash;
 replicate a list <span class="you-provide">l</span> (left operand)
