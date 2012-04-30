@@ -24,9 +24,10 @@ or to the according category in the tablets.
 
 <a id="nav-top"/>
 **Navigation:
-[`! " #`](#exclamation)   [`$ % &`](#dollar)  [`' ( *`](#single-quotes)
-[`+ , -`](#plus)          [`. / 0`](#dot)     [`: ; <`](#colon)
-[`= > ?`](#equal)         [`@ [ \`](#at)      [`^ _ {`](#caret)   [`| ~`](#pipe)**
+[`! "`](#exclamation) [`# $`](#pound)  [`% &`](#percent)  [`' (`](#single-quotes)
+[`* +`](#plus)        [`, -`](#comma)  [`. /`](#dot)      [`0 :`](#colon)
+[`; <`](#semicolon)   [`= >`](#equal)  [`? @`](#question) [`[ \`](#at)
+[`^ _`](#caret)       [`{ |`](#curly-brackets)            [`~`](#tilde)**
 
 **[A](#a)  [B](#b)  [C](#c)  [Cn](#cn) [D](#d)  [E](#e)   [F](#f)
   [G](#g)  [H](#h)  [I](#i)  [J](#j)   [K](#k)  [L](#l)   [M](#m)
@@ -97,7 +98,7 @@ double quoting, interpolates with
 (all vars, functions, blocks, control chars),
 alias to [**qq/.../**](#qq-op) or **Q** [**:qq**](#qq-adverb) **/.../**
 
-<a id="pound"/>
+<a id="pound"/><a id="comment-op"/>
 **[\#](tablet-2-basic-syntax.html#single-line)** &mdash;
 starts a comment that continues to the end of the line,
 works even inside regexes as a
