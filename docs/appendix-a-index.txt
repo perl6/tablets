@@ -839,9 +839,10 @@ and [regexes](appendix-b-grouped.html#escape-sequences) start with it
 <a id="caret"/><a id="caret-op"/><a id="junctive-xor"/>
 **\^**
 *[«junctive op»](tablet-4-operators.html#junctions)* &mdash;
-*[junctive](appendix-g-glossary.html#junction)* *[infix](#infix-category)*
-*[XOR](appendix-g-glossary.html#xor)*,
-requires that one value in a list is **[True](#True)** &mdash;
+ *[infix](#infix-category)* *[junctive](appendix-g-glossary.html#junction)*
+ *[XOR](appendix-g-glossary.html#xor)*,
+requires that exactly one of both operands is **[True](#True)** in 
+[*bool context*](appendix-g-glossary.html#bool-context) to return **True** &mdash;
 see also **[one](#one)**
 
 <a id="caret-upto"/>
@@ -895,7 +896,7 @@ start of a line
 context var, result of the last command, can set by topicalizers
 (**[given](#given)** and **[for](#for)**)
 
-<a id="curly brackets"/>
+<a id="curly-brackets"/><a id="curly-brackets-terminator"/>
 **{}**
 «terminator» &mdash;
 [circumfix](#circumfix-category) operator,

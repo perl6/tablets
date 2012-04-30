@@ -343,7 +343,7 @@ Table of precedence
 A   Level              Examples
 --  -----------------  ----------------------------------------------------
 N   Terms              `42 3.14 "eek" qq["foo"] $x :!verbose @$array`
-L   Method postfix     `.meth .+ .? .* .() .[] .{} .<> .<<>> .:: .= .^ .:`
+L   Method postfix     [`.meth .+ .? .* .() .[] .{} .<> .<<>> .:: .= .^ .:`](appendix-a-index.html#dotty-category)
 N   Autoincrement      [`++`](appendix-a-index.html#auto-increment) [`--`](appendix-a-index.html#auto-decrement)
 R   Exponentiation     [`**`](appendix-a-index.html#power-op)
 L   Symbolic unary     [`!`](appendix-a-index.html#exclamation-op) [`+`](appendix-a-index.html#plus-op) [`-`](appendix-a-index.html#minus-op) [`~`](appendix-a-index.html#tilde-op) [`?`](appendix-a-index.html#question-op) [`|`](appendix-a-index.html#pipe-op) [`||`](appendix-a-index.html#pipe-pipe-op) [`+^`](appendix-a-index.html#plus-caret-op) [`~^`](appendix-a-index.html#tilde-caret-op) [`?^`](appendix-a-index.html#question-caret-op) [`^`](appendix-a-index.html#caret-op)
@@ -363,11 +363,11 @@ R   Item assignment    [`=`](appendix-a-index.html#equal-op) [`=>`](appendix-a-i
 L   Loose unary        [`so`](appendix-a-index.html#so) [`not`](appendix-a-index.html#not)
 X   Comma operator     [`,`](appendix-a-index.html#comma-op) [`:`](appendix-a-index.html#colon-op)
 X   List infix         [`Z`](appendix-a-index.html#Z-op) [`minmax`](appendix-a-index.html#minmax) [`X`](appendix-a-index.html#X-op) [`X~ X* Xeqv`](appendix-a-index.html#X-metaop) [`...`](appendix-a-index.html#sequence-op)
-R   List prefix        [`print`](appendix-a-index.html#print) [`push`](appendix-a-index.html#push) [`say`](appendix-a-index.html#say) [`die`](appendix-a-index.html#die) [`map`](appendix-a-index.html#map) [`substr`](appendix-a-index.html#substr) [`...`](appendix-a-index.html#sequence-op) [`[+] [*]`](appendix-a-index.html#square-brackets-metaop) `any` [`Z=`](appendix-a-index.html#Z-metaop)
+R   List prefix        [`print`](appendix-a-index.html#print) [`push`](appendix-a-index.html#push) [`say`](appendix-a-index.html#say) [`die`](appendix-a-index.html#die) [`map`](appendix-a-index.html#map) [`substr`](appendix-a-index.html#substr) [`...`](appendix-a-index.html#sequence-op) [`[+] [*]`](appendix-a-index.html#square-brackets-metaop) [`any`](appendix-a-index.html#any) [`Z=`](appendix-a-index.html#Z-metaop)
 X   Loose and          [`and`](appendix-a-index.html#and) [`andthen`](appendix-a-index.html#andthen)
 X   Loose or           [`or`](appendix-a-index.html#or) [`xor`](appendix-a-index.html#xor) [`orelse`](appendix-a-index.html#orelse)
 X   Sequencer          [`<==`](appendix-a-index.html#pipe-left) [`==>`](appendix-a-index.html#pipe-right) [`<<==`](appendix-a-index.html#appending-left-pipe-op) [`==>>`](appendix-a-index.html#appending-right-pipe-op)
-N   Terminator         `; {...} unless` `extra ) ] }`
+N   Terminator         [`;`](appendix-a-index.html#semicolon) [`{...}`](appendix-a-index.html#curly-brackets) [`unless`](appendix-a-index.html#unless) `extra ) ] }`
 --  -----------------  ----------------------------------------------------
 
 

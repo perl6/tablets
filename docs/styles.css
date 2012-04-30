@@ -20,13 +20,10 @@ body {
     font-weight: bold;
 }
 
-a:link {
-    color: #3A4089;
-}
-
-a:visited {
-    color: #875098;
-}
+a:link   { color: #3A4089;  text-decoration:underline;      }
+#a:active { color: #3A4089;  text-decoration:underline;}
+#a:hover  { color: #3A4089;  text-decoration:underline; }
+a:visited{ color: #875098;  text-decoration:none;      }
 
 table {
     background-color: #eee;
