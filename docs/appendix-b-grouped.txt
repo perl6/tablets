@@ -317,6 +317,10 @@ buf64       a uint64 buffer
 Object Introspection
 --------------------
 
+[Everything in P6](appendix-d-delta.html#object-oriented) is an 
+[object](appendix-g-glossary.html#object) and every object has following
+[methods](appendix-g-glossary.html#method) to tell more about itself.
+
 ----------------------------------------------------  ---------------------------------------------------------------
 [WHAT](appendix-a-index.html#WHAT-introspection)      short name of the class that an object belongs to
 [WHICH](appendix-a-index.html#WHICH-introspection)    object ID (type)
@@ -554,7 +558,7 @@ Any              Any             scalars are identical     `$_ === X`
 Test Methods
 ------------
 
-They replace the old filetest ops (like -e).
+They replace the Perl 5 filetest ops (like -e).
 Use it as in `$filename.IO ~~ :X` or `$filename.IO.X`.
 
 ----------------------------------  --------------------------------------------------------------
@@ -625,7 +629,7 @@ can used with any quoting operator like:
 
 Short                                   Long                                                    Meaning
 --------------------------------------  ------------------------------------------------------  -------------------------------------------------
-[:q](appendix-a-index.html#q-adverb)    [:single](appendix-a-index.html#single-adverb)          interpolate \\\\, \\q and \\' (or whatever)
+[:q](appendix-a-index.html#q-adverb)    [:single](appendix-a-index.html#single-adverb)          interpolate \\\\ and \\'
 [:qq](appendix-a-index.html#qq-adverb)  [:double](appendix-a-index.html#double-adverb)          interpolate with :s, :a, :h, :f, :c, :b
 [:s](appendix-a-index.html#s-adverb)    [:scalar](appendix-a-index.html#scalar-adverb)          interpolate \$ vars
 [:a](appendix-a-index.html#a-adverb)    [:array](appendix-a-index.html#array-adverb)            interpolate @ vars

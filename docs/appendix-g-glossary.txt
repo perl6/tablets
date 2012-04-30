@@ -185,6 +185,10 @@ the command **[eval](appendix-a-index.html#eval)** and
 
 # [F](#nav-top)
 
+<a id="file-handle"/>
+**file handle** &mdash;
+
+
 <a id="functional-programming"/>
 **functional programming** &mdash;
 exclusively function based programming

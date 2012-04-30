@@ -2,16 +2,16 @@
 
 This index contains an alphabetic sorted list (as decided by [**leg**](#leg-op))
 of all operators, methods, builtins, options, modifier and special variables
-with short explanations, cross references, code examples and Perl 5 equivalents
+with short explanations, cross references, code examples and Perl 5 equivalents.
 It is sorted without prefixes like colon, dot, backslash,
 [*sigil*](appendix-g-glossary.html#sigil) or [*twigil*](appendix-g-glossary.html#twigil)
 and everything that contains punctuation comes first.
-Sometimes are added green placeholder.
+Sometimes are added green placeholder:
 <span class="you-provide">n</span> stands for a [integer number](#Int-type),
 <span class="you-provide">f</span> is a floating [point number](#Num-type),
 <span class="you-provide">s</span> [string](#Str-type),
 <span class="you-provide">var</span> any variable,
-<span class="you-provide">p</span> a *[regex](appendix-g-glossary.html#regex)*,
+<span class="you-provide">p</span> a *[regex pattern](appendix-g-glossary.html#regex)*,
 <span class="you-provide">l</span> a list,
 <span class="you-provide">op</span> any operator and
 <span class="you-provide">t</span> any *[term](appendix-g-glossary.html#term)*.
@@ -92,14 +92,10 @@ that calls **[die](#die)**
 **[" "](tablet-2-basic-syntax.html#double-quotes)**
 *[«quoting op»](appendix-b-grouped.html#quoting-ops)* &mdash;
 double quoting, interpolates with
-[**:s**](#s-adverb),
-[**:a**](#a-adverb),
-[**:h**](#h-adverb),
-[**:f**](#f-adverb),
-[**:c**](#c-adverb),
-[**:b**](#b-adverb) (all vars, functions, blocks,
-control chars), alias to [**qq/.../**](#qq-op) or
-**Q** [**:qq**](#qq-adverb) **/.../**
+[**:s**](#s-adverb),    [**:a**](#a-adverb),   [**:h**](#h-adverb),
+[**:f**](#f-adverb),    [**:c**](#c-adverb),   [**:b**](#b-adverb)
+(all vars, functions, blocks, control chars),
+alias to [**qq/.../**](#qq-op) or **Q** [**:qq**](#qq-adverb) **/.../**
 
 <a id="pound"/>
 **[\#](tablet-2-basic-syntax.html#single-line)** &mdash;
@@ -4025,12 +4021,12 @@ see also: **[:sigspace](#sigspace-modifier)**
 <a id="say"/>
 **[say](tablet-5-io.html#say)** &mdash;
 makes output via command line
-(**[$\*OUT](#OUT-global-var)**) like
-**[print](#print)**, but appends a [newline](#backslash-n)
+([**$\*OUT**](#OUT-global-var)) like
+[**print**](#print)**, but appends a [newline](#backslash-n)
 
 **[say](tablet-5-io.html#say-for-files)** &mdash;
 *«handle method»* &mdash; writes a stream into a file and appends a
-**[\\n](#backslash-n)**
+[**\\n**](#backslash-n)
 
 <a id="Scalar-type"/>
 **Scalar**
@@ -4164,8 +4160,7 @@ single white space char aka [**\\s**](#backslash-s)
 **special\_variable**
 *[«grammatical category»](appendix-b-grouped.html#categories)* &mdash;
 namespace to define and redefine
-[special variables](appendix-b-grouped.html#special-variables)
-with a macro
+[special variables](appendix-b-grouped.html#special-variables) with a macro
 
 <a id="splice"/>
 **splice**
@@ -4329,9 +4324,8 @@ operator, opposite of **[pred](#pred)**
 **supersede**
 *[«scope declarator»](appendix-b-grouped.html#scope-declarator)* &mdash;
 replaces definitions of an existing name, e.g. methods and
-attributes of a **[class](#class)** or
-**[grammar](#grammar)**, see also:
-**[augment](#augment)**
+attributes of a **[class](#class)** or **[grammar](#grammar)** &mdash;
+see also: **[augment](#augment)**
 
 
 
