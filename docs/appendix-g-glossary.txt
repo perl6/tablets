@@ -210,7 +210,7 @@ exclusively function based programming
 style, [strongly supported](appendix-d-delta.html#functional-programming)
 by Perl 6, considered as a branch of Declarative Programming
 
-# G
+# [G](#nav-top)
 
 <a id="grapheme"/>
 **grapheme** &mdash;
@@ -601,3 +601,5 @@ because empty ones are forbidden, comes in 3 flavours:
 **[!!!](appendix-a-index.html#exclamation-mark)** (die)
 
 # [Z](#nav-top)
+
+***
