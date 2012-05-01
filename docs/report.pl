@@ -1,24 +1,27 @@
-open my $FH, '<', "appendix-a-index.txt";
-my $c = do {local $/; <$FH>}; 
-my @items =  ($c =~ /\n\n<a id/g); 
-my @anchor =  ($c =~ /<a id="/g); 
-my @links =  ($c =~ /\]\(/g); 
-printf "Index A  items: %4d  anchor: %4d  links: %4d\n", int @items, int @anchor, int @links;
+my %file = (
+	A => 'appendix-a-index.txt',
+	B => 'appendix-b-grouped.txt',
+	D => 'appendix-d-delta.txt',
+	G => 'appendix-g-glossary.txt',
+);
+my %pattern = (
+	item   => qr/\n\n<a id/,
+	anchor => qr/<a id="/,
+	'link' => qr/\]\(/,
+);
+my (%data, %sum, $FH, $content);
 
-open  $FH, '<', "appendix-b-grouped.txt";
-$c = do {local $/; <$FH>}; 
-@links =  ($c =~ /\]\(/g); 
-printf "Index B                             links: %4d\n", int @links;
-
-open  $FH, '<', "appendix-d-delta.txt";
-$c = do {local $/; <$FH>}; 
-@links =  ($c =~ /\]\(/g); 
-printf "Index D                             links: %4d\n", int @links;
-
-open  $FH, '<', "appendix-g-glossary.txt";
-$c = do {local $/; <$FH>}; 
-@items =  ($c =~ /\n\n<a id/g); 
-@anchor =  ($c =~ /<a id="/g); 
-@links =  ($c =~ /\]\(/g); 
-printf "Index G  items: %4d  anchor: %4d  links: %4d\n", int @items, int @anchor, int @links;
+for my $page (sort keys %file) {
+	open $FH, '<', $file{$page};
+	$content = do {local $/; <$FH>};
+	for my $type (keys %pattern) {
+		$data{$type} =()= $content =~ /$pattern{$type}/g;
+		$sum{$type} += $data{$type};
+	}
+	printf "Page $page  items: %4d  anchor: %4d  links: %4d\n", 
+		$data{'item'}, $data{'anchor'}, $data{'link'};
+}
+print '-' x 47,"\n";
+printf "Sum      items: %4d  anchor: %4d  links: %4d\n",
+	$sum{'item'}, $sum{'anchor'}, $sum{'link'};
 
