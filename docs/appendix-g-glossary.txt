@@ -509,21 +509,26 @@ array parameter that receives all (slurps) all optional
 
 <a id="smartmatch"/>
 **smartmatch** &mdash;
-The original Perl 6 *smartmatch* [operator](#operator) looks like this:
+The original Perl 6 *smartmatch* [*operator*](#operator) looks like this:
 *[~~](appendix-a-index.html#smartmatch-op)* and does an universal
-"compare this with that" dependend on the [types](#type) of the [operands](#operand).
-That can range from simple comparison of two values up to the question if
-two [signatures](#signature) are compatible -
-all details in [that table](appendix-b-grouped.html##smartmatch).
+"compare this with that" dependend on the [*types*](#type) of the [*operands*](#operand).
+That can range from simple comparison of two values to applying a [*regex*](#regex)
+up to the question if two [*signatures*](#signature) are compatible -
+all details in [that table](appendix-b-grouped.html#smartmatch).
 
 
 <a id="string-context"/>
 **string context** &mdash;
+[context](#contex)
 [Str](appendix-a-index.html#Str-type)
 [ops](tablet-4-operators.html#string-context)
 
 <a id="subroutine"/>
-**subroutine** &mdash; much used, Perl 5-ish term for [routine](#routine)
+**subroutine** &mdash; 
+Perl 5-ish term for [routine](#routine) because in Perl 5 there is only the
+*sub* command to build a callable block,
+but in Perl 6 there are [much more types](#Routine-types) hence the name change
+
 
 <a id="subrule"/>
 **subrule** &mdash;
