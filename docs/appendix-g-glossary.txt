@@ -231,8 +231,8 @@ out of several [codepoints](#codepoint)
 # [I](#nav-top)
 
 <a id="invocant"/>
-**invocant** &mdash; *[routine](#routine)* or term that called
-the piece of code of issue
+**invocant** &mdash;
+*[routine](#routine)* or [term](#term) that called the piece of code of issue
 
 <a id="item-context"/>
 **scalar context** &mdash;
@@ -257,9 +257,21 @@ several values, example: (A and B) or C, creat them with
 
 # [L](#nav-top)
 
+<a id="list"/>
+**list** &mdash;
+
 <a id="list-contex"/>
 **list context** &mdash;
 [Array](appendix-a-index.html#Array-type)
+
+<a id="list-flattening"/>
+**list flattening** &mdash;
+
+<a id="LOL"/>
+**LOL** *(List of List)* &mdash;
+special kind of [*list*](#list) that can contain other lists, like:
+`[[1,2,3], [4,5,6]]` which is a list with 2 elements,
+lol context means these sublists will now [*flattended*](#list-flattening)
 
 <a id="LTM"/>
 **LTM** *(longest token matching)* &mdash;
@@ -318,6 +330,12 @@ other logical operations are: [*and*](#and), [*or*](#or), [*xor*](#xor)
 **OOP** *(object oriented orogramming)* &mdash;
 programming paradigm (style), that arranges data and functions
 that belong together into so called objects
+
+<a id="operand"/>
+**operand** &mdash;
+
+<a id="operator"/>
+**operator** &mdash;
 
 <a id="or"/>
 **or** &mdash;
@@ -491,7 +509,13 @@ array parameter that receives all (slurps) all optional
 
 <a id="smartmatch"/>
 **smartmatch** &mdash;
-*[~~](appendix-a-index.html#smartmatch-op)* 
+The original Perl 6 *smartmatch* [operator](#operator) looks like this:
+*[~~](appendix-a-index.html#smartmatch-op)* and does an universal
+"compare this with that" dependend on the [types](#type) of the [operands](#operand).
+That can range from simple comparison of two values up to the question if
+two [signatures](#signature) are compatible -
+all details in [that table](appendix-b-grouped.html##smartmatch).
+
 
 <a id="string-context"/>
 **string context** &mdash;
