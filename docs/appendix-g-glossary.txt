@@ -194,7 +194,11 @@ the command **[eval](appendix-a-index.html#eval)** and
 
 <a id="expression"/>
 **expression** &mdash;
-
+a combination of [*terms*](#term) and [*statements*](#statement)
+like: `$a = $b++ - 7;`.
+It can contain values, constants, variables, operators, and functions.
+Each of the parts has to have a [*precedence level*](#precedence) which decides 
+in which order they are considered.
 
 # [F](#nav-top)
 
@@ -232,7 +236,8 @@ out of several [codepoints](#codepoint)
 
 <a id="invocant"/>
 **invocant** &mdash;
-*[routine](#routine)* or [term](#term) that called the piece of code of issue
+*[routine](#routine)* or [statement](#statement) that called the piece
+of code of issue
 
 <a id="item-context"/>
 **scalar context** &mdash;
@@ -399,6 +404,10 @@ a block that is given readonly *[parameters](parameter)* with
 **[-\>](appendix-a-index.html#arrow-op)** or rw parameters with
 **[<-\>](appendix-a-index.html#lower-minus-greater-op)**
 
+<a id="precedence"/>
+**precedence** &mdash;
+[table of precedence](appendix-b-grouped.html#table-of-precedence)
+
 <a id="property"/>
 **property** &mdash; metadata of a variable set at [run time](#run-time)
 
@@ -516,10 +525,14 @@ That can range from simple comparison of two values to applying a [*regex*](#reg
 up to the question if two [*signatures*](#signature) are compatible -
 all details in [that table](appendix-b-grouped.html#smartmatch).
 
+<a id="statement"/>
+**statement** &mdash; 
+smallest standalone element that can be executed,
+everything smaller is just a [*term*](#term)
 
 <a id="string-context"/>
 **string context** &mdash;
-[context](#contex)
+[context](#context)
 [Str](appendix-a-index.html#Str-type)
 [ops](tablet-4-operators.html#string-context)
 
@@ -541,12 +554,14 @@ some of them were used so often, that their built into to language as
 
 <a id="term"/>
 **term** &mdash;
+a syntax "atom" like a pair of brackets, an [operator](#operator) or a value(4.32),
+not to be confused with [*expression*](#expression)
 
 <a id="topicalizer"/>
 **topicalizer** &mdash;
-every keyword that sets the **[$\_](appendix-a-index.html#context-var)**
-variable, like *[given](appendix-a-index.html#given)*
-and *[for](appendix-a-index.html#for)*
+every keyword that sets content of the context variable
+([**$\_**](appendix-a-index.html#context-var)),
+like *[given](appendix-a-index.html#given)* and *[for](appendix-a-index.html#for)*
 
 <a id="trait"/>
 **trait** &mdash;

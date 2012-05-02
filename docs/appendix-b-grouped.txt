@@ -970,10 +970,10 @@ routine traits.
 [rw](appendix-a-index.html#rw-routine-trait)                marks a subroutine as returning an lvalue
 [parsed](appendix-a-index.html#parsed-routine-trait)        macro is parsed once, is hygienic, only parsed can be used
 [reparsed](appendix-a-index.html#reparsed-routine-trait)    macro parsed twice, not hygienic, later parsed can be used
-[tighter](appendix-a-index.html#tighter-routine-trait)      specifies the precedence of an operator higher than an existing operator as seen here
-[looser](appendix-a-index.html#looser-routine-trait)        specifies the precedence of an operator lower than an existing operator as seen here
-[equiv](appendix-a-index.html#equiv-routine-trait)          specifies the precedence of an operator same as an existing operator as seen here
-[assoc](appendix-a-index.html#assoc-routine-trait)          specifies the associativity of an operator explicitly as seen here
+[tighter](appendix-a-index.html#tighter-routine-trait)      specifies the [precedence](#table-of-precedence) of an operator higher than an existing operator as seen here
+[looser](appendix-a-index.html#looser-routine-trait)        specifies the [precedence](#table-of-precedence) of an operator lower than an existing operator as seen here
+[equiv](appendix-a-index.html#equiv-routine-trait)          specifies the [precedence](#table-of-precedence) of an operator same as an existing operator as seen here
+[assoc](appendix-a-index.html#assoc-routine-trait)          specifies the [associativity](#operator-associativity) of an operator explicitly as seen here
 ----------------------------------------------------------  -------------------------------------------------------------------------------------
 
 
