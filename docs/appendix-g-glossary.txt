@@ -133,9 +133,15 @@ compile time for that unit (mostly the file or the to be **eval**ed string)
 
 <a id="context"/>
 **context** &mdash;
-when executing a function or operator Perl considers the
-expression from which the call was to return a
-[scalar](appendix-a-index.html#Scalar-type) or other kind of result
+Everything and hence every value is in Perl 6 an [*object*](#object) of a
+certain [*type*](#type). If that *type* doesn't match the demand of the
+[*operator*](#operator) it is given to, it will be converted into the demanded.
+It is said that this *operator* had forced the context of a certain *type*.
+Most important are the [*item context*](item-context),
+[*array context*](array-context), [*numeric context*](numeric-context),
+[*string context*](string-context) and [*bool context*](bool-context).
+A *context* can also be forced upon a [*routine*](#routine),
+when its return value has to react to the context in which it is called.
 
 <a id="context-variable"/>
 **context variable** &mdash;
@@ -241,7 +247,8 @@ of code of issue
 
 <a id="item-context"/>
 **scalar context** &mdash;
-was called in Perl 5 [scalar context](#scalar-context)
+is a [*context*](#context) of the [Scalar type](appendix-a-index.html#Scalar-type),
+is called in Perl 5 [scalar context](#scalar-context)
 
 <a id="iteration"/>
 **iteration** &mdash;
@@ -475,9 +482,7 @@ after *[compile time](#compile-time)*
 # [S](#nav-top)
 
 <a id="scalar-context"/>
-**scalar context** &mdash;
-is a [*context*](#context) of the [Scalar type](appendix-a-index.html#Scalar-type),
-but is now called [*item context*](#item-context)
+**scalar context** &mdash; is in P6 called [item context](#item-context)
 
 <a id="scope"/>
 **scope** &mdash;
@@ -528,7 +533,8 @@ all details in [that table](appendix-b-grouped.html#smartmatch).
 <a id="statement"/>
 **statement** &mdash; 
 smallest standalone element that can be executed,
-everything smaller is just a [*term*](#term)
+everything smaller is just a [*term*](#term),
+larger combinations of them are [*expressions*](#expression)
 
 <a id="string-context"/>
 **string context** &mdash;
