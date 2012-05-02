@@ -12,6 +12,8 @@ or "What kind of [*iterators*](#iterators) are present and how they are spelled?
 [M](#m#) [N](#n) [O](#o) [P](#p) [Q](#q) [R](#r) [S](#s)
 [T](#t#) [U](#u) [V](#v) [W](#w) [X](#x) [Y](#y) [Z](#z)**
 
+<a id="french-greater-ö-grench-lower"/>
+**»ö«** &mdash; pure text version of [*camelia*](#camelia) the Perl 6 mascot
 
 # [A](#nav-top)
 
@@ -89,6 +91,10 @@ object of the type **[Block](appendix-a-index.html#block-type)**
 
 # [C](#nav-top)
 
+<a id="camelia"/>
+**camelia** &mdash; name of the the Perl 6 mascot, she supposed to look happy,
+but create tornados in the amazon or something like that
+
 <a id="capture"/>
 **capture** &mdash;
 is the name of a [type of storage](#Capture-type) for the [*arguments*](#argument)
@@ -158,14 +164,17 @@ creating a *[subroutine](routine)* that calls another with certain
 # [D](#nav-top)
 
 <a id="declarand"/>
-**declarand** &mdash; the thing being declared (ex. "\$foo" in "my \$foo;")
+**declarand** &mdash; the thing being declared, example: `$foo` in `my $foo;`,
+see also [declarator](#declarator)
 
 <a id="declarative-programming"/>
 **declarative programming** &mdash; programming paradigm that expresses the
 logic of a computation without describing its control flow
 
 <a id="declarator"/>
-**declarator** &mdash; the "my", "our", "has" ... in a declaration like "my $foo;"
+**declarator** &mdash; the command that declares something like
+the "my", "our", "has" ... in a declaration like `my $foo;`,
+see also [declarand](#declarand)
 
 <a id="delegation"/>
 **delegation** &mdash; 
@@ -210,16 +219,14 @@ in which order they are considered.
 
 <a id="file-handle"/>
 **file handle** &mdash;
-is a [*type*](#type) of [*variable*](#variable) that enables you to access
-a file on your hard drive.
-But first you have to use the [**open**](appendix-a-index.html#open) command
-to establish the connection.
-Or you take [**slurp**](appendix-a-index.html#slurp) that doesn't need a handle at all.
-In Perl 6 are file handles [*objects*](#object) of the type named
-[**IO**](appendix-a-index.html#IO-type) which can do a lot more than just access
-files. They can access directories, [*pipes*](#pipe) and contain also the
-[test methods](appendix-b-grouped.html#test-methods).
-
+is just a [*variable*](#variable) through which you can access a file.
+Technically these are just [*scalars*](#scalar) holding an [*objects*](#object)
+of the [*type*](#type) [**IO**](appendix-a-index.html#IO-type) which can do much
+more than just read and write files. They can access directories, [*pipes*](#pipe)
+and contain also the [test methods](appendix-b-grouped.html#test-methods).
+But if its just about getting the file content in on swoop or line wise,
+[**slurp**](appendix-a-index.html#slurp) and 
+[**lines**](appendix-a-index.html#lines) do that without a *file handle*.
 
 <a id="functional-programming"/>
 **functional programming** &mdash;
