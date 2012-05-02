@@ -30,7 +30,7 @@ Rules for Anchor Names
 * Parts of the anchor name are divided by a minus ("-").
 * None alphanumeric chars are descibed as lowercase name.
 * But use for that only one word, "=" is "equal" not "equal sign".
-* "==" is double-equal, "===" is "triple-equal"
+* "==" is equal-equal, "===" is "equal-equal-equal"
 * A secondary anchor can dexribe the name of an operator.
 * Index G has following rules:
 * Anchor uses always the abbreviation, acronym or short form.

@@ -1,10 +1,11 @@
+
 use strict;
 use warnings;
 use v5.10;
 
 my (%file, %data, %sum, $FH, $content, @fn_parts);
 my %pattern = (
-	item   => qr/\n\n<a id/,
+	item   => qr/\n\n<a id|\n### |\w\n\-+\n\n|\w\n=+\n\n/,
 	anchor => qr/<a id="/,
 	link   => qr/\]\(/,
 	line   => qr/\n/,
