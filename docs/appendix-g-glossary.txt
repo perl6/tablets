@@ -2,7 +2,7 @@
 
 Here you find short explanations to most of the computer science terms,
 used in the tablets. These contain also links to specific syntax details,
-that relate to that term. Thatswhy this page is the ideal entry point for
+that relate to that term. Thatswhy this page is also  the ideal entry point for
 questions like: "Can I do [*functional programming*](functional-programming) in Perl 6?"
 or "What kind of [*iterators*](#iterators) are present and how they are spelled?"
 
@@ -209,9 +209,16 @@ in which order they are considered.
 # [F](#nav-top)
 
 <a id="file-handle"/>
-**file handle** &mdash; 
-[**IO**](appendix-a-index.html#IO-type), 
-can do [test operations](appendix-b-grouped.html#test-methods)
+**file handle** &mdash;
+is a [*type*](#type) of [*variable*](#variable) that enables you to access
+a file on your hard drive.
+But first you have to use the [**open**](appendix-a-index.html#open) command
+to establish the connection.
+Or you take [**slurp**](appendix-a-index.html#slurp) that doesn't need a handle at all.
+In Perl 6 are file handles [*objects*](#object) of the type named
+[**IO**](appendix-a-index.html#IO-type) which can do a lot more than just access
+files. They can access directories, [*pipes*](#pipe) and contain also the
+[test methods](appendix-b-grouped.html#test-methods).
 
 
 <a id="functional-programming"/>
@@ -563,6 +570,10 @@ some of them were used so often, that their built into to language as
 a syntax "atom" like a pair of brackets, an [operator](#operator) or a value(4.32),
 not to be confused with [*expression*](#expression)
 
+<a id="test-method"/>
+**test method** &mdash;
+[test methods](appendix-b-grouped.html#test-methods).
+
 <a id="topicalizer"/>
 **topicalizer** &mdash;
 every keyword that sets content of the context variable
@@ -580,6 +591,8 @@ see **[but](appendix-a-index.html#but)**, what other languages call
 second(ary) *[sigil](#sigil)* indicating a special property of a variable,
 [(more details here)](tablet-3-variables#twigils)
 
+<a id="type"/>
+**type** &mdash;
 
 # [U](#nav-top)
 
@@ -591,6 +604,12 @@ by Perl 6, which means any part of a a program might use any character or symbol
 strange names that start with UTF are most probably Unicode formats
 
 # [V](#nav-top)
+
+<a id="value"/>
+**value** &mdash;
+
+<a id="variable"/>
+**variable** &mdash;
 
 # [W](#nav-top)
 
