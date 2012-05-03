@@ -21,7 +21,7 @@ Each term is followed by a link «in french brackets» to a condensed summary
 listing of its category in [appendix B](appendix-b-grouped.html)
 or to the according category in the tablets. The chapter headlines serve as
 anchor and links to the navigation menu. Thatswhy large chapter like C are split
-into C (second letter a-m) and Cn (second letter n-z).
+into "C" (second letter a-m) and following "n" (second letter n-z).
 
 
 <a id="nav-top"/>
@@ -31,10 +31,10 @@ into C (second letter a-m) and Cn (second letter n-z).
 [`; <`](#semicolon)   [`= >`](#equal)  [`? @`](#question) [`[ \`](#square-brackets)
 [`^ _`](#caret)       [`{ |`](#curly-brackets)            [`~`](#tilde)**
 
-**[A](#a)  [B](#b)  [C](#c)  [Cn](#cn) [D](#d)  [E](#e)   [F](#f)
+**[A](#a)  [B](#b)  [C](#c)  [n](#cn)  [D](#d)  [E](#e)   [F](#f)
   [G](#g)  [H](#h)  [I](#i)  [J](#j)   [K](#k)  [L](#l)   [M](#m)
-  [N](#n)  [O](#o)  [P](#p)  [Pn](#pn) [Q](#q)  [R](#r)   [Rn](#rn)
-  [S](#s)  [Sn](#sn)[T](#t)  [U](#u)   [V](#v)  [W](#w)   [X](#x)  [Y](#y) [Z](#z)**
+  [N](#n)  [O](#o)  [P](#p)  [n](#pn)  [Q](#q)  [R](#r)   [n](#rn)
+  [S](#s)  [n](#sn) [T](#t)  [U](#u)   [V](#v)  [W](#w)   [X](#x) [Y](#y) [Z](#z)**
 
 
 
