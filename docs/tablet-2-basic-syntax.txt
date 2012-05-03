@@ -75,7 +75,7 @@ If many lines has to be commented,
 use "**[\#\`](appendix-a-index.html#pound-apostrophe)**"
 followed by any pair of braces that surround the comment.
 
-    $things = #`( i wonder how many of these
+    $things = #`( I wonder how many of these
     I will need, hm maybe 3, or 4, better 5 ) 5; # same as $things = 5;
 
 
@@ -84,7 +84,7 @@ Documenting Comments
 
 When adding an equal sign after the pound like
 **[#=](appendix-a-index.html#pound-equal)**, it can be used to comment
-a subroutine of method that has this description stored.
+a subroutine or method that has this description stored.
 It's accessible via the *[WHY](#WHY-introspection)* introspection method
 of the routine object.
 
