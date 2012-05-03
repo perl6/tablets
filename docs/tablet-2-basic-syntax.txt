@@ -22,8 +22,8 @@ makes it possible to mix Perl 5 and 6 in one source file.
 
 To even that little obstacle, you can leave out the usual `use
 strict;` and `use warnings;` in front of every script, because thats
-now default. Also `use utf;` is obsolete since any Perl 6 source code
-is always treated as unicode and any UTF character can be used
+now default. Also `use utf8;` is obsolete since any Perl 6 source code
+is always treated as Unicode and any UTF-8 character can be used
 anywhere in the code. Even the features of the pragmas `constant` and
 `vars` are now part of the core language.
 
