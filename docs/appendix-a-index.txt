@@ -26,7 +26,7 @@ or to the according category in the tablets.
 **Navigation:
 [`! "`](#exclamation) [`# $`](#pound)  [`% &`](#percent)  [`' (`](#single-quotes)
 [`* +`](#plus)        [`, -`](#comma)  [`. /`](#dot)      [`0 :`](#colon)
-[`; <`](#semicolon)   [`= >`](#equal)  [`? @`](#question) [`[ \`](#at)
+[`; <`](#semicolon)   [`= >`](#equal)  [`? @`](#question) [`[ \`](#square-brackets)
 [`^ _`](#caret)       [`{ |`](#curly-brackets)            [`~`](#tilde)**
 
 **[A](#a)  [B](#b)  [C](#c)  [Cn](#cn) [D](#d)  [E](#e)   [F](#f)
@@ -795,7 +795,7 @@ alias to **[list()](#list)** function
 appended on an array var, returns an array slice with values which
 indexes was inside the brackets
 
-<a id="square-brackets-op"/><a id="array-ref"/>
+<a id="square-brackets"/><a id="square-brackets-op"/><a id="array-ref"/>
 **[**<span class="you-provide">l</span>**]** &mdash; [circumfix](#circumfix-category) operator
 that creates a reference to an array that holds all values that
 encompas these brackets
