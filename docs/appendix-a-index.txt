@@ -142,7 +142,7 @@ matches the end of a line (no more multile mode)
 
 # [%](#nav-top)
 
-<a id="percent-sigil"/>
+<a id="percent"/><a id="percent-sigil"/>
 **%**
 *[«sigil»](appendix-b-grouped.html#sigils)* &mdash;
 [prefix](#prefix-category) of [hash variables](tablet-3-variables#hash)

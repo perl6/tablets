@@ -210,7 +210,7 @@ the command **[eval](appendix-a-index.html#eval)** and
 
 <a id="expression"/>
 **expression** &mdash;
-a combination of [*terms*](#term) and [*statements*](#statement)
+a combination of [*terms*](#term) and [*operators*](#operator)
 like: `$a = $b++ - 7;`.
 It can contain values, constants, variables, operators, and functions.
 Each of the parts has to have a [*precedence level*](#precedence) which decides 
