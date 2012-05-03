@@ -12,8 +12,8 @@ or "What kind of [*iterators*](#iterators) are present and how they are spelled?
 [M](#m#) [N](#n) [O](#o) [P](#p) [Q](#q) [R](#r) [S](#s)
 [T](#t#) [U](#u) [V](#v) [W](#w) [X](#x) [Y](#y) [Z](#z)**
 
-<a id="french-greater-ö-grench-lower"/>
-**»ö«** &mdash; pure text version of [*camelia*](#camelia) the Perl 6 mascot
+<a id="french-greater-Ã¶-grench-lower"/>
+**Â»Ã¶Â«** &mdash; pure text version of [*camelia*](#camelia) the Perl 6 mascot
 
 # [A](#nav-top)
 
@@ -168,8 +168,9 @@ creating a *[subroutine](routine)* that calls another with certain
 see also [declarator](#declarator)
 
 <a id="declarative-programming"/>
-**declarative programming** &mdash; programming paradigm that expresses the
-logic of a computation without describing its control flow
+**declarative programming** &mdash;
+programming paradigm that expresses the logic of a computation
+without describing its control flow
 
 <a id="declarator"/>
 **declarator** &mdash; the command that declares something like
