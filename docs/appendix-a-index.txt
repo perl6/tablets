@@ -242,6 +242,10 @@ see also: [\[ \]](#square-brackets-metachar)
 holds positional submatches, **`$()[n]`** is alias to
 [**`$/[n]`**](#slash-var) and [**`$n`**](#0-var)
 
+
+
+# [\*](#nav-top)
+
 <a id="asterisk"/><a id="asterisk-term"/>
 **\***
 *«term»* &mdash;
@@ -298,10 +302,6 @@ example: `(ha)**3` only matches `'hahaha'`
 *[«regex metachar»](appendix-b-grouped.html#quantifier)* &mdash;
 quantifier for minimal matching, just as much to fulfill with the pattern &mdash;
 example: ``
-
-
-
-# [+](#nav-top)
 
 <a id="plus"/><a id="plus-op"/><a id="plus-context"/>
 **+**
@@ -361,6 +361,10 @@ forces [numeric context](appendix-g-glossary.html#numeric-context)
 [*list*](appendix-g-glossary.html#list) generating operator &mdash;
 example: `1, 'two', 3.2` creates a list with three elements &mdash;
 see also: [**\[ \]**](#square-brackets-op)
+
+
+
+# [-](#nav-top)
 
 <a id="minus"/><a id="minus-op"/>
 **-**
@@ -458,10 +462,6 @@ short circuit *defined or*, returns the first defined value
 (from left to right), similar to **[||](#pipe-pipe-op)** &mdash;
 high precedence version of **[err](#err)**
 
-
-
-# [0](#nav-top)
-
 <a id="backslash-0"/><a id="backslash-zero"/>
 **\\0**<span class="you-provide">s</span>**\[**<span class="you-provide">n</span>**]**
 *[«escape sequence»](appendix-b-grouped.html#escape-sequences)* &mdash; 
@@ -543,6 +543,10 @@ creates an alias to a variable at runtime
 separates [statements](tablet-2-basic-syntax.html#statements)
 (commands) or [array indices](tablet-3-variables#array-slices) &mdash;
 example: `@[2;3]` instead of `@a[2][3]`
+
+
+
+# [\<](#nav-top)
 
 <a id="lower-op"/>
 **\<**
@@ -628,9 +632,6 @@ embraces an subrule (assertion),
 if it doesn't start wit a **.**, **?** or **!** findings will stored under the
 name of the subrule as [*named capures*](appendix-g-glossary.html#named-capure)
 into [`$/<name>`](#match-var) and [`$<name>`](#angle-brackets-var)
-
-
-# [=](#nav-top)
 
 <a id="equal"/><a id="equal-op"/>
 **[=](tablet-3-variables#assignment)**

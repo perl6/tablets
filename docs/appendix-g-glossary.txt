@@ -61,6 +61,10 @@ to enable the rest of the world more fully there is [*unicode*](#unicode)
 **AST** *(abstract syntax tree)* &mdash; tree like data structure, in which
 source code is transformed, while [parsing](#parsing) it
 
+<a id="atribute"/>
+**atribute** &mdash;
+fundamentally just a [*variable*] that belongs to an [*object*](#object)
+
 
 # [B](#nav-top)
 
@@ -176,12 +180,17 @@ programming paradigm that expresses the logic of a computation
 without describing its control flow
 
 <a id="declarator"/>
-**declarator** &mdash; the command that declares something like
-the "my", "our", "has" ... in a declaration like `my $foo;`,
+**declarator** &mdash;
+the command that declares to another entity that it will have a certain property
+like the "my", "our", "has" ... in a declaration like `my $foo;`,
 see also [declarand](#declarand)
 
 <a id="delegation"/>
-**delegation** &mdash; 
+**delegation** &mdash;
+is a techtique where an [*object*](#object) has a [*method*](#method) that just
+calls a *method* of one of its [*attributes*](#attribute). If the object is
+a space ship which has a clock is would allow you to call `$ship.time` instead
+of `$ship.clock.time`
 
 <a id="design-by-contract"/>
 **design by contract** &mdash; programming style in which parameters and
@@ -194,7 +203,7 @@ considered contract in Perl 6
 <a id="e"/>
 **e** *(euler number)* &mdash;
 about 2.7182818284, fundamental mathematical constant,
-important to the commands 
+important to the functions 
 **[exp](appendix-a-index.html#exp)** and **[log](appendix-a-index.html#log)**
 
 
@@ -301,7 +310,7 @@ several values, example: (A and B) or C, creat them with
 **LOL** *(List of List)* &mdash;
 special kind of [*list*](#list) that can contain other lists, like:
 `[[1,2,3], [4,5,6]]` which is a list with 2 elements,
-lol context means these sublists will now [*flattended*](#list-flattening)
+lol context means these sublists will not [*flattended*](#list-flattening)
 
 <a id="LTM"/>
 **LTM** *(longest token matching)* &mdash;
@@ -324,6 +333,9 @@ operators that alter the meaning or expand the scope of other normal operators,
 
 <a id="metaprogramming"/>
 **metaprogramming** &mdash; 
+
+<a id="method"/>
+**method** &mdash;
 
 <a id="MMD"/>
 **MMD** *(multimethod dispatch)* &mdash;
