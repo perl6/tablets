@@ -19,7 +19,9 @@ After each method is its signature (in round brackets), telling you
 the value type (same as in placeholders) of the parameters and the return value.
 Each term is followed by a link «in french brackets» to a condensed summary
 listing of its category in [appendix B](appendix-b-grouped.html)
-or to the according category in the tablets.
+or to the according category in the tablets. The chapter headlines serve as
+anchor and links to the navigation menu. Thatswhy large chapter like C are split
+into C (second letter a-m) and Cn (second letter n-z).
 
 
 <a id="nav-top"/>
