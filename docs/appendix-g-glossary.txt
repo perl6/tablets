@@ -41,6 +41,9 @@ other logical operations are [*or*](#or), [*xor*](#xor), [*not*](#not)
 a specific value given to a [routine](#routine) at a certain time,
 not to be confused wirh *[parameter](#parameter)*
 
+<a id="array"/>
+**array** &mdash;
+
 <a id="ASAP"/>
 **ASAP** *(as soon as possible)* &mdash; within a given execution phase
 (*[compile time](#compile-time)* or [run time](#run-time))

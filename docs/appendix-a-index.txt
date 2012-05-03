@@ -357,7 +357,10 @@ forces [numeric context](appendix-g-glossary.html#numeric-context)
 <a id="comma"/><a id="comma-op"/>
 **[,](tablet-3-variables#array)** 
 [«list op»](tablet-4-operators.html#list-generation) &mdash;
-[list](tablet-3-variables#array)-generating operator
+[**infix**](#infix-category] 
+[*list*](appendix-g-glossary.html#list) generating operator &mdash;
+example: `1, 'two', 3.2` creates a list with three elements &mdash;
+see also: [**\[ \]**](#square-brackets-op)
 
 <a id="minus"/><a id="minus-op"/>
 **-**
@@ -791,22 +794,29 @@ forces operands into [boolean context](appendix-g-glossary.html#bool-context)
 forces (flattened) [array context](appendix-g-glossary.html#array-context),
 alias to **[list()](#list)** function
 
-<a id="postcircumfix-square-brackets-op"/><a id="slice-op"/>
-<span class="you-provide">var</span>**\[ \]** &mdash;
-[postcircumfix](#postcircumfix-category) operator,
-appended on an array var, returns an array slice with values which
-indexes was inside the brackets
-
 <a id="square-brackets"/><a id="square-brackets-op"/><a id="array-ref"/>
 **[**<span class="you-provide">l</span>**]** &mdash; [circumfix](#circumfix-category) operator
-that creates a reference to an array that holds all values that
-encompas these brackets
+[*circumfix*](#circumfix-category)
+[*operator*](appendix-g-glossary.html#operator) that creates a 
+[scalar](Scalar-type) holding an [*array*](#Array-type) whose elements are the
+items inside the brackets &mdash; see also: [**,**](#comma-op)
 
 <a id="square-brackets-metachar"/>
 **[**<span class="you-provide">p</span>**]**
 *[«regex metachar»](appendix-b-grouped.html#regex-metacharacter)* &mdash;
 encompass a *subregex*, results will not be remembered like with
 [**( )**](#round-brackets-metachar)
+
+<a id="postcircumfix-square-brackets-op"/><a id="slice-op"/>
+<span class="you-provide">var</span>**\[ \]** &mdash;
+[*postcircumfix*](#postcircumfix-category)
+[*operator*](appendix-g-glossary.html#operator) 
+appended on an [*array*](appendix-g-glossary.html#array)
+[*var*](appendix-g-glossary.html#variable)(no more spaces in between allowed),
+returns an array [*slice*](appendix-g-glossary.html#slice) with values which
+indexes was inside the brackets &mdash;
+example: `@a = 1..5; say @a[2..4,1]` returns '3 4 5 2'
+
 
 <a id="square-brackets-metaop"/><a id="reduce-op"/>
 **\[**<span class="you-provide">op</span>**\]**
@@ -1125,8 +1135,8 @@ requires, **[.count](#count)** includes also the optional
 <a id="Array-type"/>
 **Array**
 *[«mutable type»](appendix-b-grouped.html#mutable-types)* &mdash;
-Perl Array, a series of **[Scalar](#Scalar-type)**
-value container, or a variable that stores such a list
+Perl [*array*](appendix-g-glossary.html#array), container for a series of 
+**[Scalar](#Scalar-type)** value container
 
 <a id="array-adverb"/>
 **[:array](tablet-2-basic-syntax.html#interpolation)**
