@@ -42,14 +42,16 @@ If you like to help, [look here](https://github.com/perl6/tablets).
 (Command Line, Files, Sockets, Network, Misc.)
 
 [Tablet 6: Blocks](tablet-6-blocks.html)
- (Conditions, Loops, Jump Statements)
+(Conditions, Loops, Jump Statements)
 
 [Tablet 7: Subroutines](tablet-7-subroutines.html)
 (Signatures, Multis, Modules)
 
-[Tablet 8: Objects](tablet-8-objects.html) (Classes, Roles, Delegation)
+[Tablet 8: Objects](tablet-8-objects.html)
+(Classes, Roles, Delegation)
 
-[Tablet 9: Regex](tablet-9-regexes.html) (Rules, Grammars)
+[Tablet 9: Regex](tablet-9-regexes.html)
+(Rules, Grammars)
 
 [Tablet 10: Metaprogramming](tablet-10-metaprogramming.html)
 (Macros, Selfmade Ops, DSL)
@@ -60,17 +62,19 @@ If you like to help, [look here](https://github.com/perl6/tablets).
 (all ops, builtins, methods, alphabetically ordered)
 
 [Appendix B: Grouped Index](appendix-b-grouped.html)
-(cheat sheets and summary tables, content like
-appendix A but grouped by topic)
+(cheat sheets and summary tables, content like Appendix A but grouped by topic)
 
 [Appendix C: Cookbook](appendix-c-cookbook.html)
 (chunks of everyday Perl 5, translated into idiomatic Perl 6)
 
-[Appendix D: Delta](appendix-d-delta.html) (most drastic changes beween 5 and 6)
+[Appendix D: Delta](appendix-d-delta.html)
+(most drastic changes beween 5 and 6)
 
-[Appendix E: Exciting](appendix-e-exciting.html) (Excellent, Best-of, Appetizer tour)
+[Appendix E: Exciting](appendix-e-exciting.html)
+(Excellent, Best-of, Appetizer tour)
 
-[Appendix F: FAQ](appendix-f-faq.html) (frequently asked questions)
+[Appendix F: FAQ](appendix-f-faq.html)
+(frequently asked questions)
 
 [Appendix G: Glossary](appendix-g-glossary.html)
 
