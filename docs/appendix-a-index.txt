@@ -3,7 +3,6 @@
 This is an alphabetic sorted list of all operators, methods, builtins, types,
 modifier and special variables with short explanations, cross references,
 code examples and Perl 5 equivalents.
-
 It is sorted (almost as decided by [**leg**](#leg-op)) without prefixes like
 colon, dot, backslash, [*sigil*](appendix-g-glossary.html#sigil) or
 [*twigil*](appendix-g-glossary.html#twigil)
@@ -17,13 +16,13 @@ Sometimes are added green placeholder:
 <span class="you-provide">l</span> a list,
 <span class="you-provide">op</span> any operator and
 <span class="you-provide">t</span> any *[term](appendix-g-glossary.html#term)*.
-The items itself are linked to a more detailed explanation inside of a tablet.
 After each method is its signature (in round brackets), telling you
 the value type (same as in placeholders) of the parameters and the return value.
+The items itself are linked to a more detailed explanation inside of a tablet.
 Each term is followed by a link «in french brackets» to a condensed summary
-listing of its category in [appendix B](appendix-b-grouped.html)
+listing of its category in [Appendix B](appendix-b-grouped.html)
 or to the according category in the tablets. Most links in the short description
-lead to another item (when bold) or to the glossary (when italic).
+lead to another item in A (when **bold**) or to the glossary (when **italic*).
 The chapter headlines serve as anchor and links to the navigation menu.
 Thatswhy large chapter like C are split into "C" (second letter a-m)
 and a following "n" (second letter n-z).

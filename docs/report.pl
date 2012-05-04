@@ -18,7 +18,9 @@ for my $md_file (<*.txt>){
 	$file{ ucfirst ($fn_parts[0]) . '-' . uc($fn_parts[1]) } = $md_file;
 }
 
+
 # and sniff through them
+print "    page      item  anchor  links   lines    bytes \n", '-' x 50,"\n";
 for my $page (sort keys %file) {
 	open $FH, '<', $file{$page};
 	$content = do {local $/; <$FH>};
@@ -28,10 +30,10 @@ for my $page (sort keys %file) {
 		$sum{$type} += $data{$type};
 	}
 	$sum{'size'} += $data{'size'};
-	printf "%11s  items: %4d  anchor: %4d  links: %5d  line: %5d  bytes: %6.d\n", 
+	printf "%11s   %4d   %4d   %5d   %5d   %6.d\n", 
 		$page, $data{'item'}, $data{'anchor'}, $data{'link'}, $data{'line'}, $data{'size'};
 }
-print '-' x 80,"\n";
-printf "Sum          items: %4d  anchor: %4d  links: %5d  line: %5d  bytes: %6d\n",
+print '-' x 50,"\n";
+printf "        Sum   %4d   %4d   %5d   %5d   %6d\n",
 	$sum{'item'}, $sum{'anchor'}, $sum{'link'}, $sum{'line'}, $sum{'size'};
 
