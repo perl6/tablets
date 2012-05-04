@@ -53,18 +53,20 @@ the other, without having to look too much backwards or
 forwards. Having everything indexed and crosslinked helps you find
 what you are interested in.
 
-Chapter 0 is here, while 1 and 2 contain useful theoretical knowledge.
-Chapter 3 .. 10 are about the concrete syntax and appendix A is the
-Index, that lists all operators and keywords, alphabetically ordered.
-Appendix B holds all tables like operator precedence,
+Chapter 0 and 1 contain theoretical knowledge,
+2 .. 10 are about the concrete syntax.
+Appendix A is the main index, that lists all operators and keywords, 
+alphabetically ordered.
+Appendix B holds all tables like operator precedence
+and the content of A grouped by topic.
 C is the cookbook which shows you common algorithms in native Perl 6.
 Appendix D is a kind of 'perldelta' describing the most drastic changes
 between a fairly recent version of Perl 5 and Perl 6.
 E stands for exciting or excellence showing just the glamorous and
 fast to understand bits to impress the world.
-Links to other information sources are to be found in F and G stands
-for [glossary](appendix-g-glossary.html)
+F is the FAQ and G is short for [glossary](appendix-g-glossary.html)
 where all the computer science terms are explained.
+Links to more resources are in Appendix H.
 
 
 Motivation

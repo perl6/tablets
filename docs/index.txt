@@ -70,6 +70,8 @@ appendix A but grouped by topic)
 
 [Appendix E: Exciting](appendix-e-exciting.html), Best-of, Appetizer tour
 
-[Appendix F: Links](appendix-f-links.html)
+[Appendix F: FAQ](appendix-f-faq.html), frequently asked questions
 
 [Appendix G: Glossary](appendix-g-glossary.html)
+
+[Appendix H: Links](appendix-h-links.html)
