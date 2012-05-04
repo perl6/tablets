@@ -56,10 +56,10 @@ If you like to help, [look here](https://github.com/perl6/tablets).
 
 ---
 
-[Appendix A: Index](appendix-a-index.html)
+[Appendix A: Sorted Index](appendix-a-index.html)
 (all ops, builtins, methods, alphabetically ordered)
 
-[Appendix B: Short Reference](appendix-b-grouped.html)
+[Appendix B: Grouped Index](appendix-b-grouped.html)
 (cheat sheets and summary tables, content like
 appendix A but grouped by topic)
 
@@ -68,9 +68,9 @@ appendix A but grouped by topic)
 
 [Appendix D: Perl 5-6 Delta](appendix-d-delta.html)
 
-[Appendix E: Exciting](appendix-e-exciting.html), Best-of, Appetizer tour
+[Appendix E: Exciting](appendix-e-exciting.html) (Excellent, Best-of, Appetizer tour)
 
-[Appendix F: FAQ](appendix-f-faq.html), frequently asked questions
+[Appendix F: FAQ](appendix-f-faq.html) (frequently asked questions)
 
 [Appendix G: Glossary](appendix-g-glossary.html)
 
