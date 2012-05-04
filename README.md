@@ -16,7 +16,7 @@ How to Help
   main Index (Appendix A). When you see a Perl 6 term without a link,
   find its corresponding anchor in the Index, then (in Appendix B) create a link to it.
 
-* Several it terms in the glossary (Appendix G) are still unexplained.
+* Several items in the glossary (Appendix G) are still unexplained.
 
 * The Tablet 1: History needs a lot of help, especially information from people
   who were involved in the subprojects.
