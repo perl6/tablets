@@ -107,7 +107,8 @@ but create tornados in the amazon or something like that
 is the name of a [type of storage](#Capture-type) for the [*arguments*](#argument)
 of a specific [*routine*](#routine) call. When variables are used in this call
 like: `chop( $text )`, then the capture works like a [*reference*](#reference)
-to this variable and provides access to that variable
+to this variable and provides access to that variable, 
+[more ...](tablet-3-variables.html#capture)
 
 <a id="closure"/>
 **closure** &mdash;
@@ -127,6 +128,9 @@ flying pig on top, you would have 2 codepoints but only one [*grapheme*](#graphe
 [*reference*] to an executable [*block*](#block) of code ([*routine*](#routine)),
 in Perl 6 there are just [objects](#object) representing a routine that can be
 [attributes](#attribute) of other objects
+
+<a id="code-context"/>
+**code context** &mdash;
 
 <a id="compilation"/>
 **compilation** &mdash;
@@ -262,7 +266,7 @@ out of several [codepoints](#codepoint)
 
 <a id="hash-context"/>
 **hash context** &mdash;
-[hash](#hash)
+[hash](#hash) [context](#context)
 
 
 # [I](#nav-top)

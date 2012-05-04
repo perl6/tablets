@@ -482,22 +482,22 @@ as "Texas Quotes").
 Contextualizers
 ---------------
 
-Infix operator or functions that forcing a context.
+Infix operator or functions that forcing a [context](appendix-g-glossary.html#context).
 
 -----------------------------------------------  ------------------------------------  ----------------------------------------------------------------------------------------------
 [`$()`](appendix-a-index.html#dollar-op)         [item()](appendix-a-index.html#item)  [scalar/item context](tablet-3-variables.html#scalar)
-[`?`](appendix-a-index.html#question-op)         [so()](appendix-a-index.html#so)      [boolean](](tablet-4-operators.html#bool-context)
+[`?`](appendix-a-index.html#question-op)         [so()](appendix-a-index.html#so)      [boolean](appendix-g-glossary.html#bool-context)
 [`!`](appendix-a-index.html#exclamation-op)      [not()](appendix-a-index.html#not)    negated bool context
-[`+`](appendix-a-index.html#plus-op)             &nbsp;                                [numeric](](tablet-4-operators.html#numeric-context)
+[`+`](appendix-a-index.html#plus-op)             &nbsp;                                [numeric](appendix-g-glossary.html#numeric-context)
 [`-`](appendix-a-index.html#minus-op)            &nbsp;                                negated num context
-[`~`](appendix-a-index.html#tilde-context)       &nbsp;                                [string](](tablet-4-operators.html#string-context)
-[`@()`](appendix-a-index.html#at-op)             [list()](appendix-a-index.html#list)  [array/list context](variables.html#array)
+[`~`](appendix-a-index.html#tilde-context)       &nbsp;                                [string](appendix-g-glossary.html#string-context)
+[`@()`](appendix-a-index.html#at-op)             [list()](appendix-a-index.html#list)  [array/list context](appendix-g-glossary.html#list-context)
 &nbsp;                                           [flat()](appendix-a-index.html#flat)  flat list
 &nbsp;                                           [lol()](appendix-a-index.html#lol)    list of list (was slice context before)
-[`%()`](appendix-a-index.html#percent-context)   [hash()](appendix-a-index.html#hash)  [hash context](tablet-3-variables.html#hash)
-[`&()`](appendix-a-index.html#ampersand-context) [code()](appendix-a-index.html#code)  [coderef](tablet-3-variables.html#callable), [routines](ap-b-lookup.html#routines)
-[`|`](appendix-a-index.html#pipe-context)        &nbsp;                                flatten [capture](tablet-3-variables.html#capture) object into arglist (named parameter)
-[`||`](appendix-a-index.html#pipe-pipe-context)  &nbsp;                                flatten [capture](tablet-3-variables.html#capture) object into semicolon list (positional parameter)
+[`%()`](appendix-a-index.html#percent-context)   [hash()](appendix-a-index.html#hash)  [hash context](appendix-g-glossary.html#hash-context)
+[`&()`](appendix-a-index.html#ampersand-context) [code()](appendix-a-index.html#code)  [code](appendix-g-glossary.html#code-context)
+[`|`](appendix-a-index.html#pipe-context)        &nbsp;                                flatten [capture](appendix-g-glossary.html#capture) object into arglist (named parameter)
+[`||`](appendix-a-index.html#pipe-pipe-context)  &nbsp;                                flatten [capture](appendix-g-glossary.html#capture) object into semicolon list (positional parameter)
 -----------------------------------------------  ------------------------------------  ----------------------------------------------------------------------------------------------
 
 
