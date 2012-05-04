@@ -942,11 +942,11 @@ see also: **[any](#any)**
 match alternate patterns with longest token matching
 (*[OR](appendix-g-glossary.html#or)* - temporal simultaneous connection of patterns)
 
-<a id="pipe-context"/>
+<a id="pipe-context"/><a id="pipe-context-op"/>
 **|**()
-*[«context op»](appendix-b-grouped.html#contextualizers)* &mdash;
-flatten [capture](tablet-3-variables#capture)
-object into arglist, (named parameter)
+[*«context op»*](appendix-b-grouped.html#contextualizers) &mdash;
+flatten [capture](appendix-g-glossary.html#capture)
+object into arglist, ([*named parameter*](appendix-g-glossary.html#named-parameter))
 
 <a id="pipe-pipe-op"/><a id="logical-or"/>
 **||**
@@ -963,9 +963,9 @@ see also: [**|**](#junctive-or), [**?? !!**](#ternary-op)
 
 <a id="pipe-pipe-metachar"/>
 **||**
-*[«regex Metachar»](appendix-b-grouped.html#regex-metacharacter)* &mdash;
+[*«regex Metachar»*](appendix-b-grouped.html#regex-metacharacter) &mdash;
 match alternate patterns (temporal consequent alternatives) as
-connected with a logical *[OR](appendix-g-glossary.html#or)*
+connected with a logical [*OR*](appendix-g-glossary.html#or)
 
 <a id="pipe-pipe-context"/>
 **||**()

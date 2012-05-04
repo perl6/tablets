@@ -485,7 +485,7 @@ Contextualizers
 Infix operator or functions that forcing a [context](appendix-g-glossary.html#context).
 
 -----------------------------------------------  ------------------------------------  ----------------------------------------------------------------------------------------------
-[`$()`](appendix-a-index.html#dollar-op)         [item()](appendix-a-index.html#item)  [scalar/item context](tablet-3-variables.html#scalar)
+[`$()`](appendix-a-index.html#dollar-op)         [item()](appendix-a-index.html#item)  [scalar/item context](appendix-g-glossary.html#item-context)
 [`?`](appendix-a-index.html#question-op)         [so()](appendix-a-index.html#so)      [boolean](appendix-g-glossary.html#bool-context)
 [`!`](appendix-a-index.html#exclamation-op)      [not()](appendix-a-index.html#not)    negated bool context
 [`+`](appendix-a-index.html#plus-op)             &nbsp;                                [numeric](appendix-g-glossary.html#numeric-context)
@@ -505,53 +505,56 @@ Infix operator or functions that forcing a [context](appendix-g-glossary.html#co
 Smartmatch
 ----------
 
-When used as infix `$_` is the left side, X is right. In when clauses
-just X is stated. Selection of the comparison alhorithm (4th column)
-is based on the value [types](ap-b-lookup.html#value-types) as stated
-in the first two columns.
+When [**~~**](appendix-a-index.html#smartmatch-op) is used as
+[infix](appendix-a-index.html#infix-category)
+[**\$\_**](appendix-a-index.html#context-var) is the left side, X is right.
+In [**when**](appendix-a-index.html#when) clauses just X is stated.
+Selection of the comparison alhorithm (4th column) is based on the value
+[*types*](appendix-g-glossary.html#type) as stated in the first two columns.
 
-`$_`             X               Type of Match Implied     Match if (given `$_`)
------------      --------------  -----------------------   ----------------------------------------------------------
-Any              True            `~~` True                 (parsewarn)
-Any              False           `~~` False match          (parsewarn)
-Any              `*`             block signature match     block successfully binds to (pipe)$_ (flattened arglist)
-Any              Callable:(\$)   item sub truth            `X($_)`
-Any              Callable:()     simple closure truth      X() (ignoring `$_`)
-Any              Bool            simple truth              X
-Any              Match           match success             X
-Any              Numeric         numeric equality          `+$_ = X`
-Any              Stringy         string equality           `~$_ eq X`
-Any              Whatever        always matches            True
-Any              Nil             is nil                    `$_ === Nil`
-Hash             Pair            test hash mapping         `$_{X.key} ~~ X.value`
-Any              Pair            test object attribute     `?."{X.key}" = ?X.value` (e.g. filetests)
-Set              Set             identical sets            `$_ === X`
-Hash             Set             hash keys same set        `$_.keys === X`
-Any              Set             force set comparison      `Set($_) === X`
-Array            Array           arrays are comparable     `$_ «===» X` (dwims `*` wildcards!)
-Set              Array           array equiv to set        `$_ === Set(X)`
-Any              Array           lists are comparable      `@$_ «===» X`
-Hash             Hash            hash keys same set        `$_.keys === X.keys`
-Set              Hash            hash keys same set        `$_ === X.keys
-Array            Hash            hash slice existence      `X.{any @$_}:exists`
-Regex            Hash            hash key grep             `any(X.keys).match($_)`
-Cool             Hash            hash entry existence      `X.{$_}:exists`
-Any              Hash            hash slice existence      `X.{any @$_}:exists`
-Str              Regex           string pattern match      `.match(X)`
-Hash             Regex           hash key "boolean grep"   `.any.match(X)`
-Array            Regex           array "boolean grep"      `.any.match(X)`
-Any              Regex           pattern match             `.match(X)`
-Num              Range           in numeric range          `X.min <= $_ <= X.max (mod ^'s)`
-Str              Range           in string range           `X.min le $_ le X.max (mod ^'s)`
-Range            Range           subset range              `!$_ or .bounds.all ~~ X (mod ^'s)`
-Any              Range           in generic range          `[!after] X.min,$_,X.max` (etc.)
-Any              Type            type membership           `$_.does(X)`
-Signature        Signature       sig compatibility         `$_` is a subset of X ???
-Callable         Signature       sig compatibility         `$_.sig` is a subset of X ???
-Capture          Signature       parameters bindable       `$_` could bind to X (doesn't!)
-Any              Signature       parameters bindable       `(pipe)$_` could bind to X (doesn't!)
-Any              Any             scalars are identical     `$_ === X`
------------      --------------  -----------------------   ----------------------------------------------------------
+
+`$_`                                               X                                                  Type of Match Implied                             Match if (given `$_`)
+-------------------------------------------------  -------------------------------------------------  -----------------------------------------------   ----------------------------------------------------------
+[Any](appendix-a-index.html#Any-type)              [True](appendix-a-index.html#True)                 `~~` [True](appendix-a-index.html#True)           (parsewarn)
+[Any](appendix-a-index.html#Any-type)              [False](appendix-a-index.html#False)               `~~` [False](appendix-a-index.html#False) match   (parsewarn)
+[Any](appendix-a-index.html#Any-type)              [`*`](appendix-a-index.html#asterisk-term)         block signature match                             block successfully binds to `|$_` ([flattened arglist](appendix-a-index.html#pipe-context))
+[Any](appendix-a-index.html#Any-type)              Callable:(\$)                                      item sub truth                                    `X($_)`
+[Any](appendix-a-index.html#Any-type)              Callable:()                                        simple closure truth                              `X()` (ignoring `$_`)
+[Any](appendix-a-index.html#Any-type)              [Bool](appendix-a-index.html#Bool-type)            simple truth                                      `X`
+[Any](appendix-a-index.html#Any-type)              [Match](appendix-a-index.html#Match-type)          match success                                     `X`
+[Any](appendix-a-index.html#Any-type)              [Numeric](appendix-a-index.html#Num-type)          numeric equality                                  `+$_ = X`
+[Any](appendix-a-index.html#Any-type)              [Stringy](appendix-a-index.html#Str-type)          string equality                                   `~$_ eq X`
+[Any](appendix-a-index.html#Any-type)              [Whatever](appendix-a-index.html#Whatever-type)    always matches                                    [True](appendix-a-index.html#True)
+[Any](appendix-a-index.html#Any-type)              [Nil](appendix-a-index.html#Nil-type)              is nil                                            `$_ === Nil`
+[Hash](appendix-a-index.html#Hash-type)            [Pair](appendix-a-index.html#Pair-type)            test hash mapping                                 `$_{X.key} ~~ X.value`
+[Any](appendix-a-index.html#Any-type)              [Pair](appendix-a-index.html#Pair-type)            test object attribute                             `?."{X.key}" = ?X.value` (e.g. filetests)
+[Set](appendix-a-index.html#Set-type)              [Set](appendix-a-index.html#Set-type)              identical sets                                    `$_ === X`
+[Hash](appendix-a-index.html#Hash-type)            [Set](appendix-a-index.html#Set-type)              hash keys same set                                `$_.keys === X`
+[Any](appendix-a-index.html#Any-type)              [Set](appendix-a-index.html#Set-type)              force set comparison                              `Set($_) === X`
+[Array](appendix-a-index.html#Array-type)          [Array](appendix-a-index.html#Array-type)          arrays are comparable                             `$_ «===» X` (dwims `*` wildcards!)
+[Set](appendix-a-index.html#Set-type)              [Array](appendix-a-index.html#Array-type)          array equiv to set                                `$_ === Set(X)`
+[Any](appendix-a-index.html#Any-type)              [Array](appendix-a-index.html#Array-type)          lists are comparable                              `@$_ «===» X`
+[Hash](appendix-a-index.html#Hash-type)            [Hash](appendix-a-index.html#Hash-type)            hash keys same set                                `$_.keys === X.keys`
+[Set](appendix-a-index.html#Set-type)              [Hash](appendix-a-index.html#Hash-type)            hash keys same set                                `$_ === X.keys
+[Array](appendix-a-index.html#Array-type)          [Hash](appendix-a-index.html#Hash-type)            hash slice existence                              `X.{any @$_}:exists`
+[Regex](appendix-a-index.html#Regex-type)          [Hash](appendix-a-index.html#Hash-type)            hash key grep                                     `any(X.keys).match($_)`
+[Cool](appendix-a-index.html#Cool-type)            [Hash](appendix-a-index.html#Hash-type)            hash entry existence                              `X.{$_}:exists`
+[Any](appendix-a-index.html#Any-type)              [Hash](appendix-a-index.html#Hash-type)            hash slice existence                              `X.{any @$_}:exists`
+[Str](appendix-a-index.html#Str-type)              [Regex](appendix-a-index.html#Regex-type)          string pattern match                              `.match(X)`
+[Hash](appendix-a-index.html#Hash-type)            [Regex](appendix-a-index.html#Regex-type)          hash key "boolean grep"                           `.any.match(X)`
+[Array](appendix-a-index.html#Array-type)          [Regex](appendix-a-index.html#Regex-type)          array "boolean grep"                              `.any.match(X)`
+[Any](appendix-a-index.html#Any-type)              [Regex](appendix-a-index.html#Regex-type)          pattern match                                     `.match(X)`
+[Num](appendix-a-index.html#Num-type)              [Range](appendix-a-index.html#Range-type)          in numeric range                                  `X.min <= $_ <= X.max (mod ^'s)`
+[Str](appendix-a-index.html#Str-type)              [Range](appendix-a-index.html#Range-type)          in string range                                   `X.min le $_ le X.max (mod ^'s)`
+[Range](appendix-a-index.html#Range-type)          [Range](appendix-a-index.html#Range-type)          subset range                                      `!$_ or .bounds.all ~~ X (mod ^'s)`
+[Any](appendix-a-index.html#Any-type)              [Range](appendix-a-index.html#Range-type)          in generic range                                  `[!after] X.min,$_,X.max` (etc.)
+[Any](appendix-a-index.html#Any-type)              [Type](appendix-g-glossary.html#type)              type membership                                   `$_.does(X)`
+[Signature](appendix-a-index.html#Signature-type)  [Signature](appendix-a-index.html#Signature-type)  sig compatibility                                 `$_` is a subset of X ???
+[Callable](appendix-g-glossary.html#routine)       [Signature](appendix-a-index.html#Signature-type)  sig compatibility                                 `$_.sig` is a subset of X ???
+[Capture](appendix-a-index.html#Capture-type)      [Signature](appendix-a-index.html#Signature-type)  parameters bindable                               `$_` could bind to X (doesn't!)
+[Any](appendix-a-index.html#Any-type)              [Signature](appendix-a-index.html#Signature-type)  parameters bindable                               `(pipe)$_` could bind to X (doesn't!)
+[Any](appendix-a-index.html#Any-type)              [Any](appendix-a-index.html#Any-type)              scalars are identical                             `$_ === X`
+------------------------------------------------   -------------------------------------------------  -----------------------------------------------   ----------------------------------------------------------
 
 
 
