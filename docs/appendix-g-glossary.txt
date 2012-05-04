@@ -39,14 +39,14 @@ other logical operations are [*or*](#or), [*xor*](#xor), [*not*](#not)
 <a id="argument"/>
 **argument** &mdash;
 a specific value given to a [routine](#routine) at a certain time,
-not to be confused wirh *[parameter](#parameter)*
+not to be confused wirh [*parameter*](#parameter)
 
 <a id="array"/>
-**array** &mdash;
+**array** &mdash; mostly synonym for [*list*](#list)
 
 <a id="ASAP"/>
 **ASAP** *(as soon as possible)* &mdash; within a given execution phase
-(*[compile time](#compile-time)* or [run time](#run-time))
+([*compile time*](#compile-time) or [run time](#run-time))
 
 <a id="ASCII"/>
 **ASCII** &mdash;
@@ -79,7 +79,7 @@ back leftward a bit and try another possibility after a part of a
 pattern didn't match
 
 <a id="binding"/>
-**[binding](tablet-3-variables#binding)** &mdash;
+[**binding**](tablet-3-variables#binding) &mdash;
 making two variables share the same content by pointing to same
 memory location, done i Perl 6 with 
 [**:=**](appendix-a-index.html#runtime-binding-op) 
@@ -110,15 +110,18 @@ like: `chop( $text )`, then the capture works like a [*reference*](#reference)
 to this variable and provides access to that variable, 
 [more ...](tablet-3-variables.html#capture)
 
+<a id="class"/>
+**class** &mdash;
+
 <a id="closure"/>
 **closure** &mdash;
 routines whose state (content of all local variables) is
 completely preserved until the next execution,
-mostly used as a fancy alias for a *[block](#block)*
+mostly used as a fancy alias for a [*block*](#block)
 
 <a id="codepoint"/>
 **codepoint** &mdash;
-A *[unicode](#unicode)* primitive, represented by a specific number,
+A [*unicode*](#unicode) primitive, represented by a specific number,
 that stands for a slightly varying graphical representation.
 Since you can create with *unicode* combined character like an A with an
 flying pig on top, you would have 2 codepoints but only one [*grapheme*](#grapheme)
@@ -140,7 +143,7 @@ executable (piece of) program
 <a id="compile-time"/>
 **compile time** &mdash;
 time when Perl converts source code to executable form (bytecode),
-is always before *[run time](#run-time)*
+is always before [*run time*](#run-time)
 even if code can be compiled via [**eval**](appendix-a-index.html#eval) and
 [**evalfile**](appendix-a-index.html#evalfile) when the program is
 already runnung, to run code at the begin of compile time use
@@ -168,8 +171,8 @@ parameter and as memory of the last result
 
 <a id="currying"/>
 **currying** &mdash;
-creating a *[subroutine](routine)* that calls another with certain
-*[parameter](#parameter)* to be predefined
+creating a [*subroutine*](routine) that calls another with certain
+[*parameter*](#parameter) to be predefined
 
 
 # [D](#nav-top)
@@ -255,7 +258,7 @@ by Perl 6, considered as a branch of Declarative Programming
 
 <a id="grapheme"/>
 **grapheme** &mdash;
-a *[unicode](#unicode)* character like a japanese kanji that may be composed
+a [*unicode*](#unicode) character like a japanese kanji that may be composed
 out of several [codepoints](#codepoint)
 
 # [H](#nav-top)
@@ -273,7 +276,7 @@ out of several [codepoints](#codepoint)
 
 <a id="invocant"/>
 **invocant** &mdash;
-*[routine](#routine)* or [statement](#statement) that called the piece
+[*routine*](#routine) or [statement](#statement) that called the piece
 of code of issue
 
 <a id="item-context"/>
@@ -283,7 +286,7 @@ is called in Perl 5 [scalar context](#scalar-context)
 
 <a id="iteration"/>
 **iteration** &mdash;
-repeated executing of a term or *[block](#block)*, enforced by
+repeated executing of a term or [*block*](#block), enforced by
 [iterators](appendix-b-grouped.html#loops)
 
 <a id="iterator"/>
@@ -335,20 +338,21 @@ because of looking for the longest alternative
 # [M](#nav-top)
 
 <a id="metaoperator"/>
-**[metaoperator](appendix-b-grouped.html#metaoperators)** &mdash;
-operators that alter the meaning or expand the scope of other normal operators,
+[**metaoperator**](appendix-b-grouped.html#metaoperators) &mdash;
+operator that alters the meaning or expands the scope of another normal operator,
 [a listing of them](appendix-b-grouped.html#metaoperators)
 
 <a id="metaprogramming"/>
 **metaprogramming** &mdash; 
 
 <a id="method"/>
-**method** &mdash;
+**method** &mdash; 
+is a [*routine*] that belongs to a [*object*](#object) or a class
 
 <a id="MMD"/>
 **MMD** *(multimethod dispatch)* &mdash;
-technique where several *[routines](#routine)* can have the same name,
-but different *[signatures](#signature)*, when the name is called - the
+technique where several [*routines*](#routine) can have the same name,
+but different [*signatures*](#signature), when the name is called - the
 suitable routine is seleted via *MMD* &mdash;
 see also: [**multi**](appendix-a-index.html#multi)
 
@@ -402,7 +406,7 @@ following operator working with that logic:
 [**or**](appendix-a-index.html#or)
 [**orelse**](appendix-a-index.html#orelse),
 [**err**](appendix-a-index.html#err) &mdash;
-other logical operations are: [*and*](#and), [*xor*](#xor), [*not*](#not)
+other logical operations are: [**and**](#and), [**xor**](#xor), [**not**](#not)
 
 
 # [P](#nav-top)
@@ -412,13 +416,13 @@ other logical operations are: [*and*](#and), [*xor*](#xor), [*not*](#not)
 a slot for an [argument](#argument) that a [*routine*](#routine) accepts,
 it usually has a [*type*](#type) that sets limits what values are acceptable,
 there are *required parameter*, *optional parameter*,
-[positional parameter](#positional-parameter) and [named parameter](#named-parameter),
+[*positional parameter*](#positional-parameter) and [named parameter](#named-parameter),
 sum of all parameters is called [signature](#signature)
 
 <a id="parsetree"/>
 **parsetree** &mdash;
 hierarchical data representing the logical structure
-of a program, also called *[AST](#AST)*
+of a program, also called [*AST*](#AST)
 
 <a id="parsing"/>
 **parsing** &mdash;
@@ -435,7 +439,7 @@ one direction) without buffering, can also mean just the connection of several
 commands via [**==\>**](appendix-a-index.html#equal-equal-greater-op) and alike
 
 <a id="POD"/>
-**[POD](tablet-2-basic-syntax.html#pod)**
+[**POD**](tablet-2-basic-syntax.html#pod)
 *(Plain Old Documentation)* &mdash; 
 a markup language to embeded documentation into Perl source code,
 has in Perl 6 the ability to store data into special variables 
@@ -507,14 +511,14 @@ a [whole page](tablet-9-regexes.html) is dedicated just about that subject
 <a id="routine"/>
 **routine** &mdash;
 [block](#block) of code callable by name,
-can have a *[signature](#signature)* and a return type,
+can have a [*signature*](#signature) and a return type,
 when block is [compiled](#compilation) it becomes an object of the type
 [**SoftRoutine**](appendix-a-index.html#softroutine-type)
 or [**HardRoutine**](appendix-a-index.html#hardroutine-type)
 
 <a id="run-time"/>
 **run time** &mdash; time when execution hits a certain part of the program,
-after *[compile time](#compile-time)*
+after [*compile time*](#compile-time)
 
 
 # [S](#nav-top)
@@ -556,8 +560,8 @@ part of an array or list
 
 <a id="slurpy-array"/>
 **slurpy array** &mdash;
-array parameter that receives all (slurps) all optional
-*[subroutine](#routine)* arguments
+array [*parameter*](#parameter) that receives (slurps) all remaining 
+[*arguments*](#argument) as one [*list*](#list)
 
 <a id="smartmatch"/>
 **smartmatch** &mdash;
@@ -589,7 +593,7 @@ but in Perl 6 there are [much more types](#Routine-types) hence the name change
 
 <a id="subrule"/>
 **subrule** &mdash;
-piece of a *[regular expression](#regex)* that has a name,
+piece of a [*regular expression*](#regex) that has a name,
 its findings are stored under that name,
 some of them were used so often, that their built into to language as
 [predefined subrules](appendix-b-grouped.html#subrules)
@@ -613,13 +617,13 @@ like [**given**](appendix-a-index.html#given) and [**for**](appendix-a-index.htm
 
 <a id="trait"/>
 **trait** &mdash;
-additional property of a variable, defined at *[compile time](#compile-time)*,
+additional property of a variable, defined at [*compile time*](#compile-time),
 see [**but**](appendix-a-index.html#but), what other languages call
 *trait* Perl calls [role](#role)
 
 <a id="twigil"/>
-**[twigil](appendix-b-grouped.html#twigils)** &mdash;
-second(ary) *[sigil](#sigil)* indicating a special property of a variable,
+[**twigil**](appendix-b-grouped.html#twigils) &mdash;
+second(ary) [*sigil*](#sigil) indicating a special property of a variable,
 [(more details here)](tablet-3-variables#twigils)
 
 <a id="type"/>
@@ -630,7 +634,7 @@ second(ary) *[sigil](#sigil)* indicating a special property of a variable,
 <a id="unicode"/>
 **unicode** &mdash;
 format to save text in, that can contain almost any letter or symbol known to men,
-not just *[ASCII](#ASCII)*, its [fully supported](appendix-d-delta.html#unicode)
+not just [*ASCII*](#ASCII), its [fully supported](appendix-d-delta.html#unicode)
 by Perl 6, which means any part of a a program might use any character or symbol,
 strange names that start with UTF are most probably Unicode formats
 
