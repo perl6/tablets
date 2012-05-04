@@ -11,6 +11,8 @@ my %pattern = (
 	link   => qr/\]\(/,
 	line   => qr/\n/,
 );
+my $head = '    page     title   item  anchor  links   lines    bytes';
+my $format = "%11s    %3s   %4s   %4s   %5s   %5s   %6s\n";
 
 # filter out all the tablet files
 for my $md_file (<*.txt>){
@@ -21,7 +23,7 @@ for my $md_file (<*.txt>){
 
 
 # and sniff through them
-print "    page     title   item  anchor  links   lines    bytes \n", '-' x 57,"\n";
+print "$head \n", '-' x length $head,"\n";
 for my $page (sort keys %file) {
 	open $FH, '<', $file{$page};
 	$content = do {local $/; <$FH>};
@@ -31,14 +33,12 @@ for my $page (sort keys %file) {
 		$sum{$type} += $data{$type};
 	}
 	$sum{'size'} += $data{'size'};
-	printf "%11s    %3d   %4d   %4d   %5d   %5d   %6.d\n", 
-           $page, $data{'head'}, $data{'item'}, $data{'anchor'}, $data{'link'},
-                  $data{'line'}, $data{'size'};
+	printf $format, $page, $data{'head'}, $data{'item'},
+	                $data{'anchor'}, $data{'link'}, $data{'line'}, $data{'size'};
 }
-print '-' x 57,"\n";
-printf "        Sum    %3d   %4d   %4d   %5d   %5d   %6d\n",
-	$sum{'head'}, $sum{'item'}, $sum{'anchor'},  $sum{'link'},
-	$sum{'line'}, $sum{'size'};
+print '-' x length $head,"\n";
+printf $format, 'Sum', $sum{'head'}, $sum{'item'},
+                       $sum{'anchor'},  $sum{'link'}, $sum{'line'}, $sum{'size'};
 
 
 # Tester
