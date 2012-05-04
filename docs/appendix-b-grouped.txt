@@ -482,7 +482,8 @@ as "Texas Quotes").
 Contextualizers
 ---------------
 
-Infix operator or functions that forcing a [context](appendix-g-glossary.html#context).
+[prefix](appendix-a-index.html#prefix-category) operators or functions
+that forcing a [context](appendix-g-glossary.html#context).
 
 -----------------------------------------------  ------------------------------------  ----------------------------------------------------------------------------------------------
 [`$()`](appendix-a-index.html#dollar-op)         [item()](appendix-a-index.html#item)  [scalar/item context](appendix-g-glossary.html#item-context)
