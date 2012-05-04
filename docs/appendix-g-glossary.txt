@@ -424,7 +424,7 @@ of a program, also called *[AST](#AST)*
 **parsing** &mdash;
 
 <a id="phaser"/>
-**[phaser](appendix-b-grouped.html#closure-traits)** &mdash;
+[**phaser**](appendix-b-grouped.html#closure-traits) &mdash;
 Perl 6 term for specially named (due a prefix statement) subblocks withe special
 [*runtimes*](#run-time) aka [*closure traits*](appendix-b-grouped#closure-traits) &mdash;
 example: [**BEGIN**](appendix-a-index.html#BEGIN-phaser)
