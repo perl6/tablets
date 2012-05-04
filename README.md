@@ -71,8 +71,10 @@ CONTRIBUTORS
 
 * lichtkind <lichtkind@cpan.org>
 * uvtc
+* moritz
 * raiph
 * Siddhant
 * samlh
-* moritz
+* cowens
+
 
