@@ -143,22 +143,10 @@ sublanguage seen by the parser at this lexical spot
 [`$~P5Regex`](appendix-a-index.html#P5Regex-slang-var)   the current root of the Perl regex language
 -------------------------------------------------------  ------------------------------------------------
 
-Scope Declarator
-----------------
+Scope
+-----
 
------------------------------------------------  --------------------------------------------------
-[`my`](appendix-a-index.html#my)                 introduces lexically scoped names
-[`state`](appendix-a-index.html#state)           introduces lexically scoped but persistent names
-[`our`](appendix-a-index.html#our)               introduces package-scoped names
-[`anon`](appendix-a-index.html#anon)             introduces names that aren't to be stored anywhere
-[`has`](appendix-a-index.html#has)               introduces object attribute names
-[`augment`](appendix-a-index.html#augment)       adds definitions to an existing name
-[`supersede`](appendix-a-index.html#supersede)   replaces definitions of an existing name
------------------------------------------------  --------------------------------------------------
-
-
-Scopes
-------
+### Scopes ###
 
 The following pseudo-package names are reserved at the front of a
 name:
@@ -190,6 +178,19 @@ calls:
 ------  -----------------------------------------------------
 SUPER   Package symbols declared in inherited classes
 ------  -----------------------------------------------------
+
+
+### Declarator ###
+
+-----------------------------------------------  --------------------------------------------------
+[`my`](appendix-a-index.html#my)                 introduces lexically scoped names
+[`state`](appendix-a-index.html#state)           introduces lexically scoped but persistent names
+[`our`](appendix-a-index.html#our)               introduces package-scoped names
+[`anon`](appendix-a-index.html#anon)             introduces names that aren't to be stored anywhere
+[`has`](appendix-a-index.html#has)               introduces object attribute names
+[`augment`](appendix-a-index.html#augment)       adds definitions to an existing name
+[`supersede`](appendix-a-index.html#supersede)   replaces definitions of an existing name
+-----------------------------------------------  --------------------------------------------------
 
 
 
@@ -271,8 +272,7 @@ Widget                                           Any Widget object
 
 
 
-Low level data types
---------------------
+### Low level data types ###
 
 This is more low level than the last table. These types are more meant
 to give the compiler optimizing hints.
@@ -317,9 +317,8 @@ buf64       a uint64 buffer
 Object Introspection
 --------------------
 
-[Everything in P6](appendix-d-delta.html#object-oriented) is an 
-[object](appendix-g-glossary.html#object) and every object has following
-[methods](appendix-g-glossary.html#method) to tell more about itself.
+Every value in P6 is an [object](appendix-g-glossary.html#object) and has 
+following [methods](appendix-g-glossary.html#method) to tell more about itself.
 
 ----------------------------------------------------  ---------------------------------------------------------------
 [WHAT](appendix-a-index.html#WHAT-introspection)      short name of the class that an object belongs to
