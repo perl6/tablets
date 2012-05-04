@@ -1,34 +1,42 @@
-% Perl 6 Tablets: Appendix F - FAQ
+% Perl 6 Tablets: Appendix F - Frequently Asked Questions
+
+
+Characteristics
+===============
 
 When Perl 6 will be released?
-=============================
+-----------------------------
 
 
-Should I ignore Perl 5?
-=======================
-
-
+What is so special about Perl 6?
+--------------------------------
 
 Why is it called Perl?
-======================
+----------------------
 
 This language is so different from Perl 5
 
+Should I ignore Perl 5?
+-----------------------
 
 Why is Perl 6 so complicated?
-=============================
+-----------------------------
 
+
+Practical
+=========
 
 How to install Perl 6?
-======================
+----------------------
 
 
 Where start to lern Perl 6?
-===========================
+---------------------------
 
 
 How can I help to bring Perl 6 foreward?
-========================================
+----------------------------------------
+
 
 
 ***
