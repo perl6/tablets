@@ -1,11 +1,13 @@
-% Perl 6 Tablets Appendix A - Index
+% Perl 6 Tablets Appendix A - Main Index
 
-This index contains an alphabetic sorted list (as decided by [**leg**](#leg-op))
-of all operators, methods, builtins, options, modifier and special variables
-with short explanations, cross references, code examples and Perl 5 equivalents.
-It is sorted without prefixes like colon, dot, backslash,
-[*sigil*](appendix-g-glossary.html#sigil) or [*twigil*](appendix-g-glossary.html#twigil)
-and everything that contains punctuation comes first.
+This is an alphabetic sorted list of all operators, methods, builtins, types,
+modifier and special variables with short explanations, cross references,
+code examples and Perl 5 equivalents.
+
+It is sorted (almost as decided by [**leg**](#leg-op)) without prefixes like
+colon, dot, backslash, [*sigil*](appendix-g-glossary.html#sigil) or
+[*twigil*](appendix-g-glossary.html#twigil)
+and everything that contains punctuation or number comes first.
 Sometimes are added green placeholder:
 <span class="you-provide">n</span> stands for a [integer number](#Int-type),
 <span class="you-provide">f</span> is a floating [point number](#Num-type),
@@ -15,13 +17,18 @@ Sometimes are added green placeholder:
 <span class="you-provide">l</span> a list,
 <span class="you-provide">op</span> any operator and
 <span class="you-provide">t</span> any *[term](appendix-g-glossary.html#term)*.
+The items itself are linked to a more detailed explanation inside of a tablet.
 After each method is its signature (in round brackets), telling you
 the value type (same as in placeholders) of the parameters and the return value.
 Each term is followed by a link «in french brackets» to a condensed summary
 listing of its category in [appendix B](appendix-b-grouped.html)
-or to the according category in the tablets. The chapter headlines serve as
-anchor and links to the navigation menu. Thatswhy large chapter like C are split
-into "C" (second letter a-m) and following "n" (second letter n-z).
+or to the according category in the tablets. Most links in the short description
+lead to another item (when bold) or to the glossary (when italic).
+The chapter headlines serve as anchor and links to the navigation menu.
+Thatswhy large chapter like C are split into "C" (second letter a-m)
+and following "n" (second letter n-z).
+
+
 
 
 <a id="nav-top"/>
@@ -1569,12 +1576,15 @@ long form of **[:c](#c-adverb)**, included in
 <a id="cmp"/><a id="cmp-op"/>
 **cmp**
 *[«generic comparison»](tablet-4-operators.html#generic-comparison)* &mdash;
-general [infix](#infix-category) sort comparator,
-result is *Order::Increase* (numerically -1) if
-**[before](#before)** is **[True](#True)** (left side is ordered before right) -
-*Order::Same* (numerically 0) if **[eqv](#eqv)** - 
-*Order::Decrease* (numerically 1) if **[after](#after)** &mdash;
-see also: **[leg](#leg)** and **[\<=\>](#spaceship-op)**)
+general [infix](#infix-category) comparison 
+[*operator*](appendix-g-glossary.html#operator), result is 
+*Increase* (numerically -1) if [**before**](#before) would return **[True](#True)**
+(left side is ordered before right) -
+*Same* (numerically 0) if **[eqv](#eqv)** - 
+*Decrease* (numerically 1) if **[after](#after)** &mdash;
+see also: [**leg**](#leg) and [**\<=\>**](#spaceship-op)) which do the same in
+[*string*](appendix-g-glossary.html#string-context) and
+[*numeric context*](appendix-g-glossary.html#numeric-context)
 
 
 
@@ -1967,9 +1977,9 @@ as does [**==**](#equal-equal-op) in
 <a id="equiv"/>
 **equiv**
 *[«routine trait»](appendix-b-grouped.html#routine-traits)* &mdash;
-specifies the [precedence of an
-operator](appendix-b-grouped.html#table-of-precedence)
-same as an existing operator
+specifies the [precedence](appendix-b-grouped.html#table-of-precedence)
+of an [*operator*](appendix-g-glossary.html#operator) same as an existing operator &mdash;
+see also: [**looser**](#looser) and [**tighter**](#tighter)
 
 <a id="eqv"/>
 **eqv** *«comparison op»* &mdash;
@@ -2781,36 +2791,38 @@ make first character of a string lowercase
 *[«numeric infix op»](tablet-4-operators.html#numeric-context)* &mdash;
 least common multiple &mdash;
 example: `4 lcm 6` returns: `12` &mdash;
-see also: **[gcd](#gcd)**
+see also: [**gcd**](#gcd)
 
 <a id="le"/>
 **le**
-*[«string comparison»](tablet-4-operators.html#string-comparison)* &mdash;
-[infix](#infix-category) operator, result is
-**[True](#True)** if left side is lower than or
-equal than the right, see also: **[lt](#lt)**,
-**[gt](#gt)** and **[ge](#ge)**
+[*«string comparison»*](tablet-4-operators.html#string-comparison) &mdash;
+[infix](#infix-category) [*operator*](appendix-g-glossary.html#operator),
+result is [**True**](#True) if left side is lower than or equal than the right
+in [*string context*](appendix-g-glossary.html#string-context) &mdash;
+see also: [**lt**](#lt), [**ge**](#ge), [**leg**](#leg)
 
 <a id="LEAVE-phaser"/>
 **LEAVE**
-*[«closure trait»](appendix-b-grouped.html#closure-traits)* &mdash;
-marks as a prefix a special block, executed at every block exit
-time
+[*«closure trait»*](appendix-b-grouped.html#closure-traits) &mdash;
+marks as a prefix a special block, executed at every block exit time
 
 <a id="leave"/>
-**[leave](tablet-6-blocks.html#leave)**
-*[«flow control»](appendix-b-grouped.html#jump-commands)* &mdash;
+[**leave**](tablet-6-blocks.html#leave)
+[*«flow control»*](appendix-b-grouped.html#jump-commands) &mdash;
 exit the current block with a return value
 
 <a id="leg"/><a id="leg-op"/>
-**leg**
+[**leg**](#leg)
 *[«string comparison»](tablet-4-operators.html#string-comparison)* &mdash;
-[infix](#infix-category) comparison operator that sees its operands in
+[infix](#infix-category) comparison [*operator*](appendix-g-glossary.html#operator)
+that sees its  [*operands*](appendix-g-glossary.html#operand) in
 *[string context](appendix-g-glossary.html#string-context)*,
-leg stands for lower/equal/greater and it works otherwise like
-[**cmp**](#cmp) (general form) or 
-[**\<=\>**](#spaceship-op) ([numerical context](#numerical-context),
-in Perl 5: *cmp*
+but works otherwise like [**cmp**](#cmp) (general form) or 
+[**\<=\>**](#spaceship-op) ([numerical context](#numerical-context)),
+**leg** stands for leg lower/equal/greater as in
+[**lt**](#lt), [**eq**](#eq),[**gt**](#gt) &mdash;
+in Perl 5: *cmp* &mdash;
+example: `'hammer' leg 'vanilla'` returns `Increase`
 
 <a id="let"/>
 **let** &mdash;
@@ -2823,10 +2835,10 @@ if the current block exits unsuccessfully
 current line number
 
 <a id="lines"/>
-**[lines](basic-syntax.html)**
+[**lines**](basic-syntax.html)
 *«string & iomethod»* &mdash;
 returns a chomped list of lines
-(chunks of character separated by **[\\n](#backslash-n)**)
+(chunks of character separated by [**\\n**](#backslash-n))
 containing a string - example: `$str.lines($limit)` equals
 [`$str.comb( / ^^ \N* /, $limit )`](#comb),
 works also on [*file handles*](IO-type) &mdash;
@@ -2834,10 +2846,10 @@ see also: [**words**](#words)
 
 <a id="list"/>
 **list**()
-*[«context op»](appendix-b-grouped.html#contextualizers)* &mdash;
+[*«context op»*](appendix-b-grouped.html#contextualizers) &mdash;
 almost a no-op, just makes sure that $item (first parameter) can
-be iterated, alias to **[@()](#at-op)**, see also
-**[flat](#flat)** and **[lol](#lol)**
+be iterated, alias to [**@()**](#at-op) &mdash;
+see also: [**flat**](#flat) and [**lol**](#lol)
 
 <a id="log"/>
 **[log](operators.html)** ([Num](#Num-type) $x, [Num](#Num-type) $base?) &mdash;
@@ -2852,39 +2864,39 @@ also known as *log* on calculators and *lg* in math classes
 <a id="LoL-type"/>
 **Lol**
 *[«immutable type»](appendix-b-grouped.html#immutable-types)* &mdash;
-arguments in a semicolon list, name is short fpr "List of Lists"
+arguments in a semicolon list, name is short for "List of Lists"
 
 <a id="lol"/>
 **lol**()
 *[«context op»](appendix-b-grouped.html#contextualizers)* &mdash;
 forces list of [*list context*](appendix-g-glossary.html#list-context) on a value,
 meaning a list which values are not contextualized further
-(can be lists themthelves), opposite of **[flat](#flat)**
+(can be lists themthelves), opposite of [**flat**](#flat)
 
 <a id="loop"/>
-**[loop](tablet-6-blocks.html#loop)**
-*[«block modifier»](appendix-b-grouped.html#loops)* &mdash;
-general loop, can serve as enless loop without following term of
-C-style loop - example: *loop my $b=1; $b++; $b<5 {...}*
+[**loop**](tablet-6-blocks.html#loop)
+[*«block modifier»*](appendix-b-grouped.html#loops) &mdash;
+general loop, can serve as enless loop without following term of C-style loop &mdash;
+example: `loop my $b=1; $b++; $b<5 {...}`
 
 <a id="looser"/><a id="looser-routine-trait"/>
 **looser**
 *[«routine trait»](appendix-b-grouped.html#routine-traits)* &mdash;
-specifies the
-[precedence of an operator](appendix-b-grouped.html#table-of-precedence)
-lower than an existing operator
+specifies the [precedence](appendix-b-grouped.html#table-of-precedence)
+of an [*operator*](appendix-g-glossary.html#operator)
+one rank lower than an existing operator
 
 <a id="lower-subrule"/>
 **\<lower\>**
 *[«predefined subrule»](appendix-b-grouped.html#subrules)* &mdash;
 a single lowercase character
 
-<a id="lt"/>
+<a id="lt"/><a id="lt-op"/>
 **lt**
-*[«string comparison»](tablet-4-operators.html#string-comparison)* &mdash;
+[*«string comparison»*](tablet-4-operators.html#string-comparison) &mdash;
 [infix](#infix-category) operator, lower than,
 **[True](#True)** if alphabetically ordered the left comes before the right &mdash;
-see also: **[gt](#gt)**, **[leg](#leg)** and [**\>**](#greater-op)
+see also: [**gt**](#gt), [**le**](#le), [**leg**](#leg) and [**\<**](#lower-op)
 
 
 
@@ -2904,7 +2916,7 @@ short for **[:ignoremark](#ignoremark-modifier)**
 
 <a id="Macro-type"/>
 **Macro**
-*[«mutable type»](appendix-b-grouped.html#mutable-types)*
+[*«mutable type»*](appendix-b-grouped.html#mutable-types)
 [compile-time](appendix-g-glossary.html#compile-time)
 [subroutine](appendix-g-glossary.html#subroutine),
 that can alter the program itself
@@ -4366,7 +4378,7 @@ tab `\u0009`, not visible character (control char)
 can add several item to the list of return values of a
 **[gather](#gather)** block
 
-<a id="tan"/>
+<a id="tan"/><a id="tan-op"/>
 **tan**
 *[«numeric op»](tablet-4-operators.html#numeric-context)* &mdash;
 tangent, trigonometric function, takes angle in radian; see also
@@ -4931,7 +4943,7 @@ example: `1,2,3,4 Z 8,9 == 1,8,2,9` &mdash; see also: **[roundrobin](#roundrobin
 joines *[infix](#infix-category)* the values from same position of 2 lists
 with following operator and produces in that manner a new list
 
-<a id="zip"/>
+<a id="zip"/><a id="zip-op"/>
 **zip**
 *[«array op & method»](tablet-3-variables#array-methods)* &mdash;
 *[infix](#infix-category)* zip operator, joines 2 lists, alias to
