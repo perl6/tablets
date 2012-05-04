@@ -89,11 +89,11 @@ and [**::=**](appendix-a-index.html#compiletime-binding-op)
 **block** &mdash;
 syntactically just a piece of code inside curly brackets
 (**{}**), when [evaluated](#evaluation) it becomes an
-object of the type **[Block](appendix-a-index.html#block-type)**
+object of the type [**Block**](appendix-a-index.html#block-type)
 
 <a id="bool-context"/>
 **boolean context** &mdash;
-[Bool](appendix-a-index.html#Bool-type)
+[**Bool**](appendix-a-index.html#Bool-type)
 [ops](tablet-4-operators.html#bool-context)
 
 # [C](#nav-top)
@@ -141,11 +141,11 @@ executable (piece of) program
 **compile time** &mdash;
 time when Perl converts source code to executable form (bytecode),
 is always before *[run time](#run-time)*
-even if code can be compiled via **[eval](appendix-a-index.html#eval)** and
-**[evalfile](appendix-a-index.html#evalfile)** when the program is
+even if code can be compiled via [**eval**](appendix-a-index.html#eval) and
+[**evalfile**](appendix-a-index.html#evalfile) when the program is
 already runnung, to run code at the begin of compile time use
-**[BEGIN](appendix-a-index.html#BEGIN-phaser)** and
-**[CHECK](appendix-a-index.html#CHECK-phaser)** to run at the end of
+[**BEGIN**](appendix-a-index.html#BEGIN-phaser) and
+[**CHECK**](appendix-a-index.html#CHECK-phaser) to run at the end of
 compile time for that unit (mostly the file or the to be **eval**ed string)
 
 <a id="context"/>
@@ -162,7 +162,7 @@ when its return value has to react to the context in which it is called.
 
 <a id="context-variable"/>
 **context variable** &mdash;
-name for **[$\_](appendix-a-index.html#context-var)**,
+name for [**$\_**](appendix-a-index.html#context-var),
 which is used by built in Perl functions as an implicit
 parameter and as memory of the last result
 
@@ -208,7 +208,7 @@ considered contract in Perl 6
 **e** *(euler number)* &mdash;
 about 2.7182818284, fundamental mathematical constant,
 important to the functions 
-**[exp](appendix-a-index.html#exp)** and **[log](appendix-a-index.html#log)**
+[**exp**](appendix-a-index.html#exp) and [**log**](appendix-a-index.html#log)
 
 
 <a id="encoding"/>
@@ -221,8 +221,8 @@ transforming something, that it gets ready for practical usage -
 sometimes means that just replacing in a piece of code all variables with there
 current content, cometimes more like interpreting or compiling something;
 inside quotes and [regexes](#regex) it has the first meaning,
-the command **[eval](appendix-a-index.html#eval)** and
-**[evalfile](appendix-a-index.html#evalfile)**does the second.
+the command [**eval**](appendix-a-index.html#eval) and
+[**evalfile**](appendix-a-index.html#evalfile) does the second.
 
 <a id="expression"/>
 **expression** &mdash;
@@ -303,18 +303,22 @@ several values, example: (A and B) or C, creat them with
 <a id="list"/>
 **list** &mdash;
 
-<a id="list-contex"/>
+<a id="list-context"/>
 **list context** &mdash;
-[Array](appendix-a-index.html#Array-type)
+[**Array**](appendix-a-index.html#Array-type)
 
 <a id="list-flattening"/>
 **list flattening** &mdash;
 
 <a id="LOL"/>
 **LOL** *(List of List)* &mdash;
-special kind of [*list*](#list) that can contain other lists, like:
-`[[1,2,3], [4,5,6]]` which is a list with 2 elements,
-lol context means these sublists will not [*flattended*](#list-flattening)
+[special type](appendix-a-index.html#LoL) of [*list*](#list) that can contain
+other lists, like: `[[1,2,3], [4,5,6]]` which is a list with 2 elements
+
+<a id="lol-context"/>
+**lol context** &mdash;
+[**lol**](appendix-a-index.html#lol) context means these sublists
+(as explained in [*LOL*](#LOL)) will not [*flattened*](#list-flattening)
 
 <a id="LTM"/>
 **LTM** *(longest token matching)* &mdash;
@@ -346,7 +350,7 @@ operators that alter the meaning or expand the scope of other normal operators,
 technique where several *[routines](#routine)* can have the same name,
 but different *[signatures](#signature)*, when the name is called - the
 suitable routine is seleted via *MMD* &mdash;
-see also: **[multi](appendix-a-index.html#multi)**
+see also: [**multi**](appendix-a-index.html#multi)
 
 # [N](#nav-top)
 
@@ -365,7 +369,7 @@ other logical operations are: [*and*](#and), [*or*](#or), [*xor*](#xor)
 
 <a id="numeric-context"/>
 **numeric context** &mdash;
-[Num](appendix-a-index.html#Num-type)
+[**Num*](appendix-a-index.html#Num-type) [*type*](#type)
 
 # [O](#nav-top)
 
@@ -423,27 +427,27 @@ of a program, also called *[AST](#AST)*
 **[phaser](appendix-b-grouped.html#closure-traits)** &mdash;
 Perl 6 term for specially named (due a prefix statement) subblocks withe special
 [*runtimes*](#run-time) aka [*closure traits*](appendix-b-grouped#closure-traits) &mdash;
-example: **[BEGIN](appendix-a-index.html#BEGIN-phaser)**
+example: [**BEGIN**](appendix-a-index.html#BEGIN-phaser)
 
 <a id="pipe"/>
 **pipe** &mdash; connection between 2 processes, move data (mostly only in
-one direction) without buffering, can also mean just the connection of
-several commands via **[==\>](appendix-a-index.html#equal-equal-greater-op)** and alike
+one direction) without buffering, can also mean just the connection of several
+commands via [**==\>**](appendix-a-index.html#equal-equal-greater-op) and alike
 
 <a id="POD"/>
 **[POD](tablet-2-basic-syntax.html#pod)**
 *(Plain Old Documentation)* &mdash; 
 a markup language to embeded documentation into Perl source code,
 has in Perl 6 the ability to store data into special variables 
-like **[\$=pod](appendix-a-index.html#pod-pod-var)** to be retrieved later,
+like [**\$=pod**](appendix-a-index.html#pod-pod-var) to be retrieved later,
 all pod-directives start with a equal sign - more details are written in the
 [basics tablet](tablet-2-basic-syntax.html#pod)
 
 <a id="pointy-block"/>
 **pointy block** &mdash;
-a block that is given readonly *[parameters](parameter)* with
-**[-\>](appendix-a-index.html#arrow-op)** or rw parameters with
-**[<-\>](appendix-a-index.html#lower-minus-greater-op)**
+a block that is given readonly [*parameters*](parameter) with
+[**-\>**](appendix-a-index.html#arrow-op) or rw parameters with
+[**<-\>**](appendix-a-index.html#lower-minus-greater-op)
 
 <a id="precedence"/>
 **precedence** &mdash;
@@ -505,8 +509,8 @@ a [whole page](tablet-9-regexes.html) is dedicated just about that subject
 [block](#block) of code callable by name,
 can have a *[signature](#signature)* and a return type,
 when block is [compiled](#compilation) it becomes an object of the type
-**[SoftRoutine](appendix-a-index.html#softroutine-type)**
-or **[HardRoutine](appendix-a-index.html#hardroutine-type)**
+[**SoftRoutine**](appendix-a-index.html#softroutine-type)
+or [**HardRoutine**](appendix-a-index.html#hardroutine-type)
 
 <a id="run-time"/>
 **run time** &mdash; time when execution hits a certain part of the program,
@@ -527,24 +531,24 @@ normally the current [block](#block)
 **sigil** &mdash; character that serves as a prefix to categorize the
 following name, most prominent in Perl are the variable
 [sigils](appendix-b-grouped.html#sigils)
-: **[$](appendix-a-index.html#dollar-sigil)**,
-**[@](appendix-a-index.html#at-sigil)** and
-**[%](appendix-a-index.html#percent-sigil)**
+: [**$**](appendix-a-index.html#dollar-sigil),
+[**@**](appendix-a-index.html#at-sigil) and
+[**%**](appendix-a-index.html#percent-sigil)
 
 <a id="signature"/>
 **signature** &mdash; function parameters (left-hand side of a binding),
-surrounded by round parentheses in the definition of a *[routine](#routine)*
+surrounded by round parentheses in the definition of a [*routine*](#routine)
 
 <a id="slang"/>
 **slang** &mdash;
-sublanguages of Perl 6, quoting or *[regular expression](#regular expression)*
+sublanguages of Perl 6, quoting or [*regular expression*](#regular expression)
 are completely independent languages, the grammar to parse them is mostly stored
 in [special variables](appendix-b-grouped.html#slang-variables)
-with the [twigil](#twigil) **\~**, 
-**[\$\~MAIN](appendix-a-index.html#MAIN-lang-var)** (main language),
+with the [*twigil*](#twigil) **\~**, 
+[**\$\~MAIN**](appendix-a-index.html#MAIN-lang-var) (main language),
 you can change or alter them by using the keyword 
-**[augment](appendix-a-index.html#augment)**
-or **[supersede](appendix-a-index.html#supersede)**
+[**augment**](appendix-a-index.html#augment)
+or [**supersede**](appendix-a-index.html#supersede)
 
 <a id="slice"/>
 **slice** &mdash;
@@ -558,7 +562,7 @@ array parameter that receives all (slurps) all optional
 <a id="smartmatch"/>
 **smartmatch** &mdash;
 The original Perl 6 *smartmatch* [*operator*](#operator) looks like this:
-*[~~](appendix-a-index.html#smartmatch-op)* and does an universal
+[**~~**](appendix-a-index.html#smartmatch-op) and does an universal
 "compare this with that" dependend on the [*types*](#type) of the [*operands*](#operand).
 That can range from simple comparison of two values to applying a [*regex*](#regex)
 up to the question if two [*signatures*](#signature) are compatible -
@@ -572,8 +576,8 @@ larger combinations of them are [*expressions*](#expression)
 
 <a id="string-context"/>
 **string context** &mdash;
-[context](#context)
-[Str](appendix-a-index.html#Str-type)
+[*context*](#context)
+[**Str**](appendix-a-index.html#Str-type)
 [ops](tablet-4-operators.html#string-context)
 
 <a id="subroutine"/>
@@ -605,12 +609,12 @@ not to be confused with [*expression*](#expression)
 **topicalizer** &mdash;
 every keyword that sets content of the context variable
 ([**$\_**](appendix-a-index.html#context-var)),
-like *[given](appendix-a-index.html#given)* and *[for](appendix-a-index.html#for)*
+like [**given**](appendix-a-index.html#given) and [**for**](appendix-a-index.html#for)
 
 <a id="trait"/>
 **trait** &mdash;
 additional property of a variable, defined at *[compile time](#compile-time)*,
-see **[but](appendix-a-index.html#but)**, what other languages call
+see [**but**](appendix-a-index.html#but), what other languages call
 *trait* Perl calls [role](#role)
 
 <a id="twigil"/>
@@ -660,12 +664,12 @@ other logical operations are: [*and*](#and), [*or*](#or), [*not*](#not)
 # [Y](#nav-top)
 
 <a id="yadda-operator"/>
-**[yadda operator](operators.html#yadda)** &mdash;
+[yadda operator](tablet-4-operators.html#yadda), 
 placeholder for later to be written code inside a [routine](#routine),
 because empty ones are forbidden, comes in 3 flavours:
-**[...](appendix-a-index.html#dot-yadda-op)** (fail),
-**[???](appendix-a-index.html#question-mark)** (warn) and
-**[!!!](appendix-a-index.html#exclamation-mark)** (die)
+[**...**](appendix-a-index.html#dot-yadda-op) (fail),
+[**???**](appendix-a-index.html#question-mark) (warn) and
+[**!!!**](appendix-a-index.html#exclamation-mark) (die)
 
 # [Z](#nav-top)
 

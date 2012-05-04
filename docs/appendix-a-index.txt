@@ -2862,19 +2862,19 @@ logarithm of $x to the $base
 (default is *[e](appendix-g-glossary.html#e)*, together also known as *ln*)
 
 <a id="log10"/>
-**[log10](operators.html)** &mdash;
+[**log10**](tablet-4-operators.html#) &mdash;
 logarithm to the base of 10,
 also known as *log* on calculators and *lg* in math classes
 
 <a id="LoL-type"/>
-**Lol**
-*[«immutable type»](appendix-b-grouped.html#immutable-types)* &mdash;
+**LoL**
+[*«immutable type»*](appendix-b-grouped.html#immutable-types)* &mdash;
 arguments in a semicolon list, name is short for "List of Lists"
 
 <a id="lol"/>
 **lol**()
-*[«context op»](appendix-b-grouped.html#contextualizers)* &mdash;
-forces list of [*list context*](appendix-g-glossary.html#list-context) on a value,
+[*«context op»*](appendix-b-grouped.html#contextualizers) &mdash;
+forces [*list of list context*](appendix-g-glossary.html#lol-context) on a value,
 meaning a list which values are not contextualized further
 (can be lists themthelves), opposite of [**flat**](#flat)
 
