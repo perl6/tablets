@@ -26,7 +26,7 @@ or to the according category in the tablets. Most links in the short description
 lead to another item (when bold) or to the glossary (when italic).
 The chapter headlines serve as anchor and links to the navigation menu.
 Thatswhy large chapter like C are split into "C" (second letter a-m)
-and following "n" (second letter n-z).
+and a following "n" (second letter n-z).
 
 
 
@@ -95,7 +95,7 @@ just second part of the ternary (conditional) operator after
 
 <a id="exclamation-exclamation-exclamation"/><a id="exclamation-yadda"/>
 **!!!** *[«yadda op»](tablet-4-operators.html#yadda)* &mdash;
-[yadda operator](appendix-g-glossary.html#yadda-operator)
+[*yadda operator*](appendix-g-glossary.html#yadda-operator)
 that calls **[die](#die)**
 
 <a id="double-quotes"/><a id="quotation-quotation"/>
@@ -118,7 +118,7 @@ works even inside regexes as a
 starts comments to the lineending like **\#**, just makes
 documenting comments that end up in
 *[&routine.WHY.content](#WHY-introspection)* on the
-following *[routine](appendix-g-glossary.html#routine)*
+following [*routine*](appendix-g-glossary.html#routine)
 
 <a id="pound-apostrophe"/>
 **[\#\`( )](tablet-2-basic-syntax.html#multi-line)** &mdash;
@@ -134,7 +134,7 @@ variables](tablet-3-variables#scalar)
 <a id="dollar-op"/>
 **$**()
 *[«context op»](appendix-b-grouped.html#contextualizers)* &mdash;
-forces [scalar context](appendix-g-glossary.html#scalar-context),
+forces [*scalar context*](appendix-g-glossary.html#scalar-context),
 alias to the **[item()](#item)** function
 
 <a id="dollar-metachar"/>
@@ -160,12 +160,12 @@ matches the end of a line (no more multile mode)
 **%**
 *[«numeric op»](tablet-4-operators.html#numeric-context)* &mdash;
 gives remainder of a modulo division,
-forces [numeric context](appendix-g-glossary.html#numeric-context)
+forces [*numeric context*](appendix-g-glossary.html#numeric-context)
 
 <a id="percent-context-op"/>
 **%**()
 *[«context op»](appendix-b-grouped.html#contextualizers)* &mdash;
-forces [hash context](appendix-g-glossary.html#hash-context),
+forces [*hash context*](appendix-g-glossary.html#hash-context),
 alias to the **[hash()](#hash)** function
 
 <a id="percent-metachar"/>
@@ -190,11 +190,11 @@ example: `\d %% ','` matches `1,2,3,4,5,`
 
 <a id="ampersand"/><a id="ampersand-sigil"/>
 **[&](tablet-3-variables#callable)**
-*[«sigil»](appendix-b-grouped.html#sigils)* &mdash;
-*[sigil](appendix-g-glossary.html#sigil)* of
+[*«sigil»*](appendix-b-grouped.html#sigils) &mdash;
+[*sigil*](appendix-g-glossary.html#sigil) of
 [callables](tablet-3-variables#callable)
-like [subs](#sub), [methods](#method)
-and other [blocks](appendix-g-glossary.html#block)
+like [**subs**](#sub), [**methods**](#method)
+and other [*blocks*](appendix-g-glossary.html#block)
 
 <a id="ampersand-context"/>
 **&**()
@@ -205,18 +205,20 @@ context, alias to **[code()](#code-context)**
 <a id="ampersand-op"/><a id="junctive-and"/>
 **&**
 *[«junctive op»](tablet-4-operators.html#junctions)* &mdash;
-*[junctive](appendix-g-glossary.html#junction)* *[AND](appendix-g-glossary.html#and)*,
-requires that all conditions are met, see also: **[all](#all)**
+[*junctive*](appendix-g-glossary.html#junction)
+[*AND*](appendix-g-glossary.html#and),
+requires that all conditions are met &mdash;
+see also: [**all**](#all)
 
 <a id="ampersand-metachar"/>
 **&**
 *[«regex metachar»](appendix-b-grouped.html#regex-metacharacter)* &mdash;
-match multiple patterns (*[AND](appendix-g-glossary.html#and)*-connection of patterns)
+match multiple patterns ([*AND*](appendix-g-glossary.html#and)-connection of patterns)
 
 <a id="ampersand-ampersand-op"/><a id="logical-and"/>
 **&&**
 *[«logical op»](tablet-4-operators.html#logical-selection)* &mdash;
-*[infix](#infix-category)* short circuit logical *[AND](appendix-g-glossary.html#and)*,
+*[infix](#infix-category)* short circuit logical [*AND*](appendix-g-glossary.html#and),
 [evaluates](appendix-g-glossary.html#evaluation) sequentially left to right
 its operands until one is [**False**](#False) in
 [*boolean context*](appendix-g-glossary.html#boolean-context), if one was **False** 
@@ -441,15 +443,14 @@ example: `@a = 1, 2, 4 ...` infite lazy list of all powers of two,
 <a id="dot-yadda"/>
 **...**
 *[«yadda op»](tablet-4-operators.html#yadda)* &mdash;
-[yadda operator](appendix-g-glossary.html#yadda-operator) that calls
-**[fail](#fail)** (exception),
-marks unimplemented empty *[routine](appendix-g-glossary.html#routine)*
+[*yadda operator*](appendix-g-glossary.html#yadda-operator) that calls
+[**fail**](#fail) (exception),
+marks unimplemented empty [*routine*](appendix-g-glossary.html#routine)
 bodies
 
 <a id="slash-op"/>
-**/** *[«numeric op»](tablet-4-operators.html#numeric-context)*
-infix division,
-forces [numeric context](appendix-g-glossary.html#numeric-context)
+**/** [*«numeric op»*](tablet-4-operators.html#numeric-context)
+infix division, forces [numeric context](appendix-g-glossary.html#numeric-context)
 
 <a id="slash-composer"/>
 **/** *[«rat composer»](tablet-2-basic-syntax.html#rational-number)*
@@ -466,8 +467,8 @@ with the [following methods](appendix-b-grouped.html#match-object-methods)
 **//**
 *[«logical op»](tablet-4-operators.html#logical-selection)* &mdash;
 short circuit *defined or*, returns the first defined value
-(from left to right), similar to **[||](#pipe-pipe-op)** &mdash;
-high precedence version of **[err](#err)**
+(from left to right), similar to [**||**](#pipe-pipe-op) &mdash;
+high precedence version of [**err**](#err)
 
 <a id="backslash-0"/><a id="backslash-zero"/>
 **\\0**<span class="you-provide">s</span>**\[**<span class="you-provide">n</span>**]**
@@ -493,9 +494,14 @@ example: *`$pair = :key('value')`*
 
 <a id="colon-test"/>
 **:**
-*[«io test method»](appendix-b-grouped.html#test-methods)* &mdash;
+[*«io test method»*](appendix-b-grouped.html#test-methods) &mdash;
 start of all test methods
-(r w x o R W X O e z s f d l p S b c t u g k T B M A C)
+**([r](#r-test) [w](#w-test) [x](#x-test) [o](#o-test)
+   [R](#R-test) [W](#W-test) [X](#r-test) [O](#O-test)
+   [e](#e-test) [z](#z-test) [s](#s-test) [f](#f-test) [d](#d-test)
+   [l](#l-test) [p](#p-test) [S](#S-test) [b](#b-test) [c](#c-test)
+   [t](#t-test) [u](#u-test) [g](#g-test) [k](#k-test) [T](#T-test)
+   [B](#B-test) [M](#M-test) [A](#A-test) [C](#C-test))**
 in the adverbial form &mdash;
 example: *`$filename.IO ~~ :X`*
 
@@ -776,8 +782,8 @@ see also: [**||**](#logical-or), [**ff**](#ff), [**fff**](#fff)
 <a id="question-yadda"/>
 **???**
 *[«yadda op»](tablet-4-operators.html#yadda)* &mdash;
-[yadda operator](appendix-g-glossary.html#yadda-operator)
-that calls **[warn](#warn)**
+[*yadda operator*](appendix-g-glossary.html#yadda-operator)
+that calls [**warn**](#warn)
 
 <a id="question-caret-op"/><a id="boolean-xor"/>
 **?\^**
