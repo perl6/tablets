@@ -375,14 +375,14 @@ N   Terminator         [`;`](appendix-a-index.html#semicolon) [`{...}`](appendix
 Operator Associativity
 ----------------------
 
-&nbsp;  Assoc   Meaning of `$a ! $b ! $c`
-------  ------  --------------------------
-L       left    `($a ! $b) ! $c`
-R       right   `$a ! ($b ! $c)`
+&nbsp;  Assoc   Meaning of `$a <op> $b <op> $c`
+------  ------  -------------------------------
+L       left    `($a <op> $b) <op> $c`
+R       right   `$a <op> ($b <op> $c)`
 N       non     ILLEGAL
-C       chain   `($a ! $b) and ($b ! $c)`
-X       list    `infix:<!>($a; $b; $c)`
-------  ------  --------------------------
+C       chain   `($a <op> $b) and ($b <op> $c)`
+X       list    `infix:<op>($a; $b; $c)`
+------  ------  -------------------------------
 
 
 
