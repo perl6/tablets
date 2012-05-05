@@ -5,11 +5,11 @@ use v5.10;
 
 my (%file, %data, %sum, $FH, $content, @fn_parts);
 my %pattern = (
-	head   => qr/\n### |\n\n.*\n\-+\n\n|\S\n=+\n\n|\n\n# \[.\]\(#nav-top\)\n\n/,
-	item   => qr/\n\n<a id/,
+	head   => qr/\n### |\n\n.*\n\-+\n\n|\S\n=+\n\n|\n\n# \[.\]\(#nav-top\)\n\n/, # 4 kinds of markdown headlines
+	item   => qr/\n\n<a id/, 
 	anchor => qr/<a id="/,
 	link   => qr/\]\(/,
-	line   => qr/\n/,
+	line   => qr/(?<!\n)\n/,                                                     # no empty lines
 );
 my $head = '    page     title   item  anchor  links   lines    bytes';
 my $format = "%11s    %3s   %4s   %4s   %5s   %5s   %6s\n";
