@@ -39,7 +39,7 @@ This is the most mighty (much more mighty than its backported Perl 5
 twin) of all Perl 6 operators. It can be called the
 "compare-this-with-that-operator". If the left side of that infix op
 matches somehow the content of the right side, it returns Bool::True,
-otherwise Bool::False. The negated form !~ naturally works the other
+otherwise Bool::False. The negated form !~~ naturally works the other
 way around. The exact comparison operation depends on the [data
 types](variables.html#data-types) of the values on both sides. Just
 look into that [large table](ap-b-lookup.html#smartmatch) to
@@ -48,7 +48,7 @@ check your specific case.
 Smartmatching was originally invented to make [matching with
 regex](regexes.html#matching) semantically sane.
 
-    ~~ !~
+    ~~ !~~
 
 
 
