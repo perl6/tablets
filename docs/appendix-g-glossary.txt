@@ -133,7 +133,7 @@ in Perl 6 there are just [objects](#object) representing a routine that can be
 [attributes](#attribute) of other objects
 
 <a id="code-context"/>
-**code context** &mdash;
+**code context** &mdash; also called callable context
 
 <a id="compilation"/>
 **compilation** &mdash;
@@ -236,6 +236,10 @@ Each of the parts has to have a [*precedence level*](#precedence) which decides
 in which order they are considered.
 
 # [F](#nav-top)
+
+<a id="fat-arrow"/>
+**fat arrow** &mdash;
+[**=\>**](appendix-a-index.html#fat-arrow)
 
 <a id="file-handle"/>
 **file handle** &mdash;

@@ -1011,8 +1011,8 @@ In routine and block definitions can be also some character with special meaning
 
 ### Callframe Methods ###
 
-of objects provided by **[callframe](appendix-a-index.html#callframe)** and
-**[caller](appendix-a-index.html#caller)**
+of objects provided by [**callframe**](appendix-a-index.html#callframe) and
+[*caller**](appendix-a-index.html#caller)
 
     args
     callframe

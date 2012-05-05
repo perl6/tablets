@@ -12,10 +12,10 @@ Sometimes are added green placeholder:
 <span class="you-provide">f</span> is a floating [point number](#Num-type),
 <span class="you-provide">s</span> [string](#Str-type),
 <span class="you-provide">var</span> any variable,
-<span class="you-provide">p</span> a *[regex pattern](appendix-g-glossary.html#regex)*,
+<span class="you-provide">p</span> a [*regex pattern*](appendix-g-glossary.html#regex),
 <span class="you-provide">l</span> a list,
 <span class="you-provide">op</span> any operator and
-<span class="you-provide">t</span> any *[term](appendix-g-glossary.html#term)*.
+<span class="you-provide">t</span> any [*term*](appendix-g-glossary.html#term).
 After each method is its signature (in round brackets), telling you
 the value type (same as in placeholders) of the parameters and the return value.
 The items itself are linked to a more detailed explanation inside of a tablet.
@@ -73,7 +73,7 @@ negates (mostly [comparison operators](tablet-4-operators.html#comparison))
 
 <a id="exclamation-var"/>
 **\$\!**
-*[«special var»](appendix-b-grouped.html#special-variables)* &mdash;
+[*«special var»*](appendix-b-grouped.html#special-variables) &mdash;
 last error message
 
 <a id="exclamation-assertion"/>
@@ -85,23 +85,23 @@ a leading **!** in a subrule a negative zero-width assertion like
 <a id="exclamation-subrule"/>
 **\<\!\>**
 [*«predefined subrule»*](appendix-b-grouped.html#subrules) &mdash;
-opposite of [**\<?\>**](#question-subrule), returns always **[False](#False)**
+opposite of [**\<?\>**](#question-subrule), returns always [**False**](#False)
 
 <a id="exclamation-exclamation"/>
 **!!**
 [*«conditional op»*](appendix-b-grouped.html#conditionals) &mdash; 
 just second part of the ternary (conditional) operator after
-**[??](#ternary-op)**, no op on its own
+[**??**](#ternary-op), no op on its own
 
 <a id="exclamation-exclamation-exclamation"/><a id="exclamation-yadda"/>
 **!!!**
 [*«yadda op»*](tablet-4-operators.html#yadda)* &mdash;
 [*yadda operator*](appendix-g-glossary.html#yadda-operator)
-that calls **[die](#die)**
+that calls [**die**](#die)
 
 <a id="double-quotes"/><a id="quotation-quotation"/>
-**[" "](tablet-2-basic-syntax.html#double-quotes)**
-*[«quoting op»](appendix-b-grouped.html#quoting-ops)* &mdash;
+[**" "**](tablet-2-basic-syntax.html#double-quotes)
+[*«quoting op»*](appendix-b-grouped.html#quoting-ops) &mdash;
 double quoting, interpolates with
 [**:s**](#s-adverb),    [**:a**](#a-adverb),   [**:h**](#h-adverb),
 [**:f**](#f-adverb),    [**:c**](#c-adverb),   [**:b**](#b-adverb)
@@ -109,34 +109,34 @@ double quoting, interpolates with
 alias to [**qq/.../**](#qq-op) or **Q** [**:qq**](#qq-adverb) **/.../**
 
 <a id="pound"/><a id="comment-op"/>
-**[\#](tablet-2-basic-syntax.html#single-line)** &mdash;
+[**\#**](tablet-2-basic-syntax.html#single-line) &mdash;
 starts a comment that continues to the end of the line,
 works even inside regexes as a
-*[regex metachar](appendix-b-grouped.html#regex-metacharacter)*
+[*«regex metachar»*](appendix-b-grouped.html#regex-metacharacter)
 
 <a id="pound-equal"/>
 [**\#=**](tablet-2-basic-syntax.html#pod) &mdash;
 starts comments to the lineending like **\#**, just makes
 documenting comments that end up in
-*[&routine.WHY.content](#WHY-introspection)* on the
+[*&routine.WHY.content*](#WHY-introspection) on the
 following [*routine*](appendix-g-glossary.html#routine)
 
 <a id="pound-apostrophe"/>
-**[\#\`( )](tablet-2-basic-syntax.html#multi-line)** &mdash;
+[**\#\`( )**](tablet-2-basic-syntax.html#multi-line) &mdash;
 starts a multi-line comment that continues to the closing
 bracket, works with any combination of bracket pairs
 
 <a id="dollar"/> <a id="dollar-sigil"/>
-**[\$](tablet-3-variables.html#scalar)**
+[**\$**](tablet-3-variables.html#scalar)
 [*«sigil»*](appendix-b-grouped.html#sigils) &mdash;
 [prefix](#prefix-category) of [scalar
 variables](tablet-3-variables#scalar)
 
 <a id="dollar-op"/>
 **$**()
-*[«context op»](appendix-b-grouped.html#contextualizers)* &mdash;
+[*«context op»*](appendix-b-grouped.html#contextualizers) &mdash;
 forces [*scalar context*](appendix-g-glossary.html#scalar-context),
-alias to the **[item()](#item)** function
+alias to the [**item()**](#item) function
 
 <a id="dollar-metachar"/>
 **$**
@@ -165,32 +165,32 @@ forces [*numeric context*](appendix-g-glossary.html#numeric-context)
 
 <a id="percent-context-op"/>
 **%**()
-*[«context op»](appendix-b-grouped.html#contextualizers)* &mdash;
+[*«context op»*](appendix-b-grouped.html#contextualizers) &mdash;
 forces [*hash context*](appendix-g-glossary.html#hash-context),
-alias to the **[hash()](#hash)** function
+alias to the [**hash()**](#hash) function
 
 <a id="percent-metachar"/>
 **%**<span class="you-provide">s</span>
-*[«regex metachar»](appendix-b-grouped.html#quantifier)* &mdash;
+[*«regex metachar»*](appendix-b-grouped.html#quantifier) &mdash;
 quantifier that repeat char or group as long as separated by
 right expression &mdash; example: `\d % ','` matches `1,2,3,4,5` &mdash;
-see also: **[%%](#percent-percent-metachar)**
+see also: [**%%**](#percent-percent-metachar)
 
 <a id="percent-percent-op"/>
 **%%**
 [*«numeric op»*](tablet-4-operators.html#numeric-context)  &mdash;
-**[True](#True)** if the left value is evenly
+[**True**](#True) if the left value is evenly
 divisible by the right value
 
 <a id="percent-percent-metachar"/>
 **%%**<span class="you-provide">s</span>
-*[«regex metachar»](appendix-b-grouped.html#quantifier)* &mdash;
+[*«regex metachar»*](appendix-b-grouped.html#quantifier) &mdash;
 quantifier that repeat char or group as long as separated by
 right expression (like %), but allows trailing separator &mdash;
 example: `\d %% ','` matches `1,2,3,4,5,`
 
 <a id="ampersand"/><a id="ampersand-sigil"/>
-**[&](tablet-3-variables#callable)**
+[**&**](tablet-3-variables#callable)
 [*«sigil»*](appendix-b-grouped.html#sigils) &mdash;
 [*sigil*](appendix-g-glossary.html#sigil) of
 [callables](tablet-3-variables#callable)
@@ -199,9 +199,9 @@ and other [*blocks*](appendix-g-glossary.html#block)
 
 <a id="ampersand-context"/>
 **&**()
-*[«context op»](appendix-b-grouped.html#contextualizers)* &mdash;
+[*«context op»*](appendix-b-grouped.html#contextualizers) &mdash;
 forces [callable](tablet-3-variables#callable)
-context, alias to **[code()](#code-context)**
+context, alias to [**code()**](#code-context)
 
 <a id="ampersand-op"/><a id="junctive-and"/>
 **&**
@@ -227,17 +227,17 @@ the result in [boolean context](appendix-g-glossary.html#bool-context) is **Fals
 otherwise the last evaluated operand,
 low precedence alias is [**and**](#logical-and) &mdash;
 example: `0 and 7` returns `0` &mdash;
-see also: **[&](#junctive-and)**
+see also: [**&**](#junctive-and)
 
 <a id="single-quotes"/>
-**[' '](tablet-2-basic-syntax.html#single-quotes)**
-*[«quoting op»](appendix-b-grouped.html#quoting-ops)* &mdash;
+[**' '**](tablet-2-basic-syntax.html#single-quotes)
+[*«quoting op»*](appendix-b-grouped.html#quoting-ops) &mdash;
 simple quoting, just / and ' must be escaped, alias to
-**[q/.../](#q-op)** or **Q :q/.../**
+[**q/.../**](#q-op)** or **Q :q/.../**
 
 <a id="round-brackets"/>
 **( )** &mdash;
-grouping of values (parameters) to a **[Parcel](#Parcel-type)**
+grouping of values (parameters) to a [**Parcel**](#Parcel-type)
 
 <a id="round-brackets-metachar"/>
 **( )**
@@ -248,7 +248,7 @@ see also: [\[ \]](#square-brackets-metachar)
 
 <a id="round-brackets-var"/>
 **@( )**
-*[«special var»](appendix-b-grouped.html#match-variables)* &mdash;
+[*«special var»*](appendix-b-grouped.html#match-variables) &mdash;
 holds positional submatches, **`$()[n]`** is alias to
 [**`$/[n]`**](#slash-var) and [**`$n`**](#0-var)
 
@@ -259,7 +259,7 @@ holds positional submatches, **`$()[n]`** is alias to
 <a id="asterisk"/><a id="asterisk-term"/>
 **\***
 *«term»* &mdash;
-synonym for **[Whatever](#Whatever)**, for example, means **[Inf](#Inf)**
+synonym for [**Whatever**](#Whatever), for example, means [**Inf**](#Inf)
 in a [range operator](#range-op) (**..**), means the
 end of an array in a slice operator so that negative indices access
 array elements relative to one beyond the final element
@@ -279,12 +279,12 @@ forces [numeric context](appendix-g-glossary.html#numeric-context)
 <a id="asterisk-twigil"/>
 **\***
 [*«twigil»*](appendix-b-grouped.html#twigils) &mdash;
-*[twigil](appendix-g-glossary.html#twigil)* of global variables that
-are accessible in all *[scopes](appendix-g-glossary.html#scope)*
+[*twigil*](appendix-g-glossary.html#twigil) of global variables that
+are accessible in all [*scopes*](appendix-g-glossary.html#scope)
 
 <a id="asterisk-metachar"/>
 **\***
-*[«regex metachar»](appendix-b-grouped.html#quantifier)* &mdash;
+[*«regex metachar»*](appendix-b-grouped.html#quantifier) &mdash;
 quantifier for zero or more findings
 
 <a id="asterisk-asterisk-op"/><a id="power-op"/>
@@ -293,29 +293,29 @@ quantifier for zero or more findings
 raises a number to a power,
 forces [numeric context](appendix-g-glossary.html#numeric-context) &mdash;
 example: `2 ** 3` is 8 because its `2 * 2 * 2` &mdash;
-alias to **[exp](#exp)**
+alias to [**exp**](#exp)
 
 <a id="asterisk-asterisk-metachar"/>
 **\*\***
-*[«regex metachar»](appendix-b-grouped.html#quantifier)* &mdash;
+[*«regex metachar»*](appendix-b-grouped.html#quantifier) &mdash;
 not backtracking, greedy quantifier taking zero or more findings
 
 <a id="asterisk-asterisk-number-metachar"/>
 **\*\***<span class="you-provide">n</span>
-*[«regex metachar»](appendix-b-grouped.html#quantifier)* &mdash;
+[*«regex metachar»*](appendix-b-grouped.html#quantifier) &mdash;
 quantifier for explicit repeat char or group, like
-**[x](#x-op)** *(string op)* does outside of a regex &mdash;
+[**x**](#x-op) *(string op)* does outside of a regex &mdash;
 example: `(ha)**3` only matches `'hahaha'`
 
 <a id="asterisk-asterisk-question-metachar"/>
 **\*\*?**
-*[«regex metachar»](appendix-b-grouped.html#quantifier)* &mdash;
+[*«regex metachar»*](appendix-b-grouped.html#quantifier) &mdash;
 quantifier for minimal matching, just as much to fulfill with the pattern &mdash;
 example: ``
 
 <a id="plus"/><a id="plus-op"/><a id="plus-context"/>
 **+**
-*[«context op»](appendix-b-grouped.html#contextualizers)*
+[*«context op»*](appendix-b-grouped.html#contextualizers)
 [*«numeric op»*](tablet-4-operators.html#numeric-context) &mdash;
 [infix](#infix-category) addition operator,
 forces [numeric context](appendix-g-glossary.html#numeric-context)
@@ -324,23 +324,23 @@ opposite of [**-**](#minus-op)
 
 <a id="plus-metachar"/>
 **+**
-*[«regex metachar»](appendix-b-grouped.html#quantifier)* &mdash;
+[*«regex metachar»*](appendix-b-grouped.html#quantifier) &mdash;
 quantifier for one or more findings
 
 <a id="plus-ampersand-op"/><a id="numeric-and"/>
 **+&**
 [*«numeric op»*](tablet-4-operators.html#numeric-context) &mdash;
-bitwise *[AND](appendix-g-glossary.html#and)*,
+bitwise [*AND*](appendix-g-glossary.html#and),
 forces [numeric context](appendix-g-glossary.html#numeric-context)
 
 <a id="plus-plus-op"/><a id="auto-increment"/>
 **++**
-*[«sequence traversal»](tablet-4-operators.html#traversing-sequence)* &mdash;
+[*«sequence traversal»*](tablet-4-operators.html#traversing-sequence) &mdash;
 generic autoincrement, changes this value to its next neighbour in its ordered set,
 can be used as [prefix](#prefix_category) (take effect before 
 [evaluating](appendix-g-glossary.html#evaluation) the surrounding term)
 or [suffix](#suffix_category) (incrementing afterwards),
-alias to **[succ](#succ)**, opposite of **[--](#auto-decrement)**
+alias to [**succ**](#succ), opposite of [**--**](#auto-decrement)
 
 <a id="plus-lower-op"/>
 **+<**
@@ -355,17 +355,17 @@ shift right in [numeric context](appendix-g-glossary.html#numeric-context)
 <a id="plus-caret-op"/><a id="numeric-xor"/>
 **+\^**
 [*«numeric op»*](tablet-4-operators.html#numeric-context) &mdash;
-[infix](#infix-category) bitwise *[XOR](appendix-g-glossary.html#xor)*,
+[infix](#infix-category) bitwise [*XOR*](appendix-g-glossary.html#xor),
 that looks at ot operands in [numeric context](appendix-g-glossary.html#numeric-context)
 
 <a id="plus-pipe-op"/><a id="numeric-or"/>
 **+|**
 [*«numeric op»*](tablet-4-operators.html#numeric-context) &mdash;
-[infix](#infix-category) bitwise *[OR](appendix-g-glossary.html#or)*,
+[infix](#infix-category) bitwise [*OR*](appendix-g-glossary.html#or),
 forces [numeric context](appendix-g-glossary.html#numeric-context)
 
 <a id="comma"/><a id="comma-op"/>
-**[,](tablet-3-variables#array)** 
+[**,**](tablet-3-variables#array)
 [«list op»](tablet-4-operators.html#list-generation) &mdash;
 [**infix**](#infix-category] 
 [*list*](appendix-g-glossary.html#list) generating operator &mdash;
@@ -386,30 +386,29 @@ opposite of [**+**](#plus-op)
 
 <a id="minus-minus-op"/><a id="auto-decrement"/>
 **--**
-*[«sequence traversal»](tablet-4-operators.html#traversing-sequence)* &mdash;
+[*«sequence traversal»*](tablet-4-operators.html#traversing-sequence) &mdash;
 generic autodecrement, changes this value to its previous neighbour in its ordered set,
 can be used as [prefix](#prefix_category) (take effect before 
 [evaluating](appendix-g-glossary.html#evaluation) the surrounding term)
 or [suffix](#suffix_category) (incrementing afterwards),
-alias to **[pred](#pred)**, opposite of **[++](#<a id="auto-increment"/>)**
+alias to [**pred**](#pred), opposite of [**++**](#<a id="auto-increment"/>)
 
 <a id="minus-minus-greater-signature"/>
 **--\>**
 [*«signature symbol»*](appendix-b-grouped.html#signature-symbols) &mdash;
-declares the type of the return value of a
-*[routine](appendix-g-glossary#routine)*, type name is placed after
-this arrow at the end of a signature
+declares the type of the return value of a [*routine*](appendix-g-glossary#routine),
+type name is placed after this arrow at the end of a signature
 
 <a id="minus-greater-signature"/>
 **-\>**
 [*«signature symbol»*](appendix-b-grouped.html#signature-symbols) &mdash;
-declares named parameters for a *[block](appendix-g-glossary.html#block)*
+declares named parameters for a [*block*](appendix-g-glossary.html#block)
 (pointy block)
 
 <a id="dot"/><a id="dot-twigil"/>
 **.**
 [*«twigil»*](appendix-b-grouped.html#twigils) &mdash;
-*[twigil](appendix-g-glossary.html#twigil)* of public accessors
+[*twigil*](appendix-g-glossary.html#twigil) of public accessors
 (getter/setter methods)
 
 <a id="dot-metachar"/>
@@ -420,20 +419,20 @@ matches one character, any character
 
 <a id="dot-subrule"/>
 \<**.**<span class="you-provide">s</span>\> &mdash;
-prefix for a *[subrule](appendix-g-glossary.html#subrule)*
+prefix for a [*subrule*](appendix-g-glossary.html#subrule)
 that doesn't capture (matches will not be remembered)
 
 <a id="dot-dot"/><a id="dot-dot-op"/><a id="range-op"/>
 **..**
-*[«ranges»](tablet-4-operators.html#ranges)*,
+[*«ranges»*](tablet-4-operators.html#ranges),
 [*«list op»*](tablet-4-operators.html#list-generation) &mdash;
 [infix](#infix-category) range generating operator,
-produces a **[Range](#Range-type)** object in
+produces a [**Range**](#Range-type) object in
 [item context](appendix-b-grouped.html#contextualizers)
 which generate lists in [list context](appendix-g-glossary.html#list-context)
 
 <a id="dot-dot-dot"/><a id="dot-dot-dot-op"/><a id="sequence-op"/>
-**[...](tablet-4-operators.html#sequence-operator)**
+[**...**](tablet-4-operators.html#sequence-operator)
 [*«list op»*](tablet-4-operators.html#list-generation) &mdash;
 [**infix**](#infix-category) [sequence](appendix-g-glossary.html#sequance) generating operator,
 can figure from example number out if a series is arithmetic (give 2)
@@ -443,7 +442,7 @@ example: `@a = 1, 2, 4 ...` infite lazy list of all powers of two,
 
 <a id="dot-yadda"/>
 **...**
-*[«yadda op»](tablet-4-operators.html#yadda)* &mdash;
+[*«yadda op»*](tablet-4-operators.html#yadda) &mdash;
 [*yadda operator*](appendix-g-glossary.html#yadda-operator) that calls
 [**fail**](#fail) (exception),
 marks unimplemented empty [*routine*](appendix-g-glossary.html#routine)
@@ -456,13 +455,13 @@ infix division, forces [numeric context](appendix-g-glossary.html#numeric-contex
 
 <a id="slash-composer"/>
 **/**
-*[«rat composer»](tablet-2-basic-syntax.html#rational-number)*
+[*«rat composer»*](tablet-2-basic-syntax.html#rational-number)
 inside round brackets (for example `(3/7)`), gives you a
 [rational number](#Rat-type) that keeps track of its numerator and denominator
 
 <a id="slash-var"/><a id="match-var"/><a id="match-object"/>
 **$/** 
-*[«special var»](appendix-b-grouped.html#match-variables)* &mdash;
+[*«special var»*](appendix-b-grouped.html#match-variables) &mdash;
 last created match object of this [*block*](appendix-g-glossary.html#block)
 with the [following methods](appendix-b-grouped.html#match-object-methods)
 
@@ -482,7 +481,7 @@ okt/dec/hex range, alternate syntax without the zero is preferred
 
 <a id="0-var"/><a id="zero-var"/><a id="number-var"/>
 **$0**
-*[«special var»](appendix-b-grouped.html#match-variables)* &mdash;
+[*«special var»*](appendix-b-grouped.html#match-variables) &mdash;
 first positional submatch, there is **`$1`**, **`$2`**, ... too
 (don't stops at **`$9`** like Perl 5), alias to
 [**`$()[0]`**](#round-brackets-var) and
@@ -491,7 +490,7 @@ first positional submatch, there is **`$1`**, **`$2`**, ... too
 
 <a id="colon"/><a id="colon-adverb"/>
 **:**<span class="you-provide">s</span>(<span class="you-provide">s</span>) &mdash;
-*[pair](#Pair-type)* generation operator,
+[**Pair**](#Pair-type) generation operator,
 also known as *adverbial* syntax &mdash;
 example: *`$pair = :key('value')`*
 
@@ -511,8 +510,8 @@ example: *`$filename.IO ~~ :X`*
 <a id="colon-twigil"/>
 **:**
 [*«twigil»*](appendix-b-grouped.html#twigils) &mdash;
-*[twigil](appendix-g-glossary.html#twigil)* of autogenerated named
-parameters of a *[block](appendix-g-glossary.html#block)*
+[*twigil*](appendix-g-glossary.html#twigil) of autogenerated named
+parameters of a [*block*](appendix-g-glossary.html#block)
 
 <a id="colon-numeric"/>
 **:**<span class="you-provide">N</span>\<<span class="you-provide">n</span>\> &mdash;
@@ -523,12 +522,12 @@ example: `:2<1000001>` is decimal 65
 
 <a id="colon-label"/>
 **:**<span class="you-provide">s</span> *«flow control»* &mdash;
-suffix of all labels you can jump to with **[goto](#goto)**
+suffix of all labels you can jump to with [**goto**](#goto)
 
 <a id="colon-signature"/>
 **:**
 [*«signature symbol»*](appendix-b-grouped.html#signature-symbols) &mdash;
-prefix of a *[named parameter](appendix-g-glossary.html#named-parameter)* in
+prefix of a [*named parameter*](appendix-g-glossary.html#named-parameter) in
 a signature, they are positional when without colon
 
 <a id="colon-colon-sigil"/>
@@ -544,17 +543,17 @@ namespace names (like in Perl 5)
 introducing a type variable in a signature
 
 <a id="colon-colon-equal-op"/><a id="compiletime-binding-op"/>
-**[::=](tablet-3-variables#binding)** &mdash;
+[**::=**](tablet-3-variables#binding)* &mdash;
 [binds](tablet-3-variables#binding)
 a value or variable to a variable at compile time
 
 <a id="colon-equal-op"/><a id="runtime-binding-op"/>
-**[:=](tablet-3-variables#binding)** &mdash;
+[**:=**](tablet-3-variables#binding) &mdash;
 creates an alias to a variable at runtime
-(*[binding](tablet-3-variables#binding)*)
+([*binding*](tablet-3-variables#binding))
 
 <a id="semicolon"/><a id="semicolon-terminator"/>
-**[;](tablet-2-basic-syntax.html#statements)**
+[**;**](tablet-2-basic-syntax.html#statements)
 *«terminator»* &mdash;
 separates [statements](tablet-2-basic-syntax.html#statements)
 (commands) or [array indices](tablet-3-variables#array-slices) &mdash;
@@ -566,9 +565,9 @@ example: `@[2;3]` instead of `@a[2][3]`
 
 <a id="lower-op"/>
 **\<**
-*[«num comparison»](tablet-4-operators.html#numerical-comparison)* &mdash;
+[*«num comparison»*](tablet-4-operators.html#numerical-comparison) &mdash;
 [infix](#infix-category) op, less than,
-**[True](#True)** if numerically ordered the left comes before the right
+[**True**](#True) if numerically ordered the left comes before the right
 [*operand*](appendix-g-glossary.html#operand)
 
 <a id="lower-minus-greater-signature"/>
@@ -586,14 +585,14 @@ example: `2 <<+=<< @b` increments numeric value of every array element by 2
 
 <a id="lower-lower-equal-equal-op"/><a id="appending-left-pipe-op"/>
 **\<\<==**
-*[«sequencer op»](tablet-4-operators.html#feed-ops)* &mdash;
+[*«sequencer op»*](tablet-4-operators.html#feed-ops) &mdash;
 leftward pointing feed operator that adds values to an existing list (append-mode) &mdash;
 see also: [**\<==**](#lower-lower-equal-op) and [**==\>\>**](#equal-equal-greater-greater-op)
 
 <a id="double-angle-brackets"/><a id="double-angle-brackets-op"/>
 <a id="texas-brackets"/><a id="texas-brackets-op"/>
 <a id="french-brackets"/><a id="french-brackets-op"/>
-**[\<\< \>\>](tablet-2-basic-syntax.html#quote-words)**
+[**\<\< \>\>**](tablet-2-basic-syntax.html#quote-words)
 [*«quoting op»*](appendix-b-grouped.html#quoting-ops) &mdash;
 [circumfix](#circumfix-category) quoting operator to autoquote of words and return
 them as a list, with [quote protection](appendix-g-glossary.html#quote-protection)
@@ -604,7 +603,7 @@ see also: [**\< \>**](#angle-brackets-op)
 
 <a id="lower-equal"/><a id="lower-equal-op"/>
 **\<=**
-*[«num comparison»](tablet-4-operators.html#numerical-comparison)* &mdash;
+[*«num comparison»*](tablet-4-operators.html#numerical-comparison) &mdash;
 less than or equal, numeric comparison operator &mdash;
 see also: [**<**](#lower-op) and [**\>=**](#greater-equal-op)
 
@@ -613,32 +612,32 @@ see also: [**<**](#lower-op) and [**\>=**](#greater-equal-op)
 [*«sequencer op»*](tablet-4-operators.html#feed-ops) &mdash;
 leftward pointing feed operator, take return value of right side
 and feed as parameter to the left &mdash;
-see also: **[==\>](#equal-equal-greater-op)**
+see also: [**==\>**](#equal-equal-greater-op)
 
 <a id="lower-equal-greater-op"/><a id="spaceship-op"/>
 **\<=\>**
 [*«num comparison»*](tablet-4-operators.html#numerical-comparison) &mdash;
 numeric, [**infix**](#infix-category) less-equal-greater comparison for sortable classes,
-so called "spaceship operator", does a **[cmp](#cmp)** of the into 
+so called "spaceship operator", does a [**cmp**](#cmp) of the into 
 [numeric context](appendix-g-glossary.html#numeric-context) converted values of both sides,
-as **[leg](#leg)** does in *[string](#Str-type)* context &mdash;
+as [**leg**](#leg) does in [**string**](#Str-type) context &mdash;
 example: `3 <=> 4` returns `-1`, `3 <=> 3` returns `0`, `4 <=> 3` returns `1`
 
 <a id="angle-brackets"/><a id="angle-brackets-op"/>
-**[\< \>](tablet-2-basic-syntax.html#quote-words)**
-*[«quoting op»](appendix-b-grouped.html#quoting-ops)* &mdash;
+[**\< \>**](tablet-2-basic-syntax.html#quote-words)
+[*«quoting op»*](appendix-b-grouped.html#quoting-ops) &mdash;
 [circumfix](#circumfix-category) quoting operator that autoquotes words
 and returns them as a list,
 without [quote protection](appendix-g-glossary.html#quote-protection) and
 evaluation of variables like [\<\< \>\>](#double-angle-brackets),
-alias to **[qw/.../](#qw-op)** or
-**[Q](#Q-op)** **:q** **[:ww](#ww-adverb)** **/.../**
+alias to [**qw/.../**](#qw-op) or
+[**Q**](#Q-op) **:q** [**:ww**](#ww-adverb) **/.../**
 
 <a id="angle-brackets-twigil"/><a id="angle-brackets-var"/>
 **\< \>**
 [*«twigil»*](appendix-b-grouped.html#twigils) &mdash;
 [circumfix](#circumfix-category)
-*[twigil](appendix-g-glossary.html#twigil)* of named captures, **`$<...>`**
+[*twigil*](appendix-g-glossary.html#twigil) of named captures, **`$<...>`**
 is alias to [**`$/<...>`**](#match-var), in Perl 5: *$&* and *$MATCH*
 
 <a id="angle-brackets-metachar"/>
@@ -650,7 +649,7 @@ name of the subrule as [*named capures*](appendix-g-glossary.html#named-capure)
 into [`$/<name>`](#match-var) and [`$<name>`](#angle-brackets-var)
 
 <a id="equal"/><a id="equal-op"/>
-**[=](tablet-3-variables#assignment)**
+[**=**](tablet-3-variables#assignment)
 *«Op»* &mdash;
 [assignment](tablet-3-variables#assignment),
 right side is [evaluated](appendix-g-glossary.html#evaluation) and assigned
@@ -679,9 +678,9 @@ if both vars are bound to same memory location
 
 <a id="equal-equal"/><a id="equal-equal-op"/>
 **==**
-*[«num comparison»](tablet-4-operators.html#numerical-comparison)* &mdash;
-**[True](#True)** if values are equal in [numeric context](appendix-g-glossary.html#numeric-context),
-as **[eq](#eq)** does in *[string context](tablet-4-operators.html#string-context)*
+[*«num comparison»*](tablet-4-operators.html#numerical-comparison) &mdash;
+[**True**](#True) if values are equal in [numeric context](appendix-g-glossary.html#numeric-context),
+as [**eq**](#eq) does in [*string context*](tablet-4-operators.html#string-context)
 
 <a id="equal-equal-equal"/><a id="equal-equal-equal-op"/><a id="identity-op"/>
 **===** *«comparison op»* &mdash;
@@ -690,31 +689,32 @@ value and [type](appendix-b-grouped.html#value-types)
 
 <a id="equal-equal-greater-op"/><a id="pipe-right"/>
 **==\>**
-*[«sequencer op»](tablet-4-operators.html#feed-ops)* &mdash;
+[*«sequencer op»*](tablet-4-operators.html#feed-ops) &mdash;
 rightward pointing feed operator, take return value of left side
 and feed as parameter to the right &mdash;
 see also: [*\<==*](#lower-equal-equal-op) and [*==\>\>*](#equal-equal-greater-greater-op)
 
 <a id="equal-equal-greater-greater-op"/>
 **==\>\>**
-*[«sequencer op»](tablet-4-operators.html#feed-ops)* &mdash;
+[*«sequencer op»*](tablet-4-operators.html#feed-ops) &mdash;
 rightward pointing feed operator that adds values to an existing list (append-mode) &mdash;
-see also: [*==\>*](#equal-equal-greater-op) and [*\<\<==*](#lower-lower-equal-equal-op)
+see also: [**==\>**](#equal-equal-greater-op) and [*\<\<==*](#lower-lower-equal-equal-op)
 
 <a id="equal-greater-op"/><a id="fat-arrow"/>
 **=\>**
 *«op»* &mdash;
-[**Pair**](#Pair-type) (and Hash) constructor called *fat arrow* &mdash;
+[**Pair**](#Pair-type) (and Hash) constructor called [*fat arrow*](#fat-arrow) &mdash;
 example: `$pair = 'key' => 'value';` &mdash;
-alternative to the *[adverbial syntax](#colon-adverb)*
+alternative to the [*adverbial syntax*](#colon-adverb)
 
 <a id="greater-op"/>
 **\>**
-*[«num comparison»](tablet-4-operators.html#numerical-comparison)* &mdash;
+[*«num comparison»*](tablet-4-operators.html#numerical-comparison) &mdash;
 [**infix**](#infix-category) op, numeric greater than
 
 <a id="greater-equal-op"/>
-**\>=** *[«num comparison»](tablet-4-operators.html#numerical-comparison)*
+**\>=**
+[*«num comparison»*](tablet-4-operators.html#numerical-comparison)
 [**infix**](#infix-category) comparison op, numeric greater than or equal
 
 <a id="greater-greater-metaop"/><a id="right-hyperop"/>
@@ -729,12 +729,12 @@ example: `@a >>++` increments numeric value of every array element
 # [?](#nav-top)
 
 <a id="question"/><a id="question-op"/><a id="question-context"/>
-**[?](tablet-4-operators.html#logical-selection)**
-*[«context op»](appendix-b-grouped.html#contextualizers)* &mdash;
-forces *[boolean context](tablet-4-operators.html#bool-context)*
-in an expression, returns **[False](#False)** when
-value is 0 or empty, otherwise **[True](#True)**,
-high precedence version of **[so](#so)**
+[**?**](tablet-4-operators.html#logical-selection)
+[*«context op»*](appendix-b-grouped.html#contextualizers) &mdash;
+forces [*boolean context*](tablet-4-operators.html#bool-context)
+in an expression, returns [**False**](#False) when
+value is 0 or empty, otherwise [**True**](#True),
+high precedence version of [**so**](#so)
 
 <a id="question-signature"/>
 **?**
@@ -743,13 +743,13 @@ suffix for optional named parameters in signatures
 
 <a id="question-metachar"/>
 **?**
-*[«regex metachar»](appendix-b-grouped.html#quantifier)* &mdash;
+[*«regex metachar»*](appendix-b-grouped.html#quantifier) &mdash;
 quantifier for 0 or 1 occurrence in Regexes
 
 <a id="question-twigil"/>
 **?**
 [*«twigil»*](appendix-b-grouped.html#twigils) &mdash;
-*[twigil](appendix-g-glossary.html#twigil)* (secondary sigil) for
+[*twigil*](appendix-g-glossary.html#twigil) (secondary sigil) for
 constant compiler hint variables
 
 <a id="question-assertion"/>
@@ -763,13 +763,13 @@ a positive zero-width assertion like
 <a id="question-subrule"/>
 **\<?\>**
 [*«predefined subrule»*](appendix-b-grouped.html#subrules) &mdash;
-matches nothing, returns always **[True](#True)**,
+matches nothing, returns always [**True**](#True),
 opposite of [**\<!\>**](#exclamation-subrule)
 
 <a id="question-ampersand-op"/><a id="boolean-and"/>
 **?&**
-*[«bool op»](tablet-4-operators.html#bool-context)* &mdash;
-logical *[AND](appendix-g-glossary.html#and)* op,
+[*«bool op»*](tablet-4-operators.html#bool-context) &mdash;
+logical [*AND*](appendix-g-glossary.html#and) op,
 forces [boolean context](appendix-g-glossary.html#bool-context)
 
 <a id="question-question"/><a id="question-question-exclamation-exclamation"/>
@@ -790,14 +790,14 @@ that calls [**warn**](#warn)
 
 <a id="question-caret-op"/><a id="boolean-xor"/>
 **?\^**
-*[«bool op»](tablet-4-operators.html#bool-context)* &mdash;
+[*«bool op»*](tablet-4-operators.html#bool-context) &mdash;
 logical [**infix**](#infix-category) *[XOR](appendix-g-glossary.html#xor)*,
 forces operands into [boolean context](appendix-g-glossary.html#bool-context)
 
 <a id="question-pipe-op"/><a id="boolean-or"/>
 **?|**
-*[«bool op»](tablet-4-operators.html#bool-context)* &mdash;
-[**infix**](#infix-category) logical *[OR](appendix-g-glossary.html#or)*,
+[*«bool op»*](tablet-4-operators.html#bool-context) &mdash;
+[**infix**](#infix-category) logical [*OR*](appendix-g-glossary.html#or),
 forces operands into [boolean context](appendix-g-glossary.html#bool-context)
 
 <a id="at"/><a id="at-sigil"/>
@@ -807,7 +807,7 @@ forces operands into [boolean context](appendix-g-glossary.html#bool-context)
 
 <a id="at-op"/><a id="at-context"/><a id="array-context-op"/>
 **@**()
-*[«context op»](appendix-b-grouped.html#contextualizers)* &mdash;
+[*«context op»*](appendix-b-grouped.html#contextualizers) &mdash;
 forces (flattened) [array context](appendix-g-glossary.html#array-context),
 alias to **[list()](#list)** function
 
@@ -871,7 +871,7 @@ and [regexes](appendix-b-grouped.html#escape-sequences) start with it
 [*«junctive op»*](tablet-4-operators.html#junctions) &mdash;
 [*infix*](#infix-category) [*junctive*](appendix-g-glossary.html#junction)
 [*XOR*](appendix-g-glossary.html#xor),
-requires that exactly one of both operands is **[True](#True)** in 
+requires that exactly one of both operands is [**True**](#True) in 
 [*bool context*](appendix-g-glossary.html#bool-context) to return **True** &mdash;
 see also **[one](#one)**
 
@@ -889,7 +889,7 @@ see also: [~~]()
 **\^**
 [*«twigil»*](appendix-b-grouped.html#twigils) &mdash;
 autogenerated positional parameters of a
-*[block](appendix-g-glossary.html#block)*, position results from
+[*block*](appendix-g-glossary.html#block), position results from
 alphabetical order of all $\^-Variables
 
 <a id="caret-signature"/>
@@ -936,7 +936,7 @@ or a hashref when it is identified as a hash or contains a **[=\>](#fat-arrow)**
 <a id="pipe"/><a id="pipe-op"/><a id="junctive-or"/>
 **|**
 [*«junctive op»*](tablet-4-operators.html#junctions) &mdash;
-*[junctive](appendix-g-glossary.html#junction)* *[OR](appendix-g-glossary.html#or)*,
+*[junctive](appendix-g-glossary.html#junction)* [*OR*](appendix-g-glossary.html#or),
 requires that a condition is fulfilled &mdash;
 see also: **[any](#any)**
 
@@ -944,7 +944,7 @@ see also: **[any](#any)**
 **|**
 [*«regex metachar»*](appendix-b-grouped.html#regex-metacharacter) &mdash; 
 match alternate patterns with longest token matching
-(*[OR](appendix-g-glossary.html#or)* - temporal simultaneous connection of patterns)
+([*OR*](appendix-g-glossary.html#or) - temporal simultaneous connection of patterns)
 
 <a id="pipe-context"/><a id="pipe-context-op"/>
 **|**()
@@ -955,7 +955,7 @@ object into arglist, ([*named parameter*](appendix-g-glossary.html#named-paramet
 <a id="pipe-pipe-op"/><a id="logical-or"/>
 **||**
 [*«logical op»*](tablet-4-operators.html#logical-selection) &mdash;
-[**infix**](#infix-category) short circuit logical *[OR](appendix-g-glossary.html#or)*, 
+[**infix**](#infix-category) short circuit logical [*OR*](appendix-g-glossary.html#or), 
 [evaluates](appendix-g-glossary.html#evaluation) sequentially left to right
 its operands until one is [**True**](#True) in 
 [*bool context*](appendix-g-glossary.html#bool-context),
@@ -973,50 +973,50 @@ connected with a logical [*OR*](appendix-g-glossary.html#or)
 
 <a id="pipe-pipe-context"/>
 **||**()
-*[«context op»](appendix-b-grouped.html#contextualizers)* &mdash;
+[*«context op»*](appendix-b-grouped.html#contextualizers) &mdash;
 flatten [capture](tablet-3-variables#capture)
 object into semicolon list, (positional parameter)
 
 <a id="tilde"/><a id="tilde-op"/><a id="tilde-context"/>
 **[\~](tablet-4-operators.html#string-context)**
-*[«context op»](appendix-b-grouped.html#contextualizers)*,
-*[«string op»](tablet-4-operators.html#string-context)*,
-forces *[string context](appendix-g-glossary.html#string-context)*
+[*«context op»*](appendix-b-grouped.html#contextualizers),
+[*«string op»*](tablet-4-operators.html#string-context),
+forces [*string context*](appendix-g-glossary.html#string-context)
 on its operands (stringifies),
 if [**infix**](#infix-category) its concatenate strings -
-an alias for **[cat](#cat)**
+an alias for [**cat**](#cat)
 
 <a id="tilde-twigil"/>
 **\~**
 [*«twigil»*](appendix-b-grouped.html#twigils) &mdash;
-*[twigil](appendix-g-glossary.html#twigil)* for a
+[*twigil*](appendix-g-glossary.html#twigil) for a
 [grammar](#grammar) of a sublanguage like
 **[$\~MAIN](#MAIN-slang-var)**
 
 <a id="tilde-ampersand-op"/><a id="string-and"/>
-**\~&** *[«string op»](tablet-4-operators.html#string-context)* &mdash;
-characterwise *[AND](appendix-g-glossary.html#and)*,
-forces *[string context](appendix-g-glossary.html#string-context)*
+**\~&** [*«string op»*](tablet-4-operators.html#string-context) &mdash;
+characterwise [*AND*](appendix-g-glossary.html#and),
+forces [*string context*](appendix-g-glossary.html#string-context)
 
 <a id="tilde-lower-op"/>
-**\~<** *[«string op»](tablet-4-operators.html#string-context)* &mdash;
+**\~<** [*«string op»*](tablet-4-operators.html#string-context) &mdash;
 characterwise left shift,
-forces *[string context](appendix-g-glossary.html#string-context)*
+forces [*string context*](appendix-g-glossary.html#string-context)
 
 <a id="tilde-greater-op"/>
-**\~\>** *[«string op»](tablet-4-operators.html#string-context)* &mdash;
+**\~\>** [*«string op»*](tablet-4-operators.html#string-context) &mdash;
 characterwise right shift,
-forces *[string context](appendix-g-glossary.html#string-context)*
+forces [*string context*](appendix-g-glossary.html#string-context)
 
 <a id="tilde-caret-op"/><a id="string-xor"/>
-**\~\^** *[«string op»](tablet-4-operators.html#string-context)* &mdash;
+**\~\^** [*«string op»*](tablet-4-operators.html#string-context) &mdash;
 characterwise *[XOR](appendix-g-glossary.html#xor)*,
-forces *[string context](appendix-g-glossary.html#string-context)*
+forces [*string context*](appendix-g-glossary.html#string-context)
 
 <a id="tilde-pipe-op"/><a id="string-or"/>
-**\~|** *[«string op»](tablet-4-operators.html#string-context)* &mdash;
-characterwise *[OR](appendix-g-glossary.html#or)*,
-forces *[string context](appendix-g-glossary.html#string-context)*
+**\~|** [*«string op»*](tablet-4-operators.html#string-context) &mdash;
+characterwise [*OR*](appendix-g-glossary.html#or),
+forces [*string context*](appendix-g-glossary.html#string-context)
 
 <a id="tilde-tilde-op"/><a id="smartmatch-op"/>
 **[\~\~](tablet-4-operators.html#smartmatch)**
@@ -1036,8 +1036,8 @@ demands [evaluation](appendix-g-glossary.html#evaluation) of array variables,
 that starting with the
 **[@-sigil](#at-sigil)**, short form of
 **[:array](#array-adverb)**, included in
-**["..."](#double-quotes)**,
-**[qq/.../](#qq-op)** and
+[**"..."**](#double-quotes),
+[**qq/.../**](#qq-op) and
 **[\<\<...\>\>](#double-angle-brackets)**
 
 <a id="abs"/>
@@ -1051,7 +1051,7 @@ see also: [**round**](#round), [**sign**](#sign), [**truncate**](#truncate)
 **after**
 *[«generic comparison»](tablet-4-operators.html#generic-comparison)* &mdash;
 generic comparison operator used by the Order class,
-**[True](#True)** if left should follow right
+[**True**](#True) if left should follow right
 
 <a id="after-negative-subrule"/>
 **\<!after <span class="you-provide">p</span>\>**
@@ -1071,8 +1071,8 @@ pattern will match
 **all**
 [*«junctive op»*](tablet-4-operators.html#junctions) &mdash;
 *[junctive](appendix-g-glossary.html#junction)*
-*[AND](appendix-g-glossary.html#and)* operator,
-**[True](#True)** if all conditions (elements of a following list) are fulfilled &mdash;
+[*AND*](appendix-g-glossary.html#and) operator,
+[**True**](#True) if all conditions (elements of a following list) are fulfilled &mdash;
 see also: [**&**](#junctive-and)
 
 <a id="alnum-subrule"/>
@@ -1089,7 +1089,7 @@ a single alphabetic character
 <a id="and"/>
 **and**
 [*«logical op»*](tablet-4-operators.html#logical-selection) &mdash;
-[**infix**](#infix-category) short circuit logical *[AND](appendix-g-glossary.html#and)*,
+[**infix**](#infix-category) short circuit logical [*AND*](appendix-g-glossary.html#and),
 [evaluates](appendix-g-glossary.html#evaluation) sequentially left to right
 its operands until one is [**False**](#False) in
 [*boolean context*](appendix-g-glossary.html#boolean-context),
@@ -1102,8 +1102,8 @@ see also: [**andthen**](#andthen), [**all**](#all)
 <a id="andthen"/>
 **andthen**
 *«logical op»* &mdash;
-logical *[AND](appendix-g-glossary.html#and)* short circuit operator,
-transferring **[$\_](#context-var)** from first to second block or expression,
+logical [*AND*](appendix-g-glossary.html#and) short circuit operator,
+transferring [**$\_**](#context-var) from first to second block or expression,
 if first did succeed &mdash;
 example: `{...} andthen { .say }` &mdash;
 see also: [**orelse**](#orelse), [**and**](#orelse)
@@ -1115,16 +1115,16 @@ introduces names that aren't to be stored anywhere (anonymous)
 
 <a id="Any"/><a id="Any-type"/>
 **Any**
-*[«undefined value type»](appendix-b-grouped.html#undefined-types)* &mdash;
-Perl 6 object (default *[routine](appendix-g-glossary.html#routine)*
+[*«undefined value type»*](appendix-b-grouped.html#undefined-types) &mdash;
+Perl 6 object (default [*routine*](appendix-g-glossary.html#routine)
 *[parameter](appendix-g-glossary.html#parameter)* type, excludes
 *[junctions](appendix-g-glossary.html#junction)*)
 
 <a id="any"/>
 **any**
 [*«junctive op»*](tablet-4-operators.html#junctions) &mdash; 
-*[junctive](#junction)* *[OR](appendix-g-glossary.html#or)* operator,
-**[True](#True)** when any one condition (of a
+*[junctive](#junction)* [*OR*](appendix-g-glossary.html#or) operator,
+[**True**](#True) when any one condition (of a
 following list) is true in [*boolean context*](appendix-g-glossary.html#bool-context)  &mdash;
 see also: [**|**](#junctive-or)
 
@@ -1146,7 +1146,7 @@ arguments (parameter) to a program (script), in Perl 5: *@ARGV*
 **arity**
 *«routine method»* &mdash;
 returns how many *[parameters](appendix-g-glossary.html#parameter)* 
-this *[routine](appendix-g-glossary.html#routine)*
+this [*routine*](appendix-g-glossary.html#routine)
 requires, **[.count](#count)** includes also the optional
 
 <a id="Array-type"/>
@@ -1162,8 +1162,8 @@ demands [evaluation](appendix-g-glossary.html#evaluation) of array variables
 that starting with the
 **[@-sigil](#at-sigil)**, long form of
 **[:a](#a-adverb)**, included in
-**["..."](#double-quotes)**,
-**[qq/.../](#qq-op)** and
+[**"..."**](#double-quotes),
+[**qq/.../**](#qq-op) and
 **[\<\<...\>\>](#double-angle-brackets)**
 
 <a id="as-parameter-trait"/>
@@ -1175,7 +1175,7 @@ following **as**
 <a id="as-routine-trait"/>
 **as**
 [*«routine trait»*](appendix-b-grouped.html#routine-traits) &mdash;
-inner type constraint that a *[routine](appendix-g-glossary.html#routine)*
+inner type constraint that a [*routine*](appendix-g-glossary.html#routine)
 imposes on its return value
 
 <a id="assertion-category"/>
@@ -1193,7 +1193,7 @@ explicitly
 
 <a id="assuming"/>
 **assuming** &mdash;
-method of all *[routine](appendix-g-glossary.html#routine)*
+method of all [*routine*](appendix-g-glossary.html#routine)
 objects that enables *[Currying](appendix-g-glossary.html#currying)*
 
 <a id="async"/>
@@ -1204,7 +1204,7 @@ allows the interpreter to parallelize the following term
 **augment**
 [*«scope declarator»*](appendix-b-grouped.html#scope-declarator) &mdash;
 adds definitions to an existing name, inserts new methods and
-attributes into a **[grammar](#grammar)** or
+attributes into a [**grammar**](#grammar) or
 replaces them, see also: **[supersede](#supersede)**
 
 
@@ -1222,8 +1222,8 @@ file is a block special file (e.g. Harddisks, CDROMs and RAM areas)
 forces evaluation of
 [escape sequences](appendix-b-grouped.html#escape-sequences),
 short form of **[:backslash](#backslash-adverb)**,
-included in **["..."](#double-quotes)**,
-**[qq/.../](#qq-op)** and
+included in [**"..."**](#double-quotes),
+[**qq/.../**](#qq-op) and
 **[\<\<...\>\>](#double-angle-brackets)**
 
 <a id="backslash-category"/>
@@ -1238,8 +1238,8 @@ like [**\\w**](#backslash-w)
 forces evaluation of [escape
 sequences](appendix-b-grouped.html#escape-sequences)
 , long form of **[:b](#b-adverb)**, included in
-**["..."](#double-quotes)**,
-**[qq/.../](#qq-op)** and
+[**"..."**](#double-quotes),
+[**qq/.../**](#qq-op) and
 **[\<\<...\>\>](#double-angle-brackets)**
 
 <a id="Bag-type"/>
@@ -1249,7 +1249,7 @@ unordered collection of values that allows duplicates
 
 <a id="base"/>
 **base** &mdash;
-returns a **[Str](#Str-type)**
+returns a [**Str**](#Str-type)
 representing the invocant in base $base (only parameter); Fails if
 $base is smaller than 2 or larger than 36
 
@@ -1257,7 +1257,7 @@ $base is smaller than 2 or larger than 36
 **before**
 *[«generic comparison»](tablet-4-operators.html#generic-comparison)* &mdash;
 generic comparison operator used by the Order class,
-**[True](#True)** when left should precede right
+[**True**](#True) when left should precede right
 
 <a id="before-negative-subrule"/>
 **\<!before <span class="you-provide">p</span>\>**
@@ -1275,9 +1275,9 @@ will match
 
 <a id="BEGIN-phaser"/>
 **BEGIN**
-*[«closure trait»](appendix-b-grouped.html#closure-traits)* &mdash;
+[*«closure trait»*](appendix-b-grouped.html#closure-traits) &mdash;
 marks as a prefix a special block or statement, executed at
-*[compile time](appendix-g-glossary.html#compile-time)*,
+[*compile time*](appendix-g-glossary.html#compile-time),
 [ASAP](appendix-g-glossary.html#ASAP), only ever runs once
 
 <a id="Bit-type"/>
@@ -1310,14 +1310,14 @@ lexical *[scopes](appendix-g-glossary.html#scope)*
 
 <a id="BLOCK-compiler-var"/>
 **&?BLOCK** 
-*[«special var»](appendix-b-grouped.html#compiler-hint-variables)* &mdash;
+[*«special var»*](appendix-b-grouped.html#compiler-hint-variables) &mdash;
 reference to current block
 
 <a id="Bool-type"/>
 **Bool**
 [*«immutable type»*](appendix-b-grouped.html#immutable-types) &mdash;
 Perl boolean, type of values that can be either
-**[True](#True)** or **[False](#False)**
+[**True**](#True) or [**False**](#False)
 which is in full length *Bool::True* and *Bool::False*
 
 <a id="break"/>
@@ -1334,7 +1334,7 @@ Perl buffer (a stringish array of memory locations), type for
 raw binary data
 
 <a id="but"/>
-**but** &mdash; adds a **[role](#role)** to a **[class](#class)**
+**but** &mdash; adds a **[role](#role)** to a [**class**](#class)
 
 <a id="bytes"/>
 **bytes** ([Str](#Str-type) [--\>](#minus-minus-greater-signature) [Int](#Int-type))
@@ -1365,8 +1365,8 @@ file is a character special file (e.g. terminals modems)
 [*«quoting adverb»*](appendix-b-grouped.html#quoting-adverbs) &mdash;
 forces evaluation of closures (blocks aka {...}) inside quotes,
 long form of **[:closure](#closure-adverb)**,
-included in **["..."](#double-quotes)**,
-**[qq/.../](#qq-op)** and
+included in [**"..."**](#double-quotes),
+[**qq/.../**](#qq-op) and
 **[\<\<...\>\>](#double-angle-brackets)**
 
 <a id="c-modifier"/>
@@ -1396,7 +1396,7 @@ see also: **[\<|g\>](#pipe-g)** and **[\<|w\>](#pipe-w)**
 <a id="cached"/><a id="cached-routine-trait"/>
 **cached**
 [*«routine trait»*](appendix-b-grouped.html#routine-traits) &mdash;
-marks a *[routine](appendix-g-glossary.html#routine)* as being memoized
+marks a [*routine*](appendix-g-glossary.html#routine) as being memoized
 
 <a id="call"/>
 **call** &mdash; execute a *[subroutine](appendix-g-glossary.html#routine)*
@@ -1404,7 +1404,7 @@ marks a *[routine](appendix-g-glossary.html#routine)* as being memoized
 <a id="caller"/>
 **caller** &mdash;
 returns an object that [describes](appendix-b-grouped.html#callframe-methods)
-the *[routine](appendix-g-glossary.html#routine)*
+the [*routine*](appendix-g-glossary.html#routine)
 from which the current routine was called
 
 <a id="callframe"/>
@@ -1416,7 +1416,7 @@ callframe object, that has the
 <a id="callwith"/>
 **callwith** &mdash;
 callable-method by which one can call a sub with a
-different [signature](appendix-g-glossary.html#signature)
+different [*signature*](appendix-g-glossary.html#signature)
 
 <a id="capitalize"/>
 **capitalize** &mdash;
@@ -1426,20 +1426,20 @@ makes first char of every word uppercase, rest lowercase
 <a id="Capture-type"/>
 **[Capture](tablet-3-variables#capture)**
 [*«immutable type»*](appendix-b-grouped.html#immutable-types) &mdash;
-type holding arguments for a *[routine](appendix-g-glossary.html#routine)*
+type holding arguments for a [*routine*](appendix-g-glossary.html#routine)
 call (right-hand side of a binding)
 
 <a id="cat"/>
 **cat**
 [*«array method»*](tablet-3-variables#array-methods) &mdash;
 converts values of a *[list](appendix-g-glossary.html#list-context)* into
-*[string context](appendix-g-glossary.html#string-context)*
+[*string context*](appendix-g-glossary.html#string-context)
 and joines them like with **[\~](#tilde-op)**,
 alias to [`.join('')`](#join)
 
 <a id="CATCH-phaser"/>
 **CATCH**
-*[«closure trait»](appendix-b-grouped.html#closure-traits)* &mdash;
+[*«closure trait»*](appendix-b-grouped.html#closure-traits) &mdash;
 marks as a prefix a special block to catch
 **[Exceptions](#Exception-type)**, before
 **[LEAVE](#LEAVE-phaser)**
@@ -1453,12 +1453,11 @@ return value of the closure determines, under which key the value
 appears in the resulting hash, unlike
 **[classify](#classify)** the return value of the
 mapper can be listref to put the value in several categories or
-**[Nil](#Nil-type)** to reject the value for
-categorisation
+[**Nil**](#Nil-type) to reject the value for categorisation
 
 <a id="category-category"/>
 **category**
-*[«grammatical category»](appendix-b-grouped.html#categories)* &mdash;
+[*«grammatical category»*](appendix-b-grouped.html#categories) &mdash;
 grammatical category of all grammatical categories (metacategory),
 useful in case you want to create a new one with a macro
 
@@ -1474,25 +1473,26 @@ see also: [**floor**](#floor), [**round**](#round), [**truncate**](#truncate)
 **chr** ([Int](#Int-type) [--\>](#minus-minus-greater-signature) [Str](#Str-type))
 *«num method»* &mdash;
 convert number into character according a
-character table (UTF), reverse of **[ord](#ord)**
+character table (UTF), reverse of [**ord**](#ord)
 
 <a id="chrs"/>
 **chrs** ([Array](#Array-type) [of](#of) [Int](#Int-type) 
          [--\>](#minus-minus-greater-signature) [Str](#Str-type))
 *«num method»* &mdash;
 converts every number to a character with that index and combines them to one string,
-plural of **[chr](#chr)**, reverse of **[ords](#ords)**
+plural of [**chr**](#chr), reverse of [**ords**](#ords)
 
 <a id="chars"/>
 **chars** ([Str](#Str-type) [--\>](#minus-minus-greater-signature) [Int](#Int-type))
 *«string method»* &mdash;
 returns number of characters of a string, in Perl 5: *length* &mdash;
-see also: **[bytes](#bytes)**, [**codes**](#codes), [**graphs**](#graphs)
+see also: [**bytes**](#bytes), [**codes**](#codes), [**graphs**](#graphs)
 
 <a id="chars-modifier"/>
 **:chars**
 [*«regex modifier»*](appendix-b-grouped.html#regex-modifier) &mdash;
-searching on character level (default), see also:
+searching on character level (default) &mdash;
+see also:
 **[:bytes](#bytes-modifier)**,
 **[codes](#codes-modifier)**,
 **[graphs](#graphs-modifier)**
@@ -1504,9 +1504,9 @@ changes the current working directory
 
 <a id="CHECK-phaser"/>
 **CHECK**
-*[«closure trait»](appendix-b-grouped.html#closure-traits)* &mdash;
+[*«closure trait»*](appendix-b-grouped.html#closure-traits) &mdash;
 marks as a prefix a special block or statement, executed at
-*[compile time](appendix-g-glossary.html#compile-time)*
+[*compile time*](appendix-g-glossary.html#compile-time)
 [ALAP](appendix-g-glossary.html#ALAP), only ever runs once
 
 <a id="chmod"/>
@@ -1538,24 +1538,24 @@ change root directory on POSIX systems
 see also: [**conj**](#conj), [**polar**](#polar), [**unpolar**](#unpolar)
 
 <a id="circumfix-category"/>
-**circumfix** *[«grammatical category»](appendix-b-grouped.html#categories)* &mdash;
+**circumfix** [*«grammatical category»*](appendix-b-grouped.html#categories) &mdash;
 operator namespace of two parted ops that surround the
 statement, op or variable they affect, most prominent example may be
 the [double quotes](#double-quotes)
 
 <a id="class"/>
 **class** *«block modifier»* &mdash; 
-following block will build an object, see also **[method](#method)**,
+following block will build an object, see also [**method**](#method),
 **[submethod](#submethod)** and **[has](#has)**
 
 <a id="CLASS-compiler-var"/>
 **$?CLASS**
-*[«special var»](appendix-b-grouped.html#compiler-hint-variables)* &mdash;
+[*«special var»*](appendix-b-grouped.html#compiler-hint-variables) &mdash;
 current class object
 
 <a id="CLASS-namespace-compiler-var"/>
 **::?CLASS**
-*[«special var»](appendix-b-grouped.html#compiler-hint-variables)* &mdash;
+[*«special var»*](appendix-b-grouped.html#compiler-hint-variables) &mdash;
 name of the current class
 
 <a id="classify"/>
@@ -1578,16 +1578,16 @@ releasing the connection to a file via a [*file handle*](IO-type)
 [*«quoting adverb»*](appendix-b-grouped.html#quoting-adverbs) &mdash;
 forces evaluation of closures (blocks aka {... }) inside quotes,
 long form of **[:c](#c-adverb)**, included in
-**["..."](#double-quotes)**,
-**[qq/.../](#qq-op)** and
-**[\<\<...\>\>](#double-angle-brackets)**
+[**"..."**](#double-quotes),
+[**qq/.../**](#qq-op) and
+[**\<\<...\>\>**](#double-angle-brackets)
 
 <a id="cmp"/><a id="cmp-op"/>
 **cmp**
 *[«generic comparison»](tablet-4-operators.html#generic-comparison)* &mdash;
 general [infix](#infix-category) comparison 
 [*operator*](appendix-g-glossary.html#operator), result is 
-*Increase* (numerically -1) if [**before**](#before) would return **[True](#True)**
+*Increase* (numerically -1) if [**before**](#before) would return [**True**](#True)
 (left side is ordered before right) -
 *Same* (numerically 0) if **[eqv](#eqv)** - 
 *Decrease* (numerically 1) if **[after](#after)** &mdash;
@@ -1607,21 +1607,21 @@ output, [the complete list](appendix-b-grouped.html#control-chars)
 
 <a id="code"/><a id="code-context"/><a id="code-op"/>
 **code**
-*[«context op»](appendix-b-grouped.html#contextualizers)* &mdash;
-forces [callable](tablet-3-variables#callable)
-context, alias to **[&()](#ampersand-context-op)**
+[*«context op»*](appendix-b-grouped.html#contextualizers) &mdash;
+forces [*callable context*](appendix-g-glossary.html#code-context) ,
+alias to [**&**()](#ampersand-context-op)
 
 <a id="code-adverb"/>
 **:code**
 [*«quoting adverb»*](appendix-b-grouped.html#quoting-adverbs) &mdash;
 quasi quoting, the commented will be compiles and the AST will
-be returned as result, see also: **[quasi](#quasi)**
+be returned as result, see also: [**quasi**](#quasi)
 
 <a id="codes"/>
 **codes** ([Str](#Str-type) [--\>](#minus-minus-greater-signature) [Int](#Int-type))
 *«string mmethod»* &mdash;
-number of *[unicode](appendix-g-glossary.html#unicode)*
-*[codepoints](appendix-g-glossary.html#codepoints) of a string in a
+number of [*unicode*](appendix-g-glossary.html#unicode)
+[*codepoints*](appendix-g-glossary.html#codepoints) of a string in a
 language-independent way &mdash;
 see also: [**bytes*](#bytes), [**chars**](#chars), [**graphs**](#graphs)
 
@@ -1642,7 +1642,7 @@ default pattern is [`rx/./`](#rx)
 
 <a id="COMMENT-pod-var"/>
 **@=COMMENT**
-*[«special var»](appendix-b-grouped.html#pod-variables)* &mdash;
+[*«special var»*](appendix-b-grouped.html#pod-variables) &mdash;
 all the comment blocks in the file
 
 <a id="Complex-type"/>
@@ -1687,15 +1687,15 @@ then going to the right, short for
 
 <a id="CONTROL-phaser"/>
 **CONTROL**
-*[«closure trait»](appendix-b-grouped.html#closure-traits)* &mdash;
+[*«closure trait»*](appendix-b-grouped.html#closure-traits) &mdash;
 marks as a prefix a special block to catch control
-**[Exception](#Exception-type)**
+[**Exception**](#Exception-type)
 (like **[next](#next)** / **[last](#last)** / **[return](#return)** etc),
 before **[LEAVE](#LEAVE-phaser)**
 
 <a id="Cool-type"/>
 **Cool**
-*[«undefined value type»](appendix-b-grouped.html#undefined-types)* &mdash;
+[*«undefined value type»*](appendix-b-grouped.html#undefined-types) &mdash;
 Perl 6 Convenient [OO](appendix-g-glossary.html#OOP) Loopbacks,
 
 <a id="copy"/><a id="copy-parameter-trait"/>
@@ -1706,15 +1706,14 @@ read-writable copy of the original argument ("pass-by-value")
 <a id="cos"/><a id="cos-op"/>
 **cos**
 [*«numeric op»*](tablet-4-operators.html#numeric-context) &mdash;
-cosine, trigonometric function, takes angle in radians; see also
-**[to-radians](#to-radians)**,
-**[sin](#sin)**, **[tan](#tan)**
+cosine, trigonometric function, takes angle in radians &mdash;
+see also [**to-radians**](#to-radians), [**sin**](#sin), [**tan**](#tan)
 
 <a id="count"/>
 **count** *«routine method»* &mdash;
 returns how many parameters this
-*[routine](appendix-g-glossary.html#routine)* takes (including optional),
-**[.arity](#arity)** counts just the required
+[*routine*](appendix-g-glossary.html#routine) takes (including optional),
+[**.arity**](#arity) counts just the required
 
 <a id="cross"/>
 **cross** *«list method»* &mdash;
@@ -1733,7 +1732,7 @@ example: *`@a X~ @b`* equals *`(@a; @b).crosswith(&[~])`* equals
 <a id="CWD-global-var"/>
 **$\*CWD**
 [*«special var»*](appendix-b-grouped.html#global-variables) &mdash;
-current working directory as **[Str](#Str-type)**
+current working directory as [**Str**](#Str-type)
 
 
 
@@ -1756,7 +1755,7 @@ a single digit character, alias to [**\<digit\>**](#digit-subrule)
 
 <a id="data-pod-var"/>
 **\$=data**
-*[«special var»](appendix-b-grouped.html#pod-variables)* &mdash;
+[*«special var»*](appendix-b-grouped.html#pod-variables) &mdash;
 handle for the data block (=begin data ... =end data),
 use *$=data.lines* to *[iterate](appendix-g-glossary.html#interation)*
 over the lines of it
@@ -1764,9 +1763,8 @@ over the lines of it
 <a id="decode"/>
 **[decode](tablet-5-io.html#read)**
 *«Buf method»* &mdash;
-transforms raw binary UTF
-(**[Buf](#Buf-type)**) into readable UTF Text
-(**[Str](#Str-type)**)
+transforms raw binary UTF ([**Buf**](#Buf-type))
+into readable UTF Text ([**Str**](#Str-type))
 
 <a id="default"/>
 **[default](tablet-6-blocks.html#default)**
@@ -1789,7 +1787,7 @@ removes all values of which indices are passed
 <a id="delete-hash"/>
 **delete**
 *[«hash method»](tablet-3-variables#hash-methods)* &mdash;
-removes all [pairs](#pair) of which keys are passed
+removes all [*pairs*](appendix-g-glossary.html#pair) of which keys are passed
 
 <a id="denominator"/>
 **denominator**
@@ -1803,9 +1801,9 @@ see also: [**nude**](#nude)
 
 <a id="die"/>
 **die** &mdash;
-throws a fatal **[Exception](#exception-type)**, the default
-exception handler **[print](#print)**'s each element
-of the list to **[$\*ERR](#ERR-global-var)**
+throws a fatal [**Exception**](#Exception-type), the default
+exception handler [**print**](#print)'s each element
+of the list to [**$\*ERR**](#ERR-global-var)
 
 <a id="digit-subrule"/>
 **\<digit\>**
@@ -1822,7 +1820,7 @@ default
 [*«special var»*](appendix-b-grouped.html#global-variables) &mdash;
 running OS distribution, you might want to use `$*DISTRO.name`,
 see also: **[\$\*KERNEL](#KERNEL-global-var)** and
-**[\$\*VM](#VM-global-var)**
+[**\$\*VM**](#VM-global-var)
 
 <a id="DISTRO-compiler-var"/>
 **\$\?DISTRO**
@@ -1837,7 +1835,7 @@ program was compiled for, see also:
 
 <a id="do"/>
 **[do](tablet-6-blocks.html#do)** &mdash;
-executes a *[block](appendix-g-glossary.html#block)*, the "do once" loop
+executes a [*block*](appendix-g-glossary.html#block), the "do once" loop
 
 <a id="does"/>
 **does** &mdash;
@@ -1845,13 +1843,13 @@ checks if an objekt inherits a **[role](#role)** (only parameter)
 
 <a id="dotty-category"/>
 **dotty**
-*[«grammatical category»](appendix-b-grouped.html#categories)* &mdash;
+[*«grammatical category»*](appendix-b-grouped.html#categories) &mdash;
 
 <a id="double-adverb"/>
 **[:double](tablet-2-basic-syntax.html#double-quotes)**
 [*«quoting adverb»*](appendix-b-grouped.html#quoting-adverbs) &mdash;
 *double quoting*, **q** with interpolation of variables, alias
-to **["..."](#double-quotes)**, **[qq
+to [**"..."**](#double-quotes), **[qq
 /.../](#qq-op)** and `Q :s :a :h :f :c :b /.../`,
 long for **[:qq](#qq-adverb)**
 
@@ -1904,13 +1902,13 @@ in Perl 5: *@\)* and *\$EGID*
 
 <a id="elems"/><a id="elems-aray"/>
 **elems**
-*[«array op & method»](tablet-3-variables#array-methods)* &mdash;
+[*«array op & method»*](tablet-3-variables#array-methods) &mdash;
 number of elements (values), see also:
 **[end](#end)**
 
 <a id="elems-hash"/>
 **elems**
-*[«hash op & method»](tablet-3-variables#hash-methods)* &mdash;
+[*«hash op & method»*](tablet-3-variables#hash-methods) &mdash;
 number of pairs
 
 <a id="else"/>
@@ -1919,7 +1917,7 @@ number of pairs
 introduces the alternative block after an
 **[if](#if)** or **[elsif](#elsif)**
 that is executed, when conditions of all alternatives resulted
-in **[False](#False)** &mdash; see also: **[default](#default)**
+in [**False**](#False) &mdash; see also: **[default](#default)**
 
 <a id="else"/>
 **[elsif](tablet-6-blocks.html#elsif)**
@@ -1928,29 +1926,29 @@ alternative **[if](#if)** clause
 
 <a id="ENC-compiler-var"/>
 **\$\?ENC**
-*[«special var»](appendix-b-grouped.html#compiler-hint-variables)* &mdash;
+[*«special var»*](appendix-b-grouped.html#compiler-hint-variables) &mdash;
 current *[encoding](appendix-g-glossary.html#encoding)*
 
 <a id="encode"/>
 **[encode](tablet-5-io.html#read)**
 *«Buf method»* &mdash;
-transforms readable UTF Text (**[Str](#Str-type)**)
+transforms readable UTF Text ([**Str**](#Str-type))
 into raw binary UTF (**[Buf](#Buf-type)**)
 
 <a id="END-phaser"/>
 **END**
-*[«closure trait»](appendix-b-grouped.html#closure-traits)* &mdash;
+[*«closure trait»*](appendix-b-grouped.html#closure-traits) &mdash;
 marks as a prefix a special block, executed at run time,
 *[ALAP](appendix-g-glossary.html#ALAP)*, only ever runs once
 
 <a id="end"/>
 **end**
-*[«array op & method»](tablet-3-variables#array-methods)* &mdash;
+[*«array op & method»*](tablet-3-variables#array-methods) &mdash;
 last index of that list, see also: **[elems](#elems)**
 
 <a id="ENTER-phaser"/>
 **ENTER**
-*[«closure trait»](appendix-b-grouped.html#closure-traits)* &mdash;
+[*«closure trait»*](appendix-b-grouped.html#closure-traits) &mdash;
 marks as a prefix a special block or statement, executed at
 every block entry time, repeats on [loop](appendix-b-grouped.html#loops) blocks
 
@@ -1999,7 +1997,7 @@ contrast with static [**===**](#equal-equal-equal)
 <a id="err"/><a id="err-op"/>
 **err** [*«logical op»*](tablet-4-operators.html#logical-selection) &mdash;
 short circuit defined or, returns the first defined value from
-the left, low precedence version of **[//](#defined-or)** &mdash;
+the left, low precedence version of [**//**](#defined-or) &mdash;
 see also: [**or**](#or), [**xor**](#xor)
 
 <a id="ERR-global-var"/>
@@ -2016,15 +2014,15 @@ in Perl 5: *@\>* and *$EUID*
 
 <a id="eval"/>
 **eval** &mdash;
-just *[compiles](#compilation)* a [string](#Str-type) and runs it,
-returns a result and maybe error message in
-**[$!](#exclamation-mark-var)** but does not catch
-**[Exceptions](#Exception-type)**, second optional parameter defines a
-parser **[grammar](#Grammar-type)** which should understand the string
+just [*compiles*](appendix-g-glossary.html#compilation) a [string](#Str-type)
+and runs it, returns a result and maybe error message in
+[**\$!**](#exclamation-mark-var) but does not catch
+[**Exceptions**](#Exception-type), second optional parameter defines a
+parser [**grammar**](#Grammar-type) which should understand the string
 
 <a id="evalfile"/>
 **evalfile** &mdash;
-**[eval](#eval)** a file like *do* did in Perl 5,
+[**eval**](#eval) a file like *do* did in Perl 5,
 with optional second parameter, which is a
 *[grammar](#Grammar-type)* that can parse that file
 
@@ -2045,8 +2043,8 @@ normal execution, which Perl 6 can both generate and handle
 **:exec**
 [*«quoting adverb»*](appendix-b-grouped.html#quoting-adverbs) &mdash;
 quoted [string](#Str) will be *[evaluated](appendix-g-glossary.html#evaluation)*
-as Perl code (like **[eval](#eval)**) replaced with its result, alias to
-**Q :x** and **[qx/.../](#qx-op)**
+as Perl code (like [**eval**](#eval)) replaced with its result, alias to
+**Q :x** and [**qx/.../**](#qx-op)
 
 <a id="EXECUTABLE-NAME-global-var"/>
 **\$\*EXECUTABLE\_NAME**
@@ -2077,7 +2075,7 @@ exponentiate, alias method to: $base **[\*\*](#asterisk-asterisk-op)** $exp
 <a id="export"/><a id="export-rouine-trait"/>
 **export**
 [*«routine trait»*](appendix-b-grouped.html#routine-traits) &mdash;
-this *[routine](appendix-g-glossary.html#routine)* will be exported by
+this [*routine*](appendix-g-glossary.html#routine) will be exported by
 the current [**module**](#module) by default
 
 
@@ -2093,12 +2091,12 @@ file is a plain file (no socket or dir, ...etc.)
 **:f**
 [*«quoting adverb»*](appendix-b-grouped.html#quoting-adverbs) &mdash;
 demands evaluation of functions (subs and methods), that start
-with the **[&-sigil](#ampersand-sigil)** and
+with the [**&** sigil](#ampersand-sigil) and
 replacing them with the result, long form of
-**[:function](#function-adverb)**, included in 
-**["..."](#double-quotes)**,
-**[qq/.../](#qq-op)** and
-**[\<\<...\>\>](#double-angle-brackets)**
+[**:function**](#function-adverb), included in 
+[**"..."**](#double-quotes),
+[**qq/.../**](#qq-op) and
+[**\<\<...\>\>**](#double-angle-brackets)
 
 <a id="backslash-F"/>
 **\\F**
@@ -2113,22 +2111,22 @@ form feed character (`\u000C`), as in Perl 5
 <a id="fail"/>
 **fail** &mdash;
 causes the [routine](appendix-g-glossary.html#routine) to return an unthrown
-**[Exception](#Exception-type)**, if *use fatal;* is
-in effect where the *[routine](appendix-g-glossary.html#routine)* was called from,
+[**Exception**](#Exception-type), if *use fatal;* is
+in effect where the [*routine*](appendix-g-glossary.html#routine) was called from,
 it throws the exception
 
 <a id="Failure"/><a id="Failure-type"/>
 **Failure**
-*[«undefined value type»](appendix-b-grouped.html#undefined-types)* &mdash;
+[*«undefined value type»*](appendix-b-grouped.html#undefined-types) &mdash;
 data type object for an error, thrown by an unhandled
-**[Exception](#Exception-type)**
+[**Exception**](#Exception-type)
 
 <a id="False"/>
 **False** &mdash;
-*[boolean](#Bool-type)* value aka
+[**boolean**](#Bool-type) value aka
 Bool::False, 0 in [*numeric context*](appendix-g-glossary.html#numeric-context),
-'' (empty) in *[string context](appendix-g-glossary.html#string-context)*,
-opposite of **[True](#True)**
+'' (empty) in [*string context*](appendix-g-glossary.html#string-context),
+opposite of [**True**](#True)
 
 <a id="FatRat-type"/>
 **FatRat**
@@ -2138,19 +2136,19 @@ Perl rational (unlimited precision in both parts)
 <a id="fc"/>
 **fc** ([Str](#Str-type) [--\>](#minus-minus-greater-signature) [Str](#Str-type))
 *«string method»* &mdash;
-return a copy of a string where the *[Unicode](appendix-g-glossary.html#unicode)*
+return a copy of a string where the [*Unicode*](appendix-g-glossary.html#unicode)
 "fold case" operation is done upon,
 suitable for doing caseless string comparisons &mdash;
 see also: [**lc**](#lc) and [**uc**](#uc)
 
 
 <a id="ff"/><a id="ff-op"/>
-**[ff](tablet-4-operators.html#flipflop)**
-*[«conditional»](appendix-b-grouped.html#conditionals)* &mdash;
-tests **[$\_](#context-var)**
+[**ff**](tablet-4-operators.html#flipflop)
+[*«conditional»*](appendix-b-grouped.html#conditionals) &mdash;
+tests [**$\_**](#context-var)
 against two values, flip flop operator in the style of awk, can
-test the right operand and become **[False](#False)**
-on the same evaluation it became **[True](#True)**
+test the right operand and become [**False**](#False)
+on the same evaluation it became [**True**](#True)
 in Perl 5: *..* in [scalar context](appendix-g-glossary.html#scalar-context)
 
 <a id="fff"/><a id="fff-op"/>
@@ -2158,7 +2156,7 @@ in Perl 5: *..* in [scalar context](appendix-g-glossary.html#scalar-context)
 *[«conditional»](appendix-b-grouped.html#conditionals)* &mdash;
 flip flop operator in the style of sed,
 tests **[\$\_](#context-var)** against two values,
-after return value became **[True](#True)**
+after return value became [**True**](#True)
 (**[$\_](#context-op)** is larger then left value),
 right side will be tested during next loop
 *[iteration](appendix-g-glossary.html#interation)*,
@@ -2167,7 +2165,7 @@ in Perl 5: *...* in *[scalar context](appendix-g-glossary.html#scalar-contex)*
 
 <a id="FILE-compiler-var"/>
 **$?FILE**
-*[«special var»](appendix-b-grouped.html#compiler-hint-variables)* &mdash;
+[*«special var»*](appendix-b-grouped.html#compiler-hint-variables) &mdash;
 current filename of source file
 
 <a id="file"/>
@@ -2176,14 +2174,14 @@ current filename of source file
 
 <a id="FIRST-phaser"/>
 **FIRST**
-*[«closure trait»](appendix-b-grouped.html#closure-traits)* &mdash;
+[*«closure trait»*](appendix-b-grouped.html#closure-traits) &mdash;
 marks as a prefix a special block or statement, executed at
 [loop](appendix-b-grouped.html#loops) initialization time,
 before any **[ENTER](#ENTER-phaser)**
 
 <a id="first"/>
 **first**
-*[«array op & method»](tablet-3-variables#array-methods)* &mdash;
+[*«array op & method»*](tablet-3-variables#array-methods) &mdash;
 returns first value of a list that passes a condition (first
 paramter); the condition is a closure that takes one value at a time
 (as [**`$_`**](#context-var) or `$^a`),
@@ -2192,7 +2190,7 @@ example : `first {$_ %% 2}, 1..5 ; # returns 2`
 
 <a id="flat"/>
 **flat**()
-*[«context op»](appendix-b-grouped.html#contextualizers)* &mdash;
+[*«context op»*](appendix-b-grouped.html#contextualizers) &mdash;
 forces flat [*list context*](appendix-g-glossary.html#list-context),
 opposite of **[lol()](#lol)** &mdash;
 example: `([2,3],[4,5]).flat` or `flat([2,3],[4,5])` results in: `[2..5]`
@@ -2216,18 +2214,18 @@ see also: [**ceiling**](#ceiling), [**round**](#round), [**truncate**](#truncate
 *«formater»* &mdash;
 variable method for simple
 **[printf](#printf)** - like formating, takes a
-format specifier and returns a [string](#Str-type) ,
+format specifier and returns a [**string**](#Str-type) ,
 format specifier accepts only 1 value placeholder, in case of a hash
 max. 2; second, optional parameter is delimiter between values or
 pairs (in case of a hash);
 
 <a id="for"/>
-**[for](tablet-6-blocks.html#for)**
+[**for**](tablet-6-blocks.html#for)
 [*«loop»*](appendix-b-grouped.html#loops) &mdash;
 loop that only iterates over the following list and sets
-**[$\_](#context-var)** for each
-*[iteration](appendix-g-glossary.html#interation)* (contextualizer), see
-also: **[given](#given)**
+[**$\_**](#context-var) for each [*iteration*](appendix-g-glossary.html#interation)
+(is a contextualizer) &mdash;
+ see also: [**given**](#given)
 
 <a id="fork"/>
 **[fork](tablet-5-io.html#processes)** &mdash;
@@ -2249,8 +2247,8 @@ demands evaluation of functions (subs and methods), that start
 with the **[&-sigil](#ampersand-sigil)** and
 replacing them with the result, long form of
 **[:f](#f-adverb)** , included in
-**["..."](#double-quotes)**,
-**[qq/.../](#qq-op)** and
+[**"..."**](#double-quotes),
+[**qq/.../**](#qq-op) and
 **[\<\<...\>\>](#double-angle-brackets)**
 
 
@@ -2365,15 +2363,15 @@ random selection <span class="you-provide">n</span> (only parameter) of hash
 <a id="grammar"/>
 **grammar**
 *«block modifier»* &mdash;
-special kind of **[class](#class)**
-with methods like **[regex](#regex)**, **[token](#token)**, **[rule](#rule)**
+special kind of [**class**](#class)
+with methods like **[regex](#regex)**, [**token**](#token), [**rule**](#rule)
 that execute [*regex*](appendix-g-glossary.html#regex) and are named subpatterns,
 produces a [match object](#match-var), the name is ment like in
 "Parsing Expression Grammar" (PEG)
 
 <a id="GRAMMAR-compiler-var"/>
 **\$?GRAMMAR**
-*[«special var»](appendix-b-grouped.html#compiler-hint-variables)* &mdash;
+[*«special var»*](appendix-b-grouped.html#compiler-hint-variables) &mdash;
 [grammar](#grammar) of the currently used [*slang*](appendix-g-glossary.html#slang)
 (mostly **[$\~MAIN](#MAIN-slang-var)**)
 
@@ -2400,7 +2398,7 @@ also: see also: **[:bytes](#bytes-modifier)**,
 
 <a id="grep"/>
 **grep**
-*[«array op & method»](tablet-3-variables#array-methods)* &mdash;
+[*«array op & method»*](tablet-3-variables#array-methods) &mdash;
 returns all values of an array that pass a filter condition
 (first parameter), the condition is a closure that takes one value
 at a time (as [**`$_`**](#context-var) or `$^a`) &mdash;
@@ -2411,7 +2409,7 @@ example : `grep {$_ %% 2}, 1..5;` returns `2, 4`
 **gt**
 *[«string comparison»](tablet-4-operators.html#string-comparison)* &mdash;
 [infix](#infix-category) operator, greater than
-or equal, **[True](#True)** if alphabetically
+or equal, [**True**](#True) if alphabetically
 ordered the right comes before the left &mdash;
 see also: **[lt](#lt)**, **[leg](#leg)** and [**<**](#lower-op)
 
@@ -2426,8 +2424,8 @@ demands evaluation of **[hash](#hash)**
 variables that start with the
 **[%-sigil](#percent-sigil)**, long form of
 **[:hash](#hash-adverb)**, included in
-**["..."](#double-quotes)**,
-**[qq/.../](#qq-op)** and
+[**"..."**](#double-quotes),
+[**qq/.../**](#qq-op) and
 **[\<\<...\>\>](#double-angle-brackets)**
 
 <a id="backslash-H"/>
@@ -2450,13 +2448,13 @@ to a method of an attribute
 <a id="HardRoutine-type"/>
 **HardRoutine**
 [*«immutable type»*](appendix-b-grouped.html#immutable-types) &mdash;
-a *[routine](appendix-g-glossary.html#routine)* that is committed to not changing
+a [*routine*](appendix-g-glossary.html#routine) that is committed to not changing
 
 <a id="has"/>
 **has**
 [*«scope declarator»*](appendix-b-grouped.html#scope-declarator) &mdash;
 introduces attribute names, see also
-**[class](#class)**
+[**class**](#class)
 
 <a id="Hash-type"/>
 **Hash**
@@ -2467,7 +2465,7 @@ can be also seen as a **[Set](#Set-type)** of **[Pairs](#Pair-type)**
 
 <a id="hash"/><a id="hash-op"/>
 **hash**
-*[«context op»](appendix-b-grouped.html#contextualizers)* &mdash;
+[*«context op»*](appendix-b-grouped.html#contextualizers) &mdash;
 enforces [*hash context*](appendix-g-glossary.html#hash-context),
 alias to **[%()](#percent-op)**
 
@@ -2477,8 +2475,8 @@ alias to **[%()](#percent-op)**
 demands evaluation of hash variables that start with the
 **[%-sigil](#percent-sigil)**, long form of
 **[:h](#h-adverb)**, included in
-**["..."](#double-quotes)**,
-**[qq/.../](#qq-op)** and
+[**"..."**](#double-quotes),
+[**qq/.../**](#qq-op) and
 **[\<\<...\>\>](#double-angle-brackets)**
 
 <a id="heredoc-adverb"/>
@@ -2489,7 +2487,7 @@ equal to **[:to](#to-adverb)**
 
 <a id="HOW-introspection"/>
 **HOW**
-*[«introspection method»](appendix-b-grouped.html#object-introspection)* &mdash;
+[*«introspection method»*](appendix-b-grouped.html#object-introspection) &mdash;
 get an instance the objects metaclass, its "Higher Order Workings"
 
 <a id="hyper"/>
@@ -2517,7 +2515,7 @@ an identifier
 **[if](tablet-6-blocks.html#if)**
 *[«conditional»](appendix-b-grouped.html#conditionals)* &mdash;
 if the following expression *[evals](#evaluation)*
-to **[True](#True)**, the block after that will be
+to [**True**](#True), the block after that will be
 run, opposite of **[unless](#unless)**, can also be
 written at the end of an expression
 
@@ -2571,18 +2569,18 @@ and returns the numerical position, opposite or **[rindex](#rindex)**
 <a id="Inf"/>
 **Inf** &mdash;
 indicates infinity, useful to generate infinite lazy lists,
-does in most [*context*](appendix-g-glossary.html#context) same as **[\*](#asterisk)**
+does in most [*context*](appendix-g-glossary.html#context) same as [**\***](#asterisk)
 
 <a id="infix-category"/>
 **infix**
-*[«grammatical category»](appendix-b-grouped.html#categories)* &mdash;
+[*«grammatical category»*](appendix-b-grouped.html#categories) &mdash;
 namespace of symbols that stay between two statements,
 that become their parameters &mdash;
 example ([plus](#plus-op)): `$a + $b ` is same as `$a.&infix:<+>($b)`
 
 <a id="infix-circumfix-meta-category"/>
 **infix\_circumfix\_meta\_operator**
-*[«grammatical category»](appendix-b-grouped.html#categories)* &mdash;
+[*«grammatical category»*](appendix-b-grouped.html#categories) &mdash;
 internal namespace of
 [metaoperator](appendix-g-glossary.html#metaoperator) that
 [circumfix](#circumfix-category) other operator but
@@ -2591,31 +2589,30 @@ example: ([arrows](#lower-lower-metaop)): `@a <<+<< @b`
 
 <a id="infix-postfix-meta-category"/>
 **infix\_postfix\_meta\_operator**
-*[«grammatical category»](appendix-b-grouped.html#categories)* &mdash;
-internal namespace of [metaoperator](appendix-g-glossary.html#metaoperator)
-that [postfix](#postfix-category) other operator but
-stay [infix](#infix-category) (between) two terms &mdash;
+[*«grammatical category»*](appendix-b-grouped.html#categories) &mdash;
+internal namespace of [*metaoperator*](appendix-g-glossary.html#metaoperator)
+that [**postfix**](#postfix-category) other operator but
+stay [**infix**](#infix-category) (between) two terms &mdash;
 example ([equal sign](#equal-metaop)): `$a += 5`
 
 <a id="infix-prefix-meta-category"/>
 **infix\_prefix\_meta\_operator**
-*[«grammatical category»](appendix-b-grouped.html#categories)* &mdash;
-internal namespace of
-[metaoperator](appendix-g-glossary.html#metaoperator) that
-[prefix](#prefix-category) (precedes) other operator
-but stay [infix](#infix-category) (between) two terms &mdash;
+[*«grammatical category»*](appendix-b-grouped.html#categories) &mdash;
+internal namespace of [*metaoperator*](appendix-g-glossary.html#metaoperator)
+that [**prefix**](#prefix-category) (precedes) other operator
+but stay [**infix**](#infix-category) (between) two terms &mdash;
 example ([exclamation mark](#exclamation-metaop)): `4 != 5`
 
 <a id="INIT-phaser"/>
 **INIT**
-*[«closure trait»](appendix-b-grouped.html#closure-traits)* &mdash;
-marks as a prefix a special block or statement, executed at run
-time, [ASAP](appendix-g-glossary.html#ASAP), only ever runs once
+[*«closure trait»*](appendix-b-grouped.html#closure-traits) &mdash;
+marks as a prefix a special block or statement, executed at run time,
+[*ASAP*](appendix-g-glossary.html#ASAP), only ever runs once
 
 <a id="inline"/>
 **inline** *[«callframe method»](appendix-b-grouped.html#callframe-methods)* &mdash;
-**[False](#False)** if that block is called like a
-*[routine](appendix-g-glossary.html#routine)*
+[**False**](#False) if that block is called like a
+[*routine*](appendix-g-glossary.html#routine)
 
 <a id="Instant-type"/>
 **Instant**
@@ -2630,7 +2627,7 @@ allows **[Inf](#Inf)** / NaN, arbitrary precision,
 use it as method to convert into a **Int** like the Perl 5 *int*
 
 **invert**
-*[«hash op & method»](tablet-3-variables#hash-methods)* &mdash;
+[*«hash op & method»*](tablet-3-variables#hash-methods) &mdash;
 inverts the key =\> value relation of a pair or a series of
 pairs (hash), returning a **[Pair](#pair)**
 **[list](#list)**, see also
@@ -2648,7 +2645,7 @@ bind a *[trait](appendix-g-glossary.html#trait)* to a variable
 
 <a id="item"/><a id="item-op"/>
 **item()**
-*[«context op»](appendix-b-grouped.html#contextualizers)* &mdash;
+[*«context op»*](appendix-b-grouped.html#contextualizers) &mdash;
 forces [scalar context](appendix-g-glossary.html#scalar-context),
 alias to **[$()](#dollar-op)**
 
@@ -2679,7 +2676,7 @@ report if file has sticky bit set
 
 <a id="KEEP-phaser"/>
 **KEEP**
-*[«closure trait»](appendix-b-grouped.html#closure-traits)* &mdash;
+[*«closure trait»*](appendix-b-grouped.html#closure-traits) &mdash;
 marks as a prefix a special block, executed at every successful
 block exit, part of **[LEAVE](#LEAVE-phaser)** queue
 
@@ -2694,7 +2691,7 @@ forces subrules to memorize everything (even comments)
 (core or type of the) running operating system, use
 *`$*KERNEL.name`* instead of Perl 5s *$OSNAME* &mdash; see also:
 **[\$\*DISTRO](#DISTRO-global-var)** and
-**[\$\*VM](#VM-global-var)**
+[**\$\*VM**](#VM-global-var)
 
 <a id="KERNEL-compiler-var"/>
 **\$?KERNEL**
@@ -2722,7 +2719,7 @@ KeyHash of **[Bool](#Bool-type)** (does **[Set](#Set-type)**
 in [*list context*](appendix-g-glossary.html#list-context)
 
 <a id="keys-array"/>
-**keys** *[«array op & method»](tablet-3-variables#array-methods)* &mdash;
+**keys** [*«array op & method»*](tablet-3-variables#array-methods) &mdash;
 returns the list of array indexes
 
 <a id="keys"/><a id="keys-hash"/>
@@ -2732,7 +2729,7 @@ returns list of hash keys
 <a id="kill"/>
 **[kill](tablet-5-io.html#processes)** &mdash;
 sends the given $signal to the process(es) given and returns a
-boolean value indicating success (**[True](#True)**)
+boolean value indicating success ([**True**](#True))
 
 <a id="kv"/>
 **kv**
@@ -2766,7 +2763,7 @@ current set of interwoven languages
 
 <a id="LAST-phaser"/>
 **LAST**
-*[«closure trait»](appendix-b-grouped.html#closure-traits)* &mdash;
+[*«closure trait»*](appendix-b-grouped.html#closure-traits) &mdash;
 marks as a prefix a special block, executed at [loop](appendix-b-grouped.html#loops)
 termination time, after any **[LEAVE](#LEAVE-phaser)**
 
@@ -2825,7 +2822,7 @@ exit the current block with a return value
 *[«string comparison»](tablet-4-operators.html#string-comparison)* &mdash;
 [infix](#infix-category) comparison [*operator*](appendix-g-glossary.html#operator)
 that sees its  [*operands*](appendix-g-glossary.html#operand) in
-*[string context](appendix-g-glossary.html#string-context)*,
+[*string context*](appendix-g-glossary.html#string-context),
 but works otherwise like [**cmp**](#cmp) (general form) or 
 [**\<=\>**](#spaceship-op) ([numerical context](#numerical-context)),
 **leg** stands for leg lower/equal/greater as in
@@ -2840,7 +2837,7 @@ if the current block exits unsuccessfully
 
 <a id="LINE-compiler-var"/>
 **$?LINE**
-*[«special var»](appendix-b-grouped.html#compiler-hint-variables)* &mdash;
+[*«special var»*](appendix-b-grouped.html#compiler-hint-variables) &mdash;
 current line number
 
 <a id="lines"/>
@@ -2863,7 +2860,7 @@ see also: [**flat**](#flat) and [**lol**](#lol)
 <a id="log"/>
 **[log](operators.html)** ([Num](#Num-type) $x, [Num](#Num-type) $base?) &mdash;
 logarithm of $x to the $base
-(default is *[e](appendix-g-glossary.html#e)*, together also known as *ln*)
+(default is [*e*](appendix-g-glossary.html#e), together also known as *ln*)
 
 <a id="log10"/>
 [**log10**](tablet-4-operators.html#) &mdash;
@@ -2904,7 +2901,7 @@ a single lowercase character
 **lt**
 [*«string comparison»*](tablet-4-operators.html#string-comparison) &mdash;
 [infix](#infix-category) operator, lower than,
-**[True](#True)** if alphabetically ordered the left comes before the right &mdash;
+[**True**](#True) if alphabetically ordered the left comes before the right &mdash;
 see also: [**gt**](#gt), [**le**](#le), [**leg**](#leg) and [**\<**](#lower-op)
 
 
@@ -2912,10 +2909,10 @@ see also: [**gt**](#gt), [**le**](#le), [**leg**](#leg) and [**\<**](#lower-op)
 # [M](#nav-top)
 
 <a id="m-op"/>
-**[m/ /](tablet-9-regexes.html#matching)**
+[**m/ /**](tablet-9-regexes.html#matching)
 [*«regex quoting op»*](appendix-b-grouped.html#quoting-ops) &mdash;
 perform a regex based search in place (m stands for *match* ),
-similar to **[match](#match)**-method
+similar to [**match**](#match) method
 
 <a id="m-modifier"/>
 **:m** [*«regex modifier»*](appendix-b-grouped.html#regex-modifier) &mdash;
@@ -2933,18 +2930,18 @@ that can alter the program itself
 <a id="macro"/>
 **macro**
 [*«routine type»*](appendix-b-grouped.html#routine-types) &mdash;
-define a *[routine](appendix-g-glossary.html#routine)* to alter source
-code at *[compile time](appendix-g-glossary.html#compile-time)*
+define a [*routine*](appendix-g-glossary.html#routine) to alter source
+code at [*compile time*](appendix-g-glossary.html#compile-time)
 
 <a id="MAIN-slang-var"/>
 **$\~MAIN**
-*[«special var»](appendix-b-grouped.html#slang-variables)* &mdash;
+[*«special var»*](appendix-b-grouped.html#slang-variables) &mdash;
 current [grammar](#grammar) of main language,
 tells the parser the rules of parsing Perl
 
 <a id="map"/>
 **map**
-*[«array op & method»](tablet-3-variables#array-methods)* &mdash;
+[*«array op & method»*](tablet-3-variables#array-methods) &mdash;
 take a list, perform a block on each member, return a list of
 the results &mdash; example: `say map { chr $_ }, 66..69` *(is "B C D E")*
 or `say map { chr $_ }, 66..69`
@@ -2966,7 +2963,7 @@ see also **[comb](#comb)**
 
 <a id="max"/><a id="max-op"/>
 **max**
-*[«array op & method»](tablet-3-variables#array-methods)* &mdash;
+[*«array op & method»*](tablet-3-variables#array-methods) &mdash;
 returns the [numerically](appendix-g-glossary.html#numeric-context)
 largest value from a given list &mdash;
 see also: **[min](#min-op)** and **[minmax](#minmax-op)**
@@ -2989,19 +2986,19 @@ type of Perl method object
 <a id="method"/>
 **method**
 [*«routine type»*](appendix-b-grouped.html#routine-types) &mdash;
-defines a method (inheritable *[routine](appendix-g-glossary.html#routine)*)
-in a **[class](#class)**
+defines a method (inheritable [*routine*](appendix-g-glossary.html#routine))
+in a [**class**](#class)
 
 <a id="min"/><a id="min-op"/>
 **min**
-*[«array op & method»](tablet-3-variables#array-methods)* &mdash;
+[*«array op & method»*](tablet-3-variables#array-methods) &mdash;
 returns the [numerically](appendix-g-glossary.html#numeric-context)
 smallest value from a given list &mdash;
 see also: **[max](#max-op)** and **[minmax](#minmax-op)** 
 
 <a id="minmax"/><a id="minmax-op"/>
 **minmax**
-*[«array op & method»](tablet-3-variables#array-methods)* &mdash;
+[*«array op & method»*](tablet-3-variables#array-methods) &mdash;
 returns the [numerically](appendix-g-glossary.html#numeric-context)
 highest and lowest values from a list, as a 2 item list &mdash;
 see also: **[min](#min-op)** and **[max](#max-op)**
@@ -3034,7 +3031,7 @@ introduces a module name, a package that performs special actions on loading
 
 <a id="MODULE-compiler-var"/>
 **&?MODULE**
-*[«special var»](appendix-b-grouped.html#compiler-hint-variables)* &mdash;
+[*«special var»*](appendix-b-grouped.html#compiler-hint-variables) &mdash;
 reference to the current module
 
 <a id="ms"/><a id="ms-op"/>
@@ -3046,7 +3043,7 @@ separators, alias to **m:s/.../** or **m**
 
 <a id="Mu-type"/>
 **Mu**
-*[«undefined value type»](appendix-b-grouped.html#undefined-types)* &mdash;
+[*«undefined value type»*](appendix-b-grouped.html#undefined-types) &mdash;
 most (generic) undefined value
 
 <a id="multi"/><a id="multi-routine-modifier"/>
@@ -3090,7 +3087,7 @@ demands the nth finding (:2nd), has many aliases
 
 <a id="name"/>
 **name** *«routine method»* &mdash;
-returns the name of of a *[routine](appendix-g-glossary.html#routine)*,
+returns the name of of a [*routine*](appendix-g-glossary.html#routine),
 handy when it was stored in a scalar
 
 <a id="need"/>
@@ -3106,7 +3103,7 @@ also name of the automatically called constructor method
 
 <a id="NEXT-phaser"/>
 **NEXT**
-*[«closure trait»](appendix-b-grouped.html#closure-traits)* &mdash;
+[*«closure trait»*](appendix-b-grouped.html#closure-traits) &mdash;
 marks as a prefix a special block, executed at [loop](appendix-b-grouped.html#loops)
 continuation time, before any **[leave](#LEAVE-phaser)**
 
@@ -3122,7 +3119,7 @@ same *[signature](appendix-g-glossary.html#signature)*, similar to Javas *SUPER*
 
 <a id="NF-compiler-var"/>
 **\$\?NF**
-*[«special var»](appendix-b-grouped.html#compiler-hint-variables)* &mdash;
+[*«special var»*](appendix-b-grouped.html#compiler-hint-variables) &mdash;
 method name (options: `<NFC NFKC NFD NFKD>`) how strings are going to be normalized,
 [**codes**](#codes) and [**bytes**](#bytes) have an optional
 [pramameter](appendix-g-glossary.html#parameter) which method should be used,
@@ -3130,14 +3127,14 @@ that defaults to **\$\?NF**
 
 <a id="Nil-type"/>
 **Nil**
-*[«undefined value type»](appendix-b-grouped.html#undefined-types)* &mdash;
+[*«undefined value type»*](appendix-b-grouped.html#undefined-types) &mdash;
 unlike *undef* in Perl 5 it really means no value here &mdash;
 example: *`@a = Nil, Nil;`* result array has zero elements
 
 <a id="none"/>
 **none**
 [*«junctive op»*](tablet-4-operators.html#junctions) &mdash;
-return **[True](#True)** when a value is not
+return [**True**](#True) when a value is not
 part of a set, *[junctive](appendix-g-glossary.html#junction)* *NOT*
 operator
 
@@ -3145,18 +3142,18 @@ operator
 **normalize** ([Str](#Str-type) [--\>](#minus-minus-greater-signature) [Str](#Str-type))
 *«string method»* &mdash;
 normalize (repair) *[unicode](appendix-g-glossary.html#unicode)* 
-*[string](#Str-type)*
+[**string**](#Str-type)
 
 <a id="not"/>
 **not**
-*[«context op»](appendix-b-grouped.html#contextualizers)* &mdash;
+[*«context op»*](appendix-b-grouped.html#contextualizers) &mdash;
 *[prefix](#prefix-category)* logical [*NOT*](appendix-g-glossary.html#not) operator,
 converts to *[boolean context](appendix-g-glossary.html#bool-context)*,
 low precedence version of **[!()](#exclamation-op)**
 
 <a id="note"/>
 **[note](tablet-5-io.html#note)** &mdash;
-makes output via command line (**[$\*ERR](#ERR-global-var)**) like **[warn](#warn)**,
+makes output via command line (**[$\*ERR](#ERR-global-var)**) like [**warn**](#warn), 
 but appends a newline (**[\\n](#backslash-n)**) like **[say](#say)**
 
 <a id="nude"/>
@@ -3205,14 +3202,14 @@ example: `subset Month of Int where { 1 <= $^a <= 12 }`
 [*«junctive op»*](tablet-4-operators.html#junctions) &mdash;
 *[junctive](appendix-g-glossary.html#junction)*
 *[XOR](appendix-g-glossary.html#xor)* operator,
-**[True](#True)** if only one expression (of a
+[**True**](#True) if only one expression (of a
 following list) is true in [*bool context*](appendix-g-glossary.html#bool-context) &mdash;
 see also: **[|](#pipe-op)**
 
 <a id="only"/>
 **only**
 *[routine modifier](appendix-b-grouped.html#routine-modifier)* &mdash;
-permits only one *[routine](appendix-g-glossary.html#routine)*
+permits only one [*routine*](appendix-g-glossary.html#routine)
 of the same name in this block (no [MMD](appendix-g-glossary.html#MMD)) &mdash;
 example: `only sub name (...) {...}` &mdash;
 opposite of: **[multi](#multi)**
@@ -3234,7 +3231,7 @@ options from command line
 **||**
 [*«logical op»*](tablet-4-operators.html#logical-selection) &mdash;
 [**infix**](#infix-category), short circuit, logical,
-*[OR](appendix-g-glossary.html#or)*, [evaluates](appendix-g-glossary.html#evaluation)
+[*OR*](appendix-g-glossary.html#or), [evaluates](appendix-g-glossary.html#evaluation)
 sequentially left to right its operands until one is [**True**](#True) in
 [*bool context*](appendix-g-glossary.html#bool-context),
 if there is one then the result is **True** in bool context,
@@ -3254,38 +3251,39 @@ converts a character into number according a character table
          [Array](#Array-type) [of](#of) [Int](#Int-type))
 *«string method»* &mdash;
 get the index numbers of some characters,
-plural of **[ord](#ord)**, reverse of **[chrs](#chrs)**
+plural of [**ord**](#ord), reverse of [**chrs**](#chrs)
 
 <a id="orelse"/>
 **orelse** *«logical op»* &mdash;
-logical *[OR](appendix-g-glossary.html#or)* short circuit operator,
+logical [*OR*](appendix-g-glossary.html#or) short circuit operator,
 transferring an error code from first to second block/command, if
 first do not succeed, similar to **[//](#defined-or)** &mdash;
 example: `{...} orelse { note $! } `&mdash;
-see also: **[andthen](#andthen)**
+see also: [**andthen**](#andthen)
 
 <a id="our"/>
 **our**
 [*«scope declarator»*](appendix-b-grouped.html#scope-declarator) &mdash;
-introduces **[package](#package)**-scoped names for variables and
-*[routines](#routine)*
+introduces [**package**](#package) scoped names for
+[*variables*](appendix-g-glossary.html#variable) and
+[*routines*](appendix-g-glossary.html#routine)
 
 <a id="OUT-global-var"/>
 **\$\*OUT**
 [*«special var»*](appendix-b-grouped.html#global-variables) &mdash;
 [*file handle*](IO-type) for standard output (command line mostly) &mdash;
-see also: **[$\*IN](#IN-global-var)**, in Perl 5: *STDOUT*
+see also: [**$\*IN**](#IN-global-var), in Perl 5: *STDOUT*
 
 <a id="ov-modifier"/>
 **:ov** [*«regex modifier»*](appendix-b-grouped.html#regex-modifier) &mdash;
 searching at all positions just one time (with backtracking),
-short for **[:overlap](#overlap#modifier)**
+short for [**:overlap**](#overlap#modifier)
 
 <a id="overlap-modifier"/>
 **:overlap**
 [*«regex modifier»*](appendix-b-grouped.html#regex-modifier) &mdash;
 searching at all positions just one time (with backtracking),
-long for **[:ov](#ov-modifier)**
+long for [**:ov**](#ov-modifier)
 
 
 
@@ -3293,11 +3291,11 @@ long for **[:ov](#ov-modifier)**
 
 <a id="p-test"/>
 **:p** [*«io test method»*](appendix-b-grouped.html#test-methods) &mdash;
-file is a named *[pipe](#pipe)* (FIFO),
-or filehandle is a pipe
+file is a named [**pipe**](#pipe) (FIFO) or
+[*file handle*](appendix-g-glossary.html#file-handle) is a pipe
 
 <a id="p-adverb"/>
-**[:p](tablet-2-basic-syntax.html#paths)**
+[**:p**](tablet-2-basic-syntax.html#paths)
 [*«quoting adverb»*](appendix-b-grouped.html#quoting-adverbs) &mdash;
 quote paths and create path object that know the right format of
 the current **[\$\*KERNEL](#KERNEL-global-var)** &mdash;
@@ -3317,8 +3315,8 @@ activate old Perl 5 regex rules, alias to **[:Perl5](#Perl5-modifier)**
 
 <a id="P5Regex-slang-var"/>
 **$\~P5Regex**
-*[«special var»](appendix-b-grouped.html#slang-variables)* &mdash;
-current [grammar](#grammar) of the Perl 5
+[*«special var»*](appendix-b-grouped.html#slang-variables) &mdash;
+current [**grammar**](#grammar) of the Perl 5
 compatible regular expression *[slang](appendix-g-glossary.html#slang)*
 
 <a id="pack"/>
@@ -3331,16 +3329,16 @@ which is specified by keys or an own template
 defines this Block or File as
 namespace (almost like in Perl 5), some uses are now better to do
 with **[module](#module)** and
-**[class](#class)**
+[**class**](#class)
 
 <a id="PACKAGE-compiler-var"/>
 **&?PACKAGE**
-*[«special var»](appendix-b-grouped.html#compiler-hint-variables)* &mdash;
+[*«special var»*](appendix-b-grouped.html#compiler-hint-variables) &mdash;
 reference to the current package
 
 <a id="package-declarator-category"/>
 **package\_declarator**
-*[«grammatical category»](appendix-b-grouped.html#categories)* &mdash;
+[*«grammatical category»*](appendix-b-grouped.html#categories) &mdash;
 internal namespace for &mdash;
 example: [**package**](#package), [**module**](#module), [**class**](#class)
 
@@ -3392,7 +3390,7 @@ long for **[:p](#p-adverb)** or use **[qp](#qp-op)** directly
 ( [--\>](#minus-minus-greater-signature) [Str](#Str-type))
 *«formater»* &mdash;
 transforms data structure (object) into syntax of Perl 6 source code,
-in most cases **[eval](#eval)** turn it back into the data structure,
+in most cases [**eval**](#eval) turn it back into the data structure,
 use instead of Perl 5: *Data::Dumper* &mdash;
 see also: [**gist**](#gist)
 
@@ -3403,7 +3401,7 @@ Perl version running under, in Perl 5: *\$\]* and *\$\^V*
 
 <a id="PERL-compiler-var"/>
 **\$?PERL**
-*[«special var»](appendix-b-grouped.html#compiler-hint-variables)* &mdash;
+[*«special var»*](appendix-b-grouped.html#compiler-hint-variables) &mdash;
 Perl version this program is compiled for
 
 <a id="Perl5-modifier"/>
@@ -3413,7 +3411,7 @@ activate old Perl 5 regex rules, alias to **[:P5](#P5-modifier)**
 
 <a id="pick"/>
 **pick**
-*[«array op & method»](tablet-3-variables#array-methods)* &mdash;
+[*«array op & method»*](tablet-3-variables#array-methods) &mdash;
 select a number (optional first parameter) of random vaues (without
 duplication), take **[roll](#roll)** to enable duplication
 
@@ -3427,7 +3425,7 @@ ID of the running process, in Perl 5: *\$\$* and *\$PID*
 
 <a id="pod-pod-var"/>
 **$=pod**
-*[«special var»](appendix-b-grouped.html#pod-variables)* &mdash;
+[*«special var»*](appendix-b-grouped.html#pod-variables) &mdash;
 object that contains all surrounding *[POD](appendix-g-glossary.html#POD)*
 documentation
 
@@ -3441,7 +3439,7 @@ see also: [**cis**](#cis), [**conj**](#conj), [**unpolar**](#unpolar)
 
 <a id="pop"/>
 **pop**
-*[«array op & method»](tablet-3-variables#array-methods)* &mdash;
+[*«array op & method»*](tablet-3-variables#array-methods) &mdash;
 removes and returns the last element in an array
 
 <a id="pos-modifier"/>
@@ -3452,27 +3450,27 @@ for **[:p](#p-modifier)**
 
 <a id="POST-phaser"/>
 **POST**
-*[«closure trait»](appendix-b-grouped.html#closure-traits)* &mdash;
+[*«closure trait»*](appendix-b-grouped.html#closure-traits) &mdash;
 marks as a prefix a special block, assert postcondition,
 executed at every block exit, after
 **[LEAVE](#LEAVE-phaser)**
 
 <a id="postcircumfix-category"/>
 **postcircumfix**
-*[«grammatical category»](appendix-b-grouped.html#categories)* &mdash;
+[*«grammatical category»*](appendix-b-grouped.html#categories) &mdash;
 operator namespace of ops, that stay after one statement or
 variable, but do surround a second &mdash;
 example([square brackets](#postcircumfix-square-brackets-op)): `$a[2]`
 
 <a id="postfix-category"/>
 **postfix**
-*[«grammatical category»](appendix-b-grouped.html#categories)* &mdash;
+[*«grammatical category»*](appendix-b-grouped.html#categories) &mdash;
 operator namespace of ops, that stay after a statement or variable &mdash;
 example ([**++**](#auto-increment)): [`$a++`](#auto-increment)
 
 <a id="postfix-prefix-meta-operator-category"/>
 **postfix\_prefix\_meta\_operator**
-*[«grammatical category»](appendix-b-grouped.html#categories)* &mdash;
+[*«grammatical category»*](appendix-b-grouped.html#categories) &mdash;
 internal namespace of
 [metaoperator](appendix-g-glossary.html#metaoperator) that
 [prefix](#prefix-category) (precedes) other operator
@@ -3481,7 +3479,7 @@ example ([**\>\>**](#greater-greater-metaop)): `@a >>++`
 
 <a id="PRE-phaser"/>
 **PRE**
-*[«closure trait»](appendix-b-grouped.html#closure-traits)* &mdash;
+[*«closure trait»*](appendix-b-grouped.html#closure-traits) &mdash;
 marks as a prefix a special block, assert precondition, executed
 at every block entry, before [**ENTER**](#ENTER-phaser)
 
@@ -3493,13 +3491,13 @@ operator, opposite of [**succ**](#succ)
 
 <a id="prefix-category"/>
 **prefix**
-*[«grammatical category»](appendix-b-grouped.html#categories)* &mdash;
+[*«grammatical category»*](appendix-b-grouped.html#categories) &mdash;
 operator namespace of ops, that stay before a statement or variable &mdash;
 example ([**++**](#auto-increment)): `++$a`
 
 <a id="prefix-circumfix-meta-operator-category"/>
 **prefix\_circumfix\_meta\_operator**
-*[«grammatical category»](appendix-b-grouped.html#categories)* &mdash;
+[*«grammatical category»*](appendix-b-grouped.html#categories) &mdash;
 internal namespace of [metaoperator](appendix-g-glossary.html#metaoperator) that
 [circumfix](#circumfix-category) (surrounds) other
 operator but stay [prefix](#prefix-category) (before) another term &mdash;
@@ -3507,7 +3505,7 @@ example: ([square brackets](#square-brackets-metaop)): `[+] @a` - sums up all el
 
 <a id="prefix-postfix-meta-operator-category"/>
 **prefix\_postfix\_meta\_operator**
-*[«grammatical category»](appendix-b-grouped.html#categories)* &mdash;
+[*«grammatical category»*](appendix-b-grouped.html#categories) &mdash;
 internal namespace of [metaoperator](appendix-g-glossary.html#metaoperator) that
 [postfix](#postfix-category) other operator but stay
 [prefix](#prefix-category) (before) another term &mdash;
@@ -3553,13 +3551,13 @@ a single punctuation character
 
 <a id="push-array"/>
 **push**
-*[«array op & method»](tablet-3-variables#array-methods)* &mdash;
+[*«array op & method»*](tablet-3-variables#array-methods) &mdash;
 appends a list of values to the end of an array
 (see also **[pop](#pop)**)
 
 <a id="push"/><a id="push-hash"/>
 **push**
-*[«hash op & method»](tablet-3-variables#hash-methods)* &mdash;
+[*«hash op & method»*](tablet-3-variables#hash-methods) &mdash;
 inserts a list of [pairs](#pair) in a Hash; if a
 key already exists, it will point to an array of both values
 
@@ -3569,14 +3567,14 @@ key already exists, it will point to an array of both values
 
 <a id="Q-op"/>
 **[Q](tablet-2-basic-syntax.html#quoting)**
-*[«quoting op»](appendix-b-grouped.html#quoting-ops)* &mdash;
+[*«quoting op»*](appendix-b-grouped.html#quoting-ops) &mdash;
 most basic quoting operator,
 provides just mechanism to encompass a string and return content,
 understands a list of [adverbial modifier](appendix-b-grouped.html#quoting-adverbs)
 
 <a id="q-op"/>
 **[q](tablet-2-basic-syntax.html#single-quotes)**
-*[«quoting op»](appendix-b-grouped.html#quoting-ops)* &mdash;
+[*«quoting op»*](appendix-b-grouped.html#quoting-ops) &mdash;
 simple quoting (slashes and '), alias to
 **['...'](#single-quotes)** and **Q :q
 /.../** and **Q [:single](#single-adverb) /.../**
@@ -3596,31 +3594,31 @@ characters
 
 <a id="qp"/><a id="qp-op"/>
 **[qp](tablet-2-basic-syntax.html#paths)**
-*[«quoting op»](appendix-b-grouped.html#quoting-ops)* &mdash;
+[*«quoting op»*](appendix-b-grouped.html#quoting-ops) &mdash;
 path quoting, quoted string will be evaled as an file or
 directory path, alias to [`Q :p /.../`](#p-adverb)
 and [`Q :path /.../`](#path-adverb)
 
 <a id="qq"/><a id="qq-op"/>
 **[qq](tablet-2-basic-syntax.html#double-quotes)**
-*[«quoting op»](appendix-b-grouped.html#quoting-ops)* &mdash;
+[*«quoting op»*](appendix-b-grouped.html#quoting-ops) &mdash;
 *double quoting*, **q** with interpolation of variables,
 closures, and special chars, alias to
-**["..."](#double-quotes)** and `Q :s, :a, :h, :f, :c, :b /.../`
-and `Q` [`:qq`](#qq-adverb) `/.../` and `Q` [`:double`](#double-averb) `/.../`
+[**"..."**](#double-quotes) and `Q :s, :a, :h, :f, :c, :b /.../`
+and `Q` [**`:qq`**](#qq-adverb) `/.../` and `Q` [**`:double`**](#double-averb) `/.../`
 
 <a id="qq-adverb"/>
 **[:qq](tablet-2-basic-syntax.html#double-quotes)**
 [*«quoting adverb»*](appendix-b-grouped.html#quoting-adverbs) &mdash;
 *double quoting*, **q** with interpolation of variables and
 [blocks](#block) , alias to
-**["..."](#double-quotes)**,
-**[qq/.../](#qq-op)** and `Q :s, :a, :h, :f, :c, :b /.../`,
+[**"..."**](#double-quotes),
+[**qq/.../**](#qq-op) and `Q :s, :a, :h, :f, :c, :b /.../`,
 short for **[:double](#double-adverb)**
 
 <a id="qqx"/><a id="qqx-op"/>
 **[qqx](tablet-2-basic-syntax.html#code)**
-*[«quoting op»](appendix-b-grouped.html#quoting-ops)* &mdash;
+[*«quoting op»*](appendix-b-grouped.html#quoting-ops) &mdash;
 run as system call and return results, in Perl 5: *qx/.../*
 
 <a id="quantifier"/>
@@ -3631,7 +3629,7 @@ like [**\***](#asterisk-metachar)
 
 <a id="Quasi-slang-var"/>
 **$\~Quasi**
-*[«special var»](appendix-b-grouped.html#slang-variables)* &mdash;
+[*«special var»*](appendix-b-grouped.html#slang-variables) &mdash;
 current [grammar](#grammar) of the quasiquoting language
 
 <a id="quasi"/>
@@ -3644,19 +3642,19 @@ see also: **[:code](#code-adverb)**
 
 <a id="Quote-slang-var"/>
 **$\~Quote**
-*[«special var»](appendix-b-grouped.html#slang-variables)* &mdash;
+[*«special var»*](appendix-b-grouped.html#slang-variables) &mdash;
 current [grammar](#grammar) of the quoting
 language as used by the [Q-operator](#Q-op) and any other quoting op
 
 <a id="quote-category"/>
 **quote**
-*[«grammatical category»](appendix-b-grouped.html#categories)* &mdash;
+[*«grammatical category»*](appendix-b-grouped.html#categories) &mdash;
 operator namespace used to define new 
 [quoting ops](appendix-b-grouped.html#quoting-ops) with a macro
 
 <a id="quote-mod-category"/>
 **quote\_mod**
-*[«grammatical category»](appendix-b-grouped.html#categories)* &mdash;
+[*«grammatical category»*](appendix-b-grouped.html#categories) &mdash;
 operator namespace used to define new 
 [quoting adverbs](appendix-b-grouped.html#quoting-adverbs)
 
@@ -3676,7 +3674,7 @@ used in **[\<\<...\>\>](#double-angle-brackets)**
 
 <a id="qw"/><a id="qw-op"/>
 **[qw](tablet-2-basic-syntax.html#quote-words)**
-*[«quoting op»](appendix-b-grouped.html#quoting-ops)* &mdash;
+[*«quoting op»*](appendix-b-grouped.html#quoting-ops) &mdash;
 [circumfix](#circumfix-category) quoting operator that autoquotes words
 and returns them as a list (as in Perl 5),
 without [quote protection](appendix-g-glossary.html#quote-protection) and
@@ -3686,8 +3684,8 @@ alias to **[\< \>](#angle-brackets-op)** or
 
 <a id="qx"/><a id="qx-op"/>
 **[qx](tablet-2-basic-syntax.html#code)**
-*[«quoting op»](appendix-b-grouped.html#quoting-ops)* &mdash;
-evaluate as Perl term (like **[eval](#eval)**) and return results (unlike Perl 5),
+[*«quoting op»*](appendix-b-grouped.html#quoting-ops) &mdash;
+evaluate as Perl term (like [**eval**](#eval)) and return results (unlike Perl 5),
 alias to **Q [:x](#x-adverb) /.../** or **Q [:exec](#exec-adverb) /.../**
 
 
@@ -3771,7 +3769,7 @@ read <span class="you-provide">n</span> (first parameter) bytes from a buffer
 <a id="readline"/>
 **[readline](tablet-5-io.html#readline)** &mdash;
 reads until the next [**\\n**](#backslash-n) from a
-**[Buf](#Buf-type)** or **[Str](#Str-type)**
+**[Buf](#Buf-type)** or [**Str**](#Str-type)
 
 <a id="readonly"/><a id="readonly-parameter-trait"/>
 **readonly**
@@ -3801,10 +3799,10 @@ builtin type that holds a compiled regular expression
 **regex**
 [*«routine type»*](appendix-b-grouped.html#routine-types) &mdash;
 a pattern definition (without
-**[:ratchet](#ratchet-modifier)** and
-**[:sigspace](#sigspace-modifier)**), can be put in
-a **[grammar](#grammar)**, similar to *qr/.../* in
-Perl 5, see **[rule](#rule)**, **[token](#token)**
+[**:ratchet**](#ratchet-modifier) and
+[**:sigspace**](#sigspace-modifier)), can be put in
+a [**grammar**](#grammar), similar to *qr/.../* in Perl 5 &mdash;
+see also: [**rule**](#rule), [**token**](#token)
 
 <a id="regex-adverb"/>
 **[:regex](tablet-2-basic-syntax.html#regex)**
@@ -3813,7 +3811,7 @@ parse as quoted string as regex
 
 <a id="Regex-slang-var"/>
 **$\~Regex**
-*[«special var»](appendix-b-grouped.html#slang-variables)* &mdash;
+[*«special var»*](appendix-b-grouped.html#slang-variables) &mdash;
 current [grammar](#grammar) of the regex language
 as used by **[rx](#rx)** and any regex operator and
 method, tells the parser how to parse regular expressions
@@ -3877,12 +3875,12 @@ container for methods that can extend a class using **[does](#does)**
 
 <a id="ROLE-compiler-var"/>
 **$?ROLE**
-*[«special var»](appendix-b-grouped.html#compiler-hint-variables)* &mdash;
+[*«special var»*](appendix-b-grouped.html#compiler-hint-variables) &mdash;
 current role object
 
 <a id="ROLE-namespace-compiler-var"/>
 **::?ROLE**
-*[«special var»](appendix-b-grouped.html#compiler-hint-variables)* &mdash;
+[*«special var»*](appendix-b-grouped.html#compiler-hint-variables) &mdash;
 name of the current role
 
 <a id="roll"/>
@@ -3922,12 +3920,12 @@ example: `roundrobin([1..3],[1,2],[1])` returns `1,1,1,2,2,3`
 
 <a id="ROUTINE-compiler-var"/>
 **&?ROUTINE**
-*[«special var»](appendix-b-grouped.html#compiler-hint-variables)* &mdash;
+[*«special var»*](appendix-b-grouped.html#compiler-hint-variables) &mdash;
 current *[routine](appendix-g-glossary#routine)* object
 
 <a id="routine-declarator-category"/>
 **routine\_declarator**
-*[«grammatical category»](appendix-b-grouped.html#categories)* &mdash;
+[*«grammatical category»*](appendix-b-grouped.html#categories) &mdash;
 internal namespace for [routine declarators](appendix-b-grouped.html#routine-types)
 
 <a id="rule"/>
@@ -3936,7 +3934,7 @@ internal namespace for [routine declarators](appendix-b-grouped.html#routine-typ
 alias for **[regex](#regex)**
 **[:ratchet](#ratchet-modifier)**
 **[:sigspace](#sigspace-modifier)** in a [grammar](#grammar) &mdash;
-see also: **[regex](#regex)**, **[token](#token)**
+see also: **[regex](#regex)**, [**token**](#token)
 
 <a id="run"/>
 **[run](tablet-5-io.html#processes)** &mdash;
@@ -3951,14 +3949,14 @@ there will be no return
 <a id="rw-routine-trait"/>
 **rw**
 [*«routine trait»*](appendix-b-grouped.html#routine-traits) &mdash;
-marks a *[routine](appendix-g-glossary.html#routine)* as returning an 
+marks a [*routine*](appendix-g-glossary.html#routine) as returning an 
 *[lvalue](appendix-g-glossary.html#lvalue)*
 
 <a id="rw-parameter-trait"/>
 **rw**
 [*«parameter trait»*](appendix-b-grouped.html#parameter-traits) &mdash;
 mutable parameter (rw stands for: read write), can be changed by the
-*[routine](appendix-g-glossary.html#routine)* given to
+[*routine*](appendix-g-glossary.html#routine) given to
 
 <a id="rw-modifier"/>
 **:rw**
@@ -4005,19 +4003,17 @@ file has size greater than 0 (zero)
 **:s**
 [*«quoting adverb»*](appendix-b-grouped.html#quoting-adverbs) &mdash;
 demands evaluation of scalar variables that start with the
-**[$-sigil](#dollar-sigil)**, long form of
-**[:scalar](#scalar-adverb)**, included in
-**["..."](#double-quotes)**,
-**[qq/.../](#qq-op)** and
-**[\<\<...\>\>](#double-angle-brackets)**
+[**$** sigil](#dollar-sigil), long form of
+[**:scalar**](#scalar-adverb), included in
+[**"**...**"**](#double-quotes),
+[**qq/**...*/**](#qq-op)** and [**\<\<...\>\>**](#double-angle-brackets)
 
 <a id="s-modifier"/>
 **:s**
 [*«regex modifier»*](appendix-b-grouped.html#regex-modifier) &mdash;
 whitespace separates now subregex and don't stand for spaces to
-look for, short for **[:sigspace](#sigspace-modifier)**,
-**[ms/.../](#ms-op)** is alias to
-**m:sigspace/.../**
+look for, short for [**:sigspace**](#sigspace-modifier),
+**[ms/.../](#ms-op)** is alias to **m:sigspace/.../**
 
 <a id="backslash-S"/>
 **\\S**
@@ -4077,13 +4073,13 @@ object to hold a Perl scalar, a variable for a single value of any type
 demands evaluation of scalar variables that start with the
 **[$-sigil](#dollar-sigil)**, long form of
 **[:s](#s-adverb)**, included in
-**["..."](#double-quotes)**,
-**[qq/.../](#qq-op)** and
+[**"..."**](#double-quotes),
+[**qq/.../**](#qq-op) and
 **[\<\<...\>\>](#double-angle-brackets)**
 
 <a id="scope-declarator-category"/>
 **scope\_declarator**
-*[«grammatical category»](appendix-b-grouped.html#categories)* &mdash;
+[*«grammatical category»*](appendix-b-grouped.html#categories) &mdash;
 internal namespace for
 *[scope declarators](appendix-b-grouped.html#scope-declarator)* in case you want
 to create your own
@@ -4099,13 +4095,13 @@ unordered collection of values that allows no duplicates
 
 <a id="set"/>
 **set**
-*[«array op & method»](tablet-3-variables#array-methods)* &mdash;
+[*«array op & method»*](tablet-3-variables#array-methods) &mdash;
 creates a **[Set](#Set-type)** &mdash;
 example:
 
 <a id="sigil"/><a id="sigil-category"/>
 **sigil**
-*[«grammatical category»](appendix-b-grouped.html#categories)* &mdash;
+[*«grammatical category»*](appendix-b-grouped.html#categories) &mdash;
 word to name the namespace for [sigils](appendix-b-grouped.html#sigils),
 used to redifine them or define your own with a macro
 
@@ -4125,7 +4121,7 @@ types and values, return type, etc.
 **signature**
 [*«routine trait»*](appendix-b-grouped.html#routine-traits) &mdash;
 *[signature](appendix-g-glossary.html#signature)* of a
-*[routine](appendix-g-glossary.html#routine)*,
+[*routine*](appendix-g-glossary.html#routine),
 normally declared implicitly, by providing a parameter list and/or return type
 between name and the corresponding block
 
@@ -4169,15 +4165,15 @@ reads an entire file into a string without a [*file handle*](IO-type)
 
 <a id="so"/><a id="so-op"/>
 **so**
-*[«context op»](appendix-b-grouped.html#contextualizers)* &mdash;
-converts value into the *[boolean context](tablet-4-operators.html#bool-context)*,
+[*«context op»*](appendix-b-grouped.html#contextualizers) &mdash;
+converts value into the [*boolean context*](tablet-4-operators.html#bool-context),
 low precedence alternative to
 **[?](#question-mark-op)**
 
 <a id="SoftRoutine-type"/>
 **SoftRoutine**
 [*«mutable type»*](appendix-b-grouped.html#mutable-types) &mdash;
-*[routine](appendix-g-glossary.html#routine)* that is committed to
+[*routine*](appendix-g-glossary.html#routine) that is committed to
 staying mutable (changable)
 
 <a id="sort"/>
@@ -4196,13 +4192,13 @@ single white space char aka [**\\s**](#backslash-s)
 
 <a id="special-variable-category"/>
 **special\_variable**
-*[«grammatical category»](appendix-b-grouped.html#categories)* &mdash;
+[*«grammatical category»*](appendix-b-grouped.html#categories) &mdash;
 namespace to define and redefine
 [special variables](appendix-b-grouped.html#special-variables) with a macro
 
 <a id="splice"/>
 **splice**
-*[«array op & method»](tablet-3-variables#array-methods)* &mdash;
+[*«array op & method»*](tablet-3-variables#array-methods) &mdash;
 remove on $pos (first parameter) $n (second - optional) values
 and replace them with values (third - optional)
 
@@ -4247,7 +4243,7 @@ correct spelling (:1st)
 
 <a id="START-phaser"/>
 **START**
-*[«closure trait»](appendix-b-grouped.html#closure-traits)* &mdash;
+[*«closure trait»*](appendix-b-grouped.html#closure-traits) &mdash;
 marks as a prefix a special block or statement, executed on
 first ever execution, once per closure clone
 
@@ -4270,7 +4266,7 @@ the enclosing block, but retain their values between invocations)
 
 <a id="statement-cotroll"/>
 **statement\_control**
-*[«grammatical category»](appendix-b-grouped.html#categories)* &mdash;
+[*«grammatical category»*](appendix-b-grouped.html#categories) &mdash;
 internal namespace for block modifier like
 [conditionals](appendix-b-grouped.html#conditionals) or
 [loops](appendix-b-grouped.html#loops)
@@ -4278,21 +4274,21 @@ that stay in front of it
 
 <a id="statement-mod-cond-category"/>
 **statement\_mod\_cond**
-*[«grammatical category»](appendix-b-grouped.html#categories)* &mdash;
+[*«grammatical category»*](appendix-b-grouped.html#categories) &mdash;
 internal namespace for words that come after a statement and
 handle if the statement will be executed &mdash;
 example (if): `$a++ if $a > 3`
 
 <a id="statement-mod-loop-category"/>
 **statement\_mod\_loop**
-*[«grammatical category»](appendix-b-grouped.html#categories)* &mdash;
+[*«grammatical category»*](appendix-b-grouped.html#categories) &mdash;
 internal namespace for
 [special group of block modifier](appendix-b-grouped.html#loops)
 that turn the [block](#block) into a loop
 
 <a id="statement-prefix-category"/>
 **statement\_prefix**
-*[«grammatical category»](appendix-b-grouped.html#categories)* &mdash;
+[*«grammatical category»*](appendix-b-grouped.html#categories) &mdash;
 internal namespace for block modifier &mdash;
 example: [**do**](#do)
 
@@ -4310,19 +4306,19 @@ Perl subroutine object
 <a id="sub"/>
 **[sub](tablet-6-blocks.html#sub)**
 [*«routine type»*](appendix-b-grouped.html#routine-types) &mdash;
-defines a *[routine](appendix-g-glossary.html#routine)*,
+defines a [*routine*](appendix-g-glossary.html#routine),
 a block callable by name &mdash; example: `name();`
 
 <a id="Submethod-type"/>
 **Submethod**
 [*«mutable type»*](appendix-b-grouped.html#mutable-types) &mdash;
-**[method](#method)** than can't be inherited by other classes,
+[**method**](#method) than can't be inherited by other classes,
 only called by objects of the class, where it is defined
 
 <a id="submethod"/>
 **submethod**
 [*«routine type»*](appendix-b-grouped.html#routine-types) &mdash;
-defines methods, not inherited by subclasses like a **[method](#method)**
+defines methods, not inherited by subclasses like a [**method**](#method)
 
 <a id="subset"/>
 **subset** &mdash;
@@ -4362,8 +4358,8 @@ operator, opposite of **[pred](#pred)**
 **supersede**
 [*«scope declarator»*](appendix-b-grouped.html#scope-declarator) &mdash;
 replaces definitions of an existing name, e.g. methods and
-attributes of a **[class](#class)** or **[grammar](#grammar)** &mdash;
-see also: **[augment](#augment)**
+attributes of a [**class**](#class) or [**grammar**](#grammar) &mdash;
+see also: [**augment**](#augment)
 
 
 
@@ -4387,14 +4383,13 @@ tab `\u0009`, not visible character (control char)
 <a id="take"/>
 [**take**](tablet-6-blocks.html#gather-and-take)
 can add several item to the list of return values of a
-**[gather](#gather)** block
+[**gather**](#gather) [*block*](appendix-g-glossary.html#block)
 
 <a id="tan"/><a id="tan-op"/>
 **tan**
 [*«numeric op»*](tablet-4-operators.html#numeric-context) &mdash;
-tangent, trigonometric function, takes angle in radian; see also
-**[to-radians](#to-radians)**,
-**[cos](#cos)**, **[sin](#sin)**
+tangent, trigonometric function, takes angle in radian &mdash;
+see also [**to-radians**](#to-radians), [**cos**](#cos), [**sin**](#sin)
 
 <a id="temp"/>
 **temp** &mdash; 
@@ -4402,15 +4397,15 @@ tangent, trigonometric function, takes angle in radian; see also
 
 <a id="term"/><a id="term-category"/>
 **term**
-*[«grammatical category»](appendix-b-grouped.html#categories)* &mdash;
+[*«grammatical category»*](appendix-b-grouped.html#categories) &mdash;
 namespace of terms, used to redifine them or make a new with a macro &mdash;
 example: [**\***](#asterisk-term)
 
 <a id="th-modifier"/>
 <span class="you-provide">n</span>**:th**
 [*«regex modifier»*](appendix-b-grouped.html#regex-modifier) &mdash;
-demands the nth finding, has many aliases (:st :nd :rd) for
-correct spelling (:2nd)
+demands the nth finding, has many aliases ([**:st**](#st-modifier)
+[**:nd**](#nd-modifier) [**:rd**](#rd-modifier)) for correct spelling (`:2nd`)
 
 <a id="tighter"/>
 **tighter**
@@ -4425,43 +4420,43 @@ performs a [Unicode](appendix-g-glossary.html#unicode) titlecase operation
 on the first character of each word of the string
 
 <a id="to-adverb"/>
-**[:to](tablet-2-basic-syntax.html#heredocs)**
+[**:to**](tablet-2-basic-syntax.html#heredocs)
 [*«quoting adverb»*](appendix-b-grouped.html#quoting-adverbs) &mdash;
 defines end marker for the following heredoc, **:to** is short
-for **[:heredoc](#heredoc-adverb)**
+for [**:heredoc**](#heredoc-adverb)
 
 <a id="to-radians"/>
 **to-radians** &mdash;
 convert from $base (second parameter) to radians,
-opposite of **[from-radians](#from-radians)**
+opposite of [**from-radians**](#from-radians)
 
 <a id="token"/>
 **token**
 [*«routine type»*](appendix-b-grouped.html#routine-types) &mdash;
-**[regex](#regex)** method without backtracking,
-alias to **[regex](#regex)**
-**[:ratchet](#ratchet-modifier)**, part of a
-**[grammar](#grammar)** , see also
-**[rule](#rule)**
+[**regex**](#regex) method without 
+[*backtracking*](appendix-g-glossary.html#backtracking),
+alias to `regex` [**`:ratchet`**](#ratchet-modifier),
+part of a [**grammar**](#grammar) &mdash;
+see also: [**rule**](#rule)
 
 <a id="touch"/>
 **touch** «filehandle method» &mdash;
 update timestamps on a file like the Unix command
 
 <a id="tr-op"/><a id="tr"/>
-**[tr///](tablet-9-regexes.html#transliteration)**
-*[«quoting op»](appendix-b-grouped.html#quoting-ops)* &mdash;
+[**tr///**](tablet-9-regexes.html#transliteration)
+[*«quoting op»*](appendix-b-grouped.html#quoting-ops) &mdash;
 transliteration (as in Perl 5), translating some character in a
 string into others, alias to **Q [:trans](#trans-adverb) /.../.../**
 
 <a id="trait-auxiliary-category"/>
 **trait\_auxiliary**
-*[«grammatical category»](appendix-b-grouped.html#categories)* &mdash;
+[*«grammatical category»*](appendix-b-grouped.html#categories) &mdash;
 example: [**is**](#is)
 
 <a id="trait-verb-category"/>
 **trait\_verb**
-*[«grammatical category»](appendix-b-grouped.html#categories)* &mdash;
+[*«grammatical category»*](appendix-b-grouped.html#categories) &mdash;
 example : **[of](#of)**
 
 <a id="trans"/>
@@ -4481,10 +4476,9 @@ aka `tr /.../.../` aka `.trans("..." => "...")`
 
 <a id="Trans-slang-var"/>
 **$\~Trans**
-*[«special var»](appendix-b-grouped.html#slang-variables)* &mdash;
-current [grammar](#grammar) of the
-transliteration language (used by **[trans()](#trans)**
-aka **[tr/.../.../](#tr-op)**)
+[*«special var»*](appendix-b-grouped.html#slang-variables) &mdash;
+current [grammar](#grammar) of the transliteration language
+(used by **[trans()](#trans)** aka [**tr/.../.../**](#tr-op))
 
 <a id="triangle"/>
 **triangle** *«list method»* &mdash;
@@ -4499,9 +4493,9 @@ returns a copy of the string, with leading and trailing whitespace
 see also: [**chomp**](#chomp)
 
 <a id="True"/>
-**True** &mdash; *[boolean](#Bool-type)* value aka
+**True** &mdash; [**boolean**](#Bool-type) value aka
 Bool::True, 1 in [*numeric context*](appendix-g-glossary.html#numeric-context),
-opposite of **[False](#False)**
+opposite of [**False**](#False)
 
 <a id="truncate"/>
 **truncate**
@@ -4518,13 +4512,13 @@ allows a class the acess to otherwised sealed namespaces
 
 <a id="twigil"/><a id="twigil-category"/>
 **twigil**
-*[«grammatical category»](appendix-b-grouped.html#categories)* &mdash;
+[*«grammatical category»*](appendix-b-grouped.html#categories) &mdash;
 internal namespace for [twigils](appendix-g-glossary.html#twigil),
 used to redifine them or define your own with a macro
 
 <a id="type-declarator-category"/>
 **type\_declarator**
-*[«grammatical category»](appendix-b-grouped.html#categories)* &mdash;
+[*«grammatical category»*](appendix-b-grouped.html#categories) &mdash;
 example: **[subset](#subset)**
 
 <a id="TZ-global-var"/>
@@ -4555,14 +4549,13 @@ see also: [**fc**](#fc) and [**lc**](#lc)
 <a id="UID-global-var"/>
 **\$\*UID** [*«special var»*](appendix-b-grouped.html#global-variables) &mdash;
 real user ID of the running process
-(**[\$\*PID](#PID-global-var)**) owner (user), in Perl 5: *\@\<* and *\$UID* 
+([**\$\*PID**](#PID-global-var)) owner (user), in Perl 5: *\@\<* and *\$UID* 
 
 <a id="UNDO-phaser"/>
 **UNDO**
-*[«closure trait»](appendix-b-grouped.html#closure-traits)* &mdash;
-marks as a prefix a special block, executed at every
-unsuccessful block exit, part of
-**[LEAVE](#LEAVE-phaser)** queue
+[*«closure trait»*](appendix-b-grouped.html#closure-traits) &mdash;
+marks as a prefix a special block, executed at every unsuccessful block exit,
+part of [**LEAVE**](#LEAVE-phaser) queue
 
 <a id="uniq"/>
 **uniq** *«list method»* &mdash;
@@ -4572,7 +4565,7 @@ returns only unique elements of a list (no value twice)
 **[unless](tablet-6-blocks.html#unless)**
 *[«conditional»](appendix-b-grouped.html#conditionals)* &mdash;
 if the following expression *[evals](#evaluation)*
-to **[False](#False)**, the block after that will
+to [**False**](#False), the block after that will
 be run, can also be written at the end of an expression, opposite of
 **[if](#if)**,  alias to **if** **[not](#not)**,
 no **[elsif](#elsif)** or **[else](#else)** is allowed to follow
@@ -4593,7 +4586,7 @@ alias to **while** [**not**](#not)
 
 <a id="unwrap"/>
 **unwrap** &mdash;
-remove an enclosing *[routine](appendix-g-glossary.html#routine)*,
+remove an enclosing [*routine*](appendix-g-glossary.html#routine),
 opposite of **[wrap](#wrap)**
 
 <a id="upper-subrule"/>
@@ -4604,7 +4597,7 @@ a single uppercase character
 <a id="uri"/>
 **[uri](io.html)** &mdash;
 returns IO::Streamable descendant for accessing content of that
-URI (only pramameter typed **[Str](#Str-type)**)
+URI (only pramameter typed [**Str**](#Str-type))
 
 <a id="USAGE-compiler-var"/>
 **$?USAGE**
@@ -4643,7 +4636,7 @@ example: `(key => 'val').value;` returns `'val'`
 
 <a id="values-array"/>
 **values**
-*[«array op & method»](tablet-3-variables#array-methods)* &mdash;
+[*«array op & method»*](tablet-3-variables#array-methods) &mdash;
 returns an array of values like the var itself in
 [list context](appendix-g-glossary.html#list-context) does
 
@@ -4688,7 +4681,7 @@ check if file is writeable by effective uid ([**\$\*EUID**](#EUID-global-var))
 [*«quoting adverb»*](appendix-b-grouped.html#quoting-adverbs) &mdash;
 split quoted string on words (on whitespaces),
 no [quote protection](appendix-g-glossary.html#quote-protection),
-short form of **[:words](#words-adverb)**, used in **[qw/.../](#qw-op)**
+short form of [**:words**](#words-adverb), used in [**qw/.../**](#qw-op)
 
 <a id="backslash-W"/>
 **\\W**
@@ -4729,38 +4722,37 @@ see also **[\<ww\>](#ww-subrule)**
 
 <a id="WHAT-introspection"/>
 **WHAT**
-*[«introspection method»](appendix-b-grouped.html#object-introspection)* &mdash;
+[*«introspection method»*](appendix-b-grouped.html#object-introspection) &mdash;
 short name of the class that an object belongs to
 
 <a id="Whatever"/><a id="Whatever-type"/>
 **Whatever**
-*[«undefined value type»](appendix-b-grouped.html#undefined-types)* &mdash;
-Wildcard (like **[Any](#Any-type)**, but subject to do-what-I-mean via
-*[multi method dispatch](appendix-g-glossary.html#MMD)*),
-alias to **[\*](#asterisk)**
+[*«undefined value type»*](appendix-b-grouped.html#undefined-types) &mdash;
+Wildcard (like [**Any**](#Any-type), but subject to do-what-I-mean via
+[*multi method dispatch*](appendix-g-glossary.html#MMD)),
+alias to [**\***](#asterisk)
 
 <a id="WHEN-introspection"/>
 **WHEN**
-*[«introspection method»](appendix-b-grouped.html#object-introspection)* &mdash;
+[*«introspection method»*](appendix-b-grouped.html#object-introspection) &mdash;
 (reserved for events?)
 
 <a id="when"/>
-**[when](tablet-6-blocks.html#when)**
-*[«conditional»](appendix-b-grouped.html#conditionals)* &mdash;
-executes its following code block, when parameter matches
-against **[$\_](#context-var)** (set by
-**[given](#given)** or
-**[for](#for)**), see also:
-**[default](#default)**
+[**when**](tablet-6-blocks.html#when)
+[*«conditional»*](appendix-b-grouped.html#conditionals) &mdash;
+when following [*expression*](appendix-g-glossary.html#expression) matches
+against [**$\_**](#context-var) (set by [**given**](#given) or [**for**](#for))
+it runs the code [*block*](#block) after it &mdash;
+see also: [**default**](#default)
 
 <a id="WHENCE-introspection"/>
 **WHENCE**
-*[«introspection method»](appendix-b-grouped.html#object-introspection)* &mdash;
+[*«introspection method»*](appendix-b-grouped.html#object-introspection) &mdash;
 autovivification of closures
 
 <a id="WHERE-introspection"/>
 **WHERE**
-*[«introspection method»](appendix-b-grouped.html#object-introspection)* &mdash;
+[*«introspection method»*](appendix-b-grouped.html#object-introspection) &mdash;
 memory address of the object
 
 <a id="where"/>
@@ -4770,11 +4762,11 @@ example: `subset Month of Int where { 1 <= $\^a <= 12 }`
 
 <a id="WHICH-introspection"/>
 **WHICH**
-*[«introspection method»](appendix-b-grouped.html#object-introspection)* &mdash;
+[*«introspection method»*](appendix-b-grouped.html#object-introspection) &mdash;
 object ID (type)
 
 <a id="while"/>
-**[while](tablet-6-blocks.html#while)**
+[**while**](tablet-6-blocks.html#while)
 [*«loop»*](appendix-b-grouped.html#loops) &mdash;
 runs block repeatedly as long as the following expression
 [*evals*](appendix-g-glossary.html#evaluation)* to
@@ -4784,20 +4776,20 @@ end of an expression, opposite of [**until**](#until)
 
 <a id="WHO-introspection"/>
 **WHO**
-*[«introspection method»](appendix-b-grouped.html#object-introspection)* &mdash;
-package, that support that object, long name in *[string
-context](tablet-4-operators.html#string-context)*
+[*«introspection method»*](appendix-b-grouped.html#object-introspection) &mdash;
+name of the package that support that [*object*](appendix-g-glossary.html#object),
+long name in [*string context*](tablet-4-operators.html#string-context)
 
 <a id="WHY-introspection"/>
 **WHY**
-*[«introspection method»](appendix-b-grouped.html#object-introspection)* &mdash;
+[*«introspection method»*](appendix-b-grouped.html#object-introspection) &mdash;
 documentation of that object&mdash;
-see also: **[\#=](#pound-equal)**
+see also: [**\#=**](#pound-equal)
 
 <a id="will-do-routine-trait"/>
 **will do**
 [*«routine trait»*](appendix-b-grouped.html#routine-traits) &mdash;
-block of code executed when the *[routine](appendix-g-glossary.html#routine)*
+block of code executed when the [*routine*](appendix-g-glossary.html#routine)
 is called, normally declared implicitly,
 by providing a block after the subroutine's signature definition
 
@@ -4813,16 +4805,16 @@ see also [**lines**](#lines)
 [*«quoting adverb»*](appendix-b-grouped.html#quoting-adverbs) &mdash;
 split quoted string on words (on whitespaces),
 no [quote protection](appendix-g-glossary.html#quote-protection),
-long form of **[:w](#w-adverb)**, used
-in **[qw/.../](#qw-op)**
+long form of [**:w**](#w-adverb),
+used in [**qw/.../**](#qw-op)
 
 <a id="wrap"/>
 **wrap** &mdash;
 creates enveloping [routine](#routine) that is called instead of the original,
-but can forward to it, opposite of **[unwrap](#unwrap)**
+but can forward to it, opposite of [**unwrap**](#unwrap)
 
 <a id="write"/>
-**[write](tablet-5-io.html#read)**
+[**write**](tablet-5-io.html#read)
 *«Buf method»* &mdash;
 writes content of all parameter into that buffer
 
@@ -4832,7 +4824,7 @@ writes content of all parameter into that buffer
 whitespace between words aka [**\\s\***](#backslash-s)
 
 <a id="ww-adverb"/>
-**[:ww](tablet-2-basic-syntax.html#quote-words)**
+[**:ww**](tablet-2-basic-syntax.html#quote-words)
 [*«quoting adverb»*](appendix-b-grouped.html#quoting-adverbs) &mdash;
 split quoted string into words (on whitespaces) but with
 [quote protection](appendix-g-glossary.html#quote-protection),
@@ -4843,8 +4835,8 @@ used in [**\<\<...\>\>**](#double-angle-brackets)
 **\<ww\>**
 [*«predefined subrule»*](appendix-b-grouped.html#subrules) &mdash;
 zero-width space inside of a word between two
-**[\\w](#backslash-w)** character, see also
-**[\<wb\>](#wb-subrule)**
+[**\\w**](#backslash-w) character, see also
+[**\<wb\>**](#wb-subrule)
 
 
 
@@ -4853,21 +4845,21 @@ zero-width space inside of a word between two
 <a id="X-op"/>
 **X**
 [*«list op»*](tablet-4-operators.html#list-generation) &mdash;
-Cross product of two arrays, alias of
-**[cross](#cross)** method &mdash;
+cross product of two lists,
+alias of [**cross**](#cross) method &mdash;
 example: `1,2 X 3,4` retuns `1,3,1,4,2,3,2,4;`
 
 <a id="x-op"/>
 **x**
-*[«string op»](tablet-4-operators.html#string-context)* &mdash;
+[*«string op»*](tablet-4-operators.html#string-context) &mdash;
 string replicate operator to single string &mdash;
 example: `'ab' x 3` returns `'ababab';`
 
 <a id="X-metaop"/>
 **X**<span class="you-provide">op</span>
 [*«meta op»*](appendix-b-grouped.html#metaoperators) &mdash;
-cross product with hyper operator, alias of
-**[crosswith](#crosswith)** method &mdash;
+cross product with hyper operator,
+alias of [**crosswith**](#crosswith) method &mdash;
 example: `<a b> X~ <y z> == <ay az by bz>;`
 
 <a id="X-test"/>
@@ -4885,11 +4877,9 @@ check if file is executable by effective uid ([**\$\*EUID**](#EUID-global-var))
 <a id="x-adverb"/>
 **:x**
 [*«quoting adverb»*](appendix-b-grouped.html#quoting-adverbs) &mdash;
-quoted string will be evaluated as Perl code (like
-**[eval](#eval)**) and replaced with its result,
-alias to **[Q](#Q-op)**
-**[:exec](#exec-adverb)** **/.../** and
-**[qx/.../](#qx-op)**
+quoted string will be evaluated as Perl code (like [**eval**](#eval))
+and replaced with its result,
+alias to [**Q**](#Q-op) [**:exec**](#exec-adverb) **/.../** and [**qx/.../**](#qx-op)
 
 <a id="x-modifier"/>
 **:x** (<span class="you-provide">n</span>)
@@ -4915,10 +4905,10 @@ single hexadecimal digit char
 <a id="xor-op"/>
 **xor**
 [*«logical op»*](tablet-4-operators.html#logical-selection) &mdash;
-[**infix**](#infix-category) logical (*[XOR](appendix-g-glossary.html#xor)*) operator
-that operates with into *[bool context](appendix-g-glossary.html#bool-context)*
+[**infix**](#infix-category) logical ([*XOR*](appendix-g-glossary.html#xor)) operator
+that operates with into [*bool context*](appendix-g-glossary.html#bool-context)
 converted values of both operands without changing their content,
-in *bool context* it returns **[True](#True)** or *False* as expected,
+in *bool context* it returns [**True**](#True) or **False** as expected,
 in any other context it returns the first none empty value, 
 the second when both are empty and [**Nil**](#Nil-type) when both are not empty,
 low [precedence](appendix-b-grouped.html#table-of-precedence) version of
@@ -4938,15 +4928,17 @@ example: `'ab' xx 3` returns `<ab ab ab>`
 # [Y](#nav-top)
 
 
+
 # [Z](#nav-top)
 
 <a id="Z-op"/>
 **Z**
 [*«list op»*](tablet-4-operators.html#list-generation)* &mdash;
-alias to **[zip](#zip-op)**,
+alias to [**zip**](#zip-op),
 joines [**infix**](#infix-category) 2 lists and stops when one list runs out of elements,
 returning always an list with an even length &mdash;
-example: `1,2,3,4 Z 8,9 == 1,8,2,9` &mdash; see also: **[roundrobin](#roundrobin)**
+example: `1,2,3,4 Z 8,9 == 1,8,2,9` &mdash;
+see also: [**roundrobin**](#roundrobin)
 
 <a id="Z-metaop"/>
 **Z**<span class="you-provide">op</span>
@@ -4958,13 +4950,13 @@ with following operator and produces in that manner a new list
 **zip**
 [*«array op & method»*](tablet-3-variables#array-methods) &mdash;
 [**infix**](#infix-category) zip operator, joines 2 lists, alias to
-**[Z operator](#Z-op)** &mdash;
+[**Z** operator](#Z-op) &mdash;
 example: `@a Z @b = (@a; @b).zip`
 
 <a id="zipwith"/>
 **zipwith**
 [*«meta op»*](appendix-b-grouped.html#metaoperators) &mdash;
-alias method to **[Z metaoperator](#Z-metaop)** &mdash;
+alias method to [**Z** metaoperator](#Z-metaop) &mdash;
 example: `@a Z~ @b` aka `(@a; @b).zipwith(&[~])` aka `(@a; @b).zip.lol.map { .reduce(&[~]) }`
 
 ***
