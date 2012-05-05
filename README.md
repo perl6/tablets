@@ -10,13 +10,23 @@ They are available online at <http://tablets.perl6.org>.
 How to Help
 ===========
 
+Beginner
+--------
+
+* Fix typos and spelling by editing directly on github with the editor widget.
+
+* Add entries to FAQ (Appendix F) and glossary (Appendix G).
+
 * Just start reading and report issues if your not sure.
 
 * Please pore over Appendix B taking note of the various links to the
   main Index (Appendix A). When you see a Perl 6 term without a link,
   find its corresponding anchor in the Index, then (in Appendix B) create a link to it.
 
-* Several items in the glossary (Appendix G) are still unexplained.
+Advanced
+--------
+
+* Several items in FAQ and the glossary are still unexplained.
 
 * The Tablet 1: History needs a lot of help, especially information from people
   who were involved in the subprojects.
