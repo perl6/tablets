@@ -42,6 +42,7 @@ printf $format, 'Sum', $sum{'head'}, $sum{'item'},
 
 
 # Tester
-#	open $FH, '<', 'tablet-0-history.txt';
-#	$content = do {local $/; <$FH>};
-#	print $content =~ /\S\n=+\n\n/g;
+	open $FH, '<', 'appendix-g-glossary.txt';
+	$content = do {local $/; <$FH>};
+	my $v =()= $content =~ /\&mdash;\n\n/g;
+	print "unanswered glossary terms: $v\n";

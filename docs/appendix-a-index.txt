@@ -33,7 +33,7 @@ and a following "n" (second letter n-z).
 <a id="nav-top"/>
 **Navigation:
 [`! "`](#exclamation) [`# $`](#pound)  [`% &`](#percent)  [`' (`](#single-quotes)
-[`* +`](#plus)        [`, -`](#comma)  [`. /`](#dot)      [`0 :`](#colon)
+[`* +`](#asterisk)    [`, -`](#comma)  [`. /`](#dot)      [`0 :`](#0)
 [`; <`](#semicolon)   [`= >`](#equal)  [`? @`](#question) [`[ \`](#square-brackets)
 [`^ _`](#caret)       [`{ |`](#curly-brackets)            [`~`](#tilde)**
 
@@ -243,8 +243,8 @@ grouping of values (parameters) to a [**Parcel**](#Parcel-type)
 **( )**
 [*«regex metachar»*](appendix-b-grouped.html#regex-metacharacter) &mdash;
 encompass a *subregex*, results (*submatches*) land in 
-[**@()**](#round-brackets-var) or [**\$0**](#0-var)... (not limited to $9 anymore) &mdash;
-see also: [\[ \]](#square-brackets-metachar)
+[**\@()**](#round-brackets-var) or [**\$0**](#0-var)... (not limited to $9 anymore) &mdash;
+see also: [**\[ \]** «metachar»](#square-brackets-metachar)
 
 <a id="round-brackets-var"/>
 **@( )**
@@ -457,9 +457,9 @@ see also: [**div**](#div)
 
 <a id="slash-composer"/>
 **/**
-[*«rat composer»*](tablet-2-basic-syntax.html#rational-number)
-inside round brackets (for example `(3/7)`), gives you a
-[rational number](#Rat-type) that keeps track of its numerator and denominator
+[*«rat composer»*](tablet-2-basic-syntax.html#rational-number) &mdash;
+gives you a [rational number](#Rat-type) that keeps track of its numerator and
+denominator when inside round brackets, example: `(3/7)`
 
 <a id="slash-var"/><a id="match-var"/><a id="match-object"/>
 **$/** 
@@ -481,7 +481,7 @@ character given in octal, decimal or hex (when <span class="you-provide">s</span
 is 'o', 'd' or 'x'), brackets are optional, first number has to be inside
 okt/dec/hex range, alternate syntax without the zero is preferred
 
-<a id="0-var"/><a id="zero-var"/><a id="number-var"/>
+<a id="0"/><a id="0-var"/><a id="zero-var"/><a id="number"/><a id="number-var"/>
 **$0**
 [*«special var»*](appendix-b-grouped.html#match-variables) &mdash;
 first positional submatch, there is **`$1`**, **`$2`**, ... too
@@ -4941,13 +4941,13 @@ with following operator and produces in that manner a new list
 **zip**
 [*«array op & method»*](tablet-3-variables#array-methods) &mdash;
 [**infix**](#infix-category) zip operator, joines 2 lists, alias to
-[**Z** operator](#Z-op) &mdash;
+[**Z** «op»](#Z-op) &mdash;
 example: `@a Z @b = (@a; @b).zip`
 
 <a id="zipwith"/>
 **zipwith**
 [*«meta op»*](appendix-b-grouped.html#metaoperators) &mdash;
-alias method to [**Z** metaoperator](#Z-metaop) &mdash;
+alias method to [**Z** «metaop»](#Z-metaop) &mdash;
 example: `@a Z~ @b` aka `(@a; @b).zipwith(&[~])` aka `(@a; @b).zip.lol.map { .reduce(&[~]) }`
 
 ***
