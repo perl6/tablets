@@ -509,6 +509,10 @@ that might also be known to shell users: `<these are 'four words'>`
 
 # [R](#nav-top)
 
+<a id="radian"/>
+**radian** &mdash;
+
+
 <a id="reference"/>
 **reference** *(or pointer)* &mdash;
 address of a specific location in the computers memory,
@@ -542,6 +546,9 @@ after [*compile time*](#compile-time)
 
 
 # [S](#nav-top)
+
+<a id="scalar"/>
+**scalar** &mdash;
 
 <a id="scalar-context"/>
 **scalar context** &mdash; is in P6 called [item context](#item-context)
