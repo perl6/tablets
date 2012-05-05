@@ -21,12 +21,14 @@ Beginner
 
 * Please pore over Appendix B taking note of the various links to the
   main Index (Appendix A). When you see a Perl 6 term without a link,
-  find its corresponding anchor in the Index, then (in Appendix B) create a link to it.
+  find its corresponding anchor in the Index, then (in Appendix B) create a
+  link to it.
 
 Advanced
 --------
 
-* Several items in FAQ and the glossary are still unexplained.
+* Several items in FAQ and the glossary (works mostly without P6 knowledge)
+  are still unexplained.
 
 * The Tablet 1: History needs a lot of help, especially information from people
   who were involved in the subprojects.
@@ -46,12 +48,13 @@ Rules for Anchor Names
 * Anchor uses always the abbreviation, acronym or short form.
 * Acronyms are uppercase rest is always lower case.
 
-Format Rules for Index A
-========================
+Format Rules for Index A and G
+==============================
 
-* Perl 6 builtins are bold (\*\*...\*\*)
-* terms and Perl 5 builtins are italic (\*...\*)
+* Perl 6 builtins (links to A) are bold (\*\*...\*\*)
+* terms (links to G) and Perl 5 builtins are italic (\*...\*)
 * code snipptes are in (\`...\`)
+* markdown for formating linked text please inside the square brackets
 * between item name, its explanation and additional infos is an &mdash; (\&mdash\;)
 
 
