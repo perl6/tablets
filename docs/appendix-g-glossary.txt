@@ -204,6 +204,9 @@ of `$ship.clock.time`
 return values from routines must meet conditions; A signature is
 considered contract in Perl 6
 
+<a id="double-quoting"/>
+**double quoting** &mdash;
+
 
 # [E](#nav-top)
 
@@ -239,14 +242,15 @@ in which order they are considered.
 
 <a id="fat-arrow"/>
 **fat arrow** &mdash;
-[**=\>**](appendix-a-index.html#fat-arrow)
+[**=\>**](appenis	dix-a-index.html#fat-arrow)
 
 <a id="file-handle"/>
 **file handle** &mdash;
 is just a [*variable*](#variable) through which you can access a file.
 Technically these are just [*scalars*](#scalar) holding an [*objects*](#object)
 of the [*type*](#type) [**IO**](appendix-a-index.html#IO-type) which can do much
-more than just read and write files. They can access directories, [*pipes*](#pipe)
+more than just read and write files.
+They can access directories, [*pipes*](#pipe) the command line (shell) 
 and contain also the [test methods](appendix-b-grouped.html#test-methods).
 But if its just about getting the file content in on swoop or line wise,
 [**slurp**](appendix-a-index.html#slurp) and 
@@ -259,6 +263,9 @@ style, [strongly supported](appendix-d-delta.html#functional-programming)
 by Perl 6, considered as a branch of Declarative Programming
 
 # [G](#nav-top)
+
+<a id="grammar"/>
+**grammar** &mdash;
 
 <a id="grapheme"/>
 **grapheme** &mdash;
@@ -274,6 +281,9 @@ out of several [codepoints](#codepoint)
 <a id="hash-context"/>
 **hash context** &mdash;
 [hash](#hash) [context](#context)
+
+<a id="heredoc"/>
+**heredoc** &mdash;
 
 
 # [I](#nav-top)
@@ -367,6 +377,9 @@ see also: [**multi**](appendix-a-index.html#multi)
 
 <a id="named-parameter"/>
 **named parameter** &mdash;
+
+<a id="namespace"/>
+**namespace** &mdash;
 
 <a id="not"/>
 **not** &mdash;
@@ -512,6 +525,9 @@ a [whole page](tablet-9-regexes.html) is dedicated just about that subject
 <a id="reify">
 **reify** &mdash;
 
+<a id="role"/>
+**role** &mdash;
+
 <a id="routine"/>
 **routine** &mdash;
 [block](#block) of code callable by name,
@@ -546,6 +562,9 @@ following name, most prominent in Perl are the variable
 <a id="signature"/>
 **signature** &mdash; function parameters (left-hand side of a binding),
 surrounded by round parentheses in the definition of a [*routine*](#routine)
+
+<a id="single-quoting"/>
+**single quoting** &mdash;
 
 <a id="slang"/>
 **slang** &mdash;

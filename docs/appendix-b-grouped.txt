@@ -884,15 +884,16 @@ Jump Commands
 -------------
 
 
----------------------------------------  --------------------------------------
-[goto](appendix-a-index.html#goto)       jump to a named label
-[redo](appendix-a-index.html#redo)       repeat this loop turn
-[next](appendix-a-index.html#next)       skip to the next loop turn
-[last](appendix-a-index.html#last)       leave this loop now
-[break](appendix-a-index.html#break)     leave this when clause
-[leave](appendix-a-index.html#leave)     leave this block with a return value
-[return](appendix-a-index.html#return)   leave this routine with a return value
----------------------------------------  --------------------------------------
+----------------------------------------  --------------------------------------
+[goto](appendix-a-index.html#goto)        jump to a named label
+[redo](appendix-a-index.html#redo)        repeat this loop turn
+[next](appendix-a-index.html#next)        skip to the next loop turn
+[last](appendix-a-index.html#last)        leave this loop now
+[succeed](appendix-a-index.html#'succeed) leave this [when](appendix-a-index.html#when) clause and surrounding [given](appendix-a-index.html#given) block
+[proceed](appendix-a-index.html#proceed)  check next [when](appendix-a-index.html#when) clauses
+[leave](appendix-a-index.html#leave)      leave this [block](appendix-g-glossary.html#block) with a return value
+[return](appendix-a-index.html#return)    leave this [routine](appendix-g-glossary.html#routine) with a return value
+----------------------------------------  --------------------------------------
 
 
 
