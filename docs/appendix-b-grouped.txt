@@ -467,9 +467,10 @@ if followed by `()`.
 Unicode operators
 -----------------
 
-The two hyper operators can be written with the Unicode signs (also documented
-as "French Quotes") or with double less than or greater than signs (documented
-as "Texas Quotes").
+The two hyper operators and the evaluating autoquoting can be written with the 
+[unicode](appendix-g-glossary.html#unicode) signs
+(also documented as "French Quotes") or with double lesser than or greater than
+signs (documented as "Texas Quotes").
 
 --- -------------------------------------------------------- -----------------------------------------------
  «  [\<\<](appendix-a-index.html#lower-lower-op)             Hyperop, right side dictates length of result
@@ -1013,7 +1014,7 @@ In routine and block definitions can be also some character with special meaning
 ### Callframe Methods ###
 
 of objects provided by [**callframe**](appendix-a-index.html#callframe) and
-[*caller**](appendix-a-index.html#caller)
+[**caller**](appendix-a-index.html#caller)
 
     args
     callframe

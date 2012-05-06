@@ -600,7 +600,7 @@ see also: [**\<==**](#lower-lower-equal-op) and [**==\>\>**](#equal-equal-greate
 them as a list, with [quote protection](appendix-g-glossary.html#quote-protection)
 and [evaluation](appendix-g-glossary.html#evaluation) of variables,
 alias to: **Q** [**:qq**](#qq-adverb) [**:ww**](#ww-adverb) **/.../**
-or `« »` ([unicode](appendix-g-glossary.html#unicode) alias) &mdash;
+or `« »` ([unicode sibling](appendix-b-grouped.html#unicode-operators)) &mdash;
 see also: [**\< \>**](#angle-brackets-op)
 
 <a id="lower-equal"/><a id="lower-equal-op"/>
@@ -694,13 +694,13 @@ value and [type](appendix-b-grouped.html#value-types)
 [*«sequencer op»*](tablet-4-operators.html#feed-ops) &mdash;
 rightward pointing feed operator, take return value of left side
 and feed as parameter to the right &mdash;
-see also: [*\<==*](#lower-equal-equal-op) and [*==\>\>*](#equal-equal-greater-greater-op)
+see also: [**\<==***](#lower-equal-equal-op) and [**==\>\>**](#equal-equal-greater-greater-op)
 
 <a id="equal-equal-greater-greater-op"/>
 **==\>\>**
 [*«sequencer op»*](tablet-4-operators.html#feed-ops) &mdash;
 rightward pointing feed operator that adds values to an existing list (append-mode) &mdash;
-see also: [**==\>**](#equal-equal-greater-op) and [*\<\<==*](#lower-lower-equal-equal-op)
+see also: [**==\>**](#equal-equal-greater-op) and [**\<\<==**](#lower-lower-equal-equal-op)
 
 <a id="equal-greater-op"/><a id="fat-arrow"/>
 **=\>**
