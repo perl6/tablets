@@ -1,11 +1,9 @@
 % Perl 6 Tablet 2 - Basic Syntax
 
-> "1st law of language redesign: Everyone wants the colon for their
-> particular syntax.
-> 2nd law of language redesign: Larry gets the
-> colon for whatever he wants."
+> "1st law of language redesign: Everyone wants the colon for their particular syntax.
+> 2nd law of language redesign: Larry gets the colon for whatever he wants."
 
-Basics doesn't mean here not always easy but fundamental.
+Basics doesn't mean here not always easy but rather fundamental.
 
 Defaults
 ========
@@ -16,35 +14,35 @@ Please start your Perl 6 program with one of the following lines.
     use v6.0;
     v6;
 
-or just start with a keyword like **module** or **class**. That marks
-your code as Perl 6 (in case the interpreter defaults to Perl 5) and
-makes it possible to mix Perl 5 and 6 in one source file.
+or just start with a keyword like [**module**](appendix-a-index.html#module)
+or [**class**](appendix-a-index.html#class). That marks your code as Perl 6
+(in case the interpreter defaults to Perl 5) and makes it possible to mix 
+Perl 5 and 6 in one source file.
 
-To even that little obstacle, you can leave out the usual `use
-strict;` and `use warnings;` in front of every script, because thats
-now default. Also `use utf8;` is obsolete since any Perl 6 source code
-is always treated as UTF-8 and any Unicode character can be used
-anywhere in the code. Even the features of the pragmas `constant` and
+To even that little obstacle, you can leave out the usual `use strict;` and
+`use warnings;` in front of every script, because thats now default.
+Also `use utf8;` is obsolete since any Perl 6 source code is always treated
+as UTF-8 and any [*unicode*](appendix-g-glossary.html#unicode) character can
+be used anywhere in the code. Even the features of the pragmas `constant` and
 `vars` are now part of the core language.
 
 Also the functionality of many useful and famous modules like Moose
 (object system), Parse::RecDescent++, exception handling,
 List::\[More\]Utils, Export, English an advanced pretty printer and
-much more is already built in. So you get a lot extra for a little
-**v6;**.
+much more is already built in. So you get a lot extra for a little **v6;**.
 
 
 
 Statements
 ==========
 
-Unless you use [blocks](blocks.html), a Perl program executes one
-statement after another in linear progression (from left to right,
-from up to down). They have to be separated by a semicolon (**;**),
-except before and after a closing curly brace, where it is optional.
+Unless you use [*blocks*](appendix-g-glossary.html#block), a Perl program
+executes one statement after another in linear progression (from left to right,
+from up to down).  They have to be separated by a
+semicolon ([**;**](appendix-a-index.html#semicolon-terminator)),
+except before and after a closing curly brace, where it is optional, always.
 
     $coderef = sub { fetch_data(); compute() }
-
 
 
 Spaces and Indentation
@@ -52,6 +50,8 @@ Spaces and Indentation
 
 Perl doesn't care about indentation. Otherwise, in several place Perl 6 cares
 about existence of whitespace as a disambiguator.
+
+    ...$var []
 
 Comments
 ========
@@ -64,7 +64,7 @@ Single Line
 Like in Perl 5 and many other languages of its league, a "#" tells the
 compiler to ignore the rest of the line.
 
-    my $var = 'good'; # that code is boring
+    my $var = 'fine'; # that code is boring
 
 
 
@@ -107,7 +107,7 @@ inserting comments.
     $=
 
 
-[all POD variables](ap-b-lookup.html)
+[all POD variables](appendix-b-grouped.html#pod-variables)
 
 
 
