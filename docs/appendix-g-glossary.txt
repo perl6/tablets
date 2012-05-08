@@ -79,7 +79,7 @@ back leftward a bit and try another possibility after a part of a
 pattern didn't match
 
 <a id="binding"/>
-[**binding**](tablet-3-variables#binding) &mdash;
+[**binding**](tablet-3-variables.html#binding) &mdash;
 making two variables share the same content by pointing to same
 memory location, done i Perl 6 with 
 [**:=**](appendix-a-index.html#runtime-binding-op) 
@@ -287,6 +287,9 @@ out of several [codepoints](#codepoint)
 
 
 # [I](#nav-top)
+
+<a id="interpolation"/>
+**interpolation** &mdash;
 
 <a id="invocant"/>
 **invocant** &mdash;
@@ -559,12 +562,17 @@ area within which an identifier (like a variable) is usable,
 normally the current [block](#block)
 
 <a id="sigil"/>
-**sigil** &mdash; character that serves as a prefix to categorize the
-following name, most prominent in Perl are the variable
-[sigils](appendix-b-grouped.html#sigils)
-: [**$**](appendix-a-index.html#dollar-sigil),
+**sigil** &mdash;
+character that serves as a prefix to categorize the following name,
+(stays without spacing in front of the actual name)
+most prominent in Perl are the variable [sigils](appendix-b-grouped.html#sigils):
+[**$**](appendix-a-index.html#dollar-sigil),
 [**@**](appendix-a-index.html#at-sigil) and
-[**%**](appendix-a-index.html#percent-sigil)
+[**%**](appendix-a-index.html#percent-sigil),
+they serve as different variable [*namespaces*](#namespace) and make
+[*interpolation*](#interpolation) much easier for human and the computer,
+for more info see the [variable tablet](tablet-3-variables.html)
+
 
 <a id="signature"/>
 **signature** &mdash; function parameters (left-hand side of a binding),
@@ -654,7 +662,7 @@ see [**but**](appendix-a-index.html#but), what other languages call
 <a id="twigil"/>
 [**twigil**](appendix-b-grouped.html#twigils) &mdash;
 second(ary) [*sigil*](#sigil) indicating a special property of a variable,
-[(more details here)](tablet-3-variables#twigils)
+[(more details here)](tablet-3-variables.html#twigils)
 
 <a id="type"/>
 **type** &mdash;
