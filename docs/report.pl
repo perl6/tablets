@@ -42,7 +42,12 @@ printf $format, 'Sum', $sum{'head'}, $sum{'item'},
 
 
 # Tester
+	print "TODO:\n";
+	open $FH, '<', 'appendix-a-index.txt';
+	$content = do {local $/; <$FH>};
+	my $v =()= $content =~ /\&mdash;\n\n/g;
+	print " empty index entries: $v\n";
 	open $FH, '<', 'appendix-g-glossary.txt';
 	$content = do {local $/; <$FH>};
 	my $v =()= $content =~ /\&mdash;\n\n/g;
-	print "unanswered glossary terms: $v\n";
+	print " empty glossary terms: $v\n";
