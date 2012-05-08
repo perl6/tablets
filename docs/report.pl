@@ -47,6 +47,10 @@ printf $format, 'Sum', $sum{'head'}, $sum{'item'},
 	$content = do {local $/; <$FH>};
 	my $v =()= $content =~ /\&mdash;\n\n/g;
 	print " empty index entries: $v\n";
+	open $FH, '<', 'appendix-f-faq.txt';
+	$content = do {local $/; <$FH>};
+	my $v =()= $content =~ /---\n\n/g;
+	print " unanswered questions: $v\n";
 	open $FH, '<', 'appendix-g-glossary.txt';
 	$content = do {local $/; <$FH>};
 	my $v =()= $content =~ /\&mdash;\n\n/g;
