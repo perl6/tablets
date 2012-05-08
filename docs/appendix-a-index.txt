@@ -304,7 +304,7 @@ not backtracking, greedy quantifier taking zero or more findings
 **\*\***<span class="you-provide">n</span>
 [*«regex metachar»*](appendix-b-grouped.html#quantifier) &mdash;
 quantifier for explicit repeat char or group, like
-[**x**](#x-op) *(string op)* does outside of a regex &mdash;
+[**x**](#x-op) *(string op) does outside of a regex &mdash;
 example: `(ha)**3` only matches `'hahaha'`
 
 <a id="asterisk-asterisk-question-metachar"/>
@@ -1759,11 +1759,11 @@ into readable UTF Text ([**Str**](#Str-type))
 <a id="default"/>
 [**default**](tablet-6-blocks.html#default)
 [*«conditional»*](appendix-b-grouped.html#conditionals) &mdash;
-following block will be run if no [**when*](#when)
+following block will be run if no [**when**](#when)
 clause in surrounding [**given**](#given) block matched
 
 <a id="defer"/>
-**defer** * *«block modifier»* &mdash;
+**defer** *«block modifier»* &mdash;
 
 <a id="defined"/>
 **defined** &mdash; scalar method tests whether a value has been assigned
@@ -2686,13 +2686,13 @@ might want to use use `$?KERNEL.name` &mdash; see also:
 
 <a id="key"/>
 **key**
-[*«pair method»*](tablet-3-variables#pair)* &mdash;
+[*«pair method»*](tablet-3-variables#pair) &mdash;
 gives the key part of a pair, opposite of [**value**](#value)
 
 <a id="KeyBag-type"/>
 **KeyBag**
 [*«mutable type»*](appendix-b-grouped.html#mutable-types) &mdash;
-KeyHash of UInt, does [**Bag**](#Bag-type)** in
+KeyHash of UInt, does [**Bag**](#Bag-type) in
 [*list context*](appendix-g-glossary.html#list-context)
 
 <a id="KeySet-type"/>
@@ -2852,7 +2852,7 @@ also known as *log* on calculators and *lg* in math classes
 
 <a id="LoL-type"/>
 **LoL**
-[*«immutable type»*](appendix-b-grouped.html#immutable-types)* &mdash;
+[*«immutable type»*](appendix-b-grouped.html#immutable-types) &mdash;
 arguments in a semicolon list, name is short for "List of Lists"
 
 <a id="lol"/>
@@ -3031,7 +3031,7 @@ most (generic) undefined value
 <a id="multi"/><a id="multi-routine-modifier"/>
 **multi**
 [*«routine modifier»*](appendix-b-grouped.html#routine-modifier) &mdash;
-marks [*routines*](appendix-g-glossary.html#routine)* that can have sibling
+marks [*routines*](appendix-g-glossary.html#routine) that can have sibling
 with same name but different [*signature*](appendix-g-glossary.html#signature),
 when name is called, the one with matching signature is run
 ([*multimethod dispatch*](appendix-g-glossary.html#MMD)) &mdash;
@@ -3835,7 +3835,7 @@ and sets the return value &mdash; see also: [**leave**](#leave)
 
 <a id="returns"/>
 **returns** 
-[*«routine trait»*](appendix-b-grouped.html#)* &mdash;
+[*«routine trait»*](appendix-b-grouped.html#routine-traits) &mdash;
 describing the type of value is produced (returned)
 
 <a id="reverse"/>
@@ -4760,7 +4760,7 @@ object ID (type)
 [**while**](tablet-6-blocks.html#while)
 [*«loop»*](appendix-b-grouped.html#loops) &mdash;
 runs block repeatedly as long as the following expression
-[*evals*](appendix-g-glossary.html#evaluation)* to
+[*evals*](appendix-g-glossary.html#evaluation) to
 [**True**](#True), can be combined with
 [**repeat**](#repeat), can also be written at the
 end of an expression, opposite of [**until**](#until)
