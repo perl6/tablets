@@ -41,8 +41,7 @@ printf $format, 'Sum', $sum{'head'}, $sum{'item'},
                        $sum{'anchor'},  $sum{'link'}, $sum{'line'}, $sum{'size'};
 
 
-# Tester
-	print "TODO:\n";
+print "TODO:\n";
 	open $FH, '<', 'appendix-a-index.txt';
 	$content = do {local $/; <$FH>};
 	my $v =()= $content =~ /\&mdash;\n\n/g;

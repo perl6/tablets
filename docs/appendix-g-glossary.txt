@@ -23,8 +23,9 @@ or "What kind of [*iterators*](#iterators) are present and how they are spelled?
 
 <a id="and"/>
 **and** &mdash;
-logical operation that has only the result **True** if both operands
-(incoming information) are also true, otherwise result is **False**
+logical operation which results in [**True**](appendix-a-index.html#True)
+only in case  both operands (incoming information) are also **True**,
+otherwise the result is [**False**](appendix-a-index.html#True),
 following operator working with that logic:
 [**|**](appendix-a-index.html#junctive-and),
 [**||**](appendix-a-index.html#logical-and),
@@ -34,7 +35,8 @@ following operator working with that logic:
 [**all**](appendix-a-index.html#all),
 [**and**](appendix-a-index.html#and)
 [**andthen**](appendix-a-index.html#andthen) &mdash;
-other logical operations are [*or*](#or), [*xor*](#xor), [*not*](#not)
+other operations in [*bool context*](#bool-context) are:
+[*or*](#or), [*xor*](#xor), [*not*](#not)
 
 <a id="argument"/>
 **argument** &mdash;
