@@ -26,7 +26,7 @@ or "What kind of [*iterators*](#iterators) are present and how they are spelled?
 logical operation which results in [**True**](appendix-a-index.html#True)
 only in case  both operands (incoming information) are also **True**,
 otherwise the result is [**False**](appendix-a-index.html#True),
-following operator working with that logic:
+following [*operator*](#operator) are working under that logic:
 [**|**](appendix-a-index.html#junctive-and),
 [**||**](appendix-a-index.html#logical-and),
 [**+|**](appendix-a-index.html#numeric-and),
@@ -208,6 +208,7 @@ considered contract in Perl 6
 
 <a id="double-quoting"/>
 **double quoting** &mdash;
+[**" "**](appendix-a-index.html#double-quotes)
 
 
 # [E](#nav-top)
@@ -220,7 +221,7 @@ important to the functions
 
 
 <a id="encoding"/>
-**encoding** &mdash;
+**encoding** &mdash; ASCII UTF-8
 
 
 <a id="evaluation"/>
@@ -243,8 +244,9 @@ in which order they are considered.
 # [F](#nav-top)
 
 <a id="fat-arrow"/>
-**fat arrow** &mdash;
-[**=\>**](appenis	dix-a-index.html#fat-arrow)
+**fat arrow** &mdash; 
+a name for this [*operator*](#operator): 
+[**=\>**](appenisdix-a-index.html#fat-arrow)
 
 <a id="file-handle"/>
 **file handle** &mdash;
@@ -389,9 +391,11 @@ see also: [**multi**](appendix-a-index.html#multi)
 <a id="not"/>
 **not** &mdash;
 logical operation that changes a true into false and vice versa,
-following operator working with that logic:
-[**!()**](appendix-a-index.html#negation-op), [**not**](appendix-a-index.html#not) &mdash;
-other logical operations are: [*and*](#and), [*or*](#or), [*xor*](#xor) 
+following operator working under that logic:
+[**!()**](appendix-a-index.html#negation-op),
+[**not**](appendix-a-index.html#not) &mdash;
+other operations in [*bool context*](#bool-context) are:
+[*and*](#and), [*or*](#or), [*xor*](#xor) 
 
 <a id="numeric-context"/>
 **numeric context** &mdash;
@@ -417,7 +421,7 @@ that belong together into so called objects
 **or** &mdash;
 logical operation that has a the result **True** if at least one of two
 operands (incoming information) is also true, otherwise result is **False**
-following operator working with that logic:
+following operator working under that logic:
 [**|**](appendix-a-index.html#junctive-or),
 [**||**](appendix-a-index.html#logical-or),
 [**//**](appendix-a-index.html#defined-or),
@@ -428,7 +432,8 @@ following operator working with that logic:
 [**or**](appendix-a-index.html#or)
 [**orelse**](appendix-a-index.html#orelse),
 [**err**](appendix-a-index.html#err) &mdash;
-other logical operations are: [**and**](#and), [**xor**](#xor), [**not**](#not)
+other operations in [*bool context*](#bool-context) are:
+[**and**](#and), [**xor**](#xor), [**not**](#not)
 
 
 # [P](#nav-top)
@@ -581,7 +586,7 @@ for more info see the [variable tablet](tablet-3-variables.html)
 surrounded by round parentheses in the definition of a [*routine*](#routine)
 
 <a id="single-quoting"/>
-**single quoting** &mdash;
+**single quoting** &mdash; [**' '**](appendix-a-index.html#single-quotes)
 
 <a id="slang"/>
 **slang** &mdash;
@@ -678,6 +683,10 @@ not just [*ASCII*](#ASCII), its [fully supported](appendix-d-delta.html#unicode)
 by Perl 6, which means any part of a a program might use any character or symbol,
 strange names that start with UTF are most probably Unicode formats
 
+<a id="UTF-8"/>
+**UTF-8** &mdash;
+
+
 # [V](#nav-top)
 
 <a id="value"/>
@@ -694,7 +703,7 @@ strange names that start with UTF are most probably Unicode formats
 **xor** *(eXclusive OR)* &mdash;
 logical operation that has a the result **True** if only one of two
 operands (incoming information) is also true, otherwise result is **False**,
-following operator working with that logic:
+following operator working under that logic:
 [**\^**](appendix-a-index.html#junctive-xor),
 [**\^\^**](appendix-a-index.html#logical-xor),
 [**+\^**](appendix-a-index.html#numeric-xor),
@@ -702,7 +711,8 @@ following operator working with that logic:
 [**~\^**](appendix-a-index.html#string-xor),
 [**one**](appendix-a-index.html#one),
 [**xor**](appendix-a-index.html#xor) &mdash;
-other logical operations are: [*and*](#and), [*or*](#or), [*not*](#not)
+other operations in [*bool context*](#bool-context) are:
+[*and*](#and), [*or*](#or), [*not*](#not)
 
 
 # [Y](#nav-top)
