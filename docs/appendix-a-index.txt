@@ -2121,7 +2121,8 @@ opposite of [**True**](#True)
 <a id="FatRat-type"/>
 **FatRat**
 [*«immutable type»*](appendix-b-grouped.html#immutable-types) &mdash;
-Perl rational (unlimited precision in both parts)
+Perl rational (unlimited precision in numerator and denominator) &mdash; 
+see also: [**Rat**](#Rat-type)
 
 <a id="fc"/>
 **fc** ([Str](#Str-type) [--\>](#minus-minus-greater-signature) [Str](#Str-type))
@@ -3063,9 +3064,9 @@ not just a LINE FEED (LF) character (`u000A`)
 <a id="nd-modifier"/>
 <span class="you-provide">n</span>**:nd**
 [*«regex modifier»*](appendix-b-grouped.html#regex-modifier) &mdash;
-demands the nth finding (:2nd), has many aliases
-([**:st**](#st-modifier), [**:rd**](#rd-modifier),
-[**:th**](#th-modifier)) for correct spelling
+demands the <span class="you-provide">n</span>th finding (:2nd), has many aliases 
+([**:st**](#st-modifier), [**:rd**](#rd-modifier), [**:th**](#th-modifier))
+for correct spelling (`:3rd`)
 
 <a id="name"/>
 **name** *«routine method»* &mdash;
@@ -3151,7 +3152,8 @@ see also: [**numerator**](#numerator) and [**denominator**](#denominator)
 <a id="Num-type"/>
 **Num**
 [*«immutable type»*](appendix-b-grouped.html#immutable-types) &mdash;
-Perl number (approximate "real", generally via floating point)
+Perl number (approximate "real", generally via floating point) &mdash; 
+see also: [**Rat**](#Rat-type)
 
 <a id="numerator"/>
 **numerator**
@@ -3734,7 +3736,8 @@ iterator over a **Range**
 <a id="Rat-type"/>
 **Rat**
 [*«immutable type»*](appendix-b-grouped.html#immutable-types) &mdash;
-Perl rational number (exact [**Real**](#Real-type) numerator, limited denominator)
+Perl rational number (exact [real](#Num-type) numerator, limited denominator) &mdash; 
+see also: [**FatRat**](#FatRat-type) and [**Num**](#Num-type)
 
 <a id="ratchet-modifier"/>
 **:ratchet**
@@ -3744,8 +3747,9 @@ deactivates backtracking, search starts at pos, where last match ended
 <a id="rd-modifier"/>
 <span class="you-provide">n</span>**:rd**
 [*«regex modifier»*](appendix-b-grouped.html#regex-modifier) &mdash;
-demands the nth finding, has many aliases (**:st :nd :th*) for
-correct spelling (`:3rd`)
+demands the <span class="you-provide">n</span>th finding, has many aliases
+([**:st**](#st-modifier) [**:nd](#nd-modifier) :[**th](#th-modifier)) 
+for correct spelling (`:3rd`)
 
 <a id="re"/>
 **re**
@@ -4221,11 +4225,12 @@ only for for substitution, whitespace separates subregexes like
 substitution wil work then word for word,
 short alternative of [**:samespace**](#samespace-modifier)
 
-<a id="st-modifier"/>
+<span class="you-provide">n</span><a id="st-modifier"/>
 **:st**
 [*«regex modifier»*](appendix-b-grouped.html#regex-modifier) &mdash;
-demands the nth finding, has many aliases (:nd :rd :th) for
-correct spelling (:1st)
+demands the <span class="you-provide">n</span>th finding, has many aliases
+([**:nd](#nd-modifier) [**:rd**](#rd-modifier) :[**th](#th-modifier)) 
+for correct spelling (`:3rd`)
 
 <a id="START-phaser"/>
 **START**
