@@ -1620,7 +1620,7 @@ be returned as result, see also: [**quasi**](#quasi)
 number of [*unicode*](appendix-g-glossary.html#unicode)
 [*codepoints*](appendix-g-glossary.html#codepoints) of a string in a
 language-independent way &mdash;
-see also: [**bytes*](#bytes), [**chars**](#chars), [**graphs**](#graphs)
+see also: [**bytes**](#bytes), [**chars**](#chars), [**graphs**](#graphs)
 
 <a id="codes-modifier"/>
 **:codes**
@@ -3064,7 +3064,7 @@ not just a LINE FEED (LF) character (`u000A`)
 <a id="nd-modifier"/>
 <span class="you-provide">n</span>**:nd**
 [*«regex modifier»*](appendix-b-grouped.html#regex-modifier) &mdash;
-demands the <span class="you-provide">n</span>th finding (:2nd), has many aliases 
+demands the <span class="you-provide">n</span>th finding (`:2nd`), has many aliases 
 ([**:st**](#st-modifier), [**:rd**](#rd-modifier), [**:th**](#th-modifier))
 for correct spelling (`:3rd`)
 
@@ -3153,7 +3153,7 @@ see also: [**numerator**](#numerator) and [**denominator**](#denominator)
 **Num**
 [*«immutable type»*](appendix-b-grouped.html#immutable-types) &mdash;
 Perl number (approximate "real", generally via floating point) &mdash; 
-see also: [**Rat**](#Rat-type)
+see also: [**Rat**](#Rat-type) and [**Int**](#Int-type)
 
 <a id="numerator"/>
 **numerator**
@@ -3748,7 +3748,7 @@ deactivates backtracking, search starts at pos, where last match ended
 <span class="you-provide">n</span>**:rd**
 [*«regex modifier»*](appendix-b-grouped.html#regex-modifier) &mdash;
 demands the <span class="you-provide">n</span>th finding, has many aliases
-([**:st**](#st-modifier) [**:nd](#nd-modifier) :[**th](#th-modifier)) 
+([**:st**](#st-modifier) [**:nd**](#nd-modifier) :[**th**](#th-modifier)) 
 for correct spelling (`:3rd`)
 
 <a id="re"/>
@@ -3780,8 +3780,8 @@ re-starts processing of the current loop turn
 <a id="reduce"/>
 **reduce**
 *«list method»* &mdash;
-alias to [**\[ \]** metaoperator](#square-brackets-metaop) that applies an 
-[*infix*](#infix-category) operator between each adjacent elements of a list
+alias to [**\[ \]** *«metaoperator»*](#square-brackets-metaop) that applies an 
+[**infix**](#infix-category) operator between each adjacent elements of a list
 and evaluates this term to a single value &mdash;
 example: `[+] @a` is equivalent to `@a.reduce(&[+])` numerical sum of all elements
 
@@ -4229,7 +4229,7 @@ short alternative of [**:samespace**](#samespace-modifier)
 **:st**
 [*«regex modifier»*](appendix-b-grouped.html#regex-modifier) &mdash;
 demands the <span class="you-provide">n</span>th finding, has many aliases
-([**:nd](#nd-modifier) [**:rd**](#rd-modifier) :[**th](#th-modifier)) 
+([**:nd**](#nd-modifier) [**:rd**](#rd-modifier) :[**th**](#th-modifier)) 
 for correct spelling (`:3rd`)
 
 <a id="START-phaser"/>
@@ -4930,9 +4930,10 @@ example: `'ab' xx 3` returns `<ab ab ab>`
 <a id="Z-op"/>
 **Z**
 [*«list op»*](tablet-4-operators.html#list-generation) &mdash;
-alias to [**zip**](#zip-op),
-joines [**infix**](#infix-category) 2 lists and stops when one list runs out of elements,
-returning always an list with an even length &mdash;
+joines [**infix**](#infix-category) 2 lists and stops
+when one list runs out of elements,
+returning always an list with an even length,
+alias to [**zip**](#zip-op) &mdash;
 example: `1,2,3,4 Z 8,9 == 1,8,2,9` &mdash;
 see also: [**roundrobin**](#roundrobin)
 
@@ -4946,13 +4947,13 @@ with following operator and produces in that manner a new list
 **zip**
 [*«array op & method»*](tablet-3-variables#array-methods) &mdash;
 [**infix**](#infix-category) zip operator, joines 2 lists, alias to
-[**Z** «op»](#Z-op) &mdash;
+[**Z** *«list op»*](#Z-op) &mdash;
 example: `@a Z @b = (@a; @b).zip`
 
 <a id="zipwith"/>
 **zipwith**
 [*«meta op»*](appendix-b-grouped.html#metaoperators) &mdash;
-alias method to [**Z** «metaop»](#Z-metaop) &mdash;
+alias method to [**Z** *«metaop»*](#Z-metaop) &mdash;
 example: `@a Z~ @b` aka `(@a; @b).zipwith(&[~])` aka `(@a; @b).zip.lol.map { .reduce(&[~]) }`
 
 ***
