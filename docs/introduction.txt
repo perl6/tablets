@@ -66,7 +66,7 @@ E stands for exciting or excellence showing just the glamorous and
 fast to understand bits to impress the world.
 F is the FAQ and G is short for [glossary](appendix-g-glossary.html)
 where all the computer science terms are explained.
-Links to more resources are in Appendix H.
+Links to more resources are in Appendix H (href's).
 
 
 Motivation
