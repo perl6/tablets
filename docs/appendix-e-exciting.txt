@@ -124,7 +124,7 @@ Simple Object creation is now as easy as it gets.
 
                   Perl 5                                     Perl 6
     package Heart::Gold;                            class Heart::Gold {
-                                                      has $.speed;
+                                                      has $.speed is rw;
     sub new {                                         method stop { $.speed = 0 }
       bless {speed => 0 }, shift;                   }
     }
