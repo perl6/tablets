@@ -77,10 +77,10 @@ Case construct
 
                   Perl 5                                         Perl 6
                                                            given $a {
-    if ($a == 2 or $a == 5) {...} }}                         when 2 | 5 {...}
-    elsif ($a == 6 or $a == 7 or $a == 8 or $a == 9) {}      when 6 .. 9 {...}
-    elsif ($a =~ /g/) {...}                                  when 'g' {...}
-    else {...}                                               default {...}
+    if ($a == 2 or $a == 5) {...}                            when 2 | 5 {...}
+    elsif ($a == 6 or $a == 7 or $a == 8 or $a == 9) {...}   when 6 .. 9 {...}
+    elsif ($a =~ /^g/) {...}                                 when /^g/ {...}
+    else {...}                                               default  {...}
                                                            }
 
 [That new construct](blocks.html#given) (backported to 5.10) is clear
