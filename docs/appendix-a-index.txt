@@ -2972,9 +2972,12 @@ tells the parser the rules of parsing Perl
 <a id="map"/>
 **map**
 [*«array op & method»*](tablet-3-variables#array-methods) &mdash;
-take a list, perform a block on each member, return a list of
-the results &mdash; example: `say map { chr $_ }, 66..69` *(is "B C D E")*
-or `say map { chr $_ }, 66..69`
+take a list, perform a block on each member, 
+return a list of the results in same order,
+the current value is each time in [**\$_**](#context-var) of use
+[autonamed positionals](#caret-twigil) &mdash;
+example: `map { chr $_ }, 66..69` or `map { chr $^nr }, 66..69`
+results in [`<B C D E>`](#angle-brackets-op)
 
 <a id="Match-type"/>
 **Match**
@@ -2986,7 +2989,7 @@ Perl match object, usually produced by applying a pattern of
 **match**
 *«string method»* &mdash;
 method alias to [**m**/.../](#m-op) operator,
-`$str.match( /`<span class="you-provide">`p`</span>`/ )`
+`$str.match(/`<span class="you-provide">`p`</span>`/)`
 equals `$str ~~ m/`<span class="you-provide">`p`</span>`/;`,
 returns a match object that end up also in [**\$/**](#match-var) &mdash;
 see also [**comb**](#comb)
