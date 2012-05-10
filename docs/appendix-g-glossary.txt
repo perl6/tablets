@@ -512,6 +512,9 @@ a block that is given readonly [*parameters*](parameter) with
 
 <a id="quasiquoting"/>
 **quasiquoting** &mdash;
+[**$~Quasi**](appendix-a-index.html#Quasi-slang-var),
+[**:code**](appendix-a-index.html#code-adverb), 
+[**quasi**](appendix-a-index.html#quasi)
 
 
 <a id="quote-protection"/>
@@ -681,6 +684,15 @@ like [**given**](appendix-a-index.html#given) and [**for**](appendix-a-index.htm
 additional property of a variable, defined at [*compile time*](#compile-time),
 see [**but**](appendix-a-index.html#but), what other languages call
 *trait* Perl calls [role](#role)
+
+<a id="transliteration"/>
+**transliteration** &mdash;
+**quasiquoting** &mdash;
+[**$~Trans**](appendix-a-index.html#Quasi-slang-var),
+[**:trans**](appendix-a-index.html#trans-adverb),
+[**.trans**](appendix-a-index.html#trans),
+[**tr** ///](appendix-a-index.html#tr-op)
+
 
 <a id="twigil"/>
 [**twigil**](appendix-b-grouped.html#twigils) &mdash;

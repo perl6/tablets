@@ -523,7 +523,8 @@ example: *`$filename.IO ~~ :X`*
 parameters of a [*block*](appendix-g-glossary.html#block)
 
 <a id="colon-label"/>
-**:**<span class="you-provide">s</span> *«flow control»* &mdash;
+**:**<span class="you-provide">s</span>
+*«flow control»* &mdash;
 suffix of all labels you can jump to with [**goto**](#goto)
 
 <a id="colon-signature"/>
@@ -674,7 +675,8 @@ result is assigned to &mdash;
 example: `$a += 3;` equals `$a = $a + 3`
 
 <a id="equal-colon-equal-op"/>
-**=:=** *«comparison op»* &mdash;
+**=:=**
+*«comparison op»* &mdash;
 compares [binding](tablet-3-variables#binding),
 if both vars are bound to same memory location
 
@@ -685,7 +687,8 @@ if both vars are bound to same memory location
 as [**eq**](#eq) does in [*string context*](tablet-4-operators.html#string-context)
 
 <a id="equal-equal-equal"/><a id="equal-equal-equal-op"/><a id="identity-op"/>
-**===** *«comparison op»* &mdash;
+**===**
+*«comparison op»* &mdash;
 [**infix**](#infix-category) check for identity - equality of
 value and [type](appendix-b-grouped.html#value-types)
 
@@ -860,7 +863,8 @@ creates a [*capture*](appendix-g-glossary.html#capture)
 that holds the following structure
 
 <a id="backslash-metachar"/><a id="escape-char"/>
-**\\** *«escape char»* &mdash;
+**\\**
+*«escape char»* &mdash;
 all escape sequences with a width 
 inside [quotes](appendix-b-grouped.html#control-chars)
 and [regexes](appendix-b-grouped.html#escape-sequences) start with it
@@ -997,27 +1001,32 @@ an alias for [**cat**](#cat)
 [**$\~MAIN**](#MAIN-slang-var)
 
 <a id="tilde-ampersand-op"/><a id="string-and"/>
-**\~&** [*«string op»*](tablet-4-operators.html#string-context) &mdash;
+**\~&**
+[*«string op»*](tablet-4-operators.html#string-context) &mdash;
 characterwise [*AND*](appendix-g-glossary.html#and),
 forces [*string context*](appendix-g-glossary.html#string-context)
 
 <a id="tilde-lower-op"/>
-**\~<** [*«string op»*](tablet-4-operators.html#string-context) &mdash;
+**\~<**
+[*«string op»*](tablet-4-operators.html#string-context) &mdash;
 characterwise left shift,
 forces [*string context*](appendix-g-glossary.html#string-context)
 
 <a id="tilde-greater-op"/>
-**\~\>** [*«string op»*](tablet-4-operators.html#string-context) &mdash;
+**\~\>**
+[*«string op»*](tablet-4-operators.html#string-context) &mdash;
 characterwise right shift,
 forces [*string context*](appendix-g-glossary.html#string-context)
 
 <a id="tilde-caret-op"/><a id="string-xor"/>
-**\~\^** [*«string op»*](tablet-4-operators.html#string-context) &mdash;
+**\~\^**
+[*«string op»*](tablet-4-operators.html#string-context) &mdash;
 characterwise [*XOR*](appendix-g-glossary.html#xor),
 forces [*string context*](appendix-g-glossary.html#string-context)
 
 <a id="tilde-pipe-op"/><a id="string-or"/>
-**\~|** [*«string op»*](tablet-4-operators.html#string-context) &mdash;
+**\~|**
+[*«string op»*](tablet-4-operators.html#string-context) &mdash;
 characterwise [*OR*](appendix-g-glossary.html#or),
 forces [*string context*](appendix-g-glossary.html#string-context)
 
@@ -1042,7 +1051,8 @@ included in [**"..."**](#double-quotes), [**qq/.../**](#qq-op) and
 [**\<\<...\>\>**](#double-angle-brackets)
 
 <a id="abs"/>
-**abs** *«numeric op»* &mdash;
+**abs**
+*«numeric op»* &mdash;
 returns numeric absolute value,
 converts value into [*numeric context*](appendix-g-glossary.html#numeric-context) &mdash;
 example: `abs -4.76` returns `4.76` as does `abs 4.76` &mdash;
@@ -1199,7 +1209,8 @@ method of all [*routine*](appendix-g-glossary.html#routine)
 objects that enables [*currying*](appendix-g-glossary.html#currying)
 
 <a id="async"/>
-**async** *«block modifier»* &mdash;
+**async**
+*«block modifier»* &mdash;
 allows the interpreter to parallelize the following term
 
 <a id="augment"/>
@@ -1334,7 +1345,7 @@ adds a [*role*](appendix-g-glossary.html#role)
 to a [*class*](appendix-g-glossary.html#class)
 
 <a id="bytes"/>
-**bytes** ([Str](#Str-type) [--\>](#minus-minus-greater-signature) [Int](#Int-type))
+.**bytes** ([Str](#Str-type) [--\>](#minus-minus-greater-signature) [Int](#Int-type))
 *«string method»* &mdash;
 number of bytes (a sort of Perl 5's *length*) &mdash;
 see also: [**chars**](#chars), [**codes**](#codes), [**graphs**](#graphs)
@@ -1428,7 +1439,7 @@ call (right-hand side of a binding)
 
 <a id="cat"/>
 **cat**
-[*«array method»*](tablet-3-variables#array-methods) &mdash;
+[*«array op & method»*](tablet-3-variables#array-methods) &mdash;
 converts values of a [*list*](appendix-g-glossary.html#list-context) into
 [*string context*](appendix-g-glossary.html#string-context)
 and joines them like with [**\~**](#tilde-op),
@@ -1442,7 +1453,7 @@ marks as a prefix a special block to catch
 
 <a id="categorize"/>
 **categorize**
-[*«array method»*](tablet-3-variables#array-methods) &mdash;
+[*«array op & method»*](tablet-3-variables#array-methods) &mdash;
 special form of map to classify a list values (values - optional
 second parameter), with a closure (mapper - first parameter); the
 return value of the closure determines, under which key the value
@@ -1460,7 +1471,7 @@ useful in case you want to create a new one with a macro
 <a id="ceiling"/>
 **ceiling**
 ([Num](#Num-type) $x [--\>](#minus-minus-greater-signature) [Int](#Int-type))
-*«num method»* &mdash;
+*«num op & method»* &mdash;
 lowest integer not less than $x, rounding up to the next whole number &mdash;
 example: `ceiling 5.4` returns `6`, `ceiling -5.4` returns `-5`  &mdash;
 see also: [**floor**](#floor), [**round**](#round), [**truncate**](#truncate)
@@ -1530,7 +1541,8 @@ see also: [**chomp**](#chomp), [**substr**](#substr)
 change root directory on POSIX systems
 
 <a id="cis"/>
-**cis** *«Complex method»* &mdash;
+**cis**
+*«Complex method»* &mdash;
 see also: [**conj**](#conj), [**polar**](#polar), [**unpolar**](#unpolar)
 
 <a id="circumfix-category"/>
@@ -1550,14 +1562,15 @@ current class object
 name of the current class
 
 <a id="class"/>
-**class** *«block modifier»* &mdash; 
+**class**
+*«block modifier»* &mdash; 
 following [*block*](appendix-g-glossary.html#block) will be a
 [*class*](appendix-g-glossary.html#class) definition &mdash;
 see also [**method**](#method), [**submethod**](#submethod) and [**has**](#has)
 
 <a id="classify"/>
 **classify**
-[*«array method»*](tablet-3-variables#array-methods) &mdash;
+[*«array op & method»*](tablet-3-variables#array-methods) &mdash;
 special form of map to classify a list values (values - optional
 second parameter), with a closure (mapper - first parameter); the
 return value of the closure determines, under which key the value
@@ -1567,7 +1580,7 @@ listrefs (see also [**categorize**](#categorize))
 
 <a id="close"/>
 [**close**](tablet-5-io.html#close)
-*«filehandle method»* &mdash;
+*«filehandle op & method»* &mdash;
 releasing the connection to a file via a [*file handle*](IO-type)
 
 <a id="closure-adverb"/>
@@ -1599,8 +1612,8 @@ see also: [**leg**](#leg) and [**\<=\>**](#spaceship-op)) which do the same in
 <a id="cntrl-subrule"/>
 **\<cntrl\>**
 [*«predefined subrule»*](appendix-b-grouped.html#subrules) &mdash;
-a not visible character that is aimed to control the console
-output, [the complete list](appendix-b-grouped.html#control-chars)
+a not visible character that is aimed to control the console output,
+[the complete list](appendix-b-grouped.html#control-chars)
 
 <a id="code"/><a id="code-context"/><a id="code-op"/>
 **code**
@@ -1611,12 +1624,14 @@ alias to [**&**()](#ampersand-context-op)
 <a id="code-adverb"/>
 **:code**
 [*«quoting adverb»*](appendix-b-grouped.html#quoting-adverbs) &mdash;
-quasi quoting, the commented will be compiles and the AST will
-be returned as result, see also: [**quasi**](#quasi)
+enables [*quasiquoting*](appendix-g-glossary.html#quasiquoting),
+the commented will be [*compiled*](appendix-g-glossary.html#compilation)
+and the resulting [*AST*](appendix-g-glossary.html#AST) is the return value &mdash;
+[**quasi** {...}](#quasi) is an alternative to `Q :code /.../`
 
 <a id="codes"/>
 **codes** ([Str](#Str-type) [--\>](#minus-minus-greater-signature) [Int](#Int-type))
-*«string mmethod»* &mdash;
+*«string method»* &mdash;
 number of [*unicode*](appendix-g-glossary.html#unicode)
 [*codepoints*](appendix-g-glossary.html#codepoints) of a string in a
 language-independent way &mdash;
@@ -1663,11 +1678,13 @@ see also: [**abs**](#abs), [**sign**](#sign), [**truncate**](#truncate),
 [**unpolar**](#unpolar), [**re**](#re), [**im**](#im)
 
 <a id="constant"/>
-**constant** *«var trait»* &mdash;
+**constant**
+*«var trait»* &mdash;
 makes so declared var (is constant) a real constant
 
 <a id="contend"/>
-**contend** *«block modifier»* &mdash;
+**contend**
+*«block modifier»* &mdash;
 marks a block as atomic, concurrent proceses have to wait
 
 <a id="continue-modifier"/>
@@ -1700,18 +1717,21 @@ cosine, trigonometric function, takes angle in radians &mdash;
 see also [**to-radians**](#to-radians), [**sin**](#sin), [**tan**](#tan)
 
 <a id="count"/>
-**count** *«routine method»* &mdash;
+**count**
+*«routine method»* &mdash;
 returns how many parameters this
 [*routine*](appendix-g-glossary.html#routine) takes (including optional),
 [**.arity**](#arity) counts just the required
 
 <a id="cross"/>
-**cross** *«list method»* &mdash;
+**cross**
+*«list method»* &mdash;
 alias to [**X** operator](#X-op) &mdash;
 example: `@a X @b = (@a; @b).cross`
 
 <a id="crosswith"/>
-**crosswith** *«list method»* &mdash;
+**crosswith**
+*«list method»* &mdash;
 metaoperator that seeks every combination of one element of one list with an
 element of a second list and applies then an [infix](#infix-category) operator
 to that pair, returns a list the results,
@@ -1763,7 +1783,8 @@ following block will be run if no [**when**](#when)
 clause in surrounding [**given**](#given) block matched
 
 <a id="defer"/>
-**defer** *«block modifier»* &mdash;
+**defer**
+*«block modifier»* &mdash;
 
 <a id="defined"/>
 **defined** &mdash; scalar method tests whether a value has been assigned
@@ -1985,13 +2006,15 @@ of an [*operator*](appendix-g-glossary.html#operator) same as an existing operat
 see also: [**looser**](#looser) and [**tighter**](#tighter)
 
 <a id="eqv"/>
-**eqv** *«comparison op»* &mdash;
+**eqv**
+*«comparison op»* &mdash;
 [infix](#infix-category)
 operator, compares the dynamic state of objects and values, in
 contrast with static [**===**](#equal-equal-equal)
 
 <a id="err"/><a id="err-op"/>
-**err** [*«logical op»*](tablet-4-operators.html#logical-selection) &mdash;
+**err**
+[*«logical op»*](tablet-4-operators.html#logical-selection) &mdash;
 short circuit defined or, returns the first defined value from
 the left, low precedence version of [**//**](#defined-or) &mdash;
 see also: [**or**](#or), [**xor**](#xor)
@@ -2058,7 +2081,8 @@ long alternative for [**:ex**](#ex-modifier)
 array or hash element, also scalar method
 
 <a id="exit"/>
-**exit** *«flow control»* &mdash;
+**exit**
+*«flow control»* &mdash;
 stops all program execution, and returns
 Int $status (first parameter) to the calling environment
 
@@ -2193,7 +2217,8 @@ opposite of [**lol**()](#lol) &mdash;
 example: `([2,3],[4,5]).flat` or `flat([2,3],[4,5])` results in: `[2..5]`
 
 <a id="flip"/>
-**flip** *«string method»* &mdash;
+**flip**
+*«string method»* &mdash;
 reverses order of characters in [**string**](#Str-type) &mdash;
 see also: [**reverse**](#reverse) and [**invert**](#invert)
 
@@ -2561,7 +2586,8 @@ see also: [**use**](#use) and [**need**](#need)
 include pathes (but not for standard library modules), in Perl 5: *@INC*
 
 <a id="index"/>
-**index** *«string method»* &mdash;
+**index**
+*«string method»* &mdash;
 finds the first occurrence of a substring in a string
 and returns the numerical position, opposite or [**rindex**](#rindex)
 
@@ -2609,7 +2635,8 @@ marks as a prefix a special block or statement, executed at run time,
 [*ASAP*](appendix-g-glossary.html#ASAP), only ever runs once
 
 <a id="inline"/>
-**inline** [*«callframe method»*](appendix-b-grouped.html#callframe-methods) &mdash;
+**inline**
+[*«callframe method»*](appendix-b-grouped.html#callframe-methods) &mdash;
 [**False**](#False) if that block is called like a
 [*routine*](appendix-g-glossary.html#routine)
 
@@ -2711,16 +2738,19 @@ KeyHash of UInt, does [**Bag**](#Bag-type) in
 [*list context*](appendix-g-glossary.html#list-context)
 
 <a id="KeySet-type"/>
-**KeySet** [*«mutable type»*](appendix-b-grouped.html#mutable-types) &mdash;
+**KeySet**
+[*«mutable type»*](appendix-b-grouped.html#mutable-types) &mdash;
 KeyHash of [**Bool**](#Bool-type) (does [**Set**](#Set-type)
 in [*list context*](appendix-g-glossary.html#list-context)
 
 <a id="keys-array"/>
-**keys** [*«array op & method»*](tablet-3-variables#array-methods) &mdash;
+**keys**
+[*«array op & method»*](tablet-3-variables#array-methods) &mdash;
 returns the list of array indexes
 
 <a id="keys"/><a id="keys-hash"/>
-**keys** [*«hash method»*](tablet-3-variables#hash-methods) &mdash;
+**keys**
+[*«hash method»*](tablet-3-variables#hash-methods) &mdash;
 returns list of hash keys
 
 <a id="kill"/>
@@ -2786,7 +2816,8 @@ return a copy of a string where all characters are lowercase &mdash;
 see also: [**fc**](#fc) and [**uc**](#uc)
 
 <a id="lcfirst"/>
-**lcfirst** *«string op & method»* &mdash;
+**lcfirst**
+*«string op & method»* &mdash;
 make first character of a string lowercase
 
 <a id="lcm"/><a id="lcm-op"/>
@@ -2913,7 +2944,8 @@ perform a regex based search in place (m stands for *match* ),
 similar to [**match**](#match) method
 
 <a id="m-modifier"/>
-**:m** [*«regex modifier»*](appendix-b-grouped.html#regex-modifier) &mdash;
+**:m**
+[*«regex modifier»*](appendix-b-grouped.html#regex-modifier) &mdash;
 comparing base characters ([*unicode*](appendix-g-glossary.html#unicode)
 non-mark characters) while ignoring any trailing mark characters,
 short for [**:ignoremark**](#ignoremark-modifier)
@@ -2951,7 +2983,8 @@ Perl match object, usually produced by applying a pattern of
 [*regular expression*](appendix-g-glossary.html#regex) to a string
 
 <a id="match"/>
-**match** *«string method»* &mdash;
+**match**
+*«string method»* &mdash;
 method alias to [**m**/.../](#m-op) operator,
 `$str.match( /`<span class="you-provide">`p`</span>`/ )`
 equals `$str ~~ m/`<span class="you-provide">`p`</span>`/;`,
@@ -2966,7 +2999,8 @@ largest value from a given list &mdash;
 see also: [**min**](#min-op) and [**minmax**](#minmax-op)
 
 <a id="maybe"/>
-**maybe** *«block modifier»* &mdash;
+**maybe**
+*«block modifier»* &mdash;
 
 <a id="metachar-category"/>
 **metachar**
@@ -3012,7 +3046,8 @@ substitute with chars that has same mark/accent pattern as the
 matched string, short alternative for [**:samemark**](#samemark-modifier)
 
 <a id="mod"/>
-**mod** *«numeric op»* &mdash;
+**mod**
+*«numeric op»* &mdash;
 integer modulo operator; wordy alias to
 [**%**](#percent) &mdash; example: `5 mod 4 = 1;`
 
@@ -3023,7 +3058,8 @@ internal namespace for [*regex modifier*](appendix-b-grouped.html#regex-modifier
 like [**:P5**](#P5-modifier)
 
 <a id="module"/>
-**module** *«block modifier»* &mdash;
+**module**
+*«block modifier»* &mdash;
 introduces a module name, a package that performs special actions on loading
 
 <a id="MODULE-compiler-var"/>
@@ -3083,7 +3119,8 @@ demands the <span class="you-provide">n</span>th finding (`:2nd`), has many alia
 for correct spelling (`:3rd`)
 
 <a id="name"/>
-**name** *«routine method»* &mdash;
+**name**
+*«routine method»* &mdash;
 returns the name of of a [*routine*](appendix-g-glossary.html#routine),
 handy when it was stored in a scalar
 
@@ -3255,7 +3292,8 @@ get the index numbers of some characters,
 plural of [**ord**](#ord), reverse of [**chrs**](#chrs)
 
 <a id="orelse"/>
-**orelse** *«logical op»* &mdash;
+**orelse**
+*«logical op»* &mdash;
 logical [*OR*](appendix-g-glossary.html#or) short circuit operator,
 transferring an error code from first to second block/command, if
 first do not succeed, similar to [**//**](#defined-or) &mdash;
@@ -3276,7 +3314,8 @@ introduces [**package**](#package) scoped names for
 see also: [**$\*IN**](#IN-global-var), in Perl 5: *STDOUT*
 
 <a id="ov-modifier"/>
-**:ov** [*«regex modifier»*](appendix-b-grouped.html#regex-modifier) &mdash;
+**:ov**
+[*«regex modifier»*](appendix-b-grouped.html#regex-modifier) &mdash;
 searching at all positions just one time (with backtracking),
 short for [**:overlap**](#overlap#modifier)
 
@@ -3291,7 +3330,8 @@ long for [**:ov**](#ov-modifier)
 # [P](#nav-top)
 
 <a id="p-test"/>
-**:p** [*«io test method»*](appendix-b-grouped.html#test-methods) &mdash;
+**:p**
+[*«io test method»*](appendix-b-grouped.html#test-methods) &mdash;
 file is a named [**pipe**](#pipe) (FIFO) or
 [*file handle*](appendix-g-glossary.html#file-handle) is a pipe
 
@@ -3326,7 +3366,8 @@ format values into or from a condensed format,
 which is specified by keys or an own template
 
 <a id="package"/>
-**package** *«block modifier»* &mdash;
+**package**
+*«block modifier»* &mdash;
 defines this Block or File as [*namespace*](appendix-g-glossary.html#namespace)
 (almost like in Perl 5), 
 some uses are now better to do with [**module**](#module) and [**class**](#class)
@@ -3802,7 +3843,8 @@ re-starts processing of the current loop turn
 <a id="reduce"/>
 **reduce**
 *«list method»* &mdash;
-alias to [**\[ \]** *«metaoperator»*](#square-brackets-metaop) that applies an 
+alias to [**\[ \]**
+*«metaoperator»*](#square-brackets-metaop) that applies an 
 [**infix**](#infix-category) operator between each adjacent elements of a list
 and evaluates this term to a single value &mdash;
 example: `[+] @a` is equivalent to `@a.reduce(&[+])` numerical sum of all elements
@@ -3887,7 +3929,8 @@ deletes a directory with given name
 # [Rn](#nav-top)
 
 <a id="role"/>
-**role** *«block modifier»* &mdash;
+**role**
+*«block modifier»* &mdash;
 container for methods that can extend a class using [**does**](#does)
 
 <a id="ROLE-compiler-var"/>
@@ -4465,8 +4508,9 @@ update timestamps on a file like the Unix command
 <a id="tr-op"/><a id="tr"/>
 [**tr///**](tablet-9-regexes.html#transliteration)
 [*«quoting op»*](appendix-b-grouped.html#quoting-ops) &mdash;
-transliteration (as in Perl 5), translating some character in a
-string into others, alias to **Q [:trans](#trans-adverb) /.../.../**
+[transliteration](appendix-g-glossary.html#transliteration) (as in Perl 5),
+translating some character in a string into others,
+alias to **Q [:trans](#trans-adverb) /.../.../**
 
 <a id="trait-auxiliary-category"/>
 **trait\_auxiliary**
@@ -4490,8 +4534,12 @@ method alias for [**tr**/.../.../](#tr-op) operator,
 <a id="trans-adverb"/>
 [**:trans**](tablet-2-basic-syntax.html#regex)
 [*«quoting adverb»*](appendix-b-grouped.html#quoting-adverbs) &mdash;
-evals the quoted as [transliteration](tablet-9-regexes.html#transliteration)
-aka `tr /.../.../` aka `.trans("..." => "...")`
+[*evals*](appendix-g-glossary.html#evaluation) the
+[*quoted*](#quoting) as
+[*transliteration*](appendix-g-glossary.html#transliteration) &mdash;
+[`Q :trans /.../.../`](#Q-op) is alias to
+[`tr /.../.../`](#tr-op) and
+[`.trans("..." => "...")`](#trans)
 
 <a id="Trans-slang-var"/>
 **$\~Trans**
@@ -4500,12 +4548,14 @@ current [grammar](#grammar) of the transliteration language
 (used by [**trans**()](#trans) aka [**tr**/.../.../](#tr-op))
 
 <a id="triangle"/>
-**triangle** *«list method»* &mdash;
+**triangle**
+*«list method»* &mdash;
 method alias to [**[\\ ]** metaoperator](#square-brackets-backslash-metaop),
 `[\+] @a` equals `@a.triangle(&[+])`
 
 <a id="trim"/>
-**trim** *«string method»* &mdash;
+**trim**
+*«string method»* &mdash;
 returns a copy of the string, with leading and trailing whitespace
 ([**\\s**](#backslash-s)) removed &mdash;
 see also: [**chomp**](#chomp)
@@ -4565,7 +4615,8 @@ usable as operator and as method &mdash;
 see also: [**fc**](#fc) and [**lc**](#lc)
 
 <a id="UID-global-var"/>
-**\$\*UID** [*«special var»*](appendix-b-grouped.html#global-variables) &mdash;
+**\$\*UID**
+[*«special var»*](appendix-b-grouped.html#global-variables) &mdash;
 real user ID of the running process
 ([**\$\*PID**](#PID-global-var)) owner (user), in Perl 5: *\@\<* and *\$UID* 
 
@@ -4576,7 +4627,8 @@ marks as a prefix a special block, executed at every unsuccessful block exit,
 part of [**LEAVE**](#LEAVE-phaser) queue
 
 <a id="uniq"/>
-**uniq** *«list method»* &mdash;
+**uniq**
+*«list method»* &mdash;
 returns only unique elements of a list (no value twice)
 
 <a id="unless"/>
@@ -4589,7 +4641,8 @@ be run, can also be written at the end of an expression, opposite of
 no [**elsif**](#elsif) or [**else**](#else) is allowed to follow
 
 <a id="unpolar"/>
-**unpolar** *«Complex method»* &mdash;
+**unpolar**
+*«Complex method»* &mdash;
 see also: [**cis**](#cis), [**conj**](#conj), [**polar**](#polar)
 
 <a id="until"/>
