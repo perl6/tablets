@@ -354,7 +354,7 @@ following [methods](appendix-g-glossary.html#method) to tell more about itself.
 Operators
 =========
 
-Table of precedence
+Table of Precedence
 -------------------
 
 A   Level              Examples

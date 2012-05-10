@@ -89,9 +89,9 @@ opposite of [**\<?\>**](#question-subrule), returns always [**False**](#False)
 
 <a id="exclamation-exclamation"/>
 **!!**
-[*«conditional op»*](appendix-b-grouped.html#conditionals) &mdash; 
+[*«conditional op»*](appendix-b-grouped.html#conditionals) &mdash;
 just second part of the ternary (conditional) operator after
-[**??**](#ternary-op), no op on its own
+[**??**](#ternary-op), no operator on its own
 
 <a id="exclamation-exclamation-exclamation"/><a id="exclamation-yadda"/>
 **!!!**
@@ -160,8 +160,10 @@ matches the end of a line (no more multile mode)
 <a id="percent-op"/>
 **%**
 [*«numeric op»*](tablet-4-operators.html#numeric-context) &mdash;
-gives remainder of a modulo division,
-forces [*numeric context*](appendix-g-glossary.html#numeric-context)
+infix modulo operator, gives remainder of a [**Int**](#Int-type) division,
+forces [*numeric context*](appendix-g-glossary.html#numeric-context),
+high [*precedence*](appendix-g-glossary.html#precedence) version of [**mod**](#mod) &mdash;
+example: `5 % 4` returns `1`
 
 <a id="percent-context-op"/>
 **%**()
@@ -173,14 +175,15 @@ alias to the [**hash**()](#hash) function
 **%**<span class="you-provide">s</span>
 [*«regex metachar»*](appendix-b-grouped.html#quantifier) &mdash;
 quantifier that repeat char or group as long as separated by
-right expression &mdash; example: `\d % ','` matches `1,2,3,4,5` &mdash;
+right expression &mdash;
+example: `\d % ','` matches `1,2,3,4,5` &mdash;
 see also: [**%%**](#percent-percent-metachar)
 
 <a id="percent-percent-op"/>
 **%%**
-[*«numeric op»*](tablet-4-operators.html#numeric-context)  &mdash;
-[**True**](#True) if the left value is evenly
-divisible by the right value
+[*«numeric op»*](tablet-4-operators.html#numeric-context) &mdash;
+[**True**](#True) if the left value is evenly divisible by the right value &mdash;
+see also: [**%**](#percent-op)
 
 <a id="percent-percent-metachar"/>
 **%%**<span class="you-provide">s</span>
@@ -476,7 +479,7 @@ high precedence version of [**err**](#err)
 
 <a id="backslash-0"/><a id="backslash-zero"/>
 **\\0**<span class="you-provide">s</span>**\[**<span class="you-provide">n</span>**]**
-[*«escape sequence»*](appendix-b-grouped.html#escape-sequences) &mdash; 
+[*«escape sequence»*](appendix-b-grouped.html#escape-sequences) &mdash;
 character given in octal, decimal or hex (when <span class="you-provide">s</span>
 is 'o', 'd' or 'x'), brackets are optional, first number has to be inside
 okt/dec/hex range, alternate syntax without the zero is preferred
@@ -883,7 +886,8 @@ requires that exactly one of both operands is [**True**](#True) in
 see also [**one**](#one)
 
 <a id="caret-upto"/>
-**\^** &mdash; upto operator, `^$limit` expands to `0 ..^ +$limit` [range](#range-op)
+**\^** &mdash;
+upto operator, `^$limit` expands to `0 ..^ +$limit` [range](#range-op)
 
 <a id="caret-range"/>
 **\^**
@@ -949,7 +953,7 @@ see also: [**any**](#any)
 
 <a id="pipe-metachar"/>
 **|**
-[*«regex metachar»*](appendix-b-grouped.html#regex-metacharacter) &mdash; 
+[*«regex metachar»*](appendix-b-grouped.html#regex-metacharacter) &mdash;
 match alternate patterns with longest token matching
 ([*OR*](appendix-g-glossary.html#or) - temporal simultaneous connection of patterns)
 
@@ -1133,7 +1137,7 @@ Perl 6 object (default [*routine*](appendix-g-glossary.html#routine)
 
 <a id="any"/>
 **any**
-[*«junctive op»*](appendix-b-grouped.html#junctions) &mdash; 
+[*«junctive op»*](appendix-b-grouped.html#junctions) &mdash;
 [*junctive*](appendix-g-glossary.html#junction)
 [*OR*](appendix-g-glossary.html#or) operator,
 [**True**](#True) when any one condition (of a
@@ -1142,12 +1146,12 @@ see also: [**|**](#junctive-or)
 
 <a id="ARGFILES-global-var"/>
 **$\*ARGFILES**
-[*«special var»*](appendix-b-grouped.html#global-variables) &mdash; 
+[*«special var»*](appendix-b-grouped.html#global-variables) &mdash;
 magic command-line input handle, in Perl 5: *ARGV*
 
 <a id="ARGS-global-var"/>
 **@\*ARGS**
-[*«special var»*](appendix-b-grouped.html#global-variables) &mdash; 
+[*«special var»*](appendix-b-grouped.html#global-variables) &mdash;
 arguments (parameter) to a program (script), in Perl 5: *@ARGV*
 
 <a id="args"/>
@@ -1281,7 +1285,7 @@ not match
 
 <a id="before-subrule"/>
 **\<?before <span class="you-provide">p</span>\>**
-[*«predefined subrule»*](appendix-b-grouped.html#subrules) &mdash; 
+[*«predefined subrule»*](appendix-b-grouped.html#subrules) &mdash;
 positive zero-width lookahead, only if this position is followed
 by the given pattern inside the angle brackets, the whole pattern
 will match
@@ -1407,7 +1411,8 @@ see also: [**\<|g\>**](#pipe-g) and [**\<|w\>**](#pipe-w)
 marks a [*routine*](appendix-g-glossary.html#routine) as being memoized
 
 <a id="call"/>
-**call** &mdash; execute a [*subroutine*](appendix-g-glossary.html#routine)
+**call** &mdash;
+execute a [*routine*](appendix-g-glossary.html#routine)
 
 <a id="caller"/>
 **caller** &mdash;
@@ -1534,7 +1539,8 @@ returns a copy of a [string](#Str-type) with the last character removed &mdash;
 see also: [**chomp**](#chomp), [**substr**](#substr)
 
 <a id="chown"/>
-**chown** &mdash; changes owner of files
+**chown** &mdash;
+changes owner of files
 
 <a id="chroot"/>
 [**chroot**](tablet-5-io.html#chroot) &mdash;
@@ -1563,7 +1569,7 @@ name of the current class
 
 <a id="class"/>
 **class**
-*«block modifier»* &mdash; 
+*«block modifier»* &mdash;
 following [*block*](appendix-g-glossary.html#block) will be a
 [*class*](appendix-g-glossary.html#class) definition &mdash;
 see also [**method**](#method), [**submethod**](#submethod) and [**has**](#has)
@@ -1787,8 +1793,8 @@ clause in surrounding [**given**](#given) block matched
 *«block modifier»* &mdash;
 
 <a id="defined"/>
-**defined** &mdash; scalar method tests whether a value has been assigned
-to a variable
+**defined** &mdash;
+scalar method tests whether a value has been assigned to a variable
 
 <a id="delete"/><a id="delete-array"/>
 **delete**
@@ -1839,8 +1845,10 @@ program was compiled for, see also:
 [**\$?KERNEL**](#kernel-compiler-var)** and [**\$\*VM**](#vm-compiler-var)
 
 <a id="div"/>
-[**div**](operators.html) &mdash; [integer](#Int-type) division &mdash;
-example: `5 dis 2` returns `2`&mdash; see also: [**/**](#slash-op)
+[**div**](operators.html) *«int op»* &mdash;
+[*integer*](#Int-type) division &mdash;
+example: `5 div 2` returns `2`&mdash;
+see also: [**/**](#slash-op), [**mod**](#mod)
 
 <a id="do"/>
 [**do**](tablet-6-blocks.html#do) &mdash;
@@ -1848,7 +1856,8 @@ executes a [*block*](appendix-g-glossary.html#block), the "do once" loop
 
 <a id="does"/>
 **does** &mdash;
-checks if an objekt inherits a [*role*](appendix-g-glossary.html#role) (only parameter)
+checks if an [*object*](appendix-g-glossary.html#object)
+inherits a [*role*](appendix-g-glossary.html#role) (only parameter)
 
 <a id="dotty-category"/>
 **dotty**
@@ -1905,8 +1914,8 @@ escape character
 ordered superposition (conjectural), unlike [**Junction**](#Junction-type)
 
 <a id="each"/>
-**each** &mdash; variant of all() that promises to do things in order, is
-Positional/Iterable
+**each** &mdash;
+variant of all() that promises to do things in order, is Positional/Iterable
 
 <a id="eager"/>
 **eager** &mdash;
@@ -1938,7 +1947,8 @@ number of pairs
 introduces the alternative block after an
 [**if**](#if) or [**elsif**](#elsif)
 that is executed, when conditions of all alternatives resulted
-in [**False**](#False) &mdash; see also: [**default**](#default)
+in [**False**](#False) &mdash;
+see also: [**default**](#default)
 
 <a id="else"/>
 [**elsif**](tablet-6-blocks.html#elsif)
@@ -1980,9 +1990,9 @@ every block entry time, repeats on [loop](appendix-b-grouped.html#loops) blocks
 an immutable [**Pair**](#Pair-type)
 
 <a id="enum"/>
-**enum** &mdash; enum takes a list of keys or pairs and adds values to any
-keys that are not already part of a pair (one more than the previous
-key had) &mdash;
+**enum** &mdash;
+enum takes a list of keys or pairs and adds values to any keys
+that are not already part of a pair (one more than the previous key had) &mdash;
 example: `%hash = enum <<:Mon(1) Tue Wed Thu Fri Sat Sun>>;`
 
 <a id="EnumMap-type"/>
@@ -2082,8 +2092,8 @@ searching at all positions as long as it findes something
 long alternative for [**:ex**](#ex-modifier)
 
 <a id="exists"/>
-**exists** &mdash; checks for existence of a variable,
-array or hash element, also scalar method
+**exists** &mdash;
+checks for existence of a variable, array or hash element, also scalar method
 
 <a id="exit"/>
 **exit**
@@ -2156,7 +2166,7 @@ opposite of [**True**](#True)
 <a id="FatRat-type"/>
 **FatRat**
 [*«immutable type»*](appendix-b-grouped.html#immutable-types) &mdash;
-Perl rational (unlimited precision in numerator and denominator) &mdash; 
+Perl rational (unlimited precision in numerator and denominator) &mdash;
 see also: [**Rat**](#Rat-type)
 
 <a id="fc"/>
@@ -2302,7 +2312,8 @@ see also: [**\<|c\>**](#pipe-c) and [**\<|w\>**](#pipe-w)
 <a id="gcd"/>
 **gcd**
 [*«numeric infix op»*](tablet-4-operators.html#numeric-context) &mdash;
-greatest common divisor &mdash; see also: [**lcm**](#lcm)
+greatest common divisor &mdash;
+see also: [**lcm**](#lcm)
 
 <a id="gather"/>
 [**gather**](tablet-6-blocks.html#gather-and-take)
@@ -2339,7 +2350,7 @@ establish a connection to a net host and retrieve information
 
 <a id="GID-global-var"/>
 **\$\*GID**
-[*«special var»*](appendix-b-grouped.html#global-variables) &mdash; 
+[*«special var»*](appendix-b-grouped.html#global-variables) &mdash;
 real global ID of the running process ([**\$\*PID**](#PID-global-var)**) owner,
 in Perl 5: *@(* and *$GID*
 
@@ -2732,11 +2743,10 @@ see also: [**\$\*DISTRO**](#DISTRO-global-var) and [**\$\*VM**](#VM-global-var)
 
 <a id="KERNEL-compiler-var"/>
 **\$?KERNEL**
-[*«special var»*](appendix-b-grouped.html#global-variables) &mdash; 
+[*«special var»*](appendix-b-grouped.html#global-variables) &mdash;
 kernel (core operating system) the program was compiled for,
-might want to use use `$?KERNEL.name` &mdash; see also:
-[**\$?DISTRO**](#distro-compiler-var) and
-[**\$?VM**](#vm-compiler-var)
+might want to use use `$?KERNEL.name` &mdash;
+see also: [**\$?DISTRO**](#distro-compiler-var) and [**\$?VM**](#vm-compiler-var)
 
 <a id="key"/>
 **key**
@@ -3063,8 +3073,12 @@ matched string, short alternative for [**:samemark**](#samemark-modifier)
 <a id="mod"/>
 **mod**
 *«numeric op»* &mdash;
-integer modulo operator; wordy alias to
-[**%**](#percent) &mdash; example: `5 mod 4 = 1;`
+[*«numeric op»*](tablet-4-operators.html#numeric-context) &mdash;
+infix modulo operator, remainder of a [int division](#div),
+forces [*numeric context*](appendix-g-glossary.html#numeric-context),
+low [*precedence*](appendix-g-glossary.html#precedence) 
+version of [**%**](#percent-op) &mdash;
+example: `5 mod 4` returns `1`
 
 <a id="mod-internal-category"/>
 **mod\_internal**
@@ -3218,7 +3232,7 @@ see also: [**numerator**](#numerator) and [**denominator**](#denominator)
 <a id="Num-type"/>
 **Num**
 [*«immutable type»*](appendix-b-grouped.html#immutable-types) &mdash;
-Perl number (approximate "real", generally via floating point) &mdash; 
+Perl number (approximate "real", generally via floating point) &mdash;
 see also: [**Rat**](#Rat-type) and [**Int**](#Int-type)
 
 <a id="numerator"/>
@@ -3814,7 +3828,7 @@ iterator over a **Range**
 <a id="Rat-type"/>
 **Rat**
 [*«immutable type»*](appendix-b-grouped.html#immutable-types) &mdash;
-Perl rational number (exact [real](#Num-type) numerator, limited denominator) &mdash; 
+Perl rational number (exact [real](#Num-type) numerator, limited denominator) &mdash;
 see also: [**FatRat**](#FatRat-type) and [**Num**](#Num-type)
 
 <a id="ratchet-modifier"/>
@@ -3914,7 +3928,8 @@ changes names of files and directories
 **return**
 [*«flow control»*](appendix-b-grouped.html#jump-commands) &mdash;
 forces execution to leave this [*routine*](appendix-g-glossary.html#routine)
-and sets the return value &mdash; see also: [**leave**](#leave)
+and sets the return value &mdash;
+see also: [**leave**](#leave)
 
 <a id="returns"/>
 **returns** 
@@ -3936,7 +3951,7 @@ substring in a string and returns the numerical position,
 opposite or [**index**](#index)
 
 <a id="rmdir"/>
-[**rmdir**](tablet-5-io.html#rmdir) &mdash; 
+[**rmdir**](tablet-5-io.html#rmdir) &mdash;
 deletes a directory with given name
 
 
@@ -4133,8 +4148,8 @@ makes string output via command line ([**$\*OUT**](#OUT-global-var)) like
 
 <a id="say-io"/>
 [**say**](tablet-5-io.html#say-for-files)** &mdash;
-«*handle method*» &mdash; writes a stream into a file and appends a
-[**\\n**](#backslash-n)
+«*handle method*» &mdash;
+writes a stream into a file and appends a [**\\n**](#backslash-n)
 
 <a id="Scalar-type"/>
 **Scalar**
@@ -4287,7 +4302,8 @@ but returns the string instead of outputting it
 
 <a id="sqrt"/>
 **sqrt** ([Num](#Num-type) $f) &mdash;
-square root of $f &mdash; see also: [**exp**](#exp)
+square root of $f &mdash;
+see also: [**exp**](#exp)
 
 <a id="ss"/><a id="ss-op"/>
 [**ss**/ / /](tablet-9-regexes.html#substitution)
@@ -4378,7 +4394,8 @@ Perl subroutine object
 [**sub**](tablet-6-blocks.html#sub)
 [*«routine type»*](appendix-b-grouped.html#routine-types) &mdash;
 defines a [*routine*](appendix-g-glossary.html#routine),
-a block callable by name &mdash; example: `name();`
+a block callable by name &mdash;
+example: `name();`
 
 <a id="Submethod-type"/>
 **Submethod**
@@ -4398,7 +4415,7 @@ example: `subset Month of Int where { 1 <= $\^a <= 12 }`
 
 <a id="subst"/>
 [**subst**](tablet-9-regexes.html#substitution)
-*«string method»* &mdash; 
+*«string method»* &mdash;
 method alias to [**s**/.../.../](#s-op),
 `$str.subst( /pattern/, "replacement" )` equals `$str \~\~ s/pattern/replacement/;`
 
@@ -4469,8 +4486,7 @@ tangent, trigonometric function, takes angle in radian &mdash;
 see also [**to-radians**](#to-radians), [**cos**](#cos), [**sin**](#sin)
 
 <a id="temp"/>
-**temp** &mdash; 
-, in Perl 5: *local*
+**temp** &mdash; , in Perl 5: *local*
 
 <a id="term"/><a id="term-category"/>
 **term**
@@ -4576,7 +4592,8 @@ returns a copy of the string, with leading and trailing whitespace
 see also: [**chomp**](#chomp)
 
 <a id="True"/>
-**True** &mdash; [**boolean**](#Bool-type) value aka
+**True** &mdash;
+[**boolean**](#Bool-type) value aka
 Bool::True, 1 in [*numeric context*](appendix-g-glossary.html#numeric-context),
 opposite of [**False**](#False)
 

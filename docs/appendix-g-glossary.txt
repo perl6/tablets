@@ -298,7 +298,8 @@ out of several [codepoints](#codepoint)
 [hash](#hash) [context](#context)
 
 <a id="heredoc"/>
-**heredoc** &mdash;
+**heredoc** &mdash; [quoting](#quoting)
+[Tablet 2](tablet-2-basic-syntax.html#heredocs)
 
 
 # [I](#nav-top)
@@ -350,8 +351,7 @@ create them with [junctive ops](appendix-b-grouped.html#junctions)
 **list** &mdash;
 
 <a id="list-context"/>
-**list context** &mdash; 
-[**Array**](appendix-a-index.html#Array-type)
+**list context** &mdash; [**Array**](appendix-a-index.html#Array-type)
 
 <a id="list-flattening"/>
 **list flattening** &mdash;

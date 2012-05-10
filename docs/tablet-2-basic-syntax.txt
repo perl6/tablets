@@ -27,6 +27,7 @@ be used anywhere in the code. Even the features of the pragmas `constant` and
 `vars` are now part of the core language.
 
 Also the functionality of many useful and famous modules like Moose
+Also the functionality of many useful and famous modules like Moose
 (object system), Parse::RecDescent++, exception handling,
 List::\[More\]Utils, Export, English an advanced pretty printer and
 much more is already built in. So you get a lot extra for a little **v6;**.
@@ -253,11 +254,11 @@ word. Thats called *quote* protection.
 
 
 Please note also that **:quotewords** (double pointy braces) implies
-**:double** (double quotes), which means all [interpolation
-rules](#interpolation) apply here also.
+**:double** (double quotes), which means all [interpolation rules](#interpolation)
+apply here also.
 
-    <$pi> eq '$pi'
-    <<$pi>> eq "$pi" # eq '3.14159...'
+    <$pi> eq '$pi'   # True
+    <<$pi>> == pi    # True (hopefully)
 
 
 The same pointy braces (quote operators) are also in used when
