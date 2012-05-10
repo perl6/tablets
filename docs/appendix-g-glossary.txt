@@ -333,6 +333,9 @@ several values, example: (A and B) or C, creat them with
 
 # [L](#nav-top)
 
+<a id="lexical-scope"/>
+**lexical scope** &mdash;
+
 <a id="list"/>
 **list** &mdash;
 
@@ -701,6 +704,9 @@ second(ary) [*sigil*](#sigil) indicating a special property of a variable,
 
 <a id="type"/>
 **type** &mdash;
+
+<a id="type-constraint"/>
+**type constraint** &mdash;
 
 # [U](#nav-top)
 
