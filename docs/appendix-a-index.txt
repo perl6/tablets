@@ -1871,7 +1871,7 @@ enables [*double quoting*](appendix-g-glossary.html#double-quoting),
 **q** with interpolation of variables,
 alias to [**"..."**](#double-quotes),
 [**qq** /.../](#qq-op) or `Q :s :a :h :f :c :b /.../`,
-long alternative for [**:qq**](#qq-adverb)
+long alternative of [**:qq**](#qq-adverb)
 
 <a id="Duration-type"/>
 **Duration** 

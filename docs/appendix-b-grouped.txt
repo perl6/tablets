@@ -524,13 +524,13 @@ that forcing a [context](appendix-g-glossary.html#context).
 Junctions
 ---------
 
-Junctive Infix Op                        Prefix Op                           Meaning
----------------------------------------  ----------------------------------  ---------------------------------------
-[&](appendix-a-index.html#ampersand-op)  [all](appendix-a-index.html#all)    [AND](appendix-g-glossary.html#and)
-[\^](appendix-a-index.html#caret-op)     [one](appendix-a-index.html#one)    [XOR](appendix-g-glossary.html#xor)
-[|](appendix-a-index.html#pipe-op)       [any](appendix-a-index.html#any)    [OR](appendix-g-glossary.html#or)
-&nbsp;                                   [none](appendix-a-index.html#none)  [NOT](appendix-g-glossary.html#not) any
----------------------------------------  ----------------------------------  ---------------------------------------
+Junctive Infix Op                        Prefix Op                           Operation                                Meaning
+---------------------------------------  ----------------------------------  ---------------------------------------  -----------------------------------
+[&](appendix-a-index.html#ampersand-op)  [all](appendix-a-index.html#all)    [AND](appendix-g-glossary.html#and)      [True](appendix-a-index.html#True) if all are True
+[\^](appendix-a-index.html#caret-op)     [one](appendix-a-index.html#one)    [XOR](appendix-g-glossary.html#xor)      [True](appendix-a-index.html#True) if only is True
+[|](appendix-a-index.html#pipe-op)       [any](appendix-a-index.html#any)    [OR](appendix-g-glossary.html#or)        [True](appendix-a-index.html#True) if at least one is True
+&nbsp;                                   [none](appendix-a-index.html#none)  [NOT](appendix-g-glossary.html#not) any  [True](appendix-a-index.html#True) if none are True
+---------------------------------------  ----------------------------------  ---------------------------------------  -----------------------------------
 
 
 Smartmatch
@@ -870,14 +870,14 @@ submatch
 ------------  ----------------------------------------------
 $/.from       the initial match position
 $/.to         the final match position
-$/.chars      $/.to - $/.from
+$/.chars      `$/.to - $/.from`
 $/.orig       the original match string
-$/.Str        substr($/.orig, $/.from, $/.chars)
+$/.Str        `substr($/.orig, $/.from, $/.chars)`
 $/.ast        the [abstract](appendix-g-glossary.html#AST) result associated with this node
 $/.caps       sequential captures
 $/.chunks     sequential tokenization
-$/.prematch   $/.orig.substr(0, $/.from)
-$/.postmatch  $/.orig.substr($/.to)
+$/.prematch   `$/.orig.substr(0, $/.from)`
+$/.postmatch  `$/.orig.substr($/.to)`
 ------------  ----------------------------------------------
 
 
