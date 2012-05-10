@@ -527,7 +527,7 @@ Junctions
 Junctive Infix Op                        Prefix Op                           Operation                                Meaning
 ---------------------------------------  ----------------------------------  ---------------------------------------  -----------------------------------
 [&](appendix-a-index.html#ampersand-op)  [all](appendix-a-index.html#all)    [AND](appendix-g-glossary.html#and)      [True](appendix-a-index.html#True) if all are True
-[\^](appendix-a-index.html#caret-op)     [one](appendix-a-index.html#one)    [XOR](appendix-g-glossary.html#xor)      [True](appendix-a-index.html#True) if only is True
+[\^](appendix-a-index.html#caret-op)     [one](appendix-a-index.html#one)    [XOR](appendix-g-glossary.html#xor)      [True](appendix-a-index.html#True) if exactly one is True
 [|](appendix-a-index.html#pipe-op)       [any](appendix-a-index.html#any)    [OR](appendix-g-glossary.html#or)        [True](appendix-a-index.html#True) if at least one is True
 &nbsp;                                   [none](appendix-a-index.html#none)  [NOT](appendix-g-glossary.html#not) any  [True](appendix-a-index.html#True) if none are True
 ---------------------------------------  ----------------------------------  ---------------------------------------  -----------------------------------
