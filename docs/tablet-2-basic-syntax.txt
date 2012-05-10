@@ -114,10 +114,10 @@ inserting comments.
 Quoting
 =======
 
-Quoting, like [regular expression](regexes.html), is a sublanguage
+Quoting, like [regular expression](tablet-9-regexes.html), is a sublanguage
 inside the main language with its own syntactical rules. It is parsed
 by a special grammar as to be found in the [special
-variable](ap-b-lookup.html#special-variables) `$~Quote`. The
+variable](appendix-b-grouped.html#special-variables) `$~Quote`. The
 operator with the same name (the generic quoting operator `Q`) does
 almost nothing, just provides a mechanism to mark the beginning and
 end of text sequence.
@@ -142,7 +142,7 @@ Interpolation
 
 Inside of these delimiters, every character will be taken
 literally. Any additional meaning has to be added by [quoting
-adverbs](ap-b-lookup.html#quoting-adverbs) that have to
+adverbs](appendix-b-grouped.html#quoting-adverbs) that have to
 follow the Q. Most of them have a short and a long name and some of
 the most useful have an additional syntax that replaces them
 altogether with the Q operator (like single or double quotes).
