@@ -205,7 +205,7 @@ context, alias to [**code**()](#code-context)
 
 <a id="ampersand-op"/><a id="junctive-and"/>
 **&**
-[*«junctive op»*](tablet-4-operators.html#junctions) &mdash;
+[*«junctive op»*](appendix-b-grouped.html#junctions) &mdash;
 [*junctive*](appendix-g-glossary.html#junction)
 [*AND*](appendix-g-glossary.html#and),
 requires that all conditions are met &mdash;
@@ -875,7 +875,7 @@ and [regexes](appendix-b-grouped.html#escape-sequences) start with it
 
 <a id="caret"/><a id="caret-op"/><a id="junctive-xor"/>
 **\^**
-[*«junctive op»*](tablet-4-operators.html#junctions) &mdash;
+[*«junctive op»*](appendix-b-grouped.html#junctions) &mdash;
 [*infix*](#infix-category) [*junctive*](appendix-g-glossary.html#junction)
 [*XOR*](appendix-g-glossary.html#xor),
 requires that exactly one of both operands is [**True**](#True) in 
@@ -942,7 +942,7 @@ or a hashref when it is identified as a hash or contains a [**=\>**](#fat-arrow)
 
 <a id="pipe"/><a id="pipe-op"/><a id="junctive-or"/>
 **|**
-[*«junctive op»*](tablet-4-operators.html#junctions) &mdash;
+[*«junctive op»*](appendix-b-grouped.html#junctions) &mdash;
 [*junctive*](appendix-g-glossary.html#junction) [*OR*](appendix-g-glossary.html#or),
 requires that a condition is fulfilled &mdash;
 see also: [**any**](#any)
@@ -1080,7 +1080,7 @@ pattern will match
 
 <a id="all"/>
 **all**
-[*«junctive op»*](tablet-4-operators.html#junctions) &mdash;
+[*«junctive op»*](appendix-b-grouped.html#junctions) &mdash;
 [*junctive*](appendix-g-glossary.html#junction)
 [*AND*](appendix-g-glossary.html#and) operator,
 [**True**](#True) if all conditions (elements of a following list) are fulfilled &mdash;
@@ -1133,7 +1133,7 @@ Perl 6 object (default [*routine*](appendix-g-glossary.html#routine)
 
 <a id="any"/>
 **any**
-[*«junctive op»*](tablet-4-operators.html#junctions) &mdash; 
+[*«junctive op»*](appendix-b-grouped.html#junctions) &mdash; 
 [*junctive*](appendix-g-glossary.html#junction)
 [*OR*](appendix-g-glossary.html#or) operator,
 [**True**](#True) when any one condition (of a
@@ -3170,7 +3170,7 @@ example: *`@a = Nil, Nil;`* result array has zero elements
 
 <a id="none"/>
 **none**
-[*«junctive op»*](tablet-4-operators.html#junctions) &mdash;
+[*«junctive op»*](appendix-b-grouped.html#junctions) &mdash;
 [*NOT*](appendix-g-glossary.html#not) operator,
 returns [**True**](#True) when a value is not
 part of a [**Set**](#Set-type), 
@@ -3240,7 +3240,7 @@ example: `subset Month of Int where { 1 <= $^a <= 12 }`
 
 <a id="one"/>
 **one**
-[*«junctive op»*](tablet-4-operators.html#junctions) &mdash;
+[*«junctive op»*](appendix-b-grouped.html#junctions) &mdash;
 [*junctive*](appendix-g-glossary.html#junction)
 [*XOR*](appendix-g-glossary.html#xor) operator,
 [**True**](#True) if only one expression (of a following list) is true in

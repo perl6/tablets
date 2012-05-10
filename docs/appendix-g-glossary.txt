@@ -13,12 +13,14 @@ or "What kind of [*iterators*](#iterators) are present and how they are spelled?
 [T](#t#) [U](#u) [V](#v) [W](#w) [X](#x) [Y](#y) [Z](#z)**
 
 <a id="french-greater-ö-grench-lower"/>
-**»ö«** &mdash; pure text version of [*camelia*](#camelia) the Perl 6 mascot
+**»ö«** &mdash;
+pure text version of [*camelia*](#camelia) the Perl 6 mascot
 
 # [A](#nav-top)
 
 <a id="ALAP"/>
-**ALAP** *(as late as possible)* &mdash; within a given execution phase
+**ALAP** *(as late as possible)* &mdash;
+within a given execution phase
 ([compile time](#compile-time) or [run time](#run-time))
 
 <a id="and"/>
@@ -44,10 +46,12 @@ a specific value given to a [routine](#routine) at a certain time,
 not to be confused wirh [*parameter*](#parameter)
 
 <a id="array"/>
-**array** &mdash; mostly synonym for [*list*](#list)
+**array** &mdash;
+mostly synonym for [*list*](#list)
 
 <a id="ASAP"/>
-**ASAP** *(as soon as possible)* &mdash; within a given execution phase
+**ASAP** *(as soon as possible)* &mdash;
+within a given execution phase
 ([*compile time*](#compile-time) or [run time](#run-time))
 
 <a id="ASCII"/>
@@ -60,8 +64,9 @@ what you find on your keyboard and what an american typically needs,
 to enable the rest of the world more fully there is [*unicode*](#unicode)
 
 <a id="AST"/>
-**AST** *(abstract syntax tree)* &mdash; tree like data structure, in which
-source code is transformed, while [parsing](#parsing) it
+**AST** *(abstract syntax tree)* &mdash;
+tree like data structure, in which source code is transformed,
+while [parsing](#parsing) it
 
 <a id="atribute"/>
 **atribute** &mdash;
@@ -101,7 +106,8 @@ object of the type [**Block**](appendix-a-index.html#block-type)
 # [C](#nav-top)
 
 <a id="camelia"/>
-**camelia** &mdash; name of the the Perl 6 mascot, she supposed to look happy,
+**camelia** &mdash;
+name of the the Perl 6 mascot, she supposed to look happy,
 but create tornados in the amazon or something like that
 
 <a id="capture"/>
@@ -135,7 +141,8 @@ in Perl 6 there are just [objects](#object) representing a routine that can be
 [attributes](#attribute) of other objects
 
 <a id="code-context"/>
-**code context** &mdash; also called callable context
+**code context** &mdash;
+also called callable context
 
 <a id="compilation"/>
 **compilation** &mdash;
@@ -183,7 +190,8 @@ creating a [*subroutine*](routine) that calls another with certain
 # [D](#nav-top)
 
 <a id="declarand"/>
-**declarand** &mdash; the thing being declared, example: `$foo` in `my $foo;`,
+**declarand** &mdash;
+the thing being declared, example: `$foo` in `my $foo;`,
 see also [declarator](#declarator)
 
 <a id="declarative-programming"/>
@@ -205,9 +213,10 @@ a space ship which has a clock is would allow you to call `$ship.time` instead
 of `$ship.clock.time`
 
 <a id="design-by-contract"/>
-**design by contract** &mdash; programming style in which parameters and
-return values from routines must meet conditions; A signature is
-considered contract in Perl 6
+**design by contract** &mdash;
+programming style in which parameters and return values from
+[*routines*](#routine) must meet conditions, in Perl 6 done by
+[*signatures*](#signature)
 
 <a id="double-quoting"/>
 **double quoting** &mdash;
@@ -246,7 +255,7 @@ in which order they are considered.
 # [F](#nav-top)
 
 <a id="fat-arrow"/>
-**fat arrow** &mdash; 
+**fat arrow** &mdash;
 a name for this [*operator*](#operator): 
 [**=\>**](appenisdix-a-index.html#fat-arrow)
 
@@ -325,9 +334,10 @@ repeated executing of a term or [*block*](#block), enforced by
 # [J](#nav-top)
 
 <a id="junction"/>
-**junction** &mdash; a type of value that holds a logical combination of
-several values, example: (A and B) or C, creat them with 
-[junctive ops](tablet-4-operators.html#)
+[**junction**](tablet-4-operators.html#Junctions) &mdash;
+a [type of value] that holds a logical combination of several values,
+example: (A and B) or C, 
+create them with junctive ops
 
 # [K](#nav-top)
 
@@ -340,7 +350,7 @@ several values, example: (A and B) or C, creat them with
 **list** &mdash;
 
 <a id="list-context"/>
-**list context** &mdash;
+**list context** &mdash; 
 [**Array**](appendix-a-index.html#Array-type)
 
 <a id="list-flattening"/>
@@ -379,7 +389,7 @@ operator that alters the meaning or expands the scope of another normal operator
 **metaprogramming** &mdash; 
 
 <a id="method"/>
-**method** &mdash; 
+**method** &mdash;
 is a [*routine*] that belongs to a [*object*](#object) or a class
 
 <a id="MMD"/>
@@ -480,13 +490,14 @@ important to the functions,
 see also: [*e*](#e), [*i*](#i)
 
 <a id="pipe"/>
-**pipe** &mdash; connection between 2 processes, move data (mostly only in
-one direction) without buffering, can also mean just the connection of several
-commands via [**==\>**](appendix-a-index.html#equal-equal-greater-op) and alike
+**pipe** &mdash;
+connection between 2 processes, move data (mostly only in one direction)
+without buffering, can also mean just the connection of several commands via 
+[**==\>**](appendix-a-index.html#equal-equal-greater-op) and alike
 
 <a id="POD"/>
 [**POD**](tablet-2-basic-syntax.html#pod)
-*(Plain Old Documentation)* &mdash; 
+*(Plain Old Documentation)* &mdash;
 a markup language to embeded documentation into Perl source code,
 has in Perl 6 the ability to store data into special variables 
 like [**\$=pod**](appendix-a-index.html#pod-pod-var) to be retrieved later,
@@ -504,7 +515,8 @@ a block that is given readonly [*parameters*](parameter) with
 [table of precedence](appendix-b-grouped.html#table-of-precedence)
 
 <a id="property"/>
-**property** &mdash; metadata of a variable set at [run time](#run-time)
+**property** &mdash;
+metadata of a variable set at [run time](#run-time)
 
 <a id="positional-parameter"/>
 **positional parameter** &mdash;
@@ -573,7 +585,8 @@ when block is [compiled](#compilation) it becomes an object of the type
 or [**HardRoutine**](appendix-a-index.html#hardroutine-type)
 
 <a id="run-time"/>
-**run time** &mdash; time when execution hits a certain part of the program,
+**run time** &mdash;
+time when execution hits a certain part of the program,
 after [*compile time*](#compile-time)
 
 
@@ -583,7 +596,8 @@ after [*compile time*](#compile-time)
 **scalar** &mdash;
 
 <a id="scalar-context"/>
-**scalar context** &mdash; is in P6 called [item context](#item-context)
+**scalar context** &mdash;
+is in P6 called [item context](#item-context)
 
 <a id="scope"/>
 **scope** &mdash;
@@ -604,11 +618,13 @@ for more info see the [variable tablet](tablet-3-variables.html)
 
 
 <a id="signature"/>
-**signature** &mdash; function parameters (left-hand side of a binding),
+**signature** &mdash;
+function parameters (left-hand side of a binding),
 surrounded by round parentheses in the definition of a [*routine*](#routine)
 
 <a id="single-quoting"/>
-**single quoting** &mdash; [**' '**](appendix-a-index.html#single-quotes)
+**single quoting** &mdash;
+[**' '**](appendix-a-index.html#single-quotes)
 
 <a id="slang"/>
 **slang** &mdash;
@@ -640,7 +656,7 @@ up to the question if two [*signatures*](#signature) are compatible -
 all details in [that table](appendix-b-grouped.html#smartmatch).
 
 <a id="statement"/>
-**statement** &mdash; 
+**statement** &mdash;
 smallest standalone element that can be executed,
 everything smaller is just a [*term*](#term),
 larger combinations of them are [*expressions*](#expression)
@@ -652,7 +668,7 @@ larger combinations of them are [*expressions*](#expression)
 [ops](tablet-4-operators.html#string-context)
 
 <a id="subroutine"/>
-**subroutine** &mdash; 
+**subroutine** &mdash;
 Perl 5-ish term for [routine](#routine) because in Perl 5 there is only the
 *sub* command to build a callable block,
 but in Perl 6 there are [much more types](#Routine-types) hence the name change

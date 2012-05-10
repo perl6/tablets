@@ -42,15 +42,16 @@ printf $format, 'Sum', $sum{'head'}, $sum{'item'},
 
 
 print "TODO:\n";
+my $nr;
 	open $FH, '<', 'appendix-a-index.txt';
 	$content = do {local $/; <$FH>};
-	my $v =()= $content =~ /\&mdash;\n\n/g;
-	print " empty index entries: $v\n";
+	$nr =()= $content =~ /\&mdash;\n\n/g;
+	print " empty index entries: $nr\n";
 	open $FH, '<', 'appendix-f-faq.txt';
 	$content = do {local $/; <$FH>};
-	my $v =()= $content =~ /---\n\n/g;
-	print " unanswered questions: $v\n";
+	$nr =()= $content =~ /---\n\n/g;
+	print " unanswered questions: $nr\n";
 	open $FH, '<', 'appendix-g-glossary.txt';
 	$content = do {local $/; <$FH>};
-	my $v =()= $content =~ /\&mdash;\n\n/g;
-	print " empty glossary terms: $v\n";
+	$nr =()= $content =~ /\&mdash;\n\n/g;
+	print " empty glossary terms: $nr\n";
