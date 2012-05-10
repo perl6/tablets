@@ -221,8 +221,10 @@ different section.
 
 -----------------------------------------------  -----------------------------------------------------------------
 [Mu](appendix-a-index.html#Mu-type)              Most Undefined
+[Junction](appendix-a-index.html#Junction-type)  unordered superposition of data with and/or/one/none
+[Each](appendix-a-index.html#Each-type)          ordered superposition (conjectural)
 [Failure](appendix-a-index.html#Failure-type)    Failure (lazy exceptions, thrown if not handled properly)
-[Any](appendix-a-index.html#Any-type)            Perl 6 object (default routine parameter type, excludes junction)
+[Any](appendix-a-index.html#Any-type)            Perl 6 object (default routine parameter type, excludes [junction](appendix-g-glossary.html#junction))
 [Cool](appendix-a-index.html#Cool-type)          Perl 6 Convenient OO Loopbacks
 [Whatever](appendix-a-index.html#Whatever-type)  Wildcard (like Any, but subject to do-what-I-mean via [MMD](appendix-g-glossary.html#MMD))
 [Int](appendix-a-index.html#Int-type)            Any Int object

@@ -1899,6 +1899,11 @@ anything but an escape character
 [*«escape sequence»*](appendix-b-grouped.html#escape-sequences) &mdash;
 escape character
 
+<a id="Each"/><a id="Each-type"/>
+**Each**
+[*«undefined value type»*](appendix-b-grouped.html#undefined-types) &mdash;
+ordered superposition (conjectural), unlike [**Junction**](#Junction-type)
+
 <a id="each"/>
 **each** &mdash; variant of all() that promises to do things in order, is
 Positional/Iterable
@@ -2138,8 +2143,8 @@ it throws the exception
 <a id="Failure"/><a id="Failure-type"/>
 **Failure**
 [*«undefined value type»*](appendix-b-grouped.html#undefined-types) &mdash;
-data type object for an error, thrown by an unhandled
-[**Exception**](#Exception-type)
+data type object for an error,
+thrown by an unhandled [**Exception**](#Exception-type)
 
 <a id="False"/>
 **False** &mdash;
@@ -2689,7 +2694,14 @@ Perl [*list*](appendix-g-glossary.html#list)
 [*«array method»*](tablet-3-variables#array-methods) &mdash;
 concatenates list elements into a string,
 optionally inserting another string between the elements &mdash;
-example: `join("-", 1..5) # returns '1-2-3-4-5'` alternative syntax: `(1..5).join("-")`
+example: `join("-", 1..5)` returns '1-2-3-4-5'` does this too: `(1..5).join("-")`
+
+<a id="Junction"/><a id="Junction-type"/>
+**Junction**
+[*«undefined value type»*](appendix-b-grouped.html#undefined-types) &mdash;
+[*junction*](appendix-g-glossary.html#junction) -
+unordered superposition of data ordered superposition (conjectural),
+unlike [**Each**](#Each-type)
 
 
 

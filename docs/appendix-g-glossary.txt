@@ -325,19 +325,19 @@ is called in Perl 5 [scalar context](#scalar-context)
 
 <a id="iteration"/>
 **iteration** &mdash;
-repeated executing of a term or [*block*](#block), enforced by
-[iterators](appendix-b-grouped.html#loops)
+repeated executing of a term or [*block*](#block),
+enforced by [*iterators*](#iterator)
 
 <a id="iterator"/>
-**iterator** &mdash;
+**iterator** &mdash; [iterators](appendix-b-grouped.html#loops)
 
 # [J](#nav-top)
 
 <a id="junction"/>
 [**junction**](tablet-4-operators.html#Junctions) &mdash;
-a [type of value] that holds a logical combination of several values,
-example: (A and B) or C, 
-create them with junctive ops
+a [type of value](appendix-a-index.html#Junction-type) that holds a logical
+combination of several values, example: (A and B) or C, 
+create them with [junctive ops](appendix-b-grouped.html#junctions)
 
 # [K](#nav-top)
 
