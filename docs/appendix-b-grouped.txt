@@ -143,6 +143,20 @@ sublanguage seen by the parser at this lexical spot
 [`$~P5Regex`](appendix-a-index.html#P5Regex-slang-var)   the current root of the Perl regex language
 -------------------------------------------------------  ------------------------------------------------
 
+
+Constants
+---------
+
+builtins (not exactly variables) that return always the same important value
+
+Name                                     Value             Meaning
+---------------------------------------  ----------------  -----------------------------------
+[e](appendix-a-index.html#e-constant)    2.71828182878434  [euler number](appendix-g-glossary.html#e)
+[i](appendix-a-index.html#i-constant)    0+1i              [imaginary number](appendix-g-glossary.html#i)
+[pi](appendix-a-index.html#pi-constant)  3.14159265394248  [ratio of a circle's circumference to its diameter](appendix-g-glossary.html#pi)
+---------------------------------------  ----------------  -----------------------------------
+
+
 Scope
 -----
 
