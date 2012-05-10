@@ -524,10 +524,10 @@ that forcing a [context](appendix-g-glossary.html#context).
 Junctions
 ---------
 
-Junctive Infix Op                        Prefix Op                         Meaning
+Junctive Infix Op                        Prefix Op                           Meaning
 ---------------------------------------  ----------------------------------  ---------------------------------------
 [&](appendix-a-index.html#ampersand-op)  [all](appendix-a-index.html#all)    [AND](appendix-g-glossary.html#and)
-[^](appendix-a-index.html#caret-op)      [one](appendix-a-index.html#one)    [XOR](appendix-g-glossary.html#xor)
+[\^](appendix-a-index.html#caret-op)     [one](appendix-a-index.html#one)    [XOR](appendix-g-glossary.html#xor)
 [|](appendix-a-index.html#pipe-op)       [any](appendix-a-index.html#any)    [OR](appendix-g-glossary.html#or)
 &nbsp;                                   [none](appendix-a-index.html#none)  [NOT](appendix-g-glossary.html#not) any
 ---------------------------------------  ----------------------------------  ---------------------------------------
@@ -864,16 +864,21 @@ regex. They can have prefixes: . (dot) marks a non-capturing subrule,
 Match Object Methods
 --------------------
 
-    $/.from      # the initial match position
-    $/.to        # the final match position
-    $/.chars     # $/.to - $/.from
-    $/.orig      # the original match string
-    $/.Str       # substr($/.orig, $/.from, $/.chars)
-    $/.ast       # the abstract result associated with this node
-    $/.caps      # sequential captures
-    $/.chunks    # sequential tokenization
-    $/.prematch  # $/.orig.substr(0, $/.from)
-    $/.postmatch # $/.orig.substr($/.to)
+can also applied to any positional (`$/[2][3].to`) and named (`$/<star>.from`)
+submatch
+
+------------  ----------------------------------------------
+$/.from       the initial match position
+$/.to         the final match position
+$/.chars      $/.to - $/.from
+$/.orig       the original match string
+$/.Str        substr($/.orig, $/.from, $/.chars)
+$/.ast        the [abstract](appendix-g-glossary.html#AST) result associated with this node
+$/.caps       sequential captures
+$/.chunks     sequential tokenization
+$/.prematch   $/.orig.substr(0, $/.from)
+$/.postmatch  $/.orig.substr($/.to)
+------------  ----------------------------------------------
 
 
 Flow Control
@@ -917,7 +922,7 @@ Jump Commands
 -------------
 
 
-----------------------------------------  --------------------------------------
+----------------------------------------  --------------------------------------------------------------
 [goto](appendix-a-index.html#goto)        jump to a named label
 [redo](appendix-a-index.html#redo)        repeat this loop turn
 [next](appendix-a-index.html#next)        skip to the next loop turn
@@ -926,14 +931,14 @@ Jump Commands
 [proceed](appendix-a-index.html#proceed)  check next [when](appendix-a-index.html#when) clauses
 [leave](appendix-a-index.html#leave)      leave this [block](appendix-g-glossary.html#block) with a return value
 [return](appendix-a-index.html#return)    leave this [routine](appendix-g-glossary.html#routine) with a return value
-----------------------------------------  --------------------------------------
+----------------------------------------  --------------------------------------------------------------
 
 
 
 Conditionals
 ------------
 
---------------------------------------------  -----------------------------------------------------------------------------------
+--------------------------------------------  --------------------------------------------------------------------------------------
 [if](appendix-a-index.html#if)                when following expression evals in boolean context to True, the block that following after that will be executed
 [elsif](appendix-a-index.html#elsif)          works like if, but only recognized if no preceding "if" or "elsif" clause was executed
 [else](appendix-a-index.html#else)            following block will be executed, when no preceding "if" or "elsif" clause was executed
@@ -944,7 +949,7 @@ Conditionals
 [given](appendix-a-index.html#given)          evals an expression into scalar context assignes it to **\$\_** for the following block
 [when](appendix-a-index.html#when)            smartmatches an expression against `$_`; if the result is True, the following block will be executed
 [default](appendix-a-index.html#default)      following block will be executed, when no "when" clause was executed
---------------------------------------------  -----------------------------------------------------------------------------------
+--------------------------------------------  --------------------------------------------------------------------------------------
 
 
 Loops

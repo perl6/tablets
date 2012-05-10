@@ -420,8 +420,7 @@ other operations in [*bool context*](#bool-context) are:
 [*and*](#and), [*or*](#or), [*xor*](#xor) 
 
 <a id="numeric-context"/>
-**numeric context** &mdash;
-[**Num*](appendix-a-index.html#Num-type) [*type*](#type)
+**numeric context** &mdash; [**Num**](appendix-a-index.html#Num-type) [*type*](#type)
 
 # [O](#nav-top)
 
