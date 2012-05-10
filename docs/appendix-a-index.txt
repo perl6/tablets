@@ -1861,8 +1861,7 @@ dynamic [*scope*](appendix-g-glossary.html#scope)
 [**e**](appendix-g-glossary.html#e)
 [*«constant»*](appendix-b-grouped.html#constants) &mdash;
 about 2.71828182878434, fundamental mathematical constant,
-important to the functions [**exp**](#exp) and [**log**](#log),
-see also: [**i**](#i-constant), [**pi**](#pi-constant)
+important to the functions [**exp**](#exp) and [**log**](#log)
 
 <a id="e-test"/>
 **:e**
@@ -2497,8 +2496,7 @@ that ignores the order of results (allows parallel computing)
 [*«constant»*](appendix-b-grouped.html#constants) &mdash;
 [**square root**](#sqrt) of -1, fundamental mathematical constant to build 
 [*Complex*](#Complex-type) with, 
-important to the functions,
-see also: [**e**](#e-constant), [**pi**](#pi-constant)
+important to the functions
 
 
 <a id="i-modifier"/>
@@ -3415,8 +3413,7 @@ activate old Perl 5 regex rules, long alias to [**:P5**](#P5-modifier)
 [*«constant»*](appendix-b-grouped.html#constants) &mdash;
 about 3.14159265394248, also known as *π*,
 fundamental mathematical constant,
-ratio of a circle's circumference to its diameter &mdash;
-see also: [**e**](#e-constant), [**i**](#i-constant)
+ratio of a circle's circumference to its diameter
 
 
 <a id="pick"/>

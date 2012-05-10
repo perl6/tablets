@@ -147,7 +147,8 @@ sublanguage seen by the parser at this lexical spot
 Constants
 ---------
 
-builtins (not exactly variables) that return always the same important value
+are builtins (not exactly variables and without a [sigil](#sigils))
+that return always the same important value
 
 Name                                     Value             Meaning
 ---------------------------------------  ----------------  -----------------------------------
