@@ -1846,8 +1846,9 @@ program was compiled for, see also:
 
 <a id="div"/>
 [**div**](operators.html) *«int op»* &mdash;
-[*integer*](#Int-type) division &mdash;
-example: `5 div 2` returns `2`&mdash;
+[**infix**](#infix-category) [*integer*](#Int-type) division &mdash;
+like any other division, just does a [**trunc**](#trunc) on the result &mdash;
+example: `5 div 2` returns `2` &mdash;
 see also: [**/**](#slash-op), [**mod**](#mod)
 
 <a id="do"/>
@@ -3074,7 +3075,7 @@ matched string, short alternative for [**:samemark**](#samemark-modifier)
 **mod**
 *«numeric op»* &mdash;
 [*«numeric op»*](tablet-4-operators.html#numeric-context) &mdash;
-infix modulo operator, remainder of a [int division](#div),
+[**infix**](#infix-category) modulo operator, remainder of a [int division](#div),
 forces [*numeric context*](appendix-g-glossary.html#numeric-context),
 low [*precedence*](appendix-g-glossary.html#precedence) 
 version of [**%**](#percent-op) &mdash;
@@ -4601,7 +4602,7 @@ opposite of [**False**](#False)
 **truncate**
 ([Num](#Num-type) $f [--\>](#minus-minus-greater-signature) [Int](#Int-type))
 *«num method»* &mdash;
-just truncates the fractional part &mdash;
+truncates the fractional part of a number &mdash;
 examples: `truncate 4.27` returns `4`, `truncate -5.5` returns `-5` &mdash;
 see also: [**abs**](#abs), [**conjugate**](#conjugate),
           [**round**](#round), [**sign**](#sign)
