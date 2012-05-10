@@ -54,12 +54,12 @@ Special Variables
 
 ### Match Variables ###
 
------------------------------------------------------  -----------------------------------------------------------------------------
-[`$/`](appendix-a-index.html#slash-var)                last created match object of this [block](appendix-g-glossary.html#block)
+-----------------------------------------------------  ------------------------------------------------------------------------------------
+[`$/`](appendix-a-index.html#slash-var)                last created match object of this [scope](appendix-g-glossary.html#scope) with [these methods](#match-object-methods)
 [`$<...>`](appendix-a-index.html#angle-brackets-var)   alias to named capture, see Twigils above
 [`$0 ...`](appendix-a-index.html#0-var)                alias to positional capture, like in P5 - `$1 .. $9` but doesn't stop at `$9`
 [`@()`](appendix-a-index.html#round-brackets-var)      array that holds $0 .. $9 and rest and positional submatches
------------------------------------------------------  -----------------------------------------------------------------------------
+-----------------------------------------------------  ------------------------------------------------------------------------------------
 
 ### Global Variables ###
 
@@ -867,18 +867,18 @@ Match Object Methods
 can also applied to any positional (`$/[2][3].to`) and named (`$/<star>.from`)
 submatch
 
-------------  ----------------------------------------------
-$/.from       the initial match position
-$/.to         the final match position
-$/.chars      `$/.to - $/.from`
-$/.orig       the original match string
-$/.Str        `substr($/.orig, $/.from, $/.chars)`
-$/.ast        the [abstract](appendix-g-glossary.html#AST) result associated with this node
-$/.caps       sequential captures
-$/.chunks     sequential tokenization
-$/.prematch   `$/.orig.substr(0, $/.from)`
-$/.postmatch  `$/.orig.substr($/.to)`
-------------  ----------------------------------------------
+--------------  ----------------------------------------------
+`$/.from`       the initial match position
+`$/.to`         the final match position
+`$/.chars`      `$/.to - $/.from`
+`$/.orig`       the original match string
+`$/.Str`        `substr($/.orig, $/.from, $/.chars)`
+`$/.ast`        the [abstract](appendix-g-glossary.html#AST) result associated with this node
+`$/.caps`       sequential captures
+`$/.chunks`     sequential tokenization
+`$/.prematch`   `$/.orig.substr(0, $/.from)`
+`$/.postmatch`  `$/.orig.substr($/.to)`
+--------------  ----------------------------------------------
 
 
 Flow Control
@@ -961,7 +961,7 @@ Loops
 [until](appendix-a-index.html#until)    loop with positive exit condition(exit when True), evals expression into boolean context
 [repeat](appendix-a-index.html#repeat)  initial command for while or until loops that have their condtion at the end
 [do](appendix-a-index.html#do)          runs that block in any case one time, "do once"-loop
-[for](appendix-a-index.html#for )       evals expression into lazy list context and iterates over that list from first to last value, sets each time `$_` (can be combined with when as well),
+[for](appendix-a-index.html#for )       evals expression into lazy list context and iterates over that list from first to last value, sets each time `$_` (can be combined with **when** as well),
 --------------------------------------  -----------------------------------------------------------
 
 
@@ -999,8 +999,7 @@ type \[name\] \[trait\] ([signature](appendix-g-glossary.html#signature)) { bloc
 
 ### Routine Traits ###
 
-[phasers](#closure-traits) (closure traits) can also be seen as
-routine traits.
+[phasers](#closure-traits) (closure traits) can also be seen as routine traits.
 
 ----------------------------------------------------------  -------------------------------------------------------------------------------------
 [export](appendix-a-index.html#export-routine-trait)        this routine will be exported my the current module by default
