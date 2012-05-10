@@ -114,10 +114,10 @@ inserting comments.
 Quoting
 =======
 
-Quoting, like [regular expression](regexes.html), is a sublanguage
+Quoting, like [regular expression](tablet-9-regexes.html), is a sublanguage
 inside the main language with its own syntactical rules. It is parsed
 by a special grammar as to be found in the [special
-variable](ap-b-lookup.html#special-variables) `$~Quote`. The
+variable](appendix-b-grouped.html#special-variables) `$~Quote`. The
 operator with the same name (the generic quoting operator `Q`) does
 almost nothing, just provides a mechanism to mark the beginning and
 end of text sequence.
@@ -142,7 +142,7 @@ Interpolation
 
 Inside of these delimiters, every character will be taken
 literally. Any additional meaning has to be added by [quoting
-adverbs](ap-b-lookup.html#quoting-adverbs) that have to
+adverbs](appendix-b-grouped.html#quoting-adverbs) that have to
 follow the Q. Most of them have a short and a long name and some of
 the most useful have an additional syntax that replaces them
 altogether with the Q operator (like single or double quotes).
@@ -159,7 +159,7 @@ variable](ap-b-lookup.html#scalar), [array
 variable](ap-b-lookup.html#array), [hash
 variable](ap-b-lookup.html#hash), [anonymous
 blocks](blocks.html#block), and [callable
-routines](variables.html#callable).
+routines](tablet-3-variables.html#callable).
 
     Q :b /\t\n/; # tab and new line character
     Q :s /$poem/; # content of $poem
@@ -232,7 +232,7 @@ Quote Words
 -----------
 
 While other quote operators return a single string item, this one can
-return [arrays](variables.html#array) because it splits the string on
+return [arrays](tablet-3-variables.html#array) because it splits the string on
 any whitespace (\\s aka <ws>).
 
     Q :words /.../;
@@ -261,7 +261,7 @@ rules](basic-syntax.html#interpolation) apply here also.
 
 
 The same pointy braces (quote operators) are also in used when
-writing [hash slices](variables.html#hash-slices).
+writing [hash slices](tablet-3-variables.html#hash-slices).
 
 
 
@@ -400,10 +400,10 @@ with braces.
 As always, [.perl](basic-syntax.html#perl) gives you an almost source
 like code formatting which results here in 3/7. Adding **.nude** you
 get (3/7), the nude source code. There are 2 different [immutable
-value types](ap-b-lookup.html#immutable-types) representing
+value types](appendix-b-grouped.html#immutable-types) representing
 both rational number. FatRat has unlimited precision and Rat has just
 enough to be evaled into a Real type. When you explicitly [type a
-variable](variables.html#data-types) to one o them, the braces become
+variable](tablet-3-variables.html#data-types) to one o them, the braces become
 optional.
 
     my Rat $pi_approx = 22/7;
