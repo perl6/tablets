@@ -1422,14 +1422,19 @@ from which the current routine was called
 
 <a id="callframe"/>
 **callframe** &mdash;
-returns an object that describes the current state with a
-callframe object, that has the
-[following methods](appendix-b-grouped.html#callframe-methods)
+returns a callframe object that describes the current execution state,
+with the [following methods](appendix-b-grouped.html#callframe-methods)
+
+<a id="callsame"/>
+**callsame** &mdash;
+alias to: [`callwith( |callframe(Routine).args )`](#callframe) &mdash;
+see also: [**nextsame**](#nextsame)
 
 <a id="callwith"/>
 **callwith** &mdash;
-callable-method by which one can call a sub with a
-different [*signature*](appendix-g-glossary.html#signature)
+method which can call a [*routine*](appendix-g-glossary.html#routine) with a
+different [*signature*](appendix-g-glossary.html#signature) &mdash;
+see also: [**nextwith**](#nextwith)
 
 <a id="capitalize"/>
 **capitalize** &mdash;
@@ -3179,7 +3184,15 @@ start the the next following loop [*iteration*](appendix-g-glossary.html#interat
 <a id="nextsame"/>
 **nextsame** &mdash;
 get from the dispatcher the next candidate with the
-same [*signature*](appendix-g-glossary.html#signature), similar to Javas *SUPER*
+same [*signature*](appendix-g-glossary.html#signature), similar to Javas *SUPER* &mdash;
+alias to: [`nextwith( |callframe(Routine).args )`](#callframe) &mdash;
+see also: [**callsame**](#callsame)
+
+<a id="nextwith"/>
+**nextwith** &mdash;
+method which can call a [*routine*](appendix-g-glossary.html#routine) with a
+different [*signature*](appendix-g-glossary.html#signature) &mdash;
+see also: [**callwith**](#callwith)
 
 <a id="NF-compiler-var"/>
 **\$\?NF**
