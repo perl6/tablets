@@ -524,6 +524,13 @@ that forcing a [context](appendix-g-glossary.html#context).
 Junctions
 ---------
 
+The [**infix**](appendix-a-index.html#infix-category)
+[*ops*](appendix-g-glossary.html#operator) in the first columns create
+[*junctions*](appendix-g-glossary.html#junctions) by combining two values
+(can be [**Junctions**](appendix-a-index.html#Junction-type) itself),
+the ops in second column are to be applied to a [*list*](appendix-g-glossary.html#list)
+as prefix op or method.
+
 Junctive Infix Op                        Prefix Op                           Operation                                Meaning
 ---------------------------------------  ----------------------------------  ---------------------------------------  -----------------------------------
 [&](appendix-a-index.html#ampersand-op)  [all](appendix-a-index.html#all)    [AND](appendix-g-glossary.html#and)      [True](appendix-a-index.html#True) if all are True
