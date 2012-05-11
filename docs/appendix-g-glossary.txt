@@ -600,8 +600,9 @@ is in P6 called [item context](#item-context)
 
 <a id="scope"/>
 **scope** &mdash;
-area within which an identifier (like a variable) is usable,
-normally the current [block](#block)
+area within which an identifier like a [*variable*](#variable) or
+[*routine*](#routine) is usable,
+normally the current surrounding [*block*](#block) or (if there is none) the file
 
 <a id="sigil"/>
 **sigil** &mdash;
