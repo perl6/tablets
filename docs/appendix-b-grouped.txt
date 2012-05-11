@@ -991,8 +991,8 @@ type \[name\] \[trait\] ([signature](appendix-g-glossary.html#signature)) { bloc
 ### Routine Modifier ###
 
 -----------------------------------------------------  -------------------------------------------------------------------------------------------------------
-[multi](appendix-a-index.html#multi-routine-modifier)  marks routines, witch can have siblings with same name but different signature; when called, the one with matching sig is executed
-[only](appendix-a-index.html#only-routine-modifier)    routines which dont't allow to have an multi sibling (is default, you may leave it out)
+[multi](appendix-a-index.html#multi-routine-modifier)  marks routines, which can have siblings with same name but different signature; when called, the one with matching sig is executed
+[only](appendix-a-index.html#only-routine-modifier)    routines which don't allow siblings (this is default, you may leave it out)
 [proto](appendix-a-index.html#proto-routine-modifier)  fallback for multi, if no multi signature matches the caller, a proto with same name is executed
 -----------------------------------------------------  -------------------------------------------------------------------------------------------------------
 
