@@ -53,7 +53,7 @@ Punctuation
 [*«context op»*](appendix-b-grouped.html#contextualizers) &mdash;
 [**prefix**](#prefix-category) logical negation ([*NOT*](appendix-g-glossary.html#not)),
 forces [*boolean context*](appendix-g-glossary.html#bool-context),
-high precedence version of [**not**](#not)
+high [*precedence*](appendix-g-glossary.html#precedence) version of [**not**](#not)
 
 <a id="exclamation-twigil"/>
 **\!**
@@ -228,7 +228,7 @@ its operands until one is [**False**](#False) in
 [*boolean context*](appendix-g-glossary.html#boolean-context), if one was **False** 
 the result in [boolean context](appendix-g-glossary.html#bool-context) is **False**,
 otherwise the last evaluated operand,
-low precedence alias is [**and**](#logical-and) &mdash;
+high [*precedence*](appendix-g-glossary.html#precedence) alias of [**and**](#logical-and) &mdash;
 example: `0 and 7` returns `0` &mdash;
 see also: [**&**](#junctive-and)
 
@@ -475,7 +475,7 @@ with the [following methods](appendix-b-grouped.html#match-object-methods)
 [*«logical op»*](tablet-4-operators.html#logical-selection) &mdash;
 short circuit *defined or*, returns the first defined value
 (from left to right), similar to [**||**](#pipe-pipe-op) &mdash;
-high precedence version of [**err**](#err)
+high [*precedence*](appendix-g-glossary.html#precedence) version of [**err**](#err)
 
 <a id="backslash-0"/><a id="backslash-zero"/>
 **\\0**<span class="you-provide">s</span>**\[**<span class="you-provide">n</span>**]**
@@ -742,7 +742,7 @@ example: `@a >>++` increments numeric value of every array element
 forces [*boolean context*](tablet-4-operators.html#bool-context)
 in an expression, returns [**False**](#False) when
 value is 0 or empty, otherwise [**True**](#True),
-high precedence version of [**so**](#so)
+high [*precedence*](appendix-g-glossary.html#precedence) version of [**so**](#so)
 
 <a id="question-signature"/>
 **?**
@@ -923,7 +923,7 @@ converted values of both operands without changing their content,
 in *bool context* it returns [**True**](#True) or **False** as expected,
 in any other context it returns the first none empty value, 
 the second when both are empty and [**Nil**](#Nil-type) when both are not empty,
-[high precedence](appendix-b-grouped.html#table-of-precedence) version of [**xor**](#xor) &mdash;
+[*precedence*](appendix-g-glossary.html#precedence) version of [**xor**](#xor) &mdash;
 example: `('dang' ^^ '')` returns `'dang'`
 
 <a id="doule-caret-metachar"/>
@@ -972,7 +972,7 @@ its operands until one is [**True**](#True) in
 [*bool context*](appendix-g-glossary.html#bool-context),
 if there is one then the result is **True** in bool context,
 otherwise the first *True* value is returned or the last one,
-high precedence version of [**or**](#or) &mdash;
+high [*precedence*](appendix-g-glossary.html#precedence) version of [**or**](#or) &mdash;
 example: `(3 || 5)` returns `3` &mdash;
 see also: [**|**](#junctive-or), [**?? !!**](#ternary-op)
 
@@ -1110,7 +1110,7 @@ its operands until one is [**False**](#False) in
 [*boolean context*](appendix-g-glossary.html#boolean-context),
 if one was **False** the result in *boolean context* is **False**,
 otherwise the last evaluated operand,
-low precedence version of [**&&**](#logical-and) &mdash;
+low [*precedence*](appendix-g-glossary.html#precedence) version of [**&&**](#logical-and) &mdash;
 example: `'hurray' and 0` returns `0` &mdash;
 see also: [**andthen**](#andthen), [**all**](#all)
 
@@ -2022,7 +2022,7 @@ as does [**==**](#equal-equal-op) in
 <a id="equiv"/>
 **equiv**
 [*«routine trait»*](appendix-b-grouped.html#routine-traits) &mdash;
-specifies the [precedence](appendix-b-grouped.html#table-of-precedence)
+specifies the [*precedence*](appendix-g-glossary.html#precedence)
 of an [*operator*](appendix-g-glossary.html#operator) same as an existing operator &mdash;
 see also: [**looser**](#looser) and [**tighter**](#tighter)
 
@@ -2036,8 +2036,8 @@ contrast with static [**===**](#equal-equal-equal)
 <a id="err"/><a id="err-op"/>
 **err**
 [*«logical op»*](tablet-4-operators.html#logical-selection) &mdash;
-short circuit defined or, returns the first defined value from
-the left, low precedence version of [**//**](#defined-or) &mdash;
+short circuit defined or, returns the first defined value from the left,
+low [*precedence*](appendix-g-glossary.html#precedence) version of [**//**](#defined-or) &mdash;
 see also: [**or**](#or), [**xor**](#xor)
 
 <a id="ERR-global-var"/>
@@ -2945,9 +2945,8 @@ example: `loop my $b=1; $b++; $b<5 {...}`
 <a id="looser"/><a id="looser-routine-trait"/>
 **looser**
 [*«routine trait»*](appendix-b-grouped.html#routine-traits) &mdash;
-specifies the [precedence](appendix-b-grouped.html#table-of-precedence)
-of an [*operator*](appendix-g-glossary.html#operator)
-one rank lower than an existing operator
+specifies the [*precedence*](appendix-g-glossary.html#precedence) of an
+[*operator*](appendix-g-glossary.html#operator) one rank lower than an existing operator
 
 <a id="lower-subrule"/>
 **\<lower\>**
@@ -3228,7 +3227,7 @@ normalize (repair) [*unicode*](appendix-g-glossary.html#unicode)
 [*prefix*](#prefix-category) logical [*NOT*](appendix-g-glossary.html#not) operator,
 converts to [*boolean context*](appendix-g-glossary.html#bool-context)
 and then inverts the value,
-low precedence version of [**!**()](#exclamation-op),
+low [*precedence*](appendix-g-glossary.html#precedence) version of [**!**()](#exclamation-op),
 opposite of [**so**](#so-op)
 
 <a id="note"/>
@@ -3317,7 +3316,7 @@ sequentially left to right its operands until one is [**True**](#True) in
 [*bool context*](appendix-g-glossary.html#bool-context),
 if there is one then the result is **True** in bool context,
 otherwise the first *True* value is returned or the last one,
-low precedence version of [**||**](#logical-or) &mdash;
+low [*precedence*](appendix-g-glossary.html#precedence) version of [**||**](#logical-or) &mdash;
 example: `?('hurray' or 5)` returns `True` &mdash;
 see also: [**any**](#any), [**orelse**](#orelse), [**err**](#err), [**xor**](#xor)
 
@@ -4266,7 +4265,8 @@ reads an entire file into a string without a [**file handle**](IO-type)
 **so**
 [*«context op»*](appendix-b-grouped.html#contextualizers) &mdash;
 converts value into the [*boolean context*](tablet-4-operators.html#bool-context),
-low precedence alternative to [**?**](#question-mark-op),
+low [*precedence*](appendix-g-glossary.html#precedence)
+alternative to [**?**](#question-mark-op),
 opposite of [**not**](#not-op)
 
 <a id="SoftRoutine-type"/>
@@ -4517,8 +4517,8 @@ demands the nth finding, has many aliases ([**:st**](#st-modifier)
 <a id="tighter"/>
 **tighter**
 [*«routine trait»*](appendix-b-grouped.html#routine-traits) &mdash;
-specifies the [precedence of an operator](appendix-b-grouped.html#table-of-precedence)
-higher than an existing operator
+specifies the [*precedence*](appendix-g-glossary.html#precedence)
+of an operator higher than an existing operator
 
 <a id="titlecase"/>
 **titlecase** ([Str](#Str-type) [--\>](#minus-minus-greater-signature) [Str](#Str-type))
@@ -5028,7 +5028,7 @@ converted values of both operands without changing their content,
 in *bool context* it returns [**True**](#True) or **False** as expected,
 in any other context it returns the first none empty value, 
 the second when both are empty and [**Nil**](#Nil-type) when both are not empty,
-low [precedence](appendix-b-grouped.html#table-of-precedence) version of
+low [*precedence*](appendix-g-glossary.html#precedence) version of
 [**\^\^**](#caret-caret-op) &mdash;
 example: `(5 xor 0)` returns `5` &mdash;
 see also: [**or**](#or), [**err**](#err)

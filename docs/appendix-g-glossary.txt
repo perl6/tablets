@@ -144,6 +144,9 @@ in Perl 6 there are just [objects](#object) representing a routine that can be
 **code context** &mdash;
 also called callable context
 
+<a id="coercion"/>
+**coercion** &mdash;
+
 <a id="compilation"/>
 **compilation** &mdash;
 reading the human written source code and make it an
@@ -511,7 +514,10 @@ a block that is given readonly [*parameters*](parameter) with
 
 <a id="precedence"/>
 **precedence** &mdash;
-[table of precedence](appendix-b-grouped.html#table-of-precedence)
+if an [*expression*](#expression) contains several [*operators*](#operator),
+they will applied in the order according to the
+[**table of precedence**](appendix-b-grouped.html#table-of-precedence) from the
+highest to the lowest level
 
 <a id="property"/>
 **property** &mdash;
