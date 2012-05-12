@@ -679,13 +679,16 @@ Perl 5-ish term for [routine](#routine) because in Perl 5 there is only the
 *sub* command to build a callable block,
 but in Perl 6 there are [much more types](#Routine-types) hence the name change
 
-
 <a id="subrule"/>
 **subrule** &mdash;
 piece of a [*regular expression*](#regex) that has a name,
 its findings are stored under that name,
 some of them were used so often, that their built into to language as
 [predefined subrules](appendix-b-grouped.html#subrules)
+
+<a id="symbol"/>
+**symbol** &mdash;
+
 
 # [T](#nav-top)
 
