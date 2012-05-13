@@ -142,6 +142,9 @@ oriented, functional, design by contract, declarative and logic
 programming paradigms.
 
 
+<!-- I'm not sure this should be seen here as part of language design docs. 
+Our major goal here is to put perl6 in the best possible light. This seems to
+be talking managerese -->
 
 Buzzword compliant
 ------------------
