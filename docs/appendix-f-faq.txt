@@ -1,8 +1,12 @@
 % Perl 6 Tablets: Appendix F - Frequently Asked Questions
 
 
-Characteristics
-===============
+Advocacy
+========
+
+Is Perl 6 usable right now ?
+----------------------------
+
 
 When Perl 6 will be released?
 -----------------------------
@@ -11,13 +15,22 @@ When Perl 6 will be released?
 What is so special about Perl 6?
 --------------------------------
 
-Why is it called Perl?
-----------------------
-
-This language is so different from Perl 5
 
 Should I ignore Perl 5?
 -----------------------
+
+
+Characteristics
+===============
+
+
+Why is it called Perl?
+----------------------
+
+Some say: "This language is so different from Perl 5, why call it Perl at all?".
+Even a lot of Perl 5 and Perl 6 feel that way. The short answer to that is:
+"Larry holds the trademark, he decided to call his new language Perl 6."
+
 
 Why is Perl 6 so complicated?
 -----------------------------
