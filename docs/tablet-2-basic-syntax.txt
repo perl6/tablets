@@ -361,7 +361,7 @@ helping readability.
     $real = 2.2;
 
     $num = +'123';
-		$num = +'123foo'; # fails, 'foo' is not numeric
+    $num = +'123foo'; # fails, 'foo' is not numeric
 
 Radix Prefixes
 --------------
