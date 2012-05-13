@@ -1,9 +1,7 @@
 % Perl 6 Tablet 2 - Basic Syntax
 
-> "1st law of language redesign: Everyone wants the colon for their
-> particular syntax.
-> 2nd law of language redesign: Larry gets the
-> colon for whatever he wants."
+> "1st law of language redesign: Everyone wants the colon for their particular syntax.
+> 2nd law of language redesign: Larry gets the colon for whatever he wants."
 
 Basics don't always mean easy, but fundamental.
 
@@ -16,15 +14,17 @@ Please start your Perl 6 program with one of the following lines.
     use v6.0;
     v6;
 
-or just start with a keyword like **module** or **class**. That marks
-your code as Perl 6 (in case the interpreter defaults to Perl 5) and
-makes it possible to mix Perl 5 and 6 in one source file.
+or just start with a keyword like [**module**](appendix-a-index.html#module)
+or [**class**](appendix-a-index.html#class). That marks your code as Perl 6
+(in case the interpreter defaults to Perl 5) and makes it possible to mix 
+Perl 5 and 6 in one source file.
 
 Where you had to include `use strict;` and `use warnings;` at the top
 of every perl5 script, it's now default in perl6. Also `use utf8;` is 
 obsolete since any Perl 6 source code is always treated as UTF-8 and 
-any Unicode character can be used anywhere in the code. Even pragmas
-such as `constants` and `vars` are now part of the core language.
+any [*unicode*](appendix-g-glossary.html#unicode) character can be used 
+anywhere in the code. Even pragmas such as `constants` and `vars` are 
+now part of the core language.
 
 Also the functionality of many useful and famous modules like Moose
 (object system), Parse::RecDescent++, exception handling,
@@ -33,17 +33,16 @@ much more is already built in. So you get a lot extra for a little
 **v6;**.
 
 
-
 Statements
 ==========
 
-Unless you use [blocks](blocks.html), a Perl program executes one
-statement after another in linear progression (from left to right,
-top down). They have to be separated by a semicolon (**;**),
-except before and after a closing curly brace, where it is optional.
+Unless you use [*blocks*](appendix-g-glossary.html#block), a Perl 
+program executes one statement after another in linear progression 
+(from left to right, top down). They have to be separated by 
+a semicolon (**;**), except before and after a closing curly brace, 
+where it is optional.
 
     $coderef = sub { fetch_data(); compute() }
-
 
 
 Spaces and Indentation
@@ -70,6 +69,8 @@ In other words, the lexer doesn't consider those whitespaces at all.
 
 
 
+    ...$var []
+
 Comments
 ========
 
@@ -80,15 +81,15 @@ Single Line
 Like in Perl 5 and many other languages of its league, a "#" tells the
 compiler to ignore the rest of the line.
 
-    my $var = 'good'; # that code is boring
+    my $var = 'fine'; # that code is boring
 
 
 
 Multi Line
 ----------
 
-If many lines has to be commented,
-use "**[\#\`](appendix-a-index.html#pound-apostrophe)**"
+Many lines can be commented by using
+"**[\#\`](appendix-a-index.html#pound-apostrophe)**"
 followed by any pair of braces that surround the comment.
 
     $things = #`( I wonder how many of these
@@ -99,10 +100,10 @@ Documenting Comments
 --------------------
 
 When adding an equal sign after the pound like
-**[#=](appendix-a-index.html#pound-equal)**, it can be used to comment
-a subroutine or method that has this description stored.
-It's accessible via the *[WHY](#WHY-introspection)* introspection method
-of the routine object.
+**[#=](appendix-a-index.html#pound-equal)**, a comment about the following
+a subroutine or method is stored.
+This comment is accessible via the *[WHY](#WHY-introspection)* introspection
+method of the routine object.
 
     #= ...
     sub {
@@ -123,17 +124,17 @@ inserting comments.
     $=
 
 
-[all POD variables](ap-b-lookup.html)
+[all POD variables](appendix-b-grouped.html#pod-variables)
 
 
 
 Quoting
 =======
 
-Quoting, like [regular expression](regexes.html), is a sublanguage
+Quoting, like [regular expression](tablet-9-regexes.html), is a sublanguage
 inside the main language with its own syntactical rules. It is parsed
-by a special grammar as to be found in the [special
-variable](ap-b-lookup.html#special-variables) `$~Quote`. The
+by a special grammar which can be found in the [special
+variable](appendix-b-grouped.html#special-variables) `$~Quote`. The
 operator with the same name (the generic quoting operator `Q`) does
 almost nothing, just provides a mechanism to mark the beginning and
 end of text sequence.
@@ -143,9 +144,9 @@ end of text sequence.
 Delimiter
 ---------
 
-The examples in this chapter use almost every time slashes for that
-purpose, but any not alphanumerical character or pair of matching
-(bracing) character can be used as well.
+The examples in this chapter use slashes as the delimier in almost
+all cases, however any non-alphanumeric character or pair of matching
+(bracing) characters can be used as well.
 
     Q /.../ or Q |...| or Q *...* or Q "..." or Q[...] ...
 
@@ -158,7 +159,7 @@ Interpolation
 
 Within these delimiters, every character will be taken
 literally. Any additional meaning has to be added by [quoting
-adverbs](ap-b-lookup.html#quoting-adverbs) that have to
+adverbs](appendix-b-grouped.html#quoting-adverbs) that have to
 follow the Q. Most of them have a short and a long name and some of
 the most useful have an additional syntax that replaces them
 altogether with the Q operator (like single or double quotes).
@@ -174,8 +175,8 @@ For more info on those, see [scalar
 variable](ap-b-lookup.html#scalar), [array
 variable](ap-b-lookup.html#array), [hash
 variable](ap-b-lookup.html#hash), [anonymous
-blocks](blocks.html#block), and [callable
-routines](variables.html#callable).
+blocks](tablet-6-blocks.html), and [callable
+routines](tablet-3-variables.html#callable).
 
     Q :b /\t\n/; # tab and new line character
     Q :s /$poem/; # content of $poem
@@ -216,10 +217,10 @@ following are synonyms:
     '...'
 
 
-The backslash (\\) liberates here just itself and the single quote
-from its special meaning. Or to put it simple \\\\ translates (or
-interpolates) to \\ and \\' to '. For anything more you need
-additional adverbs.
+The backslash (\\) here is only required to delimite itself and
+the single quote from its special meaning. Or to put it simply \\\\
+translates (or interpolates) to \\ and \\' to '. For anything more
+you need additional adverbs.
 
     'Welcome in Larry\'s madhouse'
     '\'\\'; # string contains: '\
@@ -230,8 +231,8 @@ additional adverbs.
 Double Quotes
 -------------
 
-Double quoting combines all the previous mentioned adverbs for
-interpolation (also **:q** - implied by **:b**), thatswhy all the
+Double quoting combines all the previously mentioned adverbs for
+interpolation (also **:q** - implied by **:b**), so all the
 following are synonymous.
 
     Q :s, :a, :h, :f, :c, :b /.../;
@@ -248,7 +249,7 @@ Quote Words
 -----------
 
 While other quote operators return a single string item, this one can
-return [arrays](variables.html#array) because it splits the string on
+return [arrays](tablet-3-variables.html#array) because it splits the string on
 any whitespace (\\s aka <ws>).
 
     Q :words /.../;
@@ -258,26 +259,26 @@ any whitespace (\\s aka <ws>).
 
     Q :quotewords /.../; # qw/.../ with quote protextion
     Q :ww /.../; # :qq implied
-    <<>> # have also a unicode alias (chevron)
+    <<>> # also have a unicode alias (chevron)
 
 The second group of aliases mark a modified version, where single and
 double quoted strings (inside the quote) are treated as one
-word. Thats called *quote* protection.
+word. This is called *quote* protection.
 
     my @steps = <one "two three">; # 3 steps to success: ["one", "\"two", "three\""]
     my @steps = <<one "two three">>; # now only 2 steps: ["one", "two three"]
 
 
 Please note also that **:quotewords** (double pointy braces) implies
-**:double** (double quotes), which means all [interpolation
-rules](basic-syntax.html#interpolation) apply here also.
+**:double** (double quotes), which means all
+[interpolation rules](#interpolation) apply here as well.
 
-    <$pi> eq '$pi'
-    <<$pi>> eq "$pi" # eq '3.14159...'
+    <$pi> eq '$pi'   # True
+    <<$pi>> == pi    # True (hopefully)
 
 
 The same pointy braces (quote operators) are also in used when
-writing [hash slices](variables.html#hash-slices).
+writing [hash slices](tablet-3-variables.html#hash-slices).
 
 
 
@@ -294,7 +295,7 @@ by the adverbs **to** and heredoc. Heredocs can be nested.
 
 To make templates in which variables and closures are evaluated, take
 the normal double quote and just add the adverb for the heredoc
-delimiter or define with other adverbs what exactly you want to have
+delimiter or define with other adverbs exactly what you want to have
 evaluated.
 
     qq:heredoc 'EOT';
@@ -317,9 +318,9 @@ warnings early if there is something incompatible with convention.
 Regex
 -----
 
-Even being a completely different language then quoting on its own (as
+Even being a completely different language than quoting on its own (as
 to be defined in *\$\~Regex* and *\$\~P5Regex*), [regular
-expressions](regexes.html) can be built using the general quoting
+expressions](tablet-9-regexes.html) can be built using the general quoting
 operator with the right adverb.
 
     Q :regex /.../ aka rx/.../
@@ -348,7 +349,7 @@ quoted code will be parsed and compiled into a abstract syntax tree
 (AST - internal representation of the compiler) during compile
 time. Result is the compiled AST. Parsing will be done by using the
 grammar stored in *\$\~Quasi*. This gets important when writing
-[macros](metaprogramming.html#macros).
+[macros](tablet-10-metaprogramming.html#macros).
 
     Q :code /.../;
 
@@ -358,14 +359,15 @@ Number Literals
 ===============
 
 Unlike strings, numbers don't need
-[quoting](basic-syntax.html#quoting). But if there is a non number
+[quoting](#quoting). But if there is a non number
 character in it, there will be an error. Chars of a number definition
-are: (0-9,.,+,-,e,E,i,_) including the [radix
-prefixes](basic-syntax.html#radix-prefixes): (0b,0o,0d,0x) and the
-prefix for [version numbering](basic-syntax.html#version-number)
-(v). The + and can act also as operator that convert into the
-numerical context, which still means: take from left to right all
-digits and stop with the first none number character.
+are: (0-9,.,+,-,e,E,i,\_) including the [radix
+prefixes](#radix-prefixes): (0b,0o,0d,0x) and the
+prefix for [version numbering](#version-number)
+(v). The + can also act as an operator that converts a string
+to numerical context, which means: take form left to right all digits
+and interprate as a numeric literal. This will fail if the string
+contains any number numeric digits.
 
 A single underscore is allowed only between any two digits, delimiter
 helping readability.
@@ -375,10 +377,14 @@ helping readability.
     $int = 2;
     $real = 2.2;
 
-
+    $num = +'123';
+		$num = +'123foo'; # fails, 'foo' is not numeric
 
 Radix Prefixes
 --------------
+
+Prefixes may be use to enter numbers in the most commonly used
+radices.
 
     0b binary - base 2, digits 0..1
     0o ocatal - base 8, digits 0..7
@@ -390,12 +396,22 @@ Radix Prefixes
 General Radix Form
 ------------------
 
+Numbers may be entered in any radix using the general radix form, digits
+are represented by `0-9` and then `a-z` (case insensitive), so up to base
+36 can be represented as a string of digits.
+
     :10<42> # same as 0d42 or 42
+    :36<3z> # 3*(36**1) + 35*(36**0) = 143
 
+Larger radices can be entered as lists of decimal numbers.
 
+    :60[12,34,56]; # 12*(60**2) + 34*(60**1) + 56*(60**0) = 45296
 
 Scientific Notation
 -------------------
+
+Scientific notation may be entered using `e` (case insensitive) and
+works the way you would expect.
 
     $float = 60.2e23 # becomes automatically 6.02e24
     $float = 6.02E-23 # capital E works too
@@ -405,7 +421,7 @@ Scientific Notation
 Rational Number
 ---------------
 
-To distinguish them from a division operation, you have to groupe them
+To distinguish them from a division operation, you have to group them
 with braces.
 
     (3/7)
@@ -413,13 +429,13 @@ with braces.
     (3/7).denominator
     (3/7).nude.perl
 
-As always, [.perl](basic-syntax.html#perl) gives you an almost source
+As always, [.perl](#perl) gives you an almost source
 like code formatting which results here in 3/7. Adding **.nude** you
 get (3/7), the nude source code. There are 2 different [immutable
-value types](ap-b-lookup.html#immutable-types) representing
+value types](appendix-b-grouped.html#immutable-types) representing
 both rational number. FatRat has unlimited precision and Rat has just
 enough to be evaled into a Real type. When you explicitly [type a
-variable](variables.html#data-types) to one o them, the braces become
+variable](tablet-3-variables.html#data-types) to one of them, the braces become
 optional.
 
     my Rat $pi_approx = 22/7;
@@ -430,8 +446,8 @@ optional.
 Complex Number
 --------------
 
-have also there own [immutable value
-type](ap-b-lookup.html#immutable-types).
+There is also an [immutable value
+type](ap-b-lookup.html#immutable-types) for complex numbers.
 
     1+2i
     my $c = 5.2+1e42i;
@@ -459,7 +475,7 @@ perl
 ----
 
 The `.perl` method returns a string that arranges any set of values in
-almost the same format, as the would be defined it source code. It's a
+almost the same format, as it would be defined in source code. It's a
 built in Data::Dumper (pretty printer).
 
     @a.perl # evals to: [1, 2, 3, 4, 5]
@@ -469,8 +485,8 @@ This works with data of any nesting depth.
 
 
 
-pretty
-------
+gist
+----
 
 xxx
 
@@ -516,7 +532,7 @@ xxx
 Formats
 -------
 
-moved from core language to a module.
+Moved from core language to a module.
 
 
 
