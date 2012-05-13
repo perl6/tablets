@@ -3,7 +3,7 @@
 > "1st law of language redesign: Everyone wants the colon for their particular syntax.
 > 2nd law of language redesign: Larry gets the colon for whatever he wants."
 
-Basics doesn't mean here not always easy but rather fundamental.
+Basics don't always mean easy, but fundamental.
 
 Defaults
 ========
@@ -19,28 +19,28 @@ or [**class**](appendix-a-index.html#class). That marks your code as Perl 6
 (in case the interpreter defaults to Perl 5) and makes it possible to mix 
 Perl 5 and 6 in one source file.
 
-To even that little obstacle, you can leave out the usual `use strict;` and
-`use warnings;` in front of every script, because that is now the default.
-Also `use utf8;` is obsolete since any Perl 6 source code is always treated
-as UTF-8 and any [*unicode*](appendix-g-glossary.html#unicode) character can
-be used anywhere in the code. Even the features of the pragmas `constant` and
-`vars` are now part of the core language.
+Where you had to include `use strict;` and `use warnings;` at the top
+of every perl5 script, it's now default in perl6. Also `use utf8;` is 
+obsolete since any Perl 6 source code is always treated as UTF-8 and 
+any [*unicode*](appendix-g-glossary.html#unicode) character can be used 
+anywhere in the code. Even pragmas such as `constants` and `vars` are 
+now part of the core language.
 
 Also the functionality of many useful and famous modules like Moose
 (object system), Parse::RecDescent++, exception handling,
-List::\[More\]Utils, Export, English an advanced pretty printer and
-much more is already built in. So you get a lot extra for a little **v6;**.
-
+List::\[More\]Utils, Export, English, an advanced pretty printer and
+much more is already built in. So you get a lot extra for a little
+**v6;**.
 
 
 Statements
 ==========
 
-Unless you use [*blocks*](appendix-g-glossary.html#block), a Perl program
-executes one statement after another in linear progression (from left to right,
-from up to down).  They have to be separated by a
-semicolon ([**;**](appendix-a-index.html#semicolon-terminator)),
-except before and after a closing curly brace, where it is optional, always.
+Unless you use [*blocks*](appendix-g-glossary.html#block), a Perl 
+program executes one statement after another in linear progression 
+(from left to right, top down). They have to be separated by 
+a semicolon (**;**), except before and after a closing curly brace, 
+where it is optional.
 
     $coderef = sub { fetch_data(); compute() }
 
@@ -48,14 +48,33 @@ except before and after a closing curly brace, where it is optional, always.
 Spaces and Indentation
 ======================
 
-Perl doesn't care about indentation. Otherwise, in several place Perl 6 cares
-about existence of whitespace as a disambiguator.
+Perl doesn't care about indentation, but it does care about whitespace
+as a disambiguator. For example, `$foo$bar` is a syntax error since that 
+has two terms in a row without any whitespace to tell them apart. There's 
+a new addition in perl6, the so called "unspace" operator. It is basically
+an instruction to the compiler's lexer that it should ignore whitespace there.
+In other words, the lexer doesn't consider those whitespaces at all. 
+
+    my %hash = "foo" => 42, "bar" => 84; 
+    say %hash \{"foo"}; # Same as saying %hash{"foo"}
+
+    my $clazz = new Camel;
+    $clazz\#some random comment
+    .drink();                # same as saying $clazz.drink();
+
+    #or even
+    $clazz\#`{some random multiline
+    comment`}.drink();      # which brings us to the next section...
+
+
+
+
+    ...$var []
 
     ...$var []
 
 Comments
 ========
-
 
 
 Single Line
@@ -140,7 +159,7 @@ An extended delimiter mechanism is delivered by [heredocs](#heredocs).
 Interpolation
 -------------
 
-Inside of these delimiters, every character will be taken
+Within these delimiters, every character will be taken
 literally. Any additional meaning has to be added by [quoting
 adverbs](appendix-b-grouped.html#quoting-adverbs) that have to
 follow the Q. Most of them have a short and a long name and some of
@@ -154,12 +173,12 @@ altogether with the Q operator (like single or double quotes).
     :c aka :closure # anonymous blocks: {...}
     :f aka :function # callable routines: &name(...)
 
-For more info on those, see [scalar
-variable](ap-b-lookup.html#scalar), [array
-variable](ap-b-lookup.html#array), [hash
-variable](ap-b-lookup.html#hash), [anonymous
-blocks](tablet-6-blocks.html), and [callable
-routines](tablet-3-variables.html#callable).
+For more info on those, see 
+    * [scalar variable](ap-b-lookup.html#scalar), 
+    * [array variable](ap-b-lookup.html#array), 
+    * [hash variable](ap-b-lookup.html#hash), 
+    * [anonymous blocks](tablet-6-blocks.html), and 
+    * [callable routines](tablet-3-variables.html#callable).
 
     Q :b /\t\n/; # tab and new line character
     Q :s /$poem/; # content of $poem
@@ -200,10 +219,11 @@ following are synonyms:
     '...'
 
 
-The backslash (\\) here is only required to delimite itself and
-the single quote from its special meaning. Or to put it simply \\\\
-translates (or interpolates) to \\ and \\' to '. For anything more
-you need additional adverbs.
+We sometimes use the backslash (\\) to escape other special characters
+or the backslash itself. These are all part of the family of characters
+known as /escape sequences/. For example, `\\\\` translates to `\\`, while
+`\\'` translates to a `'`. You can avoid all that extra typing by using 
+adverbs. 
 
     'Welcome in Larry\'s madhouse'
     '\'\\'; # string contains: '\
@@ -248,7 +268,7 @@ The second group of aliases mark a modified version, where single and
 double quoted strings (inside the quote) are treated as one
 word. This is called *quote* protection.
 
-    my @steps = <one "two three">; # 3 steps to success: ["one", "\"two", "three\""]
+    my @steps = <one "two three">;   # 3 steps to success: ["one", "\"two", "three\""]
     my @steps = <<one "two three">>; # now only 2 steps: ["one", "two three"]
 
 
