@@ -41,8 +41,17 @@ printf $format, 'Sum', $sum{'head'}, $sum{'item'},
                        $sum{'anchor'},  $sum{'link'}, $sum{'line'}, $sum{'size'};
 
 
-# Tester
+print "TODO:\n";
+my $nr;
+	open $FH, '<', 'appendix-a-index.txt';
+	$content = do {local $/; <$FH>};
+	$nr =()= $content =~ /\&mdash;\n\n|&mdash; /g;
+	print " empty index entries: $nr\n";
+	open $FH, '<', 'appendix-f-faq.txt';
+	$content = do {local $/; <$FH>};
+	$nr =()= $content =~ /---\n\n/g;
+	print " unanswered questions: $nr\n";
 	open $FH, '<', 'appendix-g-glossary.txt';
 	$content = do {local $/; <$FH>};
-	my $v =()= $content =~ /\&mdash;\n\n/g;
-	print "unanswered glossary terms: $v\n";
+	$nr =()= $content =~ /\&mdash;\n\n|&mdash; /g;
+	print " empty glossary terms: $nr\n";

@@ -71,6 +71,8 @@ In other words, the lexer doesn't consider those whitespaces at all.
 
     ...$var []
 
+    ...$var []
+
 Comments
 ========
 

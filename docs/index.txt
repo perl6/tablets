@@ -78,4 +78,5 @@ If you like to help, [look here](https://github.com/perl6/tablets).
 
 [Appendix G: Glossary](appendix-g-glossary.html)
 
-[Appendix H: Links](appendix-h-links.html)
+[Appendix H: Href](appendix-h-href.html)
+(links to other resources)

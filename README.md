@@ -1,8 +1,9 @@
 Overview
 ========
 
-These are the Perl Tablets, written in 
-[Pandoc-Markdown](http://johnmacfarlane.net/pandoc/).
+These are the Perl Tablets, a lexicon style documentation for Perl 6
+written in [Pandoc-Markdown](http://johnmacfarlane.net/pandoc/)
+and optimized for hypertext formats.
 
 They are available online at <http://tablets.perl6.org>.
 
@@ -33,9 +34,14 @@ Advanced
 * The Tablet 1: History needs a lot of help, especially information from people
   who were involved in the subprojects.
 
+* Running the report.pl will you give you hints about current things to do.
 
-Rules for Anchor Names
-======================
+
+Formating Rules
+===============
+
+Anchor Names
+------------
 
 * Index A has following rules:
 * Anchors are case sensitive, if the term is "BEGIN", the anchor is also "BEGIN".
@@ -48,8 +54,8 @@ Rules for Anchor Names
 * Anchor uses always the abbreviation, acronym or short form.
 * Acronyms are uppercase rest is always lower case.
 
-Format Rules for Index A and G
-==============================
+Highlighting
+------------
 
 * Perl 6 builtins (links to A) are bold (\*\*...\*\*)
 * terms (links to G) and Perl 5 builtins are italic (\*...\*)
@@ -58,8 +64,17 @@ Format Rules for Index A and G
 * between item name, its explanation and additional infos is an &mdash; (\&mdash\;)
 
 
+Handling
+========
+
+Getting your copy
+-----------------
+
+Just clone the repo per git and install pandoc.
+
+
 Generating the html
-===================
+-------------------
 
 After updating any .txt files, to regenerate the corresponding html
 files, run `./build-html.pl` in the docs directory.
@@ -67,7 +82,7 @@ files, run `./build-html.pl` in the docs directory.
 
 
 Publishing the Tablets
-======================
+----------------------
 
 `scp` the docs/*.html files and the styles.css file to the web.
 

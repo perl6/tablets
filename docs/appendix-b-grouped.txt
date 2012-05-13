@@ -54,12 +54,12 @@ Special Variables
 
 ### Match Variables ###
 
------------------------------------------------------  -----------------------------------------------------------------------------
-[`$/`](appendix-a-index.html#slash-var)                last created match object of this [block](appendix-g-glossary.html#block)
+-----------------------------------------------------  ------------------------------------------------------------------------------------
+[`$/`](appendix-a-index.html#slash-var)                last created match object of this [scope](appendix-g-glossary.html#scope) with [these methods](#match-object-methods)
 [`$<...>`](appendix-a-index.html#angle-brackets-var)   alias to named capture, see Twigils above
 [`$0 ...`](appendix-a-index.html#0-var)                alias to positional capture, like in P5 - `$1 .. $9` but doesn't stop at `$9`
 [`@()`](appendix-a-index.html#round-brackets-var)      array that holds $0 .. $9 and rest and positional submatches
------------------------------------------------------  -----------------------------------------------------------------------------
+-----------------------------------------------------  ------------------------------------------------------------------------------------
 
 ### Global Variables ###
 
@@ -122,7 +122,7 @@ compiler constants (fixed at compile time)
 
 ### POD Variables ###
 
-File-scoped [POD](basic-syntax.html#pod) data
+File-[scoped](appendix-g-glossary.html#scope) [POD](basic-syntax.html#pod) data
 
 -----------------------------------------------------  ----------------------------------------
 [`$=pod`](appendix-a-index.html#pod-pod-var)           surrounding POD object
@@ -137,11 +137,26 @@ sublanguage seen by the parser at this lexical spot
 -------------------------------------------------------  ------------------------------------------------
 [`$~MAIN`](appendix-a-index.html#MAIN-slang-var)         the current main language (e.g. Perl statements)
 [`$~Quote`](appendix-a-index.html#Quote-slang-var)       the current root of quoting language
-[`$~Quasi`](appendix-a-index.html#Quasi-slang-var)       the current root of quasiquoting language
+[`$~Quasi`](appendix-a-index.html#Quasi-slang-var)       the current root of [quasiquoting](appendix-g-glossary.html#quasiquoting) language
 [`$~Regex`](appendix-a-index.html#Regex-slang-var)       the current root of regex language
-[`$~Trans`](appendix-a-index.html#Trans-slang-var)       the current root of transliteration language
+[`$~Trans`](appendix-a-index.html#Trans-slang-var)       the current root of [transliteration](appendix-g-glossary.html#transliteration) language
 [`$~P5Regex`](appendix-a-index.html#P5Regex-slang-var)   the current root of the Perl regex language
 -------------------------------------------------------  ------------------------------------------------
+
+
+Constants
+---------
+
+are builtins (not exactly variables and without a [sigil](#sigils))
+that return always the same important value
+
+Name                                     Value             Meaning
+---------------------------------------  ----------------  -----------------------------------
+[e](appendix-a-index.html#e-constant)    2.71828182878434  [euler number](appendix-g-glossary.html#e)
+[i](appendix-a-index.html#i-constant)    0+1i              [imaginary number](appendix-g-glossary.html#i)
+[pi](appendix-a-index.html#pi-constant)  3.14159265394248  [ratio of a circle's circumference to its diameter](appendix-g-glossary.html#pi)
+---------------------------------------  ----------------  -----------------------------------
+
 
 Scope
 -----
@@ -182,15 +197,15 @@ SUPER   Package symbols declared in inherited classes
 
 ### Declarator ###
 
------------------------------------------------  --------------------------------------------------
-[`my`](appendix-a-index.html#my)                 introduces lexically scoped names
-[`state`](appendix-a-index.html#state)           introduces lexically scoped but persistent names
-[`our`](appendix-a-index.html#our)               introduces package-scoped names
+-----------------------------------------------  -------------------------------------------------------
+[`my`](appendix-a-index.html#my)                 introduces lexically [scoped](appendix-g-glossary.html#scope) names
+[`state`](appendix-a-index.html#state)           introduces lexically [scoped](appendix-g-glossary.html#scope) but persistent names
+[`our`](appendix-a-index.html#our)               introduces package-[scoped](appendix-g-glossary.html#scope) names
 [`anon`](appendix-a-index.html#anon)             introduces names that aren't to be stored anywhere
 [`has`](appendix-a-index.html#has)               introduces object attribute names
 [`augment`](appendix-a-index.html#augment)       adds definitions to an existing name
 [`supersede`](appendix-a-index.html#supersede)   replaces definitions of an existing name
------------------------------------------------  --------------------------------------------------
+-----------------------------------------------  -------------------------------------------------------
 
 
 
@@ -206,8 +221,10 @@ different section.
 
 -----------------------------------------------  -----------------------------------------------------------------
 [Mu](appendix-a-index.html#Mu-type)              Most Undefined
+[Junction](appendix-a-index.html#Junction-type)  unordered superposition of data with and/or/one/none
+[Each](appendix-a-index.html#Each-type)          ordered superposition (conjectural)
 [Failure](appendix-a-index.html#Failure-type)    Failure (lazy exceptions, thrown if not handled properly)
-[Any](appendix-a-index.html#Any-type)            Perl 6 object (default routine parameter type, excludes junction)
+[Any](appendix-a-index.html#Any-type)            Perl 6 object (default routine parameter type, excludes [junction](appendix-g-glossary.html#junction))
 [Cool](appendix-a-index.html#Cool-type)          Perl 6 Convenient OO Loopbacks
 [Whatever](appendix-a-index.html#Whatever-type)  Wildcard (like Any, but subject to do-what-I-mean via [MMD](appendix-g-glossary.html#MMD))
 [Int](appendix-a-index.html#Int-type)            Any Int object
@@ -228,7 +245,7 @@ Widget                                           Any Widget object
 [Complex](appendix-a-index.html#Complex-type)          Perl complex number
 [Bool](appendix-a-index.html#Bool-type)                Perl boolean
 [Exception](appendix-a-index.html#Exception-type)      Perl exception
-[Block](appendix-a-index.html#Block-type)              executable objects that have lexical scopes
+[Block](appendix-a-index.html#Block-type)              executable objects that have [lexical scope](appendix-g-glossary.html#lexical-scope)
 [Range](appendix-a-index.html#Range-type)              a pair of ordered endpoints
 [Set](appendix-a-index.html#Set-type)                  unordered collection of values that allows no duplicates
 [Bag](appendix-a-index.html#Bag-type)                  unordered collection of values that allows duplicates
@@ -272,7 +289,8 @@ Widget                                           Any Widget object
 
 
 
-### Low level data types ###
+Low level data types
+--------------------
 
 This is more low level than the last table. These types are more meant
 to give the compiler optimizing hints.
@@ -336,7 +354,7 @@ following [methods](appendix-g-glossary.html#method) to tell more about itself.
 Operators
 =========
 
-Table of precedence
+Table of Precedence
 -------------------
 
 A   Level              Examples
@@ -503,6 +521,25 @@ that forcing a [context](appendix-g-glossary.html#context).
 
 
 
+Junctions
+---------
+
+The [**infix**](appendix-a-index.html#infix-category)
+[*ops*](appendix-g-glossary.html#operator) in the first columns create
+[*junctions*](appendix-g-glossary.html#junction) by combining two values
+(can be [**Junctions**](appendix-a-index.html#Junction-type) itself),
+the ops in second column are to be applied to a [*list*](appendix-g-glossary.html#list)
+as prefix op or [*method*](appendix-g-glossary.html#method).
+
+Junctive Infix Op                        Prefix Op                           Operation                                Meaning
+---------------------------------------  ----------------------------------  ---------------------------------------  -----------------------------------
+[&](appendix-a-index.html#ampersand-op)  [all](appendix-a-index.html#all)    [AND](appendix-g-glossary.html#and)      [True](appendix-a-index.html#True) if all are True
+[\^](appendix-a-index.html#caret-op)     [one](appendix-a-index.html#one)    [XOR](appendix-g-glossary.html#xor)      [True](appendix-a-index.html#True) if exactly one is True
+[|](appendix-a-index.html#pipe-op)       [any](appendix-a-index.html#any)    [OR](appendix-g-glossary.html#or)        [True](appendix-a-index.html#True) if at least one is True
+&nbsp;                                   [none](appendix-a-index.html#none)  [NOT](appendix-g-glossary.html#not) any  [True](appendix-a-index.html#True) if none are True
+---------------------------------------  ----------------------------------  ---------------------------------------  -----------------------------------
+
+
 Smartmatch
 ----------
 
@@ -602,22 +639,22 @@ The basic quoting operator (Q) does nothing, just taking literally
 what you quoted as a string. But with several adverbs, it behaves like
 the well known following ops:
 
-Op                                      Nonealphanumeric Version                      Translated Into Quoting Adverbs                                                                                                         Meaning
---------------------------------------  --------------------------------------------- --------------------------------------------------------------------------------------------------------------------------------------- ----------------------------------------------------------
-[q//](appendix-a-index.html#q-op)       [' '](appendix-a-index.html#single-quotes)    [Q](appendix-a-index.html#Q-op) [:q](appendix-a-index.html#q-adverb) //                                                                 single, simple nonevaluating quotes
-[qq//](appendix-a-index.html#qq-op)     [" "](appendix-a-index.html#double-quotes)    [Q](appendix-a-index.html#Q-op) [:qq](appendix-a-index.html#qq-adverb) //                                                               double, evaluating quotes
-[qw//](appendix-a-index.html#qw-op)     [< >](appendix-a-index.html#angle-brackets)   [Q](appendix-a-index.html#Q-op) [:q](appendix-a-index.html#q-adverb) [:w](appendix-a-index.html#w-adverb) //                            simple autoquotes (spaces divide words)
-&nbsp;                                  [<< >>](appendix-a-index.html#texas-brackets) [Q](appendix-a-index.html#Q-op) [:qq](appendix-a-index.html#qq-adverb) [:ww](appendix-a-index.html#ww-adverb) //                        evaluating autoquotes with [quote protection](appendix-g-glossary.html#quote-protection)
-[qp//](appendix-a-index.html#qp-op)     &nbsp;                                        [Q](appendix-a-index.html#Q-op) [:path](appendix-a-index.html#path-adverb) //                                                           paths
-[qx//](appendix-a-index.html#qx-op)     &nbsp;                                        [Q](appendix-a-index.html#Q-op) [:exec](appendix-a-index.html#exec-adverb) //                                                           code
-[rx//](appendix-a-index.html#rx-op)     &nbsp;                                        [Q](appendix-a-index.html#Q-op) [:regex](appendix-a-index.html#regex-adverb) //                                                         [regex](appendix-g-glossary.html#regex)
-[m//](appendix-a-index.html#m-op)       &nbsp;                                        [Q](appendix-a-index.html#Q-op) [:match](appendix-a-index.html#match-adverb) //                                                         matching
-[ms//](appendix-a-index.html#ms-op)     &nbsp;                                        [Q](appendix-a-index.html#Q-op) [:match](appendix-a-index.html#match-adverb) [:sigspace](appendix-a-index.html#sigspace-modifier) //    matching, spaces divide words
-[s///](appendix-a-index.html#s-op)      &nbsp;                                        [Q](appendix-a-index.html#Q-op) [:subst](appendix-a-index.html#subst-adverb) ///                                                        substitution
-[ss///](appendix-a-index.html#ss-op)    &nbsp;                                        [Q](appendix-a-index.html#Q-op) [:subst](appendix-a-index.html#subst-adverb) [:samespace](appendix-a-index.html#samespace-modifier) /// substitution, spaces divide words
-[tr///](appendix-a-index.html#tr-op)    &nbsp;                                        [Q](appendix-a-index.html#Q-op) [:trans](appendix-a-index.html#trans-adverb) ///                                                        transliteration
-[quasi {}](appendix-a-index.html#quasi) &nbsp;                                        [Q](appendix-a-index.html#Q-op) [:code](appendix-a-index.html#code-adverb) //                                                           [quasiquoting](appendix-g-glossary.html#quasiquoting)
---------------------------------------  --------------------------------------------- --------------------------------------------------------------------------------------------------------------------------------------- ----------------------------------------------------------
+Op                                      Nonealphanumeric Version                      Translated Into Quoting Adverbs                                                                                                          Method Version                           Meaning
+--------------------------------------  --------------------------------------------- ---------------------------------------------------------------------------------------------------------------------------------------  ---------------------------------------  ----------------------------------------------------------
+[q//](appendix-a-index.html#q-op)       [' '](appendix-a-index.html#single-quotes)    [Q](appendix-a-index.html#Q-op) [:q](appendix-a-index.html#q-adverb) //                                                                                                           single, simple nonevaluating quotes
+[qq//](appendix-a-index.html#qq-op)     [" "](appendix-a-index.html#double-quotes)    [Q](appendix-a-index.html#Q-op) [:qq](appendix-a-index.html#qq-adverb) //                                                                                                         double, evaluating quotes
+[qw//](appendix-a-index.html#qw-op)     [< >](appendix-a-index.html#angle-brackets)   [Q](appendix-a-index.html#Q-op) [:q](appendix-a-index.html#q-adverb) [:w](appendix-a-index.html#w-adverb) //                                                                      simple autoquotes (spaces divide words)
+&nbsp;                                  [<< >>](appendix-a-index.html#texas-brackets) [Q](appendix-a-index.html#Q-op) [:qq](appendix-a-index.html#qq-adverb) [:ww](appendix-a-index.html#ww-adverb) //                                                                  evaluating autoquotes with [quote protection](appendix-g-glossary.html#quote-protection)
+[qp//](appendix-a-index.html#qp-op)     &nbsp;                                        [Q](appendix-a-index.html#Q-op) [:path](appendix-a-index.html#path-adverb) //                                                                                                     paths
+[qx//](appendix-a-index.html#qx-op)     &nbsp;                                        [Q](appendix-a-index.html#Q-op) [:exec](appendix-a-index.html#exec-adverb) //                                                                                                     code
+[rx//](appendix-a-index.html#rx-op)     &nbsp;                                        [Q](appendix-a-index.html#Q-op) [:regex](appendix-a-index.html#regex-adverb) //                                                                                                   [regex](appendix-g-glossary.html#regex)
+[m//](appendix-a-index.html#m-op)       &nbsp;                                        [Q](appendix-a-index.html#Q-op) [:match](appendix-a-index.html#match-adverb) //                                                          [.match()](appendix-a-index.html#match)  matching
+[ms//](appendix-a-index.html#ms-op)     &nbsp;                                        [Q](appendix-a-index.html#Q-op) [:match](appendix-a-index.html#match-adverb) [:sigspace](appendix-a-index.html#sigspace-modifier) //                                              matching, spaces divide words
+[s///](appendix-a-index.html#s-op)      &nbsp;                                        [Q](appendix-a-index.html#Q-op) [:subst](appendix-a-index.html#subst-adverb) ///                                                         [.subst()](appendix-a-index.html#subst)  substitution
+[ss///](appendix-a-index.html#ss-op)    &nbsp;                                        [Q](appendix-a-index.html#Q-op) [:subst](appendix-a-index.html#subst-adverb) [:samespace](appendix-a-index.html#samespace-modifier) ///                                           substitution, spaces divide words
+[tr///](appendix-a-index.html#tr-op)    &nbsp;                                        [Q](appendix-a-index.html#Q-op) [:trans](appendix-a-index.html#trans-adverb) ///                                                         [.trans()](appendix-a-index.html#trans)  [transliteration](appendix-g-glossary.html#transliteration)
+[quasi {}](appendix-a-index.html#quasi) &nbsp;                                        [Q](appendix-a-index.html#Q-op) [:code](appendix-a-index.html#code-adverb) //                                                                                                     [quasiquoting](appendix-g-glossary.html#quasiquoting)
+--------------------------------------  --------------------------------------------- ---------------------------------------------------------------------------------------------------------------------------------------- ---------------------------------------  ----------------------------------------------------------
 
 
 
@@ -629,7 +666,8 @@ Quoting Adverbs
 
 There are a lot more adverbs to fine tune your quoting. The Adverbs
 can used with any quoting operator like:
-[Q](appendix-a-index.html#Q-op) :s/.../ or [qq](appendix-a-index.html#qq-op) :p /.../.
+[Q](appendix-a-index.html#Q-op) :s/.../ or
+[qq](appendix-a-index.html#qq-op) :p /.../.
 
 Short                                   Long                                                    Meaning
 --------------------------------------  ------------------------------------------------------  -------------------------------------------------
@@ -643,13 +681,13 @@ Short                                   Long                                    
 [:b](appendix-a-index.html#b-adverb)    [:backslash](appendix-a-index.html#backsalsh-adverb)    interpolate \\n, \\t, etc. (implies :q at least)
 [:w](appendix-a-index.html#w-adverb)    [:words](appendix-a-index.html#words-adverb)            split result on words (no [quote protection](appendix-g-glossary.html#quote-protection))
 [:ww](appendix-a-index.html#ww-adverb)  [:quotewords](appendix-a-index.html#quotewords-adverb)  split result on words (with [quote protection](appendix-g-glossary.html#quote-protection))
-[:p](appendix-a-index.html#p-adverb)    [:path](appendix-a-index.html#path-adverb)              return a Path object (see S16 for more options)
+[:p](appendix-a-index.html#p-adverb)    [:path](appendix-a-index.html#path-adverb)              return a path object (see S16 for more options)
 [:to](appendix-a-index.html#to-adverb)  [:heredoc](appendix-a-index.html#heredoc-adverb)        rarse result as heredoc terminator
 [:x](appendix-a-index.html#x-adverb)    [:exec](appendix-a-index.html#exec-adverb)              execute as command and return results
-&nbsp;                                  [:code](appendix-a-index.html#code-adverb)              quasiquoting
-&nbsp;                                  [:regex](appendix-a-index.html#regex-adverb)            parse as regex
+&nbsp;                                  [:code](appendix-a-index.html#code-adverb)              [quasiquoting](appendix-g-glossary.html#quasiquoting)
+&nbsp;                                  [:regex](appendix-a-index.html#regex-adverb)            parse as [regex](appendix-g-glossary.html#regex)
 &nbsp;                                  [:subst](appendix-a-index.html#subst-adverb)            parse as substitution
-&nbsp;                                  [:trans](appendix-a-index.html#trans-adverb)            parse as transliteration
+&nbsp;                                  [:trans](appendix-a-index.html#trans-adverb)            parse as [transliteration](appendix-g-glossary.html#transliteration)
 --------------------------------------  ------------------------------------------------------  -------------------------------------------------
 
 
@@ -658,7 +696,8 @@ Regex Modifier
 --------------
 
 Stay behind the regex op and change the behaviour of the
-[*regex*](appendix-g-glossary.html#regex), its search scope, etc.
+[*regex*](appendix-g-glossary.html#regex), its search 
+[*scope*](appendix-g-glossary.html#scope), etc.
 Most can also also put inside a subregex (in brackets).
 
 Short                                          Long                                                                                                                        Meaning
@@ -832,16 +871,21 @@ regex. They can have prefixes: . (dot) marks a non-capturing subrule,
 Match Object Methods
 --------------------
 
-    $/.from      # the initial match position
-    $/.to        # the final match position
-    $/.chars     # $/.to - $/.from
-    $/.orig      # the original match string
-    $/.Str       # substr($/.orig, $/.from, $/.chars)
-    $/.ast       # the abstract result associated with this node
-    $/.caps      # sequential captures
-    $/.chunks    # sequential tokenization
-    $/.prematch  # $/.orig.substr(0, $/.from)
-    $/.postmatch # $/.orig.substr($/.to)
+can also applied to any positional (`$/[2][3].to`) and named (`$/<star>.from`)
+submatch
+
+--------------  ----------------------------------------------
+`$/.from`       the initial match position
+`$/.to`         the final match position
+`$/.chars`      `$/.to - $/.from`
+`$/.orig`       the original match string
+`$/.Str`        `substr($/.orig, $/.from, $/.chars)`
+`$/.ast`        the [abstract](appendix-g-glossary.html#AST) result associated with this node
+`$/.caps`       sequential captures
+`$/.chunks`     sequential tokenization
+`$/.prematch`   `$/.orig.substr(0, $/.from)`
+`$/.postmatch`  `$/.orig.substr($/.to)`
+--------------  ----------------------------------------------
 
 
 Flow Control
@@ -885,7 +929,7 @@ Jump Commands
 -------------
 
 
-----------------------------------------  --------------------------------------
+----------------------------------------  --------------------------------------------------------------
 [goto](appendix-a-index.html#goto)        jump to a named label
 [redo](appendix-a-index.html#redo)        repeat this loop turn
 [next](appendix-a-index.html#next)        skip to the next loop turn
@@ -894,14 +938,14 @@ Jump Commands
 [proceed](appendix-a-index.html#proceed)  check next [when](appendix-a-index.html#when) clauses
 [leave](appendix-a-index.html#leave)      leave this [block](appendix-g-glossary.html#block) with a return value
 [return](appendix-a-index.html#return)    leave this [routine](appendix-g-glossary.html#routine) with a return value
-----------------------------------------  --------------------------------------
+----------------------------------------  --------------------------------------------------------------
 
 
 
 Conditionals
 ------------
 
---------------------------------------------  -----------------------------------------------------------------------------------
+--------------------------------------------  --------------------------------------------------------------------------------------
 [if](appendix-a-index.html#if)                when following expression evals in boolean context to True, the block that following after that will be executed
 [elsif](appendix-a-index.html#elsif)          works like if, but only recognized if no preceding "if" or "elsif" clause was executed
 [else](appendix-a-index.html#else)            following block will be executed, when no preceding "if" or "elsif" clause was executed
@@ -912,7 +956,7 @@ Conditionals
 [given](appendix-a-index.html#given)          evals an expression into scalar context assignes it to **\$\_** for the following block
 [when](appendix-a-index.html#when)            smartmatches an expression against `$_`; if the result is True, the following block will be executed
 [default](appendix-a-index.html#default)      following block will be executed, when no "when" clause was executed
---------------------------------------------  -----------------------------------------------------------------------------------
+--------------------------------------------  --------------------------------------------------------------------------------------
 
 
 Loops
@@ -924,7 +968,7 @@ Loops
 [until](appendix-a-index.html#until)    loop with positive exit condition(exit when True), evals expression into boolean context
 [repeat](appendix-a-index.html#repeat)  initial command for while or until loops that have their condtion at the end
 [do](appendix-a-index.html#do)          runs that block in any case one time, "do once"-loop
-[for](appendix-a-index.html#for )       evals expression into lazy list context and iterates over that list from first to last value, sets each time `$_` (can be combined with when as well),
+[for](appendix-a-index.html#for )       evals expression into lazy list context and iterates over that list from first to last value, sets each time `$_` (can be combined with **when** as well),
 --------------------------------------  -----------------------------------------------------------
 
 
@@ -938,7 +982,7 @@ type \[name\] \[trait\] ([signature](appendix-g-glossary.html#signature)) { bloc
 
 ### Routine Types ###
 
-----------------------------------------------  ----------------------------------------------------------------
+----------------------------------------------  -------------------------------------------------------------------------------------------------------
 [sub](appendix-a-index.html#sub)                normal routine, named block with parmeters
 [method](appendix-a-index.html#method)          inheritable object methods
 [submethod](appendix-a-index.html#submethod)    not inheritable methods
@@ -947,32 +991,31 @@ type \[name\] \[trait\] ([signature](appendix-g-glossary.html#signature)) { bloc
 [token](appendix-a-index.html#token)            alias to regex [:ratchet](appendix-a-index.html#ratchet-modifier)
 [macro](appendix-a-index.html#macro)            routine that is compiled to an [AST](appendix-g-glossary.html#AST) at BEGIN ([ASAP](appendix-g-glossary.html#ASAP), compile time)
 [quasi](appendix-a-index.html#quasi)            block that is compiled to an [AST](appendix-g-glossary.html#AST) at runtime
-----------------------------------------------  ----------------------------------------------------------------
+----------------------------------------------  -------------------------------------------------------------------------------------------------------
 
 
 
 ### Routine Modifier ###
 
------------------------------------------------------  ---------------------------------------------------
-[multi](appendix-a-index.html#multi-routine-modifier)  marks routines, witch can have siblings with same name but different signature; when called, the one with matching sig is executed
-[only](appendix-a-index.html#only-routine-modifier)    routines which dont' allow to have an multi sibling (is default, you may leave it out)
+-----------------------------------------------------  -------------------------------------------------------------------------------------------------------
+[multi](appendix-a-index.html#multi-routine-modifier)  marks routines, which can have siblings with same name but different signature; when called, the one with matching sig is executed
+[only](appendix-a-index.html#only-routine-modifier)    routines which don't allow siblings (this is default, you may leave it out)
 [proto](appendix-a-index.html#proto-routine-modifier)  fallback for multi, if no multi signature matches the caller, a proto with same name is executed
------------------------------------------------------  ---------------------------------------------------
+-----------------------------------------------------  -------------------------------------------------------------------------------------------------------
 
 
 ### Routine Traits ###
 
-[phasers](#closure-traits) (closure traits) can also be seen as
-routine traits.
+[phasers](#closure-traits) (closure traits) can also be seen as routine traits.
 
 ----------------------------------------------------------  -------------------------------------------------------------------------------------
 [export](appendix-a-index.html#export-routine-trait)        this routine will be exported my the current module by default
 [will do](appendix-a-index.html#will-do-routine-trait)      block of code executed when the subroutine is called. Normally declared implicitly, by providing a block after the subroutine's signature definition
 [signature](appendix-a-index.html#signature-routine-trait)  signature of a subroutine. Normally declared implicitly, by providing a parameter list and/or return type
-[as](appendix-a-index.html#as-routine-trait)                inner type constraint that a routine imposes on its return value
+[as](appendix-a-index.html#as-routine-trait)                inner [type constraint](appendix-g-glossary.html#type-constraint) that a routine imposes on its return value
 [of](appendix-a-index.html#of-routine-trait)                official return type of the routine
-[cached](appendix-a-index.html#cached-routine-trait)        marks a subroutine as being memoized
-[rw](appendix-a-index.html#rw-routine-trait)                marks a subroutine as returning an lvalue
+[cached](appendix-a-index.html#cached-routine-trait)        marks a [subroutine](appendix-g-glossary.html#subroutine) as being memoized
+[rw](appendix-a-index.html#rw-routine-trait)                marks a [subroutine](appendix-g-glossary.html#subroutine) as returning an [lvalue](appendix-g-glossary.html#lvalue)
 [parsed](appendix-a-index.html#parsed-routine-trait)        macro is parsed once, is hygienic, only parsed can be used
 [reparsed](appendix-a-index.html#reparsed-routine-trait)    macro parsed twice, not hygienic, later parsed can be used
 [tighter](appendix-a-index.html#tighter-routine-trait)      specifies the [precedence](#table-of-precedence) of an operator higher than an existing operator as seen here
@@ -989,7 +1032,7 @@ routine traits.
 [readonly](appendix-a-index.html#readonly-parameter-trait)   immutable parameter
 [rw](appendix-a-index.html#rw-parameter-trait)               mutable parameter (rw stands for: read write)
 [copy](appendix-a-index.html#copy-parameter-trait)           read-writable copy of the original argument ("pass-by-value")
-[dynamic](appendix-a-index.html#dynamic-parameter-trait)     parameter is an "environmental" variable, a lexical in the dynamic scope
+[dynamic](appendix-a-index.html#dynamic-parameter-trait)     parameter is an "environmental" variable, a lexical in the dynamic [scope](appendix-g-glossary.html#scope)
 [parcel](appendix-a-index.html#parcel-parameter-trait)       raw reference, will not be contextualized
 -----------------------------------------------------------  -----------------------------------------------------------------------------
 
@@ -1016,15 +1059,17 @@ In routine and block definitions can be also some character with special meaning
 of objects provided by [**callframe**](appendix-a-index.html#callframe) and
 [**caller**](appendix-a-index.html#caller)
 
-    args
-    callframe
-    caller
-    file
-    hints
-    inline
-    leave
-    line
-    my
-    package
+------------------------------------------------------  -----------------------------------
+[args](appendix-a-index.html#args-callframe)            ...
+[callframe](appendix-a-index.html#callframe-callframe)  ...
+[caller](appendix-a-index.html#caller-callframe)        ...
+[hints](appendix-a-index.html#hints-callframe)          ...
+[inline](appendix-a-index.html#inline-callframe)        ...
+[leave](appendix-a-index.html#leave-callframe)          ...
+[file](appendix-a-index.html#file-callframe)            ...
+[package](appendix-a-index.html#package-callframe)      ...
+[line](appendix-a-index.html#line-callframe)            ...
+[my](appendix-a-index.html#my-callframe)                ...
+------------------------------------------------------  -----------------------------------
 
 ***

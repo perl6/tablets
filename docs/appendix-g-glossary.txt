@@ -13,19 +13,22 @@ or "What kind of [*iterators*](#iterators) are present and how they are spelled?
 [T](#t#) [U](#u) [V](#v) [W](#w) [X](#x) [Y](#y) [Z](#z)**
 
 <a id="french-greater-ö-grench-lower"/>
-**»ö«** &mdash; pure text version of [*camelia*](#camelia) the Perl 6 mascot
+**»ö«** &mdash;
+pure text version of [*camelia*](#camelia) the Perl 6 mascot
 
 # [A](#nav-top)
 
 <a id="ALAP"/>
-**ALAP** *(as late as possible)* &mdash; within a given execution phase
+**ALAP** *(as late as possible)* &mdash;
+within a given execution phase
 ([compile time](#compile-time) or [run time](#run-time))
 
 <a id="and"/>
 **and** &mdash;
-logical operation that has only the result **True** if both operands
-(incoming information) are also true, otherwise result is **False**
-following operator working with that logic:
+logical operation which results in [**True**](appendix-a-index.html#True)
+only in case  both operands (incoming information) are also **True**,
+otherwise the result is [**False**](appendix-a-index.html#True),
+following [*operator*](#operator) are working under that logic:
 [**|**](appendix-a-index.html#junctive-and),
 [**||**](appendix-a-index.html#logical-and),
 [**+|**](appendix-a-index.html#numeric-and),
@@ -34,7 +37,8 @@ following operator working with that logic:
 [**all**](appendix-a-index.html#all),
 [**and**](appendix-a-index.html#and)
 [**andthen**](appendix-a-index.html#andthen) &mdash;
-other logical operations are [*or*](#or), [*xor*](#xor), [*not*](#not)
+other operations in [*bool context*](#bool-context) are:
+[*or*](#or), [*xor*](#xor), [*not*](#not)
 
 <a id="argument"/>
 **argument** &mdash;
@@ -42,10 +46,12 @@ a specific value given to a [routine](#routine) at a certain time,
 not to be confused wirh [*parameter*](#parameter)
 
 <a id="array"/>
-**array** &mdash; mostly synonym for [*list*](#list)
+**array** &mdash;
+mostly synonym for [*list*](#list)
 
 <a id="ASAP"/>
-**ASAP** *(as soon as possible)* &mdash; within a given execution phase
+**ASAP** *(as soon as possible)* &mdash;
+within a given execution phase
 ([*compile time*](#compile-time) or [run time](#run-time))
 
 <a id="ASCII"/>
@@ -58,8 +64,9 @@ what you find on your keyboard and what an american typically needs,
 to enable the rest of the world more fully there is [*unicode*](#unicode)
 
 <a id="AST"/>
-**AST** *(abstract syntax tree)* &mdash; tree like data structure, in which
-source code is transformed, while [parsing](#parsing) it
+**AST** *(abstract syntax tree)* &mdash;
+tree like data structure, in which source code is transformed,
+while [parsing](#parsing) it
 
 <a id="atribute"/>
 **atribute** &mdash;
@@ -79,7 +86,7 @@ back leftward a bit and try another possibility after a part of a
 pattern didn't match
 
 <a id="binding"/>
-[**binding**](tablet-3-variables#binding) &mdash;
+[**binding**](tablet-3-variables.html#binding) &mdash;
 making two variables share the same content by pointing to same
 memory location, done i Perl 6 with 
 [**:=**](appendix-a-index.html#runtime-binding-op) 
@@ -99,7 +106,8 @@ object of the type [**Block**](appendix-a-index.html#block-type)
 # [C](#nav-top)
 
 <a id="camelia"/>
-**camelia** &mdash; name of the the Perl 6 mascot, she supposed to look happy,
+**camelia** &mdash;
+name of the the Perl 6 mascot, she supposed to look happy,
 but create tornados in the amazon or something like that
 
 <a id="capture"/>
@@ -133,7 +141,11 @@ in Perl 6 there are just [objects](#object) representing a routine that can be
 [attributes](#attribute) of other objects
 
 <a id="code-context"/>
-**code context** &mdash; also called callable context
+**code context** &mdash;
+also called callable context
+
+<a id="coercion"/>
+**coercion** &mdash;
 
 <a id="compilation"/>
 **compilation** &mdash;
@@ -150,6 +162,9 @@ already runnung, to run code at the begin of compile time use
 [**BEGIN**](appendix-a-index.html#BEGIN-phaser) and
 [**CHECK**](appendix-a-index.html#CHECK-phaser) to run at the end of
 compile time for that unit (mostly the file or the to be **eval**ed string)
+
+<a id="complex-number"/>
+**complex number** &mdash;
 
 <a id="context"/>
 **context** &mdash;
@@ -178,7 +193,8 @@ creating a [*subroutine*](routine) that calls another with certain
 # [D](#nav-top)
 
 <a id="declarand"/>
-**declarand** &mdash; the thing being declared, example: `$foo` in `my $foo;`,
+**declarand** &mdash;
+the thing being declared, example: `$foo` in `my $foo;`,
 see also [declarator](#declarator)
 
 <a id="declarative-programming"/>
@@ -200,26 +216,27 @@ a space ship which has a clock is would allow you to call `$ship.time` instead
 of `$ship.clock.time`
 
 <a id="design-by-contract"/>
-**design by contract** &mdash; programming style in which parameters and
-return values from routines must meet conditions; A signature is
-considered contract in Perl 6
+**design by contract** &mdash;
+programming style in which parameters and return values from
+[*routines*](#routine) must meet conditions, in Perl 6 done by
+[*signatures*](#signature)
 
 <a id="double-quoting"/>
 **double quoting** &mdash;
+[**" "**](appendix-a-index.html#double-quotes)
 
 
 # [E](#nav-top)
 
 <a id="e"/>
-**e** *(euler number)* &mdash;
-about 2.7182818284, fundamental mathematical constant,
+[**e**](appendix-a-index.html#e-constant) *(euler number)* &mdash;
+about 2.71828182878434, fundamental mathematical constant,
 important to the functions 
-[**exp**](appendix-a-index.html#exp) and [**log**](appendix-a-index.html#log)
-
+[**exp**](appendix-a-index.html#exp) and [**log**](appendix-a-index.html#log),
+see also: [*i*](#i), [*pi*](#pi)
 
 <a id="encoding"/>
-**encoding** &mdash;
-
+**encoding** &mdash; ASCII UTF-8
 
 <a id="evaluation"/>
 **evaluation** &mdash;
@@ -242,7 +259,8 @@ in which order they are considered.
 
 <a id="fat-arrow"/>
 **fat arrow** &mdash;
-[**=\>**](appenis	dix-a-index.html#fat-arrow)
+a name for this [*operator*](#operator): 
+[**=\>**](appenisdix-a-index.html#fat-arrow)
 
 <a id="file-handle"/>
 **file handle** &mdash;
@@ -283,10 +301,21 @@ out of several [codepoints](#codepoint)
 [hash](#hash) [context](#context)
 
 <a id="heredoc"/>
-**heredoc** &mdash;
+**heredoc** &mdash; [quoting](#quoting)
+[Tablet 2](tablet-2-basic-syntax.html#heredocs)
 
 
 # [I](#nav-top)
+
+<a id="i"/>
+[**i**](appendix-a-index.html#i-constant) *(imaginary number)* &mdash;
+square root of -1, fundamental mathematical constant to build 
+[*complex number*](#complex-number), displayed as `0+1i`
+important to the functions,
+see also: [*e*](#e), [*pi*](#pi)
+
+<a id="interpolation"/>
+**interpolation** &mdash;
 
 <a id="invocant"/>
 **invocant** &mdash;
@@ -300,29 +329,32 @@ is called in Perl 5 [scalar context](#scalar-context)
 
 <a id="iteration"/>
 **iteration** &mdash;
-repeated executing of a term or [*block*](#block), enforced by
-[iterators](appendix-b-grouped.html#loops)
+repeated executing of a term or [*block*](#block),
+enforced by [*iterators*](#iterator)
 
 <a id="iterator"/>
-**iterator** &mdash;
+**iterator** &mdash; [iterators](appendix-b-grouped.html#loops)
 
 # [J](#nav-top)
 
 <a id="junction"/>
-**junction** &mdash; a type of value that holds a logical combination of
-several values, example: (A and B) or C, creat them with 
-[junctive ops](tablet-4-operators.html#)
+[**junction**](tablet-4-operators.html#Junctions) &mdash;
+a [type of value](appendix-a-index.html#Junction-type) that holds a logical
+combination of several values, example: (A and B) or C, 
+create them with [junctive ops](appendix-b-grouped.html#junctions)
 
 # [K](#nav-top)
 
 # [L](#nav-top)
 
+<a id="lexical-scope"/>
+**lexical scope** &mdash;
+
 <a id="list"/>
 **list** &mdash;
 
 <a id="list-context"/>
-**list context** &mdash;
-[**Array**](appendix-a-index.html#Array-type)
+**list context** &mdash; [**Array**](appendix-a-index.html#Array-type)
 
 <a id="list-flattening"/>
 **list flattening** &mdash;
@@ -360,7 +392,7 @@ operator that alters the meaning or expands the scope of another normal operator
 **metaprogramming** &mdash; 
 
 <a id="method"/>
-**method** &mdash; 
+**method** &mdash;
 is a [*routine*] that belongs to a [*object*](#object) or a class
 
 <a id="MMD"/>
@@ -384,13 +416,14 @@ see also: [**multi**](appendix-a-index.html#multi)
 <a id="not"/>
 **not** &mdash;
 logical operation that changes a true into false and vice versa,
-following operator working with that logic:
-[**!()**](appendix-a-index.html#negation-op), [**not**](appendix-a-index.html#not) &mdash;
-other logical operations are: [*and*](#and), [*or*](#or), [*xor*](#xor) 
+following operator working under that logic:
+[**!()**](appendix-a-index.html#negation-op),
+[**not**](appendix-a-index.html#not) &mdash;
+other operations in [*bool context*](#bool-context) are:
+[*and*](#and), [*or*](#or), [*xor*](#xor) 
 
 <a id="numeric-context"/>
-**numeric context** &mdash;
-[**Num*](appendix-a-index.html#Num-type) [*type*](#type)
+**numeric context** &mdash; [**Num**](appendix-a-index.html#Num-type) [*type*](#type)
 
 # [O](#nav-top)
 
@@ -412,7 +445,7 @@ that belong together into so called objects
 **or** &mdash;
 logical operation that has a the result **True** if at least one of two
 operands (incoming information) is also true, otherwise result is **False**
-following operator working with that logic:
+following operator working under that logic:
 [**|**](appendix-a-index.html#junctive-or),
 [**||**](appendix-a-index.html#logical-or),
 [**//**](appendix-a-index.html#defined-or),
@@ -423,7 +456,8 @@ following operator working with that logic:
 [**or**](appendix-a-index.html#or)
 [**orelse**](appendix-a-index.html#orelse),
 [**err**](appendix-a-index.html#err) &mdash;
-other logical operations are: [**and**](#and), [**xor**](#xor), [**not**](#not)
+other operations in [*bool context*](#bool-context) are:
+[**and**](#and), [**xor**](#xor), [**not**](#not)
 
 
 # [P](#nav-top)
@@ -450,14 +484,22 @@ Perl 6 term for specially named (due a prefix statement) subblocks withe special
 [*runtimes*](#run-time) aka [*closure traits*](appendix-b-grouped#closure-traits) &mdash;
 example: [**BEGIN**](appendix-a-index.html#BEGIN-phaser)
 
+<a id="pi"/>
+[**pi**](appendix-a-index.html#pi-constant) *(π)* &mdash;
+about 3.14159265394248, fundamental mathematical constant,
+ratio of a circle's circumference to its diameter
+important to the functions,
+see also: [*e*](#e), [*i*](#i)
+
 <a id="pipe"/>
-**pipe** &mdash; connection between 2 processes, move data (mostly only in
-one direction) without buffering, can also mean just the connection of several
-commands via [**==\>**](appendix-a-index.html#equal-equal-greater-op) and alike
+**pipe** &mdash;
+connection between 2 processes, move data (mostly only in one direction)
+without buffering, can also mean just the connection of several commands via 
+[**==\>**](appendix-a-index.html#equal-equal-greater-op) and alike
 
 <a id="POD"/>
 [**POD**](tablet-2-basic-syntax.html#pod)
-*(Plain Old Documentation)* &mdash; 
+*(Plain Old Documentation)* &mdash;
 a markup language to embeded documentation into Perl source code,
 has in Perl 6 the ability to store data into special variables 
 like [**\$=pod**](appendix-a-index.html#pod-pod-var) to be retrieved later,
@@ -472,10 +514,14 @@ a block that is given readonly [*parameters*](parameter) with
 
 <a id="precedence"/>
 **precedence** &mdash;
-[table of precedence](appendix-b-grouped.html#table-of-precedence)
+if an [*expression*](#expression) contains several [*operators*](#operator),
+they will applied in the order according to the
+[**table of precedence**](appendix-b-grouped.html#table-of-precedence) from the
+highest to the lowest level
 
 <a id="property"/>
-**property** &mdash; metadata of a variable set at [run time](#run-time)
+**property** &mdash;
+metadata of a variable set at [run time](#run-time)
 
 <a id="positional-parameter"/>
 **positional parameter** &mdash;
@@ -486,6 +532,9 @@ a block that is given readonly [*parameters*](parameter) with
 
 <a id="quasiquoting"/>
 **quasiquoting** &mdash;
+[**$~Quasi**](appendix-a-index.html#Quasi-slang-var),
+[**:code**](appendix-a-index.html#code-adverb), 
+[**quasi**](appendix-a-index.html#quasi)
 
 
 <a id="quote-protection"/>
@@ -541,7 +590,8 @@ when block is [compiled](#compilation) it becomes an object of the type
 or [**HardRoutine**](appendix-a-index.html#hardroutine-type)
 
 <a id="run-time"/>
-**run time** &mdash; time when execution hits a certain part of the program,
+**run time** &mdash;
+time when execution hits a certain part of the program,
 after [*compile time*](#compile-time)
 
 
@@ -551,27 +601,36 @@ after [*compile time*](#compile-time)
 **scalar** &mdash;
 
 <a id="scalar-context"/>
-**scalar context** &mdash; is in P6 called [item context](#item-context)
+**scalar context** &mdash;
+is in P6 called [item context](#item-context)
 
 <a id="scope"/>
 **scope** &mdash;
-area within which an identifier (like a variable) is usable,
-normally the current [block](#block)
+area within which an identifier like a [*variable*](#variable) or
+[*routine*](#routine) is usable,
+normally the current surrounding [*block*](#block) or (if there is none) the file
 
 <a id="sigil"/>
-**sigil** &mdash; character that serves as a prefix to categorize the
-following name, most prominent in Perl are the variable
-[sigils](appendix-b-grouped.html#sigils)
-: [**$**](appendix-a-index.html#dollar-sigil),
+**sigil** &mdash;
+character that serves as a prefix to categorize the following name,
+(stays without spacing in front of the actual name)
+most prominent in Perl are the variable [sigils](appendix-b-grouped.html#sigils):
+[**$**](appendix-a-index.html#dollar-sigil),
 [**@**](appendix-a-index.html#at-sigil) and
-[**%**](appendix-a-index.html#percent-sigil)
+[**%**](appendix-a-index.html#percent-sigil),
+they serve as different variable [*namespaces*](#namespace) and make
+[*interpolation*](#interpolation) much easier for human and the computer,
+for more info see the [variable tablet](tablet-3-variables.html)
+
 
 <a id="signature"/>
-**signature** &mdash; function parameters (left-hand side of a binding),
+**signature** &mdash;
+function parameters (left-hand side of a binding),
 surrounded by round parentheses in the definition of a [*routine*](#routine)
 
 <a id="single-quoting"/>
 **single quoting** &mdash;
+[**' '**](appendix-a-index.html#single-quotes)
 
 <a id="slang"/>
 **slang** &mdash;
@@ -603,7 +662,7 @@ up to the question if two [*signatures*](#signature) are compatible -
 all details in [that table](appendix-b-grouped.html#smartmatch).
 
 <a id="statement"/>
-**statement** &mdash; 
+**statement** &mdash;
 smallest standalone element that can be executed,
 everything smaller is just a [*term*](#term),
 larger combinations of them are [*expressions*](#expression)
@@ -615,11 +674,10 @@ larger combinations of them are [*expressions*](#expression)
 [ops](tablet-4-operators.html#string-context)
 
 <a id="subroutine"/>
-**subroutine** &mdash; 
+**subroutine** &mdash;
 Perl 5-ish term for [routine](#routine) because in Perl 5 there is only the
 *sub* command to build a callable block,
 but in Perl 6 there are [much more types](#Routine-types) hence the name change
-
 
 <a id="subrule"/>
 **subrule** &mdash;
@@ -627,6 +685,10 @@ piece of a [*regular expression*](#regex) that has a name,
 its findings are stored under that name,
 some of them were used so often, that their built into to language as
 [predefined subrules](appendix-b-grouped.html#subrules)
+
+<a id="symbol"/>
+**symbol** &mdash;
+
 
 # [T](#nav-top)
 
@@ -651,13 +713,25 @@ additional property of a variable, defined at [*compile time*](#compile-time),
 see [**but**](appendix-a-index.html#but), what other languages call
 *trait* Perl calls [role](#role)
 
+<a id="transliteration"/>
+**transliteration** &mdash;
+**quasiquoting** &mdash;
+[**$~Trans**](appendix-a-index.html#Quasi-slang-var),
+[**:trans**](appendix-a-index.html#trans-adverb),
+[**.trans**](appendix-a-index.html#trans),
+[**tr** ///](appendix-a-index.html#tr-op)
+
+
 <a id="twigil"/>
 [**twigil**](appendix-b-grouped.html#twigils) &mdash;
 second(ary) [*sigil*](#sigil) indicating a special property of a variable,
-[(more details here)](tablet-3-variables#twigils)
+[(more details here)](tablet-3-variables.html#twigils)
 
 <a id="type"/>
 **type** &mdash;
+
+<a id="type-constraint"/>
+**type constraint** &mdash;
 
 # [U](#nav-top)
 
@@ -667,6 +741,10 @@ format to save text in, that can contain almost any letter or symbol known to me
 not just [*ASCII*](#ASCII), its [fully supported](appendix-d-delta.html#unicode)
 by Perl 6, which means any part of a a program might use any character or symbol,
 strange names that start with UTF are most probably Unicode formats
+
+<a id="UTF-8"/>
+**UTF-8** &mdash;
+
 
 # [V](#nav-top)
 
@@ -684,7 +762,7 @@ strange names that start with UTF are most probably Unicode formats
 **xor** *(eXclusive OR)* &mdash;
 logical operation that has a the result **True** if only one of two
 operands (incoming information) is also true, otherwise result is **False**,
-following operator working with that logic:
+following operator working under that logic:
 [**\^**](appendix-a-index.html#junctive-xor),
 [**\^\^**](appendix-a-index.html#logical-xor),
 [**+\^**](appendix-a-index.html#numeric-xor),
@@ -692,7 +770,8 @@ following operator working with that logic:
 [**~\^**](appendix-a-index.html#string-xor),
 [**one**](appendix-a-index.html#one),
 [**xor**](appendix-a-index.html#xor) &mdash;
-other logical operations are: [*and*](#and), [*or*](#or), [*not*](#not)
+other operations in [*bool context*](#bool-context) are:
+[*and*](#and), [*or*](#or), [*not*](#not)
 
 
 # [Y](#nav-top)
