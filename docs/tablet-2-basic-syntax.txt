@@ -56,7 +56,7 @@ an instruction to the compiler's lexer that it should ignore whitespace there.
 In other words, the lexer doesn't consider those whitespaces at all. 
 
     my %hash = "foo" => 42, "bar" => 84; 
-    say %hash \{"foo"}; # Same as saying %hash{"foo"}
+    say %hash\  {"foo"}; # Same as saying %hash{"foo"}
 
     my $clazz = new Camel;
     $clazz\#some random comment
