@@ -173,12 +173,12 @@ altogether with the Q operator (like single or double quotes).
     :c aka :closure # anonymous blocks: {...}
     :f aka :function # callable routines: &name(...)
 
-For more info on those, see [scalar
-variable](ap-b-lookup.html#scalar), [array
-variable](ap-b-lookup.html#array), [hash
-variable](ap-b-lookup.html#hash), [anonymous
-blocks](tablet-6-blocks.html), and [callable
-routines](tablet-3-variables.html#callable).
+For more info on those, see 
+    * [scalar variable](ap-b-lookup.html#scalar), 
+    * [array variable](ap-b-lookup.html#array), 
+    * [hash variable](ap-b-lookup.html#hash), 
+    * [anonymous blocks](tablet-6-blocks.html), and 
+    * [callable routines](tablet-3-variables.html#callable).
 
     Q :b /\t\n/; # tab and new line character
     Q :s /$poem/; # content of $poem
@@ -219,10 +219,11 @@ following are synonyms:
     '...'
 
 
-The backslash (\\) here is only required to delimite itself and
-the single quote from its special meaning. Or to put it simply \\\\
-translates (or interpolates) to \\ and \\' to '. For anything more
-you need additional adverbs.
+We sometimes use the backslash (\\) to escape other special characters
+or the backslash itself. These are all part of the family of characters
+known as /escape sequences/. For example, `\\\\` translates to `\\`, while
+`\\'` translates to a `'`. You can avoid all that extra typing by using 
+adverbs. 
 
     'Welcome in Larry\'s madhouse'
     '\'\\'; # string contains: '\
@@ -267,7 +268,7 @@ The second group of aliases mark a modified version, where single and
 double quoted strings (inside the quote) are treated as one
 word. This is called *quote* protection.
 
-    my @steps = <one "two three">; # 3 steps to success: ["one", "\"two", "three\""]
+    my @steps = <one "two three">;   # 3 steps to success: ["one", "\"two", "three\""]
     my @steps = <<one "two three">>; # now only 2 steps: ["one", "two three"]
 
 
