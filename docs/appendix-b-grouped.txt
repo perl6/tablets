@@ -7,8 +7,8 @@ Variables
 Sigils
 ------
 
-All variables in Perl begin with a sigil. They mark the 3 primary var
-types. The 4th sigil is for callables ([routines](appendix-g-glossary.html#routine))
+All variables in Perl begin with a sigil. They mark the 3 primary var types.
+The 4th sigil is for callables ([routines](appendix-g-glossary.html#routine))
 and the 5th is for layers (namespaces) that organize the previous 4.
 
 ------------------------------------------------  --------------------------------------------------------------------------------------------------------
@@ -357,6 +357,8 @@ Operators
 Table of Precedence
 -------------------
 
+all level of [*precedence*](appendix-g-glossary.html#precedence)
+
 A   Level              Examples
 --  -----------------  ----------------------------------------------------
 N   Terms              `42 3.14 "eek" qq["foo"] $x :!verbose @$array`
@@ -408,9 +410,12 @@ Categories
 
 ### MAIN ###
 
-These are the categories of the main language grammar, stored in $~MAIN.
-The first category is the metacategory that can used to produce new ones.
-Sublanguages such as quoting and regexes can provide their own.
+These are the categories of the main language
+[*grammar*](appendix-g-glossary.html#grammar),
+as stored in [**$~MAIN**](appendix-a-index.html#MAIN-slang-var).
+The first category called "category" is the metacategory
+(for all [*slangs*](appendix-g-glossary.html#slang))
+that can be used to create new categories.
 
 -----------------------------------------------------------------------------------------------------------
 [`category:<prefix>`](appendix-a-index.html#category-category)
@@ -446,7 +451,8 @@ Sublanguages such as quoting and regexes can provide their own.
 
 ### Regex ###
 
-The default Regex language as stored in $~Regex has following categories:
+The default [*regex*](appendix-g-glossary.html#regex) language as stored in 
+[**$~Regex**](appendix-a-index.html#Regex-slag-var) has following categories:
 
 ------------------------------------------------------------------------
 [`assertion:sym<!>`](appendix-a-index.html#assertion-category)

@@ -634,14 +634,16 @@ surrounded by round parentheses in the definition of a [*routine*](#routine)
 
 <a id="slang"/>
 **slang** &mdash;
-sublanguages of Perl 6, quoting or [*regular expression*](#regular expression)
-are completely independent languages, the grammar to parse them is mostly stored
-in [special variables](appendix-b-grouped.html#slang-variables)
-with the [*twigil*](#twigil) **\~**, 
-[**\$\~MAIN**](appendix-a-index.html#MAIN-lang-var) (main language),
-you can change or alter them by using the keyword 
-[**augment**](appendix-a-index.html#augment)
-or [**supersede**](appendix-a-index.html#supersede)
+Perl 6 is a family of languages containing the the main language,
+[*quoting*](#quoting), [*regular expressions*](#regular expression) and more.
+These sublanguages are called slangs.
+Each slang has a completely independent set of rules (a [*grammar*](#grammar))
+which is stored in a [slang variable](appendix-b-grouped.html#slang-variables).
+The slang variables have the [*twigil*](#twigil) **\~** like in 
+[**\$\~MAIN**](appendix-a-index.html#MAIN-lang-var) (main language).
+You can change or alter them by using the keywords 
+[**augment**](appendix-a-index.html#augment) and
+[**supersede**](appendix-a-index.html#supersede).
 
 <a id="slice"/>
 **slice** &mdash;
@@ -696,6 +698,9 @@ some of them were used so often, that their built into to language as
 **term** &mdash;
 a syntax "atom" like a pair of brackets, an [operator](#operator) or a value(4.32),
 not to be confused with [*expression*](#expression)
+
+<a id="terminator"/>
+**terminator** &mdash;
 
 <a id="test-method"/>
 **test method** &mdash;
