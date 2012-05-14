@@ -3730,14 +3730,16 @@ like [**\***](#asterisk-metachar)
 <a id="Quasi-slang-var"/>
 **$\~Quasi**
 [*«special var»*](appendix-b-grouped.html#slang-variables) &mdash;
-current [grammar](#grammar) of the quasiquoting language
+current [grammar](appendix-g-glossary.html#grammar) of the 
+[*quasiquoting*](appendix-g-glossary.html#quasiquoting) language
 
 <a id="quasi"/>
 **quasi**
 *«block modifier»* &mdash;
-quasiquoting, the following commented (mostly in curly brackets)
-will be [*compiled*](appendix-g-glossary.html#compilation) and the
-[*AST*](appendix-g-glossary.html#AST) will be returned as result  &mdash;
+declares following [*block*](appendix-g-glossary.html#block) as
+[*quasiquotes*](appendix-g-glossary.html#quasiquoting) code,
+it will be [*compiled*](appendix-g-glossary.html#compilation) and the
+[*AST*](appendix-g-glossary.html#AST) will be returned &mdash;
 see also: [**:code**](#code-adverb)
 
 <a id="Quote-slang-var"/>

@@ -222,9 +222,11 @@ programming style in which parameters and return values from
 [*signatures*](#signature)
 
 <a id="double-quoting"/>
-**double quoting** &mdash;
-[**" "**](appendix-a-index.html#double-quotes)
-
+[**double quoting**](appendix-a-index.html#double-quotes) &mdash; 
+means literally to surround text by double quotes which look like this: **" "**.
+In opposite to [*single qouting*](single-quoting) a lot of character will not
+taken literally but mark things to be [*evaluated*](#evaluated).
+See also: [*qouting*](#quoting).
 
 # [E](#nav-top)
 
@@ -236,7 +238,7 @@ important to the functions
 see also: [*i*](#i), [*pi*](#pi)
 
 <a id="encoding"/>
-**encoding** &mdash; ASCII UTF-8
+**encoding** &mdash; [*ASCII*](#ASCII) [*UTF-8*](#UTF-8)
 
 <a id="evaluation"/>
 **evaluation** &mdash;
@@ -531,11 +533,11 @@ metadata of a variable set at [run time](#run-time)
 
 
 <a id="quasiquoting"/>
-**quasiquoting** &mdash; 
-[**$~Quasi**](appendix-a-index.html#Quasi-slang-var),
-[**:code**](appendix-a-index.html#code-adverb), 
-[**quasi**](appendix-a-index.html#quasi)
-
+[**quasiquoting**](appendix-a-index.html#quasi) &mdash;
+differs a bit from normal [*quoting*](#quoting) operations and has thatswhy its
+own [*slang*](#slang) variable [**$~Quasi**](appendix-a-index.html#Quasi-slang-var).
+It means to embrace a piece of code that will be [*compiled*](#compilation)
+but the result will be just the [*AST*](#AST).
 
 <a id="quote-protection"/>
 **quote protection** &mdash;
@@ -554,6 +556,13 @@ that might also be known to shell users: `<these are 'four words'>`
 
 <a id="quoting"/>
 **quoting** &mdash;
+means to encompass text by symbols like quoting marks. 
+This text will be processed and then counted as one value of the [*type*](#type)
+[**Str**](appendix-a-index.html#Str-type). The rules ([*grammar*](#grammar))
+of this process are stored in [**$~Quote**](appendix-a-index.html#Quote-slang-var).
+See also:
+[*single quoting*](#single quoting), [*double quoting*](#double quoting)
+[*heredocs*](#heredocs),             [*quasiquoting*](#quasiquoting)
 
 
 # [R](#nav-top)
@@ -612,26 +621,28 @@ normally the current surrounding [*block*](#block) or (if there is none) the fil
 
 <a id="sigil"/>
 **sigil** &mdash;
-Character that serves as a prefix to categorize the following name
+Character that serves as a [*prefix*](#prefix) to categorize the following name
 ([*symbol*](#symbol)). It stays in front of the actual name without spacing.
 Most prominent in Perl are the variable [sigils](appendix-b-grouped.html#sigils):
 [**$**](appendix-a-index.html#dollar-sigil),
 [**@**](appendix-a-index.html#at-sigil) and
-[**%**](appendix-a-index.html#percent-sigil),
-they mark the three different variable [*namespaces*](#namespace)
+[**%**](appendix-a-index.html#percent-sigil).
+They mark the three different variable [*namespaces*](#namespace)
 ([*scalar*](#scalar), [*array*](#array) and [*hash*](#hash)) and make
-[*interpolation*](#interpolation) much easier for human and the computer,
-for more info see the [variable tablet](tablet-3-variables.html).
+[*interpolation*](#interpolation) much easier for human and the computer.
 Perl 6 knows also [*secondary sigils*](#twigil).
+For more info see the [variable tablet](tablet-3-variables.html).
 
 <a id="signature"/>
 **signature** &mdash;
-function parameters (left-hand side of a binding),
-surrounded by round parentheses in the definition of a [*routine*](#routine)
+definition of a [*routines*](#routine) [*parameters*](#parameter)
+(left-hand side of a binding), surrounded by round parentheses
 
 <a id="single-quoting"/>
-**single quoting** &mdash;
-[**' '**](appendix-a-index.html#single-quotes)
+[**single quoting**](appendix-a-index.html#single-quotes) &mdash;
+means to surround text by single quotes which look like this: **' '**.
+Every sign in this text will be understood literally, except **\\** and **\'**.
+See also: [*double qouting*](#double-quoting) and [*qouting*](#quoting).
 
 <a id="slang"/>
 **slang** &mdash;
@@ -648,7 +659,7 @@ You can change or alter them by using the keywords
 
 <a id="slice"/>
 **slice** &mdash;
-part of an array or list
+part of an [*array*](#array) or [*list*](#list)
 
 <a id="slurpy-array"/>
 **slurpy array** &mdash;
