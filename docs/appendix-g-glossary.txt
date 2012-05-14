@@ -316,6 +316,12 @@ square root of -1, fundamental mathematical constant to build
 important to the functions ,
 see also: [*e*](#e), [*pi*](#pi)
 
+<a id="inheritance"/>
+**inheritance** &mdash;
+
+<a id="instance"/>
+**instance** &mdash;
+
 <a id="interpolation"/>
 **interpolation** &mdash;
 
@@ -343,7 +349,7 @@ Sometimes its meant as a specific repetition.
 <a id="junction"/>
 [**junction**](tablet-4-operators.html#Junctions) &mdash;
 a [type of value](appendix-a-index.html#Junction-type) that holds a logical
-combination of several values, example: (A and B) or C, 
+combination of several values,like: (A and B) or C, 
 create them with [junctive ops](appendix-b-grouped.html#junctions)
 
 # [K](#nav-top)
@@ -598,6 +604,12 @@ a [whole page](tablet-9-regexes.html) is dedicated just about that subject
 
 <a id="role"/>
 **role** &mdash;
+is just a group of [*methods*](#method) that can be added to or removed from an
+[*object*](#object) or [*class*](#class) any time. 
+But it can't be [*instantiated*](#instance) nor [*inherited*](#inheritance)
+from like from a *class*.
+The keyword [**role**](appendix-a-index.html#role) [*declares*](#declarator)
+the following [*block*](#block) as role.
 
 <a id="routine"/>
 **routine** &mdash;
@@ -620,13 +632,14 @@ after [*compile time*](#compile-time)
 
 <a id="scalar-context"/>
 **scalar context** &mdash;
-is in P6 called [item context](#item-context)
+is called in P6 [*item context*](#item-context).
 
 <a id="scope"/>
 **scope** &mdash;
-area within which an identifier like a [*variable*](#variable) or
-[*routine*](#routine) is usable,
-normally the current surrounding [*block*](#block) or (if there is none) the file
+area within which an identifier 
+([*symbol*](#symbol) like a [*variable*](#variable) or [*routine*](#routine))
+is usable. It is normally the current surrounding [*block*](#block)
+or (if there is none) the current file.
 
 <a id="sigil"/>
 **sigil** &mdash;
