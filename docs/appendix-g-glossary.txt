@@ -612,16 +612,17 @@ normally the current surrounding [*block*](#block) or (if there is none) the fil
 
 <a id="sigil"/>
 **sigil** &mdash;
-character that serves as a prefix to categorize the following name,
-(stays without spacing in front of the actual name)
-most prominent in Perl are the variable [sigils](appendix-b-grouped.html#sigils):
+Character that serves as a prefix to categorize the following name
+([*symbol*](#symbol)). It stays in front of the actual name without spacing.
+Most prominent in Perl are the variable [sigils](appendix-b-grouped.html#sigils):
 [**$**](appendix-a-index.html#dollar-sigil),
 [**@**](appendix-a-index.html#at-sigil) and
 [**%**](appendix-a-index.html#percent-sigil),
-they serve as different variable [*namespaces*](#namespace) and make
+they mark the three different variable [*namespaces*](#namespace)
+([*scalar*](#scalar), [*array*](#array) and [*hash*](#hash)) and make
 [*interpolation*](#interpolation) much easier for human and the computer,
-for more info see the [variable tablet](tablet-3-variables.html)
-
+for more info see the [variable tablet](tablet-3-variables.html).
+Perl 6 knows also [*secondary sigils*](#twigil).
 
 <a id="signature"/>
 **signature** &mdash;
@@ -670,7 +671,7 @@ everything smaller is just a [*term*](#term),
 larger combinations of them are [*expressions*](#expression)
 
 <a id="string-context"/>
-**string context** &mdash;
+**string context** &mdash; 
 [*context*](#context)
 [**Str**](appendix-a-index.html#Str-type)
 [ops](tablet-4-operators.html#string-context)
