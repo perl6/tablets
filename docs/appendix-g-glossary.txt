@@ -222,7 +222,7 @@ programming style in which parameters and return values from
 [*signatures*](#signature)
 
 <a id="double-quoting"/>
-[**double quoting**](appendix-a-index.html#double-quotes) &mdash; 
+[**double quoting**](appendix-a-index.html#double-quotes) &mdash;
 means literally to surround text by double quotes which look like this: **" "**.
 In opposite to [*single qouting*](single-quoting) a lot of character will not
 taken literally but mark things to be [*evaluated*](#evaluated).
@@ -410,7 +410,8 @@ see also: [**multi**](appendix-a-index.html#multi)
 **named capure** &mdash;
 
 <a id="named-parameter"/>
-**named parameter** &mdash;
+**named parameter** &mdash; 
+[*parameter*](#parameter)
 
 <a id="namespace"/>
 **namespace** &mdash;
@@ -521,12 +522,16 @@ they will applied in the order according to the
 [**table of precedence**](appendix-b-grouped.html#table-of-precedence) from the
 highest to the lowest level
 
+<a id="prefix"/>
+**prefix** &mdash;
+
 <a id="property"/>
 **property** &mdash;
 metadata of a variable set at [run time](#run-time)
 
 <a id="positional-parameter"/>
-**positional parameter** &mdash;
+**positional parameter** &mdash; 
+[*parameter*](#parameter)
 
 
 # [Q](#nav-top)
