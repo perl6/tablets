@@ -1549,7 +1549,7 @@ changes owner of files
 
 <a id="chroot"/>
 [**chroot**](tablet-5-io.html#chroot) &mdash;
-change root directory on POSIX systems
+change root directory on POSIX like systems
 
 <a id="cis"/>
 **cis**
@@ -1629,7 +1629,7 @@ a not visible character that is aimed to control the console output,
 <a id="code"/><a id="code-context"/><a id="code-op"/>
 **code**
 [*«context op»*](appendix-b-grouped.html#contextualizers) &mdash;
-forces [*callable context*](appendix-g-glossary.html#code-context) ,
+forces [*callable context*](appendix-g-glossary.html#code-context),
 alias to [**&**()](#ampersand-context-op)
 
 <a id="code-adverb"/>
@@ -1666,7 +1666,7 @@ default pattern is [`rx/./`](#rx)
 <a id="COMMENT-pod-var"/>
 **@=COMMENT**
 [*«special var»*](appendix-b-grouped.html#pod-variables) &mdash;
-all the comment blocks in the file
+contains all the comment blocks of that file
 
 <a id="Complex-type"/>
 **Complex**

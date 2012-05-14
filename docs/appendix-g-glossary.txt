@@ -313,7 +313,7 @@ out of several [codepoints](#codepoint)
 [**i**](appendix-a-index.html#i-constant) *(imaginary number)* &mdash;
 square root of -1, fundamental mathematical constant to build 
 [*complex number*](#complex-number), displayed as `0+1i`
-important to the functions,
+important to the functions ,
 see also: [*e*](#e), [*pi*](#pi)
 
 <a id="interpolation"/>
@@ -331,8 +331,9 @@ is called in Perl 5 [scalar context](#scalar-context)
 
 <a id="iteration"/>
 **iteration** &mdash;
-repeated executing of a term or [*block*](#block),
-enforced by [*iterators*](#iterator)
+is a repeated executing of a term or [*block*](#block),
+enforced by [*iterators*](#iterator). 
+Sometimes its meant as a specific repetition.
 
 <a id="iterator"/>
 **iterator** &mdash; [iterators](appendix-b-grouped.html#loops)
@@ -435,8 +436,8 @@ other operations in [*bool context*](#bool-context) are:
 
 <a id="OOP"/>
 **OOP** *(object oriented orogramming)* &mdash;
-programming paradigm (style), that arranges data and functions
-that belong together into so called objects
+programming paradigm (style), that in which functions ([*routines*](#routine))
+are combined with the data the operate on to so called [*objects*](#object).
 
 <a id="operand"/>
 **operand** &mdash;
@@ -471,12 +472,15 @@ a slot for an [argument](#argument) that a [*routine*](#routine) accepts,
 it usually has a [*type*](#type) that sets limits what values are acceptable,
 there are *required parameter*, *optional parameter*,
 [*positional parameter*](#positional-parameter) and [named parameter](#named-parameter),
-sum of all parameters is called [signature](#signature)
+sum of all parameters is called [*signature*](#signature) &mdash; 
+example: `sub sum (Num $summand1, Num $summand2) { return $summand1 + $summand2 }`
+later: `$s = sum(3, 4);`, \$summand1 and \$summand2 are parameter of sum,
+the values 3 and 4 were the arguments of the specific call of sum
 
 <a id="parsetree"/>
 **parsetree** &mdash;
-hierarchical data representing the logical structure
-of a program, also called [*AST*](#AST)
+hierarchical data representing the logical structure of a program,
+also called [*AST*](#AST)
 
 <a id="parsing"/>
 **parsing** &mdash;
