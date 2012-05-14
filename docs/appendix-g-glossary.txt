@@ -68,8 +68,8 @@ to enable the rest of the world more fully there is [*unicode*](#unicode)
 tree like data structure, in which source code is transformed,
 while [parsing](#parsing) it
 
-<a id="atribute"/>
-**atribute** &mdash;
+<a id="attribute"/>
+**attribute** &mdash;
 fundamentally just a [*variable*] that belongs to an [*object*](#object)
 
 
@@ -88,9 +88,10 @@ pattern didn't match
 <a id="binding"/>
 [**binding**](tablet-3-variables.html#binding) &mdash;
 making two variables share the same content by pointing to same
-memory location, done i Perl 6 with 
-[**:=**](appendix-a-index.html#runtime-binding-op) 
-and [**::=**](appendix-a-index.html#compiletime-binding-op)
+memory location. Done in Perl 6 with 
+[**:=**](appendix-a-index.html#runtime-binding-op) at [*runtime*](#runtime) and
+with [**::=**](appendix-a-index.html#compiletime-binding-op) at 
+[*compile time*](#compile-time).
 
 <a id="block"/>
 **block** &mdash;
@@ -99,7 +100,7 @@ syntactically just a piece of code inside curly brackets
 object of the type [**Block**](appendix-a-index.html#block-type)
 
 <a id="bool-context"/>
-**boolean context** &mdash;
+**boolean context** &mdash; 
 [**Bool**](appendix-a-index.html#Bool-type)
 [ops](tablet-4-operators.html#bool-context)
 
@@ -107,8 +108,8 @@ object of the type [**Block**](appendix-a-index.html#block-type)
 
 <a id="camelia"/>
 **camelia** &mdash;
-name of the the Perl 6 mascot, she supposed to look happy,
-but create tornados in the amazon or something like that
+name of the the Perl 6 mascot. She supposed to look happy,
+but can also create tornados in the amazon or something like that.
 
 <a id="capture"/>
 **capture** &mdash;
@@ -248,6 +249,9 @@ current content, cometimes more like interpreting or compiling something;
 inside quotes and [regexes](#regex) it has the first meaning,
 the command [**eval**](appendix-a-index.html#eval) and
 [**evalfile**](appendix-a-index.html#evalfile) does the second.
+
+<a id="exception"/>
+**exception** &mdash;
 
 <a id="expression"/>
 **expression** &mdash;
@@ -585,13 +589,12 @@ See also:
 <a id="radian"/>
 **radian** &mdash;
 
-
 <a id="reference"/>
 **reference** *(or pointer)* &mdash;
-address of a specific location in the computers memory,
-officially there are no references in Perl 6, 
+address of or pointer to a specific location in the computers memory.
+Officially there are no references in Perl 6, 
 but there are several container types that can hold other container of values,
-and there is [binding](#binding)
+and there is [binding](#binding).
 
 <a id="regex"/>
 **regex** *(regular expression)* &mdash;
@@ -605,11 +608,14 @@ a [whole page](tablet-9-regexes.html) is dedicated just about that subject
 <a id="role"/>
 **role** &mdash;
 is just a group of [*methods*](#method) that can be added to or removed from an
-[*object*](#object) or [*class*](#class) any time. 
-But it can't be [*instantiated*](#instance) nor [*inherited*](#inheritance)
+[*object*](#object) or [*class*](#class) at any time. 
+Before adding there will be a check at [*runtime*](#runtime) if it overwrites
+an already existing *method* or a needed [*attribute*](#attribue) exists.
+In case of violation an [*exception*](#exception) will be raised.
+And a *role* can't be [*instantiated*](#instance) nor [*inherited*](#inheritance)
 from like from a *class*.
 The keyword [**role**](appendix-a-index.html#role) [*declares*](#declarator)
-the following [*block*](#block) as role.
+the following [*block*](#block) to be a role.
 
 <a id="routine"/>
 **routine** &mdash;
