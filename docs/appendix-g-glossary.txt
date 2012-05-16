@@ -25,8 +25,8 @@ within a given execution phase
 
 <a id="and"/>
 **and** &mdash;
-logical operation which results in [**True**](appendix-a-index.html#True)
-only in case  both operands (incoming information) are also **True**,
+logical operation which results in [**True**](appendix-a-index.html#True) only
+in case  both [*operands*](#operand) (incoming information) are also **True**,
 otherwise the result is [**False**](appendix-a-index.html#True),
 following [*operator*](#operator) are working under that logic:
 [**|**](appendix-a-index.html#junctive-and),
@@ -463,8 +463,8 @@ are combined with the data the operate on to so called [*objects*](#object).
 <a id="or"/>
 **or** &mdash;
 logical operation that has a the result **True** if at least one of two
-operands (incoming information) is also true, otherwise result is **False**
-following operator working under that logic:
+[*operands*](#operand) (incoming information) is also true,
+otherwise result is **False**. Following operator working under that logic:
 [**|**](appendix-a-index.html#junctive-or),
 [**||**](appendix-a-index.html#logical-or),
 [**//**](appendix-a-index.html#defined-or),
@@ -705,8 +705,8 @@ array [*parameter*](#parameter) that receives (slurps) all remaining
 <a id="smartmatch"/>
 **smartmatch** &mdash;
 The original Perl 6 *smartmatch* [*operator*](#operator) looks like this:
-[**~~**](appendix-a-index.html#smartmatch-op) and does an universal
-"compare this with that" dependend on the [*types*](#type) of the [*operands*](#operand).
+[**~~**](appendix-a-index.html#smartmatch-op) and does an universal "compare
+this with that" dependend on the [*types*](#type) of the [*operands*](#operand).
 That can range from simple comparison of two values to applying a [*regex*](#regex)
 up to the question if two [*signatures*](#signature) are compatible -
 all details in [that table](appendix-b-grouped.html#smartmatch).
@@ -813,8 +813,8 @@ strange names that start with UTF are most probably Unicode formats
 <a id="xor"/>
 **xor** *(eXclusive OR)* &mdash;
 logical operation that has a the result **True** if only one of two
-operands (incoming information) is also true, otherwise result is **False**,
-following operator working under that logic:
+[*operands*](#operand) (incoming information) is also true,
+otherwise result is **False**. Following operator working under that logic:
 [**\^**](appendix-a-index.html#junctive-xor),
 [**\^\^**](appendix-a-index.html#logical-xor),
 [**+\^**](appendix-a-index.html#numeric-xor),
