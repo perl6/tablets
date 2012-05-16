@@ -71,12 +71,13 @@ If you like to help, [look here](https://github.com/perl6/tablets).
 (most drastic changes beween 5 and 6)
 
 [Appendix E: Exciting](appendix-e-exciting.html)
-(Excellent, Best-of, Appetizer tour)
+(excellent, best-of, appetizer tour)
 
 [Appendix F: FAQ](appendix-f-faq.html)
 (frequently asked questions)
 
 [Appendix G: Glossary](appendix-g-glossary.html)
+(complicated words explained)
 
 [Appendix H: Href](appendix-h-href.html)
 (links to other resources)
