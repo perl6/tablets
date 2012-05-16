@@ -16,7 +16,7 @@ too easy, read [the specs](http://perlcabal.org/syn/).
 This documentation is currently **under construction**, we mean that literally.
 Therefore the data presented is partial and subject to drastic changes.
 
-Tablets 1-4 have some substance, but most complete are Appenices A, B, D and E.
+Tablets 1-4 have some substance, but most complete are Appenices A, B, D, G, H.
 
 If you like to help, [look here](https://github.com/perl6/tablets).
 
