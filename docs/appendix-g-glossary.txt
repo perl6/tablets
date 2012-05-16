@@ -101,6 +101,7 @@ object of the type [**Block**](appendix-a-index.html#block-type)
 
 <a id="bool-context"/>
 **boolean context** &mdash; 
+[*context*](#context)
 [**Bool**](appendix-a-index.html#Bool-type)
 [ops](tablet-4-operators.html#bool-context)
 
@@ -143,7 +144,7 @@ in Perl 6 there are just [objects](#object) representing a routine that can be
 
 <a id="code-context"/>
 **code context** &mdash;
-also called callable context
+also called callable [*context*](#context)
 
 <a id="coercion"/>
 **coercion** &mdash;
@@ -213,8 +214,8 @@ see also [declarand](#declarand)
 **delegation** &mdash;
 is a techtique where an [*object*](#object) has a [*method*](#method) that just
 calls a *method* of one of its [*attributes*](#attribute). If the object is
-a space ship which has a clock is would allow you to call `$ship.time` instead
-of `$ship.clock.time`
+a space ship which has a clock it would allow you to call `$ship.time` instead
+of `$ship.clock.time`.
 
 <a id="design-by-contract"/>
 **design by contract** &mdash;
@@ -304,7 +305,7 @@ out of several [codepoints](#codepoint)
 
 <a id="hash-context"/>
 **hash context** &mdash;
-[hash](#hash) [context](#context)
+[*hash*](#hash) [*context*](#context)
 
 <a id="heredoc"/>
 **heredoc** &mdash; [quoting](#quoting)
@@ -367,10 +368,13 @@ create them with [junctive ops](appendix-b-grouped.html#junctions)
 **list** &mdash;
 
 <a id="list-context"/>
-**list context** &mdash; [**Array**](appendix-a-index.html#Array-type)
+**list context** &mdash; 
+[**Array**](appendix-a-index.html#Array-type)
+[*context*](#context)
 
 <a id="list-flattening"/>
 **list flattening** &mdash;
+
 
 <a id="LOL"/>
 **LOL** *(List of List)* &mdash;
@@ -379,7 +383,7 @@ other lists, like: `[[1,2,3], [4,5,6]]` which is a list with 2 elements
 
 <a id="lol-context"/>
 **lol context** &mdash;
-[**lol**](appendix-a-index.html#lol) context means these sublists
+[**lol**](appendix-a-index.html#lol) [*context*](#context) means these sublists
 (as explained in [*LOL*](#LOL)) will not [*flattened*](#list-flattening)
 
 <a id="LTM"/>
@@ -390,9 +394,7 @@ because of looking for the longest alternative
 
 <a id="lvalue"/>
 **lvalue** &mdash;
-when searching a pattern with alternatives (sub|substr)
-the search will continue after finding the pattern 'sub'
-because of looking for the longest alternative
+
 
 # [M](#nav-top)
 
@@ -437,7 +439,10 @@ other operations in [*bool context*](#bool-context) are:
 [*and*](#and), [*or*](#or), [*xor*](#xor) 
 
 <a id="numeric-context"/>
-**numeric context** &mdash; [**Num**](appendix-a-index.html#Num-type) [*type*](#type)
+**numeric context** &mdash; 
+[**Num**](appendix-a-index.html#Num-type)
+[*type*](#type)
+[*context*](#context)
 
 # [O](#nav-top)
 
@@ -607,10 +612,10 @@ a [whole page](tablet-9-regexes.html) is dedicated just about that subject
 
 <a id="role"/>
 **role** &mdash;
-is just a group of [*methods*](#method) that can be added to or removed from an
-[*object*](#object) or [*class*](#class) at any time. 
+is just a group of [*methods*](#method) and [*attributes*](#attribue) that can be
+added to or removed from an [*object*](#object) or [*class*](#class) at any time. 
 Before adding there will be a check at [*runtime*](#runtime) if it overwrites
-an already existing *method* or a needed [*attribute*](#attribue) exists.
+an already existing *method* or a needed *attribute* exists.
 In case of violation an [*exception*](#exception) will be raised.
 And a *role* can't be [*instantiated*](#instance) nor [*inherited*](#inheritance)
 from like from a *class*.
@@ -619,22 +624,25 @@ the following [*block*](#block) to be a role.
 
 <a id="routine"/>
 **routine** &mdash;
-[block](#block) of code callable by name,
-can have a [*signature*](#signature) and a return type,
-when block is [compiled](#compilation) it becomes an object of the type
-[**SoftRoutine**](appendix-a-index.html#softroutine-type)
-or [**HardRoutine**](appendix-a-index.html#hardroutine-type)
+[block](#block) of code callable by name.
+It can have a [*signature*](#signature) and a return value.
+When the *routine* is [compiled](#compilation) it becomes an object of the
+[*type*](#type) [**SoftRoutine**](appendix-a-index.html#softroutine-type)
+or [**HardRoutine**](appendix-a-index.html#hardroutine-type).
 
 <a id="run-time"/>
 **run time** &mdash;
 time when execution hits a certain part of the program,
-after [*compile time*](#compile-time)
+after [*compile time*](#compile-time).
 
 
 # [S](#nav-top)
 
 <a id="scalar"/>
-**scalar** &mdash;
+**scalar** &mdash; 
+container type for a single value which can be practically every value,
+incluing any container. [Scalar variables](tablet-3-variables.html#scalar)
+have the [sigil](#sigil) [**$**](appendix-a-index.html#dollar-sigil).
 
 <a id="scalar-context"/>
 **scalar context** &mdash;
