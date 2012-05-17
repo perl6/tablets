@@ -2081,9 +2081,10 @@ normal execution, which Perl 6 can both generate and handle
 <a id="exec-adverb"/>
 **:exec**
 [*«quoting adverb»*](appendix-b-grouped.html#quoting-adverbs) &mdash;
-quoted [string](#Str) will be [*evaluated*](appendix-g-glossary.html#evaluation)
-as Perl code (like [**eval**](#eval)) replaced with its result, alias to
-**Q :x** and [**qx/.../**](#qx-op)
+quoted [string](appendix-g-glossary.html#string) will be 
+executed as command (as typed into a shell) and results returned,
+long alternative of [**:x**](#x-adverb),
+used by [**qx/.../**](#qx-op) and [**qqx/.../**](#qqx-op)
 
 <a id="EXECUTABLE-NAME-global-var"/>
 **\$\*EXECUTABLE\_NAME**
@@ -3704,9 +3705,10 @@ and [`Q :path /.../`](#path-adverb)
 [*«quoting op»*](appendix-b-grouped.html#quoting-ops) &mdash;
 [*double quoting*](appendix-g-glossary.html#double-quoting),
 **q** with interpolation of variables, closures, and special chars,
-alias to [**"..."**](#double-quotes) and `Q :s, :a, :h, :f, :c, :b /.../` and
-`Q` [**`:qq`**](#qq-adverb) `/.../` and
-`Q` [**`:double`**](#double-averb) `/.../`
+alias to [**"..."**](#double-quotes) and `Q` [**`:qq`**](#qq-adverb) `/.../` and
+`Q` [**`:double`**](#double-averb) `/.../` and [**`Q`**](#Q-op)
+[**`s`**](#s-adverb) [**`a`**](#a-adverb) [**`h`**](#h-adverb)
+[**`f`**](#f-adverb) [**`c`**](#c-adverb) [**`b`**](#b-adverb) `/.../`,
 
 <a id="qq-adverb"/>
 [**:qq**](tablet-2-basic-syntax.html#double-quotes)
@@ -3714,16 +3716,18 @@ alias to [**"..."**](#double-quotes) and `Q :s, :a, :h, :f, :c, :b /.../` and
 activates [*double quoting*](appendix-g-glossary.html#double-quoting),
 **q** with interpolation of [*variables*](appendix-g-glossary.html#variable)
 and [blocks](appendix-g-glossary.html#block),
-`Q :qq` is alias to [**"..."**](#double-quotes),
-[**qq/.../**](#qq-op) and `Q :s, :a, :h, :f, :c, :b /.../`,
+`Q :qq` is alias to [**"..."**](#double-quotes), [**qq/.../**](#qq-op) and
+[**`Q`**](#Q-op) [**`s`**](#s-adverb) [**`a`**](#a-adverb) [**`h`**](#h-adverb)
+[**`f`**](#f-adverb) [**`c`**](#c-adverb) [**`b`**](#b-adverb) `/.../`,
 short alternative for [**:double**](#double-adverb)
 
 <a id="qqx"/><a id="qqx-op"/>
 [**qqx**](tablet-2-basic-syntax.html#code)
 [*«quoting op»*](appendix-b-grouped.html#quoting-ops) &mdash;
 run a [*double quoted*](appendix-g-glossary.html#souble-quoting)
-[*string*](appendix-g-glossary.html#string) as system call (shell command)
-and return results &mdash;
+[*string*](appendix-g-glossary.html#string) as system call (as typed into a shell)
+and return results,
+alias to: [**`Q`**](#Q-op) [**`:x`**](#x-adverb) [**`:qq`**](#qq-adverb) `/.../` &mdash;
 see also: [**qx**](#qx-op) and [**qq**](#qq-op)
 
 <a id="quantifier"/>
@@ -3793,8 +3797,9 @@ alias to [**\< \>**](#angle-brackets-op) or
 [**qx**](tablet-2-basic-syntax.html#code)
 [*«quoting op»*](appendix-b-grouped.html#quoting-ops) &mdash;
 run a [*single quoted*](appendix-g-glossary.html#single-quoting)
-[*string*](appendix-g-glossary.html#string) as system call (shell command)
-and return results &mdash;
+[*string*](appendix-g-glossary.html#string) as system call (as typed into a shell)
+and return results,
+alias to: [**`Q`**](#Q-op) [**`:x`**](#x-adverb) `/.../` &mdash;
 see also: [**qqx**](#qqx-op) and [**q**](#q-op)
 
 run a [*string*](appendix-g-glossary.html#string) as system call (shell command)
@@ -5009,9 +5014,10 @@ check if file is executable by effective uid ([**\$\*EUID**](#EUID-global-var))
 <a id="x-adverb"/>
 **:x**
 [*«quoting adverb»*](appendix-b-grouped.html#quoting-adverbs) &mdash;
-quoted string will be evaluated as Perl code (like [**eval**](#eval))
-and replaced with its result,
-alias to [**Q**](#Q-op) [**:exec**](#exec-adverb) **/.../** and [**qx/.../**](#qx-op)
+quoted [string](appendix-g-glossary.html#string) will be 
+executed as command (as typed into a shell) and results returned,
+short alternative of [**:exec**](#exec-adverb),
+used by [**qx/.../**](#qx-op) and [**qqx/.../**](#qqx-op)
 
 <a id="x-modifier"/>
 **:x** (<span class="you-provide">n</span>)

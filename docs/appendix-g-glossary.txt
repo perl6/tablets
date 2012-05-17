@@ -731,7 +731,8 @@ everything smaller is just a [*term*](#term),
 larger combinations of them are [*expressions*](#expression)
 
 <a id="string"/>
-**string** &mdash;
+**string** &mdash; 
+[Str](appendix-a-index.html#Str-type)
 
 <a id="string-context"/>
 **string context** &mdash; 
