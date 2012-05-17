@@ -3719,7 +3719,8 @@ short alternative for [**:double**](#double-adverb)
 <a id="qqx"/><a id="qqx-op"/>
 [**qqx**](tablet-2-basic-syntax.html#code)
 [*«quoting op»*](appendix-b-grouped.html#quoting-ops) &mdash;
-run as system call and return results, in Perl 5: *qx/.../*
+run as system call and return results, in Perl 5: *qx/.../* or *``* &mdash;
+see also: [**qx**](#qx-op)
 
 <a id="quantifier"/>
 **quantifier**
@@ -3787,8 +3788,10 @@ alias to [**\< \>**](#angle-brackets-op) or
 <a id="qx"/><a id="qx-op"/>
 [**qx**](tablet-2-basic-syntax.html#code)
 [*«quoting op»*](appendix-b-grouped.html#quoting-ops) &mdash;
-evaluate as Perl term (like [**eval**](#eval)) and return results (unlike Perl 5),
-alias to **Q [:x](#x-adverb) /.../** or **Q [:exec](#exec-adverb) /.../**
+evaluate of a string as Perl term (like [**eval**](#eval) does)
+and return results, (unlike Perl 5),
+alias to **Q [:x](#x-adverb) /.../** or **Q [:exec](#exec-adverb) /.../** &mdash;
+see also: [**qqx**](#qqx-op)
 
 
 
