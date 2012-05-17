@@ -226,9 +226,12 @@ programming style in which parameters and return values from
 <a id="double-quoting"/>
 [**double quoting**](appendix-a-index.html#double-quotes) &mdash;
 means literally to surround text by double quotes which look like this: **" "**.
-In opposite to [*single qouting*](single-quoting) a lot of character will not
-taken literally but mark things to be [*evaluated*](#evaluated).
-See also: [*qouting*](#quoting).
+In opposite to [*single qouting*](single-quoting) a lot of characters inside
+the quotes will not taken literally but mark things to be [*evaluated*](#evaluated).
+This are [*variables*](#variable) [*routines*](#rountine) and [*blocks*](#block).
+The [**qq** operator](appendix-a-index.html#qq-op) and the 
+[**qqx** operator](appendix-a-index.html#qqx-op) do this too.
+See also: [*qouting*](#quoting)
 
 # [E](#nav-top)
 
@@ -677,7 +680,10 @@ definition of a [*routines*](#routine) [*parameters*](#parameter)
 <a id="single-quoting"/>
 [**single quoting**](appendix-a-index.html#single-quotes) &mdash;
 means to surround text by single quotes which look like this: **' '**.
-Every sign in this text will be understood literally, except **\\** and **\'**.
+Every sign in this text will be understood literally, except **\\** and **\'**,
+which result in **\** and **'**.
+The [**q** operator](appendix-a-index.html#q-op) and the 
+[**qx** operator](appendix-a-index.html#qx-op) do the same thing.
 See also: [*double qouting*](#double-quoting) and [*qouting*](#quoting).
 
 <a id="slang"/>
@@ -716,6 +722,9 @@ all details in [that table](appendix-b-grouped.html#smartmatch).
 smallest standalone element that can be executed,
 everything smaller is just a [*term*](#term),
 larger combinations of them are [*expressions*](#expression)
+
+<a id="string"/>
+**string** &mdash;
 
 <a id="string-context"/>
 **string context** &mdash; 
