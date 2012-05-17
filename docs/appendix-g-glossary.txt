@@ -364,6 +364,9 @@ create them with [junctive ops](appendix-b-grouped.html#junctions)
 
 # [L](#nav-top)
 
+<a id="lazy"/>
+**lazy** &mdash;
+
 <a id="lexical-scope"/>
 **lexical scope** &mdash;
 
@@ -612,6 +615,10 @@ a [whole page](tablet-9-regexes.html) is dedicated just about that subject
 
 <a id="reify">
 **reify** &mdash;
+Since [*lists*](#list) are per default [*lazy*](#lazy) in Perl 6,
+it is possible that not all elements are known yet explicitly.
+However there is an internal pointer up to which element they are known,
+plus the internal command *reify* to compute the next element.
 
 <a id="role"/>
 **role** &mdash;
