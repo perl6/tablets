@@ -3707,18 +3707,18 @@ and [`Q :path /.../`](#path-adverb)
 **q** with interpolation of variables, closures, and special chars,
 alias to [**"..."**](#double-quotes) and `Q` [**`:qq`**](#qq-adverb) `/.../` and
 `Q` [**`:double`**](#double-averb) `/.../` and [**`Q`**](#Q-op)
-[**`s`**](#s-adverb) [**`a`**](#a-adverb) [**`h`**](#h-adverb)
-[**`f`**](#f-adverb) [**`c`**](#c-adverb) [**`b`**](#b-adverb) `/.../`,
+[**`:s`**](#s-adverb) [**`:a`**](#a-adverb) [**`:h`**](#h-adverb)
+[**`:f`**](#f-adverb) [**`:c`**](#c-adverb) [**`:b`**](#b-adverb) `/.../`,
 
 <a id="qq-adverb"/>
 [**:qq**](tablet-2-basic-syntax.html#double-quotes)
 [*«quoting adverb»*](appendix-b-grouped.html#quoting-adverbs) &mdash;
 activates [*double quoting*](appendix-g-glossary.html#double-quoting),
 **q** with interpolation of [*variables*](appendix-g-glossary.html#variable)
-and [blocks](appendix-g-glossary.html#block),
-`Q :qq` is alias to [**"..."**](#double-quotes), [**qq/.../**](#qq-op) and
-[**`Q`**](#Q-op) [**`s`**](#s-adverb) [**`a`**](#a-adverb) [**`h`**](#h-adverb)
-[**`f`**](#f-adverb) [**`c`**](#c-adverb) [**`b`**](#b-adverb) `/.../`,
+and [blocks](appendix-g-glossary.html#block), `Q :qq` is alias to 
+[**"..."**](#double-quotes), [**qq/.../**](#qq-op) and [**`Q`**](#Q-op)
+[**`:s`**](#s-adverb) [**`:a`**](#a-adverb) [**`:h`**](#h-adverb)
+[**`:f`**](#f-adverb) [**`:c`**](#c-adverb) [**`:b`**](#b-adverb) `/.../`,
 short alternative for [**:double**](#double-adverb)
 
 <a id="qqx"/><a id="qqx-op"/>
