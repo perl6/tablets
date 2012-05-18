@@ -830,6 +830,9 @@ To be used just inside of regexes (rx/.../, m/.../, s/.../.../ and tr/.../.../).
 [`\X[ ... ]`](appendix-a-index.html#backslash-X)  anything but the character given in hexadecimal (brackets optional)
 ------------------------------------------------  -------------------------------------------------------------------
 
+Zero-Width Boundaries
+---------------------
+
 zero-width boundaries begin with a pipe symbol.
 To negate put a ! in front of the pipe symbol.
 

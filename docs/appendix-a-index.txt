@@ -3728,7 +3728,7 @@ short alternative for [**:double**](#double-adverb)
 run a [*double quoted*](appendix-g-glossary.html#souble-quoting)
 [*string*](appendix-g-glossary.html#string) as system call (as typed into a shell)
 and return results,
-in Perl 5: *qx/.../* or *\`\`* &mdash;
+in Perl 5: *qx/.../* or *\`...\`* &mdash;
 alias to: [**`Q`**](#Q-op) [**`:x`**](#x-adverb) [**`:qq`**](#qq-adverb) `/.../` &mdash;
 see also: [**qx**](#qx-op) and [**qq**](#qq-op)
 
