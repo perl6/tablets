@@ -1400,7 +1400,7 @@ named character or control character
 
 <a id="pipe-c"/>
 **\<|c\>**
-[*«escape sequence»*](appendix-b-grouped.html#escape-sequences) &mdash;
+[*«escape sequence»*](appendix-b-grouped.html#zero-width-boundaries) &mdash;
 codepoint boundary, zero width space between two
 [*unicode*](appendix-g-glossary.html#unicode) codepoints,
 opposite is **\<!|c\>** &mdash;
@@ -2311,7 +2311,7 @@ short for [**:global**](#global-modifier)
 
 <a id="pipe-g"/>
 **\<|g\>**
-[*«escape sequence»*](appendix-b-grouped.html#escape-sequences) &mdash;
+[*«escape sequence»*](appendix-b-grouped.html#zero-width-boundaries) &mdash;
 grapheme boundary, zero width space between two 
 unicode [*graphemes*](appendix-g-glossary.html#grapheme),
 opposite is **\<!|g\>** &mdash;
@@ -4829,7 +4829,7 @@ A..Z, a..z,0..9, "\_")
 
 <a id="pipe-w"/>
 **\<|w\>**
-[*«escape sequence»*](appendix-b-grouped.html#escape-sequences) &mdash;
+[*«escape sequence»*](appendix-b-grouped.html#zero-width-boundaries) &mdash;
 word boundary, zero width space between two **\\w**, alias to
 [**\<wb\>**](#wb-subrule), opposite is **\<!|w\>**  &mdash;
 see also: [**\<|c\>**](#pipe-c)** and [**\<|g\>**](#pipe-g)
