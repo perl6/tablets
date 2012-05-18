@@ -254,7 +254,7 @@ But olso the opposite is possible. By escaping an alphabetic letter he can becom
 an otherwise invisible [control char](appendix-b-grouped.html#control-chars)
 or an [escape equence](appendix-b-grouped.html#escape-sequences) (regex only).
 [*zero-width boundaries*](appendix-b-grouped.html#zero-width-boundaries) are
-escaped with the pipe symbol ("|").
+escaped with the [pipe symbol (**|**)](appendix-a-index.html#pipe-escape).
 
 <a id="evaluation"/>
 **evaluation** &mdash;
