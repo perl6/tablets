@@ -843,7 +843,6 @@ returns an array [*slice*](appendix-g-glossary.html#slice) with values which
 indexes was inside the brackets &mdash;
 example: `@a = 1..5; say @a[2..4,1]` returns '3 4 5 2'
 
-
 <a id="square-brackets-metaop"/><a id="reduce-op"/>
 **\[**<span class="you-provide">op</span>**\]**
 [*«meta op»*](appendix-b-grouped.html#metaoperators) &mdash;
@@ -868,9 +867,11 @@ that holds the following structure
 <a id="backslash-metachar"/><a id="escape-char"/>
 **\\**
 *«escape char»* &mdash;
-all escape sequences with a width 
-inside [quotes](appendix-b-grouped.html#control-chars)
-and [regexes](appendix-b-grouped.html#escape-sequences) start with it
+used inside [quotes](appendix-g-glossary.html#quoting) and
+[regexes](appendix-g-glossary.html#regex) to build a
+[control char](appendix-b-grouped.html#control-chars)
+or [escape equence](appendix-b-grouped.html#escape-sequences) (regex only),
+also needed to [*escape*](appendix-g-glossary.html#escape) special character there
 
 
 

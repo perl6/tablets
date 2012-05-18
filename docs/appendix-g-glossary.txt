@@ -231,7 +231,7 @@ the quotes will not taken literally but mark things to be [*evaluated*](#evaluat
 This are [*variables*](#variable) [*routines*](#rountine) and [*blocks*](#block).
 The [**qq** operator](appendix-a-index.html#qq-op) and the 
 [**qqx** operator](appendix-a-index.html#qqx-op) do this too.
-See also: [*qouting*](#quoting)
+See also: [*qoute*](#quote)
 
 # [E](#nav-top)
 
@@ -244,6 +244,15 @@ see also: [*i*](#i), [*pi*](#pi)
 
 <a id="encoding"/>
 **encoding** &mdash; [*ASCII*](#ASCII) [*UTF-8*](#UTF-8)
+
+<a id="escape"/>
+**escape** &mdash;
+means mostly just to put a [**\\**](appendix-a-index.html#escape-char)
+in front of a character inside [quotes](#quote) or [regexes](#regex).
+This cancels the special meaning of the character he will be taken literal.
+But olso the opposite is possible. By escaping an alphabetic letter he can become
+a [control char](appendix-b-grouped.html#control-chars) or ab
+[escape equence](appendix-b-grouped.html#escape-sequences) (regex only).
 
 <a id="evaluation"/>
 **evaluation** &mdash;
@@ -311,7 +320,7 @@ out of several [codepoints](#codepoint)
 [*hash*](#hash) [*context*](#context)
 
 <a id="heredoc"/>
-**heredoc** &mdash; [quoting](#quoting)
+**heredoc** &mdash; [quote](#quote)
 [Tablet 2](tablet-2-basic-syntax.html#heredocs)
 
 
@@ -564,7 +573,7 @@ metadata of a variable set at [run time](#run-time)
 
 <a id="quasiquoting"/>
 [**quasiquoting**](appendix-a-index.html#quasi) &mdash;
-differs a bit from normal [*quoting*](#quoting) operations and has thatswhy its
+differs a bit from normal [*quoting*](#quote) operations and has thatswhy its
 own [*slang*](#slang) variable [**$~Quasi**](appendix-a-index.html#Quasi-slang-var).
 It means to embrace a piece of code that will be [*compiled*](#compilation)
 but the result will be just the [*AST*](#AST).
@@ -584,9 +593,9 @@ the adverb [**:w**](appendix-a-index.html#w-adverb) aka
 that might also be known to shell users: `<these are 'four words'>`
 
 
-<a id="quoting"/>
-**quoting** &mdash;
-means to encompass text by symbols like quoting marks. 
+<a id="quote"/>
+**quote** &mdash;
+Ri *quote* means to encompass text by character like quoting marks ('' or ""). 
 This text will be processed and then counted as one value of the [*type*](#type)
 [**Str**](appendix-a-index.html#Str-type). The rules ([*grammar*](#grammar))
 of this process are stored in [**$~Quote**](appendix-a-index.html#Quote-slang-var).
@@ -691,12 +700,12 @@ Every sign in this text will be understood literally, except **\\** and **\'**,
 which result in **\** and **'**.
 The [**q** operator](appendix-a-index.html#q-op) and the 
 [**qx** operator](appendix-a-index.html#qx-op) do the same thing.
-See also: [*double qouting*](#double-quoting) and [*qouting*](#quoting).
+See also: [*double qouting*](#double-quoting) and [*qoute*](#quote).
 
 <a id="slang"/>
 **slang** &mdash;
 Perl 6 is a family of languages containing the the main language,
-[*quoting*](#quoting), [*regular expressions*](#regular expression) and more.
+[*quote*](#quote), [*regular expressions*](#regular expression) and more.
 These sublanguages are called slangs.
 Each slang has a completely independent set of rules (a [*grammar*](#grammar))
 which is stored in a [slang variable](appendix-b-grouped.html#slang-variables).
