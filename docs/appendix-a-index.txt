@@ -10,6 +10,7 @@ and everything that contains punctuation or number comes first.
 Sometimes are added green placeholder:
 <span class="you-provide">n</span> stands for a [integer number](#Int-type),
 <span class="you-provide">f</span> is a floating [point number](#Num-type),
+<span class="you-provide">c</span> a single character,
 <span class="you-provide">s</span> [string](#Str-type),
 <span class="you-provide">var</span> any variable,
 <span class="you-provide">p</span> a [*regex pattern*](appendix-g-glossary.html#regex),
@@ -864,14 +865,15 @@ original list, alias to [**triangle**](#triangle)
 creates a [*capture*](appendix-g-glossary.html#capture)
 that holds the following structure
 
-<a id="backslash-metachar"/><a id="escape-char"/>
-**\\**
+<a id="backslash-metachar"/><a id="backslash-escape"/><a id="escape-char"/>
+**\\**<span class="you-provide">c</span>
 *«escape char»* &mdash;
 used inside [quotes](appendix-g-glossary.html#quoting) and
 [regexes](appendix-g-glossary.html#regex) to build a
 [control char](appendix-b-grouped.html#control-chars)
 or [escape equence](appendix-b-grouped.html#escape-sequences) (regex only),
-also needed to [*escape*](appendix-g-glossary.html#escape) special character there
+also needed to [*escape*](appendix-g-glossary.html#escape) special character there &mdash;
+see also: [**|**](#pipe-escape)
 
 
 
@@ -957,6 +959,14 @@ see also: [**any**](#any)
 [*«regex metachar»*](appendix-b-grouped.html#regex-metacharacter) &mdash;
 match alternate patterns with longest token matching
 ([*OR*](appendix-g-glossary.html#or) - temporal simultaneous connection of patterns)
+
+<a id="pipe-escape"/>
+**|**<span class="you-provide">c</span>
+*«escape char»* &mdash;
+used to [*escape*](appendix-g-glossary.html#escape) 
+[*«zero-width boundaries»*](appendix-b-grouped.html#zero-width-boundaries)
+inside [regexes](appendix-g-glossary.html#regex) &mdash;
+see also: [**\\**](#backslash-escape)
 
 <a id="pipe-context"/><a id="pipe-context-op"/>
 **|**()
