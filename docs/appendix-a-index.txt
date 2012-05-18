@@ -3727,6 +3727,7 @@ short alternative for [**:double**](#double-adverb)
 run a [*double quoted*](appendix-g-glossary.html#souble-quoting)
 [*string*](appendix-g-glossary.html#string) as system call (as typed into a shell)
 and return results,
+in Perl 5: *qx/.../* or *``* &mdash;
 alias to: [**`Q`**](#Q-op) [**`:x`**](#x-adverb) [**`:qq`**](#qq-adverb) `/.../` &mdash;
 see also: [**qx**](#qx-op) and [**qq**](#qq-op)
 
@@ -3801,12 +3802,6 @@ run a [*single quoted*](appendix-g-glossary.html#single-quoting)
 and return results,
 alias to: [**`Q`**](#Q-op) [**`:x`**](#x-adverb) `/.../` &mdash;
 see also: [**qqx**](#qqx-op) and [**q**](#q-op)
-
-run a [*string*](appendix-g-glossary.html#string) as system call (shell command)
-and return results, 
-the string will not [*evaluated*](appendix-g-glossary.html#evaluation) before,
-in Perl 5: *qx/.../* or *``* &mdash;
-see also: [**qx**](#qx-op)
 
 
 
