@@ -491,8 +491,15 @@ This works with data of any nesting depth.
 gist
 ----
 
-xxx
+The `.gist` method returns a summary of an object intended to be read
+by humans. For many types it carries more information than plain string
+conversion with `.Str`. Most notably, `.gist` on a type object returns
+the name of the type object followed by `()` to indicate emptiness.
 
+Notably the `say` function uses the `.gist` to convert its arguments
+to strings.
+
+    say Int;    # prints Int()\n
 
 
 fmt
