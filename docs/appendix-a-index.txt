@@ -961,11 +961,12 @@ match alternate patterns with longest token matching
 ([*OR*](appendix-g-glossary.html#or) - temporal simultaneous connection of patterns)
 
 <a id="pipe-escape"/>
-**|**<span class="you-provide">c</span>
+\<**|**<span class="you-provide">c</span>\>
 *«escape char»* &mdash;
-used to [*escape*](appendix-g-glossary.html#escape) 
+used to [*escape*](appendix-g-glossary.html#escape) or mark
 [*«zero-width boundaries»*](appendix-b-grouped.html#zero-width-boundaries)
-inside [regexes](appendix-g-glossary.html#regex) &mdash;
+inside [regexes](appendix-g-glossary.html#regex),
+surrounded by angle brackets (\< \>), to distinkt it from the metachar above &mdash;
 see also: [**\\**](#backslash-escape)
 
 <a id="pipe-context"/><a id="pipe-context-op"/>

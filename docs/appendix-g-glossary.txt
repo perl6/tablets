@@ -254,7 +254,9 @@ But olso the opposite is possible. By escaping an alphabetic letter he can becom
 an otherwise invisible [*«control char»*](appendix-b-grouped.html#control-chars)
 or an [*«escape equence»*](appendix-b-grouped.html#escape-sequences) (regex only).
 [*«zero-width boundaries»*](appendix-b-grouped.html#zero-width-boundaries) are
-escaped with the [pipe symbol (**|**)](appendix-a-index.html#pipe-escape).
+escaped with the [pipe symbol (**|**)](appendix-a-index.html#pipe-escape),
+but written only inside angle brackets (\< \>) that mark [*subrules*](#subrule),
+to distinct that from the [pipe metacharacter](appendix-a-index.html#pipe-metachar).
 
 <a id="evaluation"/>
 **evaluation** &mdash;
@@ -708,7 +710,7 @@ See also: [*double qouting*](#double-quoting) and [*qoute*](#quote).
 **slang** &mdash;
 Perl 6 is a family of languages containing the the main language,
 [*quote*](#quote), [*regular expressions*](#regular expression) and more.
-These sublanguages are called slangs.
+These sublanguages are called in short slangs.
 Each slang has a completely independent set of rules (a [*grammar*](#grammar))
 which is stored in a [slang variable](appendix-b-grouped.html#slang-variables).
 The slang variables have the [*twigil*](#twigil) **\~** like in 
