@@ -248,12 +248,12 @@ see also: [*i*](#i), [*pi*](#pi)
 <a id="escape"/>
 **escape** &mdash;
 means mostly just to put a [**\\**](appendix-a-index.html#escape-char)
-in front of a character inside [quotes](#quote) or [regexes](#regex).
+in front of a character inside [*quotes*](#quote) or [*regexes*](#regex).
 This cancels the special meaning of the character he will be taken literal.
 But olso the opposite is possible. By escaping an alphabetic letter he can become
-an otherwise invisible [control char](appendix-b-grouped.html#control-chars)
-or an [escape equence](appendix-b-grouped.html#escape-sequences) (regex only).
-[*zero-width boundaries*](appendix-b-grouped.html#zero-width-boundaries) are
+an otherwise invisible [*«control char»*](appendix-b-grouped.html#control-chars)
+or an [*«escape equence»*](appendix-b-grouped.html#escape-sequences) (regex only).
+[*«zero-width boundaries»*](appendix-b-grouped.html#zero-width-boundaries) are
 escaped with the [pipe symbol (**|**)](appendix-a-index.html#pipe-escape).
 
 <a id="evaluation"/>

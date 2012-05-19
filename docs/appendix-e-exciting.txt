@@ -2,6 +2,7 @@
 
 This is a small tour, showing the best features and improvements of
 Perl 6 in short examples, compared to similar working Perl 5 examples.
+More examples how to write native Perl 6 are in the [cookbook](appendix-c-cookbook.html).
 
 Command Line
 ============
