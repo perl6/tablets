@@ -478,26 +478,24 @@ perl
 ----
 
 The `.perl` method returns a string that arranges any set of values in
-almost the same format, as it would be defined in source code. It's a
-built in Data::Dumper (pretty printer).
+the same format, as it would be defined in source code (if possible).
+It's a built in pretty printer similar to Perl 5s Data::Dumper that works
+with data of any nesting depth.
 
     @a.perl # evals to: [1, 2, 3, 4, 5]
     %h.perl # evals to: {"akey" => "avalue", "bkey" => "bvalue"}
-
-This works with data of any nesting depth.
-
 
 
 gist
 ----
 
-The `.gist` method returns a summary of an object intended to be read
-by humans. For many types it carries more information than plain string
-conversion with `.Str`. Most notably, `.gist` on a type object returns
-the name of the type object followed by `()` to indicate emptiness.
+The `.gist` method returns a summary of an object intended to be read by humans.
+For many types it carries more information than plain string conversion with
+`.Str`. Most notably, `.gist` on a type object returns the name of the type
+object followed by `()` to indicate emptiness.
 
-Notably the `say` function uses the `.gist` to convert its arguments
-to strings.
+Notably the [`say`](appendix-a-index.html#say) function uses `.gist`
+to convert its arguments to [*strings*](appendix-g-glossary.html#string).
 
     say Int;    # prints Int()\n
 
