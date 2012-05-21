@@ -14,11 +14,10 @@ too easy, read [the specs](http://perlcabal.org/syn/).
 **DISCLAIMER:**
 
 This documentation is currently **under construction**, we mean that literally.
-Therefore the data presented is partial and subject to drastic changes.
-
-Tablets 1-4 have some substance, but most complete are Appenices A, B, D, G, H.
-
+Therefore the data presented is partial and subject to changes.
 If you like to help, [look here](https://github.com/perl6/tablets).
+
+Tablets 1-4 have some substance, but most complete are Appendices A, B, D, G, H.
 
 ---
 
