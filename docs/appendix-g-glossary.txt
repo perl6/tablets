@@ -47,6 +47,13 @@ not to be confused wirh [*parameter*](#parameter)
 
 <a id="arity"/>
 **arity** &mdash;
+tells how many [*operands*](#operand) an [*operator*](#operator) takes
+or how many [*parameter*](#parameter) a [*routine*](#routine) requires.
+Since all *operator* are under the hood just [*methods*](#method) on the 
+left or only *operand*, these two things end up being the same.
+[*prefix*](#prefix) and [*postfix*](#postfix) operator have the *arity* of one,
+[*infix*](#infix) two and the [ternary operator](#ternary-operator) has three.
+See also [*precedence*](#precedence)
 
 <a id="array"/>
 **array** &mdash;
@@ -340,6 +347,9 @@ square root of -1, fundamental mathematical constant to build
 important to the functions ,
 see also: [*e*](#e), [*pi*](#pi)
 
+<a id="infix"/>
+**infix** &mdash;
+
 <a id="inheritance"/>
 **inheritance** &mdash;
 
@@ -558,10 +568,11 @@ a block that is given readonly [*parameters*](parameter) with
 
 <a id="precedence"/>
 **precedence** &mdash;
-if an [*expression*](#expression) contains several [*operators*](#operator),
+If an [*expression*](#expression) contains several [*operators*](#operator),
 they will applied in the order according to the
 [**table of precedence**](appendix-b-grouped.html#table-of-precedence) from the
-highest to the lowest level
+highest to the lowest level.
+See also [*arity*](#arity)
 
 <a id="prefix"/>
 **prefix** &mdash;
@@ -573,6 +584,9 @@ metadata of a variable set at [run time](#run-time)
 <a id="positional-parameter"/>
 **positional parameter** &mdash; 
 [*parameter*](#parameter)
+
+<a id="postfix"/>
+**postfix** &mdash;
 
 
 # [Q](#nav-top)
@@ -769,6 +783,11 @@ its findings are stored under that name,
 some of them were used so often, that their built into to language as
 [predefined subrules](appendix-b-grouped.html#subrules)
 
+<a id="suffix"/>
+**suffix** &mdash;
+another word for [*postfix*](#postfix)
+
+
 <a id="symbol"/>
 **symbol** &mdash;
 
@@ -819,7 +838,6 @@ see [**but**](appendix-a-index.html#but), what other languages call
 [**:trans**](appendix-a-index.html#trans-adverb),
 [**.trans**](appendix-a-index.html#trans),
 [**tr** ///](appendix-a-index.html#tr-op)
-
 
 <a id="twigil"/>
 [**twigil**](appendix-b-grouped.html#twigils) &mdash;
