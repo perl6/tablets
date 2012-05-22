@@ -51,9 +51,12 @@ tells how many [*operands*](#operand) an [*operator*](#operator) takes
 or how many [*parameter*](#parameter) a [*routine*](#routine) requires.
 Since all *operator* are under the hood just [*methods*](#method) on the 
 left or only *operand*, these two things end up being the same.
+Get the *arity* of a *routine* with the [*introspection*](#introspection) 
+*methods* [**arity**](appendix-a-index.html#arity) (just required) and
+[**count**](appendix-a-index.html#count) (optional too).
 [*prefix*](#prefix) and [*postfix*](#postfix) operator have the *arity* of one,
 [*infix*](#infix) two and the [ternary operator](#ternary-operator) has three.
-See also [*precedence*](#precedence), 
+See also [*precedence*](#precedence).
 
 <a id="array"/>
 **array** &mdash;

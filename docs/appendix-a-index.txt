@@ -1183,7 +1183,7 @@ arguments (parameter) to a program (script), in Perl 5: *@ARGV*
 returns how many [*parameters*](appendix-g-glossary.html#parameter)
 this [*routine*](appendix-g-glossary.html#routine) requires,
 [**.count**](#count) includes also the optional &mdash;
-see also the [glossary term](appendix-g-glossary.html#arity)
+see also the [glossary term](#arity)
 
 <a id="Array-type"/>
 **Array**
