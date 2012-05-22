@@ -61,7 +61,7 @@ a code object, an object or a compound of values like a
 [pair](variables.html#pair), [junction](operators.html#junctions),
 [array](variables.html#array), [hash](variables.html#hash) or
 [capture](variables.html#capture). The scalar context is now called
-item context hence the scalar instruction from Perl 5 was renamed to
+item context, hence the `scalar` instruction from Perl 5 was renamed to
 [item](ap-b-lookup.html#contextualizers).
 
     $CHAPTER = 3; # first comment!
@@ -81,8 +81,8 @@ item context hence the scalar instruction from Perl 5 was renamed to
     # an object from a class with a nested namespace
     $object = Class::Name.new();
     $condition = 3|5|7; # a junction, a logical conjunction of values
-    $arrayref = [0,1,1,2,3,5,8,13,21]; # a reference to a list of values
-    # reference to a hash
+    $arrayref = [0,1,1,2,3,5,8,13,21]; # an array stored as a single item
+    # a hash stored as a single item
     $hashref = {'audreyt'=>'pugs',
                 'pm'=>'pct',
                 'damian'=>'larrys evil henchman'};
@@ -105,6 +105,11 @@ Unlike Perl 5, references are automatically dereferenced to a fitting
 context. So you could use these `$arrayref`s and `$hashref`s similarly to
 an array or hash, making $ the universal variable prefix, pretty much like in PHP.
 The primary difference is that `$` prefixed lists are not flattened in lists.
+
+    my $a = (1, 2, 3);
+    my @a = 1, 2, 3;
+    for $a { }          # just one iteration
+    for @a { }          # three iterations
 
 
 
@@ -138,7 +143,7 @@ prevent autoflattening.
     @primes = (2,3,5,7,11,13,17,19,23); # an array gets filled like in Perl 5
     @primes =  2,3,5,7,11,13,17,19,23 ; # same thing, since unlike P5 round braces just do group
     @primes = <2 3 5 7 11 13 17 19 23>; # dito, <> is the new qw()
-    $arrayref = 2,3,5,7,11,13,17,19,23; # in scalar context you get automatically a reference
+    $arrayref = (2,3,5,7,11,13,17,19,23); # in scalar context you get automatically a reference
     $arrayref = item @primes;           # same thing, more explicit
     $arrayref = 13,;                    # comma is the new array generator
     @primes = 2;                        # array with one element
@@ -162,7 +167,7 @@ prevent autoflattening.
     $cell = @data[1][2];          # get 8, third value of second value (list)
     $cell = @data[1;2];           # same thing, shorten syntax
     @numbers = @data[1];          # get a copy of the second subarray (6..10)
-    @copy = @data;                # copy the whole AoA, no more reference passing, use binding instead
+    @copy = @data;                # shallow copy of the array
 
 
 
