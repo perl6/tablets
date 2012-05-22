@@ -562,9 +562,9 @@ creates an alias to a variable at runtime
 
 <a id="semicolon"/><a id="semicolon-terminator"/>
 [**;**](tablet-2-basic-syntax.html#statements)
-*«terminator»* &mdash;
-separates [statements](tablet-2-basic-syntax.html#statements)
-(commands) or [array indices](tablet-3-variables#array-slices) &mdash;
+«terminator» &mdash;
+separates [statements](tablet-2-basic-syntax.html#statements) (commands)
+or [array indices](tablet-3-variables#array-slices) &mdash;
 example: `@[2;3]` instead of `@a[2][3]`
 
 
@@ -951,8 +951,10 @@ context var, result of the last command, can set by topicalizers
 **{}**
 «terminator» &mdash;
 [circumfix](#circumfix-category) operator,
-encloses blocks and creates a [*coderef*](appendix-g-glossary.html#coderef),
-or a hashref when it is identified as a hash or contains a [**=\>**](#fat-arrow)
+encloses [*blocks*](appendix-g-glossary.html#block) 
+if assigned it creates an anonymous routine,
+or a hashref when it is identified as a hash by the 
+[**hash**](#hash-op) prefix or it contains a [**=\>**](#fat-arrow)
 
 <a id="pipe"/><a id="pipe-op"/><a id="junctive-or"/>
 **|**

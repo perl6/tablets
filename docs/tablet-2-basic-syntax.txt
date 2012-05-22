@@ -39,8 +39,8 @@ Statements
 Unless you use [*blocks*](appendix-g-glossary.html#block), a Perl 
 program executes one statement after another in linear progression 
 (from left to right, top down). They have to be separated by 
-a semicolon (**;**), except before and after a closing curly brace, 
-where it is optional.
+a semicolon ([**;**](appendix-a-index.html#semicolon-terminator)),
+except before and after a closing curly brace, where it is optional.
 
     $coderef = sub { fetch_data(); compute() }
 

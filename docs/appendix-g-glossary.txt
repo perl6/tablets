@@ -765,7 +765,7 @@ all details in [that table](appendix-b-grouped.html#smartmatch).
 
 <a id="statement"/>
 **statement** &mdash;
-smallest standalone element that can be executed,
+smallest standalone element of a program that can be executed,
 everything smaller is just a [*term*](#term),
 larger combinations of them are [*expressions*](#expression)
 
@@ -810,6 +810,10 @@ not to be confused with [*expression*](#expression)
 
 <a id="terminator"/>
 **terminator** &mdash;
+character that marks the end of a [*term*](#term), these are 
+[**;**](appendix-a-index.html#semicolon-terminator) and
+[**}**](appendix-a-index.html#curly-brackets-terminator),
+[more about statements](tablet-2-basic-syntax.html#statements)
 
 <a id="ternary-operator"/>
 **ternary operator** &mdash;
