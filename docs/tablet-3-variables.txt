@@ -143,13 +143,13 @@ prevent autoflattening.
     @primes = (2,3,5,7,11,13,17,19,23); # an array gets filled like in Perl 5
     @primes =  2,3,5,7,11,13,17,19,23 ; # same thing, since unlike P5 round braces just do group
     @primes = <2 3 5 7 11 13 17 19 23>; # dito, <> is the new qw()
-    $arrayref = (2,3,5,7,11,13,17,19,23); # in scalar context you get automatically a reference
-    $arrayref = item @primes;           # same thing, more explicit
-    $arrayref = 13,;                    # comma is the new array generator
+    $primes = (2,3,5,7,11,13,17,19,23); # same array object just sits in $primes, $primes[0] is 2
+    $primes = item @primes;             # same thing, more explicit
+    $primes = 2,;                       # just 2, first element of the Parcel
     @primes = 2;                        # array with one element
-    @primes = [2,3,5,7,11,13,17,19,23]; # array with one element (arrayref)
-    @dev    = {'dan' => 'parrot'};      # array with one element (hashref)
-    @data   = [1..5],[6..10],[11..15];  # Array of Arrays (AoA)
+    @primes = [2,3,5,7,11,13,17,19,23]; # array with one element ([*LoL*](appendix-g-glossary.html#LOL))
+    @dev    = {'dan' => 'parrot'};      # array with one element (a hash)
+    @data   = [1..5],[6..10],[11..15];  # Array of Arrays (LoL)
     @list   = lol @data;                # no change
     @list   = flat @data;               # returns 1..15
 
