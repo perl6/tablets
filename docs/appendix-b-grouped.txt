@@ -1064,7 +1064,8 @@ In routine and block definitions can be also some character with special meaning
 [`^`](appendix-a-index.html#caret-signature)                   prefix of metaclass methods, `$obj.^methods();` is shortcut for [`$obj.HOW.methods($obj);`](#object-introspection)
 -------------------------------------------------------------  ------------------------------------------------------------------------------------------------------------------
 
-### Callframe Methods ###
+Callframe Methods
+-----------------
 
 A callframe object is generated at run-time for each call of a block of code.
 If a block of code includes a [**callframe()**](appendix-a-index.html#callframe) call,
