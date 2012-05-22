@@ -1064,22 +1064,27 @@ In routine and block definitions can be also some character with special meaning
 [`^`](appendix-a-index.html#caret-signature)                   prefix of metaclass methods, `$obj.^methods();` is shortcut for [`$obj.HOW.methods($obj);`](#object-introspection)
 -------------------------------------------------------------  ------------------------------------------------------------------------------------------------------------------
 
-### Callframe Methods ###
+### Callframes ###
 
-of objects provided by [**callframe**](appendix-a-index.html#callframe) and
-[**caller**](appendix-a-index.html#caller)
+A callframe object is generated at run-time for each call of a block of code.
+If a block of code includes a [**callframe()**](appendix-a-index.html#callframe) call,
+the value returned from that call is the callframe object corresponding to the block of code.
+To get the value of other blocks and routines higher in the call stack, use callframe with args,
+or [**caller**](appendix-a-index.html#caller), with or without args.
+
+Once you have a callframe object, you can call the following methods on it:
 
 ------------------------------------------------------  -----------------------------------
-[args](appendix-a-index.html#args-callframe)            ...
-[callframe](appendix-a-index.html#callframe-callframe)  ...
-[caller](appendix-a-index.html#caller-callframe)        ...
-[hints](appendix-a-index.html#hints-callframe)          ...
-[inline](appendix-a-index.html#inline-callframe)        ...
-[leave](appendix-a-index.html#leave-callframe)          ...
-[file](appendix-a-index.html#file-callframe)            ...
-[package](appendix-a-index.html#package-callframe)      ...
-[line](appendix-a-index.html#line-callframe)            ...
-[my](appendix-a-index.html#my-callframe)                ...
+[args](appendix-a-index.html#args-callframe)            capture of args passed for this callframe
+[callframe](appendix-a-index.html#callframe-callframe)  callframe call which navigates relative to self
+[caller](appendix-a-index.html#caller-callframe)        caller call which navigates relative to self
+[file](appendix-a-index.html#file-callframe)            source .file corresponding to callframe
+[hints](appendix-a-index.html#hints-callframe)          compiler symbols in effect during  originally compilation
+[inline](appendix-a-index.html#inline-callframe)        did control structure create callframe (rather than user)  
+[leave](appendix-a-index.html#leave-callframe)          leave (return from) a particular callframe
+[line](appendix-a-index.html#line-callframe)            line number in source .file corresponding to callframe
+[my](appendix-a-index.html#my-callframe)                access to callframe's lexicals (read only)
+[package](appendix-a-index.html#package-callframe)      
 ------------------------------------------------------  -----------------------------------
 
 ***
