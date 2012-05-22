@@ -143,7 +143,7 @@ prevent autoflattening.
     @primes = (2,3,5,7,11,13,17,19,23); # an array gets filled like in Perl 5
     @primes =  2,3,5,7,11,13,17,19,23 ; # same thing, since unlike P5 round braces just do group
     @primes = <2 3 5 7 11 13 17 19 23>; # dito, <> is the new qw()
-    $arrayref = 2,3,5,7,11,13,17,19,23; # in scalar context you get automatically a reference
+    $arrayref = (2,3,5,7,11,13,17,19,23); # in scalar context you get automatically a reference
     $arrayref = item @primes;           # same thing, more explicit
     $arrayref = 13,;                    # comma is the new array generator
     @primes = 2;                        # array with one element
