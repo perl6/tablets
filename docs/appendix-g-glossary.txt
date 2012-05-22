@@ -53,7 +53,7 @@ Since all *operator* are under the hood just [*methods*](#method) on the
 left or only *operand*, these two things end up being the same.
 [*prefix*](#prefix) and [*postfix*](#postfix) operator have the *arity* of one,
 [*infix*](#infix) two and the [ternary operator](#ternary-operator) has three.
-See also [*precedence*](#precedence)
+See also [*precedence*](#precedence), 
 
 <a id="array"/>
 **array** &mdash;
@@ -116,6 +116,9 @@ object of the type [**Block**](appendix-a-index.html#block-type)
 [ops](tablet-4-operators.html#bool-context)
 
 # [C](#nav-top)
+
+<a id="callframe"/>
+**callframe** &mdash;
 
 <a id="camelia"/>
 **camelia** &mdash;
@@ -358,6 +361,9 @@ see also: [*e*](#e), [*pi*](#pi)
 
 <a id="interpolation"/>
 **interpolation** &mdash;
+
+<a id="introspection"/>
+**introspection** &mdash;
 
 <a id="invocant"/>
 **invocant** &mdash;
