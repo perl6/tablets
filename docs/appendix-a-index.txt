@@ -787,6 +787,13 @@ forces [boolean context](appendix-g-glossary.html#bool-context)
 [**?? !!**](tablet-4-operators.html#ternary)
 [*«conditional»*](appendix-b-grouped.html#conditionals) &mdash;
 [*ternary or conditional operator*](appendix-g-glossary.html#ternary-operator),
+<span class="you-provide">condition</span> **??**
+<span class="you-provide">term1</span> **!!**
+<span class="you-provide">term2</span> **;** is a shortcut for
+[**`if`**](#if) `(`<span class="you-provide">`condition`</span>`)`
+`{` <span class="you-provide">`term1`</span> `}` 
+[**`else`**](#else) `{` <span class="you-provide">`term2`</span> `}`,
+returns the result of the extecuted [*term*](appendix-g-glossary.html#term),
 in Perl 5: *? :* &mdash;
 see also: [**||**](#logical-or), [**ff**](#ff), [**fff**](#fff)
 
