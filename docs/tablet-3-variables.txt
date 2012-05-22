@@ -167,7 +167,7 @@ prevent autoflattening.
     $cell = @data[1][2];          # get 8, third value of second value (list)
     $cell = @data[1;2];           # same thing, shorten syntax
     @numbers = @data[1];          # get a copy of the second subarray (6..10)
-    @copy = @data;                # copy the whole AoA, no more reference passing, use binding instead
+    @copy = @data;                # shallow copy of the array
 
 
 
