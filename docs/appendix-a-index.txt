@@ -15,7 +15,8 @@ Sometimes are added green placeholder:
 <span class="you-provide">var</span> any variable,
 <span class="you-provide">p</span> a [*regex pattern*](appendix-g-glossary.html#regex),
 <span class="you-provide">l</span> a list,
-<span class="you-provide">op</span> any operator and
+<span class="you-provide">op</span> any operator,
+<span class="you-provide">x</span> any [*expression*](appendix-g-glossary.html#expression),
 <span class="you-provide">t</span> any [*term*](appendix-g-glossary.html#term).
 After each method is its signature (in round brackets), telling you
 the value type (same as in placeholders) of the parameters and the return value.
@@ -783,11 +784,10 @@ forces [boolean context](appendix-g-glossary.html#bool-context)
 
 <a id="question-question"/><a id="question-question-exclamation-exclamation"/>
 <a id="conditional-op"/><a id="ternary-op"/>
-**?? !!**
+[**?? !!**](tablet-4-operators.html#ternary)
 [*«conditional»*](appendix-b-grouped.html#conditionals) &mdash;
-ternary or conditional operator,
-shortcut for [**if**](#if) and
-[**else**](#else) &mdash;
+[*ternary or conditional operator*](appendix-g-glossary.html#ternary-operator),
+in Perl 5: *? :* &mdash;
 see also: [**||**](#logical-or), [**ff**](#ff), [**fff**](#fff)
 
 <a id="question-question-question"/><a id="question-question-question-op"/>

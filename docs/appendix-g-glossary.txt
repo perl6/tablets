@@ -45,6 +45,9 @@ other operations in [*bool context*](#bool-context) are:
 a specific value given to a [routine](#routine) at a certain time,
 not to be confused wirh [*parameter*](#parameter)
 
+<a id="arity"/>
+**arity** &mdash;
+
 <a id="array"/>
 **array** &mdash;
 mostly synonym for [*list*](#list)
@@ -779,6 +782,27 @@ not to be confused with [*expression*](#expression)
 
 <a id="terminator"/>
 **terminator** &mdash;
+
+<a id="ternary-operator"/>
+**ternary operator** &mdash;
+or *conditional operator is the name of this construct :
+[**?? !!**](appendix-a-index.html#ternary-op). 
+It is a shortcut for:
+[**if**](appendix-a-index.html#if) (<span class="you-provide">condition</span>)
+\{ <span class="you-provide">term1</span> \} [**else**](appendix-a-index.html#else)
+\{ <span class="you-provide">term2</span> \} which you write then:
+<span class="you-provide">condition</span> **??**
+<span class="you-provide">term1</span> **!!**
+<span class="you-provide">term2</span> **;** .
+It was introduced by the C language as ? : as it is still written in Perl 5.
+Its useful if the there was only one [*term*](#term) in each [*block*](#block).
+Its even more handy if you have to feed a variable with the result of the
+winning alternative ([more details](tablet-4-operators.html#ternary)). 
+The name comes from the latin word for third (tertius), 
+because its the only [*operator*](#operator) with that [*arity*](#arity),
+hence it has three [*operands*](#operand).
+
+
 
 <a id="test-method"/>
 **test method** &mdash;

@@ -119,7 +119,7 @@ Ranges
 
 
 
-logical selection
+Logical Selection
 -----------------
 
     && - and
@@ -131,14 +131,14 @@ see also [numerical selection](operators.html#numerical-selection)
 
 
 
-ternary
+Ternary
 -------
 
     ?? !!
 
 
 
-flipflop
+Flipflop
 --------
 
     ff fff
@@ -148,7 +148,9 @@ flipflop
 file test
 ---------
 
-[table](ap-b-lookup.html#filetest-ops)
+Are now ordinary methods of the IO type.
+
+[table of all](appendix-b-grouped.html#test-methods)
 
 
 
