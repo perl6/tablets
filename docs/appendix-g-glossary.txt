@@ -56,7 +56,7 @@ Get the *arity* of a *routine* with the [*introspection*](#introspection)
 [**count**](appendix-a-index.html#count) (optional too).
 [*prefix*](#prefix) and [*postfix*](#postfix) operator have the *arity* of one,
 [*infix*](#infix) two and the [ternary operator](#ternary-operator) has three.
-See also [*precedence*](#precedence).
+See also: [*precedence*](#precedence)
 
 <a id="array"/>
 **array** &mdash;
@@ -213,7 +213,7 @@ creating a [*subroutine*](routine) that calls another with certain
 <a id="declarand"/>
 **declarand** &mdash;
 the thing being declared, example: `$foo` in `my $foo;`,
-see also [declarator](#declarator)
+See also: [declarator](#declarator)
 
 <a id="declarative-programming"/>
 **declarative programming** &mdash;
@@ -224,7 +224,7 @@ without describing its control flow
 **declarator** &mdash;
 the command that declares to another entity that it will have a certain property
 like the "my", "our", "has" ... in a declaration like `my $foo;`,
-see also [declarand](#declarand)
+See also: [declarand](#declarand)
 
 <a id="delegation"/>
 **delegation** &mdash;
@@ -256,7 +256,7 @@ See also: [*qoute*](#quote)
 about 2.71828182878434, fundamental mathematical constant,
 important to the functions 
 [**exp**](appendix-a-index.html#exp) and [**log**](appendix-a-index.html#log),
-see also: [*i*](#i), [*pi*](#pi)
+See also: [*i*](#i), [*pi*](#pi)
 
 <a id="encoding"/>
 **encoding** &mdash; [*ASCII*](#ASCII) [*UTF-8*](#UTF-8)
@@ -351,7 +351,7 @@ out of several [codepoints](#codepoint)
 square root of -1, fundamental mathematical constant to build 
 [*complex number*](#complex-number), displayed as `0+1i`
 important to the functions ,
-see also: [*e*](#e), [*pi*](#pi)
+See also: [*e*](#e), [*pi*](#pi)
 
 <a id="infix"/>
 **infix** &mdash;
@@ -456,7 +456,7 @@ is a [*routine*] that belongs to a [*object*](#object) or a class
 technique where several [*routines*](#routine) can have the same name,
 but different [*signatures*](#signature), when the name is called - the
 suitable routine is seleted via *MMD* &mdash;
-see also: [**multi**](appendix-a-index.html#multi)
+See also: [**multi**](appendix-a-index.html#multi)
 
 # [N](#nav-top)
 
@@ -552,7 +552,7 @@ example: [**BEGIN**](appendix-a-index.html#BEGIN-phaser)
 about 3.14159265394248, fundamental mathematical constant,
 ratio of a circle's circumference to its diameter
 important to the functions,
-see also: [*e*](#e), [*i*](#i)
+See also: [*e*](#e), [*i*](#i)
 
 <a id="pipe"/>
 **pipe** &mdash;
@@ -581,7 +581,7 @@ If an [*expression*](#expression) contains several [*operators*](#operator),
 they will applied in the order according to the
 [**table of precedence**](appendix-b-grouped.html#table-of-precedence) from the
 highest to the lowest level.
-See also [*arity*](#arity)
+See also: [*arity*](#arity)
 
 <a id="prefix"/>
 **prefix** &mdash;
