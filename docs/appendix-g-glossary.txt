@@ -785,7 +785,7 @@ not to be confused with [*expression*](#expression)
 
 <a id="ternary-operator"/>
 **ternary operator** &mdash;
-or *conditional operator is the name of this construct :
+or *conditional operator* is the name of this construct:
 [**?? !!**](appendix-a-index.html#ternary-op). 
 It is a shortcut for:
 [**if**](appendix-a-index.html#if) (<span class="you-provide">condition</span>)
