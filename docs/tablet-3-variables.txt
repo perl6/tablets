@@ -147,8 +147,8 @@ prevent autoflattening.
     $primes = item @primes;             # same thing, more explicit
     $primes = 2,;                       # just 2, first element of the Parcel
     @primes = 2;                        # array with one element
-    @primes = [2,3,5,7,11,13,17,19,23]; # array with one element (List of Lists)
-    @dev    = {'dan' => 'parrot'};      # array with one element (a hash)
+    @primes = [2,3,5,7,11,13,17,19,23]; # array with one element (List of Lists - LoL)
+    @dev    = {'dan' => 'parrot'};      # array with one element (a Hash)
     @data   = [1..5],[6..10],[11..15];  # Array of Arrays (LoL)
     @list   = lol @data;                # no change
     @list   = flat @data;               # returns 1..15
