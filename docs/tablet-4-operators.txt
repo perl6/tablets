@@ -295,7 +295,7 @@ xxx
 Selfmade Operators
 ==================
 
-How to make your own is subject [this chapter](tablet-10-metaprogramming.txt#)
+How to make your own is subject [this chapter](tablet-10-metaprogramming.html#)
 in the metaprogramming tablet.
 
 
