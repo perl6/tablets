@@ -14,7 +14,7 @@ Command Line
     print "and I said: $quotes{\"me\"}\n";          say "and I said: %quotes{"me"}.";
     print "and I said: $quotes{\"me\"}\n";          say "and I said: %quotes<me>.";
     print "What is ... ";                           $result = prompt "What is ... ";
-    chomp($result = <>);
+    chomp($result = <STDIN>);
 
 
 
