@@ -184,7 +184,7 @@ News
   * hyper / reduction operators
   * chained comparison operators
   * case construct with given and when
-  * junctions : `if $a = 1|2|3`
+  * junctions : `if $a == 1|2|3`
   * currying
   * smartmatch / rules (regex++, own sublanguage within the language like in Rebol)
   * named parameters for subroutines, multimethods, coroutines
