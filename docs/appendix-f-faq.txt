@@ -7,6 +7,11 @@ Advocacy
 Is Perl 6 usable right now ?
 ----------------------------
 
+Yes. While current implementations don't implement whole Perl 6, most of
+Perl 6 features, such as Perl 6 regexes, static typing, classes, mutable
+grammars or meta operators are already implemented very well. We have
+[feature comparison of Perl 6 compilers](http://perl6.org/compilers/features)
+available in case you want to know what features are available.
 
 When Perl 6 will be released?
 -----------------------------
