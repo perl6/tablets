@@ -656,6 +656,8 @@ if it doesn't start wit a **.**, **?** or **!** findings will stored under the
 name of the subrule as [*named capures*](appendix-g-glossary.html#named-capure)
 into [`$/<name>`](#match-var) and [`$<name>`](#angle-brackets-var)
 
+# [=](#nav-top)
+
 <a id="equal"/><a id="equal-op"/>
 [**=**](tablet-3-variables#assignment)
 *«Op»* &mdash;
