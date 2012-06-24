@@ -641,12 +641,15 @@ evaluation of variables like [\<\< \>\>](#double-angle-brackets),
 alias to [**qw/.../**](#qw-op) or
 [**Q**](#Q-op) **:q** [**:ww**](#ww-adverb) **/.../**
 
-<a id="angle-brackets-twigil"/><a id="angle-brackets-var"/>
-**\< \>**
-[*«twigil»*](appendix-b-grouped.html#twigils) &mdash;
-[circumfix](#circumfix-category)
-[*twigil*](appendix-g-glossary.html#twigil) of named captures, **`$<...>`**
-is alias to [**`$/<...>`**](#match-var), in Perl 5: *$&* and *$MATCH*
+<a id="postcircumfix-angle-brackets-op"/><a id="slice-op"/>
+<span class="you-provide">var</span>**\[ \]** &mdash;
+[*postcircumfix*](#postcircumfix-category)
+[*operator*](appendix-g-glossary.html#operator) 
+appended on a [*hash*](appendix-g-glossary.html#hash)
+[*var*](appendix-g-glossary.html#variable)(no more spaces in between allowed),
+returns a slice [*slice*](appendix-g-glossary.html#slice) with values which
+keys was inside the brackets &mdash;
+example: `%h = {a=>1, b=>2, c=>3}; say %h<c a>` returns '3 1'
 
 <a id="angle-brackets-metachar"/>
 **\< \>**
