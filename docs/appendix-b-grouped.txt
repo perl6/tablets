@@ -38,7 +38,6 @@ Twigil is short for secondary sigil. They follow after a primary sigil and mark 
 [`$*foo`](appendix-a-index.html#asterisk-twigil)         contextualizable global variable
 [`$?foo`](appendix-a-index.html#question-twigil)         compiler hint variable
 [`$=foo`](appendix-a-index.html#equal-twigil)            pod variable
-[`$<foo>`](appendix-a-index.html#angle-brackets-twigil)  match variable, short for `$/<foo>` or even `$/{'foo'}`
 [`$~foo`](appendix-a-index.html#tilde-twigil)            the foo sublanguage seen by the parser at this lexical spot
 -------------------------------------------------------  ------------------------------------------------------------
 
@@ -56,7 +55,7 @@ Special Variables
 
 -----------------------------------------------------  ------------------------------------------------------------------------------------
 [`$/`](appendix-a-index.html#slash-var)                last created match object of this [scope](appendix-g-glossary.html#scope) with [these methods](#match-object-methods)
-[`$<...>`](appendix-a-index.html#angle-brackets-var)   alias to named capture, see Twigils above
+[`$<...>`](appendix-a-index.html#angle-brackets-var)   alias to named capture, i.e., $/<...> or $/{'...'}
 [`$0 ...`](appendix-a-index.html#0-var)                alias to positional capture, like in P5 - `$1 .. $9` but doesn't stop at `$9`
 [`@()`](appendix-a-index.html#round-brackets-var)      array that holds $0 .. $9 and rest and positional submatches
 -----------------------------------------------------  ------------------------------------------------------------------------------------
