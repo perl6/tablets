@@ -896,7 +896,7 @@ see also: [**|**](#pipe-escape)
 [*«junctive op»*](appendix-b-grouped.html#junctions) &mdash;
 [*infix*](#infix-category) [*junctive*](appendix-g-glossary.html#junction)
 [*XOR*](appendix-g-glossary.html#xor),
-requires that exactly one of both operands is [**True**](#True) in 
+requires that exactly one of operands is [**True**](#True) in 
 [*bool context*](appendix-g-glossary.html#bool-context) to return **True** &mdash;
 see also [**one**](#one)
 
