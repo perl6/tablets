@@ -641,12 +641,15 @@ evaluation of variables like [\<\< \>\>](#double-angle-brackets),
 alias to [**qw/.../**](#qw-op) or
 [**Q**](#Q-op) **:q** [**:ww**](#ww-adverb) **/.../**
 
-<a id="angle-brackets-twigil"/><a id="angle-brackets-var"/>
-**\< \>**
-[*«twigil»*](appendix-b-grouped.html#twigils) &mdash;
-[circumfix](#circumfix-category)
-[*twigil*](appendix-g-glossary.html#twigil) of named captures, **`$<...>`**
-is alias to [**`$/<...>`**](#match-var), in Perl 5: *$&* and *$MATCH*
+<a id="postcircumfix-angle-brackets-op"/><a id="slice-op"/>
+<span class="you-provide">var</span>**\[ \]** &mdash;
+[*postcircumfix*](#postcircumfix-category)
+[*operator*](appendix-g-glossary.html#operator) 
+appended on a [*hash*](appendix-g-glossary.html#hash)
+[*var*](appendix-g-glossary.html#variable)(no more spaces in between allowed),
+returns a slice [*slice*](appendix-g-glossary.html#slice) with values which
+keys was inside the brackets &mdash;
+example: `%h = {a=>1, b=>2, c=>3}; say %h<c a>` returns '3 1'
 
 <a id="angle-brackets-metachar"/>
 **\< \>**
@@ -655,6 +658,8 @@ embraces an subrule (assertion),
 if it doesn't start wit a **.**, **?** or **!** findings will stored under the
 name of the subrule as [*named capures*](appendix-g-glossary.html#named-capure)
 into [`$/<name>`](#match-var) and [`$<name>`](#angle-brackets-var)
+
+# [=](#nav-top)
 
 <a id="equal"/><a id="equal-op"/>
 [**=**](tablet-3-variables#assignment)
@@ -891,7 +896,7 @@ see also: [**|**](#pipe-escape)
 [*«junctive op»*](appendix-b-grouped.html#junctions) &mdash;
 [*infix*](#infix-category) [*junctive*](appendix-g-glossary.html#junction)
 [*XOR*](appendix-g-glossary.html#xor),
-requires that exactly one of both operands is [**True**](#True) in 
+requires that exactly one of operands is [**True**](#True) in 
 [*bool context*](appendix-g-glossary.html#bool-context) to return **True** &mdash;
 see also [**one**](#one)
 
