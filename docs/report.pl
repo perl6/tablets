@@ -1,6 +1,7 @@
 #!/usr/bin/perl
 use strict;
 use warnings;
+use autodie;
 use v5.10;
 
 my (%file, %data, %sum, $FH, $content, @fn_parts);
@@ -20,7 +21,7 @@ for my $md_file (<*.txt>){
 	next unless @fn_parts > 1;
 	$file{ ucfirst ($fn_parts[0]) . '-' . uc($fn_parts[1]) } = $md_file;
 }
-
+die "No .txt file found. Are you in the docs/ directory?\n" if not %file;
 
 # and sniff through them
 print "$head \n", '-' x length $head,"\n";
