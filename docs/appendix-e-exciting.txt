@@ -46,7 +46,7 @@ language SIMD concurrent processing.
                   Perl 5                                     Perl 6
     my $sum;                                        my $sum = [+] @numbers;
     $sum += $_ for @numbers;
-    for (0 .. $#factor1) {                          @product = @factor1 >>*<< @factor2;
+    for (0 .. $#factor1) {                          @product = @factor1 »*« @factor2;
       $product[$] = $factor1[$] * $factor2[$_];
     }
 
