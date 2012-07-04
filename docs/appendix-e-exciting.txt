@@ -100,7 +100,7 @@ Powerful for loops
     for (my $i=15; $i>1; $i-2) {...}                for 15,*-2...1 -> $i {...}
     for my $key (keys %hash) {                      for %hash.kv -> $key, $value {
       print "$key => $hash{$key}\n"; ...              say "$key => $value"; ...
-    for my $i (0..$#a) {                            for zip(@a; @b; @c) -> $a, $b, $c {...}
+    for my $i (0..min($#a,$#b,$#c)) {               for zip(@a; @b; @c) -> $a, $b, $c {...}
       my $a = $a[$i];
       my $b = $b[$i];
       my $c = $c[$i]; ...
