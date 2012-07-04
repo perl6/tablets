@@ -107,8 +107,8 @@ Powerful for loops
 
 
 
-Named parameters in subroutines
-===============================
+Explicit parameters in subroutines
+==================================
 
                   Perl 5                                     Perl 6
     sub routine {                                   sub routine ($a, $b, *@rest) {...}
