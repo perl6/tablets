@@ -47,7 +47,7 @@ language SIMD concurrent processing.
     my $sum;                                        my $sum = [+] @numbers;
     $sum += $_ for @numbers;
     for (0 .. $#factor1) {                          @product = @factor1 »*« @factor2;
-      $product[$] = $factor1[$] * $factor2[$_];
+      $product[$_] = $factor1[$_] * $factor2[$_];
     }
 
 
