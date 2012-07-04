@@ -101,9 +101,9 @@ Powerful for loops
     for my $key (keys %hash) {                      for %hash.kv -> $key, $value {
       print "$key => $hash{$key}\n"; ...              say "$key => $value"; ...
     for my $i (0..$#a) {                            for zip(@a; @b; @c) -> $a, $b, $c {...}
-      my $a = @a[$i];
-      my $b = @b[$i];
-      my $c = @c[$i]; ...
+      my $a = $a[$i];
+      my $b = $b[$i];
+      my $c = $c[$i]; ...
 
 
 
