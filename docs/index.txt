@@ -6,8 +6,7 @@ indexed and many links allow you to follow your interest freely. For a
 lightweight introduction, try
 [the Perl 6 Tutorial written by Herbert Breunung](http://www.perlfoundation.org/perl6/index.cgi?perl_6_tutorial)
 or the community Book [Using Perl
-6](https://github.com/perl6/book) or
-[Learning Perl 6](http://www.learningperl6.com/Chapters/). If that is
+6](https://github.com/perl6/book). If that is
 too easy, read [the specs](http://perlcabal.org/syn/).
 
 ---
