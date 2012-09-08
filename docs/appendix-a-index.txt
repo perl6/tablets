@@ -477,7 +477,7 @@ with the [following methods](appendix-b-grouped.html#match-object-methods)
 [*«logical op»*](tablet-4-operators.html#logical-selection) &mdash;
 short circuit *defined or*, returns the first defined value
 (from left to right), similar to [**||**](#pipe-pipe-op) &mdash;
-high [*precedence*](appendix-g-glossary.html#precedence) version of [**err**](#err)
+high [*precedence*](appendix-g-glossary.html#precedence) version of [**orelse**](#orelse)
 
 <a id="backslash-0"/><a id="backslash-zero"/>
 **\\0**<span class="you-provide">s</span>**\[**<span class="you-provide">n</span>**]**
@@ -1147,7 +1147,7 @@ logical [*AND*](appendix-g-glossary.html#and) short circuit operator,
 transferring [**$\_**](#context-var) from first to second block or expression,
 if first did succeed &mdash;
 example: `{...} andthen { .say }` &mdash;
-see also: [**orelse**](#orelse), [**and**](#orelse)
+see also: [**orelse**](#orelse) and [**and**](#and)
 
 <a id="anon"/>
 **anon**
@@ -2059,13 +2059,6 @@ see also: [**looser**](#looser) and [**tighter**](#tighter)
 [infix](#infix-category)
 operator, compares the dynamic state of objects and values, in
 contrast with static [**===**](#equal-equal-equal)
-
-<a id="err"/><a id="err-op"/>
-**err**
-[*«logical op»*](tablet-4-operators.html#logical-selection) &mdash;
-short circuit defined or, returns the first defined value from the left,
-low [*precedence*](appendix-g-glossary.html#precedence) version of [**//**](#defined-or) &mdash;
-see also: [**or**](#or), [**xor**](#xor)
 
 <a id="ERR-global-var"/>
 **\$\*ERR**
@@ -3229,7 +3222,7 @@ method name (options: `<NFC NFKC NFD NFKD>`) how strings are going to be normali
 [pramameter](appendix-g-glossary.html#parameter) which method should be used,
 that defaults to **\$\?NF**
 
-<a id="Nil-type"/>
+<a id="Nil"/><a id="Nil-type"/>
 **Nil**
 [*«undefined value type»*](appendix-b-grouped.html#undefined-types) &mdash;
 unlike *undef* in Perl 5 it really means no value here &mdash;
@@ -3346,7 +3339,7 @@ if there is one then the result is **True** in bool context,
 otherwise the first *True* value is returned or the last one,
 low [*precedence*](appendix-g-glossary.html#precedence) version of [**||**](#logical-or) &mdash;
 example: `?('hurray' or 5)` returns `True` &mdash;
-see also: [**any**](#any), [**orelse**](#orelse), [**err**](#err), [**xor**](#xor)
+see also: [**any**](#any), [**orelse**](#orelse), [**xor**](#xor)
 
 <a id="ord"/>
 **ord** ([Str](#Str-type) [--\>](#minus-minus-greater-signature) [Int](#Int-type))
@@ -3361,12 +3354,13 @@ converts a character into number according a character table
 get the index numbers of some characters,
 plural of [**ord**](#ord), reverse of [**chrs**](#chrs)
 
-<a id="orelse"/>
+<a id="orelse"/> <a id="orelse-op"/>
 **orelse**
 *«logical op»* &mdash;
 logical [*OR*](appendix-g-glossary.html#or) short circuit operator,
 transferring an error code from first to second block/command, if
-first do not succeed, similar to [**//**](#defined-or) &mdash;
+first do not succeed (returns [**Nil**](Nil-type)) &mdash;
+low [*precedence*](appendix-g-glossary.html#precedence) version of [**//**](#defined-or) &mdash;
 example: `{...} orelse { note $! }` &mdash;
 see also: [**andthen**](#andthen)
 
@@ -5074,7 +5068,7 @@ the second when both are empty and [**Nil**](#Nil-type) when both are not empty,
 low [*precedence*](appendix-g-glossary.html#precedence) version of
 [**\^\^**](#caret-caret-op) &mdash;
 example: `(5 xor 0)` returns `5` &mdash;
-see also: [**or**](#or), [**err**](#err)
+see also: [**or**](#or), [**orelse**](#orelse)
 
 <a id="xx"/><a id="xx-op"/>
 **xx**

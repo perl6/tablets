@@ -124,7 +124,7 @@ Logical Selection
 
     && - and
     || - or
-    // - err
+    // - orelse
     ^^ - xor
 
 see also [numerical selection](operators.html#numerical-selection)
