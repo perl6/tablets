@@ -2712,6 +2712,10 @@ Perl filehandle
 **is** &mdash;
 bind a [*trait*](appendix-g-glossary.html#trait) to a variable
 
+<a id="is-prime"/>
+**is-prime** &mdash;
+method of any [*Int*](#Int-type) object returning a [*Bool*](#Bool-type)
+
 <a id="item"/><a id="item-op"/>
 **item()**
 [*«context op»*](appendix-b-grouped.html#contextualizers) &mdash;
