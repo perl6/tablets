@@ -4657,6 +4657,20 @@ returns a copy of the string, with leading and trailing whitespace
 ([**\\s**](#backslash-s)) removed &mdash;
 see also: [**chomp**](#chomp)
 
+<a id="trim-leading"/>
+**trim-leading**
+*«string method»* &mdash;
+returns a copy of the string, with leading whitespace
+([**\\s**](#backslash-s)) removed &mdash;
+see also: [**chomp**](#chomp)
+
+<a id="trim-trailing"/>
+**trim-trailing**
+*«string method»* &mdash;
+returns a copy of the string, with trailing whitespace
+([**\\s**](#backslash-s)) removed &mdash;
+see also: [**chomp**](#chomp)
+
 <a id="True"/>
 **True** &mdash;
 [**boolean**](#Bool-type) value aka
