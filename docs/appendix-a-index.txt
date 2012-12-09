@@ -4534,6 +4534,12 @@ anything but a tab
 [*«escape sequence»*](appendix-b-grouped.html#escape-sequences) &mdash;
 tab `\u0009`, not visible character (control char)
 
+
+<a id="TABSTOP-compiler-var"/>
+**$?TABSTOP**
+[*«special var»*](appendix-b-grouped.html#compiler-hint-variables) &mdash;
+
+
 <a id="take"/>
 [**take**](tablet-6-blocks.html#gather-and-take)
 can add several item to the list of return values of a
