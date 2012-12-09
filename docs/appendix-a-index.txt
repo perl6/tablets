@@ -2628,6 +2628,12 @@ see also: [**use**](#use) and [**need**](#need)
 [*«special var»*](appendix-b-grouped.html#global-variables) &mdash;
 include pathes (but not for standard library modules), in Perl 5: *@INC*
 
+<a id="is-prime"/>
+**indent** &mdash;
+method of any [*string object*](#Str-type) that prepends 
+<span class="you-provide">n</span> (only parameter, can get negativ)
+space in any not empty line
+
 <a id="index"/>
 **index**
 *«string method»* &mdash;
