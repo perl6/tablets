@@ -4300,9 +4300,16 @@ seconds (with sub-second resolution)
 
 <a id="slurp"/>
 [**slurp**](tablet-2-basic-syntax.html#files)
+[--\>](#minus-minus-greater-signature) [Str](#Str-type) | [Buf](#Buf-type)
 *«path and file handle method»* &mdash;
-reads an entire file into a string without a [**file handle**](IO-type)
+reads an entire file into a variable with or without a [**file handle**](IO-type) &mdash;
+see also: [**spurt**](#spurt)
 
+<a id="spurt"/>
+[**spurt**](tablet-2-basic-syntax.html#files)
+*«path and file handle method»* &mdash;
+writes data (second parameter) into a file (first) with or without a [**file handle**](IO-type) &mdash;
+see also: [**slurp**](#slurp)
 
 
 # [Sn](#nav-top)
