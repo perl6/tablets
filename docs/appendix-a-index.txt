@@ -2359,7 +2359,8 @@ see also: [**gt**](#gt) and [**le**](#le)
 «*io method*» &mdash;
 returns a line (in [*item context*](appendix-g-glossary.html#item-context))
 or all lines (in [*list context*](appendix-g-glossary.html#list-context)) 
-from [*file handle*](#file-handle)
+from [*file handle*](#file-handle)  &mdash;
+see also: [**lines**](#lines), [**words**](#words)
 
 <a id="getc"/>
 [**getc**](tablet-5-io.html#getc)
@@ -2936,7 +2937,7 @@ returns a chomped list of lines
 containing a string - example: `$str.lines($limit)` equals
 [`$str.comb( / ^^ \N* /, $limit )`](#comb),
 works also on [*file handles*](IO-type) &mdash;
-see also: [**words**](#words)
+see also: [**words**](#words), [**get**](#get)
 
 <a id="list"/>
 **list**()
@@ -4305,12 +4306,6 @@ seconds (with sub-second resolution)
 reads an entire file into a variable with or without a [**file handle**](IO-type) &mdash;
 see also: [**spurt**](#spurt)
 
-<a id="spurt"/>
-[**spurt**](tablet-2-basic-syntax.html#files)
-*«path and file handle method»* &mdash;
-writes data (second parameter) into a file (first) with or without a [**file handle**](IO-type) &mdash;
-see also: [**slurp**](#slurp)
-
 
 # [Sn](#nav-top)
 
@@ -4366,6 +4361,12 @@ see also: [**comb**](#comb)
 *«formater»* &mdash;
 inserts formated values out of variables into a string like [**printf**](#printf),
 but returns the string instead of outputting it
+
+<a id="spurt"/>
+[**spurt**](tablet-2-basic-syntax.html#files)
+*«path and file handle method»* &mdash;
+writes data (second parameter) into a file (first) with or without a [**file handle**](IO-type) &mdash;
+see also: [**slurp**](#slurp)
 
 <a id="sqrt"/>
 **sqrt** ([Num](#Num-type) $f) &mdash;
