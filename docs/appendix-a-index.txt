@@ -1379,6 +1379,7 @@ to a [*class*](appendix-g-glossary.html#class)
 .**bytes** ([Buf](#Buf-type) [--\>](#minus-minus-greater-signature) [Int](#Int-type))
 *«string method»* &mdash;
 number of bytes (a sort of Perl 5's *length*) on buffer like types &mdash;
+example: `$var.encode($enc).bytes` &mdash;
 see also: [**chars**](#chars), [**codes**](#codes), [**graphs**](#graphs)
 
 <a id="bytes-modifier"/>
