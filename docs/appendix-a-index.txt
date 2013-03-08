@@ -1127,6 +1127,14 @@ equivalent to **\<+[alpha](#alpha-subrule) +[digit](#digit-subrule)\>**
 [*«predefined subrule»*](appendix-b-grouped.html#subrules) &mdash;
 a single alphabetic character
 
+<a id="also"/>
+**also** &mdash;
+keyword to define inharitance from [*classes*](appendix-g-glossary.html#class)
+and [*roles*](appendix-g-glossary.html#role) inside an
+[*object*](appendix-g-glossary.html#object), class or role &mdash;
+see also: [**is**](#is), [**does**](#does)
+
+
 <a id="and"/>
 **and**
 [*«logical op»*](tablet-4-operators.html#logical-selection) &mdash;
@@ -1890,8 +1898,11 @@ executes a [*block*](appendix-g-glossary.html#block), the "do once" loop
 
 <a id="does"/>
 **does** &mdash;
-checks if an [*object*](appendix-g-glossary.html#object)
-inherits a [*role*](appendix-g-glossary.html#role) (only parameter)
+defines that this class, role, or [*object*](appendix-g-glossary.html#object)
+inherits from this [*role*](appendix-g-glossary.html#role) (only parameter) &mdash;
+checkes if there are any conflicts with existing
+[*attributes*](appendix-g-glossary.html#attribute) or
+[*methods*](appendix-g-glossary.html#method)
 
 <a id="dotty-category"/>
 **dotty**
@@ -2718,7 +2729,9 @@ Perl filehandle
 
 <a id="is"/>
 **is** &mdash;
-bind a [*trait*](appendix-g-glossary.html#trait) to a variable
+keyword for to express that one class inherits from another &mdash;
+bind a [*trait*](appendix-g-glossary.html#trait) to a variable &mdash;
+see also: [**also**](#also)
 
 <a id="is-prime"/>
 **is-prime** &mdash;
