@@ -4032,6 +4032,13 @@ deletes a directory with given name
 
 # [Rn](#nav-top)
 
+<a id="required"/>
+**required** &mdash;
+[*trait*](appendix-g-glossary.html#trait) to create
+[*attributes*](appendix-g-glossary.html#attribute) that you have to give data
+while [*object*](appendix-g-glossary.html#object) creation &mdash;
+`class rocket { has $.speed is required }`
+
 <a id="role"/>
 **role**
 *«block modifier»* &mdash;
@@ -4710,7 +4717,8 @@ see also: [**abs**](#abs), [**conjugate**](#conjugate),
 
 <a id="trusts"/>
 **trusts** &mdash;
-allows a class the acess to otherwised sealed namespaces
+allows other (trusted) [*classes*](appendix-g-glossary.html#class) (first parameter)
+to access private attributes of that class
 
 <a id="twigil"/><a id="twigil-category"/>
 **twigil**
