@@ -426,6 +426,6 @@ Special Variables
 [are listed their
 table](ap-b-lookup.html#special-variables). To understand
 their secondary sigil [go to the twigil chapter of this
-tablet](variables.html#twigils).
+tablet](tablet-3-variables.html#twigils).
 
 ***
