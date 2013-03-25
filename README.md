@@ -18,7 +18,7 @@ Beginner
 
 * Add entries to FAQ (Appendix F) and glossary (Appendix G).
 
-* Just start reading and report issues if your not sure.
+* Just start reading and report issues if you're not sure.
 
 * Please pore over Appendix B taking note of the various links to the
   main Index (Appendix A). When you see a Perl 6 term without a link,
