@@ -2,9 +2,10 @@
 
 > "We put the 'Regular' back into 'Expression'." — Larry Wall
 
-Similar to [quotes](basic-syntax.html#quoting), Regular Expressions are now
-a sublanguage, a language inside the language, instead of just being
-funny strings. They are parsed by a completely different set of rules,
+Similar to [quotes](tablet-2-basic-syntax.html#quoting),
+Regular Expressions are now a sublanguage, a language inside the language,
+instead of just being funny strings.
+They are parsed by a completely different set of rules,
 which are stored in the special variable \$\~Regex (\$\~Trans for
 transliterations and \$\~P5Regex for compatible Regexes). However, these
 rules are much more consistant with the main language than
@@ -18,14 +19,14 @@ character itself. If a backslash (\\) is placed directly in front
 of the character it becomes a metacharacter. For non-alphanumeric
 chars the opposite is true. That is, a backslashed character always
 has a special meaning or is invalid. Inside of
-[quotes](basic-syntax.html#quoting) every char is literal.
+[quotes](tablet-2-basic-syntax.html#quoting) every char is literal.
 
 
 
 Metacharacter
 =============
 
-[table](ap-b-lookup.html#regex-metacharacter)
+[table](appendix-b-grouped.html#regex-metacharacter)
 
 
 
@@ -97,9 +98,9 @@ Grammars
 Predefined Rules
 ----------------
 
-[Are listed here](ap-b-lookup.html#subrules). **\<prior\>**
+[Are listed here](appendix-b-grouped.html#subrules). **\<prior\>**
 is somehow an exception.
 
-[all slang variables](ap-b-lookup.html#slang-variables)
+[all slang variables](appendix-b-grouped.html#slang-variables)
 
 ***

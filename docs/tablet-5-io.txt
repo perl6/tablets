@@ -23,16 +23,15 @@ say
     say 'Dear Earthlings!';
 
 
-Writes text to the standard output (`$*OUT`, called `STDOUT` in Perl
-5). This example just prints a [string
-literal](basic-syntax.html#quoting), but any type of value is
-allowed. **say** appends a line ending, according to the operating system
-convention. So every time you "say" something, it will later output will
-start on a fresh line.
+Writes text to the standard output (`$*OUT`, called `STDOUT` in Perl 5).
+This example just prints a [string literal](tablet-2-basic-syntax.html#quoting),
+but any type of value is allowed. **say** appends a line ending,
+according to the operating system convention.
+So every time you "say" something, it will later output will start on a fresh line.
 
 You can also give `say` a list of values. Each item will be taken as
 an expression to print. The results will be combined,
-just like with [**~**](operators.html#string-context), and finally the
+just like with [**~**](tablet-4-operators.html#string-context), and finally the
 line ending will be added.
 
     say 'Dear Earthlings, we come from ', $our_home_planet, ',
@@ -40,7 +39,7 @@ line ending will be added.
         ' parsecs away.';
 
 That could also be written using [double-quoted
-strings](basic-syntax.html#double-quotes):
+strings](tablet-2-basic-syntax.html#double-quotes):
 
     say "Dear Earthlings, we come from $our_home_planet, which is { compute_distance($earth, $our_home_planet) } parsecs away.";
 
@@ -63,7 +62,7 @@ printf
 ------
 
 It's a `print` that understands also the syntax of
-[sprintf](basic-syntax.html#sprintf). It's a very lightweight
+[sprintf](tablet-2-basic-syntax.html#sprintf). It's a very lightweight
 framework for formated output. If you need more, use formats or even a
 template engine.
 
@@ -75,7 +74,7 @@ template engine.
 note
 ----
 
-Works like [`say`](io.html#say), but writes to `$*ERR` (known as
+Works like [`say`](tablet-5-io.html#say), but writes to `$*ERR` (known as
 `STDERR` in Perl 5). Content sent to `$*ERR` can be redirected
 separately from normal program output, and is often used for progress
 reports, extra debugging information, error messages, etc.
@@ -86,7 +85,7 @@ warn
 ----
 
 Displays a warning along with the code location to `$.ERR`
-(see also [`note`](io.html#note)). Under the hood, warn throws a "resumable
+(see also [`note`](tablet-5-io.html#note)). Under the hood, warn throws a "resumable
 exception", and it can be caught and suppressed using a CONTROL block.
 Normally, once it's handled, Perl will resume running the code just
 after the warn call.
@@ -126,7 +125,7 @@ Files
 file test
 ---------
 
-[file test operators](ap-b-lookup.html#filetest-ops)
+[file test operators](appendix-b-grouped.html#filetest-ops)
 
 
 

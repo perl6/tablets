@@ -145,7 +145,7 @@ Flipflop
 
 
 
-file test
+File Test
 ---------
 
 Are now ordinary methods of the IO type.

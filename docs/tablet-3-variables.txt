@@ -9,8 +9,8 @@ Variable Types
 ==============
 
 Perl 6 (as Perl 5) knows 3 basic types of variables:
-[Scalars](#scalar) (single values),
-[Arrays](#array) (ordered and indexed lists of several
+[Scalars](#Scalar) (single values),
+[Arrays](#Array) (ordered and indexed lists of several
 values) and [Hashes](#hash) (2 column table, with ID and
 associated value pairs). They can be easily distinguished, because in
 front of their name is a special character called
@@ -29,7 +29,7 @@ just want a slice of the content.
     %hash{'ba','da','bim'} ### @hash{'ba','da','bim'} in Perl 5
 
 The sigils also mark distinct namespaces, meaning: in one [lexical
-scope](#scoping) you can have 3 different variables
+scope](Scoping) you can have 3 different variables
 named $stuff, @stuff and %stuff. These sigils [can also be used as an
 operator](appendix-b-grouped#contextualizers) to enforce a
 context in which the following data will be seen.
@@ -131,7 +131,7 @@ needs. This way Perl 6 can handle infinite lists or do computation on
 lists that have not been computed yet. The `lazy` command enforces this
 and the `eager` command forces all values to be computed.
 
-The list context is forced with a [@ operator or `list()`
+The list context is forced with a [@() operator or `list()`
 command](appendix-b-grouped.html#contextualizers). That's not
 autoflattening like in Perl 5 (automatically convert a List of Lists
 into one List). If you still want that, [say flat(). Or say
@@ -270,7 +270,7 @@ Internally [subroutines](tablet-7-subroutines.html), [methods](tablet-8-objects.
 and [alike](appendix-b-grouped.html#routine-types) are variables
 with the sigil & and stored in a fourth namespace. Unlike Perl 5, all
 subroutines can be overwritten or augmented with user defined routines.
-Of course [scalars](#scalar) can
+Of course [scalars](#Scalar) can
 also contain routines.
 
     &function = sub { ... };         # store subroutine in callable namespace
@@ -332,7 +332,7 @@ parameters, it is a mixture of a list and array.
 
 
 One important difference between a compound structure of lists and
-hashes and a capture: while [assignments](#assignment)
+hashes and a capture: while [assignments](#Assignment)
 with = the complete content of the named variables will be copied. But
 not so in the case of a capture. When I change $s in the last example,
 the content of $cap changes too, because when parameters to a routine
@@ -394,7 +394,7 @@ As rightfully expected, assignments are done with the equal sign. But
 unlike Perl 5 you always get a copy of the right side data assigned to
 the left, no matter how nested the data structure was (lists of lists
 eg). You never get in Perl 6 a reference with =. As the only exception
-may be seen [captures](#capture).
+may be seen [captures](#Capture).
 
     my @original = [1,2],[3,4];
     my $copy = @original[0]; # $copy points to [1,2]
@@ -422,6 +422,6 @@ Special Variables
 =================
 
 are listed in  [Index B](appendix-b-grouped.html#special-variables).
-To understand their secondary sigil [click here](#twigils).
+To understand their secondary sigil [click here](#Twigils).
 
 ***

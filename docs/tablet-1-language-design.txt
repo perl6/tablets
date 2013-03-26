@@ -166,10 +166,10 @@ rebuilt from scratch fail. Especially those which aim to be "even
 better in all ways" successors of already successful creations. In
 fact, this happens so often that the term "second system syndrome" was
 coined. We chose this path for Perl 6 anyways, because we believe it's
-the only way to get a significantly better language. (Gradual
-improvements are flowing into Perl 5 all the time, sometimes inspired
-from Perl 6.) That's why the unofficial motto of Perl 6 is "Second
-system syndrome done right".
+the only way to get a significantly better language.
+(Gradual improvements are flowing into Perl 5 all the time,
+sometimes inspired from Perl 6.) That's why the unofficial motto of
+Perl 6 is "Second system syndrome done right".
 
 
 
@@ -192,9 +192,9 @@ Apocalypse, an Exegesis ("explanation"), that expounded Larry's
 ideas. These are now all historic documents that not have changed
 since, because they were much harder to maintain than the Synopses
 ("abstracts" or "comparisons" (with Perl 5)). The Synopsis documents,
-along with the test suite, form the official specification of Perl
-6. More details on that can be found in [the history
-section](tablet-0-history.html).
+along with the test suite, form the official specification of Perl 6. 
+More details on that can be found in
+[the history section](tablet-0-history.html).
 
 The Synopses are continually edited because the more we think about
 the syntax and semantics, the more detailed the picture gets. The

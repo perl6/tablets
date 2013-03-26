@@ -11,4 +11,23 @@
 
 xxx
 
+Classes
+=======
+
+Methods
+=======
+
+Attributes
+==========
+
+Inheritance
+===========
+
+Roles
+=====
+
+Metaclasses
+===========
+
+
 ***
