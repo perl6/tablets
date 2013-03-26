@@ -5,23 +5,23 @@
 Perl 6 has a huge amount of operators, because they support 2 of the
 main design goals: they offer **dense** and **readable** code. 2 + 3
 is certainly shorter and easier to understand then add(2,3), since
-[pictograms](language-design.html#visual-metaphor) can be picked up
-faster than words. (Fortran made its whole career on that). But
-because they are so many, they had to be sorted by a rule named
-[huffman coding](language-design.html#huffman-coding), which was
-applied here more than in any other part of the syntax.
+[pictograms](tablet-1-language-design.html.html#visual-metaphor)
+can be picked up faster than words. (Fortran made its whole career on that).
+But because they are so many, they had to be sorted by a rule named
+[huffman coding](tablet-1-language-design.html.html#huffman-coding),
+which was applied here more than in any other part of the syntax.
 
 To understand an operator you have to know its **arity** (how many
 parameters it takes - usually one (!) or two (+) ).
 
-The [precedence](ap-b-lookup.html#table-of-precedence) tells
+The [precedence](appendix-b-grouped.html#table-of-precedence) tells
 which operator to prefer in case of conflict, when no braces are used
 (round braces are only used for grouping and managing precedence). It
 allows 2 + 3 * 5 to return 17, not 25, which would upset your math
 teacher.
 
 Behind that link is a table which also tells you also the
-[associativity](ap-b-lookup.html#operator-associativity) of
+[associativity](appendix-b-grouped#operator-associativity) of
 every operator. This tells you after which rule to resolve precedence
 if one operator is used several times like in 2 * 3 * 7.
 
@@ -41,12 +41,12 @@ twin) of all Perl 6 operators. It can be called the
 matches somehow the content of the right side, it returns Bool::True,
 otherwise Bool::False. The negated form !~~ naturally works the other
 way around. The exact comparison operation depends on the [data
-types](variables.html#data-types) of the values on both sides. Just
-look into that [large table](ap-b-lookup.html#smartmatch) to
-check your specific case.
+types](tablet-3-variables.html#data-types) of the values on both sides.
+Just look into that [large table](appendix-b-grouped.html#smartmatch)
+to check your specific case.
 
 Smartmatching was originally invented to make [matching with
-regex](regexes.html#matching) semantically sane.
+regex](tablet-9-regexes.html#matching) semantically sane.
 
     ~~ !~~
 
@@ -65,7 +65,7 @@ Traversing Sequence
 
     ++ -- succ pred
 
-[sequence generation](operators.html#sequence-operator)
+[sequence generation](#sequence-operator)
 
 
 
@@ -127,7 +127,7 @@ Logical Selection
     // - orelse
     ^^ - xor
 
-see also [numerical selection](operators.html#numerical-selection)
+see also [numerical selection](#numerical-selection)
 
 
 
@@ -221,7 +221,7 @@ In list context the range operator produces lists:
 
     ...
 
-[traversing sequence](operators.html#traversing-sequence)
+[traversing sequence](#traversing-sequence)
 
 
 
@@ -282,7 +282,7 @@ xxx
 precedence table
 ================
 
-[is in Appendix B](ap-b-lookup.html#table-of-precedence)
+[is in Appendix B](appendix-b-grouped.html#table-of-precedence)
 
 
 
@@ -295,7 +295,7 @@ xxx
 Selfmade Operators
 ==================
 
-How to make your own is subject [this chapter](tablet-10-metaprogramming.html#)
+How to make your own is subject [this chapter](tablet-10-metaprogramming.html)
 in the metaprogramming tablet.
 
 

@@ -9,7 +9,7 @@ Variable Types
 ==============
 
 Perl 6 (as Perl 5) knows 3 basic types of variables:
-[Scalars](#scalars) (single values),
+[Scalars](#scalar) (single values),
 [Arrays](#array) (ordered and indexed lists of several
 values) and [Hashes](#hash) (2 column table, with ID and
 associated value pairs). They can be easily distinguished, because in
@@ -123,7 +123,7 @@ Array
 -----
 
 An array is an ordered and indexed list of
-[scalar](#Scalar)s. If not specified otherwise, they
+[scalars](#Scalar). If not specified otherwise, they
 can be changed, expanded and shortened anytime and used as a list,
 stack, queue and much more. As in Haskell, lists are processed lazily,
 which means: the compiler looks only at the part it currently
@@ -270,7 +270,7 @@ Internally [subroutines](tablet-7-subroutines.html), [methods](tablet-8-objects.
 and [alike](appendix-b-grouped.html#routine-types) are variables
 with the sigil & and stored in a fourth namespace. Unlike Perl 5, all
 subroutines can be overwritten or augmented with user defined routines.
-Of course [scalars](#scalar)s can
+Of course [scalars](#scalar) can
 also contain routines.
 
     &function = sub { ... };         # store subroutine in callable namespace
