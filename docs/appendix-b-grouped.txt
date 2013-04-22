@@ -107,16 +107,16 @@ compiler constants (fixed at compile time)
 [`$?NF`](appendix-a-index.html#NF-compiler-var)                   default string normalization method
 [`%?LANG`](appendix-a-index.html#LANG-compiler-var)               Hash of Grammar # What is the current set of interwoven languages?
 [`$?GRAMMAR`](appendix-a-index.html#GRAMMAR-compiler-var)         current grammar
-[`$?FILE`](appendix-a-index.html#FILE-compiler-var)               current filename of source file
+[`$?FILE`](appendix-a-index.html#FILE-compiler-var)               current filename of source file (__FILE__ in P5)
 [`$?MODULE`](appendix-a-index.html#mODULE-compiler-var)           current module
-[`$?PACKAGE`](appendix-a-index.html#PACKAGE-compiler-var)         current package
+[`$?PACKAGE`](appendix-a-index.html#PACKAGE-compiler-var)         current package (__PACKAGE__)
 [`$?CLASS`](appendix-a-index.html#CLASS-compiler-var)             current class
 [`::?CLASS`](appendix-a-index.html#CLASS-package-compiler-var)    current class (as package name)
 [`$?ROLE`](appendix-a-index.html#ROLE-compiler-var)               current role (as variable)
 [`::?ROLE`](appendix-a-index.html#ROLE-package-compiler-var)      current role (as package or type name)
-[`&?ROUTINE`](appendix-a-index.html#ROUTINE-compiler-var)         current sub or method
+[`&?ROUTINE`](appendix-a-index.html#ROUTINE-compiler-var)         current sub or method (__SUB__)
 [`&?BLOCK`](appendix-a-index.html#BLOCK-compiler-var)             reference to current block
-[`$?LINE`](appendix-a-index.html#LINE-compiler-var)               current line number
+[`$?LINE`](appendix-a-index.html#LINE-compiler-var)               current line number (__LINE__)
 [`$?TABSTOP`](appendix-a-index.html#TABSTOP-compiler-var)         
 ----------------------------------------------------------------  ------------------------------------------------------------------
 
@@ -422,16 +422,16 @@ that can be used to create new categories.
 [`circumfix:<( )>`](appendix-a-index.html#circumfix-category)
 [`dotty:<.>`](appendix-a-index.html#dotty-category)
 [`infix:<+>`](appendix-a-index.html#infix-category)
-[`infix_circumfix_meta_operator:{'Â«','Â»'}`](appendix-a-index.html#infix-circumfix-meta-operator-category)
+[`infix_circumfix_meta_operator:{'«','»'}`](appendix-a-index.html#infix-circumfix-meta-operator-category)
 [`infix_postfix_meta_operator:<=>`](appendix-a-index.html#infix-postfix-meta-operator-category)
 [`infix_prefix_meta_operator:<!>`](appendix-a-index.html#infix-prefix-meta-operator-category)
 [`package_declarator:<class>`](appendix-a-index.html#package-declarator-category)
 [`postcircumfix:<( )>`](appendix-a-index.html#postcircumfix-category)
 [`postfix:<++>`](appendix-a-index.html#postfix-category)
-[`postfix_prefix_meta_operator:{'Â»'}`](appendix-a-index.html#postfix-prefix-meta-operator-category)
+[`postfix_prefix_meta_operator:{'»'}`](appendix-a-index.html#postfix-prefix-meta-operator-category)
 [`prefix:<++>`](appendix-a-index.html#prefix-category)
 [`prefix_circumfix_meta_operator:{'[',']'}`](appendix-a-index.html#prefix-circumfix-meta-operator-category)
-[`prefix_postfix_meta_operator:{'Â«'}`](appendix-a-index.html#prefix-postfix-meta-operator-category)
+[`prefix_postfix_meta_operator:{'«'}`](appendix-a-index.html#prefix-postfix-meta-operator-category)
 [`quote:<q>`](appendix-a-index.html#quote-category)
 [`routine_declarator:<sub>`](appendix-a-index.html#routine-declarator-category)
 [`scope_declarator:<my>`](appendix-a-index.html#scope-declarator-category)
@@ -497,9 +497,9 @@ The two hyper operators and the evaluating autoquoting can be written with the
 signs (documented as "Texas Quotes").
 
 --- -------------------------------------------------------- -----------------------------------------------
- Â«  [\<\<](appendix-a-index.html#lower-lower-op)             Hyperop, right side dictates length of result
- Â»  [\>\>](appendix-a-index.html#greater-greater-op)         Hyperop, left side dictates length of result
- Â« Â» [\<\< \>\>](appendix-a-index.html#double-angle-brackets) [**qw**](appendix-a-index.html#qw-op) with [evaluation](appendix-g-glossary.html#evaluation) and [quote protection](appendix-g-glossary.html#quote-protection)
+ «  [\<\<](appendix-a-index.html#lower-lower-op)             Hyperop, right side dictates length of result
+ »  [\>\>](appendix-a-index.html#greater-greater-op)         Hyperop, left side dictates length of result
+ « » [\<\< \>\>](appendix-a-index.html#double-angle-brackets) [**qw**](appendix-a-index.html#qw-op) with [evaluation](appendix-g-glossary.html#evaluation) and [quote protection](appendix-g-glossary.html#quote-protection)
 --- -------------------------------------------------------- -----------------------------------------------
 
 
@@ -575,9 +575,9 @@ Selection of the comparison alhorithm (4th column) is based on the value
 [Set](appendix-a-index.html#Set-type)              [Set](appendix-a-index.html#Set-type)              identical sets                                    `$_ === X`
 [Hash](appendix-a-index.html#Hash-type)            [Set](appendix-a-index.html#Set-type)              hash keys same set                                `$_.keys === X`
 [Any](appendix-a-index.html#Any-type)              [Set](appendix-a-index.html#Set-type)              force set comparison                              `Set($_) === X`
-[Array](appendix-a-index.html#Array-type)          [Array](appendix-a-index.html#Array-type)          arrays are comparable                             `$_ Â«===Â» X` (dwims `*` wildcards!)
+[Array](appendix-a-index.html#Array-type)          [Array](appendix-a-index.html#Array-type)          arrays are comparable                             `$_ «===» X` (dwims `*` wildcards!)
 [Set](appendix-a-index.html#Set-type)              [Array](appendix-a-index.html#Array-type)          array equiv to set                                `$_ === Set(X)`
-[Any](appendix-a-index.html#Any-type)              [Array](appendix-a-index.html#Array-type)          lists are comparable                              `@$_ Â«===Â» X`
+[Any](appendix-a-index.html#Any-type)              [Array](appendix-a-index.html#Array-type)          lists are comparable                              `@$_ «===» X`
 [Hash](appendix-a-index.html#Hash-type)            [Hash](appendix-a-index.html#Hash-type)            hash keys same set                                `$_.keys === X.keys`
 [Set](appendix-a-index.html#Set-type)              [Hash](appendix-a-index.html#Hash-type)            hash keys same set                                `$_ === X.keys
 [Array](appendix-a-index.html#Array-type)          [Hash](appendix-a-index.html#Hash-type)            hash slice existence                              `X.{any @$_}:exists`
