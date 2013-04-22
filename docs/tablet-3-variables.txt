@@ -123,7 +123,7 @@ Array
 -----
 
 An array is an ordered and indexed list of
-[scalars](#Scalar). If not specified otherwise, they
+[scalars](#scalar). If not specified otherwise, they
 can be changed, expanded and shortened anytime and used as a list,
 stack, queue and much more. As in Haskell, lists are processed lazily,
 which means: the compiler looks only at the part it currently
@@ -270,7 +270,7 @@ Internally [subroutines](tablet-7-subroutines.html), [methods](tablet-8-objects.
 and [alike](appendix-b-grouped.html#routine-types) are variables
 with the sigil & and stored in a fourth namespace. Unlike Perl 5, all
 subroutines can be overwritten or augmented with user defined routines.
-Of course [scalars](#Scalar) can
+Of course [scalars](#scalar) can
 also contain routines.
 
     &function = sub { ... };         # store subroutine in callable namespace
@@ -284,7 +284,7 @@ also contain routines.
 Data Types
 ==========
 
-In contrast to [variable types](#Variable-Types)
+In contrast to [variable types](#variable-types)
 (container types) every [value has a
 type](appendix-b-grouped.html#value-types) too. These are
 organized internally as classes or roles and can be categorized into 3
@@ -332,7 +332,7 @@ parameters, it is a mixture of a list and array.
 
 
 One important difference between a compound structure of lists and
-hashes and a capture: while [assignments](#Assignment)
+hashes and a capture: while [assignments](#assignment)
 with = the complete content of the named variables will be copied. But
 not so in the case of a capture. When I change $s in the last example,
 the content of $cap changes too, because when parameters to a routine
@@ -394,7 +394,7 @@ As rightfully expected, assignments are done with the equal sign. But
 unlike Perl 5 you always get a copy of the right side data assigned to
 the left, no matter how nested the data structure was (lists of lists
 eg). You never get in Perl 6 a reference with =. As the only exception
-may be seen [captures](#Capture).
+may be seen [captures](#capture).
 
     my @original = [1,2],[3,4];
     my $copy = @original[0]; # $copy points to [1,2]
@@ -422,6 +422,6 @@ Special Variables
 =================
 
 are listed in  [Index B](appendix-b-grouped.html#special-variables).
-To understand their secondary sigil [click here](#Twigils).
+To understand their secondary sigil [click here](#twigils).
 
 ***

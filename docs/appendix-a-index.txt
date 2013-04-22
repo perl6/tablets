@@ -2189,6 +2189,12 @@ causes the [routine](appendix-g-glossary.html#routine) to return an unthrown
 in effect where the [*routine*](appendix-g-glossary.html#routine) was called from,
 it throws the exception
 
+<a id="FALLBACK"/><a id="FALLBACK-method"/>
+**FALLBACK** &mdash;
+method of each [*class*](appendix-g-glossary.html#class) that will be called,
+if a method call fails &mdash;
+similar to P5 AUTOLOAD
+
 <a id="Failure"/><a id="Failure-type"/>
 **Failure**
 [*«undefined value type»*](appendix-b-grouped.html#undefined-types) &mdash;
