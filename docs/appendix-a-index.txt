@@ -1717,10 +1717,10 @@ and an "imaginary value" (the thing with the i == sqrt(-1))
 returns ($c.re - $c.im\i), the complex conjugate
 see also: [**cis**](#cis), [**polar**](#polar), [**unpolar**](#unpolar)
 
-<a id="conjugate"/>
-**conjugate**
+<a id="conj"/>
+**conj**
 «complex method» &mdash;
-convert [complex number](#complex-type) into real ([**Num**](#Num-type)) &mdash;
+convert [complex number](#complex-type) into real ([**Num**](#Num-type)) (conjugate) &mdash;
 see also: [**abs**](#abs), [**sign**](#sign), [**truncate**](#truncate),
 [**unpolar**](#unpolar), [**re**](#re), [**im**](#im)
 
@@ -4711,7 +4711,7 @@ opposite of [**False**](#False)
 *«num method»* &mdash;
 truncates the fractional part of a number &mdash;
 examples: `truncate 4.27` returns `4`, `truncate -5.5` returns `-5` &mdash;
-see also: [**abs**](#abs), [**conjugate**](#conjugate),
+see also: [**abs**](#abs), [**conj**](#conj),
           [**round**](#round), [**sign**](#sign)
 
 <a id="trusts"/>
