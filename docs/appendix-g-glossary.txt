@@ -639,6 +639,9 @@ See also:
 <a id="radian"/>
 **radian** &mdash;
 
+<a id="range"/>
+**range** &mdash;
+
 <a id="reference"/>
 **reference** *(or pointer)* &mdash;
 address of or pointer to a specific location in the computers memory.

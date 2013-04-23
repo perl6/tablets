@@ -2664,6 +2664,13 @@ and returns the numerical position, opposite or [**rindex**](#rindex)
 indicates infinity, useful to generate infinite lazy lists,
 does in most [*context*](appendix-g-glossary.html#context) same as [**\***](#asterisk)
 
+<a id="infinite"/>
+[**infinite**](tablet-3-variables.html)
+*«list method»* &mdash;
+answers if a [*range*](appendix-g-glossary.html#range) or
+[*list*](appendix-g-glossary.html#list) is infinite with
+[**True**](#True), [**False**](#False) or [**Mu**](#Mu-type)
+
 <a id="infix-category"/>
 **infix**
 [*«grammatical category»*](appendix-b-grouped.html#categories) &mdash;
@@ -2757,7 +2764,8 @@ Perl [*list*](appendix-g-glossary.html#list)
 <a id="iterator"/>
 [**iterator**](tablet-3-variables.html)
 *«list method»* &mdash;
-returns the [*iterator*](appendix-g-glossary.html#iterator) of a list 
+returns the [*iterator*](appendix-g-glossary.html#iterator) of a 
+[*list*](appendix-g-glossary.html#list)
 
 
 # [J](#nav-top)
@@ -3987,6 +3995,7 @@ parse as quoted string as regex
 forces the [*iterator*](appendix-g-glossary.html#iterator)
 of a list to create the next <span class="you-provide">n</span>
 (first parameter) elements &mdash;
+see also: [*reify*](appendix-g-glossary.html#reify) &mdash;
 example: `(1..5).reify(2)` result: `1, 2, 3..5`
 
 <a id="Regex-slang-var"/>
