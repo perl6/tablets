@@ -422,7 +422,7 @@ that can be used to create new categories.
 [`circumfix:<( )>`](appendix-a-index.html#circumfix-category)
 [`dotty:<.>`](appendix-a-index.html#dotty-category)
 [`infix:<+>`](appendix-a-index.html#infix-category)
-[`infix_circumfix_meta_operator:{'«',''}`](appendix-a-index.html#infix-circumfix-meta-operator-category)
+[`infix_circumfix_meta_operator:{'«','»'}`](appendix-a-index.html#infix-circumfix-meta-operator-category)
 [`infix_postfix_meta_operator:<=>`](appendix-a-index.html#infix-postfix-meta-operator-category)
 [`infix_prefix_meta_operator:<!>`](appendix-a-index.html#infix-prefix-meta-operator-category)
 [`package_declarator:<class>`](appendix-a-index.html#package-declarator-category)
