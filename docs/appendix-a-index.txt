@@ -2754,6 +2754,10 @@ alias to [**$**()](#dollar-op)
 [*«mutable type»*](appendix-b-grouped.html#mutable-types) &mdash;
 Perl [*list*](appendix-g-glossary.html#list)
 
+<a id="iterator"/>
+[**iterator**](tablet-3-variables.html)
+*«list method»* &mdash;
+returns the [*iterator*](appendix-g-glossary.html#iterator) of a list 
 
 
 # [J](#nav-top)
