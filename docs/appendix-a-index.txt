@@ -1372,6 +1372,12 @@ Perl boolean, type of values that can be either
 [**True**](#True) or [**False**](#False)
 which is in full length *Bool::True* and *Bool::False*
 
+<a id="bounds"/>
+[**bounds**](tablet-3-variables.html)
+*«range method»* &mdash;
+returns a [*list*](appendix-g-glossary.html#list) with same start
+and end point as the [*range*](appendix-g-glossary.html#range) (first parameter)
+
 <a id="Buf-type"/>
 **Buf**
 [*«mutable type»*](appendix-b-grouped.html#mutable-types) &mdash;
