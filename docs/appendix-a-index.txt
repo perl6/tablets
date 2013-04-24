@@ -14,12 +14,15 @@ Sometimes are added green placeholder:
 <span class="you-provide">s</span> [string](#Str-type),
 <span class="you-provide">var</span> any variable,
 <span class="you-provide">p</span> a [*regex pattern*](appendix-g-glossary.html#regex),
-<span class="you-provide">l</span> a list,
+<span class="you-provide">l</span> a [*list*](appendix-g-glossary.html#list),
+<span class="you-provide">r</span> a [*range*](appendix-g-glossary.html#range),
 <span class="you-provide">op</span> any operator,
 <span class="you-provide">x</span> any [*expression*](appendix-g-glossary.html#expression),
 <span class="you-provide">t</span> any [*term*](appendix-g-glossary.html#term).
-After each method is its signature (in round brackets), telling you
-the value type (same as in placeholders) of the parameters and the return value.
+After each method is its [*signature*](appendix-g-glossary.html#signature)
+(in round brackets), 
+telling you the value type (same as in placeholders) of the 
+[*parameters*](appendix-g-glossary.html#parameters) and the return value.
 The items itself are linked to a more detailed explanation inside of a tablet.
 Each term is followed by a link «in french brackets» to a condensed summary
 listing of its category in [Appendix B](appendix-b-grouped.html)
@@ -28,7 +31,6 @@ lead to another item in A (when **bold**) or to the glossary (when *italic*).
 The chapter headlines serve as anchor and links to the navigation menu.
 Thatswhy large chapter like C are split into "C" (second letter a-m)
 and a following "n" (second letter n-z).
-
 
 
 
