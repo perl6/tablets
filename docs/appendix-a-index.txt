@@ -4285,6 +4285,12 @@ want to create your own
 **seed** &mdash;
 initialize a random number generator, optionally with a value
 
+<a id="self"/>
+**self**
+*«term»* &mdash;
+alias to object that the method was called on,
+available just inside a [*method*](appendix-g-glossary.html#method)
+
 <a id="Set-type"/>
 **Set**
 [*«immutable type»*](appendix-b-grouped.html#immutable-types) &mdash;
