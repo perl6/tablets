@@ -497,9 +497,9 @@ The two hyper operators and the evaluating autoquoting can be written with the
 signs (documented as "Texas Quotes").
 
 --- -------------------------------------------------------- -----------------------------------------------
- Â«  [\<\<](appendix-a-index.html#lower-lower-op)             Hyperop, right side dictates length of result
- Â»  [\>\>](appendix-a-index.html#greater-greater-op)         Hyperop, left side dictates length of result
- Â« Â» [\<\< \>\>](appendix-a-index.html#double-angle-brackets) [**qw**](appendix-a-index.html#qw-op) with [evaluation](appendix-g-glossary.html#evaluation) and [quote protection](appendix-g-glossary.html#quote-protection)
+ «  [\<\<](appendix-a-index.html#lower-lower-op)             Hyperop, right side dictates length of result
+ »  [\>\>](appendix-a-index.html#greater-greater-op)         Hyperop, left side dictates length of result
+ « » [\<\< \>\>](appendix-a-index.html#double-angle-brackets) [**qw**](appendix-a-index.html#qw-op) with [evaluation](appendix-g-glossary.html#evaluation) and [quote protection](appendix-g-glossary.html#quote-protection)
 --- -------------------------------------------------------- -----------------------------------------------
 
 
@@ -563,7 +563,7 @@ Selection of the comparison alhorithm (4th column) is based on the value
 [Any](appendix-a-index.html#Any-type)              [False](appendix-a-index.html#False)               `~~` [False](appendix-a-index.html#False) match   (parsewarn)
 [Any](appendix-a-index.html#Any-type)              [Match](appendix-a-index.html#Match-type)          `~~` Successful match                             (parsewarn on literal token)
 [Any](appendix-a-index.html#Any-type)              [Nil](appendix-a-index.html#Nil-type)              `~~` Benign failure                               (parsewarn on literal token)
-[Any](appendix-a-index.html#Any-type)              [Nil](appendix-a-index.html#Nil-type)Failure type check                                (okay, matches against type)
+[Any](appendix-a-index.html#Any-type)              [Nil](appendix-a-index.html#Nil-type)              Failure type check                                (okay, matches against type)
 [Any](appendix-a-index.html#Any-type)              [`*`](appendix-a-index.html#asterisk-term)         block signature match                             block successfully binds to `|$_` ([flattened arglist](appendix-a-index.html#pipe-context))
 &nbsp;   &nbsp;    &nbsp;   &nbsp;
 [Any](appendix-a-index.html#Any-type)              Callable:(\$)                                      item sub truth                                    `X($_)`
@@ -931,7 +931,6 @@ also be used within an expression as in `BEGIN my $x = 3 * 3;`.
 [INIT](appendix-a-index.html#INIT-phaser) {...}*        at run time, ASAP, only ever runs once
 [END](appendix-a-index.html#END-phaser) {...}           at run time, ALAP, only ever runs once
 &nbsp;                                                  &nbsp;
-[START](appendix-a-index.html#START-phaser) {...}*      on first ever execution, once per closure clone
 [ENTER](appendix-a-index.html#ENTER-phaser) {...}*      at every block entry time, repeats on loop blocks.
 [LEAVE](appendix-a-index.html#LEAVE-phaser) {...}       at every block exit time
 [KEEP](appendix-a-index.html#KEEP-phaser) {...}         at every successful block exit, part of LEAVE queue

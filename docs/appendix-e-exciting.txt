@@ -26,13 +26,15 @@ reading](io.html#file) is simpler then ever (and autochomp included).
 
                    Perl 5                                     Perl 6
      $content = do { local $/;                       $content = slurp "poetry.txt";
-        open my $FH, "poetry.txt"; <$FH>
+        open my $FH, '<', "poetry.txt"; <$FH>
      };
 
-    chomp(@content = do {                            @content = lines "poetry.txt";
+     chomp(@content = do {                           @content = lines "poetry.txt";
         open my $FH, "poetry.txt"; <$FH>
-    });
+     });
 
+     open my $FH, '>', "poetry.txt";                 spurt ("poetry.txt", $content);
+     print $FH $content;
 
 
 Automatic Multithreading

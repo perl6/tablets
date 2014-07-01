@@ -709,7 +709,7 @@ value and [type](appendix-b-grouped.html#value-types)
 [*«sequencer op»*](tablet-4-operators.html#feed-ops) &mdash;
 rightward pointing feed operator, take return value of left side
 and feed as parameter to the right &mdash;
-see also: [**\<==***](#lower-equal-equal-op) and [**==\>\>**](#equal-equal-greater-greater-op)
+see also: [**\<==**](#lower-equal-equal-op) and [**==\>\>**](#equal-equal-greater-greater-op)
 
 <a id="equal-equal-greater-greater-op"/>
 **==\>\>**
@@ -4420,7 +4420,7 @@ but returns the string instead of outputting it
 <a id="spurt"/>
 [**spurt**](tablet-2-basic-syntax.html#files)
 *«path and file handle method»* &mdash;
-writes data (second parameter) into a file (first) with or without a [**file handle**](IO-type) &mdash;
+writes into a file (first parameter) data (second) with or without a [**file handle**](IO-type) &mdash;
 see also: [**slurp**](#slurp)
 
 <a id="sqrt"/>
@@ -4450,12 +4450,6 @@ short alternative of [**:samespace**](#samespace-modifier)
 demands the <span class="you-provide">n</span>th finding, has many aliases
 ([**:nd**](#nd-modifier) [**:rd**](#rd-modifier) :[**th**](#th-modifier)) 
 for correct spelling (`:3rd`)
-
-<a id="START-phaser"/>
-**START**
-[*«closure trait»*](appendix-b-grouped.html#closure-traits) &mdash;
-marks as a prefix a special block or statement, executed on
-first ever execution, once per closure clone
 
 <a id="Stash-type"/>
 **Stash**
