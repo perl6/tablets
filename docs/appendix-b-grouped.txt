@@ -497,9 +497,9 @@ The two hyper operators and the evaluating autoquoting can be written with the
 signs (documented as "Texas Quotes").
 
 --- -------------------------------------------------------- -----------------------------------------------
- «  [\<\<](appendix-a-index.html#lower-lower-op)             Hyperop, right side dictates length of result
- »  [\>\>](appendix-a-index.html#greater-greater-op)         Hyperop, left side dictates length of result
- « » [\<\< \>\>](appendix-a-index.html#double-angle-brackets) [**qw**](appendix-a-index.html#qw-op) with [evaluation](appendix-g-glossary.html#evaluation) and [quote protection](appendix-g-glossary.html#quote-protection)
+ âŸª  [\<\<](appendix-a-index.html#lower-lower-op)             Hyperop, right side dictates length of result
+ âŸ«  [\>\>](appendix-a-index.html#greater-greater-op)         Hyperop, left side dictates length of result
+ âŸª âŸ«  [\<\< \>\>](appendix-a-index.html#double-angle-brackets) [**qw**](appendix-a-index.html#qw-op) with [evaluation](appendix-g-glossary.html#evaluation) and [quote protection](appendix-g-glossary.html#quote-protection)
 --- -------------------------------------------------------- -----------------------------------------------
 
 
