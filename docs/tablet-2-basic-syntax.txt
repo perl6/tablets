@@ -20,27 +20,27 @@ or [**class**](appendix-a-index.html#class). That marks your code as Perl 6
 Perl 5 and 6 in one source file.
 
 Where you had to include `use strict;` and `use warnings;` at the top
-of every perl5 script, it's now default in perl6. Also `use utf8;` is 
-obsolete since any Perl 6 source code is always treated as UTF-8 and 
-any [*unicode*](appendix-g-glossary.html#unicode) character can be used 
-anywhere in the code. Even pragmas such as `constants` and `vars` are 
-now part of the core language.
+of every Perl 5 script prior to 5.12, it's default in Perl6. 
+Also `use utf8;` is obsolete since any Perl 6 source code is always treated
+as UTF-8 and any [*unicode*](appendix-g-glossary.html#unicode) character
+can be used anywhere in the code. Even pragmas such as `constants` or `vars`
+are now part of the core language.
 
 Also the functionality of many useful and famous modules like Moose
-(object system), Parse::RecDescent++, exception handling,
-List::\[More\]Utils, Export, English, an advanced pretty printer and
-much more is already built in. So you get a lot extra for a little
-**v6;**.
+(object system), Parse::RecDescent, exception handling, List::\[More\]Utils,
+Exporter, English, an advanced pretty printer and much more is already built in.
+So you get a lot extra for a little *v6;**.
 
 
-Statements
-==========
+Statements and Semicolon
+========================
 
 Unless you use [*blocks*](appendix-g-glossary.html#block), a Perl 
 program executes one statement after another in linear progression 
 (from left to right, top down). They have to be separated by 
 a semicolon ([**;**](appendix-a-index.html#semicolon-terminator)),
 except before and after a closing curly brace, where it is optional.
+Line endings usually have no syntactical effect.
 
     $coderef = sub { fetch_data(); compute() }
 
@@ -50,9 +50,10 @@ Spaces and Indentation
 
 Perl doesn't care about indentation, but it does care about whitespace
 as a disambiguator. For example, `$foo$bar` is a syntax error since that 
-has two terms in a row without any whitespace to tell them apart. There's 
-a new addition in perl6, the so called "unspace" operator. It is basically
-an instruction to the compiler's lexer that it should ignore whitespace there.
+are two terms in a row without any whitespace to tell them apart. There's 
+a new addition in Perl 6, the so called "unspace" operator. It is basically
+an instruction to the compiler's [*lexer*](appendix-g-glossary.html#lexer)
+that it should ignore whitespace there.
 In other words, the lexer doesn't consider those whitespaces at all. 
 
     my %hash = "foo" => 42, "bar" => 84; 

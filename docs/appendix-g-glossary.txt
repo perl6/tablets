@@ -181,6 +181,10 @@ already runnung, to run code at the begin of compile time use
 [**CHECK**](appendix-a-index.html#CHECK-phaser) to run at the end of
 compile time for that unit (mostly the file or the to be **eval**ed string)
 
+<a id="compiler"/>
+**compiler** &mdash;
+
+
 <a id="complex-number"/>
 **complex number** &mdash;
 
@@ -401,6 +405,9 @@ create them with [junctive ops](appendix-b-grouped.html#junctions)
 
 <a id="lazy"/>
 **lazy** &mdash;
+
+<a id="lexer"/>
+**lexer** &mdash;
 
 <a id="lexical-scope"/>
 **lexical scope** &mdash;
