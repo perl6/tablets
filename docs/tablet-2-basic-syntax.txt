@@ -40,9 +40,10 @@ program executes one statement after another in linear progression
 (from left to right, top down). They have to be separated by 
 a semicolon ([**;**](appendix-a-index.html#semicolon-terminator)),
 except before and after a closing curly brace, where it is optional.
-Line endings usually have no syntactical effect.
 
     $coderef = sub { fetch_data(); compute() }
+
+Line endings have inside the main language no syntactical effect.
 
 
 Spaces and Indentation
@@ -51,10 +52,8 @@ Spaces and Indentation
 Perl doesn't care about indentation, but it does care about whitespace
 as a disambiguator. For example, `$foo$bar` is a syntax error since that 
 are two terms in a row without any whitespace to tell them apart. There's 
-a new addition in Perl 6, the so called "unspace" operator. It is basically
-an instruction to the compiler's [*lexer*](appendix-g-glossary.html#lexer)
-that it should ignore whitespace there.
-In other words, the lexer doesn't consider those whitespaces at all. 
+a new, so called "unspace" operator, telling the compiler's [*lexer*](appendix-g-glossary.html#lexer)
+that it should ignore whitespace after it as if it never was written at all. 
 
     my %hash = "foo" => 42, "bar" => 84; 
     say %hash\  {"foo"}; # Same as saying %hash{"foo"}
@@ -68,11 +67,9 @@ In other words, the lexer doesn't consider those whitespaces at all.
     comment`}.drink();      # which brings us to the next section...
 
 
-
-
     ...$var []
 
-    ...$var []
+    
 
 Comments
 ========
