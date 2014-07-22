@@ -84,17 +84,21 @@ compiler to ignore the rest of the line.
     my $var = 'fine'; # that code is boring
 
 
-
 Multi Line
 ----------
 
 Many lines can be commented by using
 "**[\#\`](appendix-a-index.html#pound-apostrophe)**"
 followed by any pair of braces that surround the comment.
+This way comments may be embedded into any code, also in a single line.
 
     $things = #`( I wonder how many of these
     I will need, hm maybe 3, or 4, better 5 ) 5; # same as $things = 5;
 
+    $things = #`[{ hiding here from lexer }] 'vast'; # same as $things = 'vast';
+
+Any combination of braces will do, as long as they touch each other on begin and end.
+What is in between them has no power at all to scramble the compiler.
 
 Documenting Comments
 --------------------
