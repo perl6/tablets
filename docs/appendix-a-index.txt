@@ -4613,6 +4613,21 @@ can add several item to the list of return values of a
 tangent, trigonometric function, takes angle in radian &mdash;
 see also [**to-radians**](#to-radians), [**cos**](#cos), [**sin**](#sin)
 
+<a id="tc"/><a id="tc-op"/>
+**tc** ([Str](#Str-type) [--\>](#minus-minus-greater-signature) [Str](#Str-type))
+*«string method»* &mdash;
+return a copy of a string where first character is uppercase, rest unchanged
+usable as operator and as method &mdash;
+see also: [**fc**](#fc) and [**lc**](#lc)
+
+<a id="tclc"/><a id="tclc-op"/>
+**tclc** ([Str](#Str-type) [--\>](#minus-minus-greater-signature) [Str](#Str-type))
+*«string method»* &mdash;
+return a copy of a string where first character is uppercase, rest changed to lowercase
+usable as operator and as method &mdash;
+see also: [**fc**](#fc) and [**lc**](#lc)
+
+
 <a id="temp"/>
 **temp** &mdash; , in Perl 5: *local*
 
@@ -5038,6 +5053,7 @@ see also: [**\#=**](#pound-equal)
 block of code executed when the [*routine*](appendix-g-glossary.html#routine)
 is called, normally declared implicitly,
 by providing a block after the subroutine's signature definition
+
 
 <a id="words"/>
 **words**
