@@ -656,7 +656,7 @@ Use it as in `$filename.IO ~~ :X` or `$filename.IO.X`.
 Quoting Ops
 -----------
 
-The basic [basic quoting](tablet-2-basic-syntax.html#quoting)
+The [basic quoting](tablet-2-basic-syntax.html#quoting)
 operator (Q) does nothing, just taking literally what you quoted as a string.
 But with several adverbs, it behaves like the well known following ops:
 

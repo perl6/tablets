@@ -152,11 +152,11 @@ Delimiter
 
 The generic quoting operator `Q` does almost nothing, 
 just provides a mechanism to mark the beginning and end of the quote.
-Other quoting ops just reuse this and add feature regarding the content.
+Other quoting ops just reuse this and add features regarding the content of the quote.
 
-The examples in this chapter use slashes as the delimier in almost
-all cases, however any non-alphanumeric character or pair of matching
-(bracing) characters can be used as well.
+The examples in this chapter use slashes as the delimiter in almost all cases,
+however any non-alphanumeric character or pair of matching (bracing) characters
+can be used as well.
 
     Q /.../ or Q |...| or Q *...* or Q "..." or Q[...] ...
 
@@ -167,26 +167,26 @@ An even extended delimiter mechanism is delivered by [heredocs](#heredocs).
 Interpolation
 -------------
 
-Within these delimiters, every character will be taken
-literally. Any additional meaning has to be activated by [quoting
-adverbs](appendix-b-grouped.html#quoting-adverbs) that have to
-follow the Q. Most of them have a short and a long name and some of
-the most useful have an additional syntax that replaces them
-altogether with the Q operator (like single or double quotes).
+Within these delimiters, every character will be taken literally.
+Any additional interpretation is added by [quoting adverbs](appendix-b-grouped.html#quoting-adverbs),
+that follow the operator and start with a colon. Most of them have a short and a long name.
+
+With few exceptions adverbs activate sorts of interpolation. 
+This means for instance that a [variable](tablet-3-variables.html.html) inside
+a quotation will be replaced with its content.
+This happens of course at [*run time*](appendix-g-glossary.html#run-time).
+Als [anonymous blocks](tablet-6-blocks.html) or
+[callable routines](tablet-3-variables.html#callable) could be executed
+and their result gets inserted into the quote instead of the code.
+
 
     :b aka :backslash # control character (implies at least :q)
-    :s aka :scalar # scalar variable: $name
-    :a aka :array # array variable: @name[...]
-    :h aka :hash # hash variable: %name{...}
-    :c aka :closure # anonymous blocks: {...}
-    :f aka :function # callable routines: &name(...)
+    :s aka :scalar    # scalar variable: $name
+    :a aka :array     # array variable:  @name[...]
+    :h aka :hash      # hash variable:   %name{...}
+    :c aka :closure   # anonymous blocks:      {...}
+    :f aka :function  # callable routines: &name(...)
 
-For more info on those, see 
-    * [scalar variable](ap-b-lookup.html#scalar), 
-    * [array variable](ap-b-lookup.html#array), 
-    * [hash variable](ap-b-lookup.html#hash), 
-    * [anonymous blocks](tablet-6-blocks.html), and 
-    * [callable routines](tablet-3-variables.html#callable).
 
     Q :b /\t\n/; # tab and new line character
     Q :s /$poem/; # content of $poem
@@ -213,6 +213,8 @@ For more info on those, see
     # no arguments
     Q :f :a /&fetch_report/;
 
+The most useful adverbs are already included in operators like q or double quotes,
+details about them in the next paragraphs).
 
 
 Single Quotes
