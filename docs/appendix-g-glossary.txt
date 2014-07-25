@@ -465,6 +465,10 @@ but different [*signatures*](#signature), when the name is called - the
 suitable routine is seleted via *MMD* &mdash;
 See also: [**multi**](appendix-a-index.html#multi)
 
+<a id="moar"/>
+**moar** &mdash;
+
+
 # [N](#nav-top)
 
 <a id="named-capure"/>
@@ -476,6 +480,11 @@ See also: [**multi**](appendix-a-index.html#multi)
 
 <a id="namespace"/>
 **namespace** &mdash;
+
+
+<a id="niecza"/>
+**niecza** &mdash;
+
 
 <a id="not"/>
 **not** &mdash;
@@ -540,6 +549,10 @@ example: `sub sum (Num $summand1, Num $summand2) { return $summand1 + $summand2 
 later: `$s = sum(3, 4);`, \$summand1 and \$summand2 are parameter of sum,
 the values 3 and 4 were the arguments of the specific call of sum
 
+<a id="parrot"/>
+**parrot** &mdash;
+
+
 <a id="parsetree"/>
 **parsetree** &mdash;
 hierarchical data representing the logical structure of a program,
@@ -553,6 +566,11 @@ also called [*AST*](#AST)
 Perl 6 term for specially named (due a prefix statement) subblocks withe special
 [*runtimes*](#run-time) aka [*closure traits*](appendix-b-grouped#closure-traits) &mdash;
 example: [**BEGIN**](appendix-a-index.html#BEGIN-phaser)
+
+
+<a id="perlito"/>
+**perlito** &mdash;
+
 
 <a id="pi"/>
 [**pi**](appendix-a-index.html#pi-constant) *(π)* &mdash;
@@ -582,6 +600,13 @@ a block that is given readonly [*parameters*](parameter) with
 [**-\>**](appendix-a-index.html#arrow-op) or rw parameters with
 [**<-\>**](appendix-a-index.html#lower-minus-greater-op)
 
+<a id="positional-parameter"/>
+**positional parameter** &mdash; 
+[*parameter*](#parameter)
+
+<a id="postfix"/>
+**postfix** &mdash;
+
 <a id="precedence"/>
 **precedence** &mdash;
 If an [*expression*](#expression) contains several [*operators*](#operator),
@@ -597,12 +622,9 @@ See also: [*arity*](#arity)
 **property** &mdash;
 metadata of a variable set at [run time](#run-time)
 
-<a id="positional-parameter"/>
-**positional parameter** &mdash; 
-[*parameter*](#parameter)
+<a id="pugs"/>
+**pugs** &mdash;
 
-<a id="postfix"/>
-**postfix** &mdash;
 
 
 # [Q](#nav-top)
@@ -648,6 +670,11 @@ See also:
 
 <a id="range"/>
 **range** &mdash;
+
+
+<a id="rakudo"/>
+**rakudo** &mdash;
+
 
 <a id="reference"/>
 **reference** *(or pointer)* &mdash;
@@ -893,6 +920,11 @@ strange names that start with UTF are most probably Unicode formats
 
 <a id="variable"/>
 **variable** &mdash;
+
+
+<a id="virtual-machine"/>
+**Virtual Machine** (VM) &mdash;
+
 
 # [W](#nav-top)
 
