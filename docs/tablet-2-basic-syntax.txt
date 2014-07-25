@@ -32,8 +32,12 @@ Exporter, English, an advanced pretty printer and much more is already built in.
 So you get a lot extra for a little *v6;**.
 
 
+Code Layout
+===========
+
+
 Statements and Semicolon
-========================
+------------------------
 
 Unless you use [*blocks*](appendix-g-glossary.html#block), a Perl 
 program executes one statement after another in linear progression 
@@ -47,7 +51,7 @@ Line endings have inside the main language no syntactical effect.
 
 
 Spaces and Indentation
-======================
+----------------------
 
 Perl doesn't care about indentation, but it does care about whitespace
 as a disambiguator. For example, `$foo$bar` is a syntax error since that 
@@ -136,17 +140,19 @@ Quoting
 =======
 
 Quoting, like [regular expression](tablet-9-regexes.html), is a sublanguage
-inside the main language with its own syntactical rules. It is parsed
-by a special grammar which can be found in the [special
-variable](appendix-b-grouped.html#special-variables) `$~Quote`. The
-operator with the same name (the generic quoting operator `Q`) does
-almost nothing, just provides a mechanism to mark the beginning and
-end of text sequence.
+(in short slang) inside the main language with its own syntactical rules.
+It is parsed (recognized) by a special [*grammar*](appendix-g-glossary.html#grammar),
+which can be found in the [special variable](appendix-b-grouped.html#special-variables) `$~Quote`.
+
 
 
 
 Delimiter
 ---------
+
+The generic quoting operator `Q` does almost nothing, 
+just provides a mechanism to mark the beginning and end of the quote.
+Other quoting ops just reuse this and add feature regarding the content.
 
 The examples in this chapter use slashes as the delimier in almost
 all cases, however any non-alphanumeric character or pair of matching
@@ -154,7 +160,7 @@ all cases, however any non-alphanumeric character or pair of matching
 
     Q /.../ or Q |...| or Q *...* or Q "..." or Q[...] ...
 
-An extended delimiter mechanism is delivered by [heredocs](#heredocs).
+An even extended delimiter mechanism is delivered by [heredocs](#heredocs).
 
 
 
@@ -162,7 +168,7 @@ Interpolation
 -------------
 
 Within these delimiters, every character will be taken
-literally. Any additional meaning has to be added by [quoting
+literally. Any additional meaning has to be activated by [quoting
 adverbs](appendix-b-grouped.html#quoting-adverbs) that have to
 follow the Q. Most of them have a short and a long name and some of
 the most useful have an additional syntax that replaces them
@@ -291,7 +297,7 @@ Heredocs
 --------
 
 Heredocs are now normal quoted strings, only with a special delimiter, defined
-by the adverbs **to** and heredoc. Heredocs can be nested.
+by the adverbs **to** and **heredoc**. Heredocs can be nested.
 
     Q :to 'EOT';
     ...

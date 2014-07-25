@@ -656,9 +656,9 @@ Use it as in `$filename.IO ~~ :X` or `$filename.IO.X`.
 Quoting Ops
 -----------
 
-The basic quoting operator (Q) does nothing, just taking literally
-what you quoted as a string. But with several adverbs, it behaves like
-the well known following ops:
+The basic [basic quoting](tablet-2-basic-syntax.html#quoting)
+operator (Q) does nothing, just taking literally what you quoted as a string.
+But with several adverbs, it behaves like the well known following ops:
 
 Op                                       Nonealphanumeric Version                      Translated Into Quoting Adverbs                                                                                                          Method Version                           Meaning
 ---------------------------------------  --------------------------------------------- ---------------------------------------------------------------------------------------------------------------------------------------  ---------------------------------------  ----------------------------------------------------------
@@ -686,8 +686,9 @@ Text Processing
 Quoting Adverbs
 ---------------
 
-There are a lot more adverbs to fine tune your quoting. The Adverbs
-can used with any quoting operator like:
+There are a lot more adverbs to 
+[fine tune your quoting](tablet-2-basic-syntax.html#interpolation).
+The Adverbs can used with any quoting operator like:
 [Q](appendix-a-index.html#Q-op) :s/.../ or
 [qq](appendix-a-index.html#qq-op) :p /.../.
 
