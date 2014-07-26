@@ -14,7 +14,7 @@ Please start your Perl 6 program with one of the following lines.
     use v6.0;
     v6;
 
-or just start with a keyword like [**module**](appendix-a-index.html#module)
+Or just start with a keyword like [**module**](appendix-a-index.html#module)
 or [**class**](appendix-a-index.html#class). That marks your code as Perl 6
 (in case the interpreter defaults to Perl 5) and makes it possible to mix 
 Perl 5 and 6 in one source file.
@@ -172,7 +172,7 @@ Any additional interpretation is added by [quoting adverbs](appendix-b-grouped.h
 that follow the operator and start with a colon. Most of them have a short and a long name.
 
 With few exceptions adverbs activate sorts of interpolation. 
-This means for instance that a [variable](tablet-3-variables.html.html) inside
+This means for instance that a [variable](tablet-3-variables.html) inside
 a quotation will be replaced with its content.
 This happens of course at [*run time*](appendix-g-glossary.html#run-time).
 Als [anonymous blocks](tablet-6-blocks.html) or
@@ -196,7 +196,7 @@ and their result gets inserted into the quote instead of the code.
     # braces to interpolate arrays
     Q :a /me@primes.de/;
     # all developer names (values, not keys) separated by single
-    # spaces, [angle brackets](basic-syntax.html#quote-words) work too
+    # spaces, [angle brackets](#quote-words) work too
     Q :h /%dev{}/;
     Q :h /%dev[rakudo] %dev<niecza>/; # just 2 values
     Q :h /%dev/; # literally '%dev', you need braces here too
@@ -207,7 +207,7 @@ and their result gets inserted into the quote instead of the code.
     Q :h /Perl 6 Compiler: %dev.keys./; # no interpolation
     # inserts report of that day, even inside Strings the correctness
     # of arguments will be checked!
-    Q :f :a /Here it Tom with the weather: &fetch_report($day)./;
+    Q :f :a /Here is Tom with the weather: &fetch_report($day)./;
     Q :f :a /fetch_report($day)/; # interpolates just $day
     # literal string '&fetch_report', even if the subroutine takes
     # no arguments
@@ -235,7 +235,7 @@ known as /escape sequences/. For example, `\\\\` translates to `\\`, while
 `\\'` translates to a `'`. You can avoid all that extra typing by using 
 adverbs. 
 
-    'Welcome in Larry\'s madhouse'
+    'Welcome to Larry\'s madhouse'
     '\'\\'; # string contains: '\
     q |\||; # string contains: |
 
@@ -270,7 +270,7 @@ any whitespace (\\s aka <ws>).
     qw/.../; # like Perl 5's qw/.../
     <...>
 
-    Q :quotewords /.../; # qw/.../ with quote protextion
+    Q :quotewords /.../; # qw/.../ with quote protection
     Q :ww /.../; # :qq implied
     <<>> # also have a unicode alias (chevron)
 
@@ -345,8 +345,8 @@ operator with the right adverb.
 Code
 ----
 
-The following 3 aliases quote code that will be run immediately (on
-runtime) and replaced with the result.
+The following 3 aliases quote code that will be run immediately (at runtime)
+and replaced with the result.
 
     Q :exec /.../;
     Q :x /.../;
@@ -373,12 +373,11 @@ Number Literals
 
 Unlike strings, numbers don't need
 [quoting](#quoting). But if there is a non number
-character in it, there will be an error. Chars of a number definition
-are: (0-9,.,+,-,e,E,i,\_) including the [radix
-prefixes](#radix-prefixes): (0b,0o,0d,0x) and the
-prefix for [version numbering](#version-number)
+character in it, there will be an error. As Characters of a number
+are defined: (0-9,.,+,-,e,E,i,\_) including the [radix prefixes](#radix-prefixes):
+(0b,0o,0d,0x) and the prefix for [version numbering](#version-number)
 (v). The + can also act as an operator that converts a string
-to numerical context, which means: take form left to right all digits
+to numerical context, which means: take from left to right all digits
 and interprate as a numeric literal. This will fail if the string
 contains any number numeric digits.
 
@@ -400,7 +399,7 @@ Prefixes may be use to enter numbers in the most commonly used
 radices.
 
     0b binary - base 2, digits 0..1
-    0o ocatal - base 8, digits 0..7
+    0o octal - base 8, digits 0..7
     0d decimal - base 10, digits 0..9
     0x hexadecimal - base 16, digits 0..9,a..f (case insensitive)
 
@@ -445,7 +444,7 @@ with braces.
 As always, [.perl](#perl) gives you an almost source
 like code formatting which results here in 3/7. Adding **.nude** you
 get (3/7), the nude source code. There are 2 different [immutable
-value types](appendix-b-grouped.html#immutable-types) representing
+value types](appendix-b-grouped.html#immutable-types) to represent
 both rational number. FatRat has unlimited precision and Rat has just
 enough to be evaled into a Real type. When you explicitly [type a
 variable](tablet-3-variables.html#data-types) to one of them, the braces become
@@ -489,7 +488,7 @@ perl
 
 The `.perl` method returns a string that arranges any set of values in
 the same format, as it would be defined in source code (if possible).
-It's a built in pretty printer similar to Perl 5s Data::Dumper that works
+It's a built in pretty printer similar to Perl 5's Data::Dumper that works
 with data of any nesting depth.
 
     @a.perl # evals to: [1, 2, 3, 4, 5]
@@ -513,9 +512,10 @@ to convert its arguments to [*strings*](appendix-g-glossary.html#string).
 fmt
 ---
 
-Small brother of sprinf that works as a method of a variable. If thats
-a pair or list it formats of course several values in the same way
-with same syntax as sprinf.
+Little brother of sprintf that works as a method of a variable.
+If that's a pair or list it formats all values in the same way
+with same syntax as sprintf.
+
 
     $result = '5.123456789';
     say $result.fmt('%.2f'); # "5.12\n"

@@ -1,6 +1,6 @@
 % Perl 6 Tablet 3 - Variables
 
-> "The most basic building blocks of a programming language are its
+> "The most basic building blocks of a programming language are it's
 > nouns, the chunks of data that get sucked in, pushed around, altered
 > in various ways, and spat out to some new location." -- Allison
 > Randal
@@ -14,7 +14,7 @@ Perl 6 (as Perl 5) knows 3 basic types of variables:
 values) and [Hashes](#hash) (2 column table, with ID and
 associated value pairs). They can be easily distinguished, because in
 front of their name is a special character called
-[sigil](appendix-b-grouped#sigils) (latin for sign). Its the $
+[sigil](appendix-b-grouped#sigils) (latin for sign). It's the $
 (similar to S) for Scalars, @ (like an a) for Arrays and a % (kv pair
 icon) for a Hash. They are now invariant (not changing), which means
 for instance, an array vaiable starts always with an @, even if you
@@ -68,7 +68,7 @@ item context, hence the `scalar` instruction from Perl 5 was renamed to
     $pi = 3.14159_26535_89793; # the underscores just ease reading
     $float = 6.02e-23; # floating number in scientific notation
     $text = 'Welcome all!'; # single quoted string
-    # double quoted string, does eval $pi to its content
+    # double quoted string, does eval $pi to it's content
     $text = " What is $pi?";
     $text = q:to'EOT'; # heredoc string
 
@@ -140,7 +140,7 @@ prevent autoflattening.
 
     @primes = (2,3,5,7,11,13,17,19,23); # an array gets filled like in Perl 5
     @primes =  2,3,5,7,11,13,17,19,23 ; # same thing, since unlike P5 round braces just do group
-    @primes = <2 3 5 7 11 13 17 19 23>; # dito, <> is the new qw()
+    @primes = <2 3 5 7 11 13 17 19 23>; # ditto, <> is the new qw()
     $primes = (2,3,5,7,11,13,17,19,23); # same array object just sits in $primes, $primes[0] is 2
     $primes = item @primes;             # same thing, more explicit
     $primes = 2,;                       # just 2, first element of the Parcel
@@ -158,7 +158,7 @@ prevent autoflattening.
     @primes                       # all values as list
     @primes.values                # same thing
     @primes.keys                  # list of all indices
-    "@primes[]"                   # insert all values in a string, uses [] as distinction from mail adresses
+    "@primes[]"                   # insert all values in a string, uses [] to distinguish from mail adresses
     $prime = @primes[0];          # get the first prime
     $prime = @primes[*-1];        # get the last one
     @some = @primes[2..5];        # get several
@@ -174,7 +174,7 @@ prevent autoflattening.
 Some of the more important things you can do with lists. All the
 methods can also used like ops in "elems @rray;"
 
-    ? @rray;              # boolean context, Bool::True if array has any value in it, even if its a 0
+    ? @rray;              # boolean context, Bool::True if array has any value in it, even if it's a 0
     + @rray;              # numeric context, number of elements (like in Perl 5 scalar @a)
     ~ @rray;              # string context, you get content of all cells, stringified and joined, same as "@primes[]"
 
@@ -186,9 +186,9 @@ methods can also used like ops in "elems @rray;"
     @rray.shift;          # remove the first value and return it
     @rray.push;           # add one value on the end
     @rray.pop;            # remove one value from the end and return it
-    @rray.splice($pos,$n);# remove on $pos $n values and replace them with values that follow that two parameter
-    @rray.delete(@ind);   # delete all cell with indecies of @ind
-    @rray.exists(@ind);   # Bool::True if all indecies of @ind have a value (can be 0 or '')
+    @rray.splice($pos,$n);# starting at $pos remove $n values and replace them with values that follow those two parameters
+    @rray.delete(@ind); # delete all cells with indices in @ind
+    @rray.exists(@ind); # Bool::True if all indices of @ind have a value (can be 0 or '')
     @rray.pick([$n]);     # return $n (default is 1) randomly selected values, without duplication
     @rray.roll([$n]);     # return $n (default is 1) randomly selected values, duplication possible (like roll dice)
     @rray.reverse;        # all elements in reversed order
@@ -196,10 +196,10 @@ methods can also used like ops in "elems @rray;"
     # position if $n is positive, if negative the other way around
     @rray.rotate($n);
 
-    @rray.sort($coderef); # returns a sorted list by a userdefined criteria, default is alphanumerical sorting
+    @rray.sort($coderef); # returns a list sorted by a user-defined criteria, default is alphanumerical sorting
     @rray.min;            # numerical smallest value of that array
     @rray.max;            # numerical largest value of that array
-    $a,$b= @rray.minmax;  # both at once, like in .sort . min or .max a sorting algorith can be provided
+    $a,$b= @rray.minmax;  # both at once, like in .sort,  .min, or .max, a sorting algorithm can be provided
 
     @rray.map($coderef);  # high oder map function, runs $coderef with every value as $_ and returns the list or results
     @rray.classify($cr);  # kind of map, but creates a hash, where keys are the results of $cr and values are from @rray
@@ -215,10 +215,10 @@ There is even a whole class of metaoperators that work upon lists.
 Hash
 ----
 
-is in Perl 6 an unordered list of Pairs. [A Pair](#pair)
+In Perl 6 a Hash is an unordered list of Pairs. [A Pair](#pair)
 is a single key `=>` value association and [appears in many
 places](tablet-1-language-design.html#maximum_reusage) of the language syntax.
-A hash allows lookup of values by key value using `{}` or `<>` syntax.
+A hash allows lookup of values by key using `{}` or `<>` syntax.
 
     %dev =  'pugs'=>'audreyt', 'pct'=>'pm', "STD"=>'larry';
     %dev = :rakudo('jnthn'), :testsuite('moritz');            # adverb (pair) syntax works as well
@@ -240,7 +240,7 @@ A hash allows lookup of values by key value using `{}` or `<>` syntax.
     %dev   {'audrey'};         # error, spaces between varname and braces (postcircumfix operator) are no longer allowed
     %dev\  {'allison'};        # works, quote the space
     %dev   .<dukeleto>;        # error
-    %dev\ .{'patrick'};        # works too, "long dot style", because its its an object in truth
+    %dev\ .{'patrick'};        # works too, "long dot style", because it's an object in truth
 
 
 
@@ -255,7 +255,7 @@ A hash allows lookup of values by key value using `{}` or `<>` syntax.
     @pairs = %dev;             # list of all containing pairs
     %dev.pairs                 # same thing in all context
     %dev.elems                 # same as + %dev or + %dev.pairs
-    %dev.keys                  # returns the list with all keys
+    %dev.keys                  # returns a list of all keys
     %dev.values                # list of all values
     %dev.kv                    # flat list with key1, value1, key 2 ...
     %dev.invert                # reverse all key => value relations
@@ -288,9 +288,9 @@ In contrast to [variable types](#variable-types)
 (container types) every [value has a
 type](appendix-b-grouped.html#value-types) too. These are
 organized internally as classes or roles and can be categorized into 3
-piles: the undefined, immutable and the mutable types.
+piles: the undefined, immutable, and the mutable types.
 
-You can assign one of these types to scalar, array or hash variables,
+You can assign one of these types to scalar, array, or hash variables,
 which enforces the contents to be that type.
 
     my Int $a;
@@ -331,13 +331,13 @@ parameters, it is a mixture of a list and array.
     ||$cap                        # flatten into semicolon list (meant for variadic functions that take list of lists)
 
 
-One important difference between a compound structure of lists and
-hashes and a capture: while [assignments](#assignment)
-with = the complete content of the named variables will be copied. But
+One important difference between a capture and a compound structure of
+lists and hashes: While [assignments](variables.html#assignment)
+with = will copy the complete content of the named variables, this is
 not so in the case of a capture. When I change $s in the last example,
 the content of $cap changes too, because when parameters to a routine
 are variables, they are also interpolated in the moment the routine is
-called, not when its defined.
+called, not when it's defined.
 
 
 
@@ -393,7 +393,7 @@ Assignment
 As rightfully expected, assignments are done with the equal sign. But
 unlike Perl 5 you always get a copy of the right side data assigned to
 the left, no matter how nested the data structure was (lists of lists
-eg). You never get in Perl 6 a reference with =. As the only exception
+eg). You never get in Perl 6 a reference with =. The only exception
 may be seen [captures](#capture).
 
     my @original = [1,2],[3,4];
@@ -413,7 +413,7 @@ binding to get 2 variables that point to the same memory location.
     $original ::= $mirror;      # same thing, but done during compile time
     $original = 3;
     say $mirror;                # prints 3
-    $original =:= $mirror       # true, because their bound together
+    $original =:= $mirror       # true, because they're bound together
     $original === $mirror       # also true, because content and type are equal
 
 
