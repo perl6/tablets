@@ -7,7 +7,7 @@ It is sorted (almost as decided by [**leg**](#leg-op)) without prefixes like
 colon, dot, backslash, [*sigil*](appendix-g-glossary.html#sigil) or
 [*twigil*](appendix-g-glossary.html#twigil)
 and everything that contains punctuation or number comes first.
-Sometimes are added green placeholder:
+Sometimes a green placeholder is added:
 <span class="you-provide">n</span> stands for a [integer number](#Int-type),
 <span class="you-provide">f</span> is a floating [point number](#Num-type),
 <span class="you-provide">c</span> a single character,
@@ -23,13 +23,13 @@ After each method is its [*signature*](appendix-g-glossary.html#signature)
 (in round brackets), 
 telling you the value type (same as in placeholders) of the 
 [*parameters*](appendix-g-glossary.html#parameters) and the return value.
-The items itself are linked to a more detailed explanation inside of a tablet.
+Each item is linked to a more detailed explanation inside of a tablet.
 Each term is followed by a link «in french brackets» to a condensed summary
-listing of its category in [Appendix B](appendix-b-grouped.html)
-or to the according category in the tablets. Most links in the short description
+of its category in [Appendix B](appendix-b-grouped.html)
+or to the relevant category in the tablets. Most links in the short description
 lead to another item in A (when **bold**) or to the glossary (when *italic*).
 The chapter headlines serve as anchor and links to the navigation menu.
-Thatswhy large chapter like C are split into "C" (second letter a-m)
+Thats why large chapter like C are split into "C" (second letter a-m)
 and a following "n" (second letter n-z).
 
 

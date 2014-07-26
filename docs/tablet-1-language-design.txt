@@ -20,7 +20,7 @@ Strategy
 ========
 
 Every style and level of expertise has to be supported. And even more
-difficult: all of them have to play together well. The default often
+difficult: all of them have to play well together. The default often
 imitates a natural language (e.g., English). The following
 oft-repeated terms encapsulate strategies and concepts for this.
 
@@ -47,7 +47,7 @@ names and operators should be distinctive, similar things should look
 similar, different things different. Larry likes to add: weird things
 should also look weird. And sometimes even characters can be
 ideograms; like the Z meta-operator, which shows visually how it works
-(first left then right, then next left, etc.).
+(first left, then right, then next left, etc.).
 
 
 
@@ -78,7 +78,7 @@ the problems of that domain.
 Maximum reuse
 -------------
 
-Not only is syntax reused, to minimize the stuff you have to remember,
+Not only is syntax reused to minimize the stuff you have to remember,
 but concepts are reused also, wherever possible. For example, Pairs
 are used to build hashes or named parameters in routines calls. There
 are plenty more examples. Maybe the biggest one: the regex engine that
@@ -116,8 +116,8 @@ newline (`say $var`), or reading a file without a file handle
 (`slurp("filename").lines`). Rule of thumb: if you can think of a
 concept as trivial, then it should be. On the other hand, if you can
 think of a computable solution, it should at least be doable in Perl
-(no artificial walls). Huffman coding This is a refinement of the last
-rule: common, often used things have short, straightforward
+(no artificial walls). Huffman coding: This is a refinement of the last
+rule - common, often used things have short, straightforward
 names. More verbose names indicate more rare, harder to grasp
 concepts, or things that overwrite the default rules ("weird things
 should look weird"). It also implies that the defaults lean toward
@@ -134,7 +134,7 @@ should reflect logical units which can be freely combined. Making it
 more complicated than necessary is obviously not desirable. But
 oversimplification will create artificial complexity somewhere
 else. Like a water bed, where you can press down in one place but the
-water will go up in another.  All your paradigms are belong to us We
+water will go up in another.  All your paradigms are belong to us. We
 learn, take and adapt from every source possible to offer the best of
 all breeds. You should be able to keep your style when switching to
 Perl. Perl 6 supports the structured, object oriented, aspect
@@ -154,7 +154,7 @@ paradigm, but also every technique or neat trick loudly marketed out
 there as "must have" "in the \[%DATE%\]", should be available in Perl 6
 (or at least be possible), as long there is expressive value in it. A
 few examples include "named parameters", "lvalue subroutines",
-"parametizable subclasses" or "hygienic macros".
+"parametizable subclasses", or "hygienic macros".
 
 
 
@@ -168,7 +168,7 @@ fact, this happens so often that the term "second system syndrome" was
 coined. We chose this path for Perl 6 anyways, because we believe it's
 the only way to get a significantly better language.
 (Gradual improvements are flowing into Perl 5 all the time,
-sometimes inspired from Perl 6.) That's why the unofficial motto of
+sometimes inspired by Perl 6.) That's why the unofficial motto of
 Perl 6 is "Second system syndrome done right".
 
 
@@ -184,11 +184,11 @@ observed](appendix-d-delta.html#trends).
 Design Process
 ==============
 
-The initial source of the Perl 6 design came from 361 RFC (request for
-comments) submissions by people from all over the world. Larry Wall
+The initial source of the Perl 6 design came from 361 RFC (Requests For
+Comments) submissions by people from all over the world. Larry Wall
 sorted and commented on them in several documents called the
 Apocalypses (meaning "revelations"). Damian Conway wrote, for each
-Apocalypse, an Exegesis ("explanation"), that expounded Larry's
+Apocalypse, an Exegesis ("explanation"), that expounded on Larry's
 ideas. These are now all historic documents that not have changed
 since, because they were much harder to maintain than the Synopses
 ("abstracts" or "comparisons" (with Perl 5)). The Synopsis documents,

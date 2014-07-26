@@ -27,7 +27,7 @@ Writes text to the standard output (`$*OUT`, called `STDOUT` in Perl 5).
 This example just prints a [string literal](tablet-2-basic-syntax.html#quoting),
 but any type of value is allowed. **say** appends a line ending,
 according to the operating system convention.
-So every time you "say" something, it will later output will start on a fresh line.
+So every time you "say" something, later output will start on a fresh line.
 
 You can also give `say` a list of values. Each item will be taken as
 an expression to print. The results will be combined,
@@ -38,8 +38,7 @@ line ending will be added.
         which is ', compute_distance($earth, $our_home_planet),
         ' parsecs away.';
 
-That could also be written using [double-quoted
-strings](tablet-2-basic-syntax.html#double-quotes):
+That could also be written using [double-quoted strings](tablet-2-basic-syntax.html#double-quotes):
 
     say "Dear Earthlings, we come from $our_home_planet, which is { compute_distance($earth, $our_home_planet) } parsecs away.";
 

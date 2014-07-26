@@ -11,40 +11,41 @@ Back in the year 2000, things didn't look so good. The buzz around
 Perl was gone, because everybody had decent Regexes, even if theirs
 were not as tightly integrated as in Perl. And many of the other Perl
 5 features could be also found in Python or Ruby. Naturally, also, new
-shiny things appeared in mainstream languages, that couldn't so easily
+shiny things appeared in mainstream languages that couldn't so easily
 be pasted into Perl. The Perl syntax, especially for Regexes, is very
 rich, therefore you could hardly add something in a meaningful manner
 without changing a handful of others. Some features like "do {}
 while"-loops were just bolted on and other feature could not even be
 plugged in. A complete revamp was also more and more necessary because
-things like the OOP and missing signatures made problems to the Perl
+things like OOP and missing signatures made problems for Perl
 beginners. Other things like formats just had to move out of the
-interpreter into a module because they weren't that important as in
-the early days. And finally a lot of cruft had also to go, that was
-deprecated since Perl 5.0 like the ol' package'sub syntax.
+interpreter into a module because they weren't as important as in
+the early days. And finally a lot of cruft had also to go, syntax that
+was deprecated since Perl 5.0 like the ol' package'sub syntax.
 
-Much of these issues could be dealt within the perl 5 arena, and is
-recently done by the way, but if you would look into the perl
-internals, you would see a speed racer, highly tuned but with a lot of
-dirty tricks your cs-prof would't tell. In that magic world, were many
-things are mingled together merely invisibly, it is really hard, to
-bring in some cascades of changes. And even that would have some
+
+Many of these issues could be dealt with in the Perl 5 arena, and are
+recently done by the way. But if you look at the perl
+internals, you see a speed racer - highly tuned but with a lot of
+dirty tricks your CS-prof would't like. In that magic world were many
+things mingled together invisibly, making it really hard to
+bring in some changes. And even that would have some
 natural limits. Some nice features like lispish macros, which are
-really powerful and a way cleaner and faster in execution than perl 5
+powerful and much cleaner and faster in execution than Perl 5
 sourcefilters and a nice XS replacement, which would largely ease
 Perl's extensibility, are impossible to achieve with that codebase. It
 would be a complete rewrite anyway.
 
-But it was not only the language and his interpreter, also perl people
+But it was not only the language and his interpreter, but also perl people
 themself needed some new toy. Something to brim over with enthusiasm
 for. Perl 5 just worked, which is good, but sometimes boring if there
-i not much you expect to happen. Especially if there are problem like
+is not much you expect to happen. Especially if there are problem like
 described above. And Larry had the strong feeling that the Perl
 community had to open up anyway.
 
 So it had to be a complete new language with a brand new interpreter
 and Perl would be again the most cuddlesome thing around. As the Perl
-1 manpage tells you: Perl was always about to have all the cool
+1 manpage tells you: Perl was always about having all the cool
 features of other languages in one place. That isn't for the purpose
 of bling-bling. (You couldn't brag with lazy evaluated arrays in a hip
 hop video anyway) But it's about getting the task done the way you
@@ -84,7 +85,7 @@ Parrot
   * niecza
 
 Even the brave and higly skilled pumping nicholas the first wrote in
-the p5p list that in the regex engins were dragons he was afraid to
+the p5p list that in the regex engine were dragons he was afraid to
 wake up.
 
 ***

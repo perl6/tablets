@@ -22,9 +22,8 @@ teacher.
 
 Behind that link is a table which also tells you also the
 [associativity](appendix-b-grouped#operator-associativity) of
-every operator. This tells you after which rule to resolve precedence
-if one operator is used several times like in 2 * 3 * 7.
-
+every operator. This tells you the order in which an operator
+is resolved when used several times, like in 2 * 3 * 7.
 
 
 Comparison
@@ -37,7 +36,7 @@ Smartmatch
 
 This is the most mighty (much more mighty than its backported Perl 5
 twin) of all Perl 6 operators. It can be called the
-"compare-this-with-that-operator". If the left side of that infix op
+"compare-this-with-that-operator". If the left side of that infix operator
 matches somehow the content of the right side, it returns Bool::True,
 otherwise Bool::False. The negated form !~~ naturally works the other
 way around. The exact comparison operation depends on the [data
@@ -295,8 +294,8 @@ xxx
 Selfmade Operators
 ==================
 
-How to make your own is subject [this chapter](tablet-10-metaprogramming.html)
-in the metaprogramming tablet.
+How to make your own is subject [this chapter](tablet-10-metaprogramming.html#operators)
+at the metaprogramming tablet.
 
 
 ***

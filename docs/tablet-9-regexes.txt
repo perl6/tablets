@@ -3,7 +3,8 @@
 > "We put the 'Regular' back into 'Expression'." — Larry Wall
 
 Similar to [quotes](tablet-2-basic-syntax.html#quoting),
-Regular Expressions are now a sublanguage, a language inside the language,
+Regular Expressions are now a sublanguage, a language inside the language
+([*slang*](apendix-g-glossary.html#slang) ),
 instead of just being funny strings.
 They are parsed by a completely different set of rules,
 which are stored in the special variable \$\~Regex (\$\~Trans for
