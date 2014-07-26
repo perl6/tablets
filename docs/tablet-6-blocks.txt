@@ -36,7 +36,8 @@ xxx
 sub
 ---
 
-xxx
+
+[*more*](tablet-7-subroutines.html)
 
 
 
@@ -119,6 +120,10 @@ until
 binary contect
 
 
+repeat
+------
+
+
 
 for
 ---
@@ -127,8 +132,6 @@ lazy list contect
 
 
 
-repeat
-------
 
 xxx
 

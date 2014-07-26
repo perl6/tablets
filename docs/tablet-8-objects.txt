@@ -14,11 +14,11 @@ xxx
 Classes
 =======
 
-Methods
-=======
-
 Attributes
 ==========
+
+Methods
+=======
 
 Inheritance
 ===========
@@ -26,8 +26,15 @@ Inheritance
 Roles
 =====
 
-Metaclasses
-===========
+Parametric Roles
+----------------
 
+Meta
+====
+
+[*more*](tablet-10-metaprogramming.html)
+
+Introspection
+-------------
 
 ***
