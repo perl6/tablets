@@ -9,12 +9,10 @@
 Main Goal
 =========
 
-Enjoy life and **enjoy the freedom of expressing yourself**. Which
-means: support you as much as possible, and not force you in any
-way. Perl 6 tries to be even better than Perl 5 as your humble servant
-for translating your thoughts into executable code (if possible).
-
-
+Enjoy life and **enjoy the freedom of expressing yourself**. Which means:
+support you as much as possible to get fast but solid results and not force
+you in any way. Perl 6 tries to be even better than Perl 5 as your humble
+servant for translating your thoughts into executable code (if possible).
 
 Strategy
 ========
@@ -142,21 +140,6 @@ oriented, functional, design by contract, declarative and logic
 programming paradigms.
 
 
-<!-- I'm not sure this should be seen here as part of language design docs. 
-Our major goal here is to put perl6 in the best possible light. This seems to
-be talking managerese -->
-
-Buzzword compliant
-------------------
-
-This term is an extension to the previous. Not only every programming
-paradigm, but also every technique or neat trick loudly marketed out
-there as "must have" "in the \[%DATE%\]", should be available in Perl 6
-(or at least be possible), as long there is expressive value in it. A
-few examples include "named parameters", "lvalue subroutines",
-"parametizable subclasses", or "hygienic macros".
-
-
 
 Second system syndrome
 ----------------------
@@ -176,8 +159,109 @@ Perl 6 is "Second system syndrome done right".
 Trends
 ======
 
-As a consequence of these principles, [various trends can be
-observed](appendix-d-delta.html#trends).
+Ubiquity
+--------
+
+As always, [Perl is optimized for freedom and richness of
+expression](language-design.html).
+
+
+
+General Purpose
+---------------
+
+Perl 5 still has a lot of builtins, showing for which task the
+language was created. But to become more general purpose, the core was
+enhanced and some other parts got removed. File IO, Network and IPC,
+Formats, and finally that long deprecated pre P5 DB-binding (dbmopen)
+went out of the core or at least into sensible module namespace. The
+optional type system enables compiler optimisations to make Perl even
+usable in cases where you had to switch to C before.
+
+
+
+Less Unix Centric
+-----------------
+
+Perl 1 was a child of the Unix world, borrowing a lot of folklore and
+words. As Perl 6 had to regularize the Regex and reform some other
+parts, this heritage has become less visible.
+
+
+
+Unicode
+-------
+
+Per default all Perl 6 code is Unicode and you can use any weird
+character for any part of the syntax.
+
+
+
+Simple English
+--------------
+
+In Perl 5 we had my, our, use, require, bless, can, ISA (is a), chop
+and also of course if, else, goto and all the loops. Perl 6 adds
+given, when, gather, take, loop, WHERE, HOW, WHO and lot more everyday
+English, which should make it easy to read and understand.
+
+
+
+Hidden Complexity
+-----------------
+
+Even simple Perl 6 looks pretty much like older Perl, it has a
+tremendous complexity inside, which only have to show up if you really
+need it.
+
+
+
+Functional Programming
+----------------------
+
+High order functions, currying, you name it. All that goodies are
+there, as Perl 6 aims to a full support of functional programming.
+
+
+
+Object Oriented
+---------------
+
+OOP syntax is now more simplified, compact, knows about encapsulation
+and has many new features, including dynamic class composition.
+
+Like in Smalltalk or Ruby every "thing" (values, vars, blocks,
+routines) is an object and ops are "just" methods. It helps to have
+internally everything in its place. But programmer still can pretend
+it's not the case.
+
+
+
+Full Introspection
+------------------
+
+Because every object knows his attributes and methods, you can ask the
+compiler nearly anything about the state of your program.
+
+
+
+Metalanguage
+------------
+
+And because classes are made to get extended or changed, Perl 6 has
+not only full metaprogramming capabilities, beyond your wildest
+dreams. It is a metalanguage with a beginner friendly default that
+aims to become a family of languages. Rule of thumb: everything is
+allowed, as long as you declare it.
+
+
+
+One Spec - Many Implementations
+-------------------------------
+
+Unlike every other Perl so far, Perl 6 has a precise specification,
+written in Perl 6. This allows to have several implementations, even
+syntactical compatible ones.
 
 
 
