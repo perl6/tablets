@@ -1,9 +1,0 @@
-% Perl 6 Tablets: Appendix C - Cookbook
-
-These are short examples how to write native, dense and yet readable Perl 6 code.
-
-# Sieve of Eratosthenes #
-
-    sub pascal { [1], -> @p { [0, @p Z+ @p, 0] } ... * };
-
-***
