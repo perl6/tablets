@@ -7,9 +7,10 @@ Variables
 Sigils
 ------
 
-All variables in Perl begin with a sigil. They mark the 3 primary var types.
+All variables in Perl begin with a [sigil](appendix-g-glossary.html#sigil).
+They mark the 3 primary var types.
 The 4th sigil is for callables ([routines](appendix-g-glossary.html#routine))
-and the 5th is for layers (namespaces) that organize the previous 4.
+and the 5th is for boxes (namespaces) that organize the previous 4.
 
 ------------------------------------------------  --------------------------------------------------------------------------------------------------------
 [`$`](appendix-a-index.html#dollar-sigil)         scalar, single value, can be of any data type

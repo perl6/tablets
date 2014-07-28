@@ -76,6 +76,10 @@ its basically A-Z, a-z, 0-9 and some extra symbols like \$, \%, \&,
 what you find on your keyboard and what an american typically needs,
 to enable the rest of the world more fully there is [*unicode*](#unicode)
 
+<a id="associativity"/>
+**associativity** &mdash;
+[**associativity**](appendix-b-grouped#operator-associativity)
+
 <a id="AST"/>
 **AST** *(abstract syntax tree)* &mdash;
 tree like data structure, in which source code is transformed,
