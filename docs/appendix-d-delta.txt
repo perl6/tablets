@@ -3,10 +3,9 @@
 Trends
 ======
 
-The more general course of the changes
-[](tablet-1-language-design.html#trends)
-is written down in the language design tablet.
-
+The more general course of the changes is documented in the
+[trends section](tablet-1-language-design.html#trends) 
+of the language design tablet.
 
 
 Syntactical Changes
