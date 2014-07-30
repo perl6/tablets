@@ -1,9 +1,9 @@
 % Perl 6 Tablets Appendix G - Glossary
 
-Here you find short explanations to most of the computer science terms,
-used in the tablets. These contain also links to specific syntax details,
-that relate to that term. Thatswhy this page is also  the ideal entry point for
-questions like: "Can I do [*functional programming*](functional-programming) in Perl 6?"
+Short explanations to most of the computer science terms used in the tablets.
+These contain also links to specific syntax details, that relate to that term.
+Thats why this page is also the ideal entry point for questions like:
+"Can I do [*functional programming*](functional-programming) in Perl 6?"
 or "What kind of [*iterators*](#iterators) are present and how they are spelled?"
 
 <a id="nav-top"/>
@@ -14,13 +14,13 @@ or "What kind of [*iterators*](#iterators) are present and how they are spelled?
 
 <a id="french-greater-ö-grench-lower"/>
 **»ö«** &mdash;
-pure text version of [*camelia*](#camelia) the Perl 6 mascot
+pure text version of [*camelia*](#camelia), the Perl 6 mascot
 
 # [A](#nav-top)
 
 <a id="ALAP"/>
 **ALAP** *(as late as possible)* &mdash;
-within a given execution phase
+within a given execution phase -
 ([compile time](#compile-time) or [run time](#run-time))
 
 <a id="and"/>
@@ -29,11 +29,11 @@ logical operation which results in [**True**](appendix-a-index.html#True) only
 in case  both [*operands*](#operand) (incoming information) are also **True**,
 otherwise the result is [**False**](appendix-a-index.html#True),
 following [*operator*](#operator) are working under that logic:
-[**|**](appendix-a-index.html#junctive-and),
-[**||**](appendix-a-index.html#logical-and),
-[**+|**](appendix-a-index.html#numeric-and),
-[**?|**](appendix-a-index.html#boolean-and),
-[**~|**](appendix-a-index.html#string-and),
+[**&**](appendix-a-index.html#junctive-and),
+[**&&**](appendix-a-index.html#logical-and),
+[**+&**](appendix-a-index.html#numeric-and),
+[**?&**](appendix-a-index.html#boolean-and),
+[**~&**](appendix-a-index.html#string-and),
 [**all**](appendix-a-index.html#all),
 [**and**](appendix-a-index.html#and)
 [**andthen**](appendix-a-index.html#andthen) &mdash;
@@ -42,18 +42,18 @@ other operations in [*bool context*](#bool-context) are:
 
 <a id="argument"/>
 **argument** &mdash;
-a specific value given to a [routine](#routine) at a certain time,
-not to be confused wirh [*parameter*](#parameter)
+is a specific value with which a [routine](#routine) is called at a certain time.
+Not to be confused with [*parameter*](#parameter).
 
 <a id="arity"/>
 **arity** &mdash;
 tells how many [*operands*](#operand) an [*operator*](#operator) needs
 or how many [*parameter*](#parameter) a [*routine*](#routine) requires.
-Since all *operator* are under the hood just [*methods*](#method) on the 
-left or only *operand*, these two things end up being the same.
-Get the *arity* of a *routine* with the [*introspection*](#introspection) 
+Since all *operator* are under the hood just [*methods*](#method),
+these two things end up being the same in Perl 6.
+You get the *arity* of a *routine* with the [*introspection*](#introspection) 
 *methods* [**arity**](appendix-a-index.html#arity) (just the required) and
-[**count**](appendix-a-index.html#count) (optional too).
+[**count**](appendix-a-index.html#count) (required and optional).
 [*prefix*](#prefix) and [*postfix*](#postfix) operator have the *arity* of one,
 [*infix*](#infix) two and the [ternary operator](#ternary-operator) has three.
 See also: [*precedence*](#precedence)
@@ -523,9 +523,10 @@ are combined with the data the operate on to so called [*objects*](#object).
 
 <a id="or"/>
 **or** &mdash;
-logical operation that has a the result **True** if at least one of two
-[*operands*](#operand) (incoming information) is also true,
-otherwise result is **False**. Following operator working under that logic:
+logical operation that has a the result [**True**](appendix-a-index.html#True)
+if at least one of two [*operands*](#operand) (incoming information) is also **True**,
+otherwise the result is [**False**](appendix-a-index.html#False). 
+Following operator working under that logic:
 [**|**](appendix-a-index.html#junctive-or),
 [**||**](appendix-a-index.html#logical-or),
 [**//**](appendix-a-index.html#defined-or),
@@ -840,6 +841,10 @@ another word for [*postfix*](#postfix)
 
 <a id="symbol"/>
 **symbol** &mdash;
+
+
+<a id="symbol-table"/>
+**symbol table** &mdash;
 
 
 # [T](#nav-top)
