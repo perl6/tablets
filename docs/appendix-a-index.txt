@@ -1471,7 +1471,8 @@ from which the current routine was called
 
 <a id="callframe"/>
 **callframe** &mdash;
-returns a callframe object that describes the current execution state,
+returns a [*callframe*](appendix-g-glossary.html#callframe) object,
+that describes the current execution state,
 with the [following methods](appendix-b-grouped.html#callframe-methods)
 
 <a id="callsame"/>
@@ -1624,9 +1625,9 @@ name of the current class
 <a id="class"/>
 **class**
 *«block modifier»* &mdash;
-following [*block*](appendix-g-glossary.html#block) will be a
-[*class*](appendix-g-glossary.html#class) definition &mdash;
-see also [**method**](#method), [**submethod**](#submethod) and [**has**](#has)
+declares the following [*block*](appendix-g-glossary.html#block) to be a
+[*class*](appendix-g-glossary.html#class), ([more](tabelt-8-objects.html#classes))  &mdash;
+see also [**method**](#method), [**submethod**](#submethod), [**has**](#has) and [**role**](#role)
 
 <a id="classify"/>
 **classify**

@@ -36,8 +36,7 @@ following [*operator*](#operator) are working under that logic:
 [**~&**](appendix-a-index.html#string-and),
 [**all**](appendix-a-index.html#all),
 [**and**](appendix-a-index.html#and)
-[**andthen**](appendix-a-index.html#andthen) &mdash;
-other operations in [*bool context*](#bool-context) are:
+[**andthen**](appendix-a-index.html#andthen) &mdash;other operations in [*bool context*](#bool-context) are:
 [*or*](#or), [*xor*](#xor), [*not*](#not)
 
 <a id="argument"/>
@@ -60,12 +59,17 @@ See also: [*precedence*](#precedence)
 
 <a id="array"/>
 **array** &mdash;
-mostly synonym for [*list*](#list)
+A numbered set of informations. Any part can be accessed via an index.
+It's sometimes also called [*list*](#list), even it's not the same in Perl 6.
+Arrays are one of the primary container types in Perl.
+See more about them in the [*var tablet*](tablet-3-variables#array).
+
 
 <a id="ASAP"/>
 **ASAP** *(as soon as possible)* &mdash;
 within a given execution phase
 ([*compile time*](#compile-time) or [run time](#run-time))
+
 
 <a id="ASCII"/>
 **ASCII** &mdash;
@@ -126,11 +130,13 @@ object of the type [**Block**](appendix-a-index.html#block-type)
 
 <a id="callframe"/>
 **callframe** &mdash;
+A place in memory, where all information regarding the execution of a routine is stored.
 
 <a id="camelia"/>
 **camelia** &mdash;
 name of the the Perl 6 mascot. She supposed to look happy,
 but can also create tornados in the amazon or something like that.
+Note that it has still a camel (Perl 5 mascot) inside.
 
 <a id="capture"/>
 **capture** &mdash;
@@ -140,12 +146,19 @@ like: `chop( $text )`, then the capture works like a [*reference*](#reference)
 to this variable and provides access to that variable, 
 [more ...](tablet-3-variables.html#capture)
 
+
 <a id="class"/>
 **class** &mdash;
+Named entity with (*variables*)[#variable] and (*routines*)[#routine] that serves as a blueprint
+for the creation of [*objects*](#object). Each of these objects than has its own set of these variables.
+Classes can inherit these variables and routines from other
+classes or (*roles*)[#role] and do even much [more](tabelt-8-objects.html#classes).
+They start with the keyword [**class**](appendix-a-index.html#class).
+
 
 <a id="closure"/>
 **closure** &mdash;
-routines whose state (content of all local variables) is
+(*routines*)[#routine] whose state (content of all local variables) is
 completely preserved until the next execution,
 mostly used as a fancy alias for a [*block*](#block)
 
