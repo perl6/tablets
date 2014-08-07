@@ -3074,6 +3074,11 @@ code at [*compile time*](appendix-g-glossary.html#compile-time)
 current [**grammar**](#grammar) of main language,
 tells the parser the rules of parsing Perl
 
+
+<a id="make"/>
+**make** &mdash;
+
+
 <a id="map"/>
 **map**
 [*«array op & method»*](tablet-3-variables#array-methods) &mdash;
@@ -4262,8 +4267,8 @@ makes string output via command line ([**$\*OUT**](#OUT-global-var)) like
 [**print**](#print), but appends a [**\\n**](#backslash-n)
 
 <a id="say-io"/>
-[**say**](tablet-5-io.html#say-for-files)** &mdash;
-«*handle method*» &mdash;
+[**say**](tablet-5-io.html#say-for-files) &mdash;
+*«handle method»* &mdash;
 writes a stream into a file and appends a [**\\n**](#backslash-n)
 
 <a id="Scalar-type"/>
