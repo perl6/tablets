@@ -13,20 +13,28 @@ or "What kind of [*iterators*](#iterators) are present and how they are spelled?
 [M](#m)  [N](#n) [O](#o) [P](#p) [Q](#q) [R](#r) [S](#s)
 [T](#t)  [U](#u) [V](#v) [W](#w) [X](#x) [Y](#y) [Z](#z)**
 
+
+
 <a id="french-greater-ö-grench-lower"/>
 **»ö«** &mdash;
 pure text version of [*camelia*](#camelia), the Perl 6 mascot
 
+
+
+
 # [A](#nav-top)
+
 
 <a id="action-method"/>
 **action method** &mdash;
+[*method*](#method) that is run when a named rule (grammar method) of that same name matches
 
 
 <a id="ALAP"/>
 **ALAP** *(as late as possible)* &mdash;
 within a given execution phase -
 ([compile time](#compile-time) or [run time](#run-time))
+
 
 <a id="and"/>
 **and** &mdash;
@@ -840,11 +848,13 @@ Everything smaller is just a [*term*](#term).
 [**Str**](appendix-a-index.html#Str-type)
 [ops](tablet-4-operators.html#string-context)
 
+
 <a id="subroutine"/>
 **subroutine** &mdash;
 Perl 5-ish term for [routine](#routine) because in Perl 5 there is only the
 *sub* command to build a callable block,
 but in Perl 6 there are [much more types](#Routine-types) hence the name change
+
 
 <a id="subrule"/>
 **subrule** &mdash;
@@ -852,6 +862,7 @@ piece of a [*regular expression*](#regex) that has a name,
 its findings are stored under that name,
 some of them were used so often, that their built into to language as
 [predefined subrules](appendix-b-grouped.html#subrules)
+
 
 <a id="suffix"/>
 **suffix** &mdash;
@@ -866,12 +877,15 @@ another word for [*postfix*](#postfix)
 **symbol table** &mdash;
 
 
+
 # [T](#nav-top)
+
 
 <a id="term"/>
 **term** &mdash;
 a syntax "atom" like a pair of brackets, an [operator](#operator) or a value(4.32),
 not to be confused with [*expression*](#expression)
+
 
 <a id="terminator"/>
 **terminator** &mdash;
@@ -879,6 +893,7 @@ character that marks the end of a [*statement*](#statement), these are
 [**;**](appendix-a-index.html#semicolon-terminator) and
 [**}**](appendix-a-index.html#curly-brackets-terminator),
 [more about statements](tablet-2-basic-syntax.html#statements)
+
 
 <a id="ternary-operator"/>
 **ternary operator** &mdash;
@@ -894,9 +909,11 @@ The name comes from the latin word for "one third" (tertiarium),
 because its the only [*operator*](#operator) with that [*arity*](#arity),
 hence it has three [*operands*](#operand).
 
+
 <a id="test-method"/>
 **test method** &mdash;
 [test methods](appendix-b-grouped.html#test-methods).
+
 
 <a id="topicalizer"/>
 **topicalizer** &mdash;
@@ -904,11 +921,13 @@ every keyword that sets content of the context variable
 ([**$\_**](appendix-a-index.html#context-var)),
 like [**given**](appendix-a-index.html#given) and [**for**](appendix-a-index.html#for)
 
+
 <a id="trait"/>
 **trait** &mdash;
 additional property of a variable, defined at [*compile time*](#compile-time),
 see [**but**](appendix-a-index.html#but), what other languages call
 *trait* Perl calls [role](#role)
+
 
 <a id="transliteration"/>
 **transliteration** &mdash;
@@ -917,18 +936,24 @@ see [**but**](appendix-a-index.html#but), what other languages call
 [**.trans**](appendix-a-index.html#trans),
 [**tr** ///](appendix-a-index.html#tr-op)
 
+
 <a id="twigil"/>
 [**twigil**](appendix-b-grouped.html#twigils) &mdash;
 second(ary) [*sigil*](#sigil) indicating a special property of a variable,
 [(more details here)](tablet-3-variables.html#twigils)
 
+
 <a id="type"/>
 **type** &mdash;
+
 
 <a id="type-constraint"/>
 **type constraint** &mdash;
 
+
+
 # [U](#nav-top)
+
 
 <a id="unicode"/>
 **unicode** &mdash;
@@ -937,14 +962,18 @@ not just [*ASCII*](#ASCII), its [fully supported](appendix-d-delta.html#unicode)
 by Perl 6, which means any part of a a program might use any character or symbol,
 strange names that start with UTF are most probably Unicode formats
 
+
 <a id="UTF-8"/>
 **UTF-8** &mdash;
 
 
+
 # [V](#nav-top)
+
 
 <a id="value"/>
 **value** &mdash;
+
 
 <a id="variable"/>
 **variable** &mdash;
@@ -954,9 +983,13 @@ strange names that start with UTF are most probably Unicode formats
 **Virtual Machine** (VM) &mdash;
 
 
+
 # [W](#nav-top)
 
+
+
 # [X](#nav-top)
+
 
 <a id="xor"/>
 **xor** *(eXclusive OR)* &mdash;
@@ -974,7 +1007,9 @@ other operations in [*bool context*](#bool-context) are:
 [*and*](#and), [*or*](#or), [*not*](#not)
 
 
+
 # [Y](#nav-top)
+
 
 <a id="yadda-operator"/>
 [**yadda operator**](tablet-4-operators.html#yadda) &mdash; 
@@ -983,6 +1018,7 @@ Comes in 3 flavours, depending what should be triggered:
 [**...**](appendix-a-index.html#dot-yadda-op) ([**fail**](appendix-a-index.html#fail)),
 [**???**](appendix-a-index.html#question-mark) ([**warn**](appendix-a-index.html#warn)) and
 [**!!!**](appendix-a-index.html#exclamation-mark) ([**die**](appendix-a-index.html#die))
+
 
 # [Z](#nav-top)
 
