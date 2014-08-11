@@ -1,7 +1,8 @@
 % Perl 6 Tablets Appendix G - Glossary
 
-Short explanations to most of the computer science terms used in the tablets.
-These contain also links to specific syntax details, that relate to that term.
+Short explanations to computer science terms used in the tablets.
+Contains also links to syntax details, that relate to that term.
+
 Thats why this page is also the ideal entry point for questions like:
 "Can I do [*functional programming*](functional-programming) in Perl 6?"
 or "What kind of [*iterators*](#iterators) are present and how they are spelled?"
