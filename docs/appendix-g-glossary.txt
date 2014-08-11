@@ -19,6 +19,10 @@ pure text version of [*camelia*](#camelia), the Perl 6 mascot
 
 # [A](#nav-top)
 
+<a id="action-method"/>
+**action method** &mdash;
+
+
 <a id="ALAP"/>
 **ALAP** *(as late as possible)* &mdash;
 within a given execution phase -
@@ -345,6 +349,7 @@ by Perl 6, considered as a branch of Declarative Programming
 
 <a id="grammar"/>
 **grammar** &mdash;
+special kind of [*class*](#class)
 
 <a id="grapheme"/>
 **grapheme** &mdash;

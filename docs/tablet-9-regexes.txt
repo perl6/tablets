@@ -102,6 +102,11 @@ Predefined Rules
 [Are listed here](appendix-b-grouped.html#subrules). **\<prior\>**
 is somehow an exception.
 
+
+grammar methods
+----------------
+
+
 [all slang variables](appendix-b-grouped.html#slang-variables)
 
 ***
