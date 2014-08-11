@@ -972,12 +972,12 @@ other operations in [*bool context*](#bool-context) are:
 # [Y](#nav-top)
 
 <a id="yadda-operator"/>
-[yadda operator](tablet-4-operators.html#yadda), 
-placeholder for later to be written code inside a [routine](#routine),
-because empty ones are forbidden, comes in 3 flavours:
-[**...**](appendix-a-index.html#dot-yadda-op) (fail),
-[**???**](appendix-a-index.html#question-mark) (warn) and
-[**!!!**](appendix-a-index.html#exclamation-mark) (die)
+[**yadda operator**](tablet-4-operators.html#yadda) &mdash; 
+placeholder for later to be written code inside a [routine](#routine) body.
+Comes in 3 flavours, depending what should be triggered:
+[**...**](appendix-a-index.html#dot-yadda-op) ([**fail**](appendix-a-index.html#fail)),
+[**???**](appendix-a-index.html#question-mark) ([**warn**](appendix-a-index.html#warn)) and
+[**!!!**](appendix-a-index.html#exclamation-mark) ([**die**](appendix-a-index.html#die))
 
 # [Z](#nav-top)
 
