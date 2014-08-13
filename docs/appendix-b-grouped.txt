@@ -399,8 +399,8 @@ Operator Associativity
 
 &nbsp;  Assoc   `$a <op> $b <op> $c` (infix op)  `<op>$a<op>` (unary op)
 ------  ------  -------------------------------  -----------------------
-L       left    `($a <op> $b) <op> $c`           (<op>$a)<op>
-R       right   `$a <op> ($b <op> $c)`           <op>($a <op>)
+L       left    `($a <op> $b) <op> $c`           (`<op>`$a)`<op>`
+R       right   `$a <op> ($b <op> $c)`           `<op>`($a `<op>`)
 N       non     ILLEGAL                          ILLEGAL 
 C       chain   `($a <op> $b) and ($b <op> $c)`
 X       list    `infix:<op>($a; $b; $c)`
