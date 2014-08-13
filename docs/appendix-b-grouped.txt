@@ -591,13 +591,11 @@ Selection of the comparison alhorithm (4th column) is based on the value
 [Mix](appendix-a-index.html#Mix-type)              [Mix](appendix-a-index.html#Mix-type)              identical sets                                    `$_ === X`
 [Any](appendix-a-index.html#Any-type)              [Mixy](appendix-a-index.html#Mix-type)             force mix comparison                              `$_.Mix === X.Mix`
 &nbsp;   &nbsp;    &nbsp;   &nbsp;
-
 [Associative](appendix-a-index.html#Hash-type)     [Array](appendix-a-index.html#Array-type)          keys/list are comparable                          `+X == +$_ and $_{X.all}:exists`
 [Positional](appendix-a-index.html#Array-type)     [Array](appendix-a-index.html#Array-type)          arrays are comparable                             `$_ «===» X` (dwims `*` wildcards!)
 Callable                                           [Positional](appendix-a-index.html#Array-type)     list vs predicate                                 [`so`](appendix-a-index.html#so) `$_(X)`
 [Any](appendix-a-index.html#Any-type)              [Positional](appendix-a-index.html#Array-type)     lists are comparable                              `$_[] «===» X[]`
 &nbsp;   &nbsp;    &nbsp;   &nbsp;
-
 [Hash](appendix-a-index.html#Hash-type)            [Hash](appendix-a-index.html#Hash-type)            hash mapping equivalent                           `$_` [`eqv`](appendix-a-index.html#eqv) `X`
 [Associative](appendix-a-index.html#Hash-type)     [Hash](appendix-a-index.html#Hash-type)            force hash comparison                             `$_.Hash` [`eqv`](appendix-a-index.html#eqv) `X`
 [Pair](appendix-a-index.html#Pair-type)            [Hash](appendix-a-index.html#Hash-type)            hash does mapping                                 `X{.key} ~~ .value`
@@ -605,19 +603,16 @@ Callable                                           [Positional](appendix-a-index
 Callable                                           [Hash](appendix-a-index.html#Hash-type)            hash vs predicate                                 [`so`](appendix-a-index.html#so) `$_(X)`
 [Any](appendix-a-index.html#Any-type)              [Hash](appendix-a-index.html#Hash-type)            hash contains object                              `X.{$_}:exists`
 &nbsp;   &nbsp;    &nbsp;   &nbsp;
-
 [Str](appendix-a-index.html#Str-type)              [Regex](appendix-a-index.html#Regex-type)          string pattern match                              `.match(X)`
 [Associative](appendix-a-index.html#Hash-type)     [Regex](appendix-a-index.html#Regex-type)          attempted reverse dwim                            `FAIL, point user to any/all vs keys/values/pairs`
 [Positional](appendix-a-index.html#Array-type)     [Regex](appendix-a-index.html#Regex-type)          attempted any/all/cat                             `FAIL, point user to any/all/cat/join for LHS`
 [Any](appendix-a-index.html#Any-type)              [Regex](appendix-a-index.html#Regex-type)          pattern match                                     `.match(X)`
 &nbsp;   &nbsp;    &nbsp;   &nbsp;
-
 [Range](appendix-a-index.html#Range-type)          [Range](appendix-a-index.html#Range-type)          subset range                                      `!$_ or .bounds.all ~~ X (mod ^'s)`
 [Any](appendix-a-index.html#Any-type)              [Range](appendix-a-index.html#Range-type)          in real range                                     `X.min <= $_ <= X.max (mod ^'s)`
 [Any](appendix-a-index.html#Any-type)              [Range](appendix-a-index.html#Range-type)          in stringy range                                  `X.min le $_ le X.max (mod ^'s)`
 [Any](appendix-a-index.html#Any-type)              [Range](appendix-a-index.html#Range-type)          in generic range                                  `[!after] X.min,$_,X.max` (etc.)
 &nbsp;   &nbsp;    &nbsp;   &nbsp;
-
 [Any](appendix-a-index.html#Any-type)              [Type](appendix-g-glossary.html#type)              type membership                                   `$_.does(X)`
 &nbsp;   &nbsp;    &nbsp;   &nbsp;
 [Signature](appendix-a-index.html#Signature-type)  [Signature](appendix-a-index.html#Signature-type)  sig compatibility                                 `$_` is a subset of X ???
