@@ -395,6 +395,8 @@ N   Terminator         [`;`](appendix-a-index.html#semicolon) [`{...}`](appendix
 Operator Associativity
 ----------------------
 
+[*associativity*](appendix-g-glossary.html#associativity)
+
 &nbsp;  Assoc   Meaning of `$a <op> $b <op> $c`
 ------  ------  -------------------------------
 L       left    `($a <op> $b) <op> $c`

@@ -29,13 +29,14 @@ pure text version of [*camelia*](#camelia), the Perl 6 mascot
 **action method** &mdash;
 is a [*method*](#method) of a [*class*](#class) that is attached to a [*grammar*](#grammar).
 Whenever the grammar is used to parse a [*string*](#string) and one of the named subexpressions
-are [*matching*](#matching), an action method with the same name gets triggered (run).
+([*rules*](#rule) or [*tokens*](#token)) are [*matching*](#matching),
+an action method with the same name gets triggered (run).
 
 
 <a id="ALAP"/>
 **ALAP** *(as late as possible)* &mdash;
 within a given execution phase -
-([compile time](#compile-time) or [run time](#run-time))
+([compile time](#compile-time) or [run time](#run-time)). opposite of [*ASAP*](#ASAP)
 
 
 <a id="and"/>
@@ -54,10 +55,12 @@ following [*operator*](#operator) are working under that logic:
 [**andthen**](appendix-a-index.html#andthen) &mdash;other operations in [*bool context*](#bool-context) are:
 [*or*](#or), [*xor*](#xor), [*not*](#not)
 
+
 <a id="argument"/>
 **argument** &mdash;
 is a specific value with which a [routine](#routine) is called at a certain time.
 Not to be confused with [*parameter*](#parameter).
+
 
 <a id="arity"/>
 **arity** &mdash;
@@ -69,8 +72,9 @@ You get the *arity* of a *routine* with the [*introspection*](#introspection)
 *methods* [**arity**](appendix-a-index.html#arity) (just the required) and
 [**count**](appendix-a-index.html#count) (required and optional).
 [*prefix*](#prefix) and [*postfix*](#postfix) operator have the *arity* of one,
-[*infix*](#infix) two and the [ternary operator](#ternary-operator) has three.
-See also: [*precedence*](#precedence)
+[*infix*](#infix) two and the [ternary operator](#ternary-operator) has three. &mdash;
+see also: [*precedence*](#precedence), [*associativity*](#associativity)
+
 
 <a id="array"/>
 **array** &mdash;
@@ -83,7 +87,8 @@ See more about them in the [*var tablet*](tablet-3-variables#array).
 <a id="ASAP"/>
 **ASAP** *(as soon as possible)* &mdash;
 within a given execution phase
-([*compile time*](#compile-time) or [run time](#run-time))
+([*compile time*](#compile-time) or [run time](#run-time)).
+opposite of [*ALAP*](#ALAP)
 
 
 <a id="ASCII"/>
@@ -95,21 +100,32 @@ its basically A-Z, a-z, 0-9 and some extra symbols like \$, \%, \&,
 what you find on your keyboard and what an american typically needs,
 to enable the rest of the world more fully there is [*unicode*](#unicode)
 
+
 <a id="associativity"/>
 **associativity** &mdash;
-[**associativity**](appendix-b-grouped#operator-associativity)
+If two same [*operators*](#operator) are in conflict,
+(which obviously share the same [*precedence*](#precedence),)
+the ambiguity gets resolved by the operator's *associativity*.
+Power has according to [this table](appendix-b-grouped#operator-associativity)
+right associativity, so 2 ** 2 ** 3 gets resolved to 2 ** (2 ** 3) = 256,
+which makes your math teacher even happier. &mdash;
+see also: [*precedence*](#precedence), [*arity*](#arity)
+
 
 <a id="AST"/>
 **AST** *(abstract syntax tree)* &mdash;
 tree like data structure, in which source code is transformed,
 while [parsing](#parsing) it
 
+
 <a id="attribute"/>
 **attribute** &mdash;
 fundamentally just a [*variable*] that belongs to an [*object*](#object)
 
 
+
 # [B](#nav-top)
+
 
 <a id="backtracking"/>
 **backtracking** &mdash;
@@ -121,6 +137,7 @@ Backtracking refers just to the ability of this pointer to wander
 back leftward a bit and try another possibility after a part of a
 pattern didn't match
 
+
 <a id="binding"/>
 [**binding**](tablet-3-variables.html#binding) &mdash;
 making two variables share the same content by pointing to same
@@ -129,11 +146,13 @@ memory location. Done in Perl 6 with
 with [**::=**](appendix-a-index.html#compiletime-binding-op) at 
 [*compile time*](#compile-time).
 
+
 <a id="block"/>
 **block** &mdash;
 syntactically just a piece of code inside curly brackets
 (**{}**), when [evaluated](#evaluation) it becomes an
 object of the type [**Block**](appendix-a-index.html#block-type)
+
 
 <a id="bool-context"/>
 **boolean context** &mdash; 
@@ -141,11 +160,15 @@ object of the type [**Block**](appendix-a-index.html#block-type)
 [**Bool**](appendix-a-index.html#Bool-type)
 [ops](tablet-4-operators.html#bool-context)
 
+
+
 # [C](#nav-top)
+
 
 <a id="callframe"/>
 **callframe** &mdash;
 A place in memory, where all information regarding the execution of a routine is stored.
+
 
 <a id="camelia"/>
 **camelia** &mdash;
@@ -177,6 +200,7 @@ They start with the keyword [**class**](appendix-a-index.html#class).
 completely preserved until the next execution,
 mostly used as a fancy alias for a [*block*](#block)
 
+
 <a id="codepoint"/>
 **codepoint** &mdash;
 A [*unicode*](#unicode) primitive, represented by a specific number,
@@ -184,23 +208,28 @@ that stands for a slightly varying graphical representation.
 Since you can create with *unicode* combined character like an A with an
 flying pig on top, you would have 2 codepoints but only one [*grapheme*](#grapheme)
 
+
 <a id="coderef"/>
 **coderef** &mdash;
 [*reference*] to an executable [*block*](#block) of code ([*routine*](#routine)),
 in Perl 6 there are just [objects](#object) representing a routine that can be
 [attributes](#attribute) of other objects
 
+
 <a id="code-context"/>
 **code context** &mdash;
 also called callable [*context*](#context)
 
+
 <a id="coercion"/>
 **coercion** &mdash;
+
 
 <a id="compilation"/>
 **compilation** &mdash;
 reading the human written source code and make it an
 executable (piece of) program
+
 
 <a id="compile-time"/>
 **compile time** &mdash;
@@ -213,12 +242,14 @@ already runnung, to run code at the begin of compile time use
 [**CHECK**](appendix-a-index.html#CHECK-phaser) to run at the end of
 compile time for that unit (mostly the file or the to be **eval**ed string)
 
+
 <a id="compiler"/>
 **compiler** &mdash;
 
 
 <a id="complex-number"/>
 **complex number** &mdash;
+
 
 <a id="context"/>
 **context** &mdash;
@@ -232,6 +263,7 @@ Most important are the [*item context*](item-context),
 A *context* can also be forced upon a [*routine*](#routine),
 when its return value has to react to the context in which it is called.
 
+
 <a id="context-variable"/>
 **context variable** &mdash;
 name for [**$\_**](appendix-a-index.html#context-var),
@@ -244,23 +276,28 @@ creating a [*subroutine*](routine) that calls another with certain
 [*parameter*](#parameter) to be predefined
 
 
+
 # [D](#nav-top)
+
 
 <a id="declarand"/>
 **declarand** &mdash;
 the thing being declared, example: `$foo` in `my $foo;`,
 See also: [declarator](#declarator)
 
+
 <a id="declarative-programming"/>
 **declarative programming** &mdash;
 programming paradigm that expresses the logic of a computation
 without describing its control flow
+
 
 <a id="declarator"/>
 **declarator** &mdash;
 the command that declares to another entity that it will have a certain property
 like the "my", "our", "has" ... in a declaration like `my $foo;`,
 See also: [declarand](#declarand)
+
 
 <a id="delegation"/>
 **delegation** &mdash;
@@ -269,11 +306,13 @@ calls a *method* of one of its [*attributes*](#attribute). If the object is
 a space ship which has a clock it would allow you to call `$ship.time` instead
 of `$ship.clock.time`.
 
+
 <a id="design-by-contract"/>
 **design by contract** &mdash;
 programming style in which parameters and return values from
 [*routines*](#routine) must meet conditions, in Perl 6 done by
 [*signatures*](#signature)
+
 
 <a id="double-quoting"/>
 [**double quoting**](appendix-a-index.html#double-quotes) &mdash;
@@ -285,7 +324,10 @@ The [**qq** operator](appendix-a-index.html#qq-op) and the
 [**qqx** operator](appendix-a-index.html#qqx-op) do this too.
 See also: [*qoute*](#quote)
 
+
+
 # [E](#nav-top)
+
 
 <a id="e"/>
 [**e**](appendix-a-index.html#e-constant) *(euler number)* &mdash;
@@ -294,8 +336,10 @@ important to the functions
 [**exp**](appendix-a-index.html#exp) and [**log**](appendix-a-index.html#log),
 See also: [*i*](#i), [*pi*](#pi)
 
+
 <a id="encoding"/>
 **encoding** &mdash; [*ASCII*](#ASCII) [*UTF-8*](#UTF-8)
+
 
 <a id="escape"/>
 **escape** &mdash;
@@ -310,6 +354,7 @@ escaped with the [pipe symbol (**|**)](appendix-a-index.html#pipe-escape),
 but written only inside angle brackets (\< \>) that mark [*subrules*](#subrule),
 to distinct that from the [pipe metacharacter](appendix-a-index.html#pipe-metachar).
 
+
 <a id="evaluation"/>
 **evaluation** &mdash;
 transforming something, that it gets ready for practical usage -
@@ -319,8 +364,10 @@ inside quotes and [regexes](#regex) it has the first meaning,
 the command [**eval**](appendix-a-index.html#eval) and
 [**evalfile**](appendix-a-index.html#evalfile) does the second.
 
+
 <a id="exception"/>
 **exception** &mdash;
+
 
 <a id="expression"/>
 **expression** &mdash;
@@ -330,12 +377,16 @@ It can contain values, constants, variables, operators, and functions.
 Each of the parts has to have a [*precedence level*](#precedence) which decides 
 in which order they are considered.
 
+
+
 # [F](#nav-top)
+
 
 <a id="fat-arrow"/>
 **fat arrow** &mdash;
 a name for this [*operator*](#operator): 
 [**=\>**](appenisdix-a-index.html#fat-arrow)
+
 
 <a id="file-handle"/>
 **file handle** &mdash;
@@ -348,6 +399,7 @@ and contain also the [test methods](appendix-b-grouped.html#test-methods).
 But if its just about getting the file content in on swoop or line wise,
 [**slurp**](appendix-a-index.html#slurp) and 
 [**lines**](appendix-a-index.html#lines) do that without a *file handle*.
+
 
 <a id="functional-programming"/>
 **functional programming** &mdash;
@@ -597,7 +649,11 @@ are combined with the data the operate on to so called [*objects*](#object).
 
 
 <a id="operator"/>
-**operator** &mdash;
+**operator** &mdash; 
+very short command - containing mostly just a symbol or two (+ or []).
+Sometimes it's one or a few letters ([**eq**](appendix-a-index.html#eq) or [**lt**](appendix-a-index.html#lt).
+It can operate on the value in front of him (postfix) or behind him (prefix) or on both (infix). &mdash;
+see also: [*arity*](tablet-4-operators.html#arity), [operator tablet](tablet-4-operators.html)
 
 
 <a id="or"/>
@@ -704,15 +760,17 @@ a block that is given readonly [*parameters*](parameter) with
 
 <a id="precedence"/>
 **precedence** &mdash;
-If an [*expression*](#expression) contains several [*operators*](#operator),
-they will applied in the order according to the
-[**table of precedence**](appendix-b-grouped.html#table-of-precedence) from the
-highest to the lowest level.
-See also: [*arity*](#arity)
+If an [*expression*](#expression) contains several [*operators*](#operator) like 2 + 3 * 5,
+Perl will compare the precedence levels (ranks of importance) of the + and * according
+[this table](appendix-b-grouped#table-of-precedence). Because * was higher up,
+the result becomes 17 (not 25) which is a result your math teacher would also be glad to hear.
+&mdash; see also: [*associativity*](#associativity).
 
 
 <a id="prefix"/>
 **prefix** &mdash;
+simply just something before the main thing. Mostly a letter(s) or a symbol standing
+befor a word/term/command/...
 
 
 <a id="property"/>
@@ -721,7 +779,7 @@ metadata of a variable set at [run time](#run-time)
 
 
 <a id="pugs"/>
-**pugs** &mdash;
+**pugs** &mdash; first usable Perl 6 compiler and interpreter started my audrey tang
 
 
 

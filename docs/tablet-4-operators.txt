@@ -2,30 +2,20 @@
 
 > Perl folklore: Perl is an operator based language.
 
-Perl 6 knows a huge amount of operators, because they support 2 of the
-main design goals: they offer **dense** and **intuitive readable** code.
+Perl 6 knows a huge amount of [*operators*](appendix-g-glossary.html#operator),
+because they support 2 of the main [design goals](tablet-1-language-design.html.html#):
+they enable **dense** and **intuitive readable** code.
 2 + 3 is certainly shorter and easier to understand then add(2,3),
 since [pictograms](tablet-1-language-design.html.html#visual-metaphor)
-can be picked up faster than words. (Fortran made its whole career on that).
-But because they are so many, they had to be sorted by a rule named
-[huffman coding](tablet-1-language-design.html.html#huffman-coding).
+can be picked up faster than words (by right brain instead of left).
+(Fortran made its whole career on that).
+Forwhy here are so many ops, they had to be sorted by a rule named
+[*huffman coding*](tablet-1-language-design.html.html#huffman-coding).
 
-To understand an operator you have to know its
-[**arity**](appendix-g-glossary.html#arity)
-(how many [*parameters*](appendix-g-glossary.html#parameter) it takes
-- usually one (!) or two (+) ).
-
-The [**precedence**](appendix-g-glossary.html#precedence) tells
-which operator to prefer in case of conflict, when no braces are used 
-(round braces are only for grouping and managing precedence).
-With the help of a special [table](appendix-b-grouped#table-of-precedence)
-it allows 2 + 3 * 5 to return 17, not 25, which would upset your math teacher.
-
-If two same operations are in conflict, the ambiguity gets resolved
-by the operator's [**associativity**](appendix-g-glossary#associativity).
-Power has right has according the same [table](appendix-b-grouped#table-of-precedence)
-right precedence, so 2 ** 2 ** 3 gets resolved to 2 ** (2 ** 3) = 256,
-which makes yout math teach even happier.
+Please make also sure you understand the important operator related terms:
+[**arity**](appendix-g-glossary.html#arity) (number of operands), 
+[**precedence**](appendix-g-glossary.html#precedence) (operator priority),
+and [**associativity**](appendix-g-glossary#associativity) (operand priority) .
 
 
 Assignment ops
