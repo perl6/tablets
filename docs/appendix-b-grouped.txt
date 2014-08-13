@@ -362,7 +362,7 @@ all level of [*precedence*](appendix-g-glossary.html#precedence)
 
 A   Level              Examples
 --  -----------------  ----------------------------------------------------
-N   Terms              `42 3.14 "eek" qq["foo"] $x :!verbose @$array`
+N   Terms              [`42`](tablet-2-basic-syntax.html#number-literals) `3.14` [`"eek"`](tablet-2-basic-syntax.html#double-quotes) `qq["foo"]` `$x` `:!verbose @$array`
 L   Method postfix     [`.meth .+ .? .* .() .[] .{} .<> .<<>> .:: .= .^ .:`](appendix-a-index.html#dotty-category)
 N   Autoincrement      [`++`](appendix-a-index.html#auto-increment) [`--`](appendix-a-index.html#auto-decrement)
 R   Exponentiation     [`**`](appendix-a-index.html#power-op)
@@ -371,8 +371,8 @@ L   Multiplicative     [`*`](appendix-a-index.html#asterisk-op) [`/`](appendix-a
 L   Additive           [`+`](appendix-a-index.html#plus-op) [`-`](appendix-a-index.html#minus-op) [`+|`](appendix-a-index.html#plus-pipe-op) [`+^`](appendix-a-index.html#plus-caret-op) [`~|`](appendix-a-index.html#tilde-pipe-op) [`~^`](appendix-a-index.html#tilde-caret-op) [`?|`](appendix-a-index.html#question-pipe-op) [`?^`](appendix-a-index.html#question-caret-op)
 L   Replication        [`x`](appendix-a-index.html#x-op) [`xx`](appendix-a-index.html#xx-op)
 X   Concatenation      [`~`](appendix-a-index.html#tilde-op)
-X   Junctive and       [`&`](appendix-a-index.html#ampersand-op)
-X   Junctive or        [`|`](appendix-a-index.html#pipe-op) [`^`](appendix-a-index.html#caret-op)
+X   Junctive and       [`&`](appendix-a-index.html#ampersand-op) `(&)` `∩`
+X   Junctive or        [`|`](appendix-a-index.html#pipe-op) [`^`](appendix-a-index.html#caret-op) `(|)` `(^)` `∪` `(-)`
 L   Named unary        [`sleep`](appendix-a-index.html#sleep) [`abs`](appendix-a-index.html#abs) [`sin`](appendix-a-index.html#sin) [`temp`](appendix-a-index.html#temp) [`let`](appendix-a-index.html#let)
 N   Structural infix   [`but`](appendix-a-index.html#but) [`does`](appendix-a-index.html#does) [`<=>`](appendix-a-index.html#spaceship-op) [`leg`](appendix-a-index.html#leg) [`cmp`](appendix-a-index.html#cmp) [`..`](appendix-a-index.html#range-op) [`..^ ^.. ^..^`](appendix-a-index.html#caret-range)
 C   Chaining infix     [`!= ==`](appendix-a-index.html#equal-equal-op) [`<`](appendix-a-index.html#lower-op) [`<=`](appendix-a-index.html#lower-equal-op) [`>`](appendix-a-index.html#greater-op) [`>=`](appendix-a-index.html#greater-equal-op) [`eq`](appendix-a-index.html#eq) [`ne`](appendix-a-index.html#ne) [`lt`](appendix-a-index.html#lt) [`le`](appendix-a-index.html#le) [`gt`](appendix-a-index.html#gt) [`ge`](appendix-a-index.html#ge) [`~~`](appendix-a-index.html#smartmatch-op) [`===`](appendix-a-index.html#identity-op) [`eqv !eqv`](appendix-a-index.html#eqv)
@@ -397,14 +397,14 @@ Operator Associativity
 
 [*associativity*](appendix-g-glossary.html#associativity)
 
-&nbsp;  Assoc   Meaning of `$a <op> $b <op> $c`
-------  ------  -------------------------------
-L       left    `($a <op> $b) <op> $c`
-R       right   `$a <op> ($b <op> $c)`
-N       non     ILLEGAL
+&nbsp;  Assoc   `$a <op> $b <op> $c` (infix op)  `<op>$a<op>` (unary op)
+------  ------  -------------------------------  -----------------------
+L       left    `($a <op> $b) <op> $c`           (<op>$a)<op>
+R       right   `$a <op> ($b <op> $c)`           <op>($a <op>)
+N       non     ILLEGAL                          ILLEGAL 
 C       chain   `($a <op> $b) and ($b <op> $c)`
 X       list    `infix:<op>($a; $b; $c)`
-------  ------  -------------------------------
+------  ------  ------------------------------- ------------------------
 
 
 
@@ -566,7 +566,7 @@ Selection of the comparison alhorithm (4th column) is based on the value
 [Any](appendix-a-index.html#Any-type)              [False](appendix-a-index.html#False)               `~~` [False](appendix-a-index.html#False) match   (parsewarn)
 [Any](appendix-a-index.html#Any-type)              [Match](appendix-a-index.html#Match-type)          `~~` Successful match                             (parsewarn on literal token)
 [Any](appendix-a-index.html#Any-type)              [Nil](appendix-a-index.html#Nil-type)              `~~` Benign failure                               (parsewarn on literal token)
-[Any](appendix-a-index.html#Any-type)              [Nil](appendix-a-index.html#Nil-type)              Failure type check                                (okay, matches against type)
+[Any](appendix-a-index.html#Any-type)              [Failure](appendix-a-index.html#Failure-type)      Failure type check                                (okay, matches against type)
 [Any](appendix-a-index.html#Any-type)              [`*`](appendix-a-index.html#asterisk-term)         block signature match                             block successfully binds to `|$_` ([flattened arglist](appendix-a-index.html#pipe-context))
 &nbsp;   &nbsp;    &nbsp;   &nbsp;
 [Any](appendix-a-index.html#Any-type)              Callable:(\$)                                      item sub truth                                    `X($_)`
@@ -574,39 +574,50 @@ Selection of the comparison alhorithm (4th column) is based on the value
 [Any](appendix-a-index.html#Any-type)              [Bool](appendix-a-index.html#Bool-type)            simple truth                                      `X`
 [Any](appendix-a-index.html#Any-type)              [Match](appendix-a-index.html#Match-type)          match success                                     `X`
 [Any](appendix-a-index.html#Any-type)              [Nil](appendix-a-index.html#Nil-type)              benign failure X                                  (treats Nil value as failure)
-[Any](appendix-a-index.html#Any-type)              [Nil](appendix-a-index.html#Nil-type)              malign failure X                                  (passes Failure object through)
-[Any](appendix-a-index.html#Any-type)              [Numeric](appendix-a-index.html#Num-type)          numeric equality                                  `+$_ = X`
-[Any](appendix-a-index.html#Any-type)              [Stringy](appendix-a-index.html#Str-type)          string equality                                   `~$_ eq X`
-[Any](appendix-a-index.html#Any-type)              [Whatever](appendix-a-index.html#Whatever-type)    always matches                                    [True](appendix-a-index.html#True)
+[Any](appendix-a-index.html#Any-type)              [Failure](appendix-a-index.html#Failure-type)      malign failure X                                  (passes Failure object through)
+[Any](appendix-a-index.html#Any-type)              [Numeric](appendix-a-index.html#Num-type)          numeric equality                                  `+$_ == X`
+[Any](appendix-a-index.html#Any-type)              [Stringy](appendix-a-index.html#Str-type)          string equality                                   `~$_` [eq](appendix-a-index.html#eq) X
+[Any](appendix-a-index.html#Any-type)              [Whatever](appendix-a-index.html#Whatever-type)    always matches                                    [`True`](appendix-a-index.html#True)
 &nbsp;   &nbsp;    &nbsp;   &nbsp;
-[Hash](appendix-a-index.html#Hash-type)            [Pair](appendix-a-index.html#Pair-type)            test hash mapping                                 `$_{X.key} ~~ X.value`
+[Associative](appendix-a-index.html#Hash-type)     [Pair](appendix-a-index.html#Pair-type)            test hash mapping                                 `$_{X.key} ~~ X.value`
 [Any](appendix-a-index.html#Any-type)              [Pair](appendix-a-index.html#Pair-type)            test object attribute                             `?."{X.key}" = ?X.value` (e.g. filetests)
 &nbsp;   &nbsp;    &nbsp;   &nbsp;
-[Set](appendix-a-index.html#Set-type)              [Set](appendix-a-index.html#Set-type)              identical sets                                    `$_ === X`
-[Hash](appendix-a-index.html#Hash-type)            [Set](appendix-a-index.html#Set-type)              hash keys same set                                `$_.keys === X`
-[Any](appendix-a-index.html#Any-type)              [Set](appendix-a-index.html#Set-type)              force set comparison                              `Set($_) === X`
+[Set](appendix-a-index.html#Set-type)              [Set](appendix-a-index.html#Set-type)              identical sets                                    `$_` [===](appendix-a-index.html#identity-op) X
+[Any](appendix-a-index.html#Any-type)              [Setta](appendix-a-index.html#Set-type)            force set comparison                              `$_.Set === X.Set`
 &nbsp;   &nbsp;    &nbsp;   &nbsp;
-[Array](appendix-a-index.html#Array-type)          [Array](appendix-a-index.html#Array-type)          arrays are comparable                             `$_ «===» X` (dwims `*` wildcards!)
-[Set](appendix-a-index.html#Set-type)              [Array](appendix-a-index.html#Array-type)          array equiv to set                                `$_ === Set(X)`
-[Any](appendix-a-index.html#Any-type)              [Array](appendix-a-index.html#Array-type)          lists are comparable                              `@$_ «===» X`
+[Bag](appendix-a-index.html#Bag-type)              [Bag](appendix-a-index.html#Bag-type)              identical sets                                    `$_ === X`
+[Any](appendix-a-index.html#Any-type)              [Baggy](appendix-a-index.html#Bag-type)            force bag comparison                              `$_.Bag === X.Bag`
 &nbsp;   &nbsp;    &nbsp;   &nbsp;
-[Hash](appendix-a-index.html#Hash-type)            [Hash](appendix-a-index.html#Hash-type)            hash keys same set                                `$_.keys === X.keys`
-[Set](appendix-a-index.html#Set-type)              [Hash](appendix-a-index.html#Hash-type)            hash keys same set                                `$_ === X.keys
-[Array](appendix-a-index.html#Array-type)          [Hash](appendix-a-index.html#Hash-type)            hash slice existence                              `X.{any @$_}:exists`
-[Regex](appendix-a-index.html#Regex-type)          [Hash](appendix-a-index.html#Hash-type)            hash key grep                                     `any(X.keys).match($_)`
-[Cool](appendix-a-index.html#Cool-type)            [Hash](appendix-a-index.html#Hash-type)            hash entry existence                              `X.{$_}:exists`
-[Any](appendix-a-index.html#Any-type)              [Hash](appendix-a-index.html#Hash-type)            hash slice existence                              `X.{any @$_}:exists`
+[Mix](appendix-a-index.html#Mix-type)              [Mix](appendix-a-index.html#Mix-type)              identical sets                                    `$_ === X`
+[Any](appendix-a-index.html#Any-type)              [Mixy](appendix-a-index.html#Mix-type)             force mix comparison                              `$_.Mix === X.Mix`
 &nbsp;   &nbsp;    &nbsp;   &nbsp;
+
+[Associative](appendix-a-index.html#Hash-type)     [Array](appendix-a-index.html#Array-type)          keys/list are comparable                          `+X == +$_ and $_{X.all}:exists`
+[Positional](appendix-a-index.html#Array-type)     [Array](appendix-a-index.html#Array-type)          arrays are comparable                             `$_ «===» X` (dwims `*` wildcards!)
+Callable                                           [Positional](appendix-a-index.html#Array-type)     list vs predicate                                 [`so`](appendix-a-index.html#so) `$_(X)`
+[Any](appendix-a-index.html#Any-type)              [Positional](appendix-a-index.html#Array-type)     lists are comparable                              `$_[] «===» X[]`
+&nbsp;   &nbsp;    &nbsp;   &nbsp;
+
+[Hash](appendix-a-index.html#Hash-type)            [Hash](appendix-a-index.html#Hash-type)            hash mapping equivalent                           `$_` [`eqv`](appendix-a-index.html#eqv) `X`
+[Associative](appendix-a-index.html#Hash-type)     [Hash](appendix-a-index.html#Hash-type)            force hash comparison                             `$_.Hash` [`eqv`](appendix-a-index.html#eqv) `X`
+[Pair](appendix-a-index.html#Pair-type)            [Hash](appendix-a-index.html#Hash-type)            hash does mapping                                 `X{.key} ~~ .value`
+[Positional](appendix-a-index.html#Array-type)     [Hash](appendix-a-index.html#Hash-type)            attempted any/all                                 `FAIL, point user to [].any and [].all for LHS`
+Callable                                           [Hash](appendix-a-index.html#Hash-type)            hash vs predicate                                 [`so`](appendix-a-index.html#so) `$_(X)`
+[Any](appendix-a-index.html#Any-type)              [Hash](appendix-a-index.html#Hash-type)            hash contains object                              `X.{$_}:exists`
+&nbsp;   &nbsp;    &nbsp;   &nbsp;
+
 [Str](appendix-a-index.html#Str-type)              [Regex](appendix-a-index.html#Regex-type)          string pattern match                              `.match(X)`
-[Hash](appendix-a-index.html#Hash-type)            [Regex](appendix-a-index.html#Regex-type)          hash key "boolean grep"                           `.any.match(X)`
-[Array](appendix-a-index.html#Array-type)          [Regex](appendix-a-index.html#Regex-type)          array "boolean grep"                              `.any.match(X)`
+[Associative](appendix-a-index.html#Hash-type)     [Regex](appendix-a-index.html#Regex-type)          attempted reverse dwim                            `FAIL, point user to any/all vs keys/values/pairs`
+[Positional](appendix-a-index.html#Array-type)     [Regex](appendix-a-index.html#Regex-type)          attempted any/all/cat                             `FAIL, point user to any/all/cat/join for LHS`
 [Any](appendix-a-index.html#Any-type)              [Regex](appendix-a-index.html#Regex-type)          pattern match                                     `.match(X)`
 &nbsp;   &nbsp;    &nbsp;   &nbsp;
-[Num](appendix-a-index.html#Num-type)              [Range](appendix-a-index.html#Range-type)          in numeric range                                  `X.min <= $_ <= X.max (mod ^'s)`
-[Str](appendix-a-index.html#Str-type)              [Range](appendix-a-index.html#Range-type)          in string range                                   `X.min le $_ le X.max (mod ^'s)`
+
 [Range](appendix-a-index.html#Range-type)          [Range](appendix-a-index.html#Range-type)          subset range                                      `!$_ or .bounds.all ~~ X (mod ^'s)`
+[Any](appendix-a-index.html#Any-type)              [Range](appendix-a-index.html#Range-type)          in real range                                     `X.min <= $_ <= X.max (mod ^'s)`
+[Any](appendix-a-index.html#Any-type)              [Range](appendix-a-index.html#Range-type)          in stringy range                                  `X.min le $_ le X.max (mod ^'s)`
 [Any](appendix-a-index.html#Any-type)              [Range](appendix-a-index.html#Range-type)          in generic range                                  `[!after] X.min,$_,X.max` (etc.)
 &nbsp;   &nbsp;    &nbsp;   &nbsp;
+
 [Any](appendix-a-index.html#Any-type)              [Type](appendix-g-glossary.html#type)              type membership                                   `$_.does(X)`
 &nbsp;   &nbsp;    &nbsp;   &nbsp;
 [Signature](appendix-a-index.html#Signature-type)  [Signature](appendix-a-index.html#Signature-type)  sig compatibility                                 `$_` is a subset of X ???

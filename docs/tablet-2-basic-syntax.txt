@@ -392,32 +392,6 @@ helping readability.
     $num = +'123';
     $num = +'123foo'; # fails, 'foo' is not numeric
 
-Radix Prefixes
---------------
-
-Prefixes may be use to enter numbers in the most commonly used
-radices.
-
-    0b binary - base 2, digits 0..1
-    0o octal - base 8, digits 0..7
-    0d decimal - base 10, digits 0..9
-    0x hexadecimal - base 16, digits 0..9,a..f (case insensitive)
-
-
-
-General Radix Form
-------------------
-
-Numbers may be entered in any radix using the general radix form, digits
-are represented by `0-9` and then `a-z` (case insensitive), so up to base
-36 can be represented as a string of digits.
-
-    :10<42> # same as 0d42 or 42
-    :36<3z> # 3*(36**1) + 35*(36**0) = 143
-
-Larger radices can be entered as lists of decimal numbers.
-
-    :60[12,34,56]; # 12*(60**2) + 34*(60**1) + 56*(60**0) = 45296
 
 Scientific Notation
 -------------------
@@ -427,7 +401,6 @@ works the way you would expect.
 
     $float = 60.2e23 # becomes automatically 6.02e24
     $float = 6.02E-23 # capital E works too
-
 
 
 Rational Number
@@ -476,6 +449,33 @@ Version Number
     v1.2.3beta # illegal
     Version('1.2.3beta') # okay
 
+
+Radix Prefixes
+--------------
+
+Prefixes may be use to enter numbers in the most commonly used
+radices.
+
+    0b binary - base 2, digits 0..1
+    0o octal - base 8, digits 0..7
+    0d decimal - base 10, digits 0..9
+    0x hexadecimal - base 16, digits 0..9,a..f (case insensitive)
+
+
+
+General Radix Form
+------------------
+
+Numbers may be entered in any radix using the general radix form, digits
+are represented by `0-9` and then `a-z` (case insensitive), so up to base
+36 can be represented as a string of digits.
+
+    :10<42> # same as 0d42 or 42
+    :36<3z> # 3*(36**1) + 35*(36**0) = 143
+
+Larger radices can be entered as lists of decimal numbers.
+
+    :60[12,34,56]; # 12*(60**2) + 34*(60**1) + 56*(60**0) = 45296
 
 
 Formatting

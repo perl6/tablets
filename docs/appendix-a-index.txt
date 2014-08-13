@@ -1682,7 +1682,9 @@ see also: [**leg**](#leg) and [**\<=\>**](#spaceship-op)) which do the same in
 
 
 
+
 # [Cn](#nav-top)
+
 
 <a id="cntrl-subrule"/>
 **\<cntrl\>**
@@ -1690,11 +1692,13 @@ see also: [**leg**](#leg) and [**\<=\>**](#spaceship-op)) which do the same in
 a not visible character that is aimed to control the console output,
 [the complete list](appendix-b-grouped.html#control-chars)
 
+
 <a id="code"/><a id="code-context"/><a id="code-op"/>
 **code**
 [*«context op»*](appendix-b-grouped.html#contextualizers) &mdash;
 forces [*callable context*](appendix-g-glossary.html#code-context),
 alias to [**&**()](#ampersand-context-op)
+
 
 <a id="code-adverb"/>
 **:code**
@@ -1704,6 +1708,7 @@ the commented will be [*compiled*](appendix-g-glossary.html#compilation)
 and the resulting [*AST*](appendix-g-glossary.html#AST) is the return value &mdash;
 [**quasi** {...}](#quasi) is an alternative to `Q :code /.../`
 
+
 <a id="codes"/>
 **codes** ([Str](#Str-type) [--\>](#minus-minus-greater-signature) [Int](#Int-type))
 *«string method»* &mdash;
@@ -1711,6 +1716,7 @@ number of [*unicode*](appendix-g-glossary.html#unicode)
 [*codepoints*](appendix-g-glossary.html#codepoints) of a string in a
 language-independent way &mdash;
 see also: [**bytes**](#bytes), [**chars**](#chars), [**graphs**](#graphs)
+
 
 <a id="codes-modifier"/>
 **:codes**
