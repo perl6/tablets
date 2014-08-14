@@ -41,18 +41,18 @@ within a given execution phase -
 
 <a id="and"/>
 **and** &mdash;
-logical operation which results in [**True**](appendix-a-index.html#True) only
+logical operation which results in [**True**](appendix-a-index#True) only
 in case  both [*operands*](#operand) (incoming information) are also **True**,
-otherwise the result is [**False**](appendix-a-index.html#True),
+otherwise the result is [**False**](appendix-a-index#True),
 following [*operator*](#operator) are working under that logic:
-[**&**](appendix-a-index.html#junctive-and),
-[**&&**](appendix-a-index.html#logical-and),
-[**+&**](appendix-a-index.html#numeric-and),
-[**?&**](appendix-a-index.html#boolean-and),
-[**~&**](appendix-a-index.html#string-and),
-[**all**](appendix-a-index.html#all),
-[**and**](appendix-a-index.html#and)
-[**andthen**](appendix-a-index.html#andthen) &mdash;other operations in [*bool context*](#bool-context) are:
+[**&**](appendix-a-index#junctive-and),
+[**&&**](appendix-a-index#logical-and),
+[**+&**](appendix-a-index#numeric-and),
+[**?&**](appendix-a-index#boolean-and),
+[**~&**](appendix-a-index#string-and),
+[**all**](appendix-a-index#all),
+[**and**](appendix-a-index#and)
+[**andthen**](appendix-a-index#andthen) &mdash;other operations in [*bool context*](#bool-context) are:
 [*or*](#or), [*xor*](#xor), [*not*](#not)
 
 
@@ -69,8 +69,8 @@ or how many [*parameter*](#parameter) a [*routine*](#routine) requires.
 Since all *operator* are under the hood just [*methods*](#method),
 these two things end up being the same in Perl 6.
 You get the *arity* of a *routine* with the [*introspection*](#introspection) 
-*methods* [**arity**](appendix-a-index.html#arity) (just the required) and
-[**count**](appendix-a-index.html#count) (required and optional).
+*methods* [**arity**](appendix-a-index#arity) (just the required) and
+[**count**](appendix-a-index#count) (required and optional).
 [*prefix*](#prefix) and [*postfix*](#postfix) operator have the *arity* of one,
 [*infix*](#infix) two and the [ternary operator](#ternary-operator) has three. &mdash;
 see also: [*precedence*](#precedence), [*associativity*](#associativity)
@@ -139,11 +139,11 @@ pattern didn't match
 
 
 <a id="binding"/>
-[**binding**](tablet-3-variables.html#binding) &mdash;
+[**binding**](tablet-3-variables#binding) &mdash;
 making two variables share the same content by pointing to same
 memory location. Done in Perl 6 with 
-[**:=**](appendix-a-index.html#runtime-binding-op) at [*runtime*](#runtime) and
-with [**::=**](appendix-a-index.html#compiletime-binding-op) at 
+[**:=**](appendix-a-index#runtime-binding-op) at [*runtime*](#runtime) and
+with [**::=**](appendix-a-index#compiletime-binding-op) at 
 [*compile time*](#compile-time).
 
 
@@ -151,14 +151,14 @@ with [**::=**](appendix-a-index.html#compiletime-binding-op) at
 **block** &mdash;
 syntactically just a piece of code inside curly brackets
 (**{}**), when [evaluated](#evaluation) it becomes an
-object of the type [**Block**](appendix-a-index.html#block-type)
+object of the type [**Block**](appendix-a-index#block-type)
 
 
 <a id="bool-context"/>
 **boolean context** &mdash; 
 [*context*](#context)
-[**Bool**](appendix-a-index.html#Bool-type)
-[ops](tablet-4-operators.html#bool-context)
+[**Bool**](appendix-a-index#Bool-type)
+[ops](tablet-4-operators#bool-context)
 
 
 
@@ -182,7 +182,7 @@ is the name of a [type of storage](#Capture-type) for the [*arguments*](#argumen
 of a specific [*routine*](#routine) call. When variables are used in this call
 like: `chop( $text )`, then the capture works like a [*reference*](#reference)
 to this variable and provides access to that variable, 
-[more ...](tablet-3-variables.html#capture)
+[more ...](tablet-3-variables#capture)
 
 
 <a id="class"/>
@@ -190,8 +190,8 @@ to this variable and provides access to that variable,
 Named entity with (*variables*)[#variable] and (*routines*)[#routine] that serves as a blueprint
 for the creation of [*objects*](#object). Each of these objects than has its own set of these variables.
 Classes can inherit these variables and routines from other
-classes or (*roles*)[#role] and do even much [more](tabelt-8-objects.html#classes).
-They start with the keyword [**class**](appendix-a-index.html#class).
+classes or (*roles*)[#role] and do even much [more](tabelt-8-objects#classes).
+They start with the keyword [**class**](appendix-a-index#class).
 
 
 <a id="closure"/>
@@ -235,11 +235,11 @@ executable (piece of) program
 **compile time** &mdash;
 time when Perl converts source code to executable form (bytecode),
 is always before [*run time*](#run-time)
-even if code can be compiled via [**eval**](appendix-a-index.html#eval) and
-[**evalfile**](appendix-a-index.html#evalfile) when the program is
+even if code can be compiled via [**eval**](appendix-a-index#eval) and
+[**evalfile**](appendix-a-index#evalfile) when the program is
 already runnung, to run code at the begin of compile time use
-[**BEGIN**](appendix-a-index.html#BEGIN-phaser) and
-[**CHECK**](appendix-a-index.html#CHECK-phaser) to run at the end of
+[**BEGIN**](appendix-a-index#BEGIN-phaser) and
+[**CHECK**](appendix-a-index#CHECK-phaser) to run at the end of
 compile time for that unit (mostly the file or the to be **eval**ed string)
 
 
@@ -266,7 +266,7 @@ when its return value has to react to the context in which it is called.
 
 <a id="context-variable"/>
 **context variable** &mdash;
-name for [**$\_**](appendix-a-index.html#context-var),
+name for [**$\_**](appendix-a-index#context-var),
 which is used by built in Perl functions as an implicit
 parameter and as memory of the last result
 
@@ -315,13 +315,13 @@ programming style in which parameters and return values from
 
 
 <a id="double-quoting"/>
-[**double quoting**](appendix-a-index.html#double-quotes) &mdash;
+[**double quoting**](appendix-a-index#double-quotes) &mdash;
 means literally to surround text by double quotes which look like this: **" "**.
 In opposite to [*single qouting*](single-quoting) a lot of characters inside
 the quotes will not taken literally but mark things to be [*evaluated*](#evaluated).
 This are [*variables*](#variable) [*routines*](#rountine) and [*blocks*](#block).
-The [**qq** operator](appendix-a-index.html#qq-op) and the 
-[**qqx** operator](appendix-a-index.html#qqx-op) do this too.
+The [**qq** operator](appendix-a-index#qq-op) and the 
+[**qqx** operator](appendix-a-index#qqx-op) do this too.
 See also: [*qoute*](#quote)
 
 
@@ -330,10 +330,10 @@ See also: [*qoute*](#quote)
 
 
 <a id="e"/>
-[**e**](appendix-a-index.html#e-constant) *(euler number)* &mdash;
+[**e**](appendix-a-index#e-constant) *(euler number)* &mdash;
 about 2.71828182878434, fundamental mathematical constant,
 important to the functions 
-[**exp**](appendix-a-index.html#exp) and [**log**](appendix-a-index.html#log),
+[**exp**](appendix-a-index#exp) and [**log**](appendix-a-index#log),
 See also: [*i*](#i), [*pi*](#pi)
 
 
@@ -343,16 +343,16 @@ See also: [*i*](#i), [*pi*](#pi)
 
 <a id="escape"/>
 **escape** &mdash;
-means mostly just to put a [**\\**](appendix-a-index.html#escape-char)
+means mostly just to put a [**\\**](appendix-a-index#escape-char)
 in front of a character inside [*quotes*](#quote) or [*regexes*](#regex).
 This cancels the special meaning of the character he will be taken literal.
 But olso the opposite is possible. By escaping an alphabetic letter he can become
-an otherwise invisible [*«control char»*](appendix-b-grouped.html#control-chars)
-or an [*«escape equence»*](appendix-b-grouped.html#escape-sequences) (regex only).
-[*«zero-width boundaries»*](appendix-b-grouped.html#zero-width-boundaries) are
-escaped with the [pipe symbol (**|**)](appendix-a-index.html#pipe-escape),
+an otherwise invisible [*«control char»*](appendix-b-grouped#control-chars)
+or an [*«escape equence»*](appendix-b-grouped#escape-sequences) (regex only).
+[*«zero-width boundaries»*](appendix-b-grouped#zero-width-boundaries) are
+escaped with the [pipe symbol (**|**)](appendix-a-index#pipe-escape),
 but written only inside angle brackets (\< \>) that mark [*subrules*](#subrule),
-to distinct that from the [pipe metacharacter](appendix-a-index.html#pipe-metachar).
+to distinct that from the [pipe metacharacter](appendix-a-index#pipe-metachar).
 
 
 <a id="evaluation"/>
@@ -361,8 +361,8 @@ transforming something, that it gets ready for practical usage -
 sometimes means that just replacing in a piece of code all variables with there
 current content, cometimes more like interpreting or compiling something;
 inside quotes and [regexes](#regex) it has the first meaning,
-the command [**eval**](appendix-a-index.html#eval) and
-[**evalfile**](appendix-a-index.html#evalfile) does the second.
+the command [**eval**](appendix-a-index#eval) and
+[**evalfile**](appendix-a-index#evalfile) does the second.
 
 
 <a id="exception"/>
@@ -385,26 +385,26 @@ in which order they are considered.
 <a id="fat-arrow"/>
 **fat arrow** &mdash;
 a name for this [*operator*](#operator): 
-[**=\>**](appenisdix-a-index.html#fat-arrow)
+[**=\>**](appenisdix-a-index#fat-arrow)
 
 
 <a id="file-handle"/>
 **file handle** &mdash;
 is just a [*variable*](#variable) through which you can access a file.
 Technically these are just [*scalars*](#scalar) holding an [*objects*](#object)
-of the [*type*](#type) [**IO**](appendix-a-index.html#IO-type) which can do much
+of the [*type*](#type) [**IO**](appendix-a-index#IO-type) which can do much
 more than just read and write files.
 They can access directories, [*pipes*](#pipe) the command line (shell) 
-and contain also the [test methods](appendix-b-grouped.html#test-methods).
+and contain also the [test methods](appendix-b-grouped#test-methods).
 But if its just about getting the file content in on swoop or line wise,
-[**slurp**](appendix-a-index.html#slurp) and 
-[**lines**](appendix-a-index.html#lines) do that without a *file handle*.
+[**slurp**](appendix-a-index#slurp) and 
+[**lines**](appendix-a-index#lines) do that without a *file handle*.
 
 
 <a id="functional-programming"/>
 **functional programming** &mdash;
 exclusively function based programming
-style, [strongly supported](appendix-d-delta.html#functional-programming)
+style, [strongly supported](appendix-d-delta#functional-programming)
 by Perl 6, considered as a branch of Declarative Programming
 
 
@@ -429,7 +429,7 @@ out of several [codepoints](#codepoint)
 
 <a id="hash"/>
 **hash** &mdash;
-[**Hash**](appendix-a-index.html#Hash-type)
+[**Hash**](appendix-a-index#Hash-type)
 
 
 <a id="hash-context"/>
@@ -439,7 +439,7 @@ out of several [codepoints](#codepoint)
 
 <a id="heredoc"/>
 **heredoc** &mdash; [quote](#quote)
-[Tablet 2](tablet-2-basic-syntax.html#heredocs)
+[Tablet 2](tablet-2-basic-syntax#heredocs)
 
 
 
@@ -447,7 +447,7 @@ out of several [codepoints](#codepoint)
 
 
 <a id="i"/>
-[**i**](appendix-a-index.html#i-constant) *(imaginary number)* &mdash;
+[**i**](appendix-a-index#i-constant) *(imaginary number)* &mdash;
 square root of -1, fundamental mathematical constant to build 
 [*complex number*](#complex-number), displayed as `0+1i`
 important to the functions ,
@@ -476,7 +476,7 @@ of code of issue
 
 <a id="item-context"/>
 **scalar context** &mdash;
-is a [*context*](#context) of the [Scalar type](appendix-a-index.html#Scalar-type),
+is a [*context*](#context) of the [Scalar type](appendix-a-index#Scalar-type),
 is called in Perl 5 [scalar context](#scalar-context)
 
 
@@ -488,7 +488,7 @@ Sometimes its meant as a specific repetition.
 
 
 <a id="iterator"/>
-**iterator** &mdash; [iterators](appendix-b-grouped.html#loops)
+**iterator** &mdash; [iterators](appendix-b-grouped#loops)
 
 
 
@@ -496,10 +496,10 @@ Sometimes its meant as a specific repetition.
 
 
 <a id="junction"/>
-[**junction**](tablet-4-operators.html#Junctions) &mdash;
-a [type of value](appendix-a-index.html#Junction-type) that holds a logical
+[**junction**](tablet-4-operators#Junctions) &mdash;
+a [type of value](appendix-a-index#Junction-type) that holds a logical
 combination of several values,like: (A and B) or C, 
-create them with [junctive ops](appendix-b-grouped.html#junctions)
+create them with [junctive ops](appendix-b-grouped#junctions)
 
 
 
@@ -530,7 +530,7 @@ create them with [junctive ops](appendix-b-grouped.html#junctions)
 
 <a id="list-context"/>
 **list context** &mdash; 
-[**Array**](appendix-a-index.html#Array-type)
+[**Array**](appendix-a-index#Array-type)
 [*context*](#context)
 
 
@@ -540,13 +540,13 @@ create them with [junctive ops](appendix-b-grouped.html#junctions)
 
 <a id="LOL"/>
 **LOL** *(List of List)* &mdash;
-[special type](appendix-a-index.html#LoL) of [*list*](#list) that can contain
+[special type](appendix-a-index#LoL) of [*list*](#list) that can contain
 other lists, like: `[[1,2,3], [4,5,6]]` which is a list with 2 elements
 
 
 <a id="lol-context"/>
 **lol context** &mdash;
-[**lol**](appendix-a-index.html#lol) [*context*](#context) means these sublists
+[**lol**](appendix-a-index#lol) [*context*](#context) means these sublists
 (as explained in [*LOL*](#LOL)) will not [*flattened*](#list-flattening)
 
 
@@ -566,9 +566,9 @@ because of looking for the longest alternative
 
 
 <a id="metaoperator"/>
-[**metaoperator**](appendix-b-grouped.html#metaoperators) &mdash;
+[**metaoperator**](appendix-b-grouped#metaoperators) &mdash;
 operator that alters the meaning or expands the scope of another normal operator,
-[a listing of them](appendix-b-grouped.html#metaoperators)
+[a listing of them](appendix-b-grouped#metaoperators)
 
 
 <a id="metaprogramming"/>
@@ -586,7 +586,7 @@ is a [*routine*] that belongs to a [*object*](#object) or a class
 technique where several [*routines*](#routine) can have the same name,
 but different [*signatures*](#signature), when the name is called - the
 suitable routine is seleted via *MMD* &mdash;
-See also: [**multi**](appendix-a-index.html#multi)
+See also: [**multi**](appendix-a-index#multi)
 
 
 <a id="moar"/>
@@ -617,15 +617,15 @@ See also: [**multi**](appendix-a-index.html#multi)
 **not** &mdash;
 logical operation that changes a true into false and vice versa,
 following operator working under that logic:
-[**!()**](appendix-a-index.html#negation-op),
-[**not**](appendix-a-index.html#not) &mdash;
+[**!()**](appendix-a-index#negation-op),
+[**not**](appendix-a-index#not) &mdash;
 other operations in [*bool context*](#bool-context) are:
 [*and*](#and), [*or*](#or), [*xor*](#xor) 
 
 
 <a id="numeric-context"/>
 **numeric context** &mdash; 
-[**Num**](appendix-a-index.html#Num-type)
+[**Num**](appendix-a-index#Num-type)
 [*type*](#type)
 [*context*](#context)
 
@@ -651,27 +651,27 @@ are combined with the data the operate on to so called [*objects*](#object).
 <a id="operator"/>
 **operator** &mdash; 
 very short command - containing mostly just a symbol or two (+ or []).
-Sometimes it's one or a few letters ([**eq**](appendix-a-index.html#eq) or [**lt**](appendix-a-index.html#lt).
+Sometimes it's one or a few letters ([**eq**](appendix-a-index#eq) or [**lt**](appendix-a-index#lt).
 It can operate on the value in front of him (postfix) or behind him (prefix) or on both (infix). &mdash;
-see also: [*arity*](tablet-4-operators.html#arity), [operator tablet](tablet-4-operators.html)
+see also: [*arity*](tablet-4-operators#arity), [operator tablet](tablet-4-operators)
 
 
 <a id="or"/>
 **or** &mdash;
-logical operation that has a the result [**True**](appendix-a-index.html#True)
+logical operation that has a the result [**True**](appendix-a-index#True)
 if at least one of two [*operands*](#operand) (incoming information) is also **True**,
-otherwise the result is [**False**](appendix-a-index.html#False). 
+otherwise the result is [**False**](appendix-a-index#False). 
 Following operator working under that logic:
-[**|**](appendix-a-index.html#junctive-or),
-[**||**](appendix-a-index.html#logical-or),
-[**//**](appendix-a-index.html#defined-or),
-[**+|**](appendix-a-index.html#numeric-or),
-[**?|**](appendix-a-index.html#boolean-or),
-[**~|**](appendix-a-index.html#string-or),
-[**any**](appendix-a-index.html#any),
-[**or**](appendix-a-index.html#or)
-[**orelse**](appendix-a-index.html#orelse),
-[**err**](appendix-a-index.html#err) &mdash;
+[**|**](appendix-a-index#junctive-or),
+[**||**](appendix-a-index#logical-or),
+[**//**](appendix-a-index#defined-or),
+[**+|**](appendix-a-index#numeric-or),
+[**?|**](appendix-a-index#boolean-or),
+[**~|**](appendix-a-index#string-or),
+[**any**](appendix-a-index#any),
+[**or**](appendix-a-index#or)
+[**orelse**](appendix-a-index#orelse),
+[**err**](appendix-a-index#err) &mdash;
 other operations in [*bool context*](#bool-context) are:
 [**and**](#and), [**xor**](#xor), [**not**](#not)
 
@@ -707,10 +707,10 @@ also called [*AST*](#AST)
 
 
 <a id="phaser"/>
-[**phaser**](appendix-b-grouped.html#closure-traits) &mdash;
+[**phaser**](appendix-b-grouped#closure-traits) &mdash;
 Perl 6 term for specially named (due a prefix statement) subblocks withe special
 [*runtimes*](#run-time) aka [*closure traits*](appendix-b-grouped#closure-traits) &mdash;
-example: [**BEGIN**](appendix-a-index.html#BEGIN-phaser)
+example: [**BEGIN**](appendix-a-index#BEGIN-phaser)
 
 
 <a id="perlito"/>
@@ -718,7 +718,7 @@ example: [**BEGIN**](appendix-a-index.html#BEGIN-phaser)
 
 
 <a id="pi"/>
-[**pi**](appendix-a-index.html#pi-constant) *(π)* &mdash;
+[**pi**](appendix-a-index#pi-constant) *(π)* &mdash;
 about 3.14159265394248, fundamental mathematical constant,
 ratio of a circle's circumference to its diameter
 important to the functions,
@@ -729,24 +729,24 @@ See also: [*e*](#e), [*i*](#i)
 **pipe** &mdash;
 connection between 2 processes, move data (mostly only in one direction)
 without buffering, can also mean just the connection of several commands via 
-[**==\>**](appendix-a-index.html#equal-equal-greater-op) and alike
+[**==\>**](appendix-a-index#equal-equal-greater-op) and alike
 
 
 <a id="POD"/>
-[**POD**](tablet-2-basic-syntax.html#pod)
+[**POD**](tablet-2-basic-syntax#pod)
 *(Plain Old Documentation)* &mdash;
 a markup language to embeded documentation into Perl source code,
 has in Perl 6 the ability to store data into special variables 
-like [**\$=pod**](appendix-a-index.html#pod-pod-var) to be retrieved later,
+like [**\$=pod**](appendix-a-index#pod-pod-var) to be retrieved later,
 all pod-directives start with a equal sign - more details are written in the
-[basics tablet](tablet-2-basic-syntax.html#pod)
+[basics tablet](tablet-2-basic-syntax#pod)
 
 
 <a id="pointy-block"/>
 **pointy block** &mdash;
 a block that is given readonly [*parameters*](parameter) with
-[**-\>**](appendix-a-index.html#arrow-op) or rw parameters with
-[**<-\>**](appendix-a-index.html#lower-minus-greater-op)
+[**-\>**](appendix-a-index#arrow-op) or rw parameters with
+[**<-\>**](appendix-a-index#lower-minus-greater-op)
 
 
 <a id="positional-parameter"/>
@@ -787,25 +787,25 @@ metadata of a variable set at [run time](#run-time)
 
 
 <a id="quasiquoting"/>
-[**quasiquoting**](appendix-a-index.html#quasi) &mdash;
+[**quasiquoting**](appendix-a-index#quasi) &mdash;
 differs a bit from normal [*quoting*](#quote) operations and has thatswhy its
-own [*slang*](#slang) variable [**$~Quasi**](appendix-a-index.html#Quasi-slang-var).
+own [*slang*](#slang) variable [**$~Quasi**](appendix-a-index#Quasi-slang-var).
 It means to embrace a piece of code that will be [*compiled*](#compilation)
 but the result will be just the [*AST*](#AST).
 
 
 <a id="quote-protection"/>
 **quote protection** &mdash;
-Perl 5 and 6 have the nice [**qw**](appendix-a-index.html#qw-op) operator,
+Perl 5 and 6 have the nice [**qw**](appendix-a-index#qw-op) operator,
 thats splits a string into words according to the whitespace between words,
 if you wish a word to contain whitespace, you have to put it in quotes:
 `<<these are "three words">>`, this mechanism is called quote protection
-and is provided by the adverb [**:ww**](appendix-a-index.html#ww-adverb)
-aka [**:quotewords**](appendix-a-index.html#quotewords-adverb) which is included
-in [**\<\< \>\>**](appendix-a-index.html#double-angle-brackets-op),
-the adverb [**:w**](appendix-a-index.html#w-adverb) aka
-[**:words**](appendix-a-index.html#words-adverb) which support **qw** as well as
-[**< >**](appendix-a-index.html#angle-brackets-op) don't provide this service,
+and is provided by the adverb [**:ww**](appendix-a-index#ww-adverb)
+aka [**:quotewords**](appendix-a-index#quotewords-adverb) which is included
+in [**\<\< \>\>**](appendix-a-index#double-angle-brackets-op),
+the adverb [**:w**](appendix-a-index#w-adverb) aka
+[**:words**](appendix-a-index#words-adverb) which support **qw** as well as
+[**< >**](appendix-a-index#angle-brackets-op) don't provide this service,
 that might also be known to shell users: `<these are 'four words'>`
 
 
@@ -813,8 +813,8 @@ that might also be known to shell users: `<these are 'four words'>`
 **quote** &mdash;
 Ri *quote* means to encompass text by character like quoting marks ('' or ""). 
 This text will be processed and then counted as one value of the [*type*](#type)
-[**Str**](appendix-a-index.html#Str-type). The rules ([*grammar*](#grammar))
-of this process are stored in [**$~Quote**](appendix-a-index.html#Quote-slang-var).
+[**Str**](appendix-a-index#Str-type). The rules ([*grammar*](#grammar))
+of this process are stored in [**$~Quote**](appendix-a-index#Quote-slang-var).
 See also:
 [*single quoting*](#single quoting), [*double quoting*](#double quoting)
 [*heredocs*](#heredocs),             [*quasiquoting*](#quasiquoting)
@@ -848,7 +848,7 @@ and there is [binding](#binding).
 **regex** *(regular expression)* &mdash;
 in Perl 5 its a pattern matching notation,
 in Perl 6 a whole rearranged language that does the same,
-a [whole page](tablet-9-regexes.html) is dedicated just about that subject
+a [whole page](tablet-9-regexes) is dedicated just about that subject
 
 
 <a id="reify">
@@ -868,7 +868,7 @@ an already existing *method* or a needed *attribute* exists.
 In case of violation an [*exception*](#exception) will be raised.
 And a *role* can't be [*instantiated*](#instance) nor [*inherited*](#inheritance)
 from like from a *class*.
-The keyword [**role**](appendix-a-index.html#role) [*declares*](#declarator)
+The keyword [**role**](appendix-a-index#role) [*declares*](#declarator)
 the following [*block*](#block) to be a role.
 
 
@@ -877,8 +877,8 @@ the following [*block*](#block) to be a role.
 [block](#block) of code callable by name.
 It can have a [*signature*](#signature) and a return value.
 When the *routine* is [compiled](#compilation) it becomes an object of the
-[*type*](#type) [**SoftRoutine**](appendix-a-index.html#softroutine-type)
-or [**HardRoutine**](appendix-a-index.html#hardroutine-type).
+[*type*](#type) [**SoftRoutine**](appendix-a-index#softroutine-type)
+or [**HardRoutine**](appendix-a-index#hardroutine-type).
 
 
 <a id="run-time"/>
@@ -894,8 +894,8 @@ after [*compile time*](#compile-time).
 <a id="scalar"/>
 **scalar** &mdash; 
 container type for a single value which can be practically every value,
-incluing any container. [Scalar variables](tablet-3-variables.html#scalar)
-have the [sigil](#sigil) [**$**](appendix-a-index.html#dollar-sigil).
+incluing any container. [Scalar variables](tablet-3-variables#scalar)
+have the [sigil](#sigil) [**$**](appendix-a-index#dollar-sigil).
 
 
 <a id="scalar-context"/>
@@ -915,15 +915,15 @@ or (if there is none) the current file.
 **sigil** &mdash;
 Character that serves as a [*prefix*](#prefix) to categorize the following name
 ([*symbol*](#symbol)). It stays in front of the actual name without spacing.
-Most prominent in Perl are the variable [sigils](appendix-b-grouped.html#sigils):
-[**$**](appendix-a-index.html#dollar-sigil),
-[**@**](appendix-a-index.html#at-sigil) and
-[**%**](appendix-a-index.html#percent-sigil).
+Most prominent in Perl are the variable [sigils](appendix-b-grouped#sigils):
+[**$**](appendix-a-index#dollar-sigil),
+[**@**](appendix-a-index#at-sigil) and
+[**%**](appendix-a-index#percent-sigil).
 They mark the three different variable [*namespaces*](#namespace)
 ([*scalar*](#scalar), [*array*](#array) and [*hash*](#hash)) and make
 [*interpolation*](#interpolation) much easier for human and the computer.
 Perl 6 knows also [*secondary sigils*](#twigil).
-For more info see the [variable tablet](tablet-3-variables.html).
+For more info see the [variable tablet](tablet-3-variables).
 
 
 <a id="signature"/>
@@ -933,12 +933,12 @@ definition of a [*routines*](#routine) [*parameters*](#parameter)
 
 
 <a id="single-quoting"/>
-[**single quoting**](appendix-a-index.html#single-quotes) &mdash;
+[**single quoting**](appendix-a-index#single-quotes) &mdash;
 means to surround text by single quotes which look like this: **' '**.
 Every sign in this text will be understood literally, except **\\** and **\'**,
 which result in **\** and **'**.
-The [**q** operator](appendix-a-index.html#q-op) and the 
-[**qx** operator](appendix-a-index.html#qx-op) do the same thing.
+The [**q** operator](appendix-a-index#q-op) and the 
+[**qx** operator](appendix-a-index#qx-op) do the same thing.
 See also: [*double qouting*](#double-quoting) and [*qoute*](#quote).
 
 
@@ -948,12 +948,12 @@ Perl 6 is a family of languages containing the the main language,
 [*quote*](#quote), [*regular expressions*](#regular expression) and more.
 These sublanguages are called in short slangs.
 Each slang has a completely independent set of rules (a [*grammar*](#grammar))
-which is stored in a [slang variable](appendix-b-grouped.html#slang-variables).
+which is stored in a [slang variable](appendix-b-grouped#slang-variables).
 The slang variables have the [*twigil*](#twigil) **\~** like in 
-[**\$\~MAIN**](appendix-a-index.html#MAIN-lang-var) (main language).
+[**\$\~MAIN**](appendix-a-index#MAIN-lang-var) (main language).
 You can change or alter them by using the keywords 
-[**augment**](appendix-a-index.html#augment) and
-[**supersede**](appendix-a-index.html#supersede).
+[**augment**](appendix-a-index#augment) and
+[**supersede**](appendix-a-index#supersede).
 
 
 <a id="slice"/>
@@ -970,11 +970,11 @@ array [*parameter*](#parameter) that receives (slurps) all remaining
 <a id="smartmatch"/>
 **smartmatch** &mdash;
 The original Perl 6 *smartmatch* [*operator*](#operator) looks like this:
-[**~~**](appendix-a-index.html#smartmatch-op) and does an universal "compare
+[**~~**](appendix-a-index#smartmatch-op) and does an universal "compare
 this with that" dependend on the [*types*](#type) of the [*operands*](#operand).
 That can range from simple comparison of two values to applying a [*regex*](#regex)
 up to the question if two [*signatures*](#signature) are compatible -
-all details in [that table](appendix-b-grouped.html#smartmatch).
+all details in [that table](appendix-b-grouped#smartmatch).
 
 
 <a id="statement"/>
@@ -987,18 +987,18 @@ Everything smaller is just a [*term*](#term).
 <a id="string"/>
 **string** &mdash; 
 in the broadest sense it means just text, a sequence (string) of letters. &mdash;
-Literal strings are expressed via [*quoting*](tablet-2-basic-syntax.html#quoting).
-[*variables*](#variable) that hold a string have the type [**Str**](appendix-a-index.html#Str-type).
-There [special operators](tablet-4-operators.html#string-context) to create strings as
-well as [compare strings](tablet-4-operators.html#string-comparison). Perl is famous
+Literal strings are expressed via [*quoting*](tablet-2-basic-syntax#quoting).
+[*variables*](#variable) that hold a string have the type [**Str**](appendix-a-index#Str-type).
+There [special operators](tablet-4-operators#string-context) to create strings as
+well as [compare strings](tablet-4-operators#string-comparison). Perl is famous
 for its [*regular expressions*](#regex) - pattern for advanced search and replace operations in strings. 
 
 
 <a id="string-context"/>
 **string context** &mdash; 
 [*context*](#context)
-[**Str**](appendix-a-index.html#Str-type)
-[ops](tablet-4-operators.html#string-context)
+[**Str**](appendix-a-index#Str-type)
+[ops](tablet-4-operators#string-context)
 
 
 <a id="subroutine"/>
@@ -1013,7 +1013,7 @@ but in Perl 6 there are [much more types](#Routine-types) hence the name change
 piece of a [*regular expression*](#regex) that has a name,
 its findings are stored under that name,
 some of them were used so often, that their built into to language as
-[predefined subrules](appendix-b-grouped.html#subrules)
+[predefined subrules](appendix-b-grouped#subrules)
 
 
 <a id="suffix"/>
@@ -1042,21 +1042,21 @@ not to be confused with [*expression*](#expression)
 <a id="terminator"/>
 **terminator** &mdash;
 character that marks the end of a [*statement*](#statement), these are 
-[**;**](appendix-a-index.html#semicolon-terminator) and
-[**}**](appendix-a-index.html#curly-brackets-terminator),
-[more about statements](tablet-2-basic-syntax.html#statements)
+[**;**](appendix-a-index#semicolon-terminator) and
+[**}**](appendix-a-index#curly-brackets-terminator),
+[more about statements](tablet-2-basic-syntax#statements)
 
 
 <a id="ternary-operator"/>
 **ternary operator** &mdash;
 or *conditional operator* is the name of this construct:
-[**?? !!**](appendix-a-index.html#ternary-op). 
-It is a shortcut for [**if**](appendix-a-index.html#if) and
-[**else**](appendix-a-index.html#else) which was introduced by the C language
+[**?? !!**](appendix-a-index#ternary-op). 
+It is a shortcut for [**if**](appendix-a-index#if) and
+[**else**](appendix-a-index#else) which was introduced by the C language
 as *? :* as it is still written in Perl 5.
 Its useful if every alternative consists only of one [*term*](#term).
 Its even more handy if you have to feed a variable with the result of the
-winning alternative ([more details](tablet-4-operators.html#ternary)). 
+winning alternative ([more details](tablet-4-operators#ternary)). 
 The name comes from the latin word for "one third" (tertiarium), 
 because its the only [*operator*](#operator) with that [*arity*](#arity),
 hence it has three [*operands*](#operand).
@@ -1064,35 +1064,35 @@ hence it has three [*operands*](#operand).
 
 <a id="test-method"/>
 **test method** &mdash;
-[test methods](appendix-b-grouped.html#test-methods).
+[test methods](appendix-b-grouped#test-methods).
 
 
 <a id="topicalizer"/>
 **topicalizer** &mdash;
 every keyword that sets content of the context variable
-([**$\_**](appendix-a-index.html#context-var)),
-like [**given**](appendix-a-index.html#given) and [**for**](appendix-a-index.html#for)
+([**$\_**](appendix-a-index#context-var)),
+like [**given**](appendix-a-index#given) and [**for**](appendix-a-index#for)
 
 
 <a id="trait"/>
 **trait** &mdash;
 additional property of a variable, defined at [*compile time*](#compile-time),
-see [**but**](appendix-a-index.html#but), what other languages call
+see [**but**](appendix-a-index#but), what other languages call
 *trait* Perl calls [role](#role)
 
 
 <a id="transliteration"/>
 **transliteration** &mdash;
-[**$~Trans**](appendix-a-index.html#Quasi-slang-var),
-[**:trans**](appendix-a-index.html#trans-adverb),
-[**.trans**](appendix-a-index.html#trans),
-[**tr** ///](appendix-a-index.html#tr-op)
+[**$~Trans**](appendix-a-index#Quasi-slang-var),
+[**:trans**](appendix-a-index#trans-adverb),
+[**.trans**](appendix-a-index#trans),
+[**tr** ///](appendix-a-index#tr-op)
 
 
 <a id="twigil"/>
-[**twigil**](appendix-b-grouped.html#twigils) &mdash;
+[**twigil**](appendix-b-grouped#twigils) &mdash;
 second(ary) [*sigil*](#sigil) indicating a special property of a variable,
-[(more details here)](tablet-3-variables.html#twigils)
+[(more details here)](tablet-3-variables#twigils)
 
 
 <a id="type"/>
@@ -1110,7 +1110,7 @@ second(ary) [*sigil*](#sigil) indicating a special property of a variable,
 <a id="unicode"/>
 **unicode** &mdash;
 format to save text in, that can contain almost any letter or symbol known to men,
-not just [*ASCII*](#ASCII), its [fully supported](appendix-d-delta.html#unicode)
+not just [*ASCII*](#ASCII), its [fully supported](appendix-d-delta#unicode)
 by Perl 6, which means any part of a a program might use any character or symbol,
 strange names that start with UTF are most probably Unicode formats
 
@@ -1148,13 +1148,13 @@ strange names that start with UTF are most probably Unicode formats
 logical operation that has a the result **True** if only one of two
 [*operands*](#operand) (incoming information) is also true,
 otherwise result is **False**. Following operator working under that logic:
-[**\^**](appendix-a-index.html#junctive-xor),
-[**\^\^**](appendix-a-index.html#logical-xor),
-[**+\^**](appendix-a-index.html#numeric-xor),
-[**?\^**](appendix-a-index.html#boolean-xor),
-[**~\^**](appendix-a-index.html#string-xor),
-[**one**](appendix-a-index.html#one),
-[**xor**](appendix-a-index.html#xor) &mdash;
+[**\^**](appendix-a-index#junctive-xor),
+[**\^\^**](appendix-a-index#logical-xor),
+[**+\^**](appendix-a-index#numeric-xor),
+[**?\^**](appendix-a-index#boolean-xor),
+[**~\^**](appendix-a-index#string-xor),
+[**one**](appendix-a-index#one),
+[**xor**](appendix-a-index#xor) &mdash;
 other operations in [*bool context*](#bool-context) are:
 [*and*](#and), [*or*](#or), [*not*](#not)
 
@@ -1164,12 +1164,12 @@ other operations in [*bool context*](#bool-context) are:
 
 
 <a id="yadda-operator"/>
-[**yadda operator**](tablet-4-operators.html#yadda) &mdash; 
+[**yadda operator**](tablet-4-operators#yadda) &mdash; 
 placeholder for later to be written code inside a [routine](#routine) body.
 Comes in 3 flavours, depending what should be triggered:
-[**...**](appendix-a-index.html#dot-yadda-op) ([**fail**](appendix-a-index.html#fail)),
-[**???**](appendix-a-index.html#question-mark) ([**warn**](appendix-a-index.html#warn)) and
-[**!!!**](appendix-a-index.html#exclamation-mark) ([**die**](appendix-a-index.html#die))
+[**...**](appendix-a-index#dot-yadda-op) ([**fail**](appendix-a-index#fail)),
+[**???**](appendix-a-index#question-mark) ([**warn**](appendix-a-index#warn)) and
+[**!!!**](appendix-a-index#exclamation-mark) ([**die**](appendix-a-index#die))
 
 
 # [Z](#nav-top)

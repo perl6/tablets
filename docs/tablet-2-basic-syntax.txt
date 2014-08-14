@@ -3,7 +3,8 @@
 > "1st law of language redesign: Everyone wants the colon for their particular syntax.
 > 2nd law of language redesign: Larry gets the colon for whatever he wants."
 
-Basics don't always mean easy, but fundamental.
+Basics don't always mean easy, but fundamental. Usually things start with a `print "heloo world"`,
+yet the [**say**](#say) you fing on the io tablet.
 
 Defaults
 ========
@@ -14,22 +15,22 @@ Please start your Perl 6 program with one of the following lines.
     use v6.0;
     v6;
 
-Or just start with a keyword like [**module**](appendix-a-index.html#module)
-or [**class**](appendix-a-index.html#class). That marks your code as Perl 6
+Or just start with a keyword like [**module**](appendix-a-index#module)
+or [**class**](appendix-a-index#class). That marks your code as Perl 6
 (in case the interpreter defaults to Perl 5) and makes it possible to mix 
 Perl 5 and 6 in one source file.
 
 Where you had to include `use strict;` and `use warnings;` at the top
 of every Perl 5 script prior to 5.12, it's default in Perl6. 
 Also `use utf8;` is obsolete since any Perl 6 source code is always treated
-as UTF-8 and any [*unicode*](appendix-g-glossary.html#unicode) character
+as UTF-8 and any [*unicode*](appendix-g-glossary#unicode) character
 can be used anywhere in the code. Even pragmas such as `constants` or `vars`
 are now part of the core language.
 
 Also the functionality of many useful and famous modules like Moose
 (object system), Parse::RecDescent, exception handling, List::\[More\]Utils,
 Exporter, English, an advanced pretty printer and much more is already built in.
-So you get a lot extra for a little *v6;**.
+So you get a lot extra for a little *v6;*.
 
 
 Code Layout
@@ -39,10 +40,10 @@ Code Layout
 Statements and Semicolon
 ------------------------
 
-Unless you use [*blocks*](appendix-g-glossary.html#block), a Perl 
+Unless you use [*blocks*](appendix-g-glossary#block), a Perl 
 program executes one statement after another in linear progression 
 (from left to right, top down). They have to be separated by 
-a semicolon ([**;**](appendix-a-index.html#semicolon-terminator)),
+a semicolon ([**;**](appendix-a-index#semicolon-terminator)),
 except before and after a closing curly brace, where it is optional.
 
     $coderef = sub { fetch_data(); compute() }
@@ -56,7 +57,7 @@ Spaces and Indentation
 Perl doesn't care about indentation, but it does care about whitespace
 as a disambiguator. For example, `$foo$bar` is a syntax error since that 
 are two terms in a row without any whitespace to tell them apart. There's 
-a new, so called "unspace" operator, telling the compiler's [*lexer*](appendix-g-glossary.html#lexer)
+a new, so called "unspace" operator, telling the compiler's [*lexer*](appendix-g-glossary#lexer)
 that it should ignore whitespace after it as if it never was written at all. 
 
     my %hash = "foo" => 42, "bar" => 84; 
@@ -92,7 +93,7 @@ Multi Line
 ----------
 
 Many lines can be commented by using
-"**[\#\`](appendix-a-index.html#pound-apostrophe)**"
+"**[\#\`](appendix-a-index#pound-apostrophe)**"
 followed by any pair of braces that surround the comment.
 This way comments may be embedded into any code, also in a single line.
 
@@ -108,7 +109,7 @@ Documenting Comments
 --------------------
 
 When adding an equal sign after the pound like
-**[#=](appendix-a-index.html#pound-equal)**, a comment about the following
+**[#=](appendix-a-index#pound-equal)**, a comment about the following
 a subroutine or method is stored.
 This comment is accessible via the *[WHY](#WHY-introspection)* introspection
 method of the routine object.
@@ -132,17 +133,17 @@ inserting comments.
     $=
 
 
-[all POD variables](appendix-b-grouped.html#pod-variables)
+[all POD variables](appendix-b-grouped#pod-variables)
 
 
 
 Quoting
 =======
 
-Quoting, like [regular expression](tablet-9-regexes.html), is a sublanguage
+Quoting, like [regular expression](tablet-9-regexes), is a sublanguage
 (in short slang) inside the main language with its own syntactical rules.
-It is parsed (recognized) by a special [*grammar*](appendix-g-glossary.html#grammar),
-which can be found in the [special variable](appendix-b-grouped.html#special-variables) `$~Quote`.
+It is parsed (recognized) by a special [*grammar*](appendix-g-glossary#grammar),
+which can be found in the [special variable](appendix-b-grouped#special-variables) `$~Quote`.
 
 
 
@@ -168,15 +169,15 @@ Interpolation
 -------------
 
 Within these delimiters, every character will be taken literally.
-Any additional interpretation is added by [quoting adverbs](appendix-b-grouped.html#quoting-adverbs),
+Any additional interpretation is added by [quoting adverbs](appendix-b-grouped#quoting-adverbs),
 that follow the operator and start with a colon. Most of them have a short and a long name.
 
 With few exceptions adverbs activate sorts of interpolation. 
-This means for instance that a [variable](tablet-3-variables.html) inside
+This means for instance that a [variable](tablet-3-variables) inside
 a quotation will be replaced with its content.
-This happens of course at [*run time*](appendix-g-glossary.html#run-time).
-Als [anonymous blocks](tablet-6-blocks.html) or
-[callable routines](tablet-3-variables.html#callable) could be executed
+This happens of course at [*run time*](appendix-g-glossary#run-time).
+Als [anonymous blocks](tablet-6-blocks) or
+[callable routines](tablet-3-variables#callable) could be executed
 and their result gets inserted into the quote instead of the code.
 
 
@@ -262,7 +263,7 @@ Quote Words
 -----------
 
 While other quote operators return a single string item, this one can
-return [arrays](tablet-3-variables.html#array) because it splits the string on
+return [arrays](tablet-3-variables#array) because it splits the string on
 any whitespace (\\s aka <ws>).
 
     Q :words /.../;
@@ -291,7 +292,7 @@ Please note also that **:quotewords** (double pointy braces) implies
 
 
 The same pointy braces (quote operators) are also in used when
-writing [hash slices](tablet-3-variables.html#hash-slices).
+writing [hash slices](tablet-3-variables#hash-slices).
 
 
 
@@ -332,9 +333,8 @@ Regex
 -----
 
 Even being a completely different language than quoting on its own (as
-to be defined in *\$\~Regex* and *\$\~P5Regex*), [regular
-expressions](tablet-9-regexes.html) can be built using the general quoting
-operator with the right adverb.
+to be defined in *\$\~Regex* and *\$\~P5Regex*), [regular expressions](tablet-9-regexes)
+can be built using the general quoting operator with the right adverb.
 
     Q :regex /.../ aka rx/.../
     Q :subst /.../.../ aka s/.../.../
@@ -362,7 +362,7 @@ quoted code will be parsed and compiled into a abstract syntax tree
 (AST - internal representation of the compiler) during compile
 time. Result is the compiled AST. Parsing will be done by using the
 grammar stored in *\$\~Quasi*. This gets important when writing
-[macros](tablet-10-metaprogramming.html#macros).
+[macros](tablet-10-metaprogramming#macros).
 
     Q :code /.../;
 
@@ -417,10 +417,10 @@ with braces.
 As always, [.perl](#perl) gives you an almost source
 like code formatting which results here in 3/7. Adding **.nude** you
 get (3/7), the nude source code. There are 2 different [immutable
-value types](appendix-b-grouped.html#immutable-types) to represent
+value types](appendix-b-grouped#immutable-types) to represent
 both rational number. FatRat has unlimited precision and Rat has just
 enough to be evaled into a Real type. When you explicitly [type a
-variable](tablet-3-variables.html#data-types) to one of them, the braces become
+variable](tablet-3-variables#data-types) to one of them, the braces become
 optional.
 
     my Rat $pi_approx = 22/7;
@@ -432,7 +432,7 @@ Complex Number
 --------------
 
 There is also an [immutable value
-type](ap-b-lookup.html#immutable-types) for complex numbers.
+type](ap-b-lookup#immutable-types) for complex numbers.
 
     1+2i
     my $c = 5.2+1e42i;
@@ -503,8 +503,8 @@ For many types it carries more information than plain string conversion with
 `.Str`. Most notably, `.gist` on a type object returns the name of the type
 object followed by `()` to indicate emptiness.
 
-Notably the [`say`](appendix-a-index.html#say) function uses `.gist`
-to convert its arguments to [*strings*](appendix-g-glossary.html#string).
+Notably the [`say`](appendix-a-index#say) function uses `.gist`
+to convert its arguments to [*strings*](appendix-g-glossary#string).
 
     say Int;    # prints Int()\n
 

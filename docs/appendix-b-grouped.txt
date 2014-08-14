@@ -7,18 +7,18 @@ Variables
 Sigils
 ------
 
-All variables in Perl begin with a [sigil](appendix-g-glossary.html#sigil).
+All variables in Perl begin with a [sigil](appendix-g-glossary#sigil).
 They mark the 3 primary var types.
-The 4th sigil is for callables ([routines](appendix-g-glossary.html#routine))
+The 4th sigil is for callables ([routines](appendix-g-glossary#routine))
 and the 5th is for boxes (namespaces) that organize the previous 4.
 
-------------------------------------------------  --------------------------------------------------------------------------------------------------------
-[`$`](appendix-a-index.html#dollar-sigil)         scalar, single value, can be of any data type
-[`@`](appendix-a-index.html#at-sigil)             ordered array, indexed list of scalar
-[`%`](appendix-a-index.html#percent-sigil)        unordered hash (associative array), 2 column table with unique IDs (keys) and associated values (value)
-[`&`](appendix-a-index.html#ampersand-sigil)      code/rule/token/regex
-[`::`](appendix-a-index.html#double-colon-sigil)  abstraction: package/module/class/role/subset/enum/type/grammar
-------------------------------------------------  --------------------------------------------------------------------------------------------------------
+-------------------------------------------  --------------------------------------------------------------------------------------------------------
+[`$`](appendix-a-index#dollar-sigil)         scalar, single value, can be of any data type
+[`@`](appendix-a-index#at-sigil)             ordered array, indexed list of scalar
+[`%`](appendix-a-index#percent-sigil)        unordered hash (associative array), 2 column table with unique IDs (keys) and associated values (value)
+[`&`](appendix-a-index#ampersand-sigil)      code/rule/token/regex
+[`::`](appendix-a-index#double-colon-sigil)  abstraction: package/module/class/role/subset/enum/type/grammar
+-------------------------------------------  --------------------------------------------------------------------------------------------------------
 
 The first 4 can also be used as prefix operators, called
 [contextualizers](#contextualizers), that force different contexts,
@@ -30,119 +30,119 @@ Twigils
 
 Twigil is short for secondary sigil. They follow after a primary sigil and mark special namespaces or variables with special meanings and properties.
 
--------------------------------------------------------  ------------------------------------------------------------
-`$foo`                                                   ordinary scoping (no twigil)
-[`$.foo`](appendix-a-index.html#dot-twigil)              object attribute public accessor
-[`$!foo`](appendix-a-index.html#exclamation-twigil)      object attribute private storage
-[`$^foo`](appendix-a-index.html#caret-twigil)            self-declared formal positional parameter
-[`$:foo`](appendix-a-index.html#colon-twigil)            self-declared formal named parameter
-[`$*foo`](appendix-a-index.html#asterisk-twigil)         contextualizable global variable
-[`$?foo`](appendix-a-index.html#question-twigil)         compiler hint variable
-[`$=foo`](appendix-a-index.html#equal-twigil)            pod variable
-[`$~foo`](appendix-a-index.html#tilde-twigil)            the foo sublanguage seen by the parser at this lexical spot
--------------------------------------------------------  ------------------------------------------------------------
+--------------------------------------------------  ------------------------------------------------------------
+`$foo`                                              ordinary scoping (no twigil)
+[`$.foo`](appendix-a-index#dot-twigil)              object attribute public accessor
+[`$!foo`](appendix-a-index#exclamation-twigil)      object attribute private storage
+[`$^foo`](appendix-a-index#caret-twigil)            self-declared formal positional parameter
+[`$:foo`](appendix-a-index#colon-twigil)            self-declared formal named parameter
+[`$*foo`](appendix-a-index#asterisk-twigil)         contextualizable global variable
+[`$?foo`](appendix-a-index#question-twigil)         compiler hint variable
+[`$=foo`](appendix-a-index#equal-twigil)            pod variable
+[`$~foo`](appendix-a-index#tilde-twigil)            the foo sublanguage seen by the parser at this lexical spot
+--------------------------------------------------  ------------------------------------------------------------
 
 
 Special Variables
 -----------------
 
----------------------------------------------  ------------------------
-[`$_`](appendix-a-index.html#context-var)      context variable
-[`$!`](appendix-a-index.html#exclamation-var)  error msg
----------------------------------------------  ------------------------
+----------------------------------------  ------------------------
+[`$_`](appendix-a-index#context-var)      context variable
+[`$!`](appendix-a-index#exclamation-var)  error msg
+----------------------------------------  ------------------------
 
 
 ### Match Variables ###
 
------------------------------------------------------  ------------------------------------------------------------------------------------
-[`$/`](appendix-a-index.html#slash-var)                last created match object of this [scope](appendix-g-glossary.html#scope) with [these methods](#match-object-methods)
-[`$<...>`](appendix-a-index.html#angle-brackets-var)   alias to named capture, i.e., $/<...> or $/{'...'}
-[`$0 ...`](appendix-a-index.html#0-var)                alias to positional capture, like in P5 - `$1 .. $9` but doesn't stop at `$9`
-[`@()`](appendix-a-index.html#round-brackets-var)      array that holds $0 .. $9 and rest and positional submatches
------------------------------------------------------  ------------------------------------------------------------------------------------
+------------------------------------------------  ------------------------------------------------------------------------------------
+[`$/`](appendix-a-index#slash-var)                last created match object of this [scope](appendix-g-glossary#scope) with [these methods](#match-object-methods)
+[`$<...>`](appendix-a-index#angle-brackets-var)   alias to named capture, i.e., $/<...> or $/{'...'}
+[`$0 ...`](appendix-a-index#0-var)                alias to positional capture, like in P5 - `$1 .. $9` but doesn't stop at `$9`
+[`@()`](appendix-a-index#round-brackets-var)      array that holds $0 .. $9 and rest and positional submatches
+------------------------------------------------  ------------------------------------------------------------------------------------
 
 ### Global Variables ###
 
 context variable, default global (run time), any of them are now
 objects with several methods
 
-------------------------------------------------------------------------  -------------------------------------------------------------------
-[`@*ARGS`](appendix-a-index.html#ARGS-global-var)                         Arguments (Parameter) to a program (script), formerly @ARGV
-[`$*ARGFILES`](appendix-a-index.html#ARGFILES-global-var)                 magic command-line input handle
-[`$*IN`](appendix-a-index.html#IN-global-var)                             standard input handle (command line mostly)
-[`$*OUT`](appendix-a-index.html#OUT-global-var)                           standard output (command line mostly)
-[`$*ERR`](appendix-a-index.html#ERR-global-var)                           standard error output (command line mostly)
-[`$*CWD`](appendix-a-index.html#CWD-global-var)                           current working directory (Str)
-[`@*INC`](appendix-a-index.html#INC-global-var)                           include pathes (but not for std library modules), formerly @INC
-[`$*LANG`](appendix-a-index.html#LANG-global-var)                         LANG variable from `%*ENV` that defines what human language is used
-[`%*ENV`](appendix-a-index.html#ENV-global-var)                           system environment variables, formerly %ENV
-[`%*OPTS`](appendix-a-index.html#OPTS-global-var)                         options from command line
-[`$*TZ`](appendix-a-index.html#TZ-global-var)                             local time zone
-[`$*EXECUTABLE_NAME`](appendix-a-index.html#EXECUTABLE-NAME-global-var)   former $0
-[`$*PERL`](appendix-a-index.html#PERL-global-var)                         perl version running under, was formerly `$^V` or `$]`
-[`$*KERNEL`](appendix-a-index.html#KERNEL-global-var)                     operating system running under
-[`$*DISTRO`](appendix-a-index.html#DISTRO-global-var)                     OS distribution am I running under
-[`$*PID`](appendix-a-index.html#PID-global-var)                           ID of the running process,
-[`$*GID`](appendix-a-index.html#GID-global-var)                           real global ID of the running process owner, formerly @(
-[`$*UID`](appendix-a-index.html#UID-global-var)                           real user ID of the running process owner (user), formerly @\<
-[`$*EGID`](appendix-a-index.html#EGID-global-var)                         effective global ID, formerly @)
-[`$*EUID`](appendix-a-index.html#EUID-global-var)                         effective user ID, formerly @\>
-$*ON_DIE                                                                  exception handler, run befor die, formerly `$SIG{__DIE__}`
-$*ON_WARN                                                                 exception handler, run befor warn, formerly `$SIG{__WARN__}`
-$*COMPILING                                                               &nbsp;
-$*EMERGENCY_MEMORY                                                        formerly `$^M`
-$*DEBUGGING                                                               &nbsp;
-------------------------------------------------------------------------  -------------------------------------------------------------------
+-------------------------------------------------------------------  -------------------------------------------------------------------
+[`@*ARGS`](appendix-a-index#ARGS-global-var)                         Arguments (Parameter) to a program (script), formerly @ARGV
+[`$*ARGFILES`](appendix-a-index#ARGFILES-global-var)                 magic command-line input handle
+[`$*IN`](appendix-a-index#IN-global-var)                             standard input handle (command line mostly)
+[`$*OUT`](appendix-a-index#OUT-global-var)                           standard output (command line mostly)
+[`$*ERR`](appendix-a-index#ERR-global-var)                           standard error output (command line mostly)
+[`$*CWD`](appendix-a-index#CWD-global-var)                           current working directory (Str)
+[`@*INC`](appendix-a-index#INC-global-var)                           include pathes (but not for std library modules), formerly @INC
+[`$*LANG`](appendix-a-index#LANG-global-var)                         LANG variable from `%*ENV` that defines what human language is used
+[`%*ENV`](appendix-a-index#ENV-global-var)                           system environment variables, formerly %ENV
+[`%*OPTS`](appendix-a-index#OPTS-global-var)                         options from command line
+[`$*TZ`](appendix-a-index#TZ-global-var)                             local time zone
+[`$*EXECUTABLE_NAME`](appendix-a-index#EXECUTABLE-NAME-global-var)   former $0
+[`$*PERL`](appendix-a-index#PERL-global-var)                         perl version running under, was formerly `$^V` or `$]`
+[`$*KERNEL`](appendix-a-index#KERNEL-global-var)                     operating system running under
+[`$*DISTRO`](appendix-a-index#DISTRO-global-var)                     OS distribution am I running under
+[`$*PID`](appendix-a-index#PID-global-var)                           ID of the running process,
+[`$*GID`](appendix-a-index#GID-global-var)                           real global ID of the running process owner, formerly @(
+[`$*UID`](appendix-a-index#UID-global-var)                           real user ID of the running process owner (user), formerly @\<
+[`$*EGID`](appendix-a-index#EGID-global-var)                         effective global ID, formerly @)
+[`$*EUID`](appendix-a-index#EUID-global-var)                         effective user ID, formerly @\>
+$*ON_DIE                                                             exception handler, run befor die, formerly `$SIG{__DIE__}`
+$*ON_WARN                                                            exception handler, run befor warn, formerly `$SIG{__WARN__}`
+$*COMPILING                                                          &nbsp;
+$*EMERGENCY_MEMORY                                                   formerly `$^M`
+$*DEBUGGING                                                          &nbsp;
+-------------------------------------------------------------------  -------------------------------------------------------------------
 
 ### Compiler Hint Variables ###
 
 compiler constants (fixed at compile time)
 
-----------------------------------------------------------------  ------------------------------------------------------------------
-[`$?KERNEL`](appendix-a-index.html#KERNEL-compiler-var)           for which operating System was this program compiled?
-[`$?DISTRO`](appendix-a-index.html#DISTRO-compiler-var)           Which OS distribution am I compiling under?
-[`$?VM`](appendix-a-index.html#VM-compiler-var)                   Which virtual machine am I compiling under
-`$?XVM`                                                           Which virtual machine am I cross-compiling for
-[`$?PERL`](appendix-a-index.html#PERL-compiler-var)               Which Perl am I compiled for?
-[`$?ENC`](appendix-a-index.html#ENC-compiler-var)                 current [encoding](appendix-g-glossary.html#encoding)
-[`$?NF`](appendix-a-index.html#NF-compiler-var)                   default string normalization method
-[`%?LANG`](appendix-a-index.html#LANG-compiler-var)               Hash of Grammar # What is the current set of interwoven languages?
-[`$?GRAMMAR`](appendix-a-index.html#GRAMMAR-compiler-var)         current grammar
-[`$?FILE`](appendix-a-index.html#FILE-compiler-var)               current filename of source file (__FILE__ in P5)
-[`$?MODULE`](appendix-a-index.html#mODULE-compiler-var)           current module
-[`$?PACKAGE`](appendix-a-index.html#PACKAGE-compiler-var)         current package (__PACKAGE__)
-[`$?CLASS`](appendix-a-index.html#CLASS-compiler-var)             current class
-[`::?CLASS`](appendix-a-index.html#CLASS-package-compiler-var)    current class (as package name)
-[`$?ROLE`](appendix-a-index.html#ROLE-compiler-var)               current role (as variable)
-[`::?ROLE`](appendix-a-index.html#ROLE-package-compiler-var)      current role (as package or type name)
-[`&?ROUTINE`](appendix-a-index.html#ROUTINE-compiler-var)         current sub or method (__SUB__)
-[`&?BLOCK`](appendix-a-index.html#BLOCK-compiler-var)             reference to current block
-[`$?LINE`](appendix-a-index.html#LINE-compiler-var)               current line number (__LINE__)
-[`$?TABSTOP`](appendix-a-index.html#TABSTOP-compiler-var)         
-----------------------------------------------------------------  ------------------------------------------------------------------
+-----------------------------------------------------------  ------------------------------------------------------------------
+[`$?KERNEL`](appendix-a-index#KERNEL-compiler-var)           for which operating System was this program compiled?
+[`$?DISTRO`](appendix-a-index#DISTRO-compiler-var)           Which OS distribution am I compiling under?
+[`$?VM`](appendix-a-index#VM-compiler-var)                   Which virtual machine am I compiling under
+`$?XVM`                                                      Which virtual machine am I cross-compiling for
+[`$?PERL`](appendix-a-index#PERL-compiler-var)               Which Perl am I compiled for?
+[`$?ENC`](appendix-a-index#ENC-compiler-var)                 current [encoding](appendix-g-glossary#encoding)
+[`$?NF`](appendix-a-index#NF-compiler-var)                   default string normalization method
+[`%?LANG`](appendix-a-index#LANG-compiler-var)               Hash of Grammar # What is the current set of interwoven languages?
+[`$?GRAMMAR`](appendix-a-index#GRAMMAR-compiler-var)         current grammar
+[`$?FILE`](appendix-a-index#FILE-compiler-var)               current filename of source file (__FILE__ in P5)
+[`$?MODULE`](appendix-a-index#mODULE-compiler-var)           current module
+[`$?PACKAGE`](appendix-a-index#PACKAGE-compiler-var)         current package (__PACKAGE__)
+[`$?CLASS`](appendix-a-index#CLASS-compiler-var)             current class
+[`::?CLASS`](appendix-a-index#CLASS-package-compiler-var)    current class (as package name)
+[`$?ROLE`](appendix-a-index#ROLE-compiler-var)               current role (as variable)
+[`::?ROLE`](appendix-a-index#ROLE-package-compiler-var)      current role (as package or type name)
+[`&?ROUTINE`](appendix-a-index#ROUTINE-compiler-var)         current sub or method (__SUB__)
+[`&?BLOCK`](appendix-a-index#BLOCK-compiler-var)             reference to current block
+[`$?LINE`](appendix-a-index#LINE-compiler-var)               current line number (__LINE__)
+[`$?TABSTOP`](appendix-a-index#TABSTOP-compiler-var)         
+-----------------------------------------------------------  ------------------------------------------------------------------
 
 ### POD Variables ###
 
-File-[scoped](appendix-g-glossary.html#scope) [POD](basic-syntax.html#pod) data
+File-[scoped](appendix-g-glossary#scope) [POD](basic-syntax#pod) data
 
------------------------------------------------------  ----------------------------------------
-[`$=pod`](appendix-a-index.html#pod-pod-var)           surrounding POD object
-[`$=data`](appendix-a-index.html#data-pod-var)         data block handle (=begin DATA ... =end)
-[`@=COMMENT`](appendix-a-index.html#COMMENT-pod-var)   All the comment blocks in the file
------------------------------------------------------  ----------------------------------------
+------------------------------------------------  ----------------------------------------
+[`$=pod`](appendix-a-index#pod-pod-var)           surrounding POD object
+[`$=data`](appendix-a-index#data-pod-var)         data block handle (=begin DATA ... =end)
+[`@=COMMENT`](appendix-a-index#COMMENT-pod-var)   All the comment blocks in the file
+------------------------------------------------  ----------------------------------------
 
 ### Slang Variables ###
 
 sublanguage seen by the parser at this lexical spot
 
--------------------------------------------------------  ------------------------------------------------
-[`$~MAIN`](appendix-a-index.html#MAIN-slang-var)         the current main language (e.g. Perl statements)
-[`$~Quote`](appendix-a-index.html#Quote-slang-var)       the current root of quoting language
-[`$~Quasi`](appendix-a-index.html#Quasi-slang-var)       the current root of [quasiquoting](appendix-g-glossary.html#quasiquoting) language
-[`$~Regex`](appendix-a-index.html#Regex-slang-var)       the current root of regex language
-[`$~Trans`](appendix-a-index.html#Trans-slang-var)       the current root of [transliteration](appendix-g-glossary.html#transliteration) language
-[`$~P5Regex`](appendix-a-index.html#P5Regex-slang-var)   the current root of the Perl regex language
--------------------------------------------------------  ------------------------------------------------
+--------------------------------------------------  ------------------------------------------------
+[`$~MAIN`](appendix-a-index#MAIN-slang-var)         the current main language (e.g. Perl statements)
+[`$~Quote`](appendix-a-index#Quote-slang-var)       the current root of quoting language
+[`$~Quasi`](appendix-a-index#Quasi-slang-var)       the current root of [quasiquoting](appendix-g-glossary#quasiquoting) language
+[`$~Regex`](appendix-a-index#Regex-slang-var)       the current root of regex language
+[`$~Trans`](appendix-a-index#Trans-slang-var)       the current root of [transliteration](appendix-g-glossary#transliteration) language
+[`$~P5Regex`](appendix-a-index#P5Regex-slang-var)   the current root of the Perl regex language
+--------------------------------------------------  ------------------------------------------------
 
 
 Constants
@@ -152,11 +152,11 @@ are builtins (not exactly variables and without a [sigil](#sigils))
 that return always the same important value
 
 Name                                     Value             Meaning
----------------------------------------  ----------------  -----------------------------------
-[e](appendix-a-index.html#e-constant)    2.71828182878434  [euler number](appendix-g-glossary.html#e)
-[i](appendix-a-index.html#i-constant)    0+1i              [imaginary number](appendix-g-glossary.html#i)
-[pi](appendix-a-index.html#pi-constant)  3.14159265394248  [ratio of a circle's circumference to its diameter](appendix-g-glossary.html#pi)
----------------------------------------  ----------------  -----------------------------------
+----------------------------------  ----------------  -----------------------------------
+[e](appendix-a-index#e-constant)    2.71828182878434  [euler number](appendix-g-glossary#e)
+[i](appendix-a-index#i-constant)    0+1i              [imaginary number](appendix-g-glossary#i)
+[pi](appendix-a-index#pi-constant)  3.14159265394248  [ratio of a circle's circumference to its diameter](appendix-g-glossary#pi)
+---------------------------------  ----------------  -----------------------------------
 
 
 Scope
@@ -198,15 +198,15 @@ SUPER   Package symbols declared in inherited classes
 
 ### Declarator ###
 
------------------------------------------------  -------------------------------------------------------
-[`my`](appendix-a-index.html#my)                 introduces lexically [scoped](appendix-g-glossary.html#scope) names
-[`state`](appendix-a-index.html#state)           introduces lexically [scoped](appendix-g-glossary.html#scope) but persistent names
-[`our`](appendix-a-index.html#our)               introduces package-[scoped](appendix-g-glossary.html#scope) names
-[`anon`](appendix-a-index.html#anon)             introduces names that aren't to be stored anywhere
-[`has`](appendix-a-index.html#has)               introduces object attribute names
-[`augment`](appendix-a-index.html#augment)       adds definitions to an existing name
-[`supersede`](appendix-a-index.html#supersede)   replaces definitions of an existing name
------------------------------------------------  -------------------------------------------------------
+------------------------------------------  -------------------------------------------------------
+[`my`](appendix-a-index#my)                 introduces lexically [scoped](appendix-g-glossary#scope) names
+[`state`](appendix-a-index#state)           introduces lexically [scoped](appendix-g-glossary#scope) but persistent names
+[`our`](appendix-a-index#our)               introduces package-[scoped](appendix-g-glossary#scope) names
+[`anon`](appendix-a-index#anon)             introduces names that aren't to be stored anywhere
+[`has`](appendix-a-index#has)               introduces object attribute names
+[`augment`](appendix-a-index#augment)       adds definitions to an existing name
+[`supersede`](appendix-a-index#supersede)   replaces definitions of an existing name
+------------------------------------------  -------------------------------------------------------
 
 
 
@@ -215,78 +215,78 @@ Value Types
 
 In Perl 6 any variable and value is an object. Here's a list of all
 different types of values, represented my different classes or
-roles. The [routine types](ap-b-lookup.html#routine-types) are in a
+roles. The [routine types](ap-b-lookup#routine-types) are in a
 different section.
 
 ### Undefined types ###
 
------------------------------------------------  -----------------------------------------------------------------
-[Mu](appendix-a-index.html#Mu-type)              Most Undefined
-[Junction](appendix-a-index.html#Junction-type)  unordered superposition of data with and/or/one/none
-[Each](appendix-a-index.html#Each-type)          ordered superposition (conjectural)
-[Failure](appendix-a-index.html#Failure-type)    Failure (lazy exceptions, thrown if not handled properly)
-[Any](appendix-a-index.html#Any-type)            Perl 6 object (default routine parameter type, excludes [junction](appendix-g-glossary.html#junction))
-[Cool](appendix-a-index.html#Cool-type)          Perl 6 Convenient OO Loopbacks
-[Whatever](appendix-a-index.html#Whatever-type)  Wildcard (like Any, but subject to do-what-I-mean via [MMD](appendix-g-glossary.html#MMD))
-[Int](appendix-a-index.html#Int-type)            Any Int object
-Widget                                           Any Widget object
------------------------------------------------  -----------------------------------------------------------------
+------------------------------------------  -----------------------------------------------------------------
+[Mu](appendix-a-index#Mu-type)              Most Undefined
+[Junction](appendix-a-index#Junction-type)  unordered superposition of data with and/or/one/none
+[Each](appendix-a-index#Each-type)          ordered superposition (conjectural)
+[Failure](appendix-a-index#Failure-type)    Failure (lazy exceptions, thrown if not handled properly)
+[Any](appendix-a-index#Any-type)            Perl 6 object (default routine parameter type, excludes [junction](appendix-g-glossary#junction))
+[Cool](appendix-a-index#Cool-type)          Perl 6 Convenient OO Loopbacks
+[Whatever](appendix-a-index#Whatever-type)  Wildcard (like Any, but subject to do-what-I-mean via [MMD](appendix-g-glossary#MMD))
+[Int](appendix-a-index#Int-type)            Any Int object
+Widget                                      Any Widget object
+------------------------------------------  -----------------------------------------------------------------
 
 
 
 ### Immutable types ###
 
------------------------------------------------------  -------------------------------------------------------------
-[Str](appendix-a-index.html#Str-type)                  Perl string (finite sequence of Unicode characters)
-[Bit](appendix-a-index.html#Bit-type)                  Perl single bit (allows traits, aliasing, undef, etc.)
-[Int](appendix-a-index.html#Int-type)                  Perl integer (allows Inf/NaN, arbitrary precision, etc.)
-[Num](appendix-a-index.html#Num-type)                  Perl number (approximate Real, generally via floating point)
-[Rat](appendix-a-index.html#Rat-type)                  Perl rational (exact Real, limited denominator)
-[FatRat](appendix-a-index.html#FatRat-type)            Perl rational (unlimited precision in both parts)
-[Complex](appendix-a-index.html#Complex-type)          Perl complex number
-[Bool](appendix-a-index.html#Bool-type)                Perl boolean
-[Exception](appendix-a-index.html#Exception-type)      Perl exception
-[Block](appendix-a-index.html#Block-type)              executable objects that have [lexical scope](appendix-g-glossary.html#lexical-scope)
-[Range](appendix-a-index.html#Range-type)              a pair of ordered endpoints
-[Set](appendix-a-index.html#Set-type)                  unordered collection of values that allows no duplicates
-[Bag](appendix-a-index.html#Bag-type)                  unordered collection of values that allows duplicates
-[Enum](appendix-a-index.html#Enum-type)                an immutable Pair
-[EnumMap](appendix-a-index.html#EnumMap-type)          a mapping of Enums with no duplicate keys
-[Signature](appendix-a-index.html#Signature-type)      function parameters (left-hand side of a binding)
-[Parcel](appendix-a-index.html#Parcel-type)            arguments in a comma list
-[LoL](appendix-a-index.html#LoL-type)                  arguments in a semicolon list
-[Capture](appendix-a-index.html#Capture-type)          function call arguments (right-hand side of a binding)
-[Blob](appendix-a-index.html#Blob-type)                an undifferentiated mass of ints, an immutable Buf
-[Instant](appendix-a-index.html#Instant-type)          a point on the continuous atomic timeline
-[Duration](appendix-a-index.html#Duration-type)        difference between two Instants
-[HardRoutine](appendix-a-index.html#HardRoutine-type)  a routine that is committed to not changing
------------------------------------------------------  ------------------------------------------------------------
+------------------------------------------------  -------------------------------------------------------------
+[Str](appendix-a-index#Str-type)                  Perl string (finite sequence of Unicode characters)
+[Bit](appendix-a-index#Bit-type)                  Perl single bit (allows traits, aliasing, undef, etc.)
+[Int](appendix-a-index#Int-type)                  Perl integer (allows Inf/NaN, arbitrary precision, etc.)
+[Num](appendix-a-index#Num-type)                  Perl number (approximate Real, generally via floating point)
+[Rat](appendix-a-index#Rat-type)                  Perl rational (exact Real, limited denominator)
+[FatRat](appendix-a-index#FatRat-type)            Perl rational (unlimited precision in both parts)
+[Complex](appendix-a-index#Complex-type)          Perl complex number
+[Bool](appendix-a-index#Bool-type)                Perl boolean
+[Exception](appendix-a-index#Exception-type)      Perl exception
+[Block](appendix-a-index#Block-type)              executable objects that have [lexical scope](appendix-g-glossary#lexical-scope)
+[Range](appendix-a-index#Range-type)              a pair of ordered endpoints
+[Set](appendix-a-index#Set-type)                  unordered collection of values that allows no duplicates
+[Bag](appendix-a-index#Bag-type)                  unordered collection of values that allows duplicates
+[Enum](appendix-a-index#Enum-type)                an immutable Pair
+[EnumMap](appendix-a-index#EnumMap-type)          a mapping of Enums with no duplicate keys
+[Signature](appendix-a-index#Signature-type)      function parameters (left-hand side of a binding)
+[Parcel](appendix-a-index#Parcel-type)            arguments in a comma list
+[LoL](appendix-a-index#LoL-type)                  arguments in a semicolon list
+[Capture](appendix-a-index#Capture-type)          function call arguments (right-hand side of a binding)
+[Blob](appendix-a-index#Blob-type)                an undifferentiated mass of ints, an immutable Buf
+[Instant](appendix-a-index#Instant-type)          a point on the continuous atomic timeline
+[Duration](appendix-a-index#Duration-type)        difference between two Instants
+[HardRoutine](appendix-a-index#HardRoutine-type)  a routine that is committed to not changing
+------------------------------------------------  ------------------------------------------------------------
 
 
 
 ### Mutable types ###
 
------------------------------------------------------  ---------------------------------------------------------
-[Iterator](appendix-a-index.html#Iterator-type)        Perl list
-[RangeIter](appendix-a-index.html#RangeIter-type)      Iterator over a Range
-[Scalar](appendix-a-index.html#Scalar-type)            Perl scalar
-[Array](appendix-a-index.html#Array-type)              Perl array
-[Hash](appendix-a-index.html#Hash-type)                Perl hash
-[KeySet](appendix-a-index.html#KeySet-type)            KeyHash of Bool (does Set in list/array context)
-[KeyBag](appendix-a-index.html#KeyBag-type)            KeyHash of UInt (does Bag in list/array context)
-[Pair](appendix-a-index.html#Pair-type)                a single key-to-value association
-[Buf](appendix-a-index.html#Buf-type)                  Perl buffer (a stringish array of memory locations)
-[IO](appendix-a-index.html#IO-type)                    Perl filehandle
-[Routine](appendix-a-index.html#Routine-type)          base class for all wrappable executable objects
-[Sub](appendix-a-index.html#Sub-type)                  Perl subroutine
-[Method](appendix-a-index.html#Method-type)            Perl method
-[Submethod](appendix-a-index.html#Submethod-type)      Perl subroutine acting like a method
-[Macro](appendix-a-index.html#Macro-type)              Perl compile-time subroutine
-[Regex](appendix-a-index.html#Regex-type)              Perl pattern
-[Match](appendix-a-index.html#Match-type)              Perl match, usually produced by applying a pattern, has [these methods](#match-object-methods)
-[Stash](appendix-a-index.html#Stash-type)              a symbol table hash (package, module, class, lexpad, etc)
-[SoftRoutine](appendix-a-index.html#SoftRoutine-type)  a routine that is committed to staying mutable
------------------------------------------------------  ---------------------------------------------------------
+------------------------------------------------  ---------------------------------------------------------
+[Iterator](appendix-a-index#Iterator-type)        Perl list
+[RangeIter](appendix-a-index#RangeIter-type)      Iterator over a Range
+[Scalar](appendix-a-index#Scalar-type)            Perl scalar
+[Array](appendix-a-index#Array-type)              Perl array
+[Hash](appendix-a-index#Hash-type)                Perl hash
+[KeySet](appendix-a-index#KeySet-type)            KeyHash of Bool (does Set in list/array context)
+[KeyBag](appendix-a-index#KeyBag-type)            KeyHash of UInt (does Bag in list/array context)
+[Pair](appendix-a-index#Pair-type)                a single key-to-value association
+[Buf](appendix-a-index#Buf-type)                  Perl buffer (a stringish array of memory locations)
+[IO](appendix-a-index#IO-type)                    Perl filehandle
+[Routine](appendix-a-index#Routine-type)          base class for all wrappable executable objects
+[Sub](appendix-a-index#Sub-type)                  Perl subroutine
+[Method](appendix-a-index#Method-type)            Perl method
+[Submethod](appendix-a-index#Submethod-type)      Perl subroutine acting like a method
+[Macro](appendix-a-index#Macro-type)              Perl compile-time subroutine
+[Regex](appendix-a-index#Regex-type)              Perl pattern
+[Match](appendix-a-index#Match-type)              Perl match, usually produced by applying a pattern, has [these methods](#match-object-methods)
+[Stash](appendix-a-index#Stash-type)              a symbol table hash (package, module, class, lexpad, etc)
+[SoftRoutine](appendix-a-index#SoftRoutine-type)  a routine that is committed to staying mutable
+------------------------------------------------  ---------------------------------------------------------
 
 
 
@@ -336,19 +336,19 @@ buf64       a uint64 buffer
 Object Introspection
 --------------------
 
-Every value in P6 is an [object](appendix-g-glossary.html#object) and has 
-following [methods](appendix-g-glossary.html#method) to tell more about itself.
+Every value in P6 is an [object](appendix-g-glossary#object) and has 
+following [methods](appendix-g-glossary#method) to tell more about itself.
 
-----------------------------------------------------  ---------------------------------------------------------------
-[WHAT](appendix-a-index.html#WHAT-introspection)      short name of the class that an object belongs to
-[WHICH](appendix-a-index.html#WHICH-introspection)    object ID (type)
-[WHO](appendix-a-index.html#WHO-introspection)        package, that support that object, long name in string context
-[WHERE](appendix-a-index.html#WHERE-introspection)    memory address of the object
-[HOW](appendix-a-index.html#HOW-introspection)        object of meta class: "Higher Order Workings"
-[WHEN](appendix-a-index.html#WHEN-introspection)      (reserved for events?)
-[WHY](appendix-a-index.html#WHY-introspection)        (reserved for documentation)
-[WHENCE](appendix-a-index.html#WHENCE-introspection)  autovivification of closures
-----------------------------------------------------  ---------------------------------------------------------------
+-----------------------------------------------  ---------------------------------------------------------------
+[WHAT](appendix-a-index#WHAT-introspection)      short name of the class that an object belongs to
+[WHICH](appendix-a-index#WHICH-introspection)    object ID (type)
+[WHO](appendix-a-index#WHO-introspection)        package, that support that object, long name in string context
+[WHERE](appendix-a-index#WHERE-introspection)    memory address of the object
+[HOW](appendix-a-index#HOW-introspection)        object of meta class: "Higher Order Workings"
+[WHEN](appendix-a-index#WHEN-introspection)      (reserved for events?)
+[WHY](appendix-a-index#WHY-introspection)        (reserved for documentation)
+[WHENCE](appendix-a-index#WHENCE-introspection)  autovivification of closures
+-----------------------------------------------  ---------------------------------------------------------------
 
 
 
@@ -358,36 +358,36 @@ Operators
 Table of Precedence
 -------------------
 
-all level of [*precedence*](appendix-g-glossary.html#precedence)
+all level of [*precedence*](appendix-g-glossary#precedence)
 
 A   Level              Examples
 --  -----------------  ----------------------------------------------------
-N   Terms              [`42`](tablet-2-basic-syntax.html#number-literals) `3.14` [`"eek"`](tablet-2-basic-syntax.html#double-quotes) `qq["foo"]` `$x` `:!verbose @$array`
-L   Method postfix     [`.meth .+ .? .* .() .[] .{} .<> .<<>> .:: .= .^ .:`](appendix-a-index.html#dotty-category)
-N   Autoincrement      [`++`](appendix-a-index.html#auto-increment) [`--`](appendix-a-index.html#auto-decrement)
-R   Exponentiation     [`**`](appendix-a-index.html#power-op)
-L   Symbolic unary     [`!`](appendix-a-index.html#exclamation-op) [`+`](appendix-a-index.html#plus-op) [`-`](appendix-a-index.html#minus-op) [`~`](appendix-a-index.html#tilde-op) [`?`](appendix-a-index.html#question-op) [`|`](appendix-a-index.html#pipe-op) [`||`](appendix-a-index.html#pipe-pipe-op) [`+^`](appendix-a-index.html#plus-caret-op) [`~^`](appendix-a-index.html#tilde-caret-op) [`?^`](appendix-a-index.html#question-caret-op) [`^`](appendix-a-index.html#caret-op)
-L   Multiplicative     [`*`](appendix-a-index.html#asterisk-op) [`/`](appendix-a-index.html#slash-op) [`%`](appendix-a-index.html#percent-op) [`%%`](appendix-a-index.html#percent-percent-op) [`+&`](appendix-a-index.html#plus-ampersand-op) [`+<`](appendix-a-index.html#plus-lower-op) [`+>`](appendix-a-index.html#plus-greater-op) [`~&`](appendix-a-index.html#tilde-ampersand-op) [`~<`](appendix-a-index.html#tilde-lower-op) [`~>`](appendix-a-index.html#tilde-greater-op) [`?&`](appendix-a-index.html#question-at-op) [`div`](appendix-a-index.html#div) [`mod`](appendix-a-index.html#mod) [`gcd`](appendix-a-index.html#gcd) [`lcm`](appendix-a-index.html#lcm)
-L   Additive           [`+`](appendix-a-index.html#plus-op) [`-`](appendix-a-index.html#minus-op) [`+|`](appendix-a-index.html#plus-pipe-op) [`+^`](appendix-a-index.html#plus-caret-op) [`~|`](appendix-a-index.html#tilde-pipe-op) [`~^`](appendix-a-index.html#tilde-caret-op) [`?|`](appendix-a-index.html#question-pipe-op) [`?^`](appendix-a-index.html#question-caret-op)
-L   Replication        [`x`](appendix-a-index.html#x-op) [`xx`](appendix-a-index.html#xx-op)
-X   Concatenation      [`~`](appendix-a-index.html#tilde-op)
-X   Junctive and       [`&`](appendix-a-index.html#ampersand-op) `(&)` `∩`
-X   Junctive or        [`|`](appendix-a-index.html#pipe-op) [`^`](appendix-a-index.html#caret-op) `(|)` `(^)` `∪` `(-)`
-L   Named unary        [`sleep`](appendix-a-index.html#sleep) [`abs`](appendix-a-index.html#abs) [`sin`](appendix-a-index.html#sin) [`temp`](appendix-a-index.html#temp) [`let`](appendix-a-index.html#let)
-N   Structural infix   [`but`](appendix-a-index.html#but) [`does`](appendix-a-index.html#does) [`<=>`](appendix-a-index.html#spaceship-op) [`leg`](appendix-a-index.html#leg) [`cmp`](appendix-a-index.html#cmp) [`..`](appendix-a-index.html#range-op) [`..^ ^.. ^..^`](appendix-a-index.html#caret-range)
-C   Chaining infix     [`!= ==`](appendix-a-index.html#equal-equal-op) [`<`](appendix-a-index.html#lower-op) [`<=`](appendix-a-index.html#lower-equal-op) [`>`](appendix-a-index.html#greater-op) [`>=`](appendix-a-index.html#greater-equal-op) [`eq`](appendix-a-index.html#eq) [`ne`](appendix-a-index.html#ne) [`lt`](appendix-a-index.html#lt) [`le`](appendix-a-index.html#le) [`gt`](appendix-a-index.html#gt) [`ge`](appendix-a-index.html#ge) [`~~`](appendix-a-index.html#smartmatch-op) [`===`](appendix-a-index.html#identity-op) [`eqv !eqv`](appendix-a-index.html#eqv)
-X   Tight and          [`&&`](appendix-a-index.html#ampersand-ampersand-op)
-X   Tight or           [`||`](appendix-a-index.html#ampersand-ampersand-op) [`^^`](appendix-a-index.html#caret-caret-op) [`//`](appendix-a-index.html#slash-slash-op) [`min`](appendix-a-index.html#min) [`max`](appendix-a-index.html#max)
-R   Conditional        [`?? !!`](appendix-a-index.html#ternary-op) [`ff`](appendix-a-index.html#ff-op) [`fff`](appendix-a-index.html#fff-op)
-R   Item assignment    [`=`](appendix-a-index.html#equal-op) [`=>`](appendix-a-index.html#fat-arrow) [`+= -= **= xx= .=`](appendix-a-index.html#equal-metaop)
-L   Loose unary        [`so`](appendix-a-index.html#so) [`not`](appendix-a-index.html#not)
-X   Comma operator     [`,`](appendix-a-index.html#comma-op) [`:`](appendix-a-index.html#colon-op)
-X   List infix         [`Z`](appendix-a-index.html#Z-op) [`minmax`](appendix-a-index.html#minmax) [`X`](appendix-a-index.html#X-op) [`X~ X* Xeqv`](appendix-a-index.html#X-metaop) [`...`](appendix-a-index.html#sequence-op)
-R   List prefix        [`print`](appendix-a-index.html#print) [`push`](appendix-a-index.html#push) [`say`](appendix-a-index.html#say) [`die`](appendix-a-index.html#die) [`map`](appendix-a-index.html#map) [`substr`](appendix-a-index.html#substr) [`...`](appendix-a-index.html#sequence-op) [`[+] [*]`](appendix-a-index.html#square-brackets-metaop) [`any`](appendix-a-index.html#any) [`Z=`](appendix-a-index.html#Z-metaop)
-X   Loose and          [`and`](appendix-a-index.html#and) [`andthen`](appendix-a-index.html#andthen)
-X   Loose or           [`or`](appendix-a-index.html#or) [`xor`](appendix-a-index.html#xor) [`orelse`](appendix-a-index.html#orelse)
-X   Sequencer          [`<==`](appendix-a-index.html#pipe-left) [`==>`](appendix-a-index.html#pipe-right) [`<<==`](appendix-a-index.html#appending-left-pipe-op) [`==>>`](appendix-a-index.html#appending-right-pipe-op)
-N   Terminator         [`;`](appendix-a-index.html#semicolon) [`{...}`](appendix-a-index.html#curly-brackets) [`unless`](appendix-a-index.html#unless) `extra ) ] }`
+N   Terms              [`42`](tablet-2-basic-syntax#number-literals) `3.14` [`"eek"`](tablet-2-basic-syntax#double-quotes) `qq["foo"]` `$x` `:!verbose @$array`
+L   Method postfix     [`.meth .+ .? .* .() .[] .{} .<> .<<>> .:: .= .^ .:`](appendix-a-index#dotty-category)
+N   Autoincrement      [`++`](appendix-a-index#auto-increment) [`--`](appendix-a-index#auto-decrement)
+R   Exponentiation     [`**`](appendix-a-index#power-op)
+L   Symbolic unary     [`!`](appendix-a-index#exclamation-op) [`+`](appendix-a-index#plus-op) [`-`](appendix-a-index#minus-op) [`~`](appendix-a-index#tilde-op) [`?`](appendix-a-index#question-op) [`|`](appendix-a-index#pipe-op) [`||`](appendix-a-index#pipe-pipe-op) [`+^`](appendix-a-index#plus-caret-op) [`~^`](appendix-a-index#tilde-caret-op) [`?^`](appendix-a-index#question-caret-op) [`^`](appendix-a-index#caret-op)
+L   Multiplicative     [`*`](appendix-a-index#asterisk-op) [`/`](appendix-a-index#slash-op) [`%`](appendix-a-index#percent-op) [`%%`](appendix-a-index#percent-percent-op) [`+&`](appendix-a-index#plus-ampersand-op) [`+<`](appendix-a-index#plus-lower-op) [`+>`](appendix-a-index#plus-greater-op) [`~&`](appendix-a-index#tilde-ampersand-op) [`~<`](appendix-a-index#tilde-lower-op) [`~>`](appendix-a-index#tilde-greater-op) [`?&`](appendix-a-index#question-at-op) [`div`](appendix-a-index#div) [`mod`](appendix-a-index#mod) [`gcd`](appendix-a-index#gcd) [`lcm`](appendix-a-index#lcm)
+L   Additive           [`+`](appendix-a-index#plus-op) [`-`](appendix-a-index#minus-op) [`+|`](appendix-a-index#plus-pipe-op) [`+^`](appendix-a-index#plus-caret-op) [`~|`](appendix-a-index#tilde-pipe-op) [`~^`](appendix-a-index#tilde-caret-op) [`?|`](appendix-a-index#question-pipe-op) [`?^`](appendix-a-index#question-caret-op)
+L   Replication        [`x`](appendix-a-index#x-op) [`xx`](appendix-a-index#xx-op)
+X   Concatenation      [`~`](appendix-a-index#tilde-op)
+X   Junctive and       [`&`](appendix-a-index#ampersand-op) `(&)` `∩`
+X   Junctive or        [`|`](appendix-a-index#pipe-op) [`^`](appendix-a-index#caret-op) `(|)` `(^)` `∪` `(-)`
+L   Named unary        [`sleep`](appendix-a-index#sleep) [`abs`](appendix-a-index#abs) [`sin`](appendix-a-index#sin) [`temp`](appendix-a-index#temp) [`let`](appendix-a-index#let)
+N   Structural infix   [`but`](appendix-a-index#but) [`does`](appendix-a-index#does) [`<=>`](appendix-a-index#spaceship-op) [`leg`](appendix-a-index#leg) [`cmp`](appendix-a-index#cmp) [`..`](appendix-a-index#range-op) [`..^ ^.. ^..^`](appendix-a-index#caret-range)
+C   Chaining infix     [`!= ==`](appendix-a-index#equal-equal-op) [`<`](appendix-a-index#lower-op) [`<=`](appendix-a-index#lower-equal-op) [`>`](appendix-a-index#greater-op) [`>=`](appendix-a-index#greater-equal-op) [`eq`](appendix-a-index#eq) [`ne`](appendix-a-index#ne) [`lt`](appendix-a-index#lt) [`le`](appendix-a-index#le) [`gt`](appendix-a-index#gt) [`ge`](appendix-a-index#ge) [`~~`](appendix-a-index#smartmatch-op) [`===`](appendix-a-index#identity-op) [`eqv !eqv`](appendix-a-index#eqv)
+X   Tight and          [`&&`](appendix-a-index#ampersand-ampersand-op)
+X   Tight or           [`||`](appendix-a-index#ampersand-ampersand-op) [`^^`](appendix-a-index#caret-caret-op) [`//`](appendix-a-index#slash-slash-op) [`min`](appendix-a-index#min) [`max`](appendix-a-index#max)
+R   Conditional        [`?? !!`](appendix-a-index#ternary-op) [`ff`](appendix-a-index#ff-op) [`fff`](appendix-a-index#fff-op)
+R   Item assignment    [`=`](appendix-a-index#equal-op) [`=>`](appendix-a-index#fat-arrow) [`+= -= **= xx= .=`](appendix-a-index#equal-metaop)
+L   Loose unary        [`so`](appendix-a-index#so) [`not`](appendix-a-index#not)
+X   Comma operator     [`,`](appendix-a-index#comma-op) [`:`](appendix-a-index#colon-op)
+X   List infix         [`Z`](appendix-a-index#Z-op) [`minmax`](appendix-a-index#minmax) [`X`](appendix-a-index#X-op) [`X~ X* Xeqv`](appendix-a-index#X-metaop) [`...`](appendix-a-index#sequence-op)
+R   List prefix        [`print`](appendix-a-index#print) [`push`](appendix-a-index#push) [`say`](appendix-a-index#say) [`die`](appendix-a-index#die) [`map`](appendix-a-index#map) [`substr`](appendix-a-index#substr) [`...`](appendix-a-index#sequence-op) [`[+] [*]`](appendix-a-index#square-brackets-metaop) [`any`](appendix-a-index#any) [`Z=`](appendix-a-index#Z-metaop)
+X   Loose and          [`and`](appendix-a-index#and) [`andthen`](appendix-a-index#andthen)
+X   Loose or           [`or`](appendix-a-index#or) [`xor`](appendix-a-index#xor) [`orelse`](appendix-a-index#orelse)
+X   Sequencer          [`<==`](appendix-a-index#pipe-left) [`==>`](appendix-a-index#pipe-right) [`<<==`](appendix-a-index#appending-left-pipe-op) [`==>>`](appendix-a-index#appending-right-pipe-op)
+N   Terminator         [`;`](appendix-a-index#semicolon) [`{...}`](appendix-a-index#curly-brackets) [`unless`](appendix-a-index#unless) `extra ) ] }`
 --  -----------------  ----------------------------------------------------
 
 
@@ -395,7 +395,7 @@ N   Terminator         [`;`](appendix-a-index.html#semicolon) [`{...}`](appendix
 Operator Associativity
 ----------------------
 
-[*associativity*](appendix-g-glossary.html#associativity)
+[*associativity*](appendix-g-glossary#associativity)
 
 &nbsp;  Assoc   `$a <op> $b <op> $c` (infix op)  `<op>$a<op>` (unary op)
 ------  ------  -------------------------------  -----------------------
@@ -414,55 +414,55 @@ Categories
 ### MAIN ###
 
 These are the categories of the main language
-[*grammar*](appendix-g-glossary.html#grammar),
-as stored in [**$~MAIN**](appendix-a-index.html#MAIN-slang-var).
+[*grammar*](appendix-g-glossary#grammar),
+as stored in [**$~MAIN**](appendix-a-index#MAIN-slang-var).
 The first category called "category" is the metacategory
-(for all [*slangs*](appendix-g-glossary.html#slang))
+(for all [*slangs*](appendix-g-glossary#slang))
 that can be used to create new categories.
 
 -----------------------------------------------------------------------------------------------------------
-[`category:<prefix>`](appendix-a-index.html#category-category)
-[`circumfix:<( )>`](appendix-a-index.html#circumfix-category)
-[`dotty:<.>`](appendix-a-index.html#dotty-category)
-[`infix:<+>`](appendix-a-index.html#infix-category)
-[`infix_circumfix_meta_operator:{'«','»'}`](appendix-a-index.html#infix-circumfix-meta-operator-category)
-[`infix_postfix_meta_operator:<=>`](appendix-a-index.html#infix-postfix-meta-operator-category)
-[`infix_prefix_meta_operator:<!>`](appendix-a-index.html#infix-prefix-meta-operator-category)
-[`package_declarator:<class>`](appendix-a-index.html#package-declarator-category)
-[`postcircumfix:<( )>`](appendix-a-index.html#postcircumfix-category)
-[`postfix:<++>`](appendix-a-index.html#postfix-category)
-[`postfix_prefix_meta_operator:{'»'}`](appendix-a-index.html#postfix-prefix-meta-operator-category)
-[`prefix:<++>`](appendix-a-index.html#prefix-category)
-[`prefix_circumfix_meta_operator:{'[',']'}`](appendix-a-index.html#prefix-circumfix-meta-operator-category)
-[`prefix_postfix_meta_operator:{'«'}`](appendix-a-index.html#prefix-postfix-meta-operator-category)
-[`quote:<q>`](appendix-a-index.html#quote-category)
-[`routine_declarator:<sub>`](appendix-a-index.html#routine-declarator-category)
-[`scope_declarator:<my>`](appendix-a-index.html#scope-declarator-category)
-[`sigil:<$>`](appendix-a-index.html#sigil-category)
-[`special_variable:<$!>`](appendix-a-index.html#special-variable-category)
-[`statement_control:<if>`](appendix-a-index.html#statement-control-category)
-[`statement_mod_cond:<if>`](appendix-a-index.html#statement-mod-cond-category)
-[`statement_mod_loop:<while>`](appendix-a-index.html#statement-mod-loop-category)
-[`statement_prefix:<do>`](appendix-a-index.html#statement-prefix-category)
-[`term:<*>`](appendix-a-index.html#term-category)
-[`trait_auxiliary:<is>`](appendix-a-index.html#trait-auxiliary-category)
-[`trait_verb:<of>`](appendix-a-index.html#trait-verb-category)
-[`twigil:<?>`](appendix-a-index.html#twigil-category)
-[`type_declarator:<subset>`](appendix-a-index.html#type-declarator-category)
+[`category:<prefix>`](appendix-a-index#category-category)
+[`circumfix:<( )>`](appendix-a-index#circumfix-category)
+[`dotty:<.>`](appendix-a-index#dotty-category)
+[`infix:<+>`](appendix-a-index#infix-category)
+[`infix_circumfix_meta_operator:{'«','»'}`](appendix-a-indexinfix-circumfix-meta-operator-category)
+[`infix_postfix_meta_operator:<=>`](appendix-a-index#infix-postfix-meta-operator-category)
+[`infix_prefix_meta_operator:<!>`](appendix-a-index#infix-prefix-meta-operator-category)
+[`package_declarator:<class>`](appendix-a-index#package-declarator-category)
+[`postcircumfix:<( )>`](appendix-a-index#postcircumfix-category)
+[`postfix:<++>`](appendix-a-index#postfix-category)
+[`postfix_prefix_meta_operator:{'Â»'}`](appendix-a-index#postfix-prefix-meta-operator-category)
+[`prefix:<++>`](appendix-a-index#prefix-category)
+[`prefix_circumfix_meta_operator:{'[',']'}`](appendix-a-index#prefix-circumfix-meta-operator-category)
+[`prefix_postfix_meta_operator:{'Â«'}`](appendix-a-index#prefix-postfix-meta-operator-category)
+[`quote:<q>`](appendix-a-index#quote-category)
+[`routine_declarator:<sub>`](appendix-a-index#routine-declarator-category)
+[`scope_declarator:<my>`](appendix-a-index#scope-declarator-category)
+[`sigil:<$>`](appendix-a-index#sigil-category)
+[`special_variable:<$!>`](appendix-a-index#special-variable-category)
+[`statement_control:<if>`](appendix-a-index#statement-control-category)
+[`statement_mod_cond:<if>`](appendix-a-index#statement-mod-cond-category)
+[`statement_mod_loop:<while>`](appendix-a-index#statement-mod-loop-category)
+[`statement_prefix:<do>`](appendix-a-index#statement-prefix-category)
+[`term:<*>`](appendix-a-index#term-category)
+[`trait_auxiliary:<is>`](appendix-a-index#trait-auxiliary-category)
+[`trait_verb:<of>`](appendix-a-index#trait-verb-category)
+[`twigil:<?>`](appendix-a-index#twigil-category)
+[`type_declarator:<subset>`](appendix-a-index#type-declarator-category)
 -----------------------------------------------------------------------------------------------------------
 
 
 ### Regex ###
 
-The default [*regex*](appendix-g-glossary.html#regex) language as stored in 
-[**$~Regex**](appendix-a-index.html#Regex-slag-var) has following categories:
+The default [*regex*](appendix-g-glossary#regex) language as stored in 
+[**$~Regex**](appendix-a-index#Regex-slag-var) has following categories:
 
 ------------------------------------------------------------------------
-[`assertion:sym<!>`](appendix-a-index.html#assertion-category)
-[`backslash:sym<w>`](appendix-a-index.html#backslash-category)
-[`metachar:sym<.>`](appendix-a-index.html#metachar-category)
-[`mod_internal:sym<P5>`](appendix-a-index.html#mod-internal-category)
-[`quantifier:sym<*>`](appendix-a-index.html#quantifier-category)
+[`assertion:sym<!>`](appendix-a-index#assertion-category)
+[`backslash:sym<w>`](appendix-a-index#backslash-category)
+[`metachar:sym<.>`](appendix-a-index#metachar-category)
+[`mod_internal:sym<P5>`](appendix-a-index#mod-internal-category)
+[`quantifier:sym<*>`](appendix-a-index#quantifier-category)
 ------------------------------------------------------------------------
 
 
@@ -476,18 +476,18 @@ L for left Value, and R for right. A number is the array index.
 Words in the second column are short explanation or an aliasing method
 if followed by `()`.
 
--------------------------------------------------  ----------------------------------------------  ----------------------------------------------------------
-[`op=`](appendix-a-index.html#equal-metaop)        self assign                                     known from P5, `$L <op>= $R` equals `$L = $L op $R`
-[`!op`](appendix-a-index.html#exclamation-metaop)  negation                                        known from P5, `$L !<op> $R` equals `!($L op $R)`\
-[`Rop`](appendix-a-index.html#R-metaop)            reverse                                         reverses the order of the operands\
-[`Sop`](appendix-a-index.html#S-metaop)            sequence                                        like reduction, only synchronous, execution in listed order is guaranteed; suppresses any explicit or implicit parallelism
-[`>>op`](appendix-a-index.html#right-hyperop)      hyper                                           processes arrays eager and in parallel or applies a single value to all array elements, `@E = $L[0] op $R[0], $L[1] op $R[1], ...;`
-[`<<op`](appendix-a-index.html#left-hyperop)       hyper                                           like above, points to the side which determines dimensionality, `@E = $L[0] op $R[0], $L[1] op $R[1], ...;`
-[`[op]`](appendix-a-index.html#reduce-op)          [reduce()](appendix-a-index.html#reduce)        applies the operator between all elements of an array, `$result = $V[0] op $V[1] op ...;`
-[`[\op]`](appendix-a-index.html#triangle-op)       [triangle()](appendix-a-index.html#triangle)    applies above reduction to a series of lists made of array slices ranging in length from 1 to the complete length of the original list, `@result = $V[0], $V[0] op $V[1], $V[0] op $V[1] op $V[2], ...;`
-[`Xop`](appendix-a-index.html#X-metaop)            [crosswith()](appendix-a-index.html#crosswith)  performs the operator to all the pairs of the Cartesian product of two arrays; `@result = $L[0] op $R[0], $L[0] op $R[1], $L[1] op $R[0], $L[1] op $R[1]`
-[`Zop`](appendix-a-index.html#Z-metaop)            [zipwith()](appendix-a-index.html#zipwith)      like hyper, but evaluates lazy, `@result = $L[0] op $R[0], $L[1] op $R[1], ...`
------------------------------------------------  ------------------------------------------------  ----------------------------------------------------------
+--------------------------------------------  -----------------------------------------  ----------------------------------------------------------
+[`op=`](appendix-a-index#equal-metaop)        self assign                                known from P5, `$L <op>= $R` equals `$L = $L op $R`
+[`!op`](appendix-a-index#exclamation-metaop)  negation                                   known from P5, `$L !<op> $R` equals `!($L op $R)`\
+[`Rop`](appendix-a-index#R-metaop)            reverse                                    reverses the order of the operands\
+[`Sop`](appendix-a-index#S-metaop)            sequence                                   like reduction, only synchronous, execution in listed order is guaranteed; suppresses any explicit or implicit parallelism
+[`>>op`](appendix-a-index#right-hyperop)      hyper                                      processes arrays eager and in parallel or applies a single value to all array elements, `@E = $L[0] op $R[0], $L[1] op $R[1], ...;`
+[`<<op`](appendix-a-index#left-hyperop)       hyper                                      like above, points to the side which determines dimensionality, `@E = $L[0] op $R[0], $L[1] op $R[1], ...;`
+[`[op]`](appendix-a-index#reduce-op)          [reduce()](appendix-a-index#reduce)        applies the operator between all elements of an array, `$result = $V[0] op $V[1] op ...;`
+[`[\op]`](appendix-a-index#triangle-op)       [triangle()](appendix-a-index#triangle)    applies above reduction to a series of lists made of array slices ranging in length from 1 to the complete length of the original list, `@result = $V[0], $V[0] op $V[1], $V[0] op $V[1] op $V[2], ...;`
+[`Xop`](appendix-a-index#X-metaop)            [crosswith()](appendix-a-index#crosswith)  performs the operator to all the pairs of the Cartesian product of two arrays; `@result = $L[0] op $R[0], $L[0] op $R[1], $L[1] op $R[0], $L[1] op $R[1]`
+[`Zop`](appendix-a-index#Z-metaop)            [zipwith()](appendix-a-index#zipwith)      like hyper, but evaluates lazy, `@result = $L[0] op $R[0], $L[1] op $R[1], ...`
+--------------------------------------------  -----------------------------------------  ----------------------------------------------------------
 
 
 
@@ -495,135 +495,135 @@ Unicode operators
 -----------------
 
 The two hyper operators and the evaluating autoquoting can be written with the 
-[unicode](appendix-g-glossary.html#unicode) signs
+[unicode](appendix-g-glossary#unicode) signs
 (also documented as "French Quotes") or with double lesser than or greater than
 signs (documented as "Texas Quotes").
 
---- -------------------------------------------------------- -----------------------------------------------
- «  [\<\<](appendix-a-index.html#lower-lower-op)             Hyperop, right side dictates length of result
- »  [\>\>](appendix-a-index.html#greater-greater-op)         Hyperop, left side dictates length of result
- «» [\<\< \>\>](appendix-a-index.html#double-angle-brackets) [**qw**](appendix-a-index.html#qw-op) with [evaluation](appendix-g-glossary.html#evaluation) and [quote protection](appendix-g-glossary.html#quote-protection)
---- -------------------------------------------------------- -----------------------------------------------
+--- ----------------------------------------------------  -----------------------------------------------
+ «  [\<\<](appendix-a-index#lower-lower-op)              Hyperop, right side dictates length of result
+ »  [\>\>](appendix-a-index#greater-greater-op)          Hyperop, left side dictates length of result
+ «» [\<\< \>\>](appendix-a-index#double-angle-brackets) [**qw**](appendix-a-index#qw-op) with [evaluation](appendix-g-glossary#evaluation) and [quote protection](appendix-g-glossary#quote-protection)
+--- ----------------------------------------------------  -----------------------------------------------
 
 
 Contextualizers
 ---------------
 
-[prefix](appendix-a-index.html#prefix-category) operators or functions
-that forcing a [context](appendix-g-glossary.html#context).
+[prefix](appendix-a-index#prefix-category) operators or functions
+that forcing a [context](appendix-g-glossary#context).
 
------------------------------------------------  ------------------------------------  ----------------------------------------------------------------------------------------------
-[`$()`](appendix-a-index.html#dollar-op)         [item()](appendix-a-index.html#item)  [scalar/item context](appendix-g-glossary.html#item-context)
-[`?`](appendix-a-index.html#question-op)         [so()](appendix-a-index.html#so)      [boolean](appendix-g-glossary.html#bool-context)
-[`!`](appendix-a-index.html#exclamation-op)      [not()](appendix-a-index.html#not)    negated bool context
-[`+`](appendix-a-index.html#plus-op)             &nbsp;                                [numeric](appendix-g-glossary.html#numeric-context)
-[`-`](appendix-a-index.html#minus-op)            &nbsp;                                negated num context
-[`~`](appendix-a-index.html#tilde-context)       &nbsp;                                [string](appendix-g-glossary.html#string-context)
-[`@()`](appendix-a-index.html#at-op)             [list()](appendix-a-index.html#list)  [array/list context](appendix-g-glossary.html#list-context)
-&nbsp;                                           [flat()](appendix-a-index.html#flat)  [flat list](appendix-g-glossary.html#list-flattening)
-&nbsp;                                           [lol()](appendix-a-index.html#lol)    [list of list](appendix-g-glossary.html#lol-context) (once named slice context)
-[`%()`](appendix-a-index.html#percent-context)   [hash()](appendix-a-index.html#hash)  [hash context](appendix-g-glossary.html#hash-context)
-[`&()`](appendix-a-index.html#ampersand-context) [code()](appendix-a-index.html#code)  [code](appendix-g-glossary.html#code-context)
-[`|`](appendix-a-index.html#pipe-context)        &nbsp;                                flatten [capture](appendix-g-glossary.html#capture) object into arglist (named parameter)
-[`||`](appendix-a-index.html#pipe-pipe-context)  &nbsp;                                flatten [capture](appendix-g-glossary.html#capture) object into semicolon list (positional parameter)
------------------------------------------------  ------------------------------------  ----------------------------------------------------------------------------------------------
+------------------------------------------  --------------------------------  ----------------------------------------------------------------------------------------------
+[`$()`](appendix-a-index#dollar-op)         [item()](appendix-a-index#item)  [scalar/item context](appendix-g-glossary#item-context)
+[`?`](appendix-a-index#question-op)         [so()](appendix-a-index#so)      [boolean](appendix-g-glossary#bool-context)
+[`!`](appendix-a-index#exclamation-op)      [not()](appendix-a-index#not)    negated bool context
+[`+`](appendix-a-index#plus-op)             &nbsp;                           [numeric](appendix-g-glossary#numeric-context)
+[`-`](appendix-a-index#minus-op)            &nbsp;                           negated num context
+[`~`](appendix-a-index#tilde-context)       &nbsp;                           [string](appendix-g-glossary#string-context)
+[`@()`](appendix-a-index#at-op)             [list()](appendix-a-index#list)  [array/list context](appendix-g-glossary#list-context)
+&nbsp;                                      [flat()](appendix-a-index#flat)  [flat list](appendix-g-glossary#list-flattening)
+&nbsp;                                      [lol()](appendix-a-index#lol)    [list of list](appendix-g-glossary#lol-context) (once named slice context)
+[`%()`](appendix-a-index#percent-context)   [hash()](appendix-a-index#hash)  [hash context](appendix-g-glossary#hash-context)
+[`&()`](appendix-a-index#ampersand-context) [code()](appendix-a-index#code)  [code](appendix-g-glossary#code-context)
+[`|`](appendix-a-index#pipe-context)        &nbsp;                           flatten [capture](appendix-g-glossary#capture) object into arglist (named parameter)
+[`||`](appendix-a-index#pipe-pipe-context)  &nbsp;                           flatten [capture](appendix-g-glossary#capture) object into semicolon list (positional parameter)
+------------------------------------------  -------------------------------  ----------------------------------------------------------------------------------------------
 
 
 
 Junctions
 ---------
 
-The [**infix**](appendix-a-index.html#infix-category)
-[*ops*](appendix-g-glossary.html#operator) in the first columns create
-[*junctions*](appendix-g-glossary.html#junction) by combining two values
-(can be [**Junctions**](appendix-a-index.html#Junction-type) itself),
-the ops in second column are to be applied to a [*list*](appendix-g-glossary.html#list)
-as prefix op or [*method*](appendix-g-glossary.html#method).
+The [**infix**](appendix-a-index#infix-category)
+[*ops*](appendix-g-glossary#operator) in the first columns create
+[*junctions*](appendix-g-glossary#junction) by combining two values
+(can be [**Junctions**](appendix-a-index#Junction-type) itself),
+the ops in second column are to be applied to a [*list*](appendix-g-glossary#list)
+as prefix op or [*method*](appendix-g-glossary#method).
 
 Junctive Infix Op                        Prefix Op                           Operation                                Meaning
----------------------------------------  ----------------------------------  ---------------------------------------  -----------------------------------
-[&](appendix-a-index.html#ampersand-op)  [all](appendix-a-index.html#all)    [AND](appendix-g-glossary.html#and)      [True](appendix-a-index.html#True) if all are True
-[\^](appendix-a-index.html#caret-op)     [one](appendix-a-index.html#one)    [XOR](appendix-g-glossary.html#xor)      [True](appendix-a-index.html#True) if exactly one is True
-[|](appendix-a-index.html#pipe-op)       [any](appendix-a-index.html#any)    [OR](appendix-g-glossary.html#or)        [True](appendix-a-index.html#True) if at least one is True
-&nbsp;                                   [none](appendix-a-index.html#none)  [NOT](appendix-g-glossary.html#not) any  [True](appendix-a-index.html#True) if none are True
----------------------------------------  ----------------------------------  ---------------------------------------  -----------------------------------
+----------------------------------  -----------------------------  ----------------------------------  -----------------------------------
+[&](appendix-a-index#ampersand-op)  [all](appendix-a-index#all)    [AND](appendix-g-glossary#and)      [True](appendix-a-index#True) if all are True
+[\^](appendix-a-index#caret-op)     [one](appendix-a-index#one)    [XOR](appendix-g-glossary#xor)      [True](appendix-a-index#True) if exactly one is True
+[|](appendix-a-index#pipe-op)       [any](appendix-a-index#any)    [OR](appendix-g-glossary#or)        [True](appendix-a-index#True) if at least one is True
+&nbsp;                              [none](appendix-a-index#none)  [NOT](appendix-g-glossary#not) any  [True](appendix-a-index#True) if none are True
+----------------------------------  -----------------------------  ----------------------------------  -----------------------------------
 
 
 Smartmatch
 ----------
 
-When [**~~**](appendix-a-index.html#smartmatch-op) is used as
-[infix](appendix-a-index.html#infix-category)
-[**\$\_**](appendix-a-index.html#context-var) is the left side, X is right.
-In [**when**](appendix-a-index.html#when) clauses just X is stated.
+When [**~~**](appendix-a-index#smartmatch-op) is used as
+[infix](appendix-a-index#infix-category)
+[**\$\_**](appendix-a-index#context-var) is the left side, X is right.
+In [**when**](appendix-a-index#when) clauses just X is stated.
 Selection of the comparison alhorithm (4th column) is based on the value
-[*types*](appendix-g-glossary.html#type) as stated in the first two columns.
+[*types*](appendix-g-glossary#type) as stated in the first two columns.
 
 
 `$_`                                               X                                                  Type of Match Implied                             Match if (given `$_`)
--------------------------------------------------  -------------------------------------------------  -----------------------------------------------   ----------------------------------------------------------
-[Any](appendix-a-index.html#Any-type)              [True](appendix-a-index.html#True)                 `~~` [True](appendix-a-index.html#True)           (parsewarn)
-[Any](appendix-a-index.html#Any-type)              [False](appendix-a-index.html#False)               `~~` [False](appendix-a-index.html#False) match   (parsewarn)
-[Any](appendix-a-index.html#Any-type)              [Match](appendix-a-index.html#Match-type)          `~~` Successful match                             (parsewarn on literal token)
-[Any](appendix-a-index.html#Any-type)              [Nil](appendix-a-index.html#Nil-type)              `~~` Benign failure                               (parsewarn on literal token)
-[Any](appendix-a-index.html#Any-type)              [Failure](appendix-a-index.html#Failure-type)      Failure type check                                (okay, matches against type)
-[Any](appendix-a-index.html#Any-type)              [`*`](appendix-a-index.html#asterisk-term)         block signature match                             block successfully binds to `|$_` ([flattened arglist](appendix-a-index.html#pipe-context))
+--------------------------------------------  --------------------------------------------  ------------------------------------------   ----------------------------------------------------------
+[Any](appendix-a-index#Any-type)              [True](appendix-a-index#True)                 `~~` [True](appendix-a-index#True)           (parsewarn)
+[Any](appendix-a-index#Any-type)              [False](appendix-a-index#False)               `~~` [False](appendix-a-index#False) match   (parsewarn)
+[Any](appendix-a-index#Any-type)              [Match](appendix-a-index#Match-type)          `~~` Successful match                        (parsewarn on literal token)
+[Any](appendix-a-index#Any-type)              [Nil](appendix-a-index#Nil-type)              `~~` Benign failure                          (parsewarn on literal token)
+[Any](appendix-a-index#Any-type)              [Failure](appendix-a-index#Failure-type)      Failure type check                           (okay, matches against type)
+[Any](appendix-a-index#Any-type)              [`*`](appendix-a-index#asterisk-term)         block signature match                        block successfully binds to `|$_` ([flattened arglist](appendix-a-index#pipe-context))
 &nbsp;   &nbsp;    &nbsp;   &nbsp;
-[Any](appendix-a-index.html#Any-type)              Callable:(\$)                                      item sub truth                                    `X($_)`
-[Any](appendix-a-index.html#Any-type)              Callable:()                                        simple closure truth                              `X()` (ignoring `$_`)
-[Any](appendix-a-index.html#Any-type)              [Bool](appendix-a-index.html#Bool-type)            simple truth                                      `X`
-[Any](appendix-a-index.html#Any-type)              [Match](appendix-a-index.html#Match-type)          match success                                     `X`
-[Any](appendix-a-index.html#Any-type)              [Nil](appendix-a-index.html#Nil-type)              benign failure X                                  (treats Nil value as failure)
-[Any](appendix-a-index.html#Any-type)              [Failure](appendix-a-index.html#Failure-type)      malign failure X                                  (passes Failure object through)
-[Any](appendix-a-index.html#Any-type)              [Numeric](appendix-a-index.html#Num-type)          numeric equality                                  `+$_ == X`
-[Any](appendix-a-index.html#Any-type)              [Stringy](appendix-a-index.html#Str-type)          string equality                                   `~$_` [eq](appendix-a-index.html#eq) X
-[Any](appendix-a-index.html#Any-type)              [Whatever](appendix-a-index.html#Whatever-type)    always matches                                    [`True`](appendix-a-index.html#True)
+[Any](appendix-a-index#Any-type)              Callable:(\$)                                 item sub truth                               `X($_)`
+[Any](appendix-a-index#Any-type)              Callable:()                                   simple closure truth                         `X()` (ignoring `$_`)
+[Any](appendix-a-index#Any-type)              [Bool](appendix-a-index#Bool-type)            simple truth                                 `X`
+[Any](appendix-a-index#Any-type)              [Match](appendix-a-index#Match-type)          match success                                `X`
+[Any](appendix-a-index#Any-type)              [Nil](appendix-a-index#Nil-type)              benign failure X                             (treats Nil value as failure)
+[Any](appendix-a-index#Any-type)              [Failure](appendix-a-index#Failure-type)      malign failure X                             (passes Failure object through)
+[Any](appendix-a-index#Any-type)              [Numeric](appendix-a-index#Num-type)          numeric equality                             `+$_ == X`
+[Any](appendix-a-index#Any-type)              [Stringy](appendix-a-index#Str-type)          string equality                              `~$_` [eq](appendix-a-index#eq) X
+[Any](appendix-a-index#Any-type)              [Whatever](appendix-a-index#Whatever-type)    always matches                                [`True`](appendix-a-index#True)
 &nbsp;   &nbsp;    &nbsp;   &nbsp;
-[Associative](appendix-a-index.html#Hash-type)     [Pair](appendix-a-index.html#Pair-type)            test hash mapping                                 `$_{X.key} ~~ X.value`
-[Any](appendix-a-index.html#Any-type)              [Pair](appendix-a-index.html#Pair-type)            test object attribute                             `?."{X.key}" = ?X.value` (e.g. filetests)
+[Associative](appendix-a-index#Hash-type)     [Pair](appendix-a-index#Pair-type)            test hash mapping                            `$_{X.key} ~~ X.value`
+[Any](appendix-a-index#Any-type)              [Pair](appendix-a-index#Pair-type)            test object attribute                        `?."{X.key}" = ?X.value` (e.g. filetests)
 &nbsp;   &nbsp;    &nbsp;   &nbsp;
-[Set](appendix-a-index.html#Set-type)              [Set](appendix-a-index.html#Set-type)              identical sets                                    `$_` [===](appendix-a-index.html#identity-op) X
-[Any](appendix-a-index.html#Any-type)              [Setta](appendix-a-index.html#Set-type)            force set comparison                              `$_.Set === X.Set`
+[Set](appendix-a-index#Set-type)              [Set](appendix-a-index#Set-type)              identical sets                               `$_` [===](appendix-a-index#identity-op) X
+[Any](appendix-a-index#Any-type)              [Setty](appendix-a-index#Set-type)            force set comparison                         `$_.Set === X.Set`
 &nbsp;   &nbsp;    &nbsp;   &nbsp;
-[Bag](appendix-a-index.html#Bag-type)              [Bag](appendix-a-index.html#Bag-type)              identical sets                                    `$_ === X`
-[Any](appendix-a-index.html#Any-type)              [Baggy](appendix-a-index.html#Bag-type)            force bag comparison                              `$_.Bag === X.Bag`
+[Bag](appendix-a-index#Bag-type)              [Bag](appendix-a-index#Bag-type)              identical sets                               `$_ === X`
+[Any](appendix-a-index#Any-type)              [Baggy](appendix-a-index#Bag-type)            force bag comparison                         `$_.Bag === X.Bag`
 &nbsp;   &nbsp;    &nbsp;   &nbsp;
-[Mix](appendix-a-index.html#Mix-type)              [Mix](appendix-a-index.html#Mix-type)              identical sets                                    `$_ === X`
-[Any](appendix-a-index.html#Any-type)              [Mixy](appendix-a-index.html#Mix-type)             force mix comparison                              `$_.Mix === X.Mix`
+[Mix](appendix-a-index#Mix-type)              [Mix](appendix-a-index#Mix-type)              identical sets                               `$_ === X`
+[Any](appendix-a-index#Any-type)              [Mixy](appendix-a-index#Mix-type)             force mix comparison                         `$_.Mix === X.Mix`
 &nbsp;   &nbsp;    &nbsp;   &nbsp;
-[Associative](appendix-a-index.html#Hash-type)     [Array](appendix-a-index.html#Array-type)          keys/list are comparable                          `+X == +$_ and $_{X.all}:exists`
-[Positional](appendix-a-index.html#Array-type)     [Array](appendix-a-index.html#Array-type)          arrays are comparable                             `$_ «===» X` (dwims `*` wildcards!)
-Callable                                           [Positional](appendix-a-index.html#Array-type)     list vs predicate                                 [`so`](appendix-a-index.html#so) `$_(X)`
-[Any](appendix-a-index.html#Any-type)              [Positional](appendix-a-index.html#Array-type)     lists are comparable                              `$_[] «===» X[]`
+[Associative](appendix-a-index#Hash-type)     [Array](appendix-a-index#Array-type)          keys/list are comparable                     `+X == +$_ and $_{X.all}:exists`
+[Positional](appendix-a-index#Array-type)     [Array](appendix-a-index#Array-type)          arrays are comparable                        `$_ «===» X` (dwims `*` wildcards!)
+Callable                                      [Positional](appendix-a-index#Array-type)     list vs predicate                            [`so`](appendix-a-index#so) `$_(X)`
+[Any](appendix-a-index#Any-type)              [Positional](appendix-a-index#Array-type)     lists are comparable                         `$_[] «===» X[]`
 &nbsp;   &nbsp;    &nbsp;   &nbsp;
-[Hash](appendix-a-index.html#Hash-type)            [Hash](appendix-a-index.html#Hash-type)            hash mapping equivalent                           `$_` [`eqv`](appendix-a-index.html#eqv) `X`
-[Associative](appendix-a-index.html#Hash-type)     [Hash](appendix-a-index.html#Hash-type)            force hash comparison                             `$_.Hash` [`eqv`](appendix-a-index.html#eqv) `X`
-[Pair](appendix-a-index.html#Pair-type)            [Hash](appendix-a-index.html#Hash-type)            hash does mapping                                 `X{.key} ~~ .value`
-[Positional](appendix-a-index.html#Array-type)     [Hash](appendix-a-index.html#Hash-type)            attempted any/all                                 `FAIL, point user to [].any and [].all for LHS`
-Callable                                           [Hash](appendix-a-index.html#Hash-type)            hash vs predicate                                 [`so`](appendix-a-index.html#so) `$_(X)`
-[Any](appendix-a-index.html#Any-type)              [Hash](appendix-a-index.html#Hash-type)            hash contains object                              `X.{$_}:exists`
+[Hash](appendix-a-index#Hash-type)            [Hash](appendix-a-index#Hash-type)            hash mapping equivalent                      `$_` [`eqv`](appendix-a-index#eqv) `X`
+[Associative](appendix-a-index#Hash-type)     [Hash](appendix-a-index#Hash-type)            force hash comparison                        `$_.Hash` [`eqv`](appendix-a-index#eqv) `X`
+[Pair](appendix-a-index#Pair-type)            [Hash](appendix-a-index#Hash-type)            hash does mapping                            `X{.key} ~~ .value`
+[Positional](appendix-a-index#Array-type)     [Hash](appendix-a-index#Hash-type)            attempted any/all                            `FAIL, point user to [].any and [].all for LHS`
+Callable                                           [Hash](appendix-a-index#Hash-type)            hash vs predicate                       [`so`](appendix-a-index#so) `$_(X)`
+[Any](appendix-a-index#Any-type)              [Hash](appendix-a-index#Hash-type)            hash contains object                         `X.{$_}:exists`
 &nbsp;   &nbsp;    &nbsp;   &nbsp;
-[Str](appendix-a-index.html#Str-type)              [Regex](appendix-a-index.html#Regex-type)          string pattern match                              `.match(X)`
-[Associative](appendix-a-index.html#Hash-type)     [Regex](appendix-a-index.html#Regex-type)          attempted reverse dwim                            `FAIL, point user to any/all vs keys/values/pairs`
-[Positional](appendix-a-index.html#Array-type)     [Regex](appendix-a-index.html#Regex-type)          attempted any/all/cat                             `FAIL, point user to any/all/cat/join for LHS`
-[Any](appendix-a-index.html#Any-type)              [Regex](appendix-a-index.html#Regex-type)          pattern match                                     `.match(X)`
+[Str](appendix-a-index#Str-type)              [Regex](appendix-a-index#Regex-type)          string pattern match                         `.match(X)`
+[Associative](appendix-a-index#Hash-type)     [Regex](appendix-a-index#Regex-type)          attempted reverse dwim                       `FAIL, point user to any/all vs keys/values/pairs`
+[Positional](appendix-a-index#Array-type)     [Regex](appendix-a-index#Regex-type)          attempted any/all/cat                        `FAIL, point user to any/all/cat/join for LHS`
+[Any](appendix-a-index#Any-type)              [Regex](appendix-a-index#Regex-type)          pattern match                                `.match(X)`
 &nbsp;   &nbsp;    &nbsp;   &nbsp;
-[Range](appendix-a-index.html#Range-type)          [Range](appendix-a-index.html#Range-type)          subset range                                      `!$_ or .bounds.all ~~ X (mod ^'s)`
-[Any](appendix-a-index.html#Any-type)              [Range](appendix-a-index.html#Range-type)          in real range                                     `X.min <= $_ <= X.max (mod ^'s)`
-[Any](appendix-a-index.html#Any-type)              [Range](appendix-a-index.html#Range-type)          in stringy range                                  `X.min le $_ le X.max (mod ^'s)`
-[Any](appendix-a-index.html#Any-type)              [Range](appendix-a-index.html#Range-type)          in generic range                                  `[!after] X.min,$_,X.max` (etc.)
+[Range](appendix-a-index#Range-type)          [Range](appendix-a-index#Range-type)          subset range                                 `!$_ or .bounds.all ~~ X (mod ^'s)`
+[Any](appendix-a-index#Any-type)              [Range](appendix-a-index#Range-type)          in real range                                `X.min <= $_ <= X.max (mod ^'s)`
+[Any](appendix-a-index#Any-type)              [Range](appendix-a-index#Range-type)          in stringy range                             `X.min le $_ le X.max (mod ^'s)`
+[Any](appendix-a-index#Any-type)              [Range](appendix-a-index#Range-type)          in generic range                             `[!after] X.min,$_,X.max` (etc.)
 &nbsp;   &nbsp;    &nbsp;   &nbsp;
-[Any](appendix-a-index.html#Any-type)              [Type](appendix-g-glossary.html#type)              type membership                                   `$_.does(X)`
+[Any](appendix-a-index#Any-type)              [Type](appendix-g-glossary#type)              type membership                              `$_.does(X)`
 &nbsp;   &nbsp;    &nbsp;   &nbsp;
-[Signature](appendix-a-index.html#Signature-type)  [Signature](appendix-a-index.html#Signature-type)  sig compatibility                                 `$_` is a subset of X ???
-[Callable](appendix-g-glossary.html#routine)       [Signature](appendix-a-index.html#Signature-type)  sig compatibility                                 `$_.sig` is a subset of X ???
-[Capture](appendix-a-index.html#Capture-type)      [Signature](appendix-a-index.html#Signature-type)  parameters bindable                               `$_` could bind to X (doesn't!)
-[Any](appendix-a-index.html#Any-type)              [Signature](appendix-a-index.html#Signature-type)  parameters bindable                               `(pipe)$_` could bind to X (doesn't!)
+[Signature](appendix-a-index#Signature-type)  [Signature](appendix-a-index#Signature-type)  sig compatibility                            `$_` is a subset of X ???
+[Callable](appendix-g-glossary#routine)       [Signature](appendix-a-index#Signature-type)  sig compatibility                            `$_.sig` is a subset of X ???
+[Capture](appendix-a-index#Capture-type)      [Signature](appendix-a-index#Signature-type)  parameters bindable                          `$_` could bind to X (doesn't!)
+[Any](appendix-a-index#Any-type)              [Signature](appendix-a-index#Signature-type)  parameters bindable                          `(pipe)$_` could bind to X (doesn't!)
 &nbsp;   &nbsp;    &nbsp;   &nbsp;
-[Signature](appendix-a-index.html#Signature-type)  [Capture](appendix-a-index.html#Capture-type)      parameters bindable                                X could bind to $_
+[Signature](appendix-a-index#Signature-type)  [Capture](appendix-a-index#Capture-type)      parameters bindable                          X could bind to $_
 &nbsp;   &nbsp;    &nbsp;   &nbsp;
-[Any](appendix-a-index.html#Any-type)              [Any](appendix-a-index.html#Any-type)              scalars are identical                             `$_ === X`
-------------------------------------------------   -------------------------------------------------  -----------------------------------------------   ----------------------------------------------------------
+[Any](appendix-a-index#Any-type)              [Any](appendix-a-index#Any-type)              scalars are identical                        `$_ === X`
+-------------------------------------------   --------------------------------------------  ------------------------------------------   ----------------------------------------------------------
 
 
 Test Methods
@@ -632,60 +632,60 @@ Test Methods
 They replace the Perl 5 filetest ops (like -e).
 Use it as in `$filename.IO ~~ :X` or `$filename.IO.X`.
 
-----------------------------------  --------------------------------------------------------------
-[:r](appendix-a-index.html#r-test)  file is readable by effective [uid](#EUID-global-var)/[gid](#EGID-global-var)
-[:w](appendix-a-index.html#w-test)  file is writeable by effective uid/gid
-[:x](appendix-a-index.html#x-test)  file is executable by effective uid/gid
-[:o](appendix-a-index.html#o-test)  file is owned by effective uid.
+-----------------------------  --------------------------------------------------------------
+[:r](appendix-a-index#r-test)  file is readable by effective [uid](#EUID-global-var)/[gid](#EGID-global-var)
+[:w](appendix-a-index#w-test)  file is writeable by effective uid/gid
+[:x](appendix-a-index#x-test)  file is executable by effective uid/gid
+[:o](appendix-a-index#o-test)  file is owned by effective uid.
 &nbsp;   &nbsp;
-[:R](appendix-a-index.html#R-test)  file is readable by real [uid](#UID-global-var)/[gid](#GID-global-var)
-[:W](appendix-a-index.html#W-test)  file is writeable by real uid/gid
-[:X](appendix-a-index.html#X-test)  file is executable by real uid/gid
-[:O](appendix-a-index.html#O-test)  file is owned by real uid.
+[:R](appendix-a-index#R-test)  file is readable by real [uid](#UID-global-var)/[gid](#GID-global-var)
+[:W](appendix-a-index#W-test)  file is writeable by real uid/gid
+[:X](appendix-a-index#X-test)  file is executable by real uid/gid
+[:O](appendix-a-index#O-test)  file is owned by real uid.
 &nbsp;   &nbsp;
-[:e](appendix-a-index.html#e-test)  file exists
-[:s](appendix-a-index.html#s-test)  file has size greater than zero
+[:e](appendix-a-index#e-test)  file exists
+[:s](appendix-a-index#s-test)  file has size greater than zero
 &nbsp;   &nbsp;
-[:f](appendix-a-index.html#f-test)  file is a plain file
-[:d](appendix-a-index.html#d-test)  file is a directory
-[:l](appendix-a-index.html#l-test)  file is a symbolic link
-[:p](appendix-a-index.html#p-test)  file is a named pipe (FIFO), or filehandle is a pipe
-[:S](appendix-a-index.html#S-test)  file is a socket
-[:b](appendix-a-index.html#b-test)  file is a block special file
-[:c](appendix-a-index.html#c-test)  file is a character special file
-[:t](appendix-a-index.html#t-test)  filehandle is opened to a tty
+[:f](appendix-a-index#f-test)  file is a plain file
+[:d](appendix-a-index#d-test)  file is a directory
+[:l](appendix-a-index#l-test)  file is a symbolic link
+[:p](appendix-a-index#p-test)  file is a named pipe (FIFO), or filehandle is a pipe
+[:S](appendix-a-index#S-test)  file is a socket
+[:b](appendix-a-index#b-test)  file is a block special file
+[:c](appendix-a-index#c-test)  file is a character special file
+[:t](appendix-a-index#t-test)  filehandle is opened to a tty
 &nbsp;   &nbsp;
-[:u](appendix-a-index.html#u-test)  file has setuid bit set
-[:g](appendix-a-index.html#g-test)  file has setgid bit set
-[:k](appendix-a-index.html#k-test)  file has sticky bit set
-----------------------------------  --------------------------------------------------------------
+[:u](appendix-a-index#u-test)  file has setuid bit set
+[:g](appendix-a-index#g-test)  file has setgid bit set
+[:k](appendix-a-index#k-test)  file has sticky bit set
+-----------------------------  --------------------------------------------------------------
 
 
 
 Quoting Ops
 -----------
 
-The [basic quoting](tablet-2-basic-syntax.html#quoting)
+The [basic quoting](tablet-2-basic-syntax#quoting)
 operator (Q) does nothing, just taking literally what you quoted as a string.
 But with several adverbs, it behaves like the well known following ops:
 
 Op                                       Nonealphanumeric Version                      Translated Into Quoting Adverbs                                                                                                          Method Version                           Meaning
----------------------------------------  --------------------------------------------- ---------------------------------------------------------------------------------------------------------------------------------------  ---------------------------------------  ----------------------------------------------------------
-[q//](appendix-a-index.html#q-op)        [' '](appendix-a-index.html#single-quotes)    [Q](appendix-a-index.html#Q-op) [:q](appendix-a-index.html#q-adverb) //                                                                  &nbsp;                                   [single](appendix-g-glossary.html#single-quoting), simple nonevaluating quotes
-[qq//](appendix-a-index.html#qq-op)      [" "](appendix-a-index.html#double-quotes)    [Q](appendix-a-index.html#Q-op) [:qq](appendix-a-index.html#qq-adverb) //                                                                &nbsp;                                   [double](appendix-g-glossary.html#double-quoting), evaluating quotes
-[qw//](appendix-a-index.html#qw-op)      [< >](appendix-a-index.html#angle-brackets)   [Q](appendix-a-index.html#Q-op) [:q](appendix-a-index.html#q-adverb) [:w](appendix-a-index.html#w-adverb) //                             &nbsp;                                   simple autoquotes (spaces divide words)
-&nbsp;                                   [<< >>](appendix-a-index.html#texas-brackets) [Q](appendix-a-index.html#Q-op) [:qq](appendix-a-index.html#qq-adverb) [:ww](appendix-a-index.html#ww-adverb) //                         &nbsp;                                   evaluating autoquotes with [quote protection](appendix-g-glossary.html#quote-protection)
-[qx//](appendix-a-index.html#qx-op)      &nbsp;                                        [Q](appendix-a-index.html#Q-op) [:q](appendix-a-index.html#q-adverb) [:x](appendix-a-index.html#x-adverb) //                             &nbsp;                                   command execution (system call) [without evaluation](appendix-g-glossary.html#single-quoting)
-[qqx//](appendix-a-index.html#qqx-op)    &nbsp;                                        [Q](appendix-a-index.html#Q-op) [:qq](appendix-a-index.html#qq-adverb) [:x](appendix-a-index.html#x-adverb) //                           &nbsp;                                   command execution (system call) [with evaluation](appendix-g-glossary.html#double-quoting)
-[qp//](appendix-a-index.html#qp-op)      &nbsp;                                        [Q](appendix-a-index.html#Q-op) [:q](appendix-a-index.html#q-adverb) [:p](appendix-a-index.html#p-adverb) //                             &nbsp;                                   paths
-[rx//](appendix-a-index.html#rx-op)      &nbsp;                                        [Q](appendix-a-index.html#Q-op) [:regex](appendix-a-index.html#regex-adverb) //                                                          &nbsp;                                   [regex](appendix-g-glossary.html#regex)
-[m//](appendix-a-index.html#m-op)        &nbsp;                                        [Q](appendix-a-index.html#Q-op) [:match](appendix-a-index.html#match-adverb) //                                                          [.match()](appendix-a-index.html#match)  matching
-[ms//](appendix-a-index.html#ms-op)      &nbsp;                                        [Q](appendix-a-index.html#Q-op) [:match](appendix-a-index.html#match-adverb) [:sigspace](appendix-a-index.html#sigspace-modifier) //     &nbsp;                                   matching, spaces divide words
-[s///](appendix-a-index.html#s-op)       &nbsp;                                        [Q](appendix-a-index.html#Q-op) [:subst](appendix-a-index.html#subst-adverb) ///                                                         [.subst()](appendix-a-index.html#subst)  substitution
-[ss///](appendix-a-index.html#ss-op)     &nbsp;                                        [Q](appendix-a-index.html#Q-op) [:subst](appendix-a-index.html#subst-adverb) [:samespace](appendix-a-index.html#samespace-modifier) ///  &nbsp;                                   substitution, spaces divide words
-[tr///](appendix-a-index.html#tr-op)     &nbsp;                                        [Q](appendix-a-index.html#Q-op) [:trans](appendix-a-index.html#trans-adverb) ///                                                         [.trans()](appendix-a-index.html#trans)  [transliteration](appendix-g-glossary.html#transliteration)
-[quasi {}](appendix-a-index.html#quasi)  &nbsp;                                        [Q](appendix-a-index.html#Q-op) [:code](appendix-a-index.html#code-adverb) //                                                            &nbsp;                                   [quasiquoting](appendix-g-glossary.html#quasiquoting)
----------------------------------------  --------------------------------------------- ---------------------------------------------------------------------------------------------------------------------------------------- ---------------------------------------  ----------------------------------------------------------
+----------------------------------  ---------------------------------------- -------------------------------------------------------------------------------------------------------------------------  ----------------------------------  ----------------------------------------------------------
+[q//](appendix-a-index#q-op)        [' '](appendix-a-index#single-quotes)    [Q](appendix-a-index#Q-op) [:q](appendix-a-index#q-adverb) //                                                              &nbsp;                              [single](appendix-g-glossary#single-quoting), simple nonevaluating quotes
+[qq//](appendix-a-index#qq-op)      [" "](appendix-a-index#double-quotes)    [Q](appendix-a-index#Q-op) [:qq](appendix-a-index#qq-adverb) //                                                            &nbsp;                              [double](appendix-g-glossary#double-quoting), evaluating quotes
+[qw//](appendix-a-index#qw-op)      [< >](appendix-a-index#angle-brackets)   [Q](appendix-a-index#Q-op) [:q](appendix-a-index#q-adverb) [:w](appendix-a-index#w-adverb) //                              &nbsp;                              simple autoquotes (spaces divide words)
+&nbsp;                              [<< >>](appendix-a-index#texas-brackets) [Q](appendix-a-index#Q-op) [:qq](appendix-a-index#qq-adverb) [:ww](appendix-a-index#ww-adverb) //                          &nbsp;                              evaluating autoquotes with [quote protection](appendix-g-glossary#quote-protection)
+[qx//](appendix-a-index#qx-op)      &nbsp;                                   [Q](appendix-a-index#Q-op) [:q](appendix-a-index#q-adverb) [:x](appendix-a-index#x-adverb) //                              &nbsp;                              command execution (system call) [without evaluation](appendix-g-glossary#single-quoting)
+[qqx//](appendix-a-index#qqx-op)    &nbsp;                                   [Q](appendix-a-index#Q-op) [:qq](appendix-a-index#qq-adverb) [:x](appendix-a-index#x-adverb) //                            &nbsp;                              command execution (system call) [with evaluation](appendix-g-glossary#double-quoting)
+[qp//](appendix-a-index#qp-op)      &nbsp;                                   [Q](appendix-a-index#Q-op) [:q](appendix-a-index#q-adverb) [:p](appendix-a-index#p-adverb) //                              &nbsp;                              paths
+[rx//](appendix-a-index#rx-op)      &nbsp;                                   [Q](appendix-a-index#Q-op) [:regex](appendix-a-index#regex-adverb) //                                                      &nbsp;                              [regex](appendix-g-glossary#regex)
+[m//](appendix-a-index#m-op)        &nbsp;                                   [Q](appendix-a-index#Q-op) [:match](appendix-a-index#match-adverb) //                                                      [.match()](appendix-a-index#match)  matching
+[ms//](appendix-a-index#ms-op)      &nbsp;                                   [Q](appendix-a-index#Q-op) [:match](appendix-a-index#match-adverb) [:sigspace](appendix-a-index#sigspace-modifier) //      &nbsp;                              matching, spaces divide words
+[s///](appendix-a-index#s-op)       &nbsp;                                   [Q](appendix-a-index#Q-op) [:subst](appendix-a-index#subst-adverb) ///                                                     [.subst()](appendix-a-index#subst)  substitution
+[ss///](appendix-a-index#ss-op)     &nbsp;                                   [Q](appendix-a-index#Q-op) [:subst](appendix-a-index#subst-adverb) [:samespace](appendix-a-index#samespace-modifier) ///    &nbsp;                             substitution, spaces divide words
+[tr///](appendix-a-index#tr-op)     &nbsp;                                   [Q](appendix-a-index#Q-op) [:trans](appendix-a-index#trans-adverb) ///                                                     [.trans()](appendix-a-index#trans)  [transliteration](appendix-g-glossary#transliteration)
+[quasi {}](appendix-a-index#quasi)  &nbsp;                                   [Q](appendix-a-index#Q-op) [:code](appendix-a-index#code-adverb) //                                                        &nbsp;                              [quasiquoting](appendix-g-glossary#quasiquoting)
+---------------------------------  ----------------------------------------- -------------------------------------------------------------------------------------------------------------------------  ----------------------------------  ----------------------------------------------------------
 
 
 
@@ -696,31 +696,31 @@ Quoting Adverbs
 ---------------
 
 There are a lot more adverbs to 
-[fine tune your quoting](tablet-2-basic-syntax.html#interpolation).
+[fine tune your quoting](tablet-2-basic-syntax#interpolation).
 The Adverbs can used with any quoting operator like:
-[Q](appendix-a-index.html#Q-op) :s/.../ or
-[qq](appendix-a-index.html#qq-op) :p /.../.
+[Q](appendix-a-index#Q-op) :s/.../ or
+[qq](appendix-a-index#qq-op) :p /.../.
 
 Short                                   Long                                                    Meaning
---------------------------------------  ------------------------------------------------------  -------------------------------------------------
-[:q](appendix-a-index.html#q-adverb)    [:single](appendix-a-index.html#single-adverb)          interpolate \\\\ and \\'
-[:qq](appendix-a-index.html#qq-adverb)  [:double](appendix-a-index.html#double-adverb)          interpolate with :s, :a, :h, :f, :c, :b
-[:s](appendix-a-index.html#s-adverb)    [:scalar](appendix-a-index.html#scalar-adverb)          interpolate \$ vars
-[:a](appendix-a-index.html#a-adverb)    [:array](appendix-a-index.html#array-adverb)            interpolate @ vars
-[:h](appendix-a-index.html#h-adverb)    [:hash](appendix-a-index.html#hash-adverb)              interpolate % vars
-[:f](appendix-a-index.html#f-adverb)    [:function](appendix-a-index.html#function-adverb)      interpolate & calls
-[:c](appendix-a-index.html#c-adverb)    [:closure](appendix-a-index.html#closure-adverb)        interpolate {...} expressions
-[:b](appendix-a-index.html#b-adverb)    [:backslash](appendix-a-index.html#backsalsh-adverb)    interpolate \\n, \\t, etc. (implies :q at least)
-[:w](appendix-a-index.html#w-adverb)    [:words](appendix-a-index.html#words-adverb)            split result on words (no [quote protection](appendix-g-glossary.html#quote-protection))
-[:ww](appendix-a-index.html#ww-adverb)  [:quotewords](appendix-a-index.html#quotewords-adverb)  split result on words (with [quote protection](appendix-g-glossary.html#quote-protection))
-[:p](appendix-a-index.html#p-adverb)    [:path](appendix-a-index.html#path-adverb)              return a path object (see S16 for more options)
-[:to](appendix-a-index.html#to-adverb)  [:heredoc](appendix-a-index.html#heredoc-adverb)        rarse result as heredoc terminator
-[:x](appendix-a-index.html#x-adverb)    [:exec](appendix-a-index.html#exec-adverb)              execute as command and return results
-&nbsp;                                  [:code](appendix-a-index.html#code-adverb)              [quasiquoting](appendix-g-glossary.html#quasiquoting)
-&nbsp;                                  [:regex](appendix-a-index.html#regex-adverb)            parse as [regex](appendix-g-glossary.html#regex)
-&nbsp;                                  [:subst](appendix-a-index.html#subst-adverb)            parse as substitution
-&nbsp;                                  [:trans](appendix-a-index.html#trans-adverb)            parse as [transliteration](appendix-g-glossary.html#transliteration)
---------------------------------------  ------------------------------------------------------  -------------------------------------------------
+---------------------------------  -------------------------------------------------  -------------------------------------------------
+[:q](appendix-a-index#q-adverb)    [:single](appendix-a-index#single-adverb)          interpolate \\\\ and \\'
+[:qq](appendix-a-index#qq-adverb)  [:double](appendix-a-index#double-adverb)          interpolate with :s, :a, :h, :f, :c, :b
+[:s](appendix-a-index#s-adverb)    [:scalar](appendix-a-index#scalar-adverb)          interpolate \$ vars
+[:a](appendix-a-index#a-adverb)    [:array](appendix-a-index#array-adverb)            interpolate @ vars
+[:h](appendix-a-index#h-adverb)    [:hash](appendix-a-index#hash-adverb)              interpolate % vars
+[:f](appendix-a-index#f-adverb)    [:function](appendix-a-index#function-adverb)      interpolate & calls
+[:c](appendix-a-index#c-adverb)    [:closure](appendix-a-index#closure-adverb)        interpolate {...} expressions
+[:b](appendix-a-index#b-adverb)    [:backslash](appendix-a-index#backsalsh-adverb)    interpolate \\n, \\t, etc. (implies :q at least)
+[:w](appendix-a-index#w-adverb)    [:words](appendix-a-index#words-adverb)            split result on words (no [quote protection](appendix-g-glossary#quote-protection))
+[:ww](appendix-a-index#ww-adverb)  [:quotewords](appendix-a-index#quotewords-adverb)  split result on words (with [quote protection](appendix-g-glossary#quote-protection))
+[:p](appendix-a-index#p-adverb)    [:path](appendix-a-index#path-adverb)              return a path object (see S16 for more options)
+[:to](appendix-a-index#to-adverb)  [:heredoc](appendix-a-index#heredoc-adverb)        rarse result as heredoc terminator
+[:x](appendix-a-index#x-adverb)    [:exec](appendix-a-index#exec-adverb)              execute as command and return results
+&nbsp;                             [:code](appendix-a-index#code-adverb)              [quasiquoting](appendix-g-glossary#quasiquoting)
+&nbsp;                             [:regex](appendix-a-index#regex-adverb)            parse as [regex](appendix-g-glossary#regex)
+&nbsp;                             [:subst](appendix-a-index#subst-adverb)            parse as substitution
+&nbsp;                             [:trans](appendix-a-index#trans-adverb)            parse as [transliteration](appendix-g-glossary#transliteration)
+---------------------------------  -------------------------------------------------  -------------------------------------------------
 
 
 
@@ -728,74 +728,74 @@ Regex Modifier
 --------------
 
 Stay behind the regex op and change the behaviour of the
-[*regex*](appendix-g-glossary.html#regex), its search 
-[*scope*](appendix-g-glossary.html#scope), etc.
+[*regex*](appendix-g-glossary#regex), its search 
+[*scope*](appendix-g-glossary#scope), etc.
 Most can also also put inside a subregex (in brackets).
 
 Short                                          Long                                                                                                                        Meaning
----------------------------------------------  --------------------------------------------------------------------------------------------------------------------------  ---------------------------------------------------------------------------------------------------------
-[:g](appendix-a-index.html#g-modifier)         [:global](appendix-a-index.html#g-modifier)                                                                                 searches for any finding
-[:x(n)](appendix-a-index.html#x-modifier)      &nbsp;                                                                                                                      searches n times (n is an int)
-[:nth(n)](appendix-a-index.html#nth-modifier)  [:st](appendix-a-index.html#st-modifier) [:nd](appendix-a-index.html#nd-modifier) [:rd](appendix-a-index.html#rd-modifier)  demands the nth finding, has many aliases for correct spelling (:2nd)
-[:c(n)](appendix-a-index.html#c-modifier)      [:continue](appendix-a-index.html#continue-modifier)                                                                        searches from nth position (counting from 0)
-[:p(n)](appendix-a-index.html#p-modifier)      [:pos](appendix-a-index.html#pos-modifier)                                                                                  searches only on nth position (counting from 0)
-[:ov](appendix-a-index.html#ov-modifier)       [:overlap](appendix-a-index.html#overlap-modifier)                                                                          searches on all positionens just one time (activates [backtracking](appendix-g-glossary.html#backtracking))
-[:ex](appendix-a-index.html#ex-modifier)       [:exhaustive](appendix-a-index.html#exhaustive-modifier)                                                                    searches on all positions as long as it findes something (activates [backtracking](appendix-g-glossary.html#backtracking))
-&nbsp;                                         [:ratchet](appendix-a-index.html#ratchet-modifier)                                                                          deactivates [backtracking](appendix-g-glossary.html#backtracking)
-&nbsp;                                         [:panic](appendix-a-index.html#panic-modifier)                                                                              overwriting of possible set :ratchet for all subrules (activates [backtracking](appendix-g-glossary.html#backtracking))
-&nbsp;                                         [:keepall](appendix-a-index.html#keepall-modifier)                                                                          subrules have to memorize everything
-[:rw](appendix-a-index.html#rw-modifier)       &nbsp;                                                                                                                      the regex has the right to change the string
-[:s](appendix-a-index.html#s-modifier)         [:sigspace](appendix-a-index.html#sigspace-modifier)                                                                        whitespace just separate parts of the Regex, don't stand for spaces to look for
-[:ss](appendix-a-index.html#ss-modifier)       [:samespace](appendix-a-index.html#samespace-modifier)                                                                      as in :s for substitutions, 1st part replaced with 1st part in second half a.s.o. (ss/teh hsa/the has/;)
-[:i](appendix-a-index.html#i-modifier)         [:ignorecase](appendix-a-index.html#ignorecase-modifier)                                                                    no distinctions between uppercase and lowercase
-[:ii](appendix-a-index.html#ii-modifier)       [:samecase](appendix-a-index.html#samecase-modifier)                                                                        substitute with chars of same case as the matching
-[:m](appendix-a-index.html#m-modifier)         [:ignoremark](appendix-a-index.html#ignoremark-modifier)                                                                    comparing base characters (Unicode non-mark characters) while ignoring any trailing mark characters
-[:mm](appendix-a-index.html#mm-modifier)       [:samemark](appendix-a-index.html#samemark-modifier)                                                                        substitute with chars that has same mark/accent pattern as the matched string
-&nbsp;                                         [:bytes](appendix-a-index.html#bytes-modifier)                                                                              searches on byte level
-&nbsp;                                         [:chars](appendix-a-index.html#chars-modifier)                                                                              searches on character level (default)
-&nbsp;                                         [:codes](appendix-a-index.html#codes-modifier)                                                                              matches between [codepoints](appendix-g-glossary.html#codepoints)
-&nbsp;                                         [:graphs](appendix-a-index.html#graphs-modifier)                                                                            match language-independent [graphemes](appendix-g-glossary.html#graphemes)
-[:P5](appendix-a-index.html#gP5-modifier)      [:Perl5](appendix-a-index.html#Perl5-modifier)                                                                              use the Perl 5 Regex syntax
----------------------------------------------  --------------------------------------------------------------------------------------------------------------------------  ---------------------------------------------------------------------------------------------------------
+----------------------------------------  ---------------------------------------------------------------------------------------------------------------------  ---------------------------------------------------------------------------------------------------------
+[:g](appendix-a-index#g-modifier)         [:global](appendix-a-index#g-modifier)                                                                                 searches for any finding
+[:x(n)](appendix-a-index#x-modifier)      &nbsp;                                                                                                                 searches n times (n is an int)
+[:nth(n)](appendix-a-index#nth-modifier)  [:st](appendix-a-index#st-modifier) [:nd](appendix-a-index#nd-modifier) [:rd](appendix-a-index#rd-modifier)            demands the nth finding, has many aliases for correct spelling (:2nd)
+[:c(n)](appendix-a-index#c-modifier)      [:continue](appendix-a-index#continue-modifier)                                                                        searches from nth position (counting from 0)
+[:p(n)](appendix-a-index#p-modifier)      [:pos](appendix-a-index#pos-modifier)                                                                                  searches only on nth position (counting from 0)
+[:ov](appendix-a-index#ov-modifier)       [:overlap](appendix-a-index#overlap-modifier)                                                                          searches on all positionens just one time (activates [backtracking](appendix-g-glossary#backtracking))
+[:ex](appendix-a-index#ex-modifier)       [:exhaustive](appendix-a-index#exhaustive-modifier)                                                                    searches on all positions as long as it findes something (activates [backtracking](appendix-g-glossary#backtracking))
+&nbsp;                                    [:ratchet](appendix-a-index#ratchet-modifier)                                                                          deactivates [backtracking](appendix-g-glossary#backtracking)
+&nbsp;                                    [:panic](appendix-a-index#panic-modifier)                                                                              overwriting of possible set :ratchet for all subrules (activates [backtracking](appendix-g-glossary#backtracking))
+&nbsp;                                    [:keepall](appendix-a-index#keepall-modifier)                                                                          subrules have to memorize everything
+[:rw](appendix-a-index#rw-modifier)       &nbsp;                                                                                                                 the regex has the right to change the string
+[:s](appendix-a-index#s-modifier)         [:sigspace](appendix-a-index#sigspace-modifier)                                                                        whitespace just separate parts of the Regex, don't stand for spaces to look for
+[:ss](appendix-a-index#ss-modifier)       [:samespace](appendix-a-index#samespace-modifier)                                                                      as in :s for substitutions, 1st part replaced with 1st part in second half a.s.o. (ss/teh hsa/the has/;)
+[:i](appendix-a-index#i-modifier)         [:ignorecase](appendix-a-index#ignorecase-modifier)                                                                    no distinctions between uppercase and lowercase
+[:ii](appendix-a-index#ii-modifier)       [:samecase](appendix-a-index#samecase-modifier)                                                                        substitute with chars of same case as the matching
+[:m](appendix-a-index#m-modifier)         [:ignoremark](appendix-a-index#ignoremark-modifier)                                                                    comparing base characters (Unicode non-mark characters) while ignoring any trailing mark characters
+[:mm](appendix-a-index#mm-modifier)       [:samemark](appendix-a-index#samemark-modifier)                                                                        substitute with chars that has same mark/accent pattern as the matched string
+&nbsp;                                    [:bytes](appendix-a-index#bytes-modifier)                                                                              searches on byte level
+&nbsp;                                    [:chars](appendix-a-index#chars-modifier)                                                                              searches on character level (default)
+&nbsp;                                    [:codes](appendix-a-index#codes-modifier)                                                                              matches between [codepoints](appendix-g-glossary#codepoints)
+&nbsp;                                    [:graphs](appendix-a-index#graphs-modifier)                                                                            match language-independent [graphemes](appendix-g-glossary#graphemes)
+[:P5](appendix-a-index#gP5-modifier)      [:Perl5](appendix-a-index#Perl5-modifier)                                                                              use the Perl 5 Regex syntax
+----------------------------------------  ---------------------------------------------------------------------------------------------------------------------  ---------------------------------------------------------------------------------------------------------
 
 
 Regex Metacharacter
 -------------------
 
----------------------------------------------------------  ----------------------------------------------------------------------------------------------------------
-[`.`](appendix-a-index.html#dot-metachar)                  any character
-[`^`](appendix-a-index.html#caret-metachar)                begin of the sring
-[`^^`](appendix-a-index.html#caret-caret-metachar)         begin of a line
-[`$`](appendix-a-index.html#dollar-metachar)               end of the string
-[`$$`](appendix-a-index.html#dollar-dollar-metachar)       end of a line
-[`(...)`](appendix-a-index.html#round-brackets-metachar)   group patterns and capture the result
-[`[...]`](appendix-a-index.html#square-brackets-metachar)  group patterns without capturing
-[`{...}`](appendix-a-index.html#question-metachar)         execute a closure (Perl 6 code) within a rule
-[`<...>`](appendix-a-index.html#angle-brackets-metachar)   match a subrule (assertion
-[`|`](appendix-a-index.html#pipe-metachar)                 match alternate patterns (logical [OR](appendix-g-glossary.html#or) with [LTM](appendix-g-glossary.html#LTM))
-[`||`](appendix-a-index.html#pipe-pipe-metachar)           match alternate patterns (sequential [OR](appendix-g-glossary.html#or))
-[`&`](appendix-a-index.html#ampersand-metachar)            match multiple patterns ([AND](appendix-g-glossary.html#and))
-[`**`](appendix-a-index.html#asterisk-asterisk-metachar)   muliply this (meta)char/subrule times the following digit on right side
-[`%`](appendix-a-index.html#percent-metachar)              match this (meta)char/subrule as long as separated by (meta)char/subrule on the right
-[`%%`](appendix-a-index.html#percent-percent-metachar)     like %, but allows trailing separator
-[`\`](appendix-a-index.html#escape-char)                   escape a metacharacter to get a literal character, or escape a literal character to get a metacharacter
-[`#`](appendix-a-index.html#pound)                         mark a comment (to the end of the line)
-[`:=`](appendix-a-index.html#colon-equal-op)               bind the result of a match to a hypothetical variable
----------------------------------------------------------  ----------------------------------------------------------------------------------------------------------
+----------------------------------------------------  ----------------------------------------------------------------------------------------------------------
+[`.`](appendix-a-index#dot-metachar)                  any character
+[`^`](appendix-a-index#caret-metachar)                begin of the sring
+[`^^`](appendix-a-index#caret-caret-metachar)         begin of a line
+[`$`](appendix-a-index#dollar-metachar)               end of the string
+[`$$`](appendix-a-index#dollar-dollar-metachar)       end of a line
+[`(...)`](appendix-a-index#round-brackets-metachar)   group patterns and capture the result
+[`[...]`](appendix-a-index#square-brackets-metachar)  group patterns without capturing
+[`{...}`](appendix-a-index#question-metachar)         execute a closure (Perl 6 code) within a rule
+[`<...>`](appendix-a-index#angle-brackets-metachar)   match a subrule (assertion
+[`|`](appendix-a-index#pipe-metachar)                 match alternate patterns (logical [OR](appendix-g-glossary#or) with [LTM](appendix-g-glossary#LTM))
+[`||`](appendix-a-index#pipe-pipe-metachar)           match alternate patterns (sequential [OR](appendix-g-glossary#or))
+[`&`](appendix-a-index#ampersand-metachar)            match multiple patterns ([AND](appendix-g-glossary#and))
+[`**`](appendix-a-index#asterisk-asterisk-metachar)   muliply this (meta)char/subrule times the following digit on right side
+[`%`](appendix-a-index#percent-metachar)              match this (meta)char/subrule as long as separated by (meta)char/subrule on the right
+[`%%`](appendix-a-index#percent-percent-metachar)     like %, but allows trailing separator
+[`\`](appendix-a-index#escape-char)                   escape a metacharacter to get a literal character, or escape a literal character to get a metacharacter
+[`#`](appendix-a-index#pound)                         mark a comment (to the end of the line)
+[`:=`](appendix-a-index#colon-equal-op)               bind the result of a match to a hypothetical variable
+----------------------------------------------------  ----------------------------------------------------------------------------------------------------------
 
 
 Quantifier
 ----------
 
 ------------------------------------------------------------------  -------------------------------------------------------------------------------------------
-[`?`](appendix-a-index.html#question-metachar)                      zero or one
-[`+`](appendix-a-index.html#plus-metachar)                          one or more
-[`*`](appendix-a-index.html#asterisk-metachar)                      zero or more
-[`**`](appendix-a-index.html#asterisk-asterisk-metachar)            maximal greedy matching
-[`**`](appendix-a-index.html#asterisk-asterisk-number-metachar)     muliply this (meta)char/subrule times the following digit on right side
-[`**?`](appendix-a-index.html#asterisk-asterisk-question-metachar)  minimal matching
-[`%`](appendix-a-index.html#percent-metachar)                       match this (meta)char/subrule as long as separated by (meta)char/subrule on the right
-[`%%`](appendix-a-index.html#percent-percent-metachar)              like %, but allows trailing separator
+[`?`](appendix-a-index#question-metachar)                      zero or one
+[`+`](appendix-a-index#plus-metachar)                          one or more
+[`*`](appendix-a-index#asterisk-metachar)                      zero or more
+[`**`](appendix-a-index#asterisk-asterisk-metachar)            maximal greedy matching
+[`**`](appendix-a-index#asterisk-asterisk-number-metachar)     muliply this (meta)char/subrule times the following digit on right side
+[`**?`](appendix-a-index#asterisk-asterisk-question-metachar)  minimal matching
+[`%`](appendix-a-index#percent-metachar)                       match this (meta)char/subrule as long as separated by (meta)char/subrule on the right
+[`%%`](appendix-a-index#percent-percent-metachar)              like %, but allows trailing separator
 ------------------------------------------------------------------  -------------------------------------------------------------------------------------------
 
 
@@ -824,36 +824,36 @@ Escape Sequences
 
 To be used just inside of regexes (rx/.../, m/.../, s/.../.../ and tr/.../.../).
 
-------------------------------------------------  -------------------------------------------------------------------
-[`\0[ ... ]`](appendix-a-index.html#backslash-0)  character given in octal (brackets optional)
-[`\c[ ... ]`](appendix-a-index.html#backslash-c)  named character or control character
-[`\C[ ... ]`](appendix-a-index.html#backslash-C)  any character except the bracketed named or control character
-[`\d`](appendix-a-index.html#backslash-d)         digit
-[`\D`](appendix-a-index.html#backslash-D)         nondigit
-[`\e`](appendix-a-index.html#backslash-e)         escape character
-[`\E`](appendix-a-index.html#backslash-E)         anything but an escape character
-[`\f`](appendix-a-index.html#backslash-f)         form feed
-[`\F`](appendix-a-index.html#backslash-F)         anything but a form feed
-[`\n`](appendix-a-index.html#backslash-n)         (logical) newline
-[`\N`](appendix-a-index.html#backslash-N)         anything but a (logical) newline
-[`\h`](appendix-a-index.html#backslash-h)         horizontal whitespace
-[`\H`](appendix-a-index.html#backslash-H)         anything but horizontal whitespace
-[`\L[ ... ]`](appendix-a-index.html#backslash-L)  Everything within the brackets is lowercase
-[`\Q[ ... ]`](appendix-a-index.html#backslash-Q)  all metacharacters within the brackets match as literal characters
-[`\r`](appendix-a-index.html#backslash-r)         return
-[`\R`](appendix-a-index.html#backslash-R)         anything but a return
-[`\s`](appendix-a-index.html#backslash-s)         any whitespace character, \\h or \\v
-[`\S`](appendix-a-index.html#backslash-S)         anything but whitespace
-[`\t`](appendix-a-index.html#backslash-t)         a tab
-[`\T`](appendix-a-index.html#backslash-T)         anything but a tab
-[`\U[ ... ]`](appendix-a-index.html#backslash-U)  everything within the brackets is uppercase
-[`\v`](appendix-a-index.html#backslash-v)         vertical whitespace
-[`\V`](appendix-a-index.html#backslash-V)         anything but vertical whitespace
-[`\w`](appendix-a-index.html#backslash-X)         word character (Unicode alphanumeric plus "_")
-[`\W`](appendix-a-index.html#backslash-X)         anything but a word character
-[`\x[ ... ]`](appendix-a-index.html#backslash-x)  character given in hexadecimal (brackets optional)
-[`\X[ ... ]`](appendix-a-index.html#backslash-X)  anything but the character given in hexadecimal (brackets optional)
-------------------------------------------------  -------------------------------------------------------------------
+-------------------------------------------  -------------------------------------------------------------------
+[`\0[ ... ]`](appendix-a-index#backslash-0)  character given in octal (brackets optional)
+[`\c[ ... ]`](appendix-a-index#backslash-c)  named character or control character
+[`\C[ ... ]`](appendix-a-index#backslash-C)  any character except the bracketed named or control character
+[`\d`](appendix-a-index#backslash-d)         digit
+[`\D`](appendix-a-index#backslash-D)         nondigit
+[`\e`](appendix-a-index#backslash-e)         escape character
+[`\E`](appendix-a-index#backslash-E)         anything but an escape character
+[`\f`](appendix-a-index#backslash-f)         form feed
+[`\F`](appendix-a-index#backslash-F)         anything but a form feed
+[`\n`](appendix-a-index#backslash-n)         (logical) newline
+[`\N`](appendix-a-index#backslash-N)         anything but a (logical) newline
+[`\h`](appendix-a-index#backslash-h)         horizontal whitespace
+[`\H`](appendix-a-index#backslash-H)         anything but horizontal whitespace
+[`\L[ ... ]`](appendix-a-index#backslash-L)  Everything within the brackets is lowercase
+[`\Q[ ... ]`](appendix-a-index#backslash-Q)  all metacharacters within the brackets match as literal characters
+[`\r`](appendix-a-index#backslash-r)         return
+[`\R`](appendix-a-index#backslash-R)         anything but a return
+[`\s`](appendix-a-index#backslash-s)         any whitespace character, \\h or \\v
+[`\S`](appendix-a-index#backslash-S)         anything but whitespace
+[`\t`](appendix-a-index#backslash-t)         a tab
+[`\T`](appendix-a-index#backslash-T)         anything but a tab
+[`\U[ ... ]`](appendix-a-index#backslash-U)  everything within the brackets is uppercase
+[`\v`](appendix-a-index#backslash-v)         vertical whitespace
+[`\V`](appendix-a-index#backslash-V)         anything but vertical whitespace
+[`\w`](appendix-a-index#backslash-X)         word character (Unicode alphanumeric plus "_")
+[`\W`](appendix-a-index#backslash-X)         anything but a word character
+[`\x[ ... ]`](appendix-a-index#backslash-x)  character given in hexadecimal (brackets optional)
+[`\X[ ... ]`](appendix-a-index#backslash-X)  anything but the character given in hexadecimal (brackets optional)
+-------------------------------------------  -------------------------------------------------------------------
 
 Zero-Width Boundaries
 ---------------------
@@ -861,11 +861,11 @@ Zero-Width Boundaries
 zero-width boundaries begin with a pipe symbol.
 To negate put a ! in front of the pipe symbol.
 
---------------------------------------  -------------------------------------------------------------------
-[`<|c>`](appendix-a-index.html#pipe-c)  [codepoint](appendix-g-glossary.html#codepoint) boundary (always matches in grapheme/codepoint mode)
-[`<|g>`](appendix-a-index.html#pipe-g)  [grapheme](appendix-g-glossary.html#grapheme) boundary (always matches in grapheme mode)
-[`<|w>`](appendix-a-index.html#pipe-w)  word boundary aka \<wb\>
---------------------------------------  -------------------------------------------------------------------
+---------------------------------  -------------------------------------------------------------------
+[`<|c>`](appendix-a-index#pipe-c)  [codepoint](appendix-g-glossary#codepoint) boundary (always matches in grapheme/codepoint mode)
+[`<|g>`](appendix-a-index#pipe-g)  [grapheme](appendix-g-glossary#grapheme) boundary (always matches in grapheme mode)
+[`<|w>`](appendix-a-index#pipe-w)  word boundary aka \<wb\>
+---------------------------------  -------------------------------------------------------------------
 
 
 
@@ -876,32 +876,32 @@ predefined rules (see routine type rule) for any grammar or
 regex. They can have prefixes: . (dot) marks a non-capturing subrule,
 ? and ! are also non-capturing positive and negative zero width assertions.
 
---------------------------------------------------------------------  -------------------------------------------------
-[`<alpha>`](appendix-a-index.html#alpha-subrule)                      single alphabetic character
-[`<upper>`](appendix-a-index.html#upper-subrule)                      uppercase char
-[`<lower>`](appendix-a-index.html#lower-subrule)                      lowercase char
-[`<digit>`](appendix-a-index.html#digit-subrule)                      single digit
-[`<xdigit>`](appendix-a-index.html#xdigit-subrule)                    hexadecimal digit
-[`<alnum>`](appendix-a-index.html#alnum-subrule)                      alphanumeric char, equivalent to <+alpha +digit>
-[`<punct>`](appendix-a-index.html#punct-subrule)                      punctuation char
-[`<ident>`](appendix-a-index.html#ident-subrule)                      an identifier
-[`<print>`](appendix-a-index.html#print-subrule)                      printable char
-[`<graph>`](appendix-a-index.html#graph-subrule)                      "graphical" char like kanji
-[`<cntrl>`](appendix-a-index.html#cntrl-subrule)                      a [control char](#control-chars)
-[`<blank>`](appendix-a-index.html#blank-subrule)                      mostly a space or tab
-[`<space>`](appendix-a-index.html#space-subrule)                      whitespace character aka \s
-[`<ws>`](appendix-a-index.html#ws-subrule)                            whitespace, roughly equals \s*
-[`<wb>`](appendix-a-index.html#wb-subrule)                            zero-width word boundary, spot with between \w and \W
-[`<ww>`](appendix-a-index.html#ww-subrule)                            zero-width inside word spot between \w and \w
-[`<?before pattern>`](appendix-a-index.html#before-subrule)           zero-width lookahead
-[`<!before pattern>`](appendix-a-index.html#before-negative-subrule)  negative zero-width lookahead, true if the pattern does not match
-[`<?after pattern>`](appendix-a-index.html#after-subrule)             zero-width lookbehind
-[`<!after pattern>`](appendix-a-index.html#after-negative-subrule)    negative zero-width lookbehind
-[`<?same>`](appendix-a-index.html#same-subrule)                       zero-width between two identical chars
-[`<prior>`](appendix-a-index.html#prior-subrule)                      last matched pattern
-[`<?>`](appendix-a-index.html#question-subrule)                       matches nothing, always true
-[`<!>`](appendix-a-index.html#exclamation-subrule)                    always false
---------------------------------------------------------------------  -------------------------------------------------
+---------------------------------------------------------------  -------------------------------------------------
+[`<alpha>`](appendix-a-index#alpha-subrule)                      single alphabetic character
+[`<upper>`](appendix-a-index#upper-subrule)                      uppercase char
+[`<lower>`](appendix-a-index#lower-subrule)                      lowercase char
+[`<digit>`](appendix-a-index#digit-subrule)                      single digit
+[`<xdigit>`](appendix-a-index#xdigit-subrule)                    hexadecimal digit
+[`<alnum>`](appendix-a-index#alnum-subrule)                      alphanumeric char, equivalent to <+alpha +digit>
+[`<punct>`](appendix-a-index#punct-subrule)                      punctuation char
+[`<ident>`](appendix-a-index#ident-subrule)                      an identifier
+[`<print>`](appendix-a-index#print-subrule)                      printable char
+[`<graph>`](appendix-a-index#graph-subrule)                      "graphical" char like kanji
+[`<cntrl>`](appendix-a-index#cntrl-subrule)                      a [control char](#control-chars)
+[`<blank>`](appendix-a-index#blank-subrule)                      mostly a space or tab
+[`<space>`](appendix-a-index#space-subrule)                      whitespace character aka \s
+[`<ws>`](appendix-a-index#ws-subrule)                            whitespace, roughly equals \s*
+[`<wb>`](appendix-a-index#wb-subrule)                            zero-width word boundary, spot with between \w and \W
+[`<ww>`](appendix-a-index#ww-subrule)                            zero-width inside word spot between \w and \w
+[`<?before pattern>`](appendix-a-index#before-subrule)           zero-width lookahead
+[`<!before pattern>`](appendix-a-index#before-negative-subrule)  negative zero-width lookahead, true if the pattern does not match
+[`<?after pattern>`](appendix-a-index#after-subrule)             zero-width lookbehind
+[`<!after pattern>`](appendix-a-index#after-negative-subrule)    negative zero-width lookbehind
+[`<?same>`](appendix-a-index#same-subrule)                       zero-width between two identical chars
+[`<prior>`](appendix-a-index#prior-subrule)                      last matched pattern
+[`<?>`](appendix-a-index#question-subrule)                       matches nothing, always true
+[`<!>`](appendix-a-index#exclamation-subrule)                    always false
+---------------------------------------------------------------  -------------------------------------------------
 
 Match Object Methods
 --------------------
@@ -915,7 +915,7 @@ submatch
 `$/.chars`      `$/.to - $/.from`
 `$/.orig`       the original match string
 `$/.Str`        `substr($/.orig, $/.from, $/.chars)`
-`$/.ast`        the [abstract](appendix-g-glossary.html#AST) result associated with this node
+`$/.ast`        the [abstract](appendix-g-glossary#AST) result associated with this node
 `$/.caps`       sequential captures
 `$/.chunks`     sequential tokenization
 `$/.prematch`   `$/.orig.substr(0, $/.from)`
@@ -934,28 +934,28 @@ only for loops) that are started at certain times. They are traits
 (compile time property) of a block object. Those marked with a * can
 also be used within an expression as in `BEGIN my $x = 3 * 3;`.
 
-------------------------------------------------------  ------------------------------------------------------------------
-[BEGIN](appendix-a-index.html#BEGIN-phaser) {...}*      at compile time, ASAP, only ever runs once
-[CHECK](appendix-a-index.html#CHECK-phaser) {...}*      at compile time, ALAP, only ever runs once
-&nbsp;                                                  &nbsp;
-[INIT](appendix-a-index.html#INIT-phaser) {...}*        at run time, ASAP, only ever runs once
-[END](appendix-a-index.html#END-phaser) {...}           at run time, ALAP, only ever runs once
-&nbsp;                                                  &nbsp;
-[ENTER](appendix-a-index.html#ENTER-phaser) {...}*      at every block entry time, repeats on loop blocks.
-[LEAVE](appendix-a-index.html#LEAVE-phaser) {...}       at every block exit time
-[KEEP](appendix-a-index.html#KEEP-phaser) {...}         at every successful block exit, part of LEAVE queue
-[UNDO](appendix-a-index.html#UNDO-phaser) {...}         at every unsuccessful block exit, part of LEAVE queue
-&nbsp;                                                  &nbsp;
-[FIRST](appendix-a-index.html#FIRST-phaser) {...}*      at loop initialization time, before any ENTER
-[NEXT](appendix-a-index.html#NEXT-phaser) {...}         at loop continuation time, before any LEAVE
-[LAST](appendix-a-index.html#LAST-phaser) {...}         at loop termination time, after any LEAVE
-&nbsp;                                                  &nbsp;
-[PRE](appendix-a-index.html#PRE-phaser) {...}           assert precondition at every block entry, before ENTER
-[POST](appendix-a-index.html#POST-phaser) {...}         assert postcondition at every block exit, after LEAVE
-&nbsp;                                                  &nbsp;
-[CATCH](appendix-a-index.html#CATCH-phaser) {...}       catch exceptions, before LEAVE
-[CONTROL](appendix-a-index.html#CONTROL-phaser) {...}   catch control exceptions (like next/last/return etc), before LEAVE
-------------------------------------------------------  ------------------------------------------------------------------
+-------------------------------------------------  ------------------------------------------------------------------
+[BEGIN](appendix-a-index#BEGIN-phaser) {...}*      at compile time, ASAP, only ever runs once
+[CHECK](appendix-a-index#CHECK-phaser) {...}*      at compile time, ALAP, only ever runs once
+&nbsp;                                             &nbsp;
+[INIT](appendix-a-index#INIT-phaser) {...}*        at run time, ASAP, only ever runs once
+[END](appendix-a-index#END-phaser) {...}           at run time, ALAP, only ever runs once
+&nbsp;                                             &nbsp;
+[ENTER](appendix-a-index#ENTER-phaser) {...}*      at every block entry time, repeats on loop blocks.
+[LEAVE](appendix-a-index#LEAVE-phaser) {...}       at every block exit time
+[KEEP](appendix-a-index#KEEP-phaser) {...}         at every successful block exit, part of LEAVE queue
+[UNDO](appendix-a-index#UNDO-phaser) {...}         at every unsuccessful block exit, part of LEAVE queue
+&nbsp;                                             &nbsp;
+[FIRST](appendix-a-index#FIRST-phaser) {...}*      at loop initialization time, before any ENTER
+[NEXT](appendix-a-index#NEXT-phaser) {...}         at loop continuation time, before any LEAVE
+[LAST](appendix-a-index#LAST-phaser) {...}         at loop termination time, after any LEAVE
+&nbsp;                                             &nbsp;
+[PRE](appendix-a-index#PRE-phaser) {...}           assert precondition at every block entry, before ENTER
+[POST](appendix-a-index#POST-phaser) {...}         assert postcondition at every block exit, after LEAVE
+&nbsp;                                             &nbsp;
+[CATCH](appendix-a-index#CATCH-phaser) {...}       catch exceptions, before LEAVE
+[CONTROL](appendix-a-index#CONTROL-phaser) {...}   catch control exceptions (like next/last/return etc), before LEAVE
+-------------------------------------------------  ------------------------------------------------------------------
 
 
 
@@ -963,112 +963,112 @@ Jump Commands
 -------------
 
 
-----------------------------------------  --------------------------------------------------------------
-[goto](appendix-a-index.html#goto)        jump to a named label
-[redo](appendix-a-index.html#redo)        repeat this loop turn
-[next](appendix-a-index.html#next)        skip to the next loop turn
-[last](appendix-a-index.html#last)        leave this loop now
-[succeed](appendix-a-index.html#'succeed) leave this [when](appendix-a-index.html#when) clause and surrounding [given](appendix-a-index.html#given) block
-[proceed](appendix-a-index.html#proceed)  check next [when](appendix-a-index.html#when) clauses
-[leave](appendix-a-index.html#leave)      leave this [block](appendix-g-glossary.html#block) with a return value
-[return](appendix-a-index.html#return)    leave this [routine](appendix-g-glossary.html#routine) with a return value
-----------------------------------------  --------------------------------------------------------------
+-----------------------------------  --------------------------------------------------------------
+[goto](appendix-a-index#goto)        jump to a named label
+[redo](appendix-a-index#redo)        repeat this loop turn
+[next](appendix-a-index#next)        skip to the next loop turn
+[last](appendix-a-index#last)        leave this loop now
+[succeed](appendix-a-index#'succeed) leave this [when](appendix-a-index#when) clause and surrounding [given](appendix-a-index#given) block
+[proceed](appendix-a-index#proceed)  check next [when](appendix-a-index#when) clauses
+[leave](appendix-a-index#leave)      leave this [block](appendix-g-glossary#block) with a return value
+[return](appendix-a-index#return)    leave this [routine](appendix-g-glossary#routine) with a return value
+-----------------------------------  --------------------------------------------------------------
 
 
 
 Conditionals
 ------------
 
---------------------------------------------  --------------------------------------------------------------------------------------
-[if](appendix-a-index.html#if)                when following expression evals in boolean context to True, the block that following after that will be executed
-[elsif](appendix-a-index.html#elsif)          works like if, but only recognized if no preceding "if" or "elsif" clause was executed
-[else](appendix-a-index.html#else)            following block will be executed, when no preceding "if" or "elsif" clause was executed
-[unless](appendix-a-index.html#unless)        opposite of **if**,  alias to **if not**, no "elsif" or "else" is allowed to follow
-[?? !!](appendix-a-index.html#conditional-op) cond ?? term1 !! term2 id short form of if cond {term1} else {term2}
-[ff](appendix-a-index.html#ff)                awk style flip flop, in P5 .. in scalar context
-[fff](appendix-a-index.html#fff)              sed style flip flop, in P5 ... in scalar context
-[given](appendix-a-index.html#given)          evals an expression into scalar context assignes it to **\$\_** for the following block
-[when](appendix-a-index.html#when)            smartmatches an expression against `$_`; if the result is True, the following block will be executed
-[default](appendix-a-index.html#default)      following block will be executed, when no "when" clause was executed
---------------------------------------------  --------------------------------------------------------------------------------------
+---------------------------------------  --------------------------------------------------------------------------------------
+[if](appendix-a-index#if)                when following expression evals in boolean context to True, the block that following after that will be executed
+[elsif](appendix-a-index#elsif)          works like if, but only recognized if no preceding "if" or "elsif" clause was executed
+[else](appendix-a-index#else)            following block will be executed, when no preceding "if" or "elsif" clause was executed
+[unless](appendix-a-index#unless)        opposite of **if**,  alias to **if not**, no "elsif" or "else" is allowed to follow
+[?? !!](appendix-a-index#conditional-op) cond ?? term1 !! term2 id short form of if cond {term1} else {term2}
+[ff](appendix-a-index#ff)                awk style flip flop, in P5 .. in scalar context
+[fff](appendix-a-index#fff)              sed style flip flop, in P5 ... in scalar context
+[given](appendix-a-index#given)          evals an expression into scalar context assignes it to **\$\_** for the following block
+[when](appendix-a-index#when)            smartmatches an expression against `$_`; if the result is True, the following block will be executed
+[default](appendix-a-index#default)      following block will be executed, when no "when" clause was executed
+---------------------------------------  --------------------------------------------------------------------------------------
 
 
 Loops
 -----
 
---------------------------------------  -----------------------------------------------------------
-[loop](appendix-a-index.html#loop)      general (endless) loop, unless used as an C-style-loop, evals following expression into void context
-[while](appendix-a-index.html#repeat)   loop with negative exit condition (exit when False), condition, evals expression into boolean context
-[until](appendix-a-index.html#until)    loop with positive exit condition(exit when True), evals expression into boolean context
-[repeat](appendix-a-index.html#repeat)  initial command for while or until loops that have their condtion at the end
-[do](appendix-a-index.html#do)          runs that block in any case one time, "do once"-loop
-[for](appendix-a-index.html#for )       evals expression into lazy list context and iterates over that list from first to last value, sets each time `$_` (can be combined with **when** as well),
---------------------------------------  -----------------------------------------------------------
+---------------------------------  -----------------------------------------------------------
+[loop](appendix-a-index#loop)      general (endless) loop, unless used as an C-style-loop, evals following expression into void context
+[while](appendix-a-index#repeat)   loop with negative exit condition (exit when False), condition, evals expression into boolean context
+[until](appendix-a-index#until)    loop with positive exit condition(exit when True), evals expression into boolean context
+[repeat](appendix-a-index#repeat)  initial command for while or until loops that have their condtion at the end
+[do](appendix-a-index#do)          runs that block in any case one time, "do once"-loop
+[for](appendix-a-index#for )       evals expression into lazy list context and iterates over that list from first to last value, sets each time `$_` (can be combined with **when** as well),
+---------------------------------  -----------------------------------------------------------
 
 
 
 Routines
 --------
 
-routine definition: \[[scope](ap-b-lookup.html#scopes)\] \[modifier\]
-type \[name\] \[trait\] ([signature](appendix-g-glossary.html#signature)) { block }
+routine definition: \[[scope](ap-b-lookup#scopes)\] \[modifier\]
+type \[name\] \[trait\] ([signature](appendix-g-glossary#signature)) { block }
 
 
 ### Routine Types ###
 
-----------------------------------------------  -------------------------------------------------------------------------------------------------------
-[sub](appendix-a-index.html#sub)                normal routine, named block with parmeters
-[method](appendix-a-index.html#method)          inheritable object methods
-[submethod](appendix-a-index.html#submethod)    not inheritable methods
-[regex](appendix-a-index.html#regex)            routine that executes a regular expression
-[rule](appendix-a-index.html#rule)              alias to regex [:ratchet](appendix-a-index.html#ratchet-modifier) [:sigspace](appendix-a-index.html#sigspace-modifier)
-[token](appendix-a-index.html#token)            alias to regex [:ratchet](appendix-a-index.html#ratchet-modifier)
-[macro](appendix-a-index.html#macro)            routine that is compiled to an [AST](appendix-g-glossary.html#AST) at BEGIN ([ASAP](appendix-g-glossary.html#ASAP), compile time)
-[quasi](appendix-a-index.html#quasi)            block that is compiled to an [AST](appendix-g-glossary.html#AST) at runtime
-----------------------------------------------  -------------------------------------------------------------------------------------------------------
+-----------------------------------------  -------------------------------------------------------------------------------------------------------
+[sub](appendix-a-index#sub)                normal routine, named block with parmeters
+[method](appendix-a-index#method)          inheritable object methods
+[submethod](appendix-a-index#submethod)    not inheritable methods
+[regex](appendix-a-index#regex)            routine that executes a regular expression
+[rule](appendix-a-index#rule)              alias to regex [:ratchet](appendix-a-index#ratchet-modifier) [:sigspace](appendix-a-index#sigspace-modifier)
+[token](appendix-a-index#token)            alias to regex [:ratchet](appendix-a-index#ratchet-modifier)
+[macro](appendix-a-index#macro)            routine that is compiled to an [AST](appendix-g-glossary#AST) at BEGIN ([ASAP](appendix-g-glossary#ASAP), compile time)
+[quasi](appendix-a-index#quasi)            block that is compiled to an [AST](appendix-g-glossary#AST) at runtime
+-----------------------------------------  -------------------------------------------------------------------------------------------------------
 
 
 
 ### Routine Modifier ###
 
------------------------------------------------------  -------------------------------------------------------------------------------------------------------
-[multi](appendix-a-index.html#multi-routine-modifier)  marks routines, which can have siblings with same name but different signature; when called, the one with matching sig is executed
-[only](appendix-a-index.html#only-routine-modifier)    routines which don't allow siblings (this is default, you may leave it out)
-[proto](appendix-a-index.html#proto-routine-modifier)  fallback for multi, if no multi signature matches the caller, a proto with same name is executed
------------------------------------------------------  -------------------------------------------------------------------------------------------------------
+------------------------------------------------  -------------------------------------------------------------------------------------------------------
+[multi](appendix-a-index#multi-routine-modifier)  marks routines, which can have siblings with same name but different signature; when called, the one with matching sig is executed
+[only](appendix-a-index#only-routine-modifier)    routines which don't allow siblings (this is default, you may leave it out)
+[proto](appendix-a-index#proto-routine-modifier)  fallback for multi, if no multi signature matches the caller, a proto with same name is executed
+------------------------------------------------  -------------------------------------------------------------------------------------------------------
 
 
 ### Routine Traits ###
 
 [phasers](#closure-traits) (closure traits) can also be seen as routine traits.
 
-----------------------------------------------------------  -------------------------------------------------------------------------------------
-[export](appendix-a-index.html#export-routine-trait)        this routine will be exported my the current module by default
-[will do](appendix-a-index.html#will-do-routine-trait)      block of code executed when the subroutine is called. Normally declared implicitly, by providing a block after the subroutine's signature definition
-[signature](appendix-a-index.html#signature-routine-trait)  signature of a subroutine. Normally declared implicitly, by providing a parameter list and/or return type
-[as](appendix-a-index.html#as-routine-trait)                inner [type constraint](appendix-g-glossary.html#type-constraint) that a routine imposes on its return value
-[of](appendix-a-index.html#of-routine-trait)                official return type of the routine
-[cached](appendix-a-index.html#cached-routine-trait)        marks a [subroutine](appendix-g-glossary.html#subroutine) as being memoized
-[rw](appendix-a-index.html#rw-routine-trait)                marks a [subroutine](appendix-g-glossary.html#subroutine) as returning an [lvalue](appendix-g-glossary.html#lvalue)
-[parsed](appendix-a-index.html#parsed-routine-trait)        macro is parsed once, is hygienic, only parsed can be used
-[reparsed](appendix-a-index.html#reparsed-routine-trait)    macro parsed twice, not hygienic, later parsed can be used
-[tighter](appendix-a-index.html#tighter-routine-trait)      specifies the [precedence](#table-of-precedence) of an operator higher than an existing operator as seen here
-[looser](appendix-a-index.html#looser-routine-trait)        specifies the [precedence](#table-of-precedence) of an operator lower than an existing operator as seen here
-[equiv](appendix-a-index.html#equiv-routine-trait)          specifies the [precedence](#table-of-precedence) of an operator same as an existing operator as seen here
-[assoc](appendix-a-index.html#assoc-routine-trait)          specifies the [associativity](#operator-associativity) of an operator explicitly as seen here
-----------------------------------------------------------  -------------------------------------------------------------------------------------
+-----------------------------------------------------  -------------------------------------------------------------------------------------
+[export](appendix-a-index#export-routine-trait)        this routine will be exported my the current module by default
+[will do](appendix-a-index#will-do-routine-trait)      block of code executed when the subroutine is called. Normally declared implicitly, by providing a block after the subroutine's signature definition
+[signature](appendix-a-index#signature-routine-trait)  signature of a subroutine. Normally declared implicitly, by providing a parameter list and/or return type
+[as](appendix-a-index#as-routine-trait)                inner [type constraint](appendix-g-glossary#type-constraint) that a routine imposes on its return value
+[of](appendix-a-index#of-routine-trait)                official return type of the routine
+[cached](appendix-a-index#cached-routine-trait)        marks a [subroutine](appendix-g-glossary#subroutine) as being memoized
+[rw](appendix-a-index#rw-routine-trait)                marks a [subroutine](appendix-g-glossary#subroutine) as returning an [lvalue](appendix-g-glossary#lvalue)
+[parsed](appendix-a-index#parsed-routine-trait)        macro is parsed once, is hygienic, only parsed can be used
+[reparsed](appendix-a-index#reparsed-routine-trait)    macro parsed twice, not hygienic, later parsed can be used
+[tighter](appendix-a-index#tighter-routine-trait)      specifies the [precedence](#table-of-precedence) of an operator higher than an existing operator as seen here
+[looser](appendix-a-index#looser-routine-trait)        specifies the [precedence](#table-of-precedence) of an operator lower than an existing operator as seen here
+[equiv](appendix-a-index#equiv-routine-trait)          specifies the [precedence](#table-of-precedence) of an operator same as an existing operator as seen here
+[assoc](appendix-a-index#assoc-routine-trait)          specifies the [associativity](#operator-associativity) of an operator explicitly as seen here
+-----------------------------------------------------  -------------------------------------------------------------------------------------
 
 
 ### Parameter Traits ###
 
------------------------------------------------------------  -----------------------------------------------------------------------------
-[as](appendix-a-index.html#as-parameter-trait)               data coming through that parameter will be coerced to the type following as
-[readonly](appendix-a-index.html#readonly-parameter-trait)   immutable parameter
-[rw](appendix-a-index.html#rw-parameter-trait)               mutable parameter (rw stands for: read write)
-[copy](appendix-a-index.html#copy-parameter-trait)           read-writable copy of the original argument ("pass-by-value")
-[dynamic](appendix-a-index.html#dynamic-parameter-trait)     parameter is an "environmental" variable, a lexical in the dynamic [scope](appendix-g-glossary.html#scope)
-[parcel](appendix-a-index.html#parcel-parameter-trait)       raw reference, will not be contextualized
------------------------------------------------------------  -----------------------------------------------------------------------------
+------------------------------------------------------  -----------------------------------------------------------------------------
+[as](appendix-a-index#as-parameter-trait)               data coming through that parameter will be coerced to the type following as
+[readonly](appendix-a-index#readonly-parameter-trait)   immutable parameter
+[rw](appendix-a-index#rw-parameter-trait)               mutable parameter (rw stands for: read write)
+[copy](appendix-a-index#copy-parameter-trait)           read-writable copy of the original argument ("pass-by-value")
+[dynamic](appendix-a-index#dynamic-parameter-trait)     parameter is an "environmental" variable, a lexical in the dynamic [scope](appendix-g-glossary#scope)
+[parcel](appendix-a-index#parcel-parameter-trait)       raw reference, will not be contextualized
+------------------------------------------------------  -----------------------------------------------------------------------------
 
 
 
@@ -1076,40 +1076,40 @@ type \[name\] \[trait\] ([signature](appendix-g-glossary.html#signature)) { bloc
 
 In routine and block definitions can be also some character with special meaning
 
--------------------------------------------------------------  ------------------------------------------------------------------------------------------------------------------
-[`!`](appendix-a-index.html#exclamation-mark-signature)        suffix of required parameter (default when named, not positional)
-[`*`](appendix-a-index.html#asterisk-signature)                prefix of slurpy arrays
-[`-->`](appendix-a-index.html#minus-minus-greater-signature)   prefix of return type
-[`->`](appendix-a-index.html#minus-greater-signature)          prefix of named readonly parameters for a block (pointy block syntax)
-[`:`](appendix-a-index.html#colon-signature)                   prefix of named parameter, positional when without
-[`::`](appendix-a-index.html#colon-colon-signature)            prefix of a variable type introduced in a signature
-[`<->`](appendix-a-index.html#lower-minus-greater-signature)   prefix of named writeable parameters for a block (double pointy block syntax)
-[`?`](appendix-a-index.html#question-mark-signature)           suffix of optional parameter (default when positional, not named)
-[`^`](appendix-a-index.html#caret-signature)                   prefix of metaclass methods, `$obj.^methods();` is shortcut for [`$obj.HOW.methods($obj);`](#object-introspection)
--------------------------------------------------------------  ------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------  ------------------------------------------------------------------------------------------------------------------
+[`!`](appendix-a-index#exclamation-mark-signature)        suffix of required parameter (default when named, not positional)
+[`*`](appendix-a-index#asterisk-signature)                prefix of slurpy arrays
+[`-->`](appendix-a-index#minus-minus-greater-signature)   prefix of return type
+[`->`](appendix-a-index#minus-greater-signature)          prefix of named readonly parameters for a block (pointy block syntax)
+[`:`](appendix-a-index#colon-signature)                   prefix of named parameter, positional when without
+[`::`](appendix-a-index#colon-colon-signature)            prefix of a variable type introduced in a signature
+[`<->`](appendix-a-index#lower-minus-greater-signature)   prefix of named writeable parameters for a block (double pointy block syntax)
+[`?`](appendix-a-index#question-mark-signature)           suffix of optional parameter (default when positional, not named)
+[`^`](appendix-a-index#caret-signature)                   prefix of metaclass methods, `$obj.^methods();` is shortcut for [`$obj.HOW.methods($obj);`](#object-introspection)
+--------------------------------------------------------  ------------------------------------------------------------------------------------------------------------------
 
 Callframe Methods
 -----------------
 
 A callframe object is generated at run-time for each call of a block of code.
-If a block of code includes a [**callframe()**](appendix-a-index.html#callframe) call,
+If a block of code includes a [**callframe()**](appendix-a-index#callframe) call,
 the value returned from that call is the callframe object corresponding to the block of code.
 To get the value of other blocks and routines higher in the call stack, use callframe with args,
-or [**caller**](appendix-a-index.html#caller), with or without args.
+or [**caller**](appendix-a-index#caller), with or without args.
 
 Once you have a callframe object, you can call the following methods on it:
 
-------------------------------------------------------  -----------------------------------
-[args](appendix-a-index.html#args-callframe)            capture of args passed for this callframe
-[callframe](appendix-a-index.html#callframe-callframe)  callframe call which navigates relative to self
-[caller](appendix-a-index.html#caller-callframe)        caller call which navigates relative to self
-[file](appendix-a-index.html#file-callframe)            source .file corresponding to callframe
-[hints](appendix-a-index.html#hints-callframe)          compiler symbols in effect during  originally compilation
-[inline](appendix-a-index.html#inline-callframe)        did control structure create callframe (rather than user)  
-[leave](appendix-a-index.html#leave-callframe)          leave (return from) a particular callframe
-[line](appendix-a-index.html#line-callframe)            line number in source .file corresponding to callframe
-[my](appendix-a-index.html#my-callframe)                access to callframe's lexicals (read only)
-[package](appendix-a-index.html#package-callframe)      
-------------------------------------------------------  -----------------------------------
+-------------------------------------------------  -----------------------------------
+[args](appendix-a-index#args-callframe)            capture of args passed for this callframe
+[callframe](appendix-a-index#callframe-callframe)  callframe call which navigates relative to self
+[caller](appendix-a-index#caller-callframe)        caller call which navigates relative to self
+[file](appendix-a-index#file-callframe)            source .file corresponding to callframe
+[hints](appendix-a-index#hints-callframe)          compiler symbols in effect during  originally compilation
+[inline](appendix-a-index#inline-callframe)        did control structure create callframe (rather than user)  
+[leave](appendix-a-index#leave-callframe)          leave (return from) a particular callframe
+[line](appendix-a-index#line-callframe)            line number in source .file corresponding to callframe
+[my](appendix-a-index#my-callframe)                access to callframe's lexicals (read only)
+[package](appendix-a-index#package-callframe)      
+-------------------------------------------------  -----------------------------------
 
 ***

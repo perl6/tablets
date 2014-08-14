@@ -3,7 +3,7 @@
 > Perl folklore: Perl is an operator based language.
 
 Perl 6 knows a huge amount of [*operators*](appendix-g-glossary.html#operator),
-because they support 2 of the main [design goals](tablet-1-language-design.html.html#):
+because they support 2 of the main [design goals](tablet-1-language-design.html):
 they enable **dense** and **intuitive readable** code.
 2 + 3 is certainly shorter and easier to understand then add(2,3),
 since [pictograms](tablet-1-language-design.html.html#visual-metaphor)
@@ -18,12 +18,16 @@ Please make also sure you understand the important operator related terms:
 and [**associativity**](appendix-g-glossary#associativity) (operand priority) .
 
 
-Assignment ops
-==============
+
+Assignment
+==========
 
 =
 
-self assigning ops
+
+[self assigning ops](#self-assigning)
+
+[variable]()
 
 
 Binding
@@ -36,6 +40,15 @@ Binding
 
 Comparison
 ==========
+
+
+Equality
+--------
+
+    eqv ===
+    != !==
+    eq ==
+
 
 
 Smartmatch
@@ -56,13 +69,6 @@ regex](tablet-9-regexes.html#matching) semantically sane.
 
     ~~ !~~
 
-
-
-Equality
---------
-
-    eqv eq == ===
-    != !==
 
 
 
@@ -216,14 +222,15 @@ The simplest way to create a list is by repeating some values:
     'munch' xx 3 # results in 'munch', 'munch', 'munch'
     ('hallo', 'echo') xx 2 --> 'hallo', 'echo', 'hallo', 'echo'
 
-### Range Operator ###
+
+Range Operator
 
 In list context the range operator produces lists:
 
     @ 2 .. 7 --> 2,3,4,5,6,7
 
 
-### Sequence Operator ###
+Sequence Operator
 
     ...
 
@@ -255,16 +262,19 @@ Combinators
 Meta Ops
 ========
 
-self assigning 
+
+
+self assigning
 --------------
 
 
-Meta R
-------
+negation
+--------
 
 
 Meta R
 ------
+
 
 Meta S
 ------
@@ -276,18 +286,10 @@ Meta Z
     Z
 
 
-
 Meta X
 ------
 
     X
-
-
-
-Hyperops
---------
-
-    « » << >>
 
 
 
@@ -304,6 +306,10 @@ Triangle
     [\ ]
 
 
+Hyperops
+--------
+
+    « » << >>
 
 
 
@@ -314,10 +320,12 @@ precedence table
 
 
 
+
 Intentionally Not Existing
 ==========================
 
-XXX
+
+ =~
 
 
 
