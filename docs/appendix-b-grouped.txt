@@ -156,7 +156,7 @@ Name                                     Value             Meaning
 [e](appendix-a-index#e-constant)    2.71828182878434  [euler number](appendix-g-glossary#e)
 [i](appendix-a-index#i-constant)    0+1i              [imaginary number](appendix-g-glossary#i)
 [pi](appendix-a-index#pi-constant)  3.14159265394248  [ratio of a circle's circumference to its diameter](appendix-g-glossary#pi)
----------------------------------  ----------------  -----------------------------------
+----------------------------------  ----------------  -----------------------------------
 
 
 Scope
@@ -540,13 +540,13 @@ The [**infix**](appendix-a-index#infix-category)
 the ops in second column are to be applied to a [*list*](appendix-g-glossary#list)
 as prefix op or [*method*](appendix-g-glossary#method).
 
-Junctive Infix Op                        Prefix Op                           Operation                                Meaning
-----------------------------------  -----------------------------  ----------------------------------  -----------------------------------
+Junctive Infix Op                   Prefix Op                      Operation                           Meaning
+----------------------------------  -----------------------------  ----------------------------------  -----------------------------------------------
 [&](appendix-a-index#ampersand-op)  [all](appendix-a-index#all)    [AND](appendix-g-glossary#and)      [True](appendix-a-index#True) if all are True
 [\^](appendix-a-index#caret-op)     [one](appendix-a-index#one)    [XOR](appendix-g-glossary#xor)      [True](appendix-a-index#True) if exactly one is True
 [|](appendix-a-index#pipe-op)       [any](appendix-a-index#any)    [OR](appendix-g-glossary#or)        [True](appendix-a-index#True) if at least one is True
 &nbsp;                              [none](appendix-a-index#none)  [NOT](appendix-g-glossary#not) any  [True](appendix-a-index#True) if none are True
-----------------------------------  -----------------------------  ----------------------------------  -----------------------------------
+----------------------------------  -----------------------------  ----------------------------------  -----------------------------------------------
 
 
 Smartmatch
@@ -560,8 +560,8 @@ Selection of the comparison alhorithm (4th column) is based on the value
 [*types*](appendix-g-glossary#type) as stated in the first two columns.
 
 
-`$_`                                               X                                                  Type of Match Implied                             Match if (given `$_`)
---------------------------------------------  --------------------------------------------  ------------------------------------------   ----------------------------------------------------------
+`$_`                                          X                                             Type of Match Implied                        Match if (given `$_`)
+--------------------------------------------  --------------------------------------------  ------------------------------------------   --------------------------------------
 [Any](appendix-a-index#Any-type)              [True](appendix-a-index#True)                 `~~` [True](appendix-a-index#True)           (parsewarn)
 [Any](appendix-a-index#Any-type)              [False](appendix-a-index#False)               `~~` [False](appendix-a-index#False) match   (parsewarn)
 [Any](appendix-a-index#Any-type)              [Match](appendix-a-index#Match-type)          `~~` Successful match                        (parsewarn on literal token)
@@ -623,7 +623,7 @@ Callable                                           [Hash](appendix-a-index#Hash-
 [Signature](appendix-a-index#Signature-type)  [Capture](appendix-a-index#Capture-type)      parameters bindable                          X could bind to $_
 &nbsp;   &nbsp;    &nbsp;   &nbsp;
 [Any](appendix-a-index#Any-type)              [Any](appendix-a-index#Any-type)              scalars are identical                        `$_ === X`
--------------------------------------------   --------------------------------------------  ------------------------------------------   ----------------------------------------------------------
+-------------------------------------------   --------------------------------------------  ------------------------------------------   --------------------------------------
 
 
 Test Methods
@@ -669,7 +669,7 @@ The [basic quoting](tablet-2-basic-syntax#quoting)
 operator (Q) does nothing, just taking literally what you quoted as a string.
 But with several adverbs, it behaves like the well known following ops:
 
-Op                                       Nonealphanumeric Version                      Translated Into Quoting Adverbs                                                                                                          Method Version                           Meaning
+Op                                  Nonealphanumeric Version                 Translated Into Quoting Adverbs                                                                                            Method Version                             Meaning
 ----------------------------------  ---------------------------------------- -------------------------------------------------------------------------------------------------------------------------  ----------------------------------  ----------------------------------------------------------
 [q//](appendix-a-index#q-op)        [' '](appendix-a-index#single-quotes)    [Q](appendix-a-index#Q-op) [:q](appendix-a-index#q-adverb) //                                                              &nbsp;                              [single](appendix-g-glossary#single-quoting), simple nonevaluating quotes
 [qq//](appendix-a-index#qq-op)      [" "](appendix-a-index#double-quotes)    [Q](appendix-a-index#Q-op) [:qq](appendix-a-index#qq-adverb) //                                                            &nbsp;                              [double](appendix-g-glossary#double-quoting), evaluating quotes
@@ -679,11 +679,11 @@ Op                                       Nonealphanumeric Version               
 [qqx//](appendix-a-index#qqx-op)    &nbsp;                                   [Q](appendix-a-index#Q-op) [:qq](appendix-a-index#qq-adverb) [:x](appendix-a-index#x-adverb) //                            &nbsp;                              command execution (system call) [with evaluation](appendix-g-glossary#double-quoting)
 [qp//](appendix-a-index#qp-op)      &nbsp;                                   [Q](appendix-a-index#Q-op) [:q](appendix-a-index#q-adverb) [:p](appendix-a-index#p-adverb) //                              &nbsp;                              paths
 [rx//](appendix-a-index#rx-op)      &nbsp;                                   [Q](appendix-a-index#Q-op) [:regex](appendix-a-index#regex-adverb) //                                                      &nbsp;                              [regex](appendix-g-glossary#regex)
-[m//](appendix-a-index#m-op)        &nbsp;                                   [Q](appendix-a-index#Q-op) [:match](appendix-a-index#match-adverb) //                                                      [.match()](appendix-a-index#match)  matching
+[m//](appendix-a-index#m-op)        &nbsp;                                   [Q](appendix-a-index#Q-op) [:match](appendix-a-index#match-adverb) //                                                     [.match()](appendix-a-index#match)  matching
 [ms//](appendix-a-index#ms-op)      &nbsp;                                   [Q](appendix-a-index#Q-op) [:match](appendix-a-index#match-adverb) [:sigspace](appendix-a-index#sigspace-modifier) //      &nbsp;                              matching, spaces divide words
-[s///](appendix-a-index#s-op)       &nbsp;                                   [Q](appendix-a-index#Q-op) [:subst](appendix-a-index#subst-adverb) ///                                                     [.subst()](appendix-a-index#subst)  substitution
-[ss///](appendix-a-index#ss-op)     &nbsp;                                   [Q](appendix-a-index#Q-op) [:subst](appendix-a-index#subst-adverb) [:samespace](appendix-a-index#samespace-modifier) ///    &nbsp;                             substitution, spaces divide words
-[tr///](appendix-a-index#tr-op)     &nbsp;                                   [Q](appendix-a-index#Q-op) [:trans](appendix-a-index#trans-adverb) ///                                                     [.trans()](appendix-a-index#trans)  [transliteration](appendix-g-glossary#transliteration)
+[s///](appendix-a-index#s-op)       &nbsp;                                   [Q](appendix-a-index#Q-op) [:subst](appendix-a-index#subst-adverb) ///                                                    [.subst()](appendix-a-index#subst)  substitution
+[ss///](appendix-a-index#ss-op)     &nbsp;                                   [Q](appendix-a-index#Q-op) [:subst](appendix-a-index#subst-adverb) [:samespace](appendix-a-index#samespace-modifier) ///  &nbsp;                             substitution, spaces divide words
+[tr///](appendix-a-index#tr-op)     &nbsp;                                   [Q](appendix-a-index#Q-op) [:trans](appendix-a-index#trans-adverb) ///                                                    [.trans()](appendix-a-index#trans)  [transliteration](appendix-g-glossary#transliteration)
 [quasi {}](appendix-a-index#quasi)  &nbsp;                                   [Q](appendix-a-index#Q-op) [:code](appendix-a-index#code-adverb) //                                                        &nbsp;                              [quasiquoting](appendix-g-glossary#quasiquoting)
 ---------------------------------  ----------------------------------------- -------------------------------------------------------------------------------------------------------------------------  ----------------------------------  ----------------------------------------------------------
 
@@ -701,7 +701,7 @@ The Adverbs can used with any quoting operator like:
 [Q](appendix-a-index#Q-op) :s/.../ or
 [qq](appendix-a-index#qq-op) :p /.../.
 
-Short                                   Long                                                    Meaning
+Short                              Long                                               Meaning
 ---------------------------------  -------------------------------------------------  -------------------------------------------------
 [:q](appendix-a-index#q-adverb)    [:single](appendix-a-index#single-adverb)          interpolate \\\\ and \\'
 [:qq](appendix-a-index#qq-adverb)  [:double](appendix-a-index#double-adverb)          interpolate with :s, :a, :h, :f, :c, :b
@@ -732,7 +732,7 @@ Stay behind the regex op and change the behaviour of the
 [*scope*](appendix-g-glossary#scope), etc.
 Most can also also put inside a subregex (in brackets).
 
-Short                                          Long                                                                                                                        Meaning
+Short                                     Long                                                                                                                   Meaning
 ----------------------------------------  ---------------------------------------------------------------------------------------------------------------------  ---------------------------------------------------------------------------------------------------------
 [:g](appendix-a-index#g-modifier)         [:global](appendix-a-index#g-modifier)                                                                                 searches for any finding
 [:x(n)](appendix-a-index#x-modifier)      &nbsp;                                                                                                                 searches n times (n is an int)
