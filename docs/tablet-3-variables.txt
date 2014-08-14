@@ -42,8 +42,8 @@ All special namespaces from Perl 5 (often marked with special syntax), like
 tokens (`__PACKAGE__`), formats, file or dir handles, or builtins are
 now regular variables or routines.
 
-Because all variables contain [objects](tablet-8-objects.html), they have methods.
-In fact, [all operators](tablet-4-operators.html), including square or curly bracket
+Because all variables contain [objects](tablet-8-objects), they have methods.
+In fact, [all operators](tablet-4-operators), including square or curly bracket
 subscripts, are just methods of an object with a fancy name.
 
 The primary sigil can be followed by a secondary sigil, called a
@@ -57,7 +57,7 @@ Scalar
 This type stores one value, usually
 a reference to something: a value of a data type,
 a code object, an object or a compound of values like a
-[pair](#pair), [junction](tablet-4-operators.html#junctions),
+[pair](#pair), [junction](tablet-4-operators#junctions),
 [array](#array), [hash](#hash) or
 [capture](#capture). The scalar context is now called
 item context, hence the `scalar` instruction from Perl 5 was renamed to
@@ -89,14 +89,14 @@ item context, hence the `scalar` instruction from Perl 5 was renamed to
     $coderef = sub { do_something_completely_diffenent(@_) };
 
 (For info on some of those terms:
-[comment](tablet-2-basic-syntax.html#single-line),
-[binary format](tablet-2-basic-syntax.html#radix-prefixes),
-[the underscores ease reading](tablet-2-basic-syntax.html#number-literals),
-[scientific notation](tablet-2-basic-syntax.html#scientific-notation),
-[single-quoted string](tablet-2-basic-syntax.html#single-quotes),
-[double-quoted string](tablet-2-basic-syntax.html#double-quotes),
-[heredoc string](tablet-2-basic-syntax.html#heredocs),
-[file handle](io.html#files), [class](tablet-2-basic-syntax.html), [junction](#junction), [list of
+[comment](tablet-2-basic-syntax#single-line),
+[binary format](tablet-2-basic-syntax#radix-prefixes),
+[the underscores ease reading](tablet-2-basic-syntax#number-literals),
+[scientific notation](tablet-2-basic-syntax#scientific-notation),
+[single-quoted string](tablet-2-basic-syntax#single-quotes),
+[double-quoted string](tablet-2-basic-syntax#double-quotes),
+[heredoc string](tablet-2-basic-syntax#heredocs),
+[file handle](io#files), [class](tablet-2-basic-syntax), [junction](#junction), [list of
 values](#array), [hash](#hash), [callable](#callable).)
 
 Unlike Perl 5, references are automatically dereferenced to a fitting
@@ -132,10 +132,10 @@ lists that have not been computed yet. The `lazy` command enforces this
 and the `eager` command forces all values to be computed.
 
 The list context is forced with a [@() operator or `list()`
-command](appendix-b-grouped.html#contextualizers). That's not
+command](appendix-b-grouped#contextualizers). That's not
 autoflattening like in Perl 5 (automatically convert a List of Lists
 into one List). If you still want that, [say flat(). Or say
-lol()](appendix-b-grouped.html#contextualizers) to explicitly
+lol()](appendix-b-grouped#contextualizers) to explicitly
 prevent autoflattening.
 
     @primes = (2,3,5,7,11,13,17,19,23); # an array gets filled like in Perl 5
@@ -217,7 +217,7 @@ Hash
 
 In Perl 6 a Hash is an unordered list of Pairs. [A Pair](#pair)
 is a single key `=>` value association and [appears in many
-places](tablet-1-language-design.html#maximum_reusage) of the language syntax.
+places](tablet-1-language-design#maximum_reusage) of the language syntax.
 A hash allows lookup of values by key using `{}` or `<>` syntax.
 
     %dev =  'pugs'=>'audreyt', 'pct'=>'pm', "STD"=>'larry';
@@ -266,8 +266,8 @@ A hash allows lookup of values by key using `{}` or `<>` syntax.
 Callable
 --------
 
-Internally [subroutines](tablet-7-subroutines.html), [methods](tablet-8-objects.html)
-and [alike](appendix-b-grouped.html#routine-types) are variables
+Internally [subroutines](tablet-7-subroutines), [methods](tablet-8-objects)
+and [alike](appendix-b-grouped#routine-types) are variables
 with the sigil & and stored in a fourth namespace. Unlike Perl 5, all
 subroutines can be overwritten or augmented with user defined routines.
 Of course [scalars](#scalar) can
@@ -286,7 +286,7 @@ Data Types
 
 In contrast to [variable types](#variable-types)
 (container types) every [value has a
-type](appendix-b-grouped.html#value-types) too. These are
+type](appendix-b-grouped#value-types) too. These are
 organized internally as classes or roles and can be categorized into 3
 piles: the undefined, immutable, and the mutable types.
 
@@ -332,7 +332,7 @@ parameters, it is a mixture of a list and array.
 
 
 One important difference between a capture and a compound structure of
-lists and hashes: While [assignments](variables.html#assignment)
+lists and hashes: While [assignments](variables#assignment)
 with = will copy the complete content of the named variables, this is
 not so in the case of a capture. When I change $s in the last example,
 the content of $cap changes too, because when parameters to a routine
@@ -363,8 +363,8 @@ xxx
 Scoping
 =======
 
-[scope declarator](appendix-b-grouped.html#scope-declarator),
-[scopes](appendix-b-grouped.html#scopes)
+[scope declarator](appendix-b-grouped#scope-declarator),
+[scopes](appendix-b-grouped#scopes)
 
     my $var;
     state
@@ -421,7 +421,7 @@ binding to get 2 variables that point to the same memory location.
 Special Variables
 =================
 
-are listed in  [Index B](appendix-b-grouped.html#special-variables).
+are listed in  [Index B](appendix-b-grouped#special-variables).
 To understand their secondary sigil [click here](#twigils).
 
 ***

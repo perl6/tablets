@@ -2,12 +2,12 @@
 
 This is a small tour, showing the best features and improvements of
 Perl 6 in short examples, compared to similar working Perl 5 examples.
-More examples how to write native Perl 6 are in the [cookbook](appendix-c-cookbook.html).
+More examples how to write native Perl 6 are in the [cookbook](appendix-d-delta#code-snippets).
 
 Command Line
 ============
 
-[Making output](io.html#command-line) will become simpler and easier for newbies.
+[Making output](tablet-5-io#command-line) will become simpler and easier for newbies.
 
                   Perl 5                                     Perl 6
     print "bananas are good\n";                     say "bananas are good";
@@ -22,7 +22,7 @@ File IO
 =======
 
 File::Slurp is in the Perl 6 core language and [file
-reading](io.html#file) is simpler then ever (and autochomp included).
+reading](table-5-io#file) is simpler then ever (and autochomp included).
 
                    Perl 5                                     Perl 6
      $content = do { local $/;                       $content = slurp "poetry.txt";
@@ -86,7 +86,7 @@ Case construct
     else {...}                                               default  {...}
                                                            }
 
-[That new construct](blocks.html#given) (backported to 5.10) is clear
+[That new construct](tablet-6-blocks#given) (backported to 5.10) is clear
 to read, very versatile and when used in combination with junctions,
 becomes even clearer.
 
@@ -95,7 +95,7 @@ becomes even clearer.
 Powerful for loops
 ==================
 
-[List iteration via `for`](blocks.html#for) is now much more versatile.
+[List iteration via `for`](tablet-6-blocks#for) is now much more versatile.
 
                   Perl 5                                     Perl 6
     for my $i (0..15) {...}                         for ^16 -> $i {...}

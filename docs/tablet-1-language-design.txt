@@ -57,7 +57,7 @@ word of a sentence sets an understandable context for what follows,
 the meaning is built up word for word. This is much easier to grasp,
 than if the last word of a block resolves the block's entire meaning
 (like regex modifiers do in Perl 5). In particular,
-[`for`](block.html#) and [`given`](block.html#) are called
+[`for`](tablet-6-blocks#for) and [`given`](tablet-6-blocks#given) are called
 topicalizers, because they set `$_`, the current topic variable.
 
 
@@ -163,7 +163,7 @@ Ubiquity
 --------
 
 As always, [Perl is optimized for freedom and richness of
-expression](language-design.html).
+expression](tablet-1-language-design).
 
 
 
@@ -278,7 +278,7 @@ since, because they were much harder to maintain than the Synopses
 ("abstracts" or "comparisons" (with Perl 5)). The Synopsis documents,
 along with the test suite, form the official specification of Perl 6. 
 More details on that can be found in
-[the history section](tablet-0-history.html).
+[the history section](tablet-0-history).
 
 The Synopses are continually edited because the more we think about
 the syntax and semantics, the more detailed the picture gets. The

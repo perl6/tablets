@@ -4,7 +4,7 @@ Trends
 ======
 
 The more general course of the changes is documented in the
-[trends section](tablet-1-language-design.html#trends) 
+[trends section](tablet-1-language-design#trends) 
 of the language design tablet.
 
 
@@ -25,16 +25,16 @@ Variable
   * `scalar @a` becomes `+@a` (**+** forces numeric context)
   * arrays, hashes, formats, directories and filehandles are internal
     objects with procedural interfaces and can be saved in scalar variables.
-  * [special variables](appendix-b-grouped.html#special-variables)
+  * [special variables](appendix-b-grouped#special-variables)
      have their own namespace (`$*VARNAME` and `$?VARNAME`),
      also token (`__LINE__`) will now be found there
-  * no *Data::Dump*, use [`$var.perl.say`](appendix-a-index.html#perl) instead
+  * no *Data::Dump*, use [`$var.perl.say`](appendix-a-index#perl) instead
 
 Strings
 -------
 
   * no *length*, `length(@a)` is now `elems @a` and `length $str` is `chars $str;`
-  * no *ucfirst* use [**titlecase**](appendix-a-index.html#titlecase)
+  * no *ucfirst* use [**titlecase**](appendix-a-index#titlecase)
 
 
 Operator
@@ -59,9 +59,9 @@ Operator
 Flow Control
 ------------
 
-  * no *foreach*, only [**for**](appendix-a-index.html#for)
-  * no *each*, use [**.pairs**](appendix-a-index.html#pairs) or [**.kv**](appendix-a-index.html#kv) instead
-  * no C-style *for*, use [**loop**](appendix-a-index.html#loop) instead
+  * no *foreach*, only [**for**](appendix-a-index#for)
+  * no *each*, use [**.pairs**](appendix-a-index#pairs) or [**.kv**](appendix-a-index#kv) instead
+  * no C-style *for*, use [**loop**](appendix-a-index#loop) instead
   * `do {...} while (...);` becomes `repeat {...} while ...;`
 
 
