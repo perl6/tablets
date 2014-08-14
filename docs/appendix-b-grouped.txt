@@ -499,11 +499,11 @@ The two hyper operators and the evaluating autoquoting can be written with the
 (also documented as "French Quotes") or with double lesser than or greater than
 signs (documented as "Texas Quotes").
 
---- ----------------------------------------------------  -----------------------------------------------
+--- ---------------------------------------------------  -----------------------------------------------
  «  [\<\<](appendix-a-index#lower-lower-op)              Hyperop, right side dictates length of result
  »  [\>\>](appendix-a-index#greater-greater-op)          Hyperop, left side dictates length of result
- «» [\<\< \>\>](appendix-a-index#double-angle-brackets) [**qw**](appendix-a-index#qw-op) with [evaluation](appendix-g-glossary#evaluation) and [quote protection](appendix-g-glossary#quote-protection)
---- ----------------------------------------------------  -----------------------------------------------
+ «» [\<\< \>\>](appendix-a-index#double-angle-brackets)  [**qw**](appendix-a-index#qw-op) with [evaluation](appendix-g-glossary#evaluation) and [quote protection](appendix-g-glossary#quote-protection)
+--- ---------------------- ----------------------------  -----------------------------------------------
 
 
 Contextualizers
@@ -669,7 +669,7 @@ The [basic quoting](tablet-2-basic-syntax#quoting)
 operator (Q) does nothing, just taking literally what you quoted as a string.
 But with several adverbs, it behaves like the well known following ops:
 
-Op                                  Nonealphanumeric Version                 Translated Into Quoting Adverbs                                                                                            Method Version                             Meaning
+Op                                  Nonealphanumeric Version                 Translated Into Quoting Adverbs                                                                                            Method Version                      Meaning
 ----------------------------------  ---------------------------------------- -------------------------------------------------------------------------------------------------------------------------  ----------------------------------  ----------------------------------------------------------
 [q//](appendix-a-index#q-op)        [' '](appendix-a-index#single-quotes)    [Q](appendix-a-index#Q-op) [:q](appendix-a-index#q-adverb) //                                                              &nbsp;                              [single](appendix-g-glossary#single-quoting), simple nonevaluating quotes
 [qq//](appendix-a-index#qq-op)      [" "](appendix-a-index#double-quotes)    [Q](appendix-a-index#Q-op) [:qq](appendix-a-index#qq-adverb) //                                                            &nbsp;                              [double](appendix-g-glossary#double-quoting), evaluating quotes
