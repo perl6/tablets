@@ -15,11 +15,13 @@ Forwhy here are so many ops, they had to be sorted by a rule named
 Please make also sure you understand the important operator related terms:
 [**arity**](appendix-g-glossary.html#arity) (number of operands), 
 [**precedence**](appendix-g-glossary.html#precedence) (operator priority),
-and [**associativity**](appendix-g-glossary#associativity) (operand priority) .
+[**associativity**](appendix-g-glossary#associativity) (operand priority)
+and [**context**](appendix-g-glossary#context).
 
 
 
 <a id="assignment"/><a id="binding"/>
+
 Assignment and Binding
 ======================
 
@@ -35,7 +37,6 @@ with the result on the variable on their left side.
 Comparison
 ==========
 
-
 Equality
 --------
 
@@ -45,7 +46,6 @@ cmp
     eqv ===
     != !==
     eq ==
-
 
 
 Smartmatch
@@ -68,14 +68,12 @@ regex](tablet-9-regexes.html#matching) semantically sane.
 
 
 
-
-Traversing Sequence
--------------------
+Ordered Set
+-----------
 
     ++ -- succ pred
 
 [sequence generation](#sequence-operator)
-
 
 
 Generic Comparison
@@ -98,7 +96,6 @@ String Comparison
     lt eq gt leg le ge
 
 
-
 Joined Comparison
 -----------------
 
@@ -110,6 +107,8 @@ is not the same as
 
 because latter is evaled at once and the first in 2 steps (left to
 right).
+
+[](#junctions)
 
 
 
@@ -188,9 +187,11 @@ Numeric Context
 ---------------
 
     + - * ** / % %%
-    +& +| +^ +< +>
     mod exp sqrt sin cos tan log log10
 
+### Bitflipping  ###
+
+    +& +| +^ +< +>
 
 
 ### Numerical Selection ###
@@ -203,6 +204,7 @@ String Context
 --------------
 
     ~ x
+
     ~& ~| ~^ ~< ~>
 
 
@@ -310,7 +312,7 @@ Hyperops
 
 
 
-precedence table
+Precedence Table
 ================
 
 [is in Appendix B](appendix-b-grouped.html#table-of-precedence)
