@@ -355,7 +355,7 @@ but written only inside angle brackets (\< \>) that mark [*subrules*](#subrule),
 to distinct that from the [pipe metacharacter](appendix-a-index#pipe-metachar).
 
 
-<a id="evaluation"/>
+<a id="eval"/><a id="evaluation"/>
 **evaluation** &mdash;
 transforming something, that it gets ready for practical usage -
 sometimes means that just replacing in a piece of code all variables with there

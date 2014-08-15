@@ -725,8 +725,7 @@ example: `$a += 3;` equals `$a = $a + 3`
 <a id="equal-colon-equal-op"/>
 **=:=**
 *«comparison op»* &mdash;
-compares [binding](tablet-3-variables#binding),
-if both vars are bound to same memory location
+compares two variables, if their [bound](appendix-g-glossary#binding) to same memory location (in symbol table)
 
 
 <a id="equal-equal"/><a id="equal-equal-op"/>

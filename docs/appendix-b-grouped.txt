@@ -151,7 +151,7 @@ Constants
 are builtins (not exactly variables and without a [sigil](#sigils))
 that return always the same important value
 
-Name                                     Value             Meaning
+Name                                Value             Meaning
 ----------------------------------  ----------------  -----------------------------------
 [e](appendix-a-index#e-constant)    2.71828182878434  [euler number](appendix-g-glossary#e)
 [i](appendix-a-index#i-constant)    0+1i              [imaginary number](appendix-g-glossary#i)
@@ -512,7 +512,7 @@ Contextualizers
 [prefix](appendix-a-index#prefix-category) operators or functions
 that forcing a [context](appendix-g-glossary#context).
 
-------------------------------------------  --------------------------------  ----------------------------------------------------------------------------------------------
+------------------------------------------  -------------------------------  ----------------------------------------------------------------------------------------------
 [`$()`](appendix-a-index#dollar-op)         [item()](appendix-a-index#item)  [scalar/item context](appendix-g-glossary#item-context)
 [`?`](appendix-a-index#question-op)         [so()](appendix-a-index#so)      [boolean](appendix-g-glossary#bool-context)
 [`!`](appendix-a-index#exclamation-op)      [not()](appendix-a-index#not)    negated bool context
@@ -984,7 +984,7 @@ Conditionals
 [elsif](appendix-a-index#elsif)          works like if, but only recognized if no preceding "if" or "elsif" clause was executed
 [else](appendix-a-index#else)            following block will be executed, when no preceding "if" or "elsif" clause was executed
 [unless](appendix-a-index#unless)        opposite of **if**,  alias to **if not**, no "elsif" or "else" is allowed to follow
-[?? !!](appendix-a-index#conditional-op) cond ?? term1 !! term2 id short form of if cond {term1} else {term2}
+[?? !!](appendix-a-index#conditional-op) "cond ?? term1 !! term2" is short form "of if cond {term1} else {term2}"
 [ff](appendix-a-index#ff)                awk style flip flop, in P5 .. in scalar context
 [fff](appendix-a-index#fff)              sed style flip flop, in P5 ... in scalar context
 [given](appendix-a-index#given)          evals an expression into scalar context assignes it to **\$\_** for the following block

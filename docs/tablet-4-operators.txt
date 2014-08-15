@@ -19,23 +19,17 @@ and [**associativity**](appendix-g-glossary#associativity) (operand priority) .
 
 
 
-Assignment
-==========
+<a id="assignment"/><a id="binding"/>
+Assignment and Binding
+======================
 
-=
-
-
-[self assigning ops](#self-assigning)
-
-[variable]()
-
-
-Binding
--------
-
-:=
-::=
-
+Even if technically [**=**](appendix-a-index#equal-op), [**:=**](appendix-a-index#colon-equal-op),
+[**::=**](appendix-a-index#colon-colon-equal-op) and [**=:=**](appendix-a-index#equal-colon-equal-op) are operators,
+they are handled on the previous (variable) tablet in the chapters
+[assignment](tablet-3-variables#assignment) and [binding](tablet-3-variables#binding).
+That is because they force the [*evaluation*](appendix-g-glossary#eval) of the
+[*expression*](appendix-g-glossary#expression) on their right side and do something
+with the result on the variable on their left side.
 
 
 Comparison
@@ -45,6 +39,9 @@ Comparison
 Equality
 --------
 
+<=>
+leg
+cmp
     eqv ===
     != !==
     eq ==
