@@ -20,20 +20,6 @@ and [**context**](appendix-g-glossary#context).
 
 
 
-<a id="assignment"/><a id="binding"/>
-
-Assignment and Binding
-======================
-
-Even if technically [**=**](appendix-a-index#equal-op), [**:=**](appendix-a-index#colon-equal-op),
-[**::=**](appendix-a-index#colon-colon-equal-op) and [**=:=**](appendix-a-index#equal-colon-equal-op) are operators,
-they are handled on the previous (variable) tablet in the chapters
-[assignment](tablet-3-variables#assignment) and [binding](tablet-3-variables#binding).
-That is because they force the [*evaluation*](appendix-g-glossary#eval) of the
-[*expression*](appendix-g-glossary#expression) on their right side and do something
-with the result on the variable on their left side.
-
-
 Comparison
 ==========
 
@@ -160,14 +146,6 @@ Are now ordinary methods of the IO type.
 
 [table of all](appendix-b-grouped.html#test-methods)
 
-
-
-yadda
------
-
-    ...
-    ???
-    !!!
 
 
 
@@ -312,8 +290,37 @@ Hyperops
 
 
 
+
+Miscellaneous
+=============
+
+
+<a id="assignment"/><a id="binding"/>
+
+Assignment and Binding
+----------------------
+
+
+Even if technically [**=**](appendix-a-index#equal-op), [**:=**](appendix-a-index#colon-equal-op),
+[**::=**](appendix-a-index#colon-colon-equal-op) and [**=:=**](appendix-a-index#equal-colon-equal-op) are operators,
+they are handled on the previous (variable) tablet in the chapters
+[assignment](tablet-3-variables#assignment) and [binding](tablet-3-variables#binding).
+That is because they force the [*evaluation*](appendix-g-glossary#eval) of the
+[*expression*](appendix-g-glossary#expression) on their right side and do something
+with the result on the variable on their left side.
+
+
+yadda
+-----
+
+    ...
+    ???
+    !!!
+
+
+
 Precedence Table
-================
+----------------
 
 [is in Appendix B](appendix-b-grouped.html#table-of-precedence)
 
@@ -321,7 +328,7 @@ Precedence Table
 
 
 Intentionally Not Existing
-==========================
+--------------------------
 
 
  =~
@@ -329,7 +336,7 @@ Intentionally Not Existing
 
 
 Selfmade Operators
-==================
+------------------
 
 How to make your own is subject [this chapter](tablet-10-metaprogramming.html#operators)
 at the metaprogramming tablet.
