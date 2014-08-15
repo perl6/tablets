@@ -34,6 +34,49 @@ cmp
     eq ==
 
 
+Ordered Set
+-----------
+
+    ++ -- succ pred
+
+[sequence generation](#sequence-operator)
+
+
+Generic
+-------
+
+    before after cmp
+
+
+
+Numerical
+---------
+
+    < == > <=> <= >=
+
+
+
+String
+------
+
+    lt eq gt leg le ge
+
+
+Joined
+------
+
+    3 < $a == $a < 7
+
+is not the same as
+
+    3 < $a < 7
+
+because latter is evaled at once and the first in 2 steps (left to
+right).
+
+[](#junctions)
+
+
 Smartmatch
 ----------
 
@@ -54,48 +97,6 @@ regex](tablet-9-regexes.html#matching) semantically sane.
 
 
 
-Ordered Set
------------
-
-    ++ -- succ pred
-
-[sequence generation](#sequence-operator)
-
-
-Generic Comparison
-------------------
-
-    before after cmp
-
-
-
-Numerical Comparison
---------------------
-
-    < == > <=> <= >=
-
-
-
-String Comparison
------------------
-
-    lt eq gt leg le ge
-
-
-Joined Comparison
------------------
-
-    3 < $a == $a < 7
-
-is not the same as
-
-    3 < $a < 7
-
-because latter is evaled at once and the first in 2 steps (left to
-right).
-
-[](#junctions)
-
 
 
 Junctions
@@ -113,8 +114,22 @@ Ranges
 
 
 
-Logical Selection
------------------
+
+File Test
+---------
+
+Are now ordinary methods of the IO type.
+
+[table of all](appendix-b-grouped.html#test-methods)
+
+
+Selection
+=========
+
+none context forcing
+
+Logic
+-----
 
     && - and
     || - or
@@ -139,18 +154,8 @@ Flipflop
 
 
 
-File Test
----------
-
-Are now ordinary methods of the IO type.
-
-[table of all](appendix-b-grouped.html#test-methods)
-
-
-
-
-Context Forcing Scalar Ops
-==========================
+Context Scalar Ops
+==================
 
 
 Bool Context
@@ -167,15 +172,15 @@ Numeric Context
     + - * ** / % %%
     mod exp sqrt sin cos tan log log10
 
-### Bitflipping  ###
-
-    +& +| +^ +< +>
-
 
 ### Numerical Selection ###
 
     min max minmax
 
+
+### Bitflipping  ###
+
+    +& +| +^ +< +>
 
 
 String Context
@@ -208,6 +213,7 @@ In list context the range operator produces lists:
 
 
 Sequence Operator
+----------------
 
     ...
 
@@ -249,12 +255,18 @@ negation
 --------
 
 
-Meta R
-------
+reverse
+-------
+
+R
 
 
-Meta S
-------
+sequencial
+----------
+
+S
+
+opposite of hyperops
 
 
 Meta Z
