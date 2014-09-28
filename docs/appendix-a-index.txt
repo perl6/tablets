@@ -542,14 +542,14 @@ example: `:2<1000001>` is decimal 65
 
 <a id="colon-test"/>
 **:**
-[*«io test method»*](appendix-b-grouped#test-methods) &mdash;
+[*«io path method»*](appendix-b-grouped#test-methods) &mdash;
 start of all test methods
 **([r](#r-test) [w](#w-test) [x](#x-test) [o](#o-test)
    [R](#R-test) [W](#W-test) [X](#r-test) [O](#O-test)
    [e](#e-test) [z](#z-test) [s](#s-test) [f](#f-test) [d](#d-test)
-   [l](#l-test) [p](#p-test) [S](#S-test) [b](#b-test) [c](#c-test)
-   [t](#t-test) [u](#u-test) [g](#g-test) [k](#k-test) [T](#T-test)
-   [B](#B-test) [M](#M-test) [A](#A-test) [C](#C-test))**
+   [l](#l-test) [L](#L-test) [p](#p-test) [S](#S-test) [b](#b-test)
+   [c](#c-test) [t](#t-test) [u](#u-test) [g](#g-test) [k](#k-test)
+   [T](#T-test) [B](#B-test) [M](#M-test) [A](#A-test) [C](#C-test))**
 in the adverbial form &mdash;
 example: *`$filename.IO ~~ :X`*
 
@@ -1310,7 +1310,7 @@ replaces them, see also: [**supersede**](#supersede)
 
 <a id="b-test"/>
 **:b**
-[*«io test method»*](appendix-b-grouped#test-methods) &mdash;
+[*«io path method»*](appendix-b-grouped#test-methods) &mdash;
 file is a block special file (e.g. Harddisks, CDROMs and RAM areas)
 
 <a id="b-adverb"/>
@@ -1456,7 +1456,7 @@ see also:
 
 <a id="c-test"/>
 **:c**
-[*«io test method»*](appendix-b-grouped#test-methods) &mdash;
+[*«io path method»*](appendix-b-grouped#test-methods) &mdash;
 file is a character special file (e.g. terminals modems)
 
 <a id="c-adverb"/>
@@ -1860,7 +1860,7 @@ current working directory as [**Str**](#Str-type)
 
 <a id="d-test"/>
 **:d**
-[*«io test method»*](appendix-b-grouped#test-methods) &mdash;
+[*«io path method»*](appendix-b-grouped#test-methods) &mdash;
 check if file is a directory
 
 <a id="backslash-D"/>
@@ -2003,7 +2003,7 @@ important to the functions [**exp**](#exp) and [**log**](#log)
 
 <a id="e-test"/>
 **:e**
-[*«io test method»*](appendix-b-grouped#test-methods) &mdash;
+[*«io path method»*](appendix-b-grouped#test-methods) &mdash;
 tests if file exists
 
 <a id="backslash-E"/>
@@ -2221,7 +2221,7 @@ the current [**module**](#module) by default
 
 <a id="f-test"/>
 **:f**
-[*«io test method»*](appendix-b-grouped#test-methods) &mdash;
+[*«io path method»*](appendix-b-grouped#test-methods) &mdash;
 file is a plain file (no socket or dir, ...etc.)
 
 <a id="f-adverb"/>
@@ -2405,7 +2405,7 @@ replacing them with the result, long form of
 
 <a id="g-test"/>
 **:g**
-[*«io test method»*](appendix-b-grouped#test-methods) &mdash;
+[*«io path method»*](appendix-b-grouped#test-methods) &mdash;
 report if file has setgid bit set
 
 <a id="g-modifier"/>
@@ -2875,7 +2875,7 @@ unlike [**Each**](#Each-type)
 
 <a id="k-test"/>
 **:k**
-[*«io test method»*](appendix-b-grouped#test-methods) &mdash;
+[*«io path method»*](appendix-b-grouped#test-methods) &mdash;
 report if file has sticky bit set
 
 <a id="KEEP-phaser"/>
@@ -2945,9 +2945,15 @@ returns list of key-value pairs
 # [L](#nav-top)
 
 
+<a id="L-test"/>
+**:L**
+[*«io path method»*](appendix-b-grouped#test-methods) &mdash;
+Actual path is a symbolic link (readlink)
+
+
 <a id="l-test"/>
 **:l**
-[*«io test method»*](appendix-b-grouped#test-methods) &mdash;
+[*«io path method»*](appendix-b-grouped#test-methods) &mdash;
 file is a symbolic link
 
 
@@ -3428,12 +3434,12 @@ see also: [**nude**](#nude)
 
 <a id="O-test"/>
 **:O**
-[*«io test method»*](appendix-b-grouped#test-methods) &mdash;
+[*«io path method»*](appendix-b-grouped#test-methods) &mdash;
 tests if file is owned by real uid ([**\$\*UID**](#UID-global-var))
 
 <a id="o-test"/>
 **:o**
-[*«io test method»*](appendix-b-grouped#test-methods) &mdash;
+[*«io path method»*](appendix-b-grouped#test-methods) &mdash;
 tests if file is owned by effective uid ([**\$\*EUID**](#EUID-global-var))
 
 <a id="of"/>
@@ -3545,18 +3551,26 @@ long for [**:ov**](#ov-modifier)
 
 <a id="p-test"/>
 **:p**
-[*«io test method»*](appendix-b-grouped#test-methods) &mdash;
+[*«io path method»*](appendix-b-grouped#test-methods) &mdash;
 file is a named [**pipe**](#pipe) (FIFO) or
 [*file handle*](appendix-g-glossary#file-handle) is a pipe
 
 
 <a id="p-adverb"/>
+<a id="p-quoting-adverb"/>
 [**:p**](tablet-2-basic-syntax#paths)
 [*«quoting adverb»*](appendix-b-grouped#quoting-adverbs) &mdash;
 quote paths and create path object that know the right format of
 the current [**\$\*KERNEL**](#KERNEL-global-var) &mdash;
 example: **`Q :p /.../`** &mdash;
 short for [**:path**](#path-adverb) or use [**qp**](#qp-op) directly
+
+
+<a id="p-var-adverb"/>
+[**:p**](tablet-3-variables#)
+[*«var adverb»*](appendix-b-grouped#quoting-adverbs) &mdash;
+get array or hash [*slices*]((appendix-g-glossary#slice) in hash context &mdash;
+example: **`my @a = 1..4; say @a[2]`** output: "2 => 3" &mdash;
 
 
 <a id="p-modifier"/>
@@ -4029,13 +4043,13 @@ see also: [**qqx**](#qqx-op) and [**q**](#q-op)
 
 <a id="R-test"/>
 **:R**
-[*«io test method»*](appendix-b-grouped#test-methods) &mdash;
+[*«io path method»*](appendix-b-grouped#test-methods) &mdash;
 check if file is readable by real uid ([**\$\*UID**](#UID-global-var))
 / gid ([**\$\*EUID**](#EUID-global-var))
 
 <a id="r-test"/>
 **:r**
-[*«io test method»*](appendix-b-grouped#test-methods) &mdash;
+[*«io path method»*](appendix-b-grouped#test-methods) &mdash;
 check if file is readable by effective uid ([**\$\*EUID**](#EUID-global-var))
 / gid ([**\$\*EUID**](#EUID-global-var))
 
@@ -4337,12 +4351,12 @@ suppresses any explicit or implicit parallelism
 
 <a id="S-test"/>
 **:S**
-[*«io test method»*](appendix-b-grouped#test-methods) &mdash;
+[*«io path method»*](appendix-b-grouped#test-methods) &mdash;
 file is a socket
 
 <a id="s-test"/>
 **:s**
-[*«io test method»*](appendix-b-grouped#test-methods) &mdash;
+[*«io path method»*](appendix-b-grouped#test-methods) &mdash;
 file has size greater than 0 (zero)
 
 <a id="s-adverb"/>
@@ -4623,7 +4637,7 @@ a symbol table hash (package, module, class, lexpad, etc)
 
 <a id="stat"/>
 **stat**
-[*«io test method»*](appendix-b-grouped#test-methods) &mdash;
+[*«io path method»*](appendix-b-grouped#test-methods) &mdash;
 available information about a file or link
 (call `stat :link` instead of Perl 5: *lstat*)
 
@@ -4768,7 +4782,7 @@ see also: [**augment**](#augment)
 
 <a id="t-test"/>
 **:t**
-[*«io test method»*](appendix-b-grouped#test-methods) &mdash;
+[*«io path method»*](appendix-b-grouped#test-methods) &mdash;
 [*file handle*](IO-type) is opened to a "tty" (terminal)
 
 
@@ -5004,7 +5018,7 @@ local time zone
 
 <a id="u-test"/>
 **:u**
-[*«io test method»*](appendix-b-grouped#test-methods) &mdash;
+[*«io path method»*](appendix-b-grouped#test-methods) &mdash;
 report if file has setuid bit set
 
 
@@ -5163,14 +5177,14 @@ see also: [**\$\?DISTRO**](#distro-compiler-var) and
 
 <a id="W-test"/>
 **:W**
-[*«io test method»*](appendix-b-grouped#test-methods) &mdash;
+[*«io path method»*](appendix-b-grouped#test-methods) &mdash;
 check if file is writeable by real uid ([**\$\*UID**](#UID-global-var)) /
 gid ([**\$\*GID**](#GID-global-var))
 
 
 <a id="w-test"/>
 **:w**
-[*«io test method»*](appendix-b-grouped#test-methods) &mdash;
+[*«io path method»*](appendix-b-grouped#test-methods) &mdash;
 check if file is writeable by effective uid ([**\$\*EUID**](#EUID-global-var))
 / gid ([**\$\*EGID**](#EGID-global-var))
 
@@ -5391,14 +5405,14 @@ example: `<a b> X~ <y z> == <ay az by bz>;`
 
 <a id="X-test"/>
 **:X**
-[*«io test method»*](appendix-b-grouped#test-methods) &mdash;
+[*«io path method»*](appendix-b-grouped#test-methods) &mdash;
 check if file is executable by real uid ([**\$\*UID**](#UID-global-var))
 / gid ([**\$\*GID**](#GID-global-var))
 
 
 <a id="x-test"/>
 **:x**
-[*«io test method»*](appendix-b-grouped#test-methods) &mdash;
+[*«io path method»*](appendix-b-grouped#test-methods) &mdash;
 check if file is executable by effective uid ([**\$\*EUID**](#EUID-global-var))
 / gid ([**\$\*EGID**](#EGID-global-var))
 

@@ -650,7 +650,7 @@ Use it as in `$filename.IO ~~ :X` or `$filename.IO.X`.
 [:f](appendix-a-index#f-test)  Bool  Path is a plain file
 [:d](appendix-a-index#d-test)  Bool  Path is a directory
 [:l](appendix-a-index#l-test)  Bool  Path is a symbolic link.
-[:L](appendix-a-index#l-test)  Str   Actual path is a symbolic link (readlink)
+[:L](appendix-a-index#L-test)  Str   Actual path is a symbolic link (readlink)
 [:p](appendix-a-index#p-test)  Bool  Path is a named pipe (FIFO), or filehandle is a pipe
 [:S](appendix-a-index#S-test)  Bool  Path is a socket
 [:b](appendix-a-index#b-test)  Bool  Path is a block special file
