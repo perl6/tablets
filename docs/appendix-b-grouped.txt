@@ -629,37 +629,37 @@ Callable                                           [Hash](appendix-a-index#Hash-
 Test Methods
 ------------
 
-They replace the Perl 5 filetest ops (like -e).
+Methods of IO::Path replace the Perl 5 filetest ops (like -e).
 Use it as in `$filename.IO ~~ :X` or `$filename.IO.X`.
 
------------------------------  --------------------------------------------------------------
-[:r](appendix-a-index#r-test)  file is readable by effective [uid](#EUID-global-var)/[gid](#EGID-global-var)
-[:w](appendix-a-index#w-test)  file is writeable by effective uid/gid
-[:x](appendix-a-index#x-test)  file is executable by effective uid/gid
-[:o](appendix-a-index#o-test)  file is owned by effective uid.
+-----------------------------  ----- --------------------------------------------------------------
+[:r](appendix-a-index#r-test)  Bool  Path is readable by effective [uid](#EUID-global-var)/[gid](#EGID-global-var)
+[:w](appendix-a-index#w-test)  Bool  Path is writeable by effective uid/gid
+[:x](appendix-a-index#x-test)  Bool  Path is executable by effective uid/gid
+[:o](appendix-a-index#o-test)  Bool  Path is owned by effective uid.
 &nbsp;   &nbsp;
-[:R](appendix-a-index#R-test)  file is readable by real [uid](#UID-global-var)/[gid](#GID-global-var)
-[:W](appendix-a-index#W-test)  file is writeable by real uid/gid
-[:X](appendix-a-index#X-test)  file is executable by real uid/gid
-[:O](appendix-a-index#O-test)  file is owned by real uid.
+[:R](appendix-a-index#R-test)  Bool  Path is readable by real [uid](#UID-global-var)/[gid](#GID-global-var)
+[:W](appendix-a-index#W-test)  Bool  Path is writeable by real uid/gid
+[:X](appendix-a-index#X-test)  Bool  Path is executable by real uid/gid
+[:O](appendix-a-index#O-test)  Bool  Path is owned by real uid.
 &nbsp;   &nbsp;
-[:e](appendix-a-index#e-test)  file exists
-[:s](appendix-a-index#s-test)  file has size greater than zero
+[:e](appendix-a-index#e-test)  Bool  Path exists
+[:s](appendix-a-index#s-test)  Int   Path has size greater than zero
+[:z](appendix-a-index#s-test)  Bool  Path has zero size (an empty file). 
 &nbsp;   &nbsp;
-[:f](appendix-a-index#f-test)  file is a plain file
-[:d](appendix-a-index#d-test)  file is a directory
-[:l](appendix-a-index#l-test)  file is a symbolic link
-[:p](appendix-a-index#p-test)  file is a named pipe (FIFO), or filehandle is a pipe
-[:S](appendix-a-index#S-test)  file is a socket
-[:b](appendix-a-index#b-test)  file is a block special file
-[:c](appendix-a-index#c-test)  file is a character special file
-[:t](appendix-a-index#t-test)  filehandle is opened to a tty
+[:f](appendix-a-index#f-test)  Bool  Path is a plain file
+[:d](appendix-a-index#d-test)  Bool  Path is a directory
+[:l](appendix-a-index#l-test)  Bool  Path is a symbolic link.
+[:L](appendix-a-index#l-test)  Str   Actual path is a symbolic link (readlink)
+[:p](appendix-a-index#p-test)  Bool  Path is a named pipe (FIFO), or filehandle is a pipe
+[:S](appendix-a-index#S-test)  Bool  Path is a socket
+[:b](appendix-a-index#b-test)  Bool  Path is a block special file
+[:c](appendix-a-index#c-test)  Bool  Path is a character special file
 &nbsp;   &nbsp;
-[:u](appendix-a-index#u-test)  file has setuid bit set
-[:g](appendix-a-index#g-test)  file has setgid bit set
-[:k](appendix-a-index#k-test)  file has sticky bit set
------------------------------  --------------------------------------------------------------
-
+[:u](appendix-a-index#u-test)  Bool  Path has setuid bit set
+[:g](appendix-a-index#g-test)  Bool  Path has setgid bit set
+[:k](appendix-a-index#k-test)  Bool  Path has sticky bit set
+-----------------------------  ----  ----------------------------------------------------------
 
 
 Quoting Ops
