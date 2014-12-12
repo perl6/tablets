@@ -2,6 +2,8 @@
 use strict;
 use v5.10;
 
+my $prefix = shift(@ARGV) // '.';
+
 my $pandoc_cmd = {
     normal => 'pandoc -s --toc --css=styles.css -H _head-inc -B _nav-header -A _nav-footer -o %s %s',
     appendixAG => 'pandoc -s   --css=styles.css -H _head-inc -B _nav-header -A _nav-footer -o %s %s',
@@ -17,5 +19,5 @@ for my $txt_file (<*.txt>) {
              $cmd = $pandoc_cmd->{'appendixAG'};
     } else { $cmd = $pandoc_cmd->{'normal'}; }
     #print "Processing:", $txt_file, '-->', $html_file
-    system sprintf $cmd, $html_file, $txt_file;
+    system sprintf $cmd, "$prefix/$html_file", $txt_file;
 }
