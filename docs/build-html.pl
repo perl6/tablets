@@ -3,6 +3,7 @@ use strict;
 use v5.10;
 
 my $prefix = shift(@ARGV) // '.';
+use File::Copy qw(copy);
 
 my $pandoc_cmd = {
     normal => 'pandoc -s --toc --css=styles.css -H _head-inc -B _nav-header -A _nav-footer -o %s %s',
@@ -16,4 +17,11 @@ for my $txt_file (<*.txt>) {
     my $cmd = $pandoc_cmd->{ $txt_file } // $pandoc_cmd->{normal};
     #print "Processing:", $txt_file, '-->', $html_file
     system sprintf $cmd, "$prefix/$html_file", $txt_file;
+}
+
+if ($prefix ne '.') {
+    for my $css (<*.css>) {
+        copy $css, "$prefix/$css";
+    }
+
 }
