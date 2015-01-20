@@ -7,7 +7,7 @@ lightweight introduction, try
 [the Perl 6 Tutorial written by Herbert Breunung](http://www.perlfoundation.org/perl6/index.cgi?perl_6_tutorial)
 or the community Book [Using Perl
 6](https://github.com/perl6/book). If that is
-too easy, read [the specs](http://perlcabal.org/syn/).
+too easy, read [the specs](http://design.perl6.org/).
 
 ---
 
