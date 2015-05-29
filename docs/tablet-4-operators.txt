@@ -9,11 +9,11 @@ they enable **dense** and **intuitive readable** code.
 since [pictograms](tablet-1-language-design.html.html#visual-metaphor)
 can be picked up faster than words (by right brain instead of left).
 (Fortran made its whole career on that).
-Forwhy here are so many ops, they had to be sorted by a rule named
+Because there are so many ops, they had to be sorted by a rule named
 [*huffman coding*](tablet-1-language-design.html.html#huffman-coding).
 
 Please make also sure you understand the important operator related terms:
-[**arity**](appendix-g-glossary.html#arity) (number of operands), 
+[**arity**](appendix-g-glossary.html#arity) (number of operands),
 [**precedence**](appendix-g-glossary.html#precedence) (operator priority),
 [**associativity**](appendix-g-glossary#associativity) (operand priority)
 and [**context**](appendix-g-glossary#context).
