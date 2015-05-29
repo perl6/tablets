@@ -481,6 +481,7 @@ if followed by `()`.
 [`!op`](appendix-a-index#exclamation-metaop)  negation                                   known from P5, `$L !<op> $R` equals `!($L op $R)`\
 [`Rop`](appendix-a-index#R-metaop)            reverse                                    reverses the order of the operands\
 [`Sop`](appendix-a-index#S-metaop)            sequence                                   like reduction, only synchronous, execution in listed order is guaranteed; suppresses any explicit or implicit parallelism
+[`(op)`](appendix-a-index#S-metaop)           set                                        make set operators ut of | & !
 [`>>op`](appendix-a-index#right-hyperop)      hyper                                      processes arrays eager and in parallel or applies a single value to all array elements, `@E = $L[0] op $R[0], $L[1] op $R[1], ...;`
 [`<<op`](appendix-a-index#left-hyperop)       hyper                                      like above, points to the side which determines dimensionality, `@E = $L[0] op $R[0], $L[1] op $R[1], ...;`
 [`[op]`](appendix-a-index#reduce-op)          [reduce()](appendix-a-index#reduce)        applies the operator between all elements of an array, `$result = $V[0] op $V[1] op ...;`
