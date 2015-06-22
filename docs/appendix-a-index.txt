@@ -2361,7 +2361,7 @@ see also: [**ceiling**](#ceiling), [**round**](#round), [**truncate**](#truncate
 <a id="fmt"/>
 [**fmt**](tablet-2-basic-syntax#fmt)
 *«formater»* &mdash;
-variable method for simple [**printf**](#printf) - like formating,
+variable method for simple [**sprintf**](#sprintf) - like formating,
 takes a format specifier and returns a [**string**](#Str-type),
 format specifier accepts only 1 value placeholder, in case of a hash
 max. 2; second, optional parameter is delimiter between values or
@@ -3837,11 +3837,6 @@ without adding a [newline](#backslash-n) like [**say**](#say)
 [*«predefined subrule»*](appendix-b-grouped#subrules) &mdash;
 a single printable character
 
-<a id="printf"/>
-[**printf**](tablet-5-io#printf) &mdash;
-formats text like [**sprintf**](#sprintf) and
-sends it to standard output like [**print**](#print)
-
 <a id="prior-subrule"/>
 [**\<prior\>**](appendix-b-grouped#subrules) &mdash;
 standard grammar's rule for whatever the prior successful regex matched
@@ -4586,8 +4581,8 @@ see also: [**comb**](#comb)
 <a id="sprintf"/>
 [**sprintf**](tablet-2-basic-syntax#sprintf)
 *«formater»* &mdash;
-inserts formated values out of variables into a string like [**printf**](#printf),
-but returns the string instead of outputting it
+inserts formated values out of variables into a string and returns result,
+see also: [**fmt**](#fmt)
 
 
 <a id="spurt"/>
