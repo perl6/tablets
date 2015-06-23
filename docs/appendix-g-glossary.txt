@@ -911,6 +911,14 @@ is usable. It is normally the current surrounding [*block*](#block)
 or (if there is none) the current file.
 
 
+<a id="set"/>
+**set** &mdash;
+unordered, finite collection of values without duplicates.
+Most commonly all elements have the same type.
+Sets have in Perl 6 their own special container type called
+[**Set**](appendix-a-index#Set-type).
+
+
 <a id="sigil"/>
 **sigil** &mdash;
 Character that serves as a [*prefix*](#prefix) to categorize the following name

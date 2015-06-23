@@ -236,7 +236,7 @@ context, alias to [**code**()](#code-context)
 [*junctive*](appendix-g-glossary#junction)
 [*AND*](appendix-g-glossary#and),
 requires that all conditions are met &mdash;
-see also: [**all**](#all)
+see also: [**all**](#all), [(&)](appendix-a-index#ampersand-set-op)
 
 <a id="ampersand-metachar"/>
 **&**
@@ -272,6 +272,30 @@ grouping of values (parameters) to a [**Parcel**](#Parcel-type)
 encompass a *subregex*, results (*submatches*) land in 
 [**\@()**](#round-brackets-var) or [**\$0**](#0-var)... (not limited to $9 anymore) &mdash;
 see also: [**\[ \]** «metachar»](#square-brackets-metachar)
+
+<a id="ampersand-set-op"/><a id="set-and"/>
+**(&)**
+[*«set op»*](appendix-b-grouped#sets) &mdash;
+[*infix*](appendix-g-glossary#infix)
+[*AND*](appendix-g-glossary#and) join operator for two sets
+&mdash;
+see also: [&](appendix-a-index#ampersand-op)
+
+<a id="caret-set-op"/><a id="set-xor"/>
+**(\^)**
+[*«set op»*](appendix-b-grouped#sets) &mdash;
+[*infix*](appendix-g-glossary#infix)
+[*XOR*](appendix-g-glossary#xor) join operator for two sets
+&mdash;
+see also: [\^](appendix-a-index#caret-op)
+
+<a id="pipe-set-op"/><a id="set-or"/>
+**(|)**
+[*«set op»*](appendix-b-grouped#sets) &mdash;
+[*infix*](appendix-g-glossary#infix)
+[*OR*](appendix-g-glossary#or) joining operator for two sets
+&mdash;
+see also: [|](appendix-a-index#pipe-op)
 
 <a id="round-brackets-var"/>
 **@( )**
@@ -943,7 +967,7 @@ see also: [**|**](#pipe-escape)
 [*XOR*](appendix-g-glossary#xor),
 requires that exactly one of operands is [**True**](#True) in 
 [*bool context*](appendix-g-glossary#bool-context) to return **True** &mdash;
-see also [**one**](#one)
+see also [**one**](#one), [(\^)](appendix-a-index#caret-set-op)
 
 <a id="caret-upto"/>
 **\^** &mdash;
@@ -1011,7 +1035,7 @@ or a hashref when it is identified as a hash by the
 [*«junctive op»*](appendix-b-grouped#junctions) &mdash;
 [*junctive*](appendix-g-glossary#junction) [*OR*](appendix-g-glossary#or),
 requires that a condition is fulfilled &mdash;
-see also: [**any**](#any)
+see also: [**any**](#any), [(|)](appendix-a-index#pipe-set-op)
 
 <a id="pipe-metachar"/>
 **|**

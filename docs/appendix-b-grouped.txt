@@ -535,7 +535,7 @@ Junctions
 ---------
 
 The [**infix**](appendix-a-index#infix-category)
-[*ops*](appendix-g-glossary#operator) in the first columns create
+[*ops*](appendix-g-glossary#operator) in the first column create
 [*junctions*](appendix-g-glossary#junction) by combining two values
 (can be [**Junctions**](appendix-a-index#Junction-type) itself),
 the ops in second column are to be applied to a [*list*](appendix-g-glossary#list)
@@ -548,6 +548,21 @@ Junctive Infix Op                   Prefix Op                      Operation    
 [|](appendix-a-index#pipe-op)       [any](appendix-a-index#any)    [OR](appendix-g-glossary#or)        [True](appendix-a-index#True) if at least one is True
 &nbsp;                              [none](appendix-a-index#none)  [NOT](appendix-g-glossary#not) any  [True](appendix-a-index#True) if none are True
 ----------------------------------  -----------------------------  ----------------------------------  -----------------------------------------------
+
+
+Sets
+----
+
+The [**infix**](appendix-a-index#infix-category)
+[*ops*](appendix-g-glossary#operator) in the first column create
+a [*set*](appendix-g-glossary#set) with the following rules:
+
+Set Op                                     Meaning
+----------------------------------------  ---  -----------------------------------------------
+[(&)](appendix-a-index#ampersand-set-op)  AND  elements, which are in both sets
+[(\^)](appendix-a-index#caret-set-op)     XOR  elements, which are only in one of both sets
+[(|)](appendix-a-index#pipe-set-op)       OR   elements, which are in one or both sets
+----------------------------------------  ---  -----------------------------------------------
 
 
 Smartmatch
