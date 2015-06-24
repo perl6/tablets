@@ -914,9 +914,13 @@ or (if there is none) the current file.
 <a id="set"/>
 **set** &mdash;
 unordered, finite collection of values without duplicates.
-Most commonly all elements have the same type.
-Sets have in Perl 6 their own special container type called
+Most commonly all elements have the same [*type*](#type).
+They are declared by the keyword [**set**](appendix-a-index#set)
+which creates an [*object*](#object) with the container type called
 [**Set**](appendix-a-index#Set-type).
+[**set operator**](appendix-b-grouped#sets)s are also already included.
+
+
 
 
 <a id="sigil"/>
