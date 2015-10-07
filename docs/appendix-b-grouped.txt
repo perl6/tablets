@@ -140,7 +140,6 @@ sublanguage seen by the parser at this lexical spot
 [`$~Quote`](appendix-a-index#Quote-slang-var)       the current root of quoting language
 [`$~Quasi`](appendix-a-index#Quasi-slang-var)       the current root of [quasiquoting](appendix-g-glossary#quasiquoting) language
 [`$~Regex`](appendix-a-index#Regex-slang-var)       the current root of regex language
-[`$~Trans`](appendix-a-index#Trans-slang-var)       the current root of [transliteration](appendix-g-glossary#transliteration) language
 [`$~P5Regex`](appendix-a-index#P5Regex-slang-var)   the current root of the Perl regex language
 --------------------------------------------------  ------------------------------------------------
 

@@ -4952,13 +4952,6 @@ method alias for [**tr**/.../.../](#tr-op) operator,
 [`.trans("..." => "...")`](#trans)
 
 
-<a id="Trans-slang-var"/>
-**$\~Trans**
-[*«special var»*](appendix-b-grouped#slang-variables) &mdash;
-current [grammar](#grammar) of the transliteration language
-(used by [**trans**()](#trans) aka [**tr**/.../.../](#tr-op))
-
-
 <a id="triangle"/>
 **triangle**
 *«list method»* &mdash;
