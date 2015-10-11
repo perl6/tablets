@@ -1247,6 +1247,13 @@ Perl 6 object (default [*routine*](appendix-g-glossary#routine)
 following list) is true in [*boolean context*](appendix-g-glossary#bool-context)  &mdash;
 see also: [**|**](#junctive-or)
 
+<a id="append-array"/>
+**append**
+[*«array op & method»*](tablet-3-variables#array-methods) &mdash;
+appends to the end of an array (parameter 1), a list of values (parameter 2-*)
+they get flattened, unlike with [**push**](#push) &mdash;
+see also: [**pop**](#pop), [**unshift**](#unshift)
+
 <a id="ARGFILES-global-var"/>
 **$\*ARGFILES**
 [*«special var»*](appendix-b-grouped#global-variables) &mdash;
@@ -3771,10 +3778,11 @@ the magnitude is non-negative, and the angle in the
 see also: [**cis**](#cis), [**conj**](#conj), [**unpolar**](#unpolar)
 
 
-<a id="pop"/>
+<a id="pop-array"/>
 **pop**
 [*«array op & method»*](tablet-3-variables#array-methods) &mdash;
-removes and returns the last element in an array
+removes the last value of an array (parameter 1) and returns it as result &mdash;
+see also: [**pop**](#pop), [**unshift**](#unshift)
 
 
 <a id="pos-modifier"/>
@@ -3849,6 +3857,16 @@ internal namespace of [metaoperator](appendix-g-glossary#metaoperator) that
 [prefix](#prefix-category) (before) another term &mdash;
 example ([**\<\<**](#lower-lower-metaop)): `++<< @a`
 
+
+<a id="prepend-array"/>
+**prepend**
+[*«array op & method»*](tablet-3-variables#array-methods) &mdash;
+prepends to an array (parameter 1), a list of values (parameter 2-*),
+which get flattened unlike with [**unshift**](#unshift) &mdash;
+see also: [**append**](#append), [**push**](#push), [**pop**](#pop)
+
+
+
 <a id="print"/>
 [**print**](tablet-5-io#print) &mdash;
 sends a [string](#Str-type) to an output stream
@@ -3892,8 +3910,9 @@ a single punctuation character
 <a id="push-array"/>
 **push**
 [*«array op & method»*](tablet-3-variables#array-methods) &mdash;
-appends a list of values to the end of an array &mdash;
-see also: [**pop**](#pop)
+appends to the end of an array (parameter 1), a list of values (parameter 2-*)
+they get not flattened, like with [**append**](#append) &mdash;
+see also: [**pop**](#pop), [**unshift**](#unshift)
 
 <a id="push"/><a id="push-hash"/>
 **push**
@@ -4482,6 +4501,12 @@ unordered collection of values that allows no duplicates
 [*«array op & method»*](tablet-3-variables#array-methods) &mdash;
 creates a [**Set**](#Set-type) &mdash;
 example:
+
+<a id="shift-array"/>
+**shift**
+[*«array op & method»*](tablet-3-variables#array-methods) &mdash;
+removes the first value of an array (parameter 1) and returns it as result &mdash;
+see also: [**unshift**](#unshift), [**pop**](#pop)
 
 <a id="sigil"/><a id="sigil-category"/>
 **sigil**
@@ -5082,6 +5107,14 @@ no [**elsif**](#elsif) or [**else**](#else) is allowed to follow
 **unpolar**
 *«Complex method»* &mdash;
 see also: [**cis**](#cis), [**conj**](#conj), [**polar**](#polar)
+
+
+<a id="unshift-array"/>
+**unshift**
+[*«array op & method»*](tablet-3-variables#array-methods) &mdash;
+prepends to an array (parameter 1), a list of values (parameter 2-*)
+they get not flattened as with [**prepend**](#prepend) &mdash;
+see also: [**shift**](#shift), [**push**](#push)
 
 
 <a id="until"/>
