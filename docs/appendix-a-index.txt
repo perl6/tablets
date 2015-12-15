@@ -2966,10 +2966,16 @@ returns list of hash keys
 sends the given $signal to the process(es) given and returns a
 boolean value indicating success ([**True**](#True))
 
-<a id="kv"/>
+<a id="kv-array"/>
+**kv**
+[*«array method»*](tablet-3-variables#array-methods) &mdash;
+returns content of an array as a list of index-value [*pairs*](appendix-g-glossary#pair)
+
+
+<a id="kv-hash"/>
 **kv**
 [*«hash method»*](tablet-3-variables#hash-methods) &mdash;
-returns list of key-value pairs
+returns content of a hash as a list of key-value [*pairs*](appendix-g-glossary#pair)
 
 
 

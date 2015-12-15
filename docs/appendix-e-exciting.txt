@@ -29,7 +29,7 @@ reading](table-5-io#file) is simpler then ever (and autochomp included).
         open my $FH, '<', "poetry.txt"; <$FH>
      };
 
-     chomp(@content = do {                           @content = lines "poetry.txt";
+     chomp(@content = do {                           @content = lines "poetry.txt".IO;
         open my $FH, "poetry.txt"; <$FH>
      });
 
