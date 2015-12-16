@@ -61,11 +61,13 @@ thing" when the arrays have different lengths.
 Comparison
 ==========
 
-Here are junctions, then chained comparison operators.
+Here are junctions, then chained comparison operators, than smartmatch with range and defined-or.
 
                   Perl 5                                     Perl 6
     if ($a == 3 or $a == 4 or $a == 7) {...}        if $a == 3 | 4 | 7 {...}
-    if (4 < $a and $a < 12) {...}                   if 4 < $a < 12 {...}
+    if ($a == 3 or $a == 4 or $a == 7) {...}        if $a ~~ 3 , 4 , 7 {...}
+    if ($g > $limit1 and $g > $limit2) {...         if $g > $limit1 & $limit2 { ...
+    if (4 < $a and $a <= 12) {...}                  if 4 < $a <= 12 {...}
     if (4 < $a and $a <= 12) {...}                  if $a ~~ 4^..12 {...}
     $a = defined $b ? $b : $c;                      $a = $b // $c;
 
