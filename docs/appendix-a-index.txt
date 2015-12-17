@@ -3885,10 +3885,6 @@ without adding a [newline](#backslash-n) like [**say**](#say)
 [*«predefined subrule»*](appendix-b-grouped#subrules) &mdash;
 a single printable character
 
-<a id="prior-subrule"/>
-[**\<prior\>**](appendix-b-grouped#subrules) &mdash;
-standard grammar's rule for whatever the prior successful regex matched
-
 <a id="proceed"/>
 [**proceed**](tablet-6-blocks#proceed)
 [*«flow control»*](appendix-b-grouped#jump-commands) &mdash;

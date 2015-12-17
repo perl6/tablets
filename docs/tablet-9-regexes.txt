@@ -72,14 +72,14 @@ Special Variables
 Matching
 ========
 
-xxx
 
+   m//
 
 
 Substitution
 ============
 
-xxx
+   s///
 
 
 
@@ -99,8 +99,8 @@ Grammars
 Predefined Rules
 ----------------
 
-[Are listed here](appendix-b-grouped#subrules). **\<prior\>**
-is somehow an exception.
+[Are listed here](appendix-b-grouped#subrules). 
+
 
 
 grammar methods
