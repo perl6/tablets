@@ -497,7 +497,7 @@ Unicode operators
 The two hyper operators and the evaluating autoquoting can be written with the 
 [unicode](appendix-g-glossary#unicode) signs
 (also documented as "French Quotes") or with double lesser than or greater than
-signs (documented as "Texas Quotes").
+signs (documented as "Texas Quotes"). [Set ops](#Sets) have also UTF-variants.
 
 --- ---------------------------------------------------  -----------------------------------------------
  «  [\<\<](appendix-a-index#lower-lower-op)              Hyperop, right side dictates length of result
@@ -556,12 +556,13 @@ The [**infix**](appendix-a-index#infix-category)
 [*ops*](appendix-g-glossary#operator) in the first column create
 a [*set*](appendix-g-glossary#set) with the following rules:
 
-Set Op                                     Meaning
-----------------------------------------  ---  -----------------------------------------------
-[(&)](appendix-a-index#ampersand-set-op)  AND  elements, which are in both sets
-[(\^)](appendix-a-index#caret-set-op)     XOR  elements, which are only in one of both sets
-[(|)](appendix-a-index#pipe-set-op)       OR   elements, which are in one or both sets
-----------------------------------------  ---  -----------------------------------------------
+Set Op                                    UTF    Short  Explanation 
+----------------------------------------  ------ -----  -----------------------------------------------
+(elem)                                    ∈      &nbsp; left Operand is element of the right set
+[(&)](appendix-a-index#ampersand-set-op)  &nbsp; AND    elements, which are in both sets
+[(\^)](appendix-a-index#caret-set-op)            XOR    elements, which are only in one of both sets
+[(|)](appendix-a-index#pipe-set-op)              OR     elements, which are in one or both sets
+----------------------------------------  ------ -----  -----------------------------------------------
 
 
 Smartmatch
