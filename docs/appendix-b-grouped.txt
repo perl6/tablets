@@ -914,7 +914,6 @@ regex. They can have prefixes: . (dot) marks a non-capturing subrule,
 [`<?after pattern>`](appendix-a-index#after-subrule)             zero-width lookbehind
 [`<!after pattern>`](appendix-a-index#after-negative-subrule)    negative zero-width lookbehind
 [`<?same>`](appendix-a-index#same-subrule)                       zero-width between two identical chars
-[`<prior>`](appendix-a-index#prior-subrule)                      last matched pattern
 [`<?>`](appendix-a-index#question-subrule)                       matches nothing, always true
 [`<!>`](appendix-a-index#exclamation-subrule)                    always false
 ---------------------------------------------------------------  -------------------------------------------------
