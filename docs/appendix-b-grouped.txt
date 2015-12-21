@@ -497,7 +497,7 @@ Unicode operators
 The two hyper operators and the evaluating autoquoting can be written with the 
 [unicode](appendix-g-glossary#unicode) signs
 (also documented as "French Quotes") or with double lesser than or greater than
-signs (documented as "Texas Quotes"). [Set ops](#Sets) have also UTF-variants.
+signs (documented as "Texas Quotes"). [Set ops](#sets) have also UTF-variants.
 
 --- ---------------------------------------------------  -----------------------------------------------
  «  [\<\<](appendix-a-index#lower-lower-op)              Hyperop, right side dictates length of result
