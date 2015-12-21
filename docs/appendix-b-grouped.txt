@@ -984,7 +984,7 @@ Jump Commands
 [redo](appendix-a-index#redo)        repeat this loop turn
 [next](appendix-a-index#next)        skip to the next loop turn
 [last](appendix-a-index#last)        leave this loop now
-[succeed](appendix-a-index#'succeed) leave this [when](appendix-a-index#when) clause and surrounding [given](appendix-a-index#given) block
+[succeed](appendix-a-index#succeed)  leave this [when](appendix-a-index#when) clause and surrounding [given](appendix-a-index#given) block
 [proceed](appendix-a-index#proceed)  check next [when](appendix-a-index#when) clauses
 [leave](appendix-a-index#leave)      leave this [block](appendix-g-glossary#block) with a return value
 [return](appendix-a-index#return)    leave this [routine](appendix-g-glossary#routine) with a return value
