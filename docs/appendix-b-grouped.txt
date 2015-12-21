@@ -552,17 +552,21 @@ Junctive Infix Op                   Prefix Op                      Operation    
 Sets
 ----
 
-The [**infix**](appendix-a-index#infix-category)
-[*ops*](appendix-g-glossary#operator) in the first column create
-a [*set*](appendix-g-glossary#set) with the following rules:
+[*infix*](appendix-a-index#infix-category)
+[*set*](appendix-g-glossary#set)
+[*ops*](appendix-g-glossary#operator) in the first column
+have an equivalent [*Unicode*](appendix-g-glossary#unicode) version
+(including code point number). Operators are negated with !.
 
-Set Op                                    UTF    Short  Explanation 
-----------------------------------------  ------ -----  -----------------------------------------------
-(elem)                                    ∈      &nbsp; left Operand is element of the right set
-[(&)](appendix-a-index#ampersand-set-op)  &nbsp; AND    elements, which are in both sets
-[(\^)](appendix-a-index#caret-set-op)            XOR    elements, which are only in one of both sets
-[(|)](appendix-a-index#pipe-set-op)              OR     elements, which are in one or both sets
-----------------------------------------  ------ -----  -----------------------------------------------
+Set Op                                    UTF    CPNR  Short  Explanation 
+----------------------------------------  -----  ----  -----  -----------------------------------------------
+(elem)                                    ∈      2208  &nbsp; True if left operand is element of the right set
+(cont)                                    ∋      220B  %nbsp; True if right operand is element of the left set
+[(&)](appendix-a-index#ampersand-set-op)  ∩      2229  AND    Set of elements, which are in both sets
+[(|)](appendix-a-index#pipe-set-op)       ∪      222A  OR     Set of elements, which are in one or both sets
+[(\^)](appendix-a-index#caret-set-op)     ⊖      2296  XOR    Set of elements, which are only in one of both sets
+(-)                                       ∖      2216  diff   Set of elements, which are in left, but not right set
+----------------------------------------  -----  ----  -----  -----------------------------------------------
 
 
 Smartmatch
