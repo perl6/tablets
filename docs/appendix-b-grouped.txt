@@ -561,7 +561,7 @@ have an equivalent [*Unicode*](appendix-g-glossary#unicode) version
 Set Op                                    UTF    CPNR  Short  Explanation 
 ----------------------------------------  -----  ----  -----  -----------------------------------------------
 (elem)                                    ∈      2208  &nbsp; True if left operand is element of the right set
-(cont)                                    ∋      220B  %nbsp; True if right operand is element of the left set
+(cont)                                    ∋      220B  &nbsp; True if right operand is element of the left set
 [(&)](appendix-a-index#ampersand-set-op)  ∩      2229  AND    Set of elements, which are in both sets
 [(|)](appendix-a-index#pipe-set-op)       ∪      222A  OR     Set of elements, which are in one or both sets
 [(\^)](appendix-a-index#caret-set-op)     ⊖      2296  XOR    Set of elements, which are only in one of both sets
