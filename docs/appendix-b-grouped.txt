@@ -4,7 +4,8 @@
 Variables
 =========
 
-Sigils
+
+# [Sigils](#nav-top)
 ------
 
 All variables in Perl begin with a [sigil](appendix-g-glossary#sigil).
@@ -25,7 +26,7 @@ The first 4 can also be used as prefix operators, called
 but there are much more different contexts then 4.
 
 
-Twigils
+# [Twigils](#nav-top)
 -------
 
 Twigil is short for secondary sigil. They follow after a primary sigil and mark special namespaces or variables with special meanings and properties.
@@ -43,7 +44,7 @@ Twigil is short for secondary sigil. They follow after a primary sigil and mark 
 --------------------------------------------------  ------------------------------------------------------------
 
 
-Special Variables
+# [Special Variables](#nav-top)
 -----------------
 
 ----------------------------------------  ------------------------
