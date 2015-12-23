@@ -557,21 +557,26 @@ Junctive Infix Op                   Prefix Op                      Operation    
 [*set*](appendix-g-glossary#set)
 [*ops*](appendix-g-glossary#operator) in the first column
 have an equivalent [*Unicode*](appendix-g-glossary#unicode) version
-(including code point number). Operators are negated with !.
+(including code point number). Operators are negated with [**!**](appendix-a-index#exclamation-op).
+Overload them with infix:<<"\x2208">>($a, $b --> Bool){..., number is the codepoint nr (CPNR)
 
-Set Op                                    UTF    CPNR  Short  Explanation 
-----------------------------------------  -----  ----  -----  -----------------------------------------------
-(elem)                                    ∈      2208  &nbsp; True if left operand is element of the right set
-(cont)                                    ∋      220B  &nbsp; True if right operand is element of the left set
-(<)                                       ⊂      2282  strict True if all elements left are in right and right set has more
-(<=)                                      ⊆      2286  subset True if all elements left are in right set
-(>)                                       ⊃      2283  strict True if all elements right are in left set and left has more (strict superset)
-(>=)                                      ⊇      2287  supers True if all elements right are in left set
-[(&)](appendix-a-index#ampersand-set-op)  ∩      2229  AND    Set of elements, which are in both sets
-[(|)](appendix-a-index#pipe-set-op)       ∪      222A  OR     Set of elements, which are in one or both sets
-[(\^)](appendix-a-index#caret-set-op)     ⊖      2296  XOR    Set of elements, which are only in one of both sets
-(-)                                       ∖      2216  diff   Set of elements, which are in left, but not right set
-----------------------------------------  -----  ----  -----  -----------------------------------------------
+Set Op                                    UTF    CPNR  Neg.   CPNR   Short  Explanation 
+----------------------------------------  -----  ----  ----   ----   -----  ----------------------------------------------------
+(elem)                                    ∈      2208  ∉      2209   &nbsp; True if left operand is (not) element of the right set
+(cont)                                    ∋      220B  ∌      220C   &nbsp; True if right operand is (not) element of the left set
+(<)                                       ⊂      2282  ⊄      2284   strict True if all elements left are in right and right set has more
+(<=)                                      ⊆      2286  ⊈      2288   subset True if all elements left are in right set
+(>)                                       ⊃      2283  ⊅      2285   strict True if all elements right are in left set and left has more (strict superset)
+(>=)                                      ⊇      2287  ⊉      2289   supers True if all elements right are in left set
+(<+)                                      ≼      227C  &nbsp; &nbsp; b.sub  True if all elements left are in right bag and weighed less than right
+(>+)                                      ≽      227D  &nbsp; &nbsp; b.sup  True if all elements right are in left bag and weighed less than left
+[(&)](appendix-a-index#ampersand-set-op)  ∩      2229  &nbsp; &nbsp; AND    Set of elements, which are in both sets
+[(|)](appendix-a-index#pipe-set-op)       ∪      222A  &nbsp; &nbsp; OR     Set of elements, which are in one or both sets
+[(\^)](appendix-a-index#caret-set-op)     ⊖      2296  &nbsp; &nbsp; XOR    Set of elements, which are only in one of both sets
+(-)                                       ∖      2216  &nbsp; &nbsp; diff   Set of elements, which are in left, but not right set
+(+)                                       ⊎      228E  &nbsp; &nbsp; b.add  Bag with elements of both bags and with added weight of both
+(.)                                       ⊍      228D  &nbsp; &nbsp; b.mul  Bag with elements that are in both bags but weight multiplied 
+----------------------------------------  -----  ----  ----   ----   ----- -----------------------------------------------------
 
 
 [Smartmatch](#nav-top)
