@@ -27,16 +27,18 @@ pure text version of [*camelia*](#camelia), the Perl 6 mascot
 
 <a id="action-method"/>
 **action method** &mdash;
+important 
 is a [*method*](#method) of a [*class*](#class) that is attached to a [*grammar*](#grammar).
 Whenever the grammar is used to parse a [*string*](#string) and one of the named subexpressions
 ([*rules*](#rule) or [*tokens*](#token)) are [*matching*](#matching),
-an action method with the same name gets triggered (run).
+an *action method* with the same name gets triggered (run).
 
 
 <a id="ALAP"/>
 **ALAP** *(as late as possible)* &mdash;
 within a given execution phase -
-([compile time](#compile-time) or [run time](#run-time)). opposite of [*ASAP*](#ASAP)
+([compile time](#compile-time) or [run time](#run-time)). opposite of [*ASAP*](#ASAP).
+[*lazy evaluation*] means running instructions ALAP.
 
 
 <a id="and"/>
