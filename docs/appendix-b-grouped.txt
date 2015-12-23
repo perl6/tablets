@@ -1,12 +1,11 @@
 % Perl 6 Tablets Appendix B - Thematically Grouped Index
 
-<a id="nav-top"/>
 
-Variables
+[Variables](#nav-top)
 =========
 
 
-# [Sigils](#nav-top)
+[Sigils](#nav-top)
 ------
 
 All variables in Perl begin with a [sigil](appendix-g-glossary#sigil).
@@ -27,7 +26,7 @@ The first 4 can also be used as prefix operators, called
 but there are much more different contexts then 4.
 
 
-# [Twigils](#nav-top)
+[Twigils](#nav-top)
 -------
 
 Twigil is short for secondary sigil. They follow after a primary sigil and mark special namespaces or variables with special meanings and properties.
@@ -45,7 +44,7 @@ Twigil is short for secondary sigil. They follow after a primary sigil and mark 
 --------------------------------------------------  ------------------------------------------------------------
 
 
-# [Special Variables](#nav-top)
+[Special Variables](#nav-top)
 -----------------
 
 ----------------------------------------  ------------------------
@@ -54,7 +53,7 @@ Twigil is short for secondary sigil. They follow after a primary sigil and mark 
 ----------------------------------------  ------------------------
 
 
-### Match Variables ###
+### [Match Variables](#nav-top) ###
 
 ------------------------------------------------  ------------------------------------------------------------------------------------
 [`$/`](appendix-a-index#slash-var)                last created match object of this [scope](appendix-g-glossary#scope) with [these methods](#match-object-methods)
@@ -63,7 +62,7 @@ Twigil is short for secondary sigil. They follow after a primary sigil and mark 
 [`@()`](appendix-a-index#round-brackets-var)      array that holds $0 .. $9 and rest and positional submatches
 ------------------------------------------------  ------------------------------------------------------------------------------------
 
-### Global Variables ###
+### [Global Variables](#nav-top) ###
 
 context variable, default global (run time), any of them are now
 objects with several methods
@@ -96,7 +95,7 @@ $*EMERGENCY_MEMORY                                                   formerly `$
 $*DEBUGGING                                                          &nbsp;
 -------------------------------------------------------------------  -------------------------------------------------------------------
 
-### Compiler Hint Variables ###
+### [Compiler Hint Variables](#nav-top) ###
 
 compiler constants (fixed at compile time)
 
@@ -123,7 +122,7 @@ compiler constants (fixed at compile time)
 [`$?TABSTOP`](appendix-a-index#TABSTOP-compiler-var)         
 -----------------------------------------------------------  ------------------------------------------------------------------
 
-### POD Variables ###
+### [POD Variables](#nav-top) ###
 
 File-[scoped](appendix-g-glossary#scope) [POD](basic-syntax#pod) data
 
@@ -133,7 +132,7 @@ File-[scoped](appendix-g-glossary#scope) [POD](basic-syntax#pod) data
 [`@=COMMENT`](appendix-a-index#COMMENT-pod-var)   All the comment blocks in the file
 ------------------------------------------------  ----------------------------------------
 
-### Slang Variables ###
+### [Slang Variables](#nav-top) ###
 
 sublanguage seen by the parser at this lexical spot
 
@@ -146,7 +145,7 @@ sublanguage seen by the parser at this lexical spot
 --------------------------------------------------  ------------------------------------------------
 
 
-Constants
+[Constants](#nav-top)
 ---------
 
 are builtins (not exactly variables and without a [sigil](#sigils))
@@ -160,10 +159,10 @@ Name                                Value             Meaning
 ----------------------------------  ----------------  -----------------------------------
 
 
-Scope
+[Scope](#nav-top)
 -----
 
-### Scopes ###
+### [Scopes](#nav-top) ###
 
 The following pseudo-package names are reserved at the front of a
 name:
@@ -353,10 +352,10 @@ following [methods](appendix-g-glossary#method) to tell more about itself.
 
 
 
-Operators
+[Operators](#nav-top)
 =========
 
-Table of Precedence
+[Table of Precedence](#nav-top)
 -------------------
 
 all level of [*precedence*](appendix-g-glossary#precedence)
@@ -393,7 +392,7 @@ N   Terminator         [`;`](appendix-a-index#semicolon) [`{...}`](appendix-a-in
 
 
 
-Operator Associativity
+[Operator Associativity](#nav-top)
 ----------------------
 
 [*associativity*](appendix-g-glossary#associativity)
@@ -409,10 +408,10 @@ X       list    `infix:<op>($a; $b; $c)`
 
 
 
-Categories
+[Categories](#nav-top)
 ----------
 
-### MAIN ###
+### [MAIN](#nav-top) ###
 
 These are the categories of the main language
 [*grammar*](appendix-g-glossary#grammar),
@@ -453,7 +452,7 @@ that can be used to create new categories.
 -----------------------------------------------------------------------------------------------------------
 
 
-### Regex ###
+### [Regex](#nav-top) ###
 
 The default [*regex*](appendix-g-glossary#regex) language as stored in 
 [**$~Regex**](appendix-a-index#Regex-slag-var) has following categories:
@@ -467,7 +466,7 @@ The default [*regex*](appendix-g-glossary#regex) language as stored in
 ------------------------------------------------------------------------
 
 
-Metaoperators
+[Metaoperators](#nav-top)
 -------------
 
 appear mostly before or around regular operators and give them different
@@ -493,7 +492,7 @@ if followed by `()`.
 
 
 
-Unicode operators
+[Unicode operators](#nav-top)
 -----------------
 
 The two hyper operators and the evaluating autoquoting can be written with the 
@@ -508,7 +507,7 @@ signs (documented as "Texas Quotes"). [Set ops](#sets) have also UTF-variants.
 --- ---------------------- ----------------------------  -----------------------------------------------
 
 
-Contextualizers
+[Contextualizers](#nav-top)
 ---------------
 
 [prefix](appendix-a-index#prefix-category) operators or functions
@@ -532,7 +531,7 @@ that forcing a [context](appendix-g-glossary#context).
 
 
 
-Junctions
+[Junctions](#nav-top)
 ---------
 
 The [**infix**](appendix-a-index#infix-category)
@@ -551,7 +550,7 @@ Junctive Infix Op                   Prefix Op                      Operation    
 ----------------------------------  -----------------------------  ----------------------------------  -----------------------------------------------
 
 
-Sets
+[Sets](#nav-top)
 ----
 
 [*infix*](appendix-a-index#infix-category)
@@ -575,7 +574,7 @@ Set Op                                    UTF    CPNR  Short  Explanation
 ----------------------------------------  -----  ----  -----  -----------------------------------------------
 
 
-Smartmatch
+[Smartmatch](#nav-top)
 ----------
 
 When [**~~**](appendix-a-index#smartmatch-op) is used as
@@ -652,7 +651,7 @@ Callable                                           [Hash](appendix-a-index#Hash-
 -------------------------------------------   --------------------------------------------  ------------------------------------------   --------------------------------------
 
 
-Test Methods
+[Test Methods](#nav-top)
 ------------
 
 Methods of IO::Path replace the Perl 5 filetest ops (like -e).
@@ -688,7 +687,7 @@ Use it as in `$filename.IO ~~ :X` or `$filename.IO.X`.
 -----------------------------  ----  ----------------------------------------------------------
 
 
-Quoting Ops
+[Quoting Ops](#nav-top)
 -----------
 
 The [basic quoting](tablet-2-basic-syntax#quoting)
@@ -715,10 +714,10 @@ Op                                  Nonealphanumeric Version                  Tr
 
 
 
-Text Processing
+[Text Processing](#nav-top)
 ===============
 
-Quoting Adverbs
+[Quoting Adverbs](#nav-top)
 ---------------
 
 There are a lot more adverbs to 
@@ -750,7 +749,7 @@ Short                              Long                                         
 
 
 
-Regex Modifier
+[Regex Modifier](#nav-top)
 --------------
 
 Stay behind the regex op and change the behaviour of the
@@ -785,7 +784,7 @@ Short                                     Long                                  
 ----------------------------------------  ---------------------------------------------------------------------------------------------------------------------  ---------------------------------------------------------------------------------------------------------
 
 
-Regex Metacharacter
+[Regex Metacharacter](#nav-top)
 -------------------
 
 ----------------------------------------------------  ----------------------------------------------------------------------------------------------------------
@@ -810,7 +809,7 @@ Regex Metacharacter
 ----------------------------------------------------  ----------------------------------------------------------------------------------------------------------
 
 
-Quantifier
+[Quantifier](#nav-top)
 ----------
 
 ------------------------------------------------------------------  -------------------------------------------------------------------------------------------
@@ -825,7 +824,7 @@ Quantifier
 ------------------------------------------------------------------  -------------------------------------------------------------------------------------------
 
 
-Control Chars
+[Control Chars](#nav-top)
 -------------
 
 These Escape Sequences will be evaluated inside quotes to invisible
@@ -845,7 +844,7 @@ and thatswhy also included in the next list.
 
 
 
-Escape Sequences
+[Escape Sequences](#nav-top)
 ----------------
 
 To be used just inside of regexes (rx/.../, m/.../, s/.../.../ and tr/.../.../).
@@ -881,7 +880,7 @@ To be used just inside of regexes (rx/.../, m/.../, s/.../.../ and tr/.../.../).
 [`\X[ ... ]`](appendix-a-index#backslash-X)  anything but the character given in hexadecimal (brackets optional)
 -------------------------------------------  -------------------------------------------------------------------
 
-Zero-Width Boundaries
+[Zero-Width Boundaries](#nav-top)
 ---------------------
 
 zero-width boundaries begin with a pipe symbol.
@@ -895,7 +894,7 @@ To negate put a ! in front of the pipe symbol.
 
 
 
-Subrules
+[Subrules](#nav-top)
 --------
 
 predefined rules (see routine type rule) for any grammar or
@@ -928,7 +927,7 @@ regex. They can have prefixes: . (dot) marks a non-capturing subrule,
 [`<!>`](appendix-a-index#exclamation-subrule)                    always false
 ---------------------------------------------------------------  -------------------------------------------------
 
-Match Object Methods
+[Match Object Methods](#nav-top)
 --------------------
 
 can also applied to any positional (`$/[2][3].to`) and named (`$/<star>.from`)
@@ -948,10 +947,10 @@ submatch
 --------------  ----------------------------------------------
 
 
-Flow Control
+[Flow Control](#nav-top)
 ============
 
-Closure Traits
+[Closure Traits](#nav-top)
 --------------
 
 aka phasers. Every block can contain special named blocks (some are
@@ -984,7 +983,7 @@ also be used within an expression as in `BEGIN my $x = 3 * 3;`.
 
 
 
-Jump Commands
+[Jump Commands](#nav-top)
 -------------
 
 
@@ -1001,7 +1000,7 @@ Jump Commands
 
 
 
-Conditionals
+[Conditionals](#nav-top)
 ------------
 
 ---------------------------------------  --------------------------------------------------------------------------------------
@@ -1018,7 +1017,7 @@ Conditionals
 ---------------------------------------  --------------------------------------------------------------------------------------
 
 
-Loops
+[Loops](#nav-top)
 -----
 
 ---------------------------------  -----------------------------------------------------------
@@ -1032,14 +1031,14 @@ Loops
 
 
 
-Routines
+[Routines](#nav-top)
 --------
 
 routine definition: \[[scope](ap-b-lookup#scopes)\] \[modifier\]
 type \[name\] \[trait\] ([signature](appendix-g-glossary#signature)) { block }
 
 
-### Routine Types ###
+### [Routine Types](#nav-top) ###
 
 -----------------------------------------  -------------------------------------------------------------------------------------------------------
 [sub](appendix-a-index#sub)                normal routine, named block with parmeters
@@ -1054,7 +1053,7 @@ type \[name\] \[trait\] ([signature](appendix-g-glossary#signature)) { block }
 
 
 
-### Routine Modifier ###
+### [Routine Modifier](#nav-top) ###
 
 ------------------------------------------------  -------------------------------------------------------------------------------------------------------
 [multi](appendix-a-index#multi-routine-modifier)  marks routines, which can have siblings with same name but different signature; when called, the one with matching sig is executed
@@ -1063,7 +1062,7 @@ type \[name\] \[trait\] ([signature](appendix-g-glossary#signature)) { block }
 ------------------------------------------------  -------------------------------------------------------------------------------------------------------
 
 
-### Routine Traits ###
+### [Routine Traits](#nav-top) ###
 
 [phasers](#closure-traits) (closure traits) can also be seen as routine traits.
 
@@ -1084,7 +1083,7 @@ type \[name\] \[trait\] ([signature](appendix-g-glossary#signature)) { block }
 -----------------------------------------------------  -------------------------------------------------------------------------------------
 
 
-### Parameter Traits ###
+### [Parameter Traits](#nav-top) ###
 
 ------------------------------------------------------  -----------------------------------------------------------------------------
 [as](appendix-a-index#as-parameter-trait)               data coming through that parameter will be coerced to the type following as
@@ -1097,7 +1096,7 @@ type \[name\] \[trait\] ([signature](appendix-g-glossary#signature)) { block }
 
 
 
-### Signature Symbols ###
+### [Signature Symbols](#nav-top) ###
 
 In routine and block definitions can be also some character with special meaning
 
@@ -1113,7 +1112,7 @@ In routine and block definitions can be also some character with special meaning
 [`^`](appendix-a-index#caret-signature)                   prefix of metaclass methods, `$obj.^methods();` is shortcut for [`$obj.HOW.methods($obj);`](#object-introspection)
 --------------------------------------------------------  ------------------------------------------------------------------------------------------------------------------
 
-Callframe Methods
+[Callframe Methods](#nav-top)
 -----------------
 
 A callframe object is generated at run-time for each call of a block of code.

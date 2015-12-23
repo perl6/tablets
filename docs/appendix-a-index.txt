@@ -34,7 +34,7 @@ and a following "n" (second letter n-z).
 
 
 
-<a id="nav-top"/>
+<a id="charnav-top"/>
 **Navigation:
 [`! "`](#exclamation) [`# $`](#pound)  [`% &`](#percent)  [`' (`](#single-quotes)
 [`* +`](#asterisk)    [`, -`](#comma)  [`. /`](#dot)      [`0 :`](#0)
@@ -305,7 +305,7 @@ holds positional submatches, **`$()[n]`** is alias to
 
 
 
-# [\*](#nav-top)
+# [\*](#charnav-top)
 
 <a id="asterisk"/><a id="asterisk-term"/>
 **\***
@@ -430,7 +430,7 @@ see also: [**\[ \]**](#square-brackets-op)
 
 
 
-# [-](#nav-top)
+# [-](#charnav-top)
 
 <a id="minus"/><a id="minus-op"/>
 **-**
@@ -625,7 +625,7 @@ example: `@[2;3]` instead of `@a[2][3]`
 
 
 
-# [\<](#nav-top)
+# [\<](#charnav-top)
 
 <a id="lower-op"/>
 **\<**
@@ -717,7 +717,7 @@ into [`$/<name>`](#match-var) and [`$<name>`](#angle-brackets-var)
 
 
 
-# [=](#nav-top)
+# [=](#charnav-top)
 
 
 <a id="equal"/><a id="equal-op"/>
@@ -810,7 +810,7 @@ example: `@a >>++` increments numeric value of every array element
 
 
 
-# [?](#nav-top)
+# [?](#charnav-top)
 
 <a id="question"/><a id="question-op"/><a id="question-context"/>
 [**?**](tablet-4-operators#logical-selection)
@@ -958,7 +958,7 @@ see also: [**|**](#pipe-escape)
 
 
 
-# [\^](#nav-top)
+# [\^](#charnav-top)
 
 <a id="caret"/><a id="caret-op"/><a id="junctive-xor"/>
 **\^**
@@ -1138,7 +1138,7 @@ compares (almost) all variable and data types according a
 
 
 
-# [A](#nav-top)
+# [A](#charnav-top)
 
 <a id="a-adverb"/>
 **:a**
@@ -1202,7 +1202,6 @@ keyword to define inharitance from [*classes*](appendix-g-glossary#class)
 and [*roles*](appendix-g-glossary#role) inside an
 [*object*](appendix-g-glossary#object), class or role &mdash;
 see also: [**is**](#is), [**does**](#does)
-
 
 <a id="and"/>
 **and**
@@ -1337,7 +1336,7 @@ replaces them, see also: [**supersede**](#supersede)
 
 
 
-# [B](#nav-top)
+# [B](#charnav-top)
 
 <a id="b-test"/>
 **:b**
@@ -1483,7 +1482,7 @@ see also:
 
 
 
-# [C](#nav-top)
+# [C](#charnav-top)
 
 <a id="c-test"/>
 **:c**
@@ -1743,7 +1742,7 @@ see also: [**leg**](#leg) and [**\<=\>**](#spaceship-op)) which do the same in
 
 
 
-# [Cn](#nav-top)
+# [Cn](#charnav-top)
 
 
 <a id="cntrl-subrule"/>
@@ -1887,7 +1886,7 @@ current working directory as [**Str**](#Str-type)
 
 
 
-# [D](#nav-top)
+# [D](#charnav-top)
 
 <a id="d-test"/>
 **:d**
@@ -2024,7 +2023,7 @@ dynamic [*scope*](appendix-g-glossary#scope)
 
 
 
-# [E](#nav-top)
+# [E](#charnav-top)
 
 <a id="e-constant"/>
 [**e**](appendix-g-glossary#e)
@@ -2248,7 +2247,7 @@ the current [**module**](#module) by default
 
 
 
-# [F](#nav-top)
+# [F](#charnav-top)
 
 <a id="f-test"/>
 **:f**
@@ -2432,7 +2431,7 @@ replacing them with the result, long form of
 
 
 
-# [G](#nav-top)
+# [G](#charnav-top)
 
 <a id="g-test"/>
 **:g**
@@ -2612,7 +2611,7 @@ see also: [**lt**](#lt), [**leg**](#leg) and [**<**](#lower-op)
 
 
 
-# [H](#nav-top)
+# [H](#charnav-top)
 
 <a id="h-test"/>
 **:h**
@@ -2692,7 +2691,7 @@ that ignores the order of results (allows parallel computing)
 
 
 
-# [I](#nav-top)
+# [I](#charnav-top)
 
 <a id="i-constant"/>
 [**i**](appendix-g-glossary#i)
@@ -2884,7 +2883,7 @@ returns the [*iterator*](appendix-g-glossary#iterator) of a
 [*list*](appendix-g-glossary#list)
 
 
-# [J](#nav-top)
+# [J](#charnav-top)
 
 <a id="join"/>
 **join**
@@ -2902,7 +2901,7 @@ unlike [**Each**](#Each-type)
 
 
 
-# [K](#nav-top)
+# [K](#charnav-top)
 
 <a id="k-test"/>
 **:k**
@@ -2979,7 +2978,7 @@ returns content of a hash as a list of key-value [*pairs*](appendix-g-glossary#p
 
 
 
-# [L](#nav-top)
+# [L](#charnav-top)
 
 
 <a id="L-test"/>
@@ -3161,7 +3160,7 @@ see also: [**gt**](#gt), [**le**](#le), [**leg**](#leg) and [**\<**](#lower-op)
 
 
 
-# [M](#nav-top)
+# [M](#charnav-top)
 
 <a id="m-op"/>
 [**m/ /**](tablet-9-regexes#matching)
@@ -3341,7 +3340,7 @@ once this scope is executed
 
 
 
-# [N](#nav-top)
+# [N](#charnav-top)
 
 <a id="backslash-N"/>
 **\\N**
@@ -3467,7 +3466,7 @@ opposite of [**denominator**](#denominator) &mdash;
 see also: [**nude**](#nude)
 
 
-# [O](#nav-top)
+# [O](#charnav-top)
 
 <a id="O-test"/>
 **:O**
@@ -3583,7 +3582,7 @@ long for [**:ov**](#ov-modifier)
 
 
 
-# [P](#nav-top)
+# [P](#charnav-top)
 
 
 <a id="p-test"/>
@@ -3765,7 +3764,7 @@ ID of the running process, in Perl 5: *\$\$* and *\$PID*
 
 
 
-# [Pn](#nav-top)
+# [Pn](#charnav-top)
 
 
 <a id="pod-pod-var"/>
@@ -3924,7 +3923,7 @@ if a key already exists, it will point to an array of both values
 
 
 
-# [Q](#nav-top)
+# [Q](#charnav-top)
 
 <a id="Q-op"/>
 [**Q**](tablet-2-basic-syntax#quoting)
@@ -4078,7 +4077,7 @@ see also: [**qqx**](#qqx-op) and [**q**](#q-op)
 
 
 
-# [R](#nav-top)
+# [R](#charnav-top)
 
 
 <a id="R-test"/>
@@ -4267,7 +4266,7 @@ deletes a directory with given name
 
 
 
-# [Rn](#nav-top)
+# [Rn](#charnav-top)
 
 <a id="role"/>
 **role**
@@ -4373,7 +4372,7 @@ alias to [**Q**](#Q-op) [**:regex**](#regex-adverb) **/.../** and
 
 
 
-# [S](#nav-top)
+# [S](#charnav-top)
 
 <a id="s-op"/>
 [**s/ / /**](tablet-9-regexes#regex-operators)
@@ -4572,7 +4571,7 @@ see also: [**spurt**](#spurt)
 
 
 
-# [Sn](#nav-top)
+# [Sn](#charnav-top)
 
 
 <a id="so"/><a id="so-op"/>
@@ -4823,7 +4822,7 @@ see also: [**augment**](#augment)
 
 
 
-# [T](#nav-top)
+# [T](#charnav-top)
 
 
 <a id="t-test"/>
@@ -5052,7 +5051,7 @@ local time zone
 
 
 
-# [U](#nav-top)
+# [U](#charnav-top)
 
 
 <a id="u-test"/>
@@ -5161,7 +5160,7 @@ see also [**need**](#need) and [**import**](#import))
 
 
 
-# [V](#nav-top)
+# [V](#charnav-top)
 
 
 <a id="backslash-V"/>
@@ -5219,7 +5218,7 @@ see also: [**\$\?DISTRO**](#distro-compiler-var) and
 
 
 
-# [W](#nav-top)
+# [W](#charnav-top)
 
 
 <a id="W-test"/>
@@ -5425,7 +5424,7 @@ zero-width space inside of a word between two
 
 
 
-# [X](#nav-top)
+# [X](#charnav-top)
 
 <a id="X-op"/>
 **X**
@@ -5522,11 +5521,11 @@ example: `'ab' xx 3` returns `<ab ab ab>`
 
 
 
-# [Y](#nav-top)
+# [Y](#charnav-top)
 
 
 
-# [Z](#nav-top)
+# [Z](#charnav-top)
 
 
 <a id="Z-op"/>
