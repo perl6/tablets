@@ -5,7 +5,8 @@
 Variables
 =========
 
-Sigils
+
+# [Sigils](#nav-top)
 ------
 
 All variables in Perl begin with a [sigil](appendix-g-glossary#sigil).
@@ -26,7 +27,7 @@ The first 4 can also be used as prefix operators, called
 but there are much more different contexts then 4.
 
 
-Twigils
+# [Twigils](#nav-top)
 -------
 
 Twigil is short for secondary sigil. They follow after a primary sigil and mark special namespaces or variables with special meanings and properties.
@@ -44,7 +45,7 @@ Twigil is short for secondary sigil. They follow after a primary sigil and mark 
 --------------------------------------------------  ------------------------------------------------------------
 
 
-Special Variables
+# [Special Variables](#nav-top)
 -----------------
 
 ----------------------------------------  ------------------------
@@ -562,7 +563,11 @@ have an equivalent [*Unicode*](appendix-g-glossary#unicode) version
 Set Op                                    UTF    CPNR  Short  Explanation 
 ----------------------------------------  -----  ----  -----  -----------------------------------------------
 (elem)                                    ∈      2208  &nbsp; True if left operand is element of the right set
-(cont)                                    ∋      220B  %nbsp; True if right operand is element of the left set
+(cont)                                    ∋      220B  &nbsp; True if right operand is element of the left set
+(<)                                       ⊂      2282  strict True if all elements left are in right and right set has more
+(<=)                                      ⊆      2286  subset True if all elements left are in right set
+(>)                                       ⊃      2283  strict True if all elements right are in left set and left has more (strict superset)
+(>=)                                      ⊇      2287  supers True if all elements right are in left set
 [(&)](appendix-a-index#ampersand-set-op)  ∩      2229  AND    Set of elements, which are in both sets
 [(|)](appendix-a-index#pipe-set-op)       ∪      222A  OR     Set of elements, which are in one or both sets
 [(\^)](appendix-a-index#caret-set-op)     ⊖      2296  XOR    Set of elements, which are only in one of both sets
