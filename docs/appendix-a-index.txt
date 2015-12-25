@@ -168,7 +168,7 @@ matches the end of a line (no more multile mode)
 
 
 
-# [%](#nav-top)
+# [%](#charnav-top)
 
 
 <a id="percent"/><a id="percent-sigil"/>

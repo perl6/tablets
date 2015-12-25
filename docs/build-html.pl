@@ -8,6 +8,7 @@ use File::Copy qw(copy);
 my $pandoc_cmd = {
     normal => 'pandoc -s --toc --css=styles.css -H _head-inc -B _nav-header -A _nav-footer -o %s %s',
     'appendix-a-index.txt'    => 'pandoc -s   --css=styles.css -H _head-inc -B _nav-header -A _nav-footer -o %s %s',
+    'appendix-b-grouped.txt'  => 'pandoc -s   --css=styles.css -H _head-inc -B _nav-header -A _nav-footer -o %s %s',
     'appendix-g-glossary.txt' => 'pandoc -s   --css=styles.css -H _head-inc -B _nav-header -A _nav-footer -o %s %s',
     'index.txt' =>      'pandoc -s   --css=styles.css -H _head-inc                               -o %s %s', # -N
 };

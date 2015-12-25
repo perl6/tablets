@@ -1,12 +1,35 @@
 % Perl 6 Tablets Appendix B - Thematically Grouped Index
 
+*   [Variables](#variables)
+    * [Sigils](#sigils)
+    * [Twigils](#twigils)
+    * [Special](#special-var) : [Match](#special-var-match), [Global](#special-var-global), [Compiler](#special-var-compiler), [POD](#special-var-pod), [Slang](#special-var-slang)
+    * [Constants](#constants)
+    * [Scope](#variable-scope): [Declarator](#variable-scope-decalarator)
+    * [Type](#variable-type): [Undefined](#variable-type-undefined), [Immutable](#variable-type-immutable), [Mutable](#variable-type-mutable), [Low Level](#variable-type-low-level), [Introspection](#variable-type-introspection)
+*   Operators 
+    * Precedence
+    * Associativity
+    * Categories: Main, Regex
+    * Meta
+    * Unicode
+    * Contextualizers
+    * Junctions
+    * Sets
+    * Smartmatch
+    * Files Tests
+    * Quoting
+    * Text
+    * Regex
 
-[Variables](#nav-top)
-=========
+<a id="variables"/>
+
+# [Variables](#nav-top)
 
 
-[Sigils](#nav-top)
-------
+<a id="sigils"/>
+
+## [Sigils](#nav-top)
 
 All variables in Perl begin with a [sigil](appendix-g-glossary#sigil).
 They mark the 3 primary var types.
@@ -25,6 +48,7 @@ The first 4 can also be used as prefix operators, called
 [contextualizers](#contextualizers), that force different contexts,
 but there are much more different contexts then 4.
 
+<a id="twigils"/>
 
 [Twigils](#nav-top)
 -------
@@ -44,6 +68,8 @@ Twigil is short for secondary sigil. They follow after a primary sigil and mark 
 --------------------------------------------------  ------------------------------------------------------------
 
 
+<a id="special-var"/>
+
 [Special Variables](#nav-top)
 -----------------
 
@@ -52,6 +78,7 @@ Twigil is short for secondary sigil. They follow after a primary sigil and mark 
 [`$!`](appendix-a-index#exclamation-var)  error msg
 ----------------------------------------  ------------------------
 
+<a id="special-var-match"/>
 
 ### [Match Variables](#nav-top) ###
 
@@ -61,6 +88,8 @@ Twigil is short for secondary sigil. They follow after a primary sigil and mark 
 [`$0 ...`](appendix-a-index#0-var)                alias to positional capture, like in P5 - `$1 .. $9` but doesn't stop at `$9`
 [`@()`](appendix-a-index#round-brackets-var)      array that holds $0 .. $9 and rest and positional submatches
 ------------------------------------------------  ------------------------------------------------------------------------------------
+
+<a id="special-var-global"/>
 
 ### [Global Variables](#nav-top) ###
 
@@ -95,6 +124,8 @@ $*EMERGENCY_MEMORY                                                   formerly `$
 $*DEBUGGING                                                          &nbsp;
 -------------------------------------------------------------------  -------------------------------------------------------------------
 
+<a id="special-var-compiler"/>
+
 ### [Compiler Hint Variables](#nav-top) ###
 
 compiler constants (fixed at compile time)
@@ -122,6 +153,8 @@ compiler constants (fixed at compile time)
 [`$?TABSTOP`](appendix-a-index#TABSTOP-compiler-var)         
 -----------------------------------------------------------  ------------------------------------------------------------------
 
+<a id="special-var-pod"/>
+
 ### [POD Variables](#nav-top) ###
 
 File-[scoped](appendix-g-glossary#scope) [POD](basic-syntax#pod) data
@@ -131,6 +164,9 @@ File-[scoped](appendix-g-glossary#scope) [POD](basic-syntax#pod) data
 [`$=data`](appendix-a-index#data-pod-var)         data block handle (=begin DATA ... =end)
 [`@=COMMENT`](appendix-a-index#COMMENT-pod-var)   All the comment blocks in the file
 ------------------------------------------------  ----------------------------------------
+
+<a id="special-var-slang"/>
+
 
 ### [Slang Variables](#nav-top) ###
 
@@ -144,6 +180,7 @@ sublanguage seen by the parser at this lexical spot
 [`$~P5Regex`](appendix-a-index#P5Regex-slang-var)   the current root of the Perl regex language
 --------------------------------------------------  ------------------------------------------------
 
+<a id="constants"/>
 
 [Constants](#nav-top)
 ---------
@@ -158,6 +195,7 @@ Name                                Value             Meaning
 [pi](appendix-a-index#pi-constant)  3.14159265394248  [ratio of a circle's circumference to its diameter](appendix-g-glossary#pi)
 ----------------------------------  ----------------  -----------------------------------
 
+<a id="variable-scope"/>
 
 [Scope](#nav-top)
 -----
@@ -195,8 +233,9 @@ calls:
 SUPER   Package symbols declared in inherited classes
 ------  -----------------------------------------------------
 
+<a id="variable-scope-declarator"/>
 
-### Declarator ###
+### [Declarator](#nav-top)
 
 ------------------------------------------  -------------------------------------------------------
 [`my`](appendix-a-index#my)                 introduces lexically [scoped](appendix-g-glossary#scope) names
@@ -209,16 +248,19 @@ SUPER   Package symbols declared in inherited classes
 ------------------------------------------  -------------------------------------------------------
 
 
+<a id="variable-type"/>
 
-Value Types
------------
+## [Value Types](#nav-top)
+
 
 In Perl 6 any variable and value is an object. Here's a list of all
 different types of values, represented my different classes or
 roles. The [routine types](ap-b-lookup#routine-types) are in a
 different section.
 
-### Undefined types ###
+<a id="variable-type-undefined"/>
+
+### [Undefined types](#nav-top)
 
 ------------------------------------------  -----------------------------------------------------------------
 [Mu](appendix-a-index#Mu-type)              Most Undefined
@@ -232,9 +274,9 @@ different section.
 Widget                                      Any Widget object
 ------------------------------------------  -----------------------------------------------------------------
 
+<a id="variable-type-immutable"/>
 
-
-### Immutable types ###
+### [Immutable types](#nav-top) 
 
 ------------------------------------------------  -------------------------------------------------------------
 [Str](appendix-a-index#Str-type)                  Perl string (finite sequence of Unicode characters)
@@ -262,9 +304,9 @@ Widget                                      Any Widget object
 [HardRoutine](appendix-a-index#HardRoutine-type)  a routine that is committed to not changing
 ------------------------------------------------  ------------------------------------------------------------
 
+<a id="variable-type-mutable"/>
 
-
-### Mutable types ###
+### [Mutable types](#nav-top)
 
 ------------------------------------------------  ---------------------------------------------------------
 [Iterator](appendix-a-index#Iterator-type)        Perl list
@@ -288,10 +330,10 @@ Widget                                      Any Widget object
 [SoftRoutine](appendix-a-index#SoftRoutine-type)  a routine that is committed to staying mutable
 ------------------------------------------------  ---------------------------------------------------------
 
+<a id="variable-type-low-level"/>
 
+### [Low level data types](#nav-top)
 
-Low level data types
---------------------
 
 This is more low level than the last table. These types are more meant
 to give the compiler optimizing hints.
@@ -332,9 +374,9 @@ buf32       a uint32 buffer
 buf64       a uint64 buffer
 ----------  ------------------------------------
 
+<a id="variable-type-introspection"/>
 
-Object Introspection
---------------------
+## [Object Introspection](#nav-top)
 
 Every value in P6 is an [object](appendix-g-glossary#object) and has 
 following [methods](appendix-g-glossary#method) to tell more about itself.
@@ -350,10 +392,12 @@ following [methods](appendix-g-glossary#method) to tell more about itself.
 [WHENCE](appendix-a-index#WHENCE-introspection)  autovivification of closures
 -----------------------------------------------  ---------------------------------------------------------------
 
-
+<a id="operators"/>
 
 [Operators](#nav-top)
 =========
+
+<a id="operator-precedence"/>
 
 [Table of Precedence](#nav-top)
 -------------------
@@ -390,7 +434,7 @@ X   Sequencer          [`<==`](appendix-a-index#pipe-left) [`==>`](appendix-a-in
 N   Terminator         [`;`](appendix-a-index#semicolon) [`{...}`](appendix-a-index#curly-brackets) [`unless`](appendix-a-index#unless) `extra ) ] }`
 --  -----------------  ----------------------------------------------------
 
-
+<a id="operators-associativity"/>
 
 [Operator Associativity](#nav-top)
 ----------------------
