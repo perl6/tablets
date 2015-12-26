@@ -12,8 +12,8 @@ my %pattern = (
 	link   => qr/\]\(/,
 	line   => qr/(?<!\n)\n/,                                                     # no empty lines
 );
-my $head = '    page     title   item  anchor  links   lines    bytes';
-my $format = "%11s    %3s   %4s   %4s   %5s   %5s   %6s\n";
+my $head = '    page     title   item  anchor  links   lines   kbytes';
+my $format = "%11s    %3s   %4s   %4s   %5s   %5s   %6d\n";
 
 # filter out all the tablet files
 for my $md_file (<*.txt>){
@@ -35,11 +35,11 @@ for my $page (sort keys %file) {
 	}
 	$sum{'size'} += $data{'size'};
 	printf $format, $page, $data{'head'}, $data{'item'},
-	                $data{'anchor'}, $data{'link'}, $data{'line'}, $data{'size'};
+	                $data{'anchor'}, $data{'link'}, $data{'line'}, $data{'size'}/1024;
 }
 print '-' x length $head,"\n";
 printf $format, 'Sum', $sum{'head'}, $sum{'item'},
-                       $sum{'anchor'},  $sum{'link'}, $sum{'line'}, $sum{'size'};
+                       $sum{'anchor'},  $sum{'link'}, $sum{'line'}, $sum{'size'}/1024;
 
 
 print "TODO:\n";
