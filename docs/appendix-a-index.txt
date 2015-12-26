@@ -230,6 +230,11 @@ and other [*blocks*](appendix-g-glossary#block)
 forces [callable](tablet-3-variables#callable)
 context, alias to [**code**()](#code-context)
 
+<a id="ampersand-metachar"/>
+**&**
+[*«regex metachar»*](appendix-b-grouped#regex-metacharacter) &mdash;
+match multiple patterns ([*AND*](appendix-g-glossary#and)-connection of patterns)
+
 <a id="ampersand-op"/><a id="junctive-and"/>
 **&**
 [*«junctive op»*](appendix-b-grouped#junctions) &mdash;
@@ -238,10 +243,14 @@ context, alias to [**code**()](#code-context)
 requires that all conditions are met &mdash;
 see also: [**all**](#all), [(&)](appendix-a-index#ampersand-set-op)
 
-<a id="ampersand-metachar"/>
-**&**
-[*«regex metachar»*](appendix-b-grouped#regex-metacharacter) &mdash;
-match multiple patterns ([*AND*](appendix-g-glossary#and)-connection of patterns)
+<a id="ampersand-set-op"/><a id="set-and"/>
+**(&)**
+[*«set op»*](appendix-b-grouped#operators-sets) &mdash;
+[*infix*](appendix-g-glossary#infix)
+[*AND*](appendix-g-glossary#and) join operator for two sets
+&mdash;
+see also: [&](appendix-a-index#ampersand-op)
+
 
 <a id="ampersand-ampersand-op"/><a id="logical-and"/>
 **&&**
@@ -272,30 +281,6 @@ grouping of values (parameters) to a [**Parcel**](#Parcel-type)
 encompass a *subregex*, results (*submatches*) land in 
 [**\@()**](#round-brackets-var) or [**\$0**](#0-var)... (not limited to $9 anymore) &mdash;
 see also: [**\[ \]** «metachar»](#square-brackets-metachar)
-
-<a id="ampersand-set-op"/><a id="set-and"/>
-**(&)**
-[*«set op»*](appendix-b-grouped#sets) &mdash;
-[*infix*](appendix-g-glossary#infix)
-[*AND*](appendix-g-glossary#and) join operator for two sets
-&mdash;
-see also: [&](appendix-a-index#ampersand-op)
-
-<a id="caret-set-op"/><a id="set-xor"/>
-**(\^)**
-[*«set op»*](appendix-b-grouped#sets) &mdash;
-[*infix*](appendix-g-glossary#infix)
-[*XOR*](appendix-g-glossary#xor) join operator for two sets
-&mdash;
-see also: [\^](appendix-a-index#caret-op)
-
-<a id="pipe-set-op"/><a id="set-or"/>
-**(|)**
-[*«set op»*](appendix-b-grouped#sets) &mdash;
-[*infix*](appendix-g-glossary#infix)
-[*OR*](appendix-g-glossary#or) joining operator for two sets
-&mdash;
-see also: [|](appendix-a-index#pipe-op)
 
 <a id="round-brackets-var"/>
 **@( )**
@@ -969,6 +954,14 @@ requires that exactly one of operands is [**True**](#True) in
 [*bool context*](appendix-g-glossary#bool-context) to return **True** &mdash;
 see also [**one**](#one), [(\^)](appendix-a-index#caret-set-op)
 
+<a id="caret-set-op"/><a id="set-xor"/>
+**(\^)**
+[*«set op»*](appendix-b-grouped#operators-sets) &mdash;
+[*infix*](appendix-g-glossary#infix)
+[*XOR*](appendix-g-glossary#xor) join operator for two sets
+&mdash;
+see also: [\^](appendix-a-index#caret-op)
+
 <a id="caret-upto"/>
 **\^** &mdash;
 upto operator, `^$limit` expands to `0 ..^ +$limit` [range](#range-op)
@@ -1030,12 +1023,26 @@ if assigned it creates an anonymous routine,
 or a hashref when it is identified as a hash by the 
 [**hash**](#hash-op) prefix or it contains a [**=\>**](#fat-arrow)
 
+<a id="pipe-context"/><a id="pipe-context-op"/>
+**|**()
+[*«context op»*](appendix-b-grouped#contextualizers) &mdash;
+flatten [capture](appendix-g-glossary#capture)
+object into arglist, ([*named parameter*](appendix-g-glossary#named-parameter))
+
 <a id="pipe"/><a id="pipe-op"/><a id="junctive-or"/>
 **|**
 [*«junctive op»*](appendix-b-grouped#junctions) &mdash;
 [*junctive*](appendix-g-glossary#junction) [*OR*](appendix-g-glossary#or),
 requires that a condition is fulfilled &mdash;
 see also: [**any**](#any), [(|)](appendix-a-index#pipe-set-op)
+
+<a id="pipe-set-op"/><a id="set-or"/>
+**(|)**
+[*«set op»*](appendix-b-grouped#operators-sets) &mdash;
+[*infix*](appendix-g-glossary#infix)
+operator joining two sets (like [*OR*](appendix-g-glossary#or))
+&mdash;
+see also: [|](appendix-a-index#pipe-op)
 
 <a id="pipe-metachar"/>
 **|**
@@ -1051,12 +1058,6 @@ used to [*escape*](appendix-g-glossary#escape) or mark
 inside [regexes](appendix-g-glossary#regex),
 surrounded by angle brackets (\< \>), to distinkt it from the metachar above &mdash;
 see also: [**\\**](#backslash-escape)
-
-<a id="pipe-context"/><a id="pipe-context-op"/>
-**|**()
-[*«context op»*](appendix-b-grouped#contextualizers) &mdash;
-flatten [capture](appendix-g-glossary#capture)
-object into arglist, ([*named parameter*](appendix-g-glossary#named-parameter))
 
 <a id="pipe-pipe-op"/><a id="logical-or"/>
 **||**
@@ -1822,6 +1823,15 @@ see also: [**abs**](#abs), [**sign**](#sign), [**truncate**](#truncate),
 *«var trait»* &mdash;
 makes so declared var (is constant) a real constant
 
+<a id="cont-set-op"/>
+**(cont)**
+[*«set op»*](appendix-b-grouped#operators-sets) &mdash;
+[*infix*](appendix-g-glossary#infix)
+operator reurning Bool: True if right operand is element of the left operand (set)
+&mdash;
+see also: [(elem)](#elem-set-op)
+
+
 <a id="contend"/>
 **contend**
 *«block modifier»* &mdash;
@@ -2067,6 +2077,14 @@ opposite of [**lazy**](#lazy)
 effective global ID of the running process
 ([**\$\*PID**](#PID-global-var)) owner,
 in Perl 5: *@\)* and *\$EGID*
+
+<a id="elem-set-op"/>
+**(elem)**
+[*«set op»*](appendix-b-grouped#operators-sets) &mdash;
+[*infix*](appendix-g-glossary#infix)
+operator reurning Bool: True if left operand is element of the right operand (set)
+&mdash;
+see also: [(cont)](#cont-set-op)
 
 <a id="elems"/><a id="elems-aray"/>
 **elems**
