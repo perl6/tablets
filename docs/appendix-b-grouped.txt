@@ -7,20 +7,35 @@
     * [Constants](#constants)
     * [Scope](#variable-scope): [Declarator](#variable-scope-decalarator)
     * [Type](#variable-type): [Undefined](#variable-type-undefined), [Immutable](#variable-type-immutable), [Mutable](#variable-type-mutable), [Low Level](#variable-type-low-level), [Introspection](#variable-type-introspection)
-*   Operators 
-    * Precedence
-    * Associativity
-    * Categories: Main, Regex
-    * Meta
-    * Unicode
-    * Contextualizers
-    * Junctions
-    * Sets
-    * Smartmatch
-    * Files Tests
-    * Quoting
-    * Text
-    * Regex
+*   [Operators](#operators)
+    * [Precedence](#operator-precedence)
+    * [Associativity](#operator-associativity)
+    * [Categories](#operators-categories): [Main](#operators-categories-main), [Regex](#operators-categories-regex)
+    * [Meta](#operators-meta)
+    * [Unicode](#operators-utf)
+    * [Contextualizers](#operators-context)
+    * [Junctions](#operators-junctions)
+    * [Sets](#operators-sets)
+    * [Smartmatch](#operators-smartmatch)
+    * [Files Tests](#operators-file-test)
+    * [Quoting](#operators-quoting)
+*   [Text Processing](#text-processing)
+    * [Quoting Adverbs](text-adverb)
+    * [Regex Modifier](#text-regex-modifier)
+    * [Metachar](#text-regex-metachar)
+    * [Quantifier](#text-regex-quantifier)
+    * [Control Chars](#text-control-char)
+    * [Escape Sequences](#text-escape-seqences)
+    * [Zero-Width Boundaries](#text-boundaries)
+    * [Rules](#text-rules)
+    * [Match Object Methods](#match-methods)
+*   [Flow Control](#flow-control)
+    * [Phaser](#flow-phaser)
+    * [Jump Commands](#flow-jump)
+    * [Conditionals](#flow-conditional)
+    * [Loops](#flow-loop)
+    * [Routine](#flow-routine): [Types](#flow-routine-type), [Modifier](#flow-routine-modifier), [Trait](#flow-routine-traits), [Parameter Trait](#flow-parameter-traits), [Signature Symbol](#flow-signature-symbols)
+    * [Callframe Methods](#flow-callframe-methods)
 
 <a id="variables"/>
 
@@ -451,9 +466,12 @@ X       list    `infix:<op>($a; $b; $c)`
 ------  ------  ------------------------------- ------------------------
 
 
+<a id="operators-categories"/>
 
 [Categories](#nav-top)
 ----------
+
+<a id="operators-categories-main"/>
 
 ### [MAIN](#nav-top) ###
 
@@ -495,6 +513,7 @@ that can be used to create new categories.
 [`type_declarator:<subset>`](appendix-a-index#type-declarator-category)
 -----------------------------------------------------------------------------------------------------------
 
+<a id="operators-categories-regex"/>
 
 ### [Regex](#nav-top) ###
 
@@ -509,6 +528,7 @@ The default [*regex*](appendix-g-glossary#regex) language as stored in
 [`quantifier:sym<*>`](appendix-a-index#quantifier-category)
 ------------------------------------------------------------------------
 
+<a id="operators-meta"/>
 
 [Metaoperators](#nav-top)
 -------------
@@ -534,7 +554,7 @@ if followed by `()`.
 [`Zop`](appendix-a-index#Z-metaop)            [zipwith()](appendix-a-index#zipwith)      like hyper, but evaluates lazy, `@result = $L[0] op $R[0], $L[1] op $R[1], ...`
 --------------------------------------------  -----------------------------------------  ----------------------------------------------------------
 
-
+<a id="operators-utf"/>
 
 [Unicode operators](#nav-top)
 -----------------
@@ -550,6 +570,7 @@ signs (documented as "Texas Quotes"). [Set ops](#sets) have also UTF-variants.
  «» [\<\< \>\>](appendix-a-index#double-angle-brackets)  [**qw**](appendix-a-index#qw-op) with [evaluation](appendix-g-glossary#evaluation) and [quote protection](appendix-g-glossary#quote-protection)
 --- ---------------------- ----------------------------  -----------------------------------------------
 
+<a id="operators-context"/>
 
 [Contextualizers](#nav-top)
 ---------------
@@ -573,7 +594,7 @@ that forcing a [context](appendix-g-glossary#context).
 [`||`](appendix-a-index#pipe-pipe-context)  &nbsp;                           flatten [capture](appendix-g-glossary#capture) object into semicolon list (positional parameter)
 ------------------------------------------  -------------------------------  ----------------------------------------------------------------------------------------------
 
-
+<a id="operators-junctions"/>
 
 [Junctions](#nav-top)
 ---------
@@ -593,6 +614,7 @@ Junctive Infix Op                   Prefix Op                      Operation    
 &nbsp;                              [none](appendix-a-index#none)  [NOT](appendix-g-glossary#not) any  [True](appendix-a-index#True) if none are True
 ----------------------------------  -----------------------------  ----------------------------------  -----------------------------------------------
 
+<a id="operators-sets"/>
 
 [Sets](#nav-top)
 ----
@@ -622,6 +644,7 @@ Set Op                                    UTF    CPNR  Neg.   CPNR   Short  Expl
 (.)                                       ⊍      228D  &nbsp; &nbsp; b.mul  Bag with elements that are in both bags but weight multiplied 
 ----------------------------------------  -----  ----  ----   ----   ----- -----------------------------------------------------
 
+<a id="operators-smartmatch"/>
 
 [Smartmatch](#nav-top)
 ----------
@@ -699,6 +722,7 @@ Callable                                           [Hash](appendix-a-index#Hash-
 [Any](appendix-a-index#Any-type)              [Any](appendix-a-index#Any-type)              scalars are identical                        `$_ === X`
 -------------------------------------------   --------------------------------------------  ------------------------------------------   --------------------------------------
 
+<a id="operators-file-test"/>
 
 [Test Methods](#nav-top)
 ------------
@@ -735,6 +759,7 @@ Use it as in `$filename.IO ~~ :X` or `$filename.IO.X`.
 [:k](appendix-a-index#k-test)  Bool  Path has sticky bit set
 -----------------------------  ----  ----------------------------------------------------------
 
+<a id="operators-quoting"/>
 
 [Quoting Ops](#nav-top)
 -----------
@@ -761,13 +786,15 @@ Op                                  Nonealphanumeric Version                  Tr
 [quasi {}](appendix-a-index#quasi)  &nbsp;                                    [Q](appendix-a-index#Q-op) [:code](appendix-a-index#code-adverb) //                                                        &nbsp;                              [quasiquoting](appendix-g-glossary#quasiquoting)
 ---------------------------------  -----------------------------------------  -------------------------------------------------------------------------------------------------------------------------  ----------------------------------  ----------------------------------------------------------
 
+<a id="text-processing"/>
+
+# [Text Processing](#nav-top)
 
 
-[Text Processing](#nav-top)
-===============
+<a id="text-adverbs"/>
 
-[Quoting Adverbs](#nav-top)
----------------
+## [Quoting Adverbs](#nav-top)
+
 
 There are a lot more adverbs to 
 [fine tune your quoting](tablet-2-basic-syntax#interpolation).
@@ -796,7 +823,7 @@ Short                              Long                                         
 &nbsp;                             [:trans](appendix-a-index#trans-adverb)            parse as [transliteration](appendix-g-glossary#transliteration)
 ---------------------------------  -------------------------------------------------  -------------------------------------------------
 
-
+<a id="text-regex-modifier"/>
 
 [Regex Modifier](#nav-top)
 --------------
@@ -832,6 +859,7 @@ Short                                     Long                                  
 [:P5](appendix-a-index#gP5-modifier)      [:Perl5](appendix-a-index#Perl5-modifier)                                                                              use the Perl 5 Regex syntax
 ----------------------------------------  ---------------------------------------------------------------------------------------------------------------------  ---------------------------------------------------------------------------------------------------------
 
+<a id="text-regex-metachar"/>
 
 [Regex Metacharacter](#nav-top)
 -------------------
@@ -857,6 +885,7 @@ Short                                     Long                                  
 [`:=`](appendix-a-index#colon-equal-op)               bind the result of a match to a hypothetical variable
 ----------------------------------------------------  ----------------------------------------------------------------------------------------------------------
 
+<a id="text-regex-quantifier"/>
 
 [Quantifier](#nav-top)
 ----------
@@ -872,6 +901,7 @@ Short                                     Long                                  
 [`%%`](appendix-a-index#percent-percent-metachar)              like %, but allows trailing separator
 ------------------------------------------------------------------  -------------------------------------------------------------------------------------------
 
+<a id="text-control-char"/>
 
 [Control Chars](#nav-top)
 -------------
@@ -891,10 +921,10 @@ and thatswhy also included in the next list.
 `\t`   TAB
 -----  -----------------
 
+<a id="text-escape-seqences">
 
+## [Escape Sequences](#nav-top)
 
-[Escape Sequences](#nav-top)
-----------------
 
 To be used just inside of regexes (rx/.../, m/.../, s/.../.../ and tr/.../.../).
 
@@ -929,6 +959,8 @@ To be used just inside of regexes (rx/.../, m/.../, s/.../.../ and tr/.../.../).
 [`\X[ ... ]`](appendix-a-index#backslash-X)  anything but the character given in hexadecimal (brackets optional)
 -------------------------------------------  -------------------------------------------------------------------
 
+<a id="text-boundaries"/>
+
 [Zero-Width Boundaries](#nav-top)
 ---------------------
 
@@ -941,7 +973,7 @@ To negate put a ! in front of the pipe symbol.
 [`<|w>`](appendix-a-index#pipe-w)  word boundary aka \<wb\>
 ---------------------------------  -------------------------------------------------------------------
 
-
+<a id="text-rules"/>
 
 [Subrules](#nav-top)
 --------
@@ -976,6 +1008,8 @@ regex. They can have prefixes: . (dot) marks a non-capturing subrule,
 [`<!>`](appendix-a-index#exclamation-subrule)                    always false
 ---------------------------------------------------------------  -------------------------------------------------
 
+<a id="match-methods"/>
+
 [Match Object Methods](#nav-top)
 --------------------
 
@@ -996,11 +1030,14 @@ submatch
 --------------  ----------------------------------------------
 
 
-[Flow Control](#nav-top)
-============
+<a id="flow-control"/>
 
-[Closure Traits](#nav-top)
---------------
+# [Flow Control](#nav-top)
+
+<a id="flow-phaser"/>
+
+## [Closure Traits](#nav-top)
+
 
 aka phasers. Every block can contain special named blocks (some are
 only for loops) that are started at certain times. They are traits
@@ -1031,9 +1068,9 @@ also be used within an expression as in `BEGIN my $x = 3 * 3;`.
 -------------------------------------------------  ------------------------------------------------------------------
 
 
+<a id="flow-jump"/>
 
-[Jump Commands](#nav-top)
--------------
+## [Jump Commands](#nav-top)
 
 
 -----------------------------------  --------------------------------------------------------------
@@ -1048,9 +1085,9 @@ also be used within an expression as in `BEGIN my $x = 3 * 3;`.
 -----------------------------------  --------------------------------------------------------------
 
 
+<a id="flow-conditional"/>
 
-[Conditionals](#nav-top)
-------------
+## [Conditionals](#nav-top)
 
 ---------------------------------------  --------------------------------------------------------------------------------------
 [if](appendix-a-index#if)                when following expression evals in boolean context to True, the block that following after that will be executed
@@ -1065,9 +1102,9 @@ also be used within an expression as in `BEGIN my $x = 3 * 3;`.
 [default](appendix-a-index#default)      following block will be executed, when no "when" clause was executed
 ---------------------------------------  --------------------------------------------------------------------------------------
 
+<a id="flow-loop"/>
 
-[Loops](#nav-top)
------
+## [Loops](#nav-top)
 
 ---------------------------------  -----------------------------------------------------------
 [loop](appendix-a-index#loop)      general (endless) loop, unless used as an C-style-loop, evals following expression into void context
@@ -1078,14 +1115,14 @@ also be used within an expression as in `BEGIN my $x = 3 * 3;`.
 [for](appendix-a-index#for )       evals expression into lazy list context and iterates over that list from first to last value, sets each time `$_` (can be combined with **when** as well),
 ---------------------------------  -----------------------------------------------------------
 
+<a id="flow-routine"/>
 
-
-[Routines](#nav-top)
---------
+## [Routines](#nav-top)
 
 routine definition: \[[scope](ap-b-lookup#scopes)\] \[modifier\]
 type \[name\] \[trait\] ([signature](appendix-g-glossary#signature)) { block }
 
+<a id="flow-routine-type"/>
 
 ### [Routine Types](#nav-top) ###
 
@@ -1100,7 +1137,7 @@ type \[name\] \[trait\] ([signature](appendix-g-glossary#signature)) { block }
 [quasi](appendix-a-index#quasi)            block that is compiled to an [AST](appendix-g-glossary#AST) at runtime
 -----------------------------------------  -------------------------------------------------------------------------------------------------------
 
-
+<a id="flow-routine-modifier"/>
 
 ### [Routine Modifier](#nav-top) ###
 
@@ -1110,6 +1147,7 @@ type \[name\] \[trait\] ([signature](appendix-g-glossary#signature)) { block }
 [proto](appendix-a-index#proto-routine-modifier)  fallback for multi, if no multi signature matches the caller, a proto with same name is executed
 ------------------------------------------------  -------------------------------------------------------------------------------------------------------
 
+<a id="flow-routine-traits"/>
 
 ### [Routine Traits](#nav-top) ###
 
@@ -1131,6 +1169,7 @@ type \[name\] \[trait\] ([signature](appendix-g-glossary#signature)) { block }
 [assoc](appendix-a-index#assoc-routine-trait)          specifies the [associativity](#operator-associativity) of an operator explicitly as seen here
 -----------------------------------------------------  -------------------------------------------------------------------------------------
 
+<a id="flow-parameter-traits"/>
 
 ### [Parameter Traits](#nav-top) ###
 
@@ -1143,7 +1182,7 @@ type \[name\] \[trait\] ([signature](appendix-g-glossary#signature)) { block }
 [parcel](appendix-a-index#parcel-parameter-trait)       raw reference, will not be contextualized
 ------------------------------------------------------  -----------------------------------------------------------------------------
 
-
+<a id="flow-signature-symbols"/>
 
 ### [Signature Symbols](#nav-top) ###
 
@@ -1161,8 +1200,10 @@ In routine and block definitions can be also some character with special meaning
 [`^`](appendix-a-index#caret-signature)                   prefix of metaclass methods, `$obj.^methods();` is shortcut for [`$obj.HOW.methods($obj);`](#object-introspection)
 --------------------------------------------------------  ------------------------------------------------------------------------------------------------------------------
 
-[Callframe Methods](#nav-top)
------------------
+<a id="flow-callframe-methods"/>
+
+## [Callframe Methods](#nav-top)
+
 
 A callframe object is generated at run-time for each call of a block of code.
 If a block of code includes a [**callframe()**](appendix-a-index#callframe) call,
