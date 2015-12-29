@@ -203,13 +203,13 @@ sublanguage seen by the parser at this lexical spot
 are builtins (not exactly variables and without a [sigil](#sigils))
 that return always the same important value
 
-Name                                UTF  Value             Meaning
-----------------------------------  ---  ----------------  -----------------------------------
-[e](appendix-a-index#e-constant)     -    2.71828182878434 [euler number](appendix-g-glossary#e)
-[i](appendix-a-index#i-constant)     -    0+1i             [imaginary number](appendix-g-glossary#i)
-[pi](appendix-a-index#pi-constant)   π   3.14159265394248  [ratio of a circle's circumference to its diameter](appendix-g-glossary#pi)
-tau                                  τ   6.28318530717959   2 * π (circumference / radius)
-----------------------------------  ---  ----------------  -----------------------------------
+Name                                  UTF  Value             Meaning
+------------------------------------  ---  ----------------  -----------------------------------
+[e](appendix-a-index#e-constant)       -   2.71828182878434  [euler number](appendix-g-glossary#e)
+[i](appendix-a-index#i-constant)       -   0+1i              [imaginary number](appendix-g-glossary#i)
+[pi](appendix-a-index#pi-constant)     π   3.14159265394248  [ratio of a circle's circumference to its diameter](appendix-g-glossary#pi)
+[tau](appendix-a-index#tau-constant)   τ   6.28318530717959  2 * π (circumference / radius)
+------------------------------------  ---  ----------------  -----------------------------------
 
 <a id="variable-scope"/>
 
@@ -627,23 +627,23 @@ have an equivalent [*Unicode*](appendix-g-glossary#unicode) version
 (including code point number). Operators are negated with [**!**](appendix-a-index#exclamation-op).
 Overload them with infix:<<"\x2208">>($a, $b --> Bool){..., number is the codepoint nr (CPNR)
 
-Set Op                                    UTF    CPNR  Neg.   CPNR   Short  Explanation 
-----------------------------------------  -----  ----  ----   ----   -----  ----------------------------------------------------
-(elem)                                    ∈      2208  ∉      2209   &nbsp; True if left operand is (not) element of the right set
-(cont)                                    ∋      220B  ∌      220C   &nbsp; True if right operand is (not) element of the left set
-(<)                                       ⊂      2282  ⊄      2284   strict True if all elements left are in right and right set has more
-(<=)                                      ⊆      2286  ⊈      2288   subset True if all elements left are in right set
-(>)                                       ⊃      2283  ⊅      2285   strict True if all elements right are in left set and left has more (strict superset)
-(>=)                                      ⊇      2287  ⊉      2289   supers True if all elements right are in left set
-(<+)                                      ≼      227C  &nbsp; &nbsp; b.sub  True if all elements left are in right bag and weighed less than right
-(>+)                                      ≽      227D  &nbsp; &nbsp; b.sup  True if all elements right are in left bag and weighed less than left
-[(&)](appendix-a-index#ampersand-set-op)  ∩      2229  &nbsp; &nbsp; AND    Set of elements, which are in both sets
-[(|)](appendix-a-index#pipe-set-op)       ∪      222A  &nbsp; &nbsp; OR     Set of elements, which are in one or both sets
-[(\^)](appendix-a-index#caret-set-op)     ⊖      2296  &nbsp; &nbsp; XOR    Set of elements, which are only in one of both sets
-(-)                                       ∖      2216  &nbsp; &nbsp; diff   Set of elements, which are in left, but not right set
-(+)                                       ⊎      228E  &nbsp; &nbsp; b.add  Bag with elements of both bags and with added weight of both
-(.)                                       ⊍      228D  &nbsp; &nbsp; b.mul  Bag with elements that are in both bags but weight multiplied 
-----------------------------------------  -----  ----  ----   ----   ----- -----------------------------------------------------
+Set Op                                       UTF    CPNR  Neg.   CPNR   Short  Explanation 
+-------------------------------------------  -----  ----  ----   ----   -----  ----------------------------------------------------
+[(elem)](appendix-a-index#elem-set-op)        ∈      2208  ∉      2209   &nbsp; True if left operand is (not) element of the right set
+[(cont)](appendix-a-index#cont-set-op)        ∋      220B  ∌      220C   &nbsp; True if right operand is (not) element of the left set
+[(<)](appendix-a-index#strict-sub-set-op)     ⊂      2282  ⊄      2284   strict True if all elements left are in right and right set has more
+[(<=)](appendix-a-index#lower-equal-set-op)   ⊆      2286  ⊈      2288   subset True if all elements in left set are in right set
+[(>)](appendix-a-index#strict-super-set-op)   ⊃      2283  ⊅      2285   strict True if all elements right are in left set and left has more (strict superset)
+[(>=)](appendix-a-index#super-set-op)         ⊇      2287  ⊉      2289   supers True if all elements right are in left set
+(<+)                                          ≼      227C  &nbsp; &nbsp; b.sub  True if all elements left are in right bag and weighed less than right
+(>+)                                          ≽      227D  &nbsp; &nbsp; b.sup  True if all elements right are in left bag and weighed less than left
+[(&)](appendix-a-index#ampersand-set-op)      ∩      2229  &nbsp; &nbsp; AND    Set of elements, which are in both sets
+[(|)](appendix-a-index#pipe-set-op)           ∪      222A  &nbsp; &nbsp; OR     Set of elements, which are in one or both sets
+[(\^)](appendix-a-index#caret-set-op)         ⊖      2296  &nbsp; &nbsp; XOR    Set of elements, which are only in one of both sets
+(-)                                           ∖      2216  &nbsp; &nbsp; diff   Set of elements, which are in left, but not right set
+(+)                                           ⊎      228E  &nbsp; &nbsp; b.add  Bag with elements of both bags and with added weight of both
+(.)                                           ⊍      228D  &nbsp; &nbsp; b.mul  Bag with elements that are in both bags but weight multiplied 
+--------------------------------------------  -----  ----  ----   ----   ----- -----------------------------------------------------
 
 <a id="operators-smartmatch"/>
 

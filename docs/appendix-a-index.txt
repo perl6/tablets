@@ -59,12 +59,10 @@ Punctuation
 forces [*boolean context*](appendix-g-glossary#bool-context),
 high [*precedence*](appendix-g-glossary#precedence) version of [**not**](#not)
 
-
 <a id="exclamation-twigil"/>
 **\!**
 [*«twigil»*](appendix-b-grouped#twigils) &mdash;
 [*twigil*](appendix-g-glossary#twigil) of private class and object variables
-
 
 <a id="exclamation-signature"/>
 **\!**
@@ -72,18 +70,15 @@ high [*precedence*](appendix-g-glossary#precedence) version of [**not**](#not)
 suffix for a required parameter in signatures, thats default if it's a named
 parameter, not is it's a positional
 
-
 <a id="exclamation-metaop"/>
 **\!**<span class="you-provide">op</span> 
 [*«meta op»*](appendix-b-grouped#metaoperators) &mdash;
 negates (mostly [comparison operators](tablet-4-operators#comparison))
 
-
 <a id="exclamation-var"/>
 **\$\!**
 [*«special var»*](appendix-b-grouped#special-variables) &mdash;
 last error message
-
 
 <a id="exclamation-assertion"/>
 **!**
@@ -91,12 +86,10 @@ last error message
 a leading **!** in a subrule a negative zero-width assertion like
 [**<!after ...>*](#after-negative-subrule), opposite of [**?**](#question-assertion)
 
-
 <a id="exclamation-subrule"/>
 **\<\!\>**
 [*«predefined subrule»*](appendix-b-grouped#subrules) &mdash;
 opposite of [**\<?\>**](#question-subrule), returns always [**False**](#False)
-
 
 <a id="exclamation-exclamation"/>
 **!!**
@@ -104,13 +97,11 @@ opposite of [**\<?\>**](#question-subrule), returns always [**False**](#False)
 just second part of the ternary (conditional) operator after
 [**??**](#ternary-op), no operator on its own
 
-
 <a id="exclamation-exclamation-exclamation"/><a id="exclamation-yadda"/>
 **!!!**
 [*«yadda op»*](tablet-4-operators#yadda) &mdash;
 [*yadda operator*](appendix-g-glossary#yadda-operator)
 that calls [**die**](#die)
-
 
 <a id="double-quotes"/><a id="quotation-quotation"/>
 [**" "**](tablet-2-basic-syntax#double-quotes)
@@ -121,13 +112,11 @@ double quoting, interpolates with
 (all vars, functions, blocks, control chars),
 alias to [**qq/.../**](#qq-op) or **Q** [**:qq**](#qq-adverb) **/.../**
 
-
 <a id="pound"/><a id="comment-op"/>
 [**\#**](tablet-2-basic-syntax#single-line) &mdash;
 starts a comment that continues to the end of the line,
 works even inside regexes as a
 [*«regex metachar»*](appendix-b-grouped#regex-metacharacter)
-
 
 <a id="pound-equal"/>
 [**\#=**](tablet-2-basic-syntax#pod) &mdash;
@@ -136,19 +125,16 @@ documenting comments that end up in
 [*&routine.WHY.content*](#WHY-introspection) on the
 following [*routine*](appendix-g-glossary#routine)
 
-
 <a id="pound-apostrophe"/>
 [**\#\`( )**](tablet-2-basic-syntax#multi-line) &mdash;
 starts a multi-line comment that continues to the closing
 bracket, works with any combination of bracket pairs
-
 
 <a id="dollar"/> <a id="dollar-sigil"/>
 [**\$**](tablet-3-variables#scalar)
 [*«sigil»*](appendix-b-grouped#sigils) &mdash;
 [prefix](#prefix-category) of [scalar
 variables](tablet-3-variables#scalar)
-
 
 <a id="dollar-op"/>
 **$**()
@@ -170,12 +156,10 @@ matches the end of a line (no more multile mode)
 
 # [%](#charnav-top)
 
-
 <a id="percent"/><a id="percent-sigil"/>
 **%**
 [*«sigil»*](appendix-b-grouped#sigils) &mdash;
 [prefix](#prefix-category) of [hash variables](tablet-3-variables#hash)
-
 
 <a id="percent-op"/>
 **%**
@@ -185,13 +169,11 @@ forces [*numeric context*](appendix-g-glossary#numeric-context),
 high [*precedence*](appendix-g-glossary#precedence) version of [**mod**](#mod) &mdash;
 example: `5 % 4` returns `1`
 
-
 <a id="percent-context-op"/>
 **%**()
 [*«context op»*](appendix-b-grouped#contextualizers) &mdash;
 forces [*hash context*](appendix-g-glossary#hash-context),
 alias to the [**hash**()](#hash) function
-
 
 <a id="percent-metachar"/>
 **%**<span class="you-provide">s</span>
@@ -201,13 +183,11 @@ right expression &mdash;
 example: `\d % ','` matches `1,2,3,4,5` &mdash;
 see also: [**%%**](#percent-percent-metachar)
 
-
 <a id="percent-percent-op"/>
 **%%**
 [*«numeric op»*](tablet-4-operators#numeric-context) &mdash;
 [**True**](#True) if the left value is evenly divisible by the right value &mdash;
 see also: [**%**](#percent-op)
-
 
 <a id="percent-percent-metachar"/>
 **%%**<span class="you-provide">s</span>
@@ -249,8 +229,7 @@ see also: [**all**](#all), [(&)](appendix-a-index#ampersand-set-op)
 [*infix*](appendix-g-glossary#infix)
 [*AND*](appendix-g-glossary#and) join operator for two sets
 &mdash;
-see also: [&](appendix-a-index#ampersand-op)
-
+see also: [(|)](#pipe-set-op)
 
 <a id="ampersand-ampersand-op"/><a id="logical-and"/>
 **&&**
@@ -619,6 +598,14 @@ example: `@[2;3]` instead of `@a[2][3]`
 [**True**](#True) if numerically ordered the left comes before the right
 [*operand*](appendix-g-glossary#operand)
 
+<a id="lower-set-op"/><a id="strict-sub-set-op">
+**(\<)**
+[*«set op»*](appendix-b-grouped#operators-sets) &mdash;
+[*infix*](appendix-g-glossary#infix) strict subset operator, (a.k.a.: **⊂**),
+True if all elements in left set are also in right and right set has at least one more element,
+&mdash;
+see also: [*(<=)*](#lower-equal-set-op), [*(>)*](#super-set-op)
+
 <a id="lower-minus-greater-signature"/>
 **<-\>**
 [*«signature symbol»*](appendix-b-grouped#signature-symbols) &mdash;
@@ -655,6 +642,14 @@ see also: [**\< \>**](#angle-brackets-op)
 [*«num comparison»*](tablet-4-operators#numerical-comparison) &mdash;
 less than or equal, numeric comparison operator &mdash;
 see also: [**<**](#lower-op) and [**\>=**](#greater-equal-op)
+
+<a id="lower-equal-set-op"/><a id="sub-set-op">
+**(\<=)**
+[*«set op»*](appendix-b-grouped#operators-sets) &mdash;
+[*infix*](appendix-g-glossary#infix) strict subset operator, (a.k.a.: **⊆**),
+True if all elements in left set are also in right set - otherwise False,
+&mdash;
+see also: [*(<)*](#lower-set-op), [*(>=)*](#super-set-op)
 
 <a id="lower-equal-equal-op"/><a id="left-pipe-op"/>
 **\<==**
@@ -704,14 +699,12 @@ into [`$/<name>`](#match-var) and [`$<name>`](#angle-brackets-var)
 
 # [=](#charnav-top)
 
-
 <a id="equal"/><a id="equal-op"/>
 [**=**](tablet-3-variables#assignment)
 *«Op»* &mdash;
 [assignment](tablet-3-variables#assignment),
 right side is [evaluated](appendix-g-glossary#evaluation) and assigned
 to the left
-
 
 <a id="equal-twigil"/>
 **=**
@@ -722,7 +715,6 @@ examples:
 [**`$=pod`**](#pod-pod-var) and
 [**`$=data`**](#data-pod-var)
 
-
 <a id="equal-metaop"/>
 <span class="you-provide">op</span>**=**
 [*«meta op»*](appendix-b-grouped#metaoperators) &mdash;
@@ -730,12 +722,10 @@ self assignment, left side is one operand and place where the
 result is assigned to &mdash;
 example: `$a += 3;` equals `$a = $a + 3`
 
-
 <a id="equal-colon-equal-op"/>
 **=:=**
 *«comparison op»* &mdash;
 compares two variables, if their [bound](appendix-g-glossary#binding) to same memory location (in symbol table)
-
 
 <a id="equal-equal"/><a id="equal-equal-op"/>
 **==**
@@ -743,13 +733,11 @@ compares two variables, if their [bound](appendix-g-glossary#binding) to same me
 [**True**](#True) if values are equal in [numeric context](appendix-g-glossary#numeric-context),
 as [**eq**](#eq) does in [*string context*](tablet-4-operators#string-context)
 
-
 <a id="equal-equal-equal"/><a id="equal-equal-equal-op"/><a id="identity-op"/>
 **===**
 *«comparison op»* &mdash;
 [**infix**](#infix-category) check for identity - equality of
 value and [type](appendix-b-grouped#value-types)
-
 
 <a id="equal-equal-greater-op"/><a id="pipe-right"/>
 **==\>**
@@ -758,13 +746,11 @@ rightward pointing feed operator, take return value of left side
 and feed as parameter to the right &mdash;
 see also: [**\<==**](#lower-equal-equal-op) and [**==\>\>**](#equal-equal-greater-greater-op)
 
-
 <a id="equal-equal-greater-greater-op"/>
 **==\>\>**
 [*«sequencer op»*](tablet-4-operators#feed-ops) &mdash;
 rightward pointing feed operator that adds values to an existing list (append-mode) &mdash;
 see also: [**==\>**](#equal-equal-greater-op) and [**\<\<==**](#lower-lower-equal-equal-op)
-
 
 <a id="equal-greater-op"/><a id="fat-arrow"/>
 **=\>**
@@ -773,18 +759,31 @@ see also: [**==\>**](#equal-equal-greater-op) and [**\<\<==**](#lower-lower-equa
 example: `$pair = 'key' => 'value';` &mdash;
 alternative to the [*adverbial syntax*](#colon-adverb)
 
-
 <a id="greater-op"/>
 **\>**
 [*«num comparison»*](tablet-4-operators#numerical-comparison) &mdash;
 [**infix**](#infix-category) op, numeric greater than
 
+<a id="greater-set-op"/><a id="strict-super-set-op">
+**(\>)**
+[*«set op»*](appendix-b-grouped#operators-sets) &mdash;
+[*infix*](appendix-g-glossary#infix) strict subset operator, (a.k.a.: **⊃**),
+True if all elements in right set are also in left set and left has at least one more - otherwise False,
+&mdash;
+see also: [*(>=)*](#super-set-op), [*(<)*](#strict-sub-set-op)
 
 <a id="greater-equal-op"/>
 **\>=**
 [*«num comparison»*](tablet-4-operators#numerical-comparison)
 [**infix**](#infix-category) comparison op, numeric greater than or equal
 
+<a id="greater-equal-set-op"/><a id="super-set-op">
+**(\>=)**
+[*«set op»*](appendix-b-grouped#operators-sets) &mdash;
+[*infix*](appendix-g-glossary#infix) strict subset operator, (a.k.a.: **⊇**),
+True if all elements in right set are also in left set - otherwise False,
+&mdash;
+see also: [*(>)*](#strict-super-set-op), [*(<=)*](#sub-set-op) 
 
 <a id="greater-greater-metaop"/><a id="right-hyperop"/>
 **\>\>**
@@ -1042,7 +1041,7 @@ see also: [**any**](#any), [(|)](appendix-a-index#pipe-set-op)
 [*infix*](appendix-g-glossary#infix)
 operator joining two sets (like [*OR*](appendix-g-glossary#or))
 &mdash;
-see also: [|](appendix-a-index#pipe-op)
+see also: [*(&)*](#ampersand-set-op), [*(^)*](#caret-set-op)
 
 <a id="pipe-metachar"/>
 **|**
@@ -1549,26 +1548,22 @@ with the [following methods](appendix-b-grouped#callframe-methods)
 alias to: [`callwith( |callframe(Routine).args )`](#callframe) &mdash;
 see also: [**nextsame**](#nextsame)
 
-
 <a id="callwith"/>
 **callwith** &mdash;
 method which can call a [*routine*](appendix-g-glossary#routine) with a
 different [*signature*](appendix-g-glossary#signature) &mdash;
 see also: [**nextwith**](#nextwith)
 
-
 <a id="capitalize"/>
 **capitalize** &mdash;
 alias to a wordwise *ucfirst* (exists only in Perl 5),
 makes first char of every word uppercase, rest lowercase
-
 
 <a id="Capture-type"/>
 [**Capture**](tablet-3-variables#capture)
 [*«immutable type»*](appendix-b-grouped#immutable-types) &mdash;
 type holding arguments for a [*routine*](appendix-g-glossary#routine)
 call (right-hand side of a binding)
-
 
 <a id="cat"/>
 **cat**
@@ -1830,7 +1825,6 @@ makes so declared var (is constant) a real constant
 operator reurning Bool: True if right operand is element of the left operand (set)
 &mdash;
 see also: [(elem)](#elem-set-op)
-
 
 <a id="contend"/>
 **contend**
@@ -2717,7 +2711,6 @@ that ignores the order of results (allows parallel computing)
 [**square root**](#sqrt) of -1, fundamental mathematical constant to build 
 [*Complex*](#Complex-type) with, 
 important to the functions
-
 
 <a id="i-modifier"/>
 **:i**
