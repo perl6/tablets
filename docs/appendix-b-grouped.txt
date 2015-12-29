@@ -52,7 +52,7 @@ The 4th sigil is for callables ([routines](appendix-g-glossary#routine))
 and the 5th is for boxes (namespaces) that organize the previous 4.
 
 -------------------------------------------  --------------------------------------------------------------------------------------------------------
-[`$`](appendix-a-index#dollar-sigil)         scalar, single value, can be of any data type
+[`$`](appendix-a-index#dollar-sigil)         [scalar](appendix-g-glossary#scalar), single value, can be of any data type
 [`@`](appendix-a-index#at-sigil)             ordered array, indexed list of scalar
 [`%`](appendix-a-index#percent-sigil)        unordered hash (associative array), 2 column table with unique IDs (keys) and associated values (value)
 [`&`](appendix-a-index#ampersand-sigil)      code/rule/token/regex
@@ -628,22 +628,22 @@ have an equivalent [*Unicode*](appendix-g-glossary#unicode) version
 Overload them with infix:<<"\x2208">>($a, $b --> Bool){..., number is the codepoint nr (CPNR)
 
 Set Op                                       UTF    CPNR  Neg.   CPNR   Short  Explanation 
--------------------------------------------  -----  ----  ----   ----   -----  ----------------------------------------------------
-[(elem)](appendix-a-index#elem-set-op)        ∈      2208  ∉      2209   &nbsp; True if left operand is (not) element of the right set
-[(cont)](appendix-a-index#cont-set-op)        ∋      220B  ∌      220C   &nbsp; True if right operand is (not) element of the left set
-[(<)](appendix-a-index#strict-sub-set-op)     ⊂      2282  ⊄      2284   strict True if all elements left are in right and right set has more
-[(<=)](appendix-a-index#lower-equal-set-op)   ⊆      2286  ⊈      2288   subset True if all elements in left set are in right set
-[(>)](appendix-a-index#strict-super-set-op)   ⊃      2283  ⊅      2285   strict True if all elements right are in left set and left has more (strict superset)
-[(>=)](appendix-a-index#super-set-op)         ⊇      2287  ⊉      2289   supers True if all elements right are in left set
-(<+)                                          ≼      227C  &nbsp; &nbsp; b.sub  True if all elements left are in right bag and weighed less than right
-(>+)                                          ≽      227D  &nbsp; &nbsp; b.sup  True if all elements right are in left bag and weighed less than left
-[(&)](appendix-a-index#ampersand-set-op)      ∩      2229  &nbsp; &nbsp; AND    Set of elements, which are in both sets
-[(|)](appendix-a-index#pipe-set-op)           ∪      222A  &nbsp; &nbsp; OR     Set of elements, which are in one or both sets
-[(\^)](appendix-a-index#caret-set-op)         ⊖      2296  &nbsp; &nbsp; XOR    Set of elements, which are only in one of both sets
-(-)                                           ∖      2216  &nbsp; &nbsp; diff   Set of elements, which are in left, but not right set
-(+)                                           ⊎      228E  &nbsp; &nbsp; b.add  Bag with elements of both bags and with added weight of both
-(.)                                           ⊍      228D  &nbsp; &nbsp; b.mul  Bag with elements that are in both bags but weight multiplied 
---------------------------------------------  -----  ----  ----   ----   ----- -----------------------------------------------------
+-------------------------------------------  -----  ----  ----   ----   -----  -------------------------------------------------------------
+[(elem)](appendix-a-index#elem-set-op)        ∈     2208  ∉      2209   &nbsp; True if left operand is (not) element of the right set
+[(cont)](appendix-a-index#cont-set-op)        ∋     220B  ∌      220C   &nbsp; True if right operand is (not) element of the left set
+[(<)](appendix-a-index#strict-sub-set-op)     ⊂     2282  ⊄      2284   strict True if all elements left are in right and right set has more
+[(<=)](appendix-a-index#lower-equal-set-op)   ⊆     2286  ⊈      2288   subset True if all elements in left set are in right set
+[(>)](appendix-a-index#strict-super-set-op)   ⊃     2283  ⊅      2285   strict True if all elements right are in left set and left has more (strict superset)
+[(>=)](appendix-a-index#super-set-op)         ⊇     2287  ⊉      2289   supers True if all elements right are in left set
+[(<+)](appendix-a-index#sub-bag-op)           ≼     227C  &nbsp; &nbsp; b.sub  True if all elements left are in right bag and weighed less than right
+[(>+)](appendix-a-index#super-bag-op)         ≽     227D  &nbsp; &nbsp; b.sup  True if all elements right are in left bag and weighed less than left
+[(&)](appendix-a-index#ampersand-set-op)      ∩     2229  &nbsp; &nbsp; AND    Set of elements, which are in both sets
+[(|)](appendix-a-index#pipe-set-op)           ∪     222A  &nbsp; &nbsp; OR     Set of elements, which are in one or both sets
+[(\^)](appendix-a-index#caret-set-op)         ⊖     2296  &nbsp; &nbsp; XOR    Set of elements, which are only in one of both sets
+[(-)](appendix-a-index#minus-set-op)          ∖     2216  &nbsp; &nbsp; diff   Set of elements, which are in left, but not right set
+[(+)](appendix-a-index#plus-bag-op)           ⊎     228E  &nbsp; &nbsp; b.add  Bag with elements of both bags and with added weight of both
+[(.)](appendix-a-index#dot-bag-op)            ⊍     228D  &nbsp; &nbsp; b.mul  Bag with elements that are in both bags but weight multiplied 
+-------------------------------------------  -----  ----  ----   ----   ----- --------------------------------------------------------------
 
 <a id="operators-smartmatch"/>
 

@@ -606,6 +606,14 @@ True if all elements in left set are also in right and right set has at least on
 &mdash;
 see also: [*(<=)*](#lower-equal-set-op), [*(>)*](#super-set-op)
 
+<a id="lower-bag-op"/><a id="sub-bag-op">
+**(\<+)**
+[*«bag op»*](appendix-b-grouped#operators-sets) &mdash;
+[*infix*](appendix-g-glossary#infix) strict subset operator, (a.k.a.: **≼**),
+True if all elements in left bag are also elements in right bag
+and weighed less than right - otherwise False &mdash;
+see also: [*(<)*](#lower-set-op), [*(<=)*](#sub-set-op)
+
 <a id="lower-minus-greater-signature"/>
 **<-\>**
 [*«signature symbol»*](appendix-b-grouped#signature-symbols) &mdash;
@@ -771,6 +779,14 @@ alternative to the [*adverbial syntax*](#colon-adverb)
 True if all elements in right set are also in left set and left has at least one more - otherwise False,
 &mdash;
 see also: [*(>=)*](#super-set-op), [*(<)*](#strict-sub-set-op)
+
+<a id="greater-bag-op"/><a id="super-bag-op">
+**(\>+)**
+[*«bag op»*](appendix-b-grouped#operators-sets) &mdash;
+[*infix*](appendix-g-glossary#infix) strict subset operator, (a.k.a.: **≽**),
+True if all elements right bag are also elements of left 
+and weighed less than in left - otherwise False &mdash;
+see also: [*(>)*](#greater-set-op), [*(>=)*](#super-set-op)
 
 <a id="greater-equal-op"/>
 **\>=**
