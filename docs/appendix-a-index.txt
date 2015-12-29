@@ -229,7 +229,7 @@ see also: [**all**](#all), [(&)](appendix-a-index#ampersand-set-op)
 [*infix*](appendix-g-glossary#infix)
 [*AND*](appendix-g-glossary#and) join operator for two sets
 &mdash;
-see also: [(|)](#pipe-set-op)
+see also: [(|)](#pipe-set-op), [(-)](#minus-set-op)
 
 <a id="ampersand-ampersand-op"/><a id="logical-and"/>
 **&&**
@@ -337,19 +337,23 @@ forces [numeric context](appendix-g-glossary#numeric-context)
 on both operands, so it does if its used only as [*prefix*](#prefix-category),
 opposite of [**-**](#minus-op)
 
-
 <a id="plus-metachar"/>
 **+**
 [*«regex metachar»*](appendix-b-grouped#quantifier) &mdash;
 quantifier for one or more findings
 
+<a id="plus-bag-op"/><a id="add-bag-op">
+**(+)**
+[*«bag op»*](appendix-b-grouped#operators-sets) &mdash;
+[*infix*](appendix-g-glossary#infix) strict subset operator, (a.k.a.: **⊎**),
+Bag with elements of both bags and with added weight of both &mdash;
+see also: [(.)](#dot-bag-op), [(&)](#ampersand-set-op)
 
 <a id="plus-ampersand-op"/><a id="numeric-and"/>
 **+&**
 [*«numeric op»*](tablet-4-operators#numeric-context) &mdash;
 bitwise [*AND*](appendix-g-glossary#and),
 forces [numeric context](appendix-g-glossary#numeric-context)
-
 
 <a id="plus-plus-op"/><a id="auto-increment"/>
 **++**
@@ -360,12 +364,10 @@ can be used as [prefix](#prefix_category) (take effect before
 or [suffix](#suffix_category) (incrementing afterwards),
 alias to [**succ**](#succ), opposite of [**--**](#auto-decrement)
 
-
 <a id="plus-lower-op"/>
 **+<**
 [*«numeric op»*](tablet-4-operators#numeric-context) &mdash;
 shift left in [numeric context](appendix-g-glossary#numeric-context)
-
 
 <a id="plus-greater-op"/>
 **+\>**
@@ -404,6 +406,13 @@ forces [numeric context](appendix-g-glossary#numeric-context) on both operands
 and does so (and negates) if used only as [*prefix*](#prefix-category),
 opposite of [**+**](#plus-op)
 
+<a id="minus-set-op"/><a id="set-minus"/>
+**(-)**
+[*«set op»*](appendix-b-grouped#operators-sets) &mdash;
+[*infix*](appendix-g-glossary#infix) op: delivers set of elements,
+ which are in left, but not right set &mdash;
+see also: [(|)](#pipe-set-op), [(&)](#ampersand-set-op)
+
 <a id="minus-minus-op"/><a id="auto-decrement"/>
 **--**
 [*«sequence traversal»*](tablet-4-operators#traversing-sequence) &mdash;
@@ -436,6 +445,13 @@ declares named parameters for a [*block*](appendix-g-glossary#block)
 [*«regex metachar»*](appendix-b-grouped#regex-metacharacter) &mdash;
 matches one character, any character
 (including a [**\\n**](#backslash-n) - unlike in Perl 5)
+
+<a id="dot-bag-op"/><a id="mul-bag-op">
+**(.)**
+[*«bag op»*](appendix-b-grouped#operators-sets) &mdash;
+[*infix*](appendix-g-glossary#infix) strict subset operator, (a.k.a.: **⊍**),
+Bag with elements of both bags and with multiplied weight of both &mdash;
+see also: [(+)](#dot-bag-op), [(&)](#ampersand-set-op)
 
 <a id="dot-subrule"/>
 \<**.**<span class="you-provide">s</span>\> &mdash;
