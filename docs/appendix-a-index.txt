@@ -4871,13 +4871,18 @@ tab `\u0009`, not visible character (control char)
 can add several item to the list of return values of a
 [**gather**](#gather) [*block*](appendix-g-glossary#block)
 
-
 <a id="tan"/><a id="tan-op"/>
 **tan**
 [*«numeric op»*](tablet-4-operators#numeric-context) &mdash;
 tangent, trigonometric function, takes angle in radian &mdash;
 see also [**to-radians**](#to-radians), [**cos**](#cos), [**sin**](#sin)
 
+<a id="tau-constant"/>
+**tau**
+[*«constant»*](appendix-b-grouped#constants) &mdash;
+about 6.28318530717959, also known as *τ*,
+fundamental mathematical constant,
+ratio of a circle's circumference to its radius (2*π)
 
 <a id="tc"/><a id="tc-op"/>
 **tc** ([Str](#Str-type) [--\>](#minus-minus-greater-signature) [Str](#Str-type))
