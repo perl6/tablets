@@ -345,7 +345,7 @@ quantifier for one or more findings
 <a id="plus-bag-op"/><a id="add-bag-op">
 **(+)**
 [*«bag op»*](appendix-b-grouped#operators-sets) &mdash;
-[*infix*](appendix-g-glossary#infix) strict subset operator, (a.k.a.: **⊎**),
+[*infix*](appendix-g-glossary#infix) strict subset operator, alias to **⊎**,
 Bag with elements of both bags and with added weight of both &mdash;
 see also: [(.)](#dot-bag-op), [(&)](#ampersand-set-op)
 
@@ -449,9 +449,9 @@ matches one character, any character
 <a id="dot-bag-op"/><a id="mul-bag-op">
 **(.)**
 [*«bag op»*](appendix-b-grouped#operators-sets) &mdash;
-[*infix*](appendix-g-glossary#infix) strict subset operator, (a.k.a.: **⊍**),
+[*infix*](appendix-g-glossary#infix) strict subset operator, alias to  **⊍**,
 Bag with elements of both bags and with multiplied weight of both &mdash;
-see also: [(+)](#dot-bag-op), [(&)](#ampersand-set-op)
+see also: [(+)](#plus-bag-op), [(&)](#ampersand-set-op)
 
 <a id="dot-subrule"/>
 \<**.**<span class="you-provide">s</span>\> &mdash;
@@ -617,7 +617,7 @@ example: `@[2;3]` instead of `@a[2][3]`
 <a id="lower-set-op"/><a id="strict-sub-set-op">
 **(\<)**
 [*«set op»*](appendix-b-grouped#operators-sets) &mdash;
-[*infix*](appendix-g-glossary#infix) strict subset operator, (a.k.a.: **⊂**),
+[*infix*](appendix-g-glossary#infix) strict subset operator, alias to **⊂**,
 True if all elements in left set are also in right and right set has at least one more element,
 &mdash;
 see also: [*(<=)*](#lower-equal-set-op), [*(>)*](#super-set-op)
@@ -625,7 +625,7 @@ see also: [*(<=)*](#lower-equal-set-op), [*(>)*](#super-set-op)
 <a id="lower-bag-op"/><a id="sub-bag-op">
 **(\<+)**
 [*«bag op»*](appendix-b-grouped#operators-sets) &mdash;
-[*infix*](appendix-g-glossary#infix) strict subset operator, (a.k.a.: **≼**),
+[*infix*](appendix-g-glossary#infix) strict subset operator, alias to **≼**,
 True if all elements in left bag are also elements in right bag
 and weighed less than right - otherwise False &mdash;
 see also: [*(<)*](#lower-set-op), [*(<=)*](#sub-set-op)
@@ -670,7 +670,7 @@ see also: [**<**](#lower-op) and [**\>=**](#greater-equal-op)
 <a id="lower-equal-set-op"/><a id="sub-set-op">
 **(\<=)**
 [*«set op»*](appendix-b-grouped#operators-sets) &mdash;
-[*infix*](appendix-g-glossary#infix) strict subset operator, (a.k.a.: **⊆**),
+[*infix*](appendix-g-glossary#infix) strict subset operator, alias to **⊆**,
 True if all elements in left set are also in right set - otherwise False,
 &mdash;
 see also: [*(<)*](#lower-set-op), [*(>=)*](#super-set-op)
@@ -791,7 +791,7 @@ alternative to the [*adverbial syntax*](#colon-adverb)
 <a id="greater-set-op"/><a id="strict-super-set-op">
 **(\>)**
 [*«set op»*](appendix-b-grouped#operators-sets) &mdash;
-[*infix*](appendix-g-glossary#infix) strict subset operator, (a.k.a.: **⊃**),
+[*infix*](appendix-g-glossary#infix) strict subset operator, alias to **⊃**,
 True if all elements in right set are also in left set and left has at least one more - otherwise False,
 &mdash;
 see also: [*(>=)*](#super-set-op), [*(<)*](#strict-sub-set-op)
@@ -799,7 +799,7 @@ see also: [*(>=)*](#super-set-op), [*(<)*](#strict-sub-set-op)
 <a id="greater-bag-op"/><a id="super-bag-op">
 **(\>+)**
 [*«bag op»*](appendix-b-grouped#operators-sets) &mdash;
-[*infix*](appendix-g-glossary#infix) strict subset operator, (a.k.a.: **≽**),
+[*infix*](appendix-g-glossary#infix) strict subset operator, alias to **≽**,
 True if all elements right bag are also elements of left 
 and weighed less than in left - otherwise False &mdash;
 see also: [*(>)*](#greater-set-op), [*(>=)*](#super-set-op)
@@ -812,7 +812,7 @@ see also: [*(>)*](#greater-set-op), [*(>=)*](#super-set-op)
 <a id="greater-equal-set-op"/><a id="super-set-op">
 **(\>=)**
 [*«set op»*](appendix-b-grouped#operators-sets) &mdash;
-[*infix*](appendix-g-glossary#infix) strict subset operator, (a.k.a.: **⊇**),
+[*infix*](appendix-g-glossary#infix) strict subset operator, alias to **⊇**,
 True if all elements in right set are also in left set - otherwise False,
 &mdash;
 see also: [*(>)*](#strict-super-set-op), [*(<=)*](#sub-set-op) 
@@ -1524,7 +1524,7 @@ file is a character special file (e.g. terminals modems)
 <a id="c-adverb"/>
 **:c**
 [*«quoting adverb»*](appendix-b-grouped#quoting-adverbs) &mdash;
-forces evaluation of closures (blocks aka {...}) inside quotes,
+forces evaluation of closures (blocks a.k.a. {...}) inside quotes,
 long form of [**:closure**](#closure-adverb),
 included in [**"..."**](#double-quotes),
 [**qq/.../**](#qq-op) and
@@ -3809,13 +3809,11 @@ ID of the running process, in Perl 5: *\$\$* and *\$PID*
 
 # [Pn](#charnav-top)
 
-
 <a id="pod-pod-var"/>
 **$=pod**
 [*«special var»*](appendix-b-grouped#pod-variables) &mdash;
 object that contains all surrounding [*POD*](appendix-g-glossary#POD)
 documentation
-
 
 <a id="polar"/>
 **polar** «Complex method» &mdash;
@@ -3825,20 +3823,17 @@ the magnitude is non-negative, and the angle in the
 [range](#range-op) -π ..\^ π &mdash;
 see also: [**cis**](#cis), [**conj**](#conj), [**unpolar**](#unpolar)
 
-
 <a id="pop-array"/>
 **pop**
 [*«array op & method»*](tablet-3-variables#array-methods) &mdash;
 removes the last value of an array (parameter 1) and returns it as result &mdash;
 see also: [**pop**](#pop), [**unshift**](#unshift)
 
-
 <a id="pos-modifier"/>
 **:pos**(<span class="you-provide">n</span>)
 [*«regex modifier»*](appendix-b-grouped#regex-modifier) &mdash;
 searching only on the <span class="you-provide">n</span>th position (counting from 0),
 long alternative for [**:p**](#p-modifier)
-
 
 <a id="POST-phaser"/>
 **POST**
@@ -3847,14 +3842,12 @@ marks as a prefix a special block, assert postcondition,
 executed at every block exit, after
 [**LEAVE**](#LEAVE-phaser)
 
-
 <a id="postcircumfix-category"/>
 **postcircumfix**
 [*«grammatical category»*](appendix-b-grouped#categories) &mdash;
 operator namespace of ops, that stay after one statement or
 variable, but do surround a second &mdash;
 example([square brackets](#postcircumfix-square-brackets-op)): `$a[2]`
-
 
 <a id="postfix-category"/>
 **postfix**
@@ -3878,8 +3871,8 @@ marks as a prefix a special block, assert precondition, executed
 at every block entry, before [**ENTER**](#ENTER-phaser)
 
 <a id="pred"/>
-**pred** ([Num](#Num-type) $f)
-[*«sequence traversion»*](tablet-4-operators#traversing-sequence) &mdash;
+**pred** ([Num](#Num-type) &dollar;f)
+[*«sequence op»*](tablet-4-operators#traversing-sequence) &mdash;
 returns the predecessor of $f, alias to [**--**](#auto-decrement)
 operator, opposite of [**succ**](#succ)
 
@@ -4843,7 +4836,7 @@ see also: [**chop**](#chop)
 
 
 <a id="succ"/>
-**succ** ([Num](#Num-type) $f)
+**succ** ([Num](#Num-type) &dollar;f)
 [*«sequence traversion»*](tablet-4-operators#traversing-sequence) &mdash;
 returns the successor of $f, alias to [**++**](#auto-increment) operator,
 opposite of [**pred**](#pred)
