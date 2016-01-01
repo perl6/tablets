@@ -3871,9 +3871,9 @@ marks as a prefix a special block, assert precondition, executed
 at every block entry, before [**ENTER**](#ENTER-phaser)
 
 <a id="pred"/>
-**pred** ([Num](#Num-type) &dollar;f)
+**pred** (&dollar;e)
 [*«sequence op»*](tablet-4-operators#traversing-sequence) &mdash;
-returns the predecessor of $f, alias to [**--**](#auto-decrement)
+returns the predecessor of $e, alias to [**--**](#auto-decrement)
 operator, opposite of [**succ**](#succ)
 
 <a id="prefix-category"/>
@@ -3898,15 +3898,12 @@ internal namespace of [metaoperator](appendix-g-glossary#metaoperator) that
 [prefix](#prefix-category) (before) another term &mdash;
 example ([**\<\<**](#lower-lower-metaop)): `++<< @a`
 
-
 <a id="prepend-array"/>
 **prepend**
 [*«array op & method»*](tablet-3-variables#array-methods) &mdash;
 prepends to an array (parameter 1), a list of values (parameter 2-*),
 which get flattened unlike with [**unshift**](#unshift) &mdash;
 see also: [**append**](#append), [**push**](#push), [**pop**](#pop)
-
-
 
 <a id="print"/>
 [**print**](tablet-5-io#print) &mdash;
@@ -4348,7 +4345,6 @@ example: `round 5.5` returns `6`, `round -5.5` returns `-5` &mdash;
 see also: [**abs**](#abs), [**ceiling**](#ceiling), [**floor**](#floor),
 [**truncate**](#truncate)
 
-
 <a id="roundrobin"/>
 **roundrobin**
 [*«array method»*](tablet-3-variables#array-methods) &mdash;
@@ -4597,7 +4593,6 @@ attempt to sleep (stop the program) for up to
 <span class="you-provide">f</span> (only parameter)
 seconds (with sub-second resolution)
 
-
 <a id="slurp"/>
 [**slurp**](tablet-2-basic-syntax#files)
 [--\>](#minus-minus-greater-signature) [Str](#Str-type) | [Buf](#Buf-type)
@@ -4609,7 +4604,6 @@ see also: [**spurt**](#spurt)
 
 # [Sn](#charnav-top)
 
-
 <a id="so"/><a id="so-op"/>
 **so**
 [*«context op»*](appendix-b-grouped#contextualizers) &mdash;
@@ -4618,13 +4612,11 @@ low [*precedence*](appendix-g-glossary#precedence)
 alternative to [**?**](#question-mark-op),
 opposite of [**not**](#not-op)
 
-
 <a id="SoftRoutine-type"/>
 **SoftRoutine**
 [*«mutable type»*](appendix-b-grouped#mutable-types) &mdash;
 [*routine*](appendix-g-glossary#routine) that is committed to
 staying mutable (changable)
-
 
 <a id="sort"/>
 **sort**
@@ -4635,12 +4627,10 @@ or shorter with `sort &[leg], @input` ([see leg](#leg))
 or yet even shorter by `sort ~*, @input` ([see ~](#tilde-context))
 for sorting in [*string context*](appendix-g-glossary#string-context)
 
-
 <a id="space-subrule"/>
 **\<space\>**
 [*«predefined subrule»*](appendix-b-grouped#subrules) &mdash;
 single white space char aka [**\\s**](#backslash-s)
-
 
 <a id="special-variable-category"/>
 **special\_variable**
@@ -4648,13 +4638,11 @@ single white space char aka [**\\s**](#backslash-s)
 namespace to define and redefine
 [special variables](appendix-b-grouped#special-variables) with a macro
 
-
 <a id="splice"/>
 **splice**
 [*«array op & method»*](tablet-3-variables#array-methods) &mdash;
 remove on $pos (first parameter) $n (second - optional) values
 and replace them with values (third - optional)
-
 
 <a id="split"/>
 **split** &mdash;
@@ -4663,13 +4651,11 @@ into an array of substrings &mdash;
 example: `split(rx/-/, "1-2-4-5")` returns `1,2,3,4` &mdash;
 see also: [**comb**](#comb)
 
-
 <a id="sprintf"/>
 [**sprintf**](tablet-2-basic-syntax#sprintf)
 *«formater»* &mdash;
 inserts formated values out of variables into a string and returns result,
 see also: [**fmt**](#fmt)
-
 
 <a id="spurt"/>
 [**spurt**](tablet-2-basic-syntax#files)
@@ -4677,12 +4663,10 @@ see also: [**fmt**](#fmt)
 writes into a file (first parameter) data (second) with or without a [**file handle**](IO-type) &mdash;
 see also: [**slurp**](#slurp)
 
-
 <a id="sqrt"/>
 **sqrt** ([Num](#Num-type) $f) &mdash;
 square root of $f &mdash;
 see also: [**exp**](#exp)
-
 
 <a id="ss"/><a id="ss-op"/>
 [**ss**/ / /](tablet-9-regexes#substitution)
@@ -4692,7 +4676,6 @@ spaces are just subrule separators,
 `ss/.../.../` is alias to [`s:ss/.../.../`](#ss-modifier) &mdash;
 example: `ss/teh hsa/the has/;`
 
-
 <a id="ss-modifier"/>
 **:ss**
 [*«regex modifier»*](appendix-b-grouped#regex-modifier) &mdash;
@@ -4701,7 +4684,6 @@ only for for substitution, whitespace separates subregexes like
 substitution wil work then word for word,
 short alternative of [**:samespace**](#samespace-modifier)
 
-
 <span class="you-provide">n</span><a id="st-modifier"/>
 **:st**
 [*«regex modifier»*](appendix-b-grouped#regex-modifier) &mdash;
@@ -4709,12 +4691,10 @@ demands the <span class="you-provide">n</span>th finding, has many aliases
 ([**:nd**](#nd-modifier) [**:rd**](#rd-modifier) :[**th**](#th-modifier)) 
 for correct spelling (`:3rd`)
 
-
 <a id="Stash-type"/>
 **Stash**
 [*«mutable type»*](appendix-b-grouped#mutable-types) &mdash;
 a symbol table hash (package, module, class, lexpad, etc)
-
 
 <a id="stat"/>
 **stat**
@@ -4722,13 +4702,11 @@ a symbol table hash (package, module, class, lexpad, etc)
 available information about a file or link
 (call `stat :link` instead of Perl 5: *lstat*)
 
-
 <a id="state"/>
 **state**
 [*«scope declarator»*](appendix-b-grouped#scope-declarator) &mdash;
 introduces lexically scoped but persistent names (known only in
 the enclosing block, but retain their values between invocations)
-
 
 <a id="statement-cotroll"/>
 **statement\_control**
@@ -4738,14 +4716,12 @@ internal namespace for block modifier like
 [loops](appendix-b-grouped#loops)
 that stay in front of it
 
-
 <a id="statement-mod-cond-category"/>
 **statement\_mod\_cond**
 [*«grammatical category»*](appendix-b-grouped#categories) &mdash;
 internal namespace for words that come after a statement and
 handle if the statement will be executed &mdash;
 example (if): `$a++ if $a > 3`
-
 
 <a id="statement-mod-loop-category"/>
 **statement\_mod\_loop**
@@ -4754,13 +4730,11 @@ internal namespace for
 [special group of block modifier](appendix-b-grouped#loops)
 that turn the [block](#block) into a loop
 
-
 <a id="statement-prefix-category"/>
 **statement\_prefix**
 [*«grammatical category»*](appendix-b-grouped#categories) &mdash;
 internal namespace for block modifier &mdash;
 example: [**do**](#do)
-
 
 <a id="Str-type"/>
 **Str**
@@ -4768,12 +4742,10 @@ example: [**do**](#do)
 Perl string - a finite sequence of [unicode](appendix-g-glossary#unicode)
 characters
 
-
 <a id="Sub-type"/>
 **Sub**
 [*«mutable type»*](appendix-b-grouped#mutable-types) &mdash;
 Perl subroutine object
-
 
 <a id="sub"/>
 [**sub**](tablet-6-blocks#sub)
@@ -4782,19 +4754,16 @@ defines a [*routine*](appendix-g-glossary#routine),
 a block callable by name &mdash;
 example: `name();`
 
-
 <a id="Submethod-type"/>
 **Submethod**
 [*«mutable type»*](appendix-b-grouped#mutable-types) &mdash;
 [**method**](#method) than can't be inherited by other classes,
 only called by objects of the class, where it is defined
 
-
 <a id="submethod"/>
 **submethod**
 [*«routine type»*](appendix-b-grouped#routine-types) &mdash;
 defines methods, not inherited by subclasses like a [**method**](#method)
-
 
 <a id="subparse"/>
 **subparse**
@@ -4803,12 +4772,10 @@ commands a [*grammar*](appendix-g-glossary#grammar) to parse a string (fist para
 Resulting in a [*match object*](match-var), even if just part of the string matches &mdash;
 see also: [**parse**](#parse)
 
-
 <a id="subset"/>
 **subset** &mdash;
 define a subtype &mdash;
 example: `subset Month of Int where { 1 <= $\^a <= 12 }`
-
 
 <a id="subst"/>
 [**subst**](tablet-9-regexes#substitution)
@@ -4816,14 +4783,12 @@ example: `subset Month of Int where { 1 <= $\^a <= 12 }`
 method alias to [**s**/.../.../](#s-op),
 `$str.subst( /pattern/, "replacement" )` equals `$str \~\~ s/pattern/replacement/;`
 
-
 <a id="subst-adverb"/>
 [**:subst**](tablet-2-basic-syntax#regex)
 [*«quoting adverb»*](appendix-b-grouped#quoting-adverbs) &mdash;
 parse as [substitution regex](tablet-9-regexes#substitution)
 , **Q [:subst](#subst-adverb) /.../.../** is alias to
 [**s**/.../.../](#s-op)
-
 
 <a id="substr"/>
 **substr** ([Str](#Str-type) $string, [Int](#Int-type) $start, [Int](#Int-type)
@@ -4834,13 +4799,11 @@ works like in Perl 5 except fourth parameter was cut &mdash;
 example: `substr('Hackathon', 1, 3)` returns `'ack'` &mdash;
 see also: [**chop**](#chop)
 
-
 <a id="succ"/>
-**succ** ([Num](#Num-type) &dollar;f)
+**succ** (&dollar;e)
 [*«sequence traversion»*](tablet-4-operators#traversing-sequence) &mdash;
-returns the successor of $f, alias to [**++**](#auto-increment) operator,
+returns the successor of $e, alias to [**++**](#auto-increment) operator,
 opposite of [**pred**](#pred)
-
 
 <a id="succeed"/>
 **succeed**
@@ -4860,29 +4823,24 @@ see also: [**augment**](#augment)
 
 # [T](#charnav-top)
 
-
 <a id="t-test"/>
 **:t**
 [*«io path method»*](appendix-b-grouped#test-methods) &mdash;
 [*file handle*](IO-type) is opened to a "tty" (terminal)
-
 
 <a id="backslash-t"/>
 **\\T**
 [*«escape sequence»*](appendix-b-grouped#escape-sequences) &mdash;
 anything but a tab
 
-
 <a id="backslash-t"/>
 **\\t**
 [*«escape sequence»*](appendix-b-grouped#escape-sequences) &mdash;
 tab `\u0009`, not visible character (control char)
 
-
 <a id="TABSTOP-compiler-var"/>
 **$?TABSTOP**
 [*«special var»*](appendix-b-grouped#compiler-hint-variables) &mdash;
-
 
 <a id="take"/>
 [**take**](tablet-6-blocks#gather-and-take)
@@ -4909,7 +4867,6 @@ return a copy of a string where first character is uppercase, rest unchanged
 usable as operator and as method &mdash;
 see also: [**fc**](#fc) and [**lc**](#lc)
 
-
 <a id="tclc"/><a id="tclc-op"/>
 **tclc** ([Str](#Str-type) [--\>](#minus-minus-greater-signature) [Str](#Str-type))
 *«string method»* &mdash;
@@ -4921,13 +4878,11 @@ see also: [**fc**](#fc) and [**lc**](#lc)
 <a id="temp"/>
 **temp** &mdash; , in Perl 5: *local*
 
-
 <a id="term"/><a id="term-category"/>
 **term**
 [*«grammatical category»*](appendix-b-grouped#categories) &mdash;
 namespace of terms, used to redifine them or make a new with a macro &mdash;
 example: [**\***](#asterisk-term)
-
 
 <a id="th-modifier"/>
 <span class="you-provide">n</span>**:th**
@@ -4935,13 +4890,11 @@ example: [**\***](#asterisk-term)
 demands the nth finding, has many aliases ([**:st**](#st-modifier)
 [**:nd**](#nd-modifier) [**:rd**](#rd-modifier)) for correct spelling (`:2nd`)
 
-
 <a id="tighter"/>
 **tighter**
 [*«routine trait»*](appendix-b-grouped#routine-traits) &mdash;
 specifies the [*precedence*](appendix-g-glossary#precedence)
 of an operator higher than an existing operator
-
 
 <a id="titlecase"/>
 **titlecase** ([Str](#Str-type) [--\>](#minus-minus-greater-signature) [Str](#Str-type))
@@ -4949,19 +4902,16 @@ of an operator higher than an existing operator
 performs a [Unicode](appendix-g-glossary#unicode) titlecase operation
 on the first character of each word of the string
 
-
 <a id="to-adverb"/>
 [**:to**](tablet-2-basic-syntax#heredocs)
 [*«quoting adverb»*](appendix-b-grouped#quoting-adverbs) &mdash;
 defines end marker for the following heredoc, **:to** is short
 for [**:heredoc**](#heredoc-adverb)
 
-
 <a id="to-radians"/>
 **to-radians** &mdash;
 convert from $base (second parameter) to radians,
 opposite of [**from-radians**](#from-radians)
-
 
 <a id="token"/>
 **token**
@@ -4972,11 +4922,9 @@ alias to `regex` [**`:ratchet`**](#ratchet-modifier),
 part of a [**grammar**](#grammar) &mdash;
 see also: [**rule**](#rule)
 
-
 <a id="touch"/>
 **touch** «filehandle method» &mdash;
 update timestamps on a file like the Unix command
-
 
 <a id="tr-op"/><a id="tr"/>
 [**tr///**](tablet-9-regexes#transliteration)
@@ -4985,18 +4933,15 @@ update timestamps on a file like the Unix command
 translating some character in a string into others,
 alias to **Q [:trans](#trans-adverb) /.../.../**
 
-
 <a id="trait-auxiliary-category"/>
 **trait\_auxiliary**
 [*«grammatical category»*](appendix-b-grouped#categories) &mdash;
 example: [**is**](#is)
 
-
 <a id="trait-verb-category"/>
 **trait\_verb**
 [*«grammatical category»*](appendix-b-grouped#categories) &mdash;
 example : [**of**](#of)
-
 
 <a id="trans"/>
 [**trans**](regexes#transliteration)
@@ -5006,7 +4951,6 @@ much more effective than with several [**s**/.../.../](#s-op)
 method alias for [**tr**/.../.../](#tr-op) operator,
 `$str.trans( %mapping )` equals
 `$str ~~ tr/%mapping.sort.keys/%mapping.sort.values/;`
-
 
 <a id="trans-adverb"/>
 [**:trans**](tablet-2-basic-syntax#regex)
@@ -5018,13 +4962,11 @@ method alias for [**tr**/.../.../](#tr-op) operator,
 [`tr /.../.../`](#tr-op) and
 [`.trans("..." => "...")`](#trans)
 
-
 <a id="triangle"/>
 **triangle**
 *«list method»* &mdash;
 method alias to [**[\\ ]** metaoperator](#square-brackets-backslash-metaop),
 `[\+] @a` equals `@a.triangle(&[+])`
-
 
 <a id="trim"/>
 **trim**
@@ -5033,14 +4975,12 @@ returns a copy of the string, with leading and trailing whitespace
 ([**\\s**](#backslash-s)) removed &mdash;
 see also: [**chomp**](#chomp)
 
-
 <a id="trim-leading"/>
 **trim-leading**
 *«string method»* &mdash;
 returns a copy of the string, with leading whitespace
 ([**\\s**](#backslash-s)) removed &mdash;
 see also: [**chomp**](#chomp)
-
 
 <a id="trim-trailing"/>
 **trim-trailing**
@@ -5049,13 +4989,11 @@ returns a copy of the string, with trailing whitespace
 ([**\\s**](#backslash-s)) removed &mdash;
 see also: [**chomp**](#chomp)
 
-
 <a id="True"/>
 **True** &mdash;
 [**boolean**](#Bool-type) value aka
 Bool::True, 1 in [*numeric context*](appendix-g-glossary#numeric-context),
 opposite of [**False**](#False)
-
 
 <a id="truncate"/>
 **truncate**
@@ -5066,12 +5004,10 @@ examples: `truncate 4.27` returns `4`, `truncate -5.5` returns `-5` &mdash;
 see also: [**abs**](#abs), [**conj**](#conj),
           [**round**](#round), [**sign**](#sign)
 
-
 <a id="trusts"/>
 **trusts** &mdash;
 allows other (trusted) [*classes*](appendix-g-glossary#class) (first parameter)
 to access private attributes of that class
-
 
 <a id="twigil"/><a id="twigil-category"/>
 **twigil**
@@ -5079,12 +5015,10 @@ to access private attributes of that class
 internal namespace for [twigils](appendix-g-glossary#twigil),
 used to redifine them or define your own with a macro
 
-
 <a id="type-declarator-category"/>
 **type\_declarator**
 [*«grammatical category»*](appendix-b-grouped#categories) &mdash;
 example: [**subset**](#subset)
-
 
 <a id="TZ-global-var"/>
 **$\*TZ** [*«special var»*](appendix-b-grouped#global-variables) &mdash;
@@ -5094,18 +5028,15 @@ local time zone
 
 # [U](#charnav-top)
 
-
 <a id="u-test"/>
 **:u**
 [*«io path method»*](appendix-b-grouped#test-methods) &mdash;
 report if file has setuid bit set
 
-
 <a id="backslash-U"/>
 **\\U\[<span class="you-provide">n</span>\]**
 [*«escape sequence»*](appendix-b-grouped#escape-sequences) &mdash;
 everything within the brackets is uppercase
-
 
 <a id="uc"/><a id="uc-op"/>
 **uc** ([Str](#Str-type) [--\>](#minus-minus-greater-signature) [Str](#Str-type))
@@ -5114,13 +5045,11 @@ return a copy of a string where all characters are uppercase,
 usable as operator and as method &mdash;
 see also: [**fc**](#fc) and [**lc**](#lc)
 
-
 <a id="UID-global-var"/>
 **\$\*UID**
 [*«special var»*](appendix-b-grouped#global-variables) &mdash;
 real user ID of the running process
 ([**\$\*PID**](#PID-global-var)) owner (user), in Perl 5: *\@\<* and *\$UID* 
-
 
 <a id="UNDO-phaser"/>
 **UNDO**
