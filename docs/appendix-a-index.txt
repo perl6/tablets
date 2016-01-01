@@ -1,5 +1,6 @@
 % Perl 6 Tablets Appendix A - Main Index
 
+
 This is an alphabetic sorted list of all operators, methods, builtins, types,
 modifier and special variables with short explanations, cross references,
 alternative syntax, code examples and Perl 5 equivalents.
@@ -7,8 +8,8 @@ It is sorted (almost as decided by [**leg**](#leg-op)) without prefixes like
 colon, dot, backslash, [*sigil*](appendix-g-glossary#sigil) or
 [*twigil*](appendix-g-glossary#twigil)
 and everything that contains punctuation or number comes first.
-Sometimes a green placeholder is added:
-<span class="you-provide">n</span> stands for a [integer number](#Int-type),
+Sometimes are added green placeholder:
+<span class="you-provide">n</span> stands for an [integer number](#Int-type),
 <span class="you-provide">f</span> is a floating [point number](#Num-type),
 <span class="you-provide">c</span> a single character,
 <span class="you-provide">s</span> [string](#Str-type),
