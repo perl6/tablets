@@ -301,7 +301,8 @@ Widget                                      Any Widget object
 [Num](appendix-a-index#Num-type)                  Perl number (approximate Real, generally via floating point)
 [Rat](appendix-a-index#Rat-type)                  Perl rational (exact Real, limited denominator)
 [FatRat](appendix-a-index#FatRat-type)            Perl rational (unlimited precision in both parts)
-[Complex](appendix-a-index#Complex-type)          Perl complex number
+[Complex](appendix-a-index#Complex-type)          complex number (with an i-Part)
+[Numeric](appendix-a-index#Numeric-type)          base class to all number
 [Bool](appendix-a-index#Bool-type)                Perl boolean
 [Exception](appendix-a-index#Exception-type)      Perl exception
 [Block](appendix-a-index#Block-type)              executable objects that have [lexical scope](appendix-g-glossary#lexical-scope)

@@ -3509,6 +3509,11 @@ returns the numerator of a rational number
 opposite of [**denominator**](#denominator) &mdash;
 see also: [**nude**](#nude)
 
+<a id="Numeric-type"/>
+**Numeric**
+[*«immutable type»*](appendix-b-grouped#immutable-types) &mdash;
+base class for any number
+
 
 # [O](#charnav-top)
 
