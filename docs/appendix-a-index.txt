@@ -1773,20 +1773,17 @@ see also: [**leg**](#leg) and [**\<=\>**](#spaceship-op)) which do the same in
 
 # [Cn](#charnav-top)
 
-
 <a id="cntrl-subrule"/>
 **\<cntrl\>**
 [*«predefined subrule»*](appendix-b-grouped#subrules) &mdash;
 a not visible character that is aimed to control the console output,
 [the complete list](appendix-b-grouped#control-chars)
 
-
 <a id="code"/><a id="code-context"/><a id="code-op"/>
 **code**
 [*«context op»*](appendix-b-grouped#contextualizers) &mdash;
 forces [*callable context*](appendix-g-glossary#code-context),
 alias to [**&**()](#ampersand-context-op)
-
 
 <a id="code-adverb"/>
 **:code**
@@ -1796,7 +1793,6 @@ the commented will be [*compiled*](appendix-g-glossary#compilation)
 and the resulting [*AST*](appendix-g-glossary#AST) is the return value &mdash;
 [**quasi** {...}](#quasi) is an alternative to `Q :code /.../`
 
-
 <a id="codes"/>
 **codes** ([Str](#Str-type) [--\>](#minus-minus-greater-signature) [Int](#Int-type))
 *«string method»* &mdash;
@@ -1804,7 +1800,6 @@ number of [*unicode*](appendix-g-glossary#unicode)
 [*codepoints*](appendix-g-glossary#codepoints) of a string in a
 language-independent way &mdash;
 see also: [**bytes**](#bytes), [**chars**](#chars), [**graphs**](#graphs)
-
 
 <a id="codes-modifier"/>
 **:codes**
@@ -1820,6 +1815,13 @@ searching on codepoint level (between codepoints), see also:
 `$str.comb(/pattern/)` equals [`$str ~~ m:g/pattern/`](#m-op),
 except it returns the list of findings, not a [match object](#match-var),
 default pattern is [`rx/./`](#rx)
+
+<a id="combinations"/><a id="list-combinations">
+**combinations**
+[*«list method»*](tablet-3-variables#advanced-list-methods) &mdash;
+list of all combinations of n list elements (first parameter - can be also a range),
+each combination is a list &mdash;
+see also: [**permutations**](#permutations), [**rotate**](#rotate)
 
 <a id="COMMENT-pod-var"/>
 **@=COMMENT**
@@ -3337,18 +3339,15 @@ example: `5 mod 4` returns `1`
 internal namespace for [*regex modifier*](appendix-b-grouped#regex-modifier)
 like [**:P5**](#P5-modifier)
 
-
 <a id="module"/>
 **module**
 *«block modifier»* &mdash;
 introduces a module name, a package that performs special actions on loading
 
-
 <a id="MODULE-compiler-var"/>
 **&?MODULE**
 [*«special var»*](appendix-b-grouped#compiler-hint-variables) &mdash;
 reference to the current module
-
 
 <a id="ms"/><a id="ms-op"/>
 [**ms**/ /](tablet-9-regexes#matching)
@@ -3357,12 +3356,10 @@ perform a regex based search in place, spaces are just subrule
 separators, alias to **m:s/.../** or **m**
 [**:sigspace**](#sigspace-modifier) **/.../**
 
-
 <a id="Mu-type"/>
 **Mu**
 [*«undefined value type»*](appendix-b-grouped#undefined-types) &mdash;
 most (generic) undefined value
-
 
 <a id="multi"/><a id="multi-routine-modifier"/>
 **multi**
@@ -3599,7 +3596,6 @@ low [*precedence*](appendix-g-glossary#precedence) version of [**//**](#defined-
 example: `{...} orelse { note $! }` &mdash;
 see also: [**andthen**](#andthen)
 
-
 <a id="our"/>
 **our**
 [*«scope declarator»*](appendix-b-grouped#scope-declarator) &mdash;
@@ -3607,20 +3603,17 @@ introduces [**package**](#package) scoped names for
 [*variables*](appendix-g-glossary#variable) and
 [*routines*](appendix-g-glossary#routine)
 
-
 <a id="OUT-global-var"/>
 **\$\*OUT**
 [*«special var»*](appendix-b-grouped#global-variables) &mdash;
 [*file handle*](IO-type) for standard output (command line mostly) &mdash;
 see also: [**$\*IN**](#IN-global-var), in Perl 5: *STDOUT*
 
-
 <a id="ov-modifier"/>
 **:ov**
 [*«regex modifier»*](appendix-b-grouped#regex-modifier) &mdash;
 searching at all positions just one time (with backtracking),
 short for [**:overlap**](#overlap#modifier)
-
 
 <a id="overlap-modifier"/>
 **:overlap**
@@ -3629,16 +3622,13 @@ searching at all positions just one time (with backtracking),
 long for [**:ov**](#ov-modifier)
 
 
-
 # [P](#charnav-top)
-
 
 <a id="p-test"/>
 **:p**
 [*«io path method»*](appendix-b-grouped#test-methods) &mdash;
 file is a named [**pipe**](#pipe) (FIFO) or
 [*file handle*](appendix-g-glossary#file-handle) is a pipe
-
 
 <a id="p-adverb"/>
 <a id="p-quoting-adverb"/>
@@ -3649,13 +3639,11 @@ the current [**\$\*KERNEL**](#KERNEL-global-var) &mdash;
 example: **`Q :p /.../`** &mdash;
 short for [**:path**](#path-adverb) or use [**qp**](#qp-op) directly
 
-
 <a id="p-var-adverb"/>
 [**:p**](tablet-3-variables#)
 [*«var adverb»*](appendix-b-grouped#quoting-adverbs) &mdash;
 get array or hash [*slices*]((appendix-g-glossary#slice) in hash context &mdash;
 example: **`my @a = 1..4; say @a[2]`** output: "2 => 3" &mdash;
-
 
 <a id="p-modifier"/>
 **:p**(<span class="you-provide">n</span>)
@@ -3663,19 +3651,16 @@ example: **`my @a = 1..4; say @a[2]`** output: "2 => 3" &mdash;
 searching only on the nth (n is an int) position (counting from 0),
 short alternative of [**:pos**](#pos-modifier)
 
-
 <a id="P5-modifier"/>
 **:P5**
 [*«regex modifier»*](appendix-b-grouped#regex-modifier) &mdash;
 activate old Perl 5 regex rules, hort alternative of [**:Perl5**](#Perl5-modifier)
-
 
 <a id="P5Regex-slang-var"/>
 **$\~P5Regex**
 [*«special var»*](appendix-b-grouped#slang-variables) &mdash;
 current [**grammar**](#grammar) of the Perl 5
 compatible regular expression [*slang*](appendix-g-glossary#slang)
-
 
 <a id="pack"/>
 [**pack**](tablet-2-basic-syntax#pack)
@@ -3696,13 +3681,11 @@ some uses are now better to do with [**module**](#module) and [**class**](#class
 [*«special var»*](appendix-b-grouped#compiler-hint-variables) &mdash;
 reference to the current package
 
-
 <a id="package-declarator-category"/>
 **package\_declarator**
 [*«grammatical category»*](appendix-b-grouped#categories) &mdash;
 internal namespace for &mdash;
 example: [**package**](#package), [**module**](#module), [**class**](#class)
-
 
 <a id="Pair-type"/>
 **Pair**
@@ -3710,12 +3693,10 @@ example: [**package**](#package), [**module**](#module), [**class**](#class)
 object to hold a single key-to-value association, created with a
 [*fat arrow*](#fat-arrow) or the [*adverbial notation*](#colon-adverb)
 
-
 <a id="pairs"/>
 **pairs**
 [*«hash method»*](tablet-3-variables#hash-methods) &mdash;
 returns all contents as an array or pairs (key,value)
-
 
 <a id="panic-modifier"/>
 **:panic**
@@ -3723,18 +3704,15 @@ returns all contents as an array or pairs (key,value)
 overwriting a possible set [**:ratchet**](#ratchet-modifier) for all subrules,
 activates [*backtracking*](appendix-g-glossary#backtracking)
 
-
 <a id="Parcel-type"/>
 **Parcel** 
 [*«immutable type»*](appendix-b-grouped#immutable-types) &mdash;
 [*arguments*](appendix-g-glossary#argument) in a comma list
 
-
 <a id="parcel"/><a id="parcel-parameter-trait"/>
 **parcel**
 [*«parameter trait»*](appendix-b-grouped#parameter-traits) &mdash;
 raw reference, will not be contextualized
-
 
 <a id="parse"/>
 **parse**
@@ -3743,14 +3721,12 @@ commands a [*grammar*](appendix-g-glossary#grammar) to parse a string (fist para
 resulting in a [*match object*](match-var), but only if the whole string matches &mdash;
 see also: [**subparse**](#subparse)
 
-
 <a id="parsed"/><a id="parsed-routine-trait"/>
 **parsed**
 [*«routine trait»*](appendix-b-grouped#routine-traits) &mdash;
 this macro will be parsed once, it is hygienic, but own and
 later defined rules can't be applied, opposite of
 [**reparsed**](#reparsed)
-
 
 <a id="path-adverb"/>
 [**:path**](tablet-2-basic-syntax#paths)
@@ -3759,7 +3735,6 @@ quote paths and create path object that know the right format of
 the current [**$\*KERNEL**](#KERNEL-global-var) &mdash;
 example: **`Q :path /.../`** &mdash;
 long alternative for [**:p**](#p-adverb) or use [**qp**](#qp-op) directly
-
 
 <a id="perl"/>
 [**perl**](tablet-2-basic-syntax#perl)
@@ -3770,30 +3745,27 @@ in most cases [**eval**](#eval) turn it back into the data structure,
 use instead of Perl 5: *Data::Dumper* &mdash;
 see also: [**gist**](#gist)
 
-
 <a id="PERL-global-var"/>
 **\$\*PERL**
 [*«special var»*](appendix-b-grouped#global-variables) &mdash;
 Perl version running under, in Perl 5: *\$\]* and *\$\^V* 
-
 
 <a id="PERL-compiler-var"/>
 **\$?PERL**
 [*«special var»*](appendix-b-grouped#compiler-hint-variables) &mdash;
 Perl version this program is compiled for
 
-
 <a id="Perl5-modifier"/>
 **:Perl5**
 [*«regex modifier»*](appendix-b-grouped#regex-modifier) &mdash;
 activate old Perl 5 regex rules, long alias to [**:P5**](#P5-modifier)
 
-<a id="permutations"/>
+<a id="permutations"/><a id="list-permutations">
 **permutations**
-[*«array op & method»*](tablet-3-variables#advanced-array-methods) &mdash;
+[*«list op & method»*](tablet-3-variables#advanced-list-methods) &mdash;
 list of all permutations of the list elements, each permutation is a list;
 when provided parameter is an int, the input list will be 1 ..n &mdash;
-see also: [**rotate**](#rotate)
+see also: [**combinations**](#combinations), [**rotate**](#rotate)
 
 <a id="pi-constant"/>
 [**pi**](appendix-g-glossary#pi)
@@ -3802,14 +3774,12 @@ about 3.14159265394248, also known as *π*,
 fundamental mathematical constant,
 ratio of a circle's circumference to its diameter
 
-
 <a id="pick"/>
 **pick**
-[*«array op & method»*](tablet-3-variables#advanced-array-methods) &mdash;
+[*«array op & method»*](tablet-3-variables#advanced-list-methods) &mdash;
 select a number (optional first parameter) of random vaues (without
 duplication), take [**roll**](#roll) to enable duplication  &mdash;
 see also: [**rand**](#rand)
-
 
 <a id="PID-global-var"/>
 **\$\*PID**
@@ -3836,7 +3806,7 @@ see also: [**cis**](#cis), [**conj**](#conj), [**unpolar**](#unpolar)
 
 <a id="pop-array"/><a id="pop">
 **pop**
-[*«array op & method»*](tablet-3-variables#basic-array-methods) &mdash;
+[*«list op & method»*](tablet-3-variables#basic-list-methods) &mdash;
 removes the last value of an array (parameter 1) and returns it as result &mdash;
 see also: [**pop**](#pop), [**unshift**](#unshift)
 
@@ -5061,19 +5031,16 @@ see also: [**fc**](#fc) and [**lc**](#lc)
 [*«special var»*](appendix-b-grouped#global-variables) &mdash;
 real user ID of the running process
 ([**\$\*PID**](#PID-global-var)) owner (user), in Perl 5: *\@\<* and *\$UID* 
-
 <a id="UNDO-phaser"/>
 **UNDO**
 [*«closure trait»*](appendix-b-grouped#closure-traits) &mdash;
 marks as a prefix a special block, executed at every unsuccessful block exit,
 part of [**LEAVE**](#LEAVE-phaser) queue
 
-
 <a id="uniq"/>
 **uniq**
 *«list method»* &mdash;
 returns only unique elements of a list (no value twice)
-
 
 <a id="unless"/>
 [**unless**](tablet-6-blocks#unless)
@@ -5084,12 +5051,10 @@ be run, can also be written at the end of an expression, opposite of
 [**if**](#if),  alias to **if** [**not**](#not),
 no [**elsif**](#elsif) or [**else**](#else) is allowed to follow
 
-
 <a id="unpolar"/>
 **unpolar**
 *«Complex method»* &mdash;
 see also: [**cis**](#cis), [**conj**](#conj), [**polar**](#polar)
-
 
 <a id="unshift-array"/>
 **unshift**
@@ -5097,7 +5062,6 @@ see also: [**cis**](#cis), [**conj**](#conj), [**polar**](#polar)
 prepends to an array (parameter 1), a list of values (parameter 2-*)
 they get not flattened as with [**prepend**](#prepend) &mdash;
 see also: [**shift**](#shift), [**push**](#push)
-
 
 <a id="until"/>
 [**until**](tablet-6-blocks#until)
@@ -5109,30 +5073,25 @@ can also be written at the end of an expression,
 opposite of [**while**](#while),
 alias to **while** [**not**](#not)
 
-
 <a id="unwrap"/>
 **unwrap** &mdash;
 remove an enclosing [*routine*](appendix-g-glossary#routine),
 opposite of [**wrap**](#wrap)
-
 
 <a id="upper-subrule"/>
 **\<upper\>**
 [*«predefined subrule»*](appendix-b-grouped#subrules) &mdash;
 a single uppercase character
 
-
 <a id="uri"/>
 [**uri**](tablet-5-io) &mdash;
 returns IO::Streamable descendant for accessing content of that
 URI (only pramameter typed [**Str**](#Str-type))
 
-
 <a id="USAGE-compiler-var"/>
 **$?USAGE**
 [*«special var»*](appendix-b-grouped#global-variables) &mdash;
 default usage message generated at compile time
-
 
 <a id="use"/>
 [**use**](tabel-7-subroutines) &mdash;
@@ -5143,12 +5102,10 @@ see also [**need**](#need) and [**import**](#import))
 
 # [V](#charnav-top)
 
-
 <a id="backslash-V"/>
 **\\V**
 [*«escape sequence»*](appendix-b-grouped#escape-sequences) &mdash;
 anything but vertical whitespace ([**\\v**](#backslash-v))
-
 
 <a id="backslash-v"/>
 **\\v**
@@ -5160,13 +5117,11 @@ Next Line | Line Separator | Paragraph Separator), in numbers:
 together with [vertical whitespace](#backslash-v) this sums up all
 [whitespace](#backslash-s) character
 
-
 <a id="value"/>
 **value**
 [*«pair method»*](tablet-3-variables#pair) &mdash;
 gets value (second) value of a pair (opposite of [**key**](#key)) &mdash;
 example: `(key => 'val').value;` returns `'val'`
-
 
 <a id="values-array"/>
 **values**
@@ -5174,13 +5129,11 @@ example: `(key => 'val').value;` returns `'val'`
 returns an array of values like the var itself in
 [list context](appendix-g-glossary#list-context) does
 
-
 <a id="values"/>
 **values**
 [*«hash method»*](tablet-3-variables#hash-methods) &mdash;
 returns an array of just the values &mdash;
 example: `(1 => 2, 3 => 4).values;` returns `2,4`
-
 
 <a id="VM-global-var"/>
 **\$\*VM**
@@ -5188,7 +5141,6 @@ example: `(1 => 2, 3 => 4).values;` returns `2,4`
 running virtual machine, might want to use `$*VM.name` &mdash;
 see also: [**\$\*DISTRO**](#DISTRO-global-var)
 and [**\$\*KERNEL**](#KERNEL-global-var)
-
 
 <a id="VM-compiler-var"/>
 **\$\?VM**
@@ -5208,13 +5160,11 @@ see also: [**\$\?DISTRO**](#distro-compiler-var) and
 check if file is writeable by real uid ([**\$\*UID**](#UID-global-var)) /
 gid ([**\$\*GID**](#GID-global-var))
 
-
 <a id="w-test"/>
 **:w**
 [*«io path method»*](appendix-b-grouped#test-methods) &mdash;
 check if file is writeable by effective uid ([**\$\*EUID**](#EUID-global-var))
 / gid ([**\$\*EGID**](#EGID-global-var))
-
 
 <a id="w-adverb"/>
 [**:w**](tablet-2-basic-syntax#quote-words)
@@ -5223,19 +5173,16 @@ split quoted string on words (on whitespaces),
 no [quote protection](appendix-g-glossary#quote-protection),
 short form of [**:words**](#words-adverb), used in [**qw/.../**](#qw-op)
 
-
 <a id="backslash-W"/>
 **\\W**
 [*«escape sequence»*](appendix-b-grouped#escape-sequences) &mdash;
 anything but a word character ([**\\w**](#backslash-w))
-
 
 <a id="backslash-w"/>
 **\\w**
 [*«escape sequence»*](appendix-b-grouped#escape-sequences) &mdash;
 a word character ([*unicode*](appendix-g-glossary#unicode) alphanumeric -
 A..Z, a..z,0..9, "\_")
-
 
 <a id="pipe-w"/>
 **\<|w\>**
@@ -5244,19 +5191,16 @@ word boundary, zero width space between two **\\w**, alias to
 [**\<wb\>**](#wb-subrule), opposite is **\<!|w\>**  &mdash;
 see also: [**\<|c\>**](#pipe-c)** and [**\<|g\>**](#pipe-g)
 
-
 <a id="wait"/>
 [**wait**](tablet-5-io#processes) &mdash;
 waits for a child process to terminate and returns the child status object,
 process ID in [*numeric context*](appendix-g-glossary#numeric-context)
-
 
 <a id="warn"/>
 [**warn**](tablet-5-io#warn) &mdash;
 makes output via standart error output ([**$\*ERR**](#ERR-global-var))
 like [**note**](#note), but works more like [**print**](#print),
 without appending a [**\\n**](#backslash-n)
-
 
 <a id="wb-subrule"/>
 **\<wb\>**
@@ -5266,12 +5210,10 @@ zero-width word boundary between an
 alias to [**\<|w\>**](#pipe-w) &mdash;
 see also [**\<ww\>**](#ww-subrule)
 
-
 <a id="WHAT-introspection"/>
 **WHAT**
 [*«introspection method»*](appendix-b-grouped#object-introspection) &mdash;
 short name of the class that an object belongs to
-
 
 <a id="Whatever"/><a id="Whatever-type"/>
 **Whatever**
@@ -5280,12 +5222,10 @@ Wildcard (like [**Any**](#Any-type), but subject to do-what-I-mean via
 [*multi method dispatch*](appendix-g-glossary#MMD)),
 alias to [**\***](#asterisk)
 
-
 <a id="WHEN-introspection"/>
 **WHEN**
 [*«introspection method»*](appendix-b-grouped#object-introspection) &mdash;
 (reserved for events?)
-
 
 <a id="when"/>
 [**when**](tablet-6-blocks#when)
@@ -5295,30 +5235,25 @@ against [**$\_**](#context-var) (set by [**given**](#given) or [**for**](#for))
 it runs the code [*block*](#block) after it &mdash;
 see also: [**default**](#default)
 
-
 <a id="WHENCE-introspection"/>
 **WHENCE**
 [*«introspection method»*](appendix-b-grouped#object-introspection) &mdash;
 autovivification of closures
-
 
 <a id="WHERE-introspection"/>
 **WHERE**
 [*«introspection method»*](appendix-b-grouped#object-introspection) &mdash;
 memory address of the object
 
-
 <a id="where"/>
 **where** &mdash;
 defines subtypes of data &mdash;
 example: `subset Month of Int where { 1 <= $\^a <= 12 }`
 
-
 <a id="WHICH-introspection"/>
 **WHICH**
 [*«introspection method»*](appendix-b-grouped#object-introspection) &mdash;
 object ID (type)
-
 
 <a id="while"/>
 [**while**](tablet-6-blocks#while)
@@ -5329,20 +5264,17 @@ runs block repeatedly as long as the following expression
 [**repeat**](#repeat), can also be written at the
 end of an expression, opposite of [**until**](#until)
 
-
 <a id="WHO-introspection"/>
 **WHO**
 [*«introspection method»*](appendix-b-grouped#object-introspection) &mdash;
 name of the package that support that [*object*](appendix-g-glossary#object),
 long name in [*string context*](tablet-4-operators#string-context)
 
-
 <a id="WHY-introspection"/>
 **WHY**
 [*«introspection method»*](appendix-b-grouped#object-introspection) &mdash;
 documentation of that object&mdash;
 see also: [**\#=**](#pound-equal)
-
 
 <a id="will-do-routine-trait"/>
 **will do**
@@ -5351,14 +5283,12 @@ block of code executed when the [*routine*](appendix-g-glossary#routine)
 is called, normally declared implicitly,
 by providing a block after the subroutine's signature definition
 
-
 <a id="words"/>
 **words**
 *«string method»* &mdash;
 splits a [string](#Str-type) into a list of words &mdash;
 example: `$input.words($limit)` equals [`$input.comb( / \S+ /, $limit )`](#comb) &mdash;
 see also [**lines**](#lines)
-
 
 <a id="words-adverb"/>
 [**:words**](tablet-2-basic-syntax#quote-words)
@@ -5368,24 +5298,20 @@ no [quote protection](appendix-g-glossary#quote-protection),
 long form of [**:w**](#w-adverb),
 used in [**qw/.../**](#qw-op)
 
-
 <a id="wrap"/>
 **wrap** &mdash;
 creates enveloping [routine](#routine) that is called instead of the original,
 but can forward to it, opposite of [**unwrap**](#unwrap)
-
 
 <a id="write"/>
 [**write**](tablet-5-io#read)
 *«Buf method»* &mdash;
 writes content of all parameter into that buffer
 
-
 <a id="ws-subrule"/>
 **\<ws\>**
 [*«predefined subrule»*](appendix-b-grouped#subrules) &mdash;
 whitespace between words aka [**\\s\***](#backslash-s)
-
 
 <a id="ww-adverb"/>
 [**:ww**](tablet-2-basic-syntax#quote-words)
@@ -5394,7 +5320,6 @@ split quoted string into words (on whitespaces) but with
 [quote protection](appendix-g-glossary#quote-protection),
 short form of [**:quotewords**](#quotewords-adverb),
 used in [**\<\<...\>\>**](#double-angle-brackets)
-
 
 <a id="ww-subrule"/>
 **\<ww\>**
@@ -5414,13 +5339,11 @@ cross product of two lists,
 alias of [**cross**](#cross) method &mdash;
 example: `1,2 X 3,4` retuns `1,3,1,4,2,3,2,4;`
 
-
 <a id="x-op"/>
 **x**
 [*«string op»*](tablet-4-operators#string-context) &mdash;
 string replicate operator to single string &mdash;
 example: `'ab' x 3` returns `'ababab';`
-
 
 <a id="X-metaop"/>
 **X**<span class="you-provide">op</span>
@@ -5429,20 +5352,17 @@ cross product with hyper operator,
 alias of [**crosswith**](#crosswith) method &mdash;
 example: `<a b> X~ <y z> == <ay az by bz>;`
 
-
 <a id="X-test"/>
 **:X**
 [*«io path method»*](appendix-b-grouped#test-methods) &mdash;
 check if file is executable by real uid ([**\$\*UID**](#UID-global-var))
 / gid ([**\$\*GID**](#GID-global-var))
 
-
 <a id="x-test"/>
 **:x**
 [*«io path method»*](appendix-b-grouped#test-methods) &mdash;
 check if file is executable by effective uid ([**\$\*EUID**](#EUID-global-var))
 / gid ([**\$\*EGID**](#EGID-global-var))
-
 
 <a id="x-adverb"/>
 **:x**
@@ -5452,31 +5372,25 @@ executed as command (as typed into a shell) and results returned,
 short alternative of [**:exec**](#exec-adverb),
 used by [**qx/.../**](#qx-op) and [**qqx/.../**](#qqx-op)
 
-
 <a id="x-modifier"/>
 **:x** (<span class="you-provide">n</span>)
 [*«regex modifier»*](appendix-b-grouped#regex-modifier) &mdash;
 searching n times with this pattern
 
-
 <a id="backslash-X"/>
 **\\X\[<span class="you-provide">n</span>\]**
 [*«escape sequence»*](appendix-b-grouped#escape-sequences) &mdash;
-anything but the character given in hexadecimal (brackets
-optional)
-
+anything but the character given in hexadecimal (brackets optional)
 
 <a id="backslash-x"/>
 **\\x\[<span class="you-provide">n</span>\]**
 [*«escape sequence»*](appendix-b-grouped#escape-sequences) &mdash;
 character given in hexadecimal (brackets optional)
 
-
 <a id="xdigit-subrule"/>
 **\<xdigit\>**
 [*«predefined subrule»*](appendix-b-grouped#subrules) &mdash;
 single hexadecimal digit char
-
 
 <a id="xor-op"/>
 **xor**
@@ -5491,7 +5405,6 @@ low [*precedence*](appendix-g-glossary#precedence) version of
 [**\^\^**](#caret-caret-op) &mdash;
 example: `(5 xor 0)` returns `5` &mdash;
 see also: [**or**](#or), [**orelse**](#orelse)
-
 
 <a id="xx"/><a id="xx-op"/>
 **xx**
@@ -5508,7 +5421,6 @@ example: `'ab' xx 3` returns `<ab ab ab>`
 
 # [Z](#charnav-top)
 
-
 <a id="Z-op"/>
 **Z**
 [*«list op»*](tablet-4-operators#list-generation) &mdash;
@@ -5519,13 +5431,11 @@ alias to [**zip**](#zip-op) &mdash;
 example: `1,2,3,4 Z 8,9 == 1,8,2,9` &mdash;
 see also: [**roundrobin**](#roundrobin)
 
-
 <a id="Z-metaop"/>
 **Z**<span class="you-provide">op</span>
 [*«meta op»*](appendix-b-grouped#metaoperators) &mdash;
 joines [**infix**](#infix-category) the values from same position of 2 lists
 with following operator and produces in that manner a new list
-
 
 <a id="zip"/><a id="zip-op"/>
 **zip**
@@ -5533,7 +5443,6 @@ with following operator and produces in that manner a new list
 [**infix**](#infix-category) zip operator, joines 2 lists, alias to
 [**Z** *«list op»*](#Z-op) &mdash;
 example: `@a Z @b = (@a; @b).zip`
-
 
 <a id="zipwith"/>
 **zipwith**

@@ -150,6 +150,11 @@ prevent autoflattening.
     @data   = [1..5],[6..10],[11..15];  # Array of Arrays (LoL)
     @list   = flat @data;               # returns 1..15
 
+Kontext ops:
+
+    ? @primes;              # boolean context, Bool::True if array has any value in it, even if it's a 0
+    + @primes;              # numeric context, number of elements (like in Perl 5 scalar @a)
+    ~ @primes;              # string context, you get content of all cells, stringified and joined, same as "@primes[]"
 
 
 ### Array Slices ###
@@ -167,15 +172,11 @@ prevent autoflattening.
     @copy = @data;                # shallow copy of the array
 
 
+### Basic List Methods ###
 
-### Basic Array Methods ###
-
-Some of the more important things you can do with lists. All the
-methods can also used like ops in "elems @rray;"
-
-    ? @rray;              # boolean context, Bool::True if array has any value in it, even if it's a 0
-    + @rray;              # numeric context, number of elements (like in Perl 5 scalar @a)
-    ~ @rray;              # string context, you get content of all cells, stringified and joined, same as "@primes[]"
+Some of the more important things you can do with lists. 
+All the methods can also used like ops in "elems @rray;"
+and on any list of values: "(2,5,7).elems";
 
     @rray.elems;          # same as + @rray
     @rray.end;            # number of the last element, equal to @rray.elems-1
@@ -193,10 +194,11 @@ methods can also used like ops in "elems @rray;"
     @rray.delete(@ind);   # delete all cells with indices in @ind
     @rray.reverse;        # all elements in reversed order
 
-### Advanced Array Methods
+### Advanced List Methods
 
     @rray.rotate($n);     # list from nth element to last, than 0 .. n-1, works with negative n too
-    @rray.permutations    # list of all permutations of the list elements, each perm is a list
+    @rray.permutations()  # list of all permutations of the list elements, each perm is a list
+    @rray.combinations(n) # list of all combinations with lengh n (can also be a range)
     @rray.pick([$n]);     # return $n (default is 1) randomly selected values, without duplication
     @rray.roll([$n]);     # return $n (default is 1) randomly selected values, duplication possible (like roll $
 
