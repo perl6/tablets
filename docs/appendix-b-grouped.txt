@@ -53,10 +53,10 @@ and the 5th is for boxes (namespaces) that organize the previous 4.
 
 -------------------------------------------  --------------------------------------------------------------------------------------------------------
 [`$`](appendix-a-index#dollar-sigil)         [scalar](appendix-g-glossary#scalar), single value, can be of any data type
-[`@`](appendix-a-index#at-sigil)             ordered array, indexed list of scalar
-[`%`](appendix-a-index#percent-sigil)        unordered hash (associative array), 2 column table with unique IDs (keys) and associated values (value)
+[`@`](appendix-a-index#at-sigil)             ordered [array](appendix-g-glossary#array), indexed list of scalar
+[`%`](appendix-a-index#percent-sigil)        unordered [hash](appendix-g-glossary#hash) (associative array), 2 column table with unique IDs (keys) and associated values (value)
 [`&`](appendix-a-index#ampersand-sigil)      code/rule/token/regex
-[`::`](appendix-a-index#double-colon-sigil)  abstraction: package/module/class/role/subset/enum/type/grammar
+[`::`](appendix-a-index#double-colon-sigil)  abstraction: package/module/[class](appendix-g-glossary#class)/role/subset/enum/type/[grammar](appendix-g-glossary#grammar)
 -------------------------------------------  --------------------------------------------------------------------------------------------------------
 
 The first 4 can also be used as prefix operators, called
