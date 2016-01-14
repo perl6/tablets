@@ -148,7 +148,6 @@ prevent autoflattening.
     @primes = [2,3,5,7,11,13,17,19,23]; # array with one element (List of Lists - LoL)
     @dev    = {'dan' => 'parrot'};      # array with one element (a Hash)
     @data   = [1..5],[6..10],[11..15];  # Array of Arrays (LoL)
-    @list   = lol @data;                # no change
     @list   = flat @data;               # returns 1..15
 
 
@@ -180,6 +179,10 @@ methods can also used like ops in "elems @rray;"
 
     @rray.elems;          # same as + @rray
     @rray.end;            # number of the last element, equal to @rray.elems-1
+    @rray.exists(@ind);   # Bool::True if all indices of @ind have a value (can be 0 or '')
+    @rray.min;            # numerical smallest value of that array
+    @rray.max;            # numerical largest value of that array
+    $a,$b = @rray.minmax; # both at once, like in .sort,  .min, or .max, a sorting algorithm can be provided
     @rray.cat;            # same ~ @rray
     @rray.join('');       # also same result, you can put another string as parameter that gets between all values
     @rray.unshift;        # prepend one value to the array
@@ -187,29 +190,24 @@ methods can also used like ops in "elems @rray;"
     @rray.push;           # add one value on the end
     @rray.pop;            # remove one value from the end and return it
     @rray.splice($pos,$n);# starting at $pos remove $n values and replace them with values that follow those two parameters
-    @rray.delete(@ind); # delete all cells with indices in @ind
-    @rray.exists(@ind); # Bool::True if all indices of @ind have a value (can be 0 or '')
-    @rray.pick([$n]);     # return $n (default is 1) randomly selected values, without duplication
-    @rray.roll([$n]);     # return $n (default is 1) randomly selected values, duplication possible (like roll dice)
+    @rray.delete(@ind);   # delete all cells with indices in @ind
     @rray.reverse;        # all elements in reversed order
-    # returns a list where $n times first item is taken to last
-    # position if $n is positive, if negative the other way around
-    @rray.rotate($n);
 
 ### Advanced Array Methods
 
-    @rray.sort($coderef); # returns a list sorted by a user-defined criteria, default is alphanumerical sorting
-    @rray.min;            # numerical smallest value of that array
-    @rray.max;            # numerical largest value of that array
-    $a,$b= @rray.minmax;  # both at once, like in .sort,  .min, or .max, a sorting algorithm can be provided
+    @rray.rotate($n);     # list from nth element to last, than 0 .. n-1, works with negative n too
+    @rray.permutations    # list of all permutations of the list elements, each perm is a list
+    @rray.pick([$n]);     # return $n (default is 1) randomly selected values, without duplication
+    @rray.roll([$n]);     # return $n (default is 1) randomly selected values, duplication possible (like roll $
 
+    @rray.sort($coderef); # returns a list sorted by a user-defined criteria, default is alphanumerical sorting
     @rray.map($coderef);  # high oder map function, runs $coderef with every value as $_ and returns the list or results
     @rray.classify($cr);  # kind of map, but creates a hash, where keys are the results of $cr and values are from @rray
     @rray.categorize($cr);# kind of classify, but closure can have no (Nil) or several results, so a key can have a list of values
     @rray.grep({$_>1});   # high order grep, returns only these elements that pass a condition ($cr returns something positive)
     @rray.first($coder);  # kind of grep, return just the first matching value
-    @rray.zip;            # join arrays by picking first element left successively from here and then there
-    @rray.permutations    # list of all permutations of the list elements, each perm is a list
+    zip(@a, @b);          # join arrays by picking first element from list @a, then @b and successively from here and then there
+    roundrobin(@a, @b);   # kind of zip which skips undef values 
 
 There is even a whole class of [*metaoperators*](appendix-b-grouped#operators-meta) that work upon lists.
 

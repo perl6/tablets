@@ -1600,7 +1600,7 @@ call (right-hand side of a binding)
 
 <a id="cat"/>
 **cat**
-[*«array op & method»*](tablet-3-variables#array-methods) &mdash;
+[*«array op & method»*](tablet-3-variables#basic-array-methods) &mdash;
 converts values of a [*list*](appendix-g-glossary#list-context) into
 [*string context*](appendix-g-glossary#string-context)
 and joines them like with [**\~**](#tilde-op),
@@ -1615,7 +1615,7 @@ marks as a prefix a special block to catch
 
 <a id="categorize"/>
 **categorize**
-[*«array op & method»*](tablet-3-variables#array-methods) &mdash;
+[*«array op & method»*](tablet-3-variables#advanced-array-methods) &mdash;
 special form of map to classify a list values (values - optional
 second parameter), with a closure (mapper - first parameter); the
 return value of the closure determines, under which key the value
@@ -1733,7 +1733,7 @@ see also [**method**](#method), [**submethod**](#submethod), [**has**](#has) and
 
 <a id="classify"/>
 **classify**
-[*«array op & method»*](tablet-3-variables#array-methods) &mdash;
+[*«array op & method»*](tablet-3-variables#classify-array-methods) &mdash;
 special form of map to classify a list values (values - optional
 second parameter), with a closure (mapper - first parameter); the
 return value of the closure determines, under which key the value
@@ -1969,7 +1969,7 @@ scalar method tests whether a value has been assigned to a variable
 
 <a id="delete"/><a id="delete-array"/>
 **delete**
-[*«array method»*](tablet-3-variables#array-methods) &mdash;
+[*«array method»*](tablet-3-variables#basic-array-methods) &mdash;
 removes all values of which indices are passed
 
 <a id="delete-hash"/>
@@ -2115,7 +2115,7 @@ see also: [(cont)](#cont-set-op)
 
 <a id="elems"/><a id="elems-aray"/>
 **elems**
-[*«array op & method»*](tablet-3-variables#array-methods) &mdash;
+[*«array op & method»*](tablet-3-variables#basic-array-methods) &mdash;
 number of elements (values) &mdash;
 see also: [**end**](#end)
 
@@ -2157,7 +2157,7 @@ marks as a prefix a special block, executed at run time,
 
 <a id="end"/>
 **end**
-[*«array op & method»*](tablet-3-variables#array-methods) &mdash;
+[*«array op & method»*](tablet-3-variables#basic-array-methods) &mdash;
 last index of that list &mdash;
 see also: [**elems**](#elems)
 
@@ -2269,7 +2269,8 @@ searching at all positions as long as it findes something
 long alternative for [**:ex**](#ex-modifier)
 
 <a id="exists"/>
-**exists** &mdash;
+**exists** 
+[*«array method»*](tablet-3-variables#basic-array-methods) &mdash;
 checks for existence of a variable, array or hash element, also scalar method
 
 <a id="exit"/>
@@ -2405,7 +2406,7 @@ before any [**ENTER**](#ENTER-phaser)
 
 <a id="first"/>
 **first**
-[*«array op & method»*](tablet-3-variables#array-methods) &mdash;
+[*«array op & method»*](tablet-3-variables#advanced-array-methods) &mdash;
 returns first value of a list that passes a condition (first
 paramter); the condition is a closure that takes one value at a time
 (as [**`$_`**](#context-var) or `$^a`),
@@ -2639,7 +2640,7 @@ see also: [**:bytes**](#bytes-modifier),
 
 <a id="grep"/>
 **grep**
-[*«array op & method»*](tablet-3-variables#array-methods) &mdash;
+[*«array op & method»*](tablet-3-variables#advanced-array-methods) &mdash;
 returns all values of an array that pass a filter condition
 (first parameter), the condition is a closure that takes one value
 at a time (as [**`$_`**](#context-var) or `$^a`) &mdash;
@@ -2931,7 +2932,7 @@ returns the [*iterator*](appendix-g-glossary#iterator) of a
 
 <a id="join"/>
 **join**
-[*«array method»*](tablet-3-variables#array-methods) &mdash;
+[*«array method»*](tablet-3-variables#simple-array-methods) &mdash;
 concatenates list elements into a string,
 optionally inserting another string between the elements &mdash;
 example: `join("-", 1..5)` returns '1-2-3-4-5'` does this too: `(1..5).join("-")`
@@ -3238,14 +3239,12 @@ code at [*compile time*](appendix-g-glossary#compile-time)
 current [**grammar**](#grammar) of main language,
 tells the parser the rules of parsing Perl
 
-
 <a id="make"/>
 **make** &mdash;
 
-
 <a id="map"/>
 **map**
-[*«array op & method»*](tablet-3-variables#array-methods) &mdash;
+[*«array op & method»*](tablet-3-variables#advanced-array-methods) &mdash;
 take a list, perform a block on each member, 
 return a list of the results in same order,
 the current value is each time in [**\$_**](#context-var) of use
@@ -3270,7 +3269,7 @@ see also [**comb**](#comb)
 
 <a id="max"/><a id="max-op"/>
 **max**
-[*«array op & method»*](tablet-3-variables#array-methods) &mdash;
+[*«array op & method»*](tablet-3-variables#basic-array-methods) &mdash;
 returns the [numerically](appendix-g-glossary#numeric-context)
 largest value from a given list &mdash;
 see also: [**min**](#min-op) and [**minmax**](#minmax-op)
@@ -3299,14 +3298,14 @@ in a [**class**](#class)
 
 <a id="min"/><a id="min-op"/>
 **min**
-[*«array op & method»*](tablet-3-variables#array-methods) &mdash;
+[*«array op & method»*](tablet-3-variables#basic-array-methods) &mdash;
 returns the [numerically](appendix-g-glossary#numeric-context)
 smallest value from a given list &mdash;
 see also: [**max**](#max-op) and [**minmax**](#minmax-op)
 
 <a id="minmax"/><a id="minmax-op"/>
 **minmax**
-[*«array op & method»*](tablet-3-variables#array-methods) &mdash;
+[*«array op & method»*](tablet-3-variables#basic-array-methods) &mdash;
 returns the [*numerically*](appendix-g-glossary#numeric-context)
 highest and lowest values from a list as a 2 item list &mdash;
 `minmax 2,4,1,7,3,5` returns `1,7` &mdash;
@@ -3789,6 +3788,12 @@ Perl version this program is compiled for
 [*«regex modifier»*](appendix-b-grouped#regex-modifier) &mdash;
 activate old Perl 5 regex rules, long alias to [**:P5**](#P5-modifier)
 
+<a id="permutations"/>
+**permutations**
+[*«array op & method»*](tablet-3-variables#advanced-array-methods) &mdash;
+list of all permutations of the list elements, each permutation is a list;
+when provided parameter is an int, the input list will be 1 ..n &mdash;
+see also: [**rotate**](#rotate)
 
 <a id="pi-constant"/>
 [**pi**](appendix-g-glossary#pi)
@@ -3800,7 +3805,7 @@ ratio of a circle's circumference to its diameter
 
 <a id="pick"/>
 **pick**
-[*«array op & method»*](tablet-3-variables#array-methods) &mdash;
+[*«array op & method»*](tablet-3-variables#advanced-array-methods) &mdash;
 select a number (optional first parameter) of random vaues (without
 duplication), take [**roll**](#roll) to enable duplication  &mdash;
 see also: [**rand**](#rand)
@@ -3829,9 +3834,9 @@ the magnitude is non-negative, and the angle in the
 [range](#range-op) -π ..\^ π &mdash;
 see also: [**cis**](#cis), [**conj**](#conj), [**unpolar**](#unpolar)
 
-<a id="pop-array"/>
+<a id="pop-array"/><a id="pop">
 **pop**
-[*«array op & method»*](tablet-3-variables#array-methods) &mdash;
+[*«array op & method»*](tablet-3-variables#basic-array-methods) &mdash;
 removes the last value of an array (parameter 1) and returns it as result &mdash;
 see also: [**pop**](#pop), [**unshift**](#unshift)
 
@@ -3949,7 +3954,7 @@ a single punctuation character
 
 <a id="push-array"/>
 **push**
-[*«array op & method»*](tablet-3-variables#array-methods) &mdash;
+[*«array op & method»*](tablet-3-variables#basic-array-methods) &mdash;
 appends to the end of an array (parameter 1), a list of values (parameter 2-*)
 they get not flattened, like with [**append**](#append) &mdash;
 see also: [**pop**](#pop), [**unshift**](#unshift)
@@ -4287,14 +4292,14 @@ describing the type of value is produced (returned)
 
 <a id="reverse"/>
 **reverse**
-[*«array op & method»*](tablet-3-variables#array-methods) &mdash;
+[*«array op & method»*](tablet-3-variables#basic-array-methods) &mdash;
 returns all the members in the opposite order. Use
 [**flip**](#flip) to turn a string back to front and
 [**invert**](#invert) for hashes
 
 <a id="rindex"/>
 **rindex**
-*«string method»* &mdash;
+[*«string method»*](tablet-3-variables#) &mdash;
 finds the last occurrence of a
 substring in a string and returns the numerical position,
 opposite or [**index**](#index)
@@ -4324,7 +4329,7 @@ name of the current role
 
 <a id="roll"/>
 **roll**
-[*«array method»*](tablet-3-variables#array-methods) &mdash;
+[*«array method»*](tablet-3-variables#advanced-array-methods) &mdash;
 selects <span class="you-provide">n</span> (first parameter) values from an array,
 duplication can occur (like rolling dice),
 [**pick**](#pick) works without duplication
@@ -4336,7 +4341,7 @@ see also [**exp**](#exp) and [**log**](#log)
 
 <a id="rotate"/>
 [**rotate**](tablet-3-variables)
-[*«array method»*](tablet-3-variables#array-methods) &mdash;
+[*«array method»*](tablet-3-variables#advanced-array-methods) &mdash;
 put some elements (number is first parameter) of a list to the end,
 rotates backward with negative parameter,
 `@a .= rotate;` is alias to `@a.push: @a.shift;` &mdash;
@@ -4353,7 +4358,7 @@ see also: [**abs**](#abs), [**ceiling**](#ceiling), [**floor**](#floor),
 
 <a id="roundrobin"/>
 **roundrobin**
-[*«array method»*](tablet-3-variables#array-methods) &mdash;
+[*«array method»*](tablet-3-variables#advanced-array-methods) &mdash;
 kind of [**zip**](#zip) that ignores empty lists &mdash;
 example: `roundrobin([1..3],[1,2],[1])` returns `1,1,1,2,2,3`
 
@@ -4543,7 +4548,7 @@ example:
 
 <a id="shift-array"/>
 **shift**
-[*«array op & method»*](tablet-3-variables#array-methods) &mdash;
+[*«array op & method»*](tablet-3-variables#basic-array-methods) &mdash;
 removes the first value of an array (parameter 1) and returns it as result &mdash;
 see also: [**unshift**](#unshift), [**pop**](#pop)
 
@@ -4626,7 +4631,7 @@ staying mutable (changable)
 
 <a id="sort"/>
 **sort**
-*«list method»* &mdash;
+[*«array method»*](tablet-3-variables#advanced-array-methods) &mdash;
 returns the list in a sorted order by measures provided by the first parameter,
 this can either be a block like in `sort {$^a leg $^b}, @input` ([see ^](#caret-twigil))
 or shorter with `sort &[leg], @input` ([see leg](#leg))
@@ -4646,7 +4651,7 @@ namespace to define and redefine
 
 <a id="splice"/>
 **splice**
-[*«array op & method»*](tablet-3-variables#array-methods) &mdash;
+[*«array op & method»*](tablet-3-variables#basic-array-methods) &mdash;
 remove on $pos (first parameter) $n (second - optional) values
 and replace them with values (third - optional)
 
@@ -5524,7 +5529,7 @@ with following operator and produces in that manner a new list
 
 <a id="zip"/><a id="zip-op"/>
 **zip**
-[*«array op & method»*](tablet-3-variables#array-methods) &mdash;
+[*«array op & method»*](tablet-3-variables#advanced-array-methods) &mdash;
 [**infix**](#infix-category) zip operator, joines 2 lists, alias to
 [**Z** *«list op»*](#Z-op) &mdash;
 example: `@a Z @b = (@a; @b).zip`
