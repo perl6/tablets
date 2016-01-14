@@ -163,13 +163,13 @@ prevent autoflattening.
     $prime = @primes[*-1];        # get the last one
     @some = @primes[2..5];        # get several
     $cell = @data[1][2];          # get 8, third value of second value (list)
-    $cell = @data[1;2];           # same thing, shorten syntax
+    $cell = @data[1;2];           # same thing, shorten syntax (NSA)
     @numbers = @data[1];          # get a copy of the second subarray (6..10)
     @copy = @data;                # shallow copy of the array
 
 
 
-### Array Methods ###
+### Basic Array Methods ###
 
 Some of the more important things you can do with lists. All the
 methods can also used like ops in "elems @rray;"
@@ -196,6 +196,8 @@ methods can also used like ops in "elems @rray;"
     # position if $n is positive, if negative the other way around
     @rray.rotate($n);
 
+### Advanced Array Methods
+
     @rray.sort($coderef); # returns a list sorted by a user-defined criteria, default is alphanumerical sorting
     @rray.min;            # numerical smallest value of that array
     @rray.max;            # numerical largest value of that array
@@ -207,8 +209,9 @@ methods can also used like ops in "elems @rray;"
     @rray.grep({$_>1});   # high order grep, returns only these elements that pass a condition ($cr returns something positive)
     @rray.first($coder);  # kind of grep, return just the first matching value
     @rray.zip;            # join arrays by picking first element left successively from here and then there
+    @rray.permutations    # list of all permutations of the list elements, each perm is a list
 
-There is even a whole class of metaoperators that work upon lists.
+There is even a whole class of [*metaoperators*](appendix-b-grouped#operators-meta) that work upon lists.
 
 
 
