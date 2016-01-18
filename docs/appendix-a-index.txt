@@ -2271,8 +2271,8 @@ searching at all positions as long as it findes something
 long alternative for [**:ex**](#ex-modifier)
 
 <a id="exists"/>
-**exists** 
-[*«array method»*](tablet-3-variables#basic-array-methods) &mdash;
+**:exists** 
+[*«array adverb»*](tablet-3-variables#array-slices) &mdash;
 checks for existence of a variable, array or hash element, also scalar method
 
 <a id="exit"/>

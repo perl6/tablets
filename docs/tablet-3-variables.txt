@@ -146,9 +146,14 @@ prevent autoflattening.
     $primes = 2,;                       # just 2, first element of the Parcel
     @primes = 2;                        # array with one element
     @primes = [2,3,5,7,11,13,17,19,23]; # array with one element (List of Lists - LoL)
-    @dev    = {'dan' => 'parrot'};      # array with one element (a Hash)
     @data   = [1..5],[6..10],[11..15];  # Array of Arrays (LoL)
     @list   = flat @data;               # returns 1..15
+    @dev    = ('dan' => 'parrot';       # array with one element (a Pair)
+    @dev    = {'dan' => 'parrot'};      # array with one element (a Hash)
+    %hash   = @primes                   # 2 => 3, 5 => 7, 11 => 13 ....
+    %hash   = @primes.pairs             # turn Array into an Hash: 0 => 2, 1 => 3, 2 => 5 ...
+
+@primes.pairs;        # turn Array into an Hash: 0 => 2 (first value), 1 => 3(sec.val.), 2 => 5 ...
 
 ### Array Slices ###
 
@@ -162,10 +167,10 @@ prevent autoflattening.
     $first = @primes[0];       # get the first prime, as with @primes.head
     $last = @primes[*-1];      # get the last one
     @some = @primes[2..5];     # get several
+    @primes[2..5]
     $cell = @data[1][2];       # get 8, third value of second value (list)
-    $cell = @data[1;2];        # same thing, shorten syntax (NSA)
+    $cell = @data[1;2];        # same thing, shorten syntax (NSA - native shaped array)
     @numbers = @data[1];       # get a copy of the second subarray (6..10)
-
 
 
 ### Basic List Methods ###
@@ -180,10 +185,8 @@ Kontext ops:
     + @rray; @rray.Int   @rray.elems  # numeric context, number of elements (like in Perl 5 scalar @a)
     ~ @rray; @rray.Str;  @rray.cat    # string context, joined strinified cell content, same as @rray.join('');
 
-
     @rray.end;            # number of the last element, equal to @rray.elems-1
     @rray.join($s);       # as with ~ joined stringified content of cells inserting $s between cells
-    @primes.pairs;        # turn Array into an Hash: 0 => 2 (first value), 1 => 3(sec.val.), 2 => 5 ...
     @rray.unshift;        # prepend one value to the array
     @rray.shift;          # remove the first value and return it
     @rray.push;           # add one value on the end
