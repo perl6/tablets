@@ -150,26 +150,22 @@ prevent autoflattening.
     @data   = [1..5],[6..10],[11..15];  # Array of Arrays (LoL)
     @list   = flat @data;               # returns 1..15
 
-Kontext ops:
-
-    ? @primes;              # boolean context, Bool::True if array has any value in it, even if it's a 0
-    + @primes;              # numeric context, number of elements (like in Perl 5 scalar @a)
-    ~ @primes;              # string context, you get content of all cells, stringified and joined, same as "@primes[]"
-
-
 ### Array Slices ###
 
-    @primes                       # all values as list
-    @primes.values                # same thing
-    @primes.keys                  # list of all indices
-    "@primes[]"                   # insert all values in a string, uses [] to distinguish from mail adresses
-    $prime = @primes[0];          # get the first prime
-    $prime = @primes[*-1];        # get the last one
-    @some = @primes[2..5];        # get several
-    $cell = @data[1][2];          # get 8, third value of second value (list)
-    $cell = @data[1;2];           # same thing, shorten syntax (NSA)
-    @numbers = @data[1];          # get a copy of the second subarray (6..10)
-    @copy = @data;                # shallow copy of the array
+    @primes                    # all values as list
+    @copy = @data;             # shallow copy of the array
+    @primes.values             # same thing
+    @primes.keys               # list of all indices
+    "@primes[]"                # insert all values in a string, uses [] to distinguish from mail adresses
+    @r = $primes               # returns array object (ref), which lands in @r[0]
+    @all = $primes.flat        # list of all values
+    $first = @primes[0];       # get the first prime, as with @primes.head
+    $last = @primes[*-1];      # get the last one
+    @some = @primes[2..5];     # get several
+    $cell = @data[1][2];       # get 8, third value of second value (list)
+    $cell = @data[1;2];        # same thing, shorten syntax (NSA)
+    @numbers = @data[1];       # get a copy of the second subarray (6..10)
+
 
 
 ### Basic List Methods ###
@@ -178,14 +174,16 @@ Some of the more important things you can do with lists.
 All the methods can also used like ops in "elems @rray;"
 and on any list of values: "(2,5,7).elems";
 
-    @rray.elems;          # same as + @rray
+Kontext ops:
+
+    ? @rray; @rray.Bool;              # boolean context, Bool::True if array has any value in it, even if it's '', 0 or Nil
+    + @rray; @rray.Int   @rray.elems  # numeric context, number of elements (like in Perl 5 scalar @a)
+    ~ @rray; @rray.Str;  @rray.cat    # string context, joined strinified cell content, same as @rray.join('');
+
+
     @rray.end;            # number of the last element, equal to @rray.elems-1
-    @rray.exists(@ind);   # Bool::True if all indices of @ind have a value (can be 0 or '')
-    @rray.min;            # numerical smallest value of that array
-    @rray.max;            # numerical largest value of that array
-    $a,$b = @rray.minmax; # both at once, like in .sort,  .min, or .max, a sorting algorithm can be provided
-    @rray.cat;            # same ~ @rray
-    @rray.join('');       # also same result, you can put another string as parameter that gets between all values
+    @rray.join($s);       # as with ~ joined stringified content of cells inserting $s between cells
+    @primes.pairs;        # turn Array into an Hash: 0 => 2 (first value), 1 => 3(sec.val.), 2 => 5 ...
     @rray.unshift;        # prepend one value to the array
     @rray.shift;          # remove the first value and return it
     @rray.push;           # add one value on the end
@@ -193,6 +191,10 @@ and on any list of values: "(2,5,7).elems";
     @rray.splice($pos,$n);# starting at $pos remove $n values and replace them with values that follow those two parameters
     @rray.delete(@ind);   # delete all cells with indices in @ind
     @rray.reverse;        # all elements in reversed order
+    @rray.min;            # numerical smallest value of that array
+    @rray.max;            # numerical largest value of that array
+    $a,$b = @rray.minmax; # both at once, like in .sort, .min, or .max, a sorting algorithm can be provided
+
 
 ### Advanced List Methods
 
