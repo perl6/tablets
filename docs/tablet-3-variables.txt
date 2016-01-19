@@ -22,11 +22,12 @@ just want a slice of the content.
 
     $scalar
     @array
-    @array[1] ####### $array[1] in Perl 5
-    @array[1,2]###### @array[1,2] in Perl 5
+    @array[1]       # $array[1] in Perl 5
+    @array[1,2]     # @array[1,2] in Perl 5
     %hash
-    %hash{'ba'} ######### $hash{'ba'} in Perl 5
-    %hash{'ba','da','bim'} ### @hash{'ba','da','bim'} in Perl 5
+    %hash{'ba'}     # $hash{'ba'} in Perl 5
+    %hash{'ba','da','bim'} # @hash{'ba','da','bim'} in Perl 5
+    %hash<ba da bim>       # shorter version of the same (<> is alias to qw())
 
 The sigils also mark distinct namespaces, meaning: in one [lexical
 scope](Scoping) you can have 3 different variables
@@ -325,6 +326,10 @@ Enumeration
 -----------
 
     enum
+
+
+List
+----
 
 
 Capture
